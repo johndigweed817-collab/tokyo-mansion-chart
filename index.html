@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京23区 マンション価格推移</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0c14;
+    color: #e8e0d0;
+    font-family: 'Noto Serif JP', serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(200,170,90,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200,170,90,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header { margin-bottom: 50px; }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #c8aa5a;
+    margin-bottom: 18px;
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: #f0e8d5;
+    margin-bottom: 12px;
+  }
+
+  h1 span { color: #c8aa5a; }
+
+  .subtitle {
+    font-size: 14px;
+    color: #a09070;
+    letter-spacing: 0.05em;
+  }
+
+  /* Stats row */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .stat-card {
+    background: rgba(200,170,90,0.06);
+    border: 1px solid rgba(200,170,90,0.15);
+    border-radius: 4px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease both;
+  }
+
+  .stat-card:nth-child(2) { animation-delay: 0.1s; }
+  .stat-card:nth-child(3) { animation-delay: 0.2s; }
+
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #c8aa5a, transparent);
+  }
+
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: #a09070;
+    margin-bottom: 10px;
+  }
+
+  .stat-value {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(18px, 2.2vw, 26px);
+    font-weight: 700;
+    color: #f0e8d5;
+    line-height: 1;
+  }
+
+  .stat-value.highlight { color: #e8c86a; }
+
+  .stat-change {
+    font-size: 12px;
+    color: #e07050;
+    margin-top: 6px;
+  }
+
+  /* Chart area */
+  .chart-wrapper {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(200,170,90,0.12);
+    border-radius: 6px;
+    padding: 40px 30px 30px;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.7s 0.3s ease both;
+  }
+
+  .chart-title {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: #a09070;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .chart-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(200,170,90,0.15);
+  }
+
+  .chart-canvas-wrap {
+    position: relative;
+    height: 420px;
+  }
+
+  .legend {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #a09070;
+  }
+
+  .legend-dot {
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .dot-new { background: #c8aa5a; }
+  .dot-used { background: #5a9cbf; }
+
+  /* YoY Table */
+  .table-wrapper {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(200,170,90,0.12);
+    border-radius: 6px;
+    padding: 30px;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.7s 0.4s ease both;
+    overflow-x: auto;
+  }
+
+  .table-title {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: #a09070;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .table-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(200,170,90,0.15);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  thead th {
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #c8aa5a;
+    border-bottom: 1px solid rgba(200,170,90,0.2);
+    white-space: nowrap;
+  }
+
+  thead th:first-child { text-align: left; }
+
+  tbody td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(200,170,90,0.06);
+    color: #c8c0b0;
+    white-space: nowrap;
+  }
+
+  tbody td:first-child {
+    text-align: left;
+    color: #a09070;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  tbody tr:last-child td {
+    color: #e8d890;
+    font-weight: 700;
+    border-bottom: none;
+  }
+
+  tbody tr:last-child td:first-child {
+    color: #e8c86a;
+  }
+
+  .up { color: #e07050 !important; }
+  .down { color: #5ab87a !important; }
+  .big-up { color: #ff6030 !important; font-weight: 700; }
+
+  /* Commentary */
+  .commentary {
+    animation: fadeInUp 0.7s 0.5s ease both;
+    margin-bottom: 30px;
+  }
+
+  .commentary-title {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: #a09070;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .commentary-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(200,170,90,0.15);
+  }
+
+  .commentary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .anno-card {
+    border-left: 3px solid rgba(200,170,90,0.45);
+    padding: 14px 16px;
+    background: rgba(200,170,90,0.04);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .anno-card.highlight-card {
+    border-left-color: #e8c86a;
+    background: rgba(232,200,106,0.07);
+  }
+
+  .anno-year {
+    font-size: 11px;
+    color: #c8aa5a;
+    letter-spacing: 0.15em;
+    margin-bottom: 5px;
+  }
+
+  .anno-card.highlight-card .anno-year { color: #e8c86a; }
+
+  .anno-text {
+    font-size: 12px;
+    color: #908060;
+    line-height: 1.6;
+  }
+
+  .source {
+    font-size: 11px;
+    color: #605040;
+    letter-spacing: 0.05em;
+    text-align: right;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 650px) {
+    .stats-row { grid-template-columns: 1fr; }
+    .commentary-grid { grid-template-columns: 1fr; }
+    .chart-canvas-wrap { height: 280px; }
+    .legend { flex-direction: column; align-items: center; }
+    .table-wrapper { padding: 20px 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="eyebrow">Real Estate Market Analysis · Tokyo 23 Wards</div>
+    <h1>東京23区<br><span>マンション価格推移</span></h1>
+    <div class="subtitle">新築・中古マンション 平均価格の推移（2015〜2025年）</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-label">新築マンション（2025年）</div>
+      <div class="stat-value highlight">1億4,402万円</div>
+      <div class="stat-change">▲ 前年比 +28.8%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">中古マンション70㎡換算（2025年）</div>
+      <div class="stat-value highlight">1億393万円</div>
+      <div class="stat-change">▲ 前年比 +34.6%　初の1億円超</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">2015年からの上昇倍率（2025年）</div>
+      <div class="stat-value">新築 2.14倍 / 中古 2.19倍</div>
+      <div class="stat-change">▲ 11年で両市場ともに2倍超</div>
+    </div>
+  </div>
+
+  <div class="chart-wrapper">
+    <div class="chart-title">平均価格推移（万円）</div>
+    <div class="chart-canvas-wrap">
+      <canvas id="priceChart"></canvas>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot dot-new"></div>新築マンション（不動産経済研究所）</div>
+      <div class="legend-item"><div class="legend-dot dot-used"></div>中古マンション 70㎡換算（東京カンテイ）</div>
+    </div>
+  </div>
+
+  <div class="table-wrapper">
+    <div class="table-title">前年比変動率 一覧</div>
+    <table>
+      <thead>
+        <tr>
+          <th>年</th>
+          <th>新築価格（万円）</th>
+          <th>新築 前年比</th>
+          <th>中古価格（万円）</th>
+          <th>中古 前年比</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="commentary">
+    <div class="commentary-title">年別考察</div>
+    <div class="commentary-grid">
+      <div class="anno-card">
+        <div class="anno-year">2015〜2018年 ― アベノミクス相場</div>
+        <div class="anno-text">金融緩和と低金利を背景に不動産需要が拡大。新築は2016年に一時反落したものの、2017〜18年は再び上昇基調へ。中古も首都圏全域でじわり上昇が続いた。</div>
+      </div>
+      <div class="anno-card">
+        <div class="anno-year">2019〜2020年 ― コロナ禍でも底堅い</div>
+        <div class="anno-text">2019年は消費税増税の影響で一時的に伸びが鈍化。コロナ禍（2020年）でも東京23区は下落せず、テレワーク普及によるリビング重視需要が郊外から都心への逆流を生んだ。</div>
+      </div>
+      <div class="anno-card">
+        <div class="anno-year">2021〜2022年 ― 供給減と資材高騰</div>
+        <div class="anno-text">ウクライナ情勢やサプライチェーン混乱による資材・人件費の急騰が新築コストを押し上げ。供給戸数が減少する中で需要が集中し、中古市場にも割安感が消えた。</div>
+      </div>
+      <div class="anno-card">
+        <div class="anno-year">2023年 ― 超高額物件が平均を爆上げ</div>
+        <div class="anno-text">港区「三田ガーデンヒルズ」「ワールドタワーレジデンス」など最高45億円超の物件が竣工。新築平均が前年比+39%超と突出した上昇を記録し、初の1億円突破（11,483万円）。</div>
+      </div>
+      <div class="anno-card">
+        <div class="anno-year">2024年 ― 新築は微調整、中古は急騰</div>
+        <div class="anno-text">2023年の超高額物件効果が剥落し新築はわずかに反落（-2.6%）。一方、新築の手が届かない実需層が中古へシフト。中古成約件数が急増し価格も前年比+9%強の上昇に。</div>
+      </div>
+      <div class="anno-card highlight-card">
+        <div class="anno-year">2025年 ― 新中古ともに史上最高値</div>
+        <div class="anno-text">新築は前年比+28.8%の1億4,402万円、中古は初の1億円超（+34.6%の1億393万円）を記録。品川エリアの全戸1億円超物件や港区・千代田区での超高額供給が全体平均を牽引。日銀の利上げ（0.75%）も市場冷却に至らず、富裕層・海外投資マネーが価格を支えた。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="source">出典：不動産経済研究所「首都圏新築分譲マンション市場動向」 / 東京カンテイ「中古マンション70㎡価格年別推移」 / LIFULL HOME'S総研（2025年）</div>
+</div>
+
+<script>
+  const years = ['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+
+  // 新築マンション東京23区 平均価格（万円）- 不動産経済研究所
+  const newData = [6732, 6629, 7089, 7142, 7286, 7712, 8293, 8236, 11483, 11181, 14402];
+
+  // 中古マンション東京23区 70㎡換算 平均価格（万円）- 東京カンテイ（2025年は年間平均）
+  const usedData = [4748, 5100, 5350, 5326, 5600, 5900, 6340, 6842, 7070, 7720, 10393];
+
+  // Build YoY table
+  const tbody = document.getElementById('tableBody');
+  for (let i = 0; i < years.length; i++) {
+    const newYoY = i === 0 ? '—' : (((newData[i] - newData[i-1]) / newData[i-1]) * 100).toFixed(1) + '%';
+    const usedYoY = i === 0 ? '—' : (((usedData[i] - usedData[i-1]) / usedData[i-1]) * 100).toFixed(1) + '%';
+
+    const getClass = (val) => {
+      if (val === '—') return '';
+      const n = parseFloat(val);
+      if (n >= 20) return 'big-up';
+      if (n > 0) return 'up';
+      return 'down';
+    };
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${years[i]}年</td>
+      <td>${newData[i].toLocaleString()}</td>
+      <td class="${getClass(newYoY)}">${newYoY === '—' ? newYoY : (parseFloat(newYoY) >= 0 ? '▲ ' : '▼ ') + newYoY}</td>
+      <td>${usedData[i].toLocaleString()}</td>
+      <td class="${getClass(usedYoY)}">${usedYoY === '—' ? usedYoY : (parseFloat(usedYoY) >= 0 ? '▲ ' : '▼ ') + usedYoY}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  // Chart
+  const ctx = document.getElementById('priceChart').getContext('2d');
+
+  const goldGrad = ctx.createLinearGradient(0, 0, 0, 420);
+  goldGrad.addColorStop(0, 'rgba(200,170,90,0.28)');
+  goldGrad.addColorStop(1, 'rgba(200,170,90,0.01)');
+
+  const blueGrad = ctx.createLinearGradient(0, 0, 0, 420);
+  blueGrad.addColorStop(0, 'rgba(90,156,191,0.22)');
+  blueGrad.addColorStop(1, 'rgba(90,156,191,0.01)');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: [
+        {
+          label: '新築マンション',
+          data: newData,
+          borderColor: '#c8aa5a',
+          backgroundColor: goldGrad,
+          pointBackgroundColor: (ctx) => ctx.dataIndex === years.length - 1 ? '#e8c86a' : '#c8aa5a',
+          pointBorderColor: '#0a0c14',
+          pointBorderWidth: 2,
+          pointRadius: (ctx) => ctx.dataIndex === years.length - 1 ? 8 : 5,
+          pointHoverRadius: 9,
+          tension: 0.35,
+          fill: true,
+          borderWidth: 2.5,
+        },
+        {
+          label: '中古マンション（70㎡換算）',
+          data: usedData,
+          borderColor: '#5a9cbf',
+          backgroundColor: blueGrad,
+          pointBackgroundColor: (ctx) => ctx.dataIndex === years.length - 1 ? '#80ccef' : '#5a9cbf',
+          pointBorderColor: '#0a0c14',
+          pointBorderWidth: 2,
+          pointRadius: (ctx) => ctx.dataIndex === years.length - 1 ? 8 : 5,
+          pointHoverRadius: 9,
+          tension: 0.35,
+          fill: true,
+          borderWidth: 2.5,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      animation: {
+        duration: 1400,
+        easing: 'easeInOutQuart'
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(10,12,20,0.95)',
+          borderColor: 'rgba(200,170,90,0.3)',
+          borderWidth: 1,
+          titleColor: '#c8aa5a',
+          bodyColor: '#e8e0d0',
+          titleFont: { family: "'Noto Serif JP', serif", size: 13 },
+          bodyFont: { family: "'Noto Serif JP', serif", size: 12 },
+          padding: 14,
+          callbacks: {
+            label: (ctx) => ` ${ctx.dataset.label}：${ctx.parsed.y.toLocaleString()} 万円`
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(200,170,90,0.06)' },
+          ticks: {
+            color: (ctx) => ctx.index === years.length - 1 ? '#e8c86a' : '#a09070',
+            font: { family: "'Noto Serif JP', serif", size: 12 }
+          },
+          border: { color: 'rgba(200,170,90,0.12)' }
+        },
+        y: {
+          grid: { color: 'rgba(200,170,90,0.06)' },
+          ticks: {
+            color: '#a09070',
+            font: { family: "'Noto Serif JP', serif", size: 11 },
+            callback: (val) => val >= 10000 ? `${(val/10000).toFixed(1)}億` : `${(val/1000).toFixed(0)}千万`
+          },
+          border: { color: 'rgba(200,170,90,0.12)' }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
