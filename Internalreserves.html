@@ -3,501 +3,362 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>内部留保・実質賃金・設備投資 対比</title>
+<title>内部留保と現金実態 — 修正版レポート</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f7f4ef;
+  --ink:#1c1c28;
+  --surface:#ffffff;
+  --border:#e2ddd5;
+  --retained:#b5451b;
+  --cash:#2563a8;
+  --equity:#16a085;
+  --fixed:#8e44ad;
+  --muted:#7a7a8c;
+  --warn:#e67e22;
+  --grid:#ede9e2;
+}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',sans-serif;padding:36px 20px 56px;min-height:100vh}
+.page{max-width:980px;margin:0 auto}
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* correction banner */
+.correction-banner{
+  background:var(--ink);color:#fff;padding:14px 22px;
+  display:flex;align-items:flex-start;gap:14px;margin-bottom:32px;
+  border-left:5px solid var(--warn);
+}
+.correction-banner .icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.correction-banner p{font-size:12px;line-height:1.75}
+.correction-banner strong{color:var(--warn)}
 
-:root {
-  --bg: #0d0f14;
-  --surface: #161921;
-  --border: #252a35;
-  --retained: #e8a317;
-  --wage: #3ecfcf;
-  --invest: #e05c7a;
-  --text: #e2e8f0;
-  --muted: #64748b;
-  --grid: #1e2430;
-}
+/* header */
+header{margin-bottom:32px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+h1{font-family:'Noto Serif JP',serif;font-size:24px;font-weight:700;line-height:1.4}
+header p{font-size:12px;color:var(--muted);margin-top:6px}
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Noto Sans JP', sans-serif;
-  min-height: 100vh;
-  padding: 32px 20px 48px;
-}
+/* concept box */
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
+.concept-card{background:var(--surface);border:1px solid var(--border);padding:20px}
+.concept-card h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;display:inline-block}
+.concept-card p{font-size:12px;color:var(--muted);line-height:1.75}
+.concept-card .big{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;margin:8px 0 4px}
 
-.container { max-width: 960px; margin: 0 auto; }
+/* asset waterfall */
+.card{background:var(--surface);border:1px solid var(--border);padding:28px;margin-bottom:20px}
+.card-title{font-family:'Noto Serif JP',serif;font-size:15px;margin-bottom:4px}
+.card-sub{font-size:11px;color:var(--muted);margin-bottom:22px}
 
-/* ── Header ── */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 36px;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.header-left .eyebrow {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.header-left h1 {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.4;
-}
-.header-left p {
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 6px;
-}
+.waterfall{display:flex;flex-direction:column;gap:8px}
+.wf-row{display:flex;align-items:center;gap:12px}
+.wf-label{width:130px;font-size:11px;flex-shrink:0;text-align:right;color:var(--ink)}
+.wf-bar-outer{flex:1;height:28px;background:var(--grid);position:relative;overflow:hidden}
+.wf-bar-fill{height:100%;display:flex;align-items:center;padding-left:8px;transition:width 1.1s ease}
+.wf-bar-fill span{font-size:11px;font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#fff;font-weight:600}
+.wf-val{width:80px;font-size:11px;font-family:'IBM Plex Mono',monospace;flex-shrink:0;color:var(--muted)}
 
-/* ── Legend pills ── */
-.legend {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.pill {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: opacity .2s;
-  user-select: none;
-}
-.pill.dimmed { opacity: .35; }
-.pill-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+/* main line chart */
+#mainChart{width:100%;height:340px}
 
-/* ── KPI row ── */
-.kpi-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.kpi {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 20px 18px;
-  position: relative;
-  overflow: hidden;
-}
-.kpi::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0;
-  height: 3px; width: 100%;
-}
-.kpi.r::after { background: var(--retained); }
-.kpi.w::after { background: var(--wage); }
-.kpi.i::after { background: var(--invest); }
-.kpi-label { font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-.kpi-val { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 600; }
-.kpi.r .kpi-val { color: var(--retained); }
-.kpi.w .kpi-val { color: var(--wage); }
-.kpi.i .kpi-val { color: var(--invest); }
-.kpi-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+/* legend */
+.legend-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.leg{display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;user-select:none;padding:4px 8px;border:1px solid var(--border);background:var(--surface)}
+.leg.dimmed{opacity:.3}
+.leg-dot{width:10px;height:10px;border-radius:50%}
 
-/* ── Chart card ── */
-.chart-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 28px;
-  margin-bottom: 16px;
-}
-.card-title { font-family: 'Noto Serif JP', serif; font-size: 14px; margin-bottom: 4px; }
-.card-sub { font-size: 11px; color: var(--muted); margin-bottom: 24px; }
+/* ratio section */
+.ratio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.ratio-card{background:var(--surface);border:1px solid var(--border);padding:16px;text-align:center}
+.ratio-card .year{font-size:10px;color:var(--muted);margin-bottom:6px;font-family:'IBM Plex Mono',monospace}
+.ratio-card .pct{font-family:'IBM Plex Mono',monospace;font-size:24px;font-weight:600}
+.ratio-card .label{font-size:10px;color:var(--muted);margin-top:4px}
+.ratio-card.hi .pct{color:var(--cash)}
 
-/* ── SVG chart ── */
-.chart-wrap { position: relative; }
-svg text { font-family: 'IBM Plex Mono', monospace; }
+/* annotation */
+.anno-card{background:var(--ink);color:#fff;padding:24px 28px;margin-bottom:20px}
+.anno-card h3{font-family:'Noto Serif JP',serif;font-size:13px;color:#f0c060;margin-bottom:16px;letter-spacing:1px}
+.anno-2col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.anno-item{border-left:2px solid #2d3148;padding:8px 12px;font-size:12px;color:#b0bcd4;line-height:1.7}
+.anno-item strong{color:#e2e8f0;display:block;margin-bottom:3px}
 
-/* ── Index chart ── */
-#indexChart { width: 100%; height: 320px; }
+/* tooltip */
+.tooltip{position:fixed;background:#1c2030;border:1px solid #334;padding:10px 14px;border-radius:3px;font-size:11px;pointer-events:none;opacity:0;transition:opacity .15s;z-index:99;line-height:1.9;font-family:'IBM Plex Mono',monospace;color:#e2e8f0}
 
-/* ── YoY bar chart ── */
-.yoy-section { margin-bottom: 24px; }
-.yoy-title { font-size: 12px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
-.yoy-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-.yoy-col h5 { font-size: 11px; margin-bottom: 8px; }
-.yoy-col.r h5 { color: var(--retained); }
-.yoy-col.w h5 { color: var(--wage); }
-.yoy-col.i h5 { color: var(--invest); }
-.yoy-bar-row { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
-.yoy-year { font-size: 10px; color: var(--muted); width: 28px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; }
-.yoy-bar-wrap { flex: 1; height: 16px; position: relative; display: flex; align-items: center; }
-.yoy-bar-pos, .yoy-bar-neg {
-  height: 10px;
-  position: absolute;
-  transition: width .8s ease;
-}
-.yoy-bar-pos { left: 50%; }
-.yoy-bar-neg { right: 50%; }
-.yoy-val { font-size: 9px; font-family: 'IBM Plex Mono', monospace; width: 38px; flex-shrink: 0; text-align: right; }
+footer{font-size:10px;color:var(--muted);border-top:1px solid var(--border);padding-top:14px;line-height:1.9}
 
-/* ── Divergence section ── */
-.gap-section {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 24px 28px;
-  margin-bottom: 16px;
-}
-.gap-title { font-family: 'Noto Serif JP', serif; font-size: 14px; margin-bottom: 16px; }
-.gap-bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-.gap-label { font-size: 11px; width: 90px; flex-shrink: 0; color: var(--muted); }
-.gap-bar-outer { flex: 1; height: 22px; background: var(--grid); position: relative; overflow: hidden; }
-.gap-bar-fill { height: 100%; display: flex; align-items: center; padding-left: 8px; transition: width 1s ease; }
-.gap-bar-fill span { font-size: 10px; font-family: 'IBM Plex Mono', monospace; white-space: nowrap; }
-
-/* ── Annotation ── */
-.annotation-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 24px 28px;
-  margin-bottom: 16px;
-}
-.annotation-card h3 { font-family: 'Noto Serif JP', serif; font-size: 13px; color: var(--retained); margin-bottom: 14px; letter-spacing: 1px; }
-.anno-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.anno-item { border-left: 2px solid var(--border); padding: 8px 12px; font-size: 12px; color: #94a3b8; line-height: 1.65; }
-.anno-item strong { color: var(--text); display: block; margin-bottom: 4px; }
-
-/* ── Tooltip ── */
-.tooltip {
-  position: fixed;
-  background: #1e2a3a;
-  border: 1px solid #334155;
-  padding: 10px 14px;
-  border-radius: 4px;
-  font-size: 11px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .15s;
-  z-index: 100;
-  line-height: 1.8;
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-footer {
-  font-size: 10px;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-  padding-top: 16px;
-  margin-top: 8px;
-  line-height: 1.8;
+@media(max-width:600px){
+  .concept-grid,.anno-2col,.ratio-grid{grid-template-columns:1fr 1fr}
+  .ratio-grid{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="page">
+
+<!-- 訂正バナー -->
+<div class="correction-banner">
+  <div class="icon">⚠</div>
+  <p>
+    <strong>前レポートの補足・修正：</strong>「内部留保≒現金の蓄積」という誤解を修正します。
+    内部留保（利益剰余金）は<strong>会計上の純資産の部の概念</strong>であり、資産の保有形態を示しません。
+    実際には設備投資・株式投資・固定資産・売掛金など多様な資産として運用されており、
+    現金・預金（法人企業統計）は2024年で<strong>約301兆円（全資産の13%）</strong>に過ぎません。
+    本レポートでは内部留保と現金・流動資産を明確に分けて対比します。
+  </p>
+</div>
 
 <header>
-  <div class="header-left">
-    <div class="eyebrow">2014–2024年度 ／ 財務省・厚労省・内閣府</div>
-    <h1>内部留保・実質賃金・設備投資<br>成長率の10年対比</h1>
-    <p>2014年度を基準（100）とした累積指数で3指標の乖離を可視化</p>
-  </div>
-  <div class="legend">
-    <div class="pill" data-key="r"><div class="pill-dot" style="background:var(--retained)"></div>内部留保</div>
-    <div class="pill" data-key="w"><div class="pill-dot" style="background:var(--wage)"></div>実質賃金</div>
-    <div class="pill" data-key="i"><div class="pill-dot" style="background:var(--invest)"></div>設備投資</div>
-  </div>
+  <div class="eyebrow">財務省 法人企業統計 ／ 日銀 資金循環統計 ／ 2014–2024</div>
+  <h1>内部留保637兆円の「中身」を解剖する</h1>
+  <p>利益剰余金（内部留保）・現金預金・投資有価証券・固定資産の10年推移対比</p>
 </header>
 
-<!-- KPI -->
-<div class="kpi-row">
-  <div class="kpi r">
-    <div class="kpi-label">内部留保 10年累積成長</div>
-    <div class="kpi-val">+98%</div>
-    <div class="kpi-sub">321兆 → 637兆円</div>
+<!-- 概念説明 -->
+<div class="concept-grid">
+  <div class="concept-card">
+    <h4><span class="dot" style="background:var(--retained)"></span>内部留保（利益剰余金）とは</h4>
+    <div class="big" style="color:var(--retained)">637兆円</div>
+    <p>貸借対照表の<strong>純資産の部</strong>に計上される会計上の概念。過去に稼いだ利益の累積額から配当を差し引いたもの。<strong>資産の保有形態ではなく</strong>、資金がどこに使われたかを示さない。</p>
   </div>
-  <div class="kpi w">
-    <div class="kpi-label">実質賃金 10年累積変化</div>
-    <div class="kpi-val">−3%</div>
-    <div class="kpi-sub">物価上昇に賃金追いつかず</div>
-  </div>
-  <div class="kpi i">
-    <div class="kpi-label">設備投資 10年累積成長</div>
-    <div class="kpi-val">+32%</div>
-    <div class="kpi-sub">79兆 → 約101.8兆円 (2023年度)</div>
+  <div class="concept-card">
+    <h4><span class="dot" style="background:var(--cash)"></span>現金・預金（実際の手元資金）</h4>
+    <div class="big" style="color:var(--cash)">301兆円</div>
+    <p>内部留保の約<strong>47%</strong>相当。残りは設備・土地・株式投資等に転換済み。法人企業統計では「現金・預金」として流動資産に計上。コロナ禍に急増後、横ばい傾向。</p>
   </div>
 </div>
 
-<!-- Index line chart -->
-<div class="chart-card">
-  <div class="card-title">累積成長指数（2014年度＝100）</div>
-  <div class="card-sub">3指標の伸びを同一軸で比較。凡例クリックで表示切替可能</div>
-  <div class="chart-wrap">
-    <svg id="indexChart" viewBox="0 0 900 300" preserveAspectRatio="none"></svg>
-    <div class="tooltip" id="tooltip"></div>
-  </div>
+<!-- 2024年 資産構成 waterfall -->
+<div class="card">
+  <div class="card-title">2024年度末 — 企業資産の構成（全産業、金融保険業除く）</div>
+  <div class="card-sub">総資産 約2,270兆円の内訳。内部留保637兆円がどの資産形態に分散しているかを示す</div>
+  <div class="waterfall" id="wfChart"></div>
+  <p style="font-size:10px;color:var(--muted);margin-top:14px">※各資産は複数の調達源（負債・資本金等）に裏付けられるため合計は総資産と一致しない。出典：法人企業統計・第一生命経済研究所</p>
 </div>
 
-<!-- YoY bars -->
-<div class="chart-card">
-  <div class="card-title">前年比成長率の推移（%）</div>
-  <div class="card-sub">各年度の変化率。内部留保は利益剰余金ベース、実質賃金は厚労省毎月勤労統計、設備投資は法人企業統計</div>
-  <div class="yoy-grid" id="yoyGrid"></div>
+<!-- メイン折れ線チャート -->
+<div class="card">
+  <div class="card-title">4指標の推移比較（2014年度＝100）</div>
+  <div class="card-sub">現金保有の増加ペースは内部留保より緩やか。凡例クリックで表示切替可能</div>
+  <div class="legend-row" id="legend"></div>
+  <svg id="mainChart" viewBox="0 0 920 320" preserveAspectRatio="none"></svg>
+  <div class="tooltip" id="tooltip"></div>
 </div>
 
-<!-- Divergence -->
-<div class="gap-section">
-  <div class="gap-title">格差の大きさ — 2014年比の累積増加額・変化</div>
-  <div id="gapBars"></div>
+<!-- 現金・預金の対総資産比率 -->
+<div class="card">
+  <div class="card-title">現金・預金の対総資産比率の推移</div>
+  <div class="card-sub">内部留保が倍増する一方、現金比率は横ばい〜微増。利益は主に株式・固定資産投資に向かっている</div>
+  <div class="ratio-grid" id="ratioGrid"></div>
 </div>
 
-<!-- Annotation -->
-<div class="annotation-card">
-  <h3>◆ 指標乖離を読み解く — 主な背景</h3>
-  <div class="anno-grid">
-    <div class="anno-item"><strong>アベノミクスと企業収益拡大（2013〜）</strong>円安・金融緩和で輸出企業の収益が急伸。利益が内部留保に積み上がる一方、賃金への還元は限定的だった。</div>
-    <div class="anno-item"><strong>実質賃金が長期低迷した構造要因</strong>2022〜23年のインフレ（エネルギー・食料品高騰）が名目賃金上昇を上回り、実質賃金は2年連続マイナスを記録した。</div>
-    <div class="anno-item"><strong>設備投資の遅れと近年の加速</strong>2010年代は設備過剰感から投資が抑制。2022年以降にDX・GX・AI需要が急増し、2023年度は約30年ぶりの高水準（101.8兆円）に到達。</div>
-    <div class="anno-item"><strong>2024〜25年の変化の兆し</strong>春闘賃上げ率5.10%（33年ぶり高水準）が実現。実質賃金もプラス転換の局面に。設備投資は大企業中心に3年連続増（前年比10.5%増）。</div>
+<!-- 解説 -->
+<div class="anno-card">
+  <h3>◆ 内部留保の「中身」— 資金はどこへ向かったか</h3>
+  <div class="anno-2col">
+    <div class="anno-item">
+      <strong>株式・投融資（最大項目）</strong>
+      2023年度末時点で投融資うち株式が372.6兆円と資産最大項目。M&A・持合い・子会社出資が積み上がっており、現金化困難な場合も多い。
+    </div>
+    <div class="anno-item">
+      <strong>現金・預金（301兆円 / 総資産13%）</strong>
+      2024年は301兆円。うち約6割が中小零細企業の保有。大企業の手元現金は全体の1〜2割程度で、「大企業が溜め込んでいる」とは言いにくい構造。
+    </div>
+    <div class="anno-item">
+      <strong>固定資産（595兆円）— 2020年以降回復</strong>
+      バブル崩壊後に停滞していた固定資産は2020年に90年代ピークを回復。2024年は595兆円。DX・GX・AI投資の加速で今後も増加見込み。
+    </div>
+    <div class="anno-item">
+      <strong>コロナ禍（2020年）の現金急増</strong>
+      2019年→2020年で現金・預金は約230兆→272兆円と18%急増（法人企業統計）。先行き不透明感による予防的保有が主因。その後は緩やかな増加に転換。
+    </div>
   </div>
 </div>
 
 <footer>
-  出典：財務省「法人企業統計年次調査」（内部留保・設備投資）、厚生労働省「毎月勤労統計調査」（実質賃金）、内閣府「国民経済計算」、連合 春闘集計結果、三井住友信託銀行調査月報（2025年11月）、日本政策投資銀行「全国設備投資計画調査」（2025年8月）<br>
-  ※設備投資はGDP統計の名目民間企業設備投資ベース。実質賃金は持家の帰属家賃を除くCPI基準。数値は各種報告書・報道より集計のため若干の誤差を含む。
+  出典：財務省「法人企業統計年次調査」（内部留保・現金預金・設備投資）、日本銀行「資金循環統計」（民間非金融法人現預金）、
+  第一生命経済研究所「これから"日本株式会社"はどう動いていくのか」（2024年）、
+  慶應義塾大学 蔡怡ブン「日本の上場企業の現金保有の影響要因に関する考察」（2024年）、
+  内閣官房「賃金・人的資本に関するデータ集」（2021年）<br>
+  ※現金・預金は法人企業統計（金融保険業除く）ベース。数値は各報告・研究より集計のため若干の誤差を含む。
 </footer>
 </div>
 
 <script>
-// ─── Data ───────────────────────────────────────────────
+// ─── Waterfall data ───────────────────────────────────────────
+const wfData = [
+  { label:'現金・預金',     val:301, pct:13.3, color:'#2563a8', note:'全資産の13%' },
+  { label:'売掛金・受取手形', val:240, pct:10.6, color:'#2d9e8e', note:'流動資産' },
+  { label:'投融資（株式等）', val:373, pct:16.4, color:'#8e44ad', note:'最大資産項目' },
+  { label:'有形固定資産',    val:332, pct:14.6, color:'#c0392b', note:'設備・建物' },
+  { label:'土地',           val:201, pct: 8.8, color:'#e67e22', note:'' },
+  { label:'その他資産',      val:823, pct:36.3, color:'#95a5a6', note:'無形資産等含む' },
+];
+const wfMax = 823;
+const wf = document.getElementById('wfChart');
+wfData.forEach(d => {
+  const row = document.createElement('div');
+  row.className = 'wf-row';
+  row.innerHTML = `
+    <div class="wf-label">${d.label}<br><span style="font-size:10px;color:var(--muted)">${d.note}</span></div>
+    <div class="wf-bar-outer">
+      <div class="wf-bar-fill" style="width:0%;background:${d.color}" data-w="${(d.val/wfMax*100).toFixed(1)}">
+        <span>${d.val}兆円</span>
+      </div>
+    </div>
+    <div class="wf-val">${d.pct}%</div>`;
+  wf.appendChild(row);
+});
+setTimeout(() => {
+  document.querySelectorAll('.wf-bar-fill[data-w]').forEach(el => {
+    el.style.transition = 'width 1s ease';
+    el.style.width = el.dataset.w + '%';
+  });
+}, 150);
+
+// ─── Line chart data ──────────────────────────────────────────
 const years = [2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
 
-// 内部留保 index (2014=100)
-const retained = [100, 110.3, 116.8, 125.5, 138.9, 147.9, 150.8, 160.8, 172.5, 187.2, 198.4];
-// 実質賃金 index (2014=100) — 毎月勤労統計、対前年比から積算
-const wage     = [100, 100.4, 100.8, 101.3, 100.9, 100.2, 100.5, 101.1, 98.8, 96.5, 97.0];
-// 設備投資 index (2014=100) — 名目民間企業設備投資
-const invest   = [100, 101.4, 104.2, 109.7, 114.2, 113.8, 106.1, 108.0, 114.2, 128.8, 132.0];
+const datasets = [
+  {
+    key:'retained', label:'内部留保（利益剰余金）',
+    color:'#b5451b',
+    // 321→354→375→403→446→475→484→516→554→601→637
+    idx:[100,110.3,116.8,125.5,138.9,147.9,150.8,160.8,172.5,187.2,198.4]
+  },
+  {
+    key:'cash', label:'現金・預金',
+    color:'#2563a8',
+    // 185→193→200→210→220→230→272→280→285→301→301
+    idx:[100,104.3,108.1,113.5,118.9,124.3,147.0,151.4,154.1,162.7,162.7]
+  },
+  {
+    key:'equity', label:'投融資（株式等）',
+    color:'#16a085',
+    // 220→250→270→295→300→305→310→340→360→373→385（推計）
+    idx:[100,113.6,122.7,134.1,136.4,138.6,140.9,154.5,163.6,169.5,175.0]
+  },
+  {
+    key:'fixed', label:'有形固定資産',
+    color:'#8e44ad',
+    // 280→283→287→293→300→305→302→308→318→332→345（推計）
+    idx:[100,101.1,102.5,104.6,107.1,108.9,107.9,110.0,113.6,118.6,123.2]
+  },
+];
 
-// YoY %
-function toYoY(arr) {
-  return arr.map((v,i) => i===0 ? null : +((v/arr[i-1]-1)*100).toFixed(1));
-}
-const rYoY = toYoY(retained);
-const wYoY = toYoY(wage);
-const iYoY = toYoY(invest);
+// ─── SVG line chart ───────────────────────────────────────────
+const visible = {retained:true,cash:true,equity:true,fixed:true};
+const W=920,H=320,PAD={t:20,r:24,b:40,l:48};
+const cW=W-PAD.l-PAD.r, cH=H-PAD.t-PAD.b;
+const minV=90, maxV=215;
+function xp(i){return PAD.l+(i/(years.length-1))*cW}
+function yp(v){return PAD.t+cH-((v-minV)/(maxV-minV))*cH}
+function mkPath(arr){return arr.map((v,i)=>`${i===0?'M':'L'}${xp(i).toFixed(1)},${yp(v).toFixed(1)}`).join(' ')}
 
-// ─── Visibility state ────────────────────────────────────
-const visible = { r: true, w: true, i: true };
-const pills = document.querySelectorAll('.pill');
-pills.forEach(p => {
-  p.addEventListener('click', () => {
-    const k = p.dataset.key;
-    visible[k] = !visible[k];
-    p.classList.toggle('dimmed');
-    drawChart();
-  });
-});
+const svg = document.getElementById('mainChart');
+const tooltip = document.getElementById('tooltip');
 
-// ─── Index line chart ───────────────────────────────────
-const svg = document.getElementById('indexChart');
-const W = 900, H = 300;
-const PAD = { t: 20, r: 20, b: 40, l: 52 };
-const cW = W - PAD.l - PAD.r;
-const cH = H - PAD.t - PAD.b;
-
-const allVals = [...retained, ...wage, ...invest];
-const minV = Math.floor(Math.min(...allVals) / 5) * 5;
-const maxV = Math.ceil(Math.max(...allVals) / 5) * 5;
-
-function xPos(i) { return PAD.l + (i / (years.length - 1)) * cW; }
-function yPos(v) { return PAD.t + cH - ((v - minV) / (maxV - minV)) * cH; }
-
-function makePath(arr) {
-  return arr.map((v,i) => `${i===0?'M':'L'}${xPos(i).toFixed(1)},${yPos(v).toFixed(1)}`).join(' ');
-}
-
-function drawChart() {
-  svg.innerHTML = '';
-
-  // grid lines + y labels
-  const steps = 6;
-  for (let s = 0; s <= steps; s++) {
-    const v = minV + (maxV - minV) * s / steps;
-    const y = yPos(v);
-    const line = document.createElementNS('http://www.w3.org/2000/svg','line');
-    line.setAttribute('x1', PAD.l); line.setAttribute('x2', W - PAD.r);
-    line.setAttribute('y1', y); line.setAttribute('y2', y);
-    line.setAttribute('stroke', s === (steps * (100 - minV) / (maxV - minV)) ? '#334155' : '#1e2430');
-    line.setAttribute('stroke-width', Math.abs(v - 100) < 0.1 ? '1.5' : '0.8');
+function drawChart(){
+  svg.innerHTML='';
+  // grid
+  [100,120,140,160,180,200].forEach(v=>{
+    const y=yp(v);
+    const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1',PAD.l);line.setAttribute('x2',W-PAD.r);
+    line.setAttribute('y1',y);line.setAttribute('y2',y);
+    line.setAttribute('stroke',v===100?'#c0bdb8':'#e5e0d8');
+    line.setAttribute('stroke-width',v===100?'1.5':'0.8');
     svg.appendChild(line);
-
-    const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
-    lbl.setAttribute('x', PAD.l - 6); lbl.setAttribute('y', y + 4);
-    lbl.setAttribute('text-anchor','end'); lbl.setAttribute('fill','#475569'); lbl.setAttribute('font-size','9');
-    lbl.textContent = Math.round(v);
-    svg.appendChild(lbl);
-  }
-
-  // 100 baseline label
-  const baseY = yPos(100);
-  const baseLabel = document.createElementNS('http://www.w3.org/2000/svg','text');
-  baseLabel.setAttribute('x', PAD.l - 6); baseLabel.setAttribute('y', baseY + 4);
-  baseLabel.setAttribute('text-anchor','end'); baseLabel.setAttribute('fill','#94a3b8'); baseLabel.setAttribute('font-size','9');
-  baseLabel.textContent = '100';
-  svg.appendChild(baseLabel);
-
-  // x labels
-  years.forEach((y, i) => {
-    const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
-    lbl.setAttribute('x', xPos(i)); lbl.setAttribute('y', H - PAD.b + 16);
-    lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('fill','#475569'); lbl.setAttribute('font-size','9');
-    lbl.textContent = String(y).slice(2) + '年';
+    const lbl=document.createElementNS('http://www.w3.org/2000/svg','text');
+    lbl.setAttribute('x',PAD.l-6);lbl.setAttribute('y',y+4);
+    lbl.setAttribute('text-anchor','end');lbl.setAttribute('fill','#999');lbl.setAttribute('font-size','9');
+    lbl.textContent=v;
     svg.appendChild(lbl);
   });
-
-  const datasets = [
-    { key: 'r', arr: retained, color: getComputedStyle(document.documentElement).getPropertyValue('--retained').trim() || '#e8a317', label: '内部留保' },
-    { key: 'w', arr: wage,     color: '#3ecfcf', label: '実質賃金' },
-    { key: 'i', arr: invest,   color: '#e05c7a', label: '設備投資' },
-  ];
-
-  datasets.forEach(ds => {
-    if (!visible[ds.key]) return;
-
-    // area fill
-    const areaPath = makePath(ds.arr) + ` L${xPos(ds.arr.length-1)},${yPos(100)} L${xPos(0)},${yPos(100)} Z`;
-    const area = document.createElementNS('http://www.w3.org/2000/svg','path');
-    area.setAttribute('d', areaPath);
-    area.setAttribute('fill', ds.color);
-    area.setAttribute('fill-opacity', '0.06');
+  // x axis
+  years.forEach((yr,i)=>{
+    const lbl=document.createElementNS('http://www.w3.org/2000/svg','text');
+    lbl.setAttribute('x',xp(i));lbl.setAttribute('y',H-PAD.b+16);
+    lbl.setAttribute('text-anchor','middle');lbl.setAttribute('fill','#999');lbl.setAttribute('font-size','9');
+    lbl.textContent=String(yr).slice(2)+'年';
+    svg.appendChild(lbl);
+  });
+  // lines
+  datasets.forEach(ds=>{
+    if(!visible[ds.key]) return;
+    // area
+    const ap=mkPath(ds.idx)+` L${xp(ds.idx.length-1)},${yp(100)} L${xp(0)},${yp(100)} Z`;
+    const area=document.createElementNS('http://www.w3.org/2000/svg','path');
+    area.setAttribute('d',ap);area.setAttribute('fill',ds.color);area.setAttribute('fill-opacity','0.05');
     svg.appendChild(area);
-
     // line
-    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
-    path.setAttribute('d', makePath(ds.arr));
-    path.setAttribute('fill','none');
-    path.setAttribute('stroke', ds.color);
-    path.setAttribute('stroke-width','2.2');
+    const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d',mkPath(ds.idx));path.setAttribute('fill','none');
+    path.setAttribute('stroke',ds.color);path.setAttribute('stroke-width','2.2');
     path.setAttribute('stroke-linejoin','round');
     svg.appendChild(path);
-
     // dots
-    ds.arr.forEach((v, i) => {
-      const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
-      circle.setAttribute('cx', xPos(i)); circle.setAttribute('cy', yPos(v));
-      circle.setAttribute('r','4'); circle.setAttribute('fill', ds.color);
-      circle.setAttribute('stroke','#0d0f14'); circle.setAttribute('stroke-width','2');
-      circle.style.cursor = 'pointer';
-      circle.addEventListener('mouseenter', e => showTip(e, years[i], ds, v, i));
-      circle.addEventListener('mouseleave', hideTip);
-      svg.appendChild(circle);
+    ds.idx.forEach((v,i)=>{
+      const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',xp(i));c.setAttribute('cy',yp(v));
+      c.setAttribute('r','4');c.setAttribute('fill',ds.color);
+      c.setAttribute('stroke',getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()||'#f7f4ef');
+      c.setAttribute('stroke-width','2');c.style.cursor='pointer';
+      c.addEventListener('mouseenter',e=>showTip(e,yr,ds,v,i));
+      c.addEventListener('mouseleave',()=>{tooltip.style.opacity='0'});
+      svg.appendChild(c);
     });
-
     // end label
-    const last = ds.arr[ds.arr.length - 1];
-    const endLbl = document.createElementNS('http://www.w3.org/2000/svg','text');
-    endLbl.setAttribute('x', xPos(ds.arr.length - 1) + 6);
-    endLbl.setAttribute('y', yPos(last) + 4);
-    endLbl.setAttribute('fill', ds.color); endLbl.setAttribute('font-size','10');
-    endLbl.textContent = Math.round(last);
-    svg.appendChild(endLbl);
+    const last=ds.idx[ds.idx.length-1];
+    const el=document.createElementNS('http://www.w3.org/2000/svg','text');
+    el.setAttribute('x',xp(ds.idx.length-1)+6);el.setAttribute('y',yp(last)+4);
+    el.setAttribute('fill',ds.color);el.setAttribute('font-size','10');el.setAttribute('font-weight','600');
+    el.textContent=Math.round(last);
+    svg.appendChild(el);
   });
 }
 
-// Tooltip
-const tooltip = document.getElementById('tooltip');
-function showTip(e, year, ds, v, i) {
-  const yoy = i > 0 ? (((ds.arr[i]/ds.arr[i-1])-1)*100).toFixed(1) : '—';
-  tooltip.innerHTML = `<b style="color:${ds.color}">${ds.label}</b><br>${year}年度<br>指数: <b>${v.toFixed(1)}</b><br>前年比: <b>${yoy !== '—' ? (yoy > 0 ? '+' : '') + yoy + '%' : '—'}</b>`;
-  tooltip.style.opacity = '1';
-  moveTip(e);
+function showTip(e,yr,ds,v,i){
+  const raw={'retained':[321,354,375,403,446,475,484,516,554,601,637],'cash':[185,193,200,210,220,230,272,280,285,301,301],'equity':[220,250,270,295,300,305,310,340,360,373,385],'fixed':[280,283,287,293,300,305,302,308,318,332,345]};
+  const abs=raw[ds.key][i];
+  const yoy=i>0?((v/ds.idx[i-1]-1)*100).toFixed(1):'—';
+  tooltip.innerHTML=`<span style="color:${ds.color};font-weight:600">${ds.label}</span><br>${years[i]}年度<br>指数: ${v.toFixed(1)}<br>実額: 約${abs}兆円<br>前年比: ${yoy!=='—'?(yoy>0?'+':'')+yoy+'%':'—'}`;
+  tooltip.style.opacity='1';
+  tooltip.style.left=(e.clientX+14)+'px';
+  tooltip.style.top=(e.clientY-14)+'px';
 }
-function moveTip(e) {
-  tooltip.style.left = (e.clientX + 14) + 'px';
-  tooltip.style.top  = (e.clientY - 14) + 'px';
-}
-function hideTip() { tooltip.style.opacity = '0'; }
-document.addEventListener('mousemove', e => { if (tooltip.style.opacity === '1') moveTip(e); });
+document.addEventListener('mousemove',e=>{if(tooltip.style.opacity==='1'){tooltip.style.left=(e.clientX+14)+'px';tooltip.style.top=(e.clientY-14)+'px'}});
 
+// Legend
+const legDiv=document.getElementById('legend');
+datasets.forEach(ds=>{
+  const d=document.createElement('div');
+  d.className='leg';d.dataset.key=ds.key;
+  d.innerHTML=`<span class="leg-dot" style="background:${ds.color}"></span>${ds.label}`;
+  d.addEventListener('click',()=>{
+    visible[ds.key]=!visible[ds.key];
+    d.classList.toggle('dimmed');drawChart();
+  });
+  legDiv.appendChild(d);
+});
 drawChart();
 
-// ─── YoY bar chart ──────────────────────────────────────
-const yoyGrid = document.getElementById('yoyGrid');
-const yoyCols = [
-  { key: 'r', cls: 'r', label: '内部留保（前年比 %）', data: rYoY, color: '#e8a317' },
-  { key: 'w', cls: 'w', label: '実質賃金（前年比 %）', data: wYoY, color: '#3ecfcf' },
-  { key: 'i', cls: 'i', label: '設備投資（前年比 %）', data: iYoY, color: '#e05c7a' },
+// ─── Ratio grid ───────────────────────────────────────────────
+const ratioData=[
+  {year:'2014',pct:12.4,hi:false},{year:'2016',pct:12.7,hi:false},
+  {year:'2019',pct:12.7,hi:false},{year:'2020',pct:14.5,hi:true},
+  {year:'2021',pct:13.9,hi:false},{year:'2022',pct:13.5,hi:false},
+  {year:'2023',pct:14.3,hi:false},{year:'2024',pct:13.3,hi:false},
 ];
-
-const absMax = 16; // scale
-
-yoyCols.forEach(col => {
-  const div = document.createElement('div');
-  div.className = `yoy-col ${col.cls}`;
-  div.innerHTML = `<h5>${col.label}</h5>`;
-
-  col.data.forEach((v, i) => {
-    if (v === null) return;
-    const row = document.createElement('div');
-    row.className = 'yoy-bar-row';
-    const pct = Math.abs(v) / absMax * 50;
-    const barHtml = v >= 0
-      ? `<div class="yoy-bar-pos" style="width:0%;background:${col.color};opacity:.8" data-w="${pct}"></div>`
-      : `<div class="yoy-bar-neg" style="width:0%;background:#e05c7a;opacity:.8" data-w="${pct}"></div>`;
-
-    row.innerHTML = `
-      <div class="yoy-year">${String(years[i]).slice(2)}</div>
-      <div class="yoy-bar-wrap">${barHtml}</div>
-      <div class="yoy-val" style="color:${v>=0?col.color:'#e05c7a'}">${v>0?'+':''}${v}%</div>`;
-    div.appendChild(row);
-  });
-  yoyGrid.appendChild(div);
+const rg=document.getElementById('ratioGrid');
+ratioData.forEach(d=>{
+  const card=document.createElement('div');
+  card.className='ratio-card'+(d.hi?' hi':'');
+  card.innerHTML=`<div class="year">${d.year}年度</div><div class="pct" style="color:${d.hi?'var(--cash)':'var(--ink)'}">${d.pct}%</div><div class="label">現預金／総資産</div>`;
+  rg.appendChild(card);
 });
-
-// animate YoY bars
-setTimeout(() => {
-  document.querySelectorAll('[data-w]').forEach(el => {
-    el.style.transition = 'width .9s ease';
-    el.style.width = el.dataset.w + '%';
-  });
-}, 200);
-
-// ─── Gap bars ───────────────────────────────────────────
-const gaps = [
-  { label: '内部留保', val: 316, unit: '兆円増加', color: '#e8a317', max: 320 },
-  { label: '設備投資', val: 22.8, unit: '兆円増加', color: '#e05c7a', max: 320 },
-  { label: '実質賃金', val: -3, unit: '%減少', color: '#3ecfcf', max: 320 },
-];
-const gapBars = document.getElementById('gapBars');
-gaps.forEach(g => {
-  const row = document.createElement('div');
-  row.className = 'gap-bar-row';
-  const fillPct = g.val > 0 ? (g.val / 320 * 100).toFixed(1) : 1.5;
-  row.innerHTML = `
-    <div class="gap-label">${g.label}</div>
-    <div class="gap-bar-outer">
-      <div class="gap-bar-fill" style="width:0%;background:${g.color};opacity:.85" data-w="${fillPct}">
-        <span style="color:#0d0f14;font-weight:600">${g.val > 0 ? '+' + g.val : g.val} ${g.unit}</span>
-      </div>
-    </div>`;
-  gapBars.appendChild(row);
-});
-setTimeout(() => {
-  document.querySelectorAll('.gap-bar-fill[data-w]').forEach(el => {
-    el.style.transition = 'width 1.1s ease';
-    el.style.width = el.dataset.w + '%';
-  });
-}, 400);
 </script>
 </body>
 </html>
