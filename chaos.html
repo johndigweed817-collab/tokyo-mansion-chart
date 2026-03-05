@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Human Behavior Fractal - 鼓動と彩り</title>
+    <style>
+        body { margin: 0; background: #000; overflow: hidden; font-family: sans-serif; }
+        canvas { display: block; }
+        #ui {
+            position: absolute; top: 20px; left: 20px;
+            color: #fff; background: rgba(0, 0, 0, 0.8);
+            padding: 15px; border-radius: 8px; border: 1px solid #ff00ff;
+            max-width: 320px; pointer-events: none;
+        }
+        h1 { font-size: 1.2rem; margin: 0 0 10px 0; color: #ff00ff; }
+        p { font-size: 0.8rem; line-height: 1.5; color: #ccc; margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+<div id="ui">
+    <h1>Human Behavior Fractal</h1>
+    <p>・動く：新しい色で軌跡を描く</p>
+    <p>・寝る：その場で脈動（点滅）する</p>
+    <p style="color:#888;">画面クリックでリセット</p>
+</div>
+
+<canvas id="c"></canvas>
+
+<script>
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
+
+    // パラメータ
+    const mu = 1.5;
+    const speed = 4;
+    
+    let x = w / 2;
+    let y = h / 2;
+    let targetL = 0;
+    let currentL = 0;
+    let angle = 0;
+    let waitMax = 0;
+    let waitTime = 0;
+    let isMoving = true;
+    let currentColor = 'hsla(180, 100%, 50%, 0.5)';
+    let timer = 0;
+
+    function getLevy() {
+        return 2 * Math.pow(Math.random(), -1 / (mu - 1));
+    }
+
+    function getRandomColor() {
+        return `hsla(${Math.random() * 360}, 100%, 60%, 0.5)`;
+    }
+
+    function decideNextAction() {
+        if (isMoving) {
+            isMoving = false;
+            waitMax = waitTime = getLevy() * 5;
+        } else {
+            isMoving = true;
+            targetL = getLevy();
+            currentL = 0;
+            angle = Math.random() * Math.PI * 2;
+            currentColor = getRandomColor();
+        }
+    }
+
+    function draw() {
+        timer++;
+        
+        if (isMoving) {
+            // 移動フェーズ
+            ctx.beginPath();
+            ctx.strokeStyle = currentColor;
+            ctx.lineWidth = 1;
+            ctx.moveTo(x, y);
+            
+            x += Math.cos(angle) * speed;
+            y += Math.sin(angle) * speed;
+            currentL += speed;
+
+            if (x < 0) x = w; if (x > w) x = 0;
+            if (y < 0) y = h; if (y > h) y = 0;
+
+            ctx.lineTo(x, y);
+            ctx.stroke();
+
+            if (currentL >= targetL) decideNextAction();
+        } else {
+            // 停止（脈動）フェーズ
+            const progress = waitTime / waitMax;
+            const pulse = Math.sin(timer * 0.1) * 0.5 + 0.5;
+            const size = 2 + (15 * progress * pulse);
+            
+            // 背景を薄く塗って残像を消す
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.beginPath();
+            ctx.arc(x, y, size + 2, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 脈動する点
+            ctx.fillStyle = currentColor.replace('0.5)', (0.3 + pulse * 0.7) + ')');
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, Math.PI * 2);
+            ctx.fill();
+
+            waitTime--;
+            if (waitTime <= 0) decideNextAction();
+        }
+        requestAnimationFrame(draw);
+    }
+
+    // 初期化
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, w, h);
+    window.addEventListener('click', () => location.reload());
+    
+    decideNextAction();
+    draw();
+</script>
+</body>
+</html>
+
