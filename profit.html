@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企業利益の使途分析 — 供給力 vs 賃金 vs 蓄積</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#faf8f5;
+  --ink:#18181f;
+  --surface:#fff;
+  --border:#e8e3db;
+  --supply:#1a6b4a;   /* 供給力投資 — 深緑 */
+  --supply-l:#d4ede4;
+  --wage:#1a4fa8;     /* 賃金還元 — 深青 */
+  --wage-l:#d4e2f5;
+  --accum:#9b2b2b;    /* 金融的蓄積 — 深赤 */
+  --accum-l:#f5d8d8;
+  --profit:#6b4f00;   /* 経常利益 — 茶 */
+  --muted:#888;
+  --grid:#f0ece5;
+}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',sans-serif;padding:36px 20px 60px}
+.page{max-width:1000px;margin:0 auto}
+
+/* ── HEADER ── */
+header{margin-bottom:8px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+h1{font-family:'Noto Serif JP',serif;font-size:24px;font-weight:700;line-height:1.45}
+header p{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.7}
+
+/* frame definition */
+.frame-box{background:var(--ink);color:#fff;padding:18px 24px;margin:20px 0 28px;display:flex;gap:20px;flex-wrap:wrap}
+.frame-box .axis{flex:1;min-width:200px}
+.frame-box .axis h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.frame-box .axis p{font-size:11px;line-height:1.7;color:#bbb}
+.tag{display:inline-block;padding:2px 8px;font-size:10px;border-radius:2px;margin-bottom:6px;font-family:'IBM Plex Mono',monospace;font-weight:600}
+.tag.s{background:var(--supply);color:#fff}
+.tag.w{background:var(--wage);color:#fff}
+.tag.a{background:var(--accum);color:#fff}
+
+/* ── KPI ── */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+.kpi{background:var(--surface);border:1px solid var(--border);padding:16px 14px;position:relative}
+.kpi::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px}
+.kpi.s::before{background:var(--supply)}
+.kpi.w::before{background:var(--wage)}
+.kpi.a::before{background:var(--accum)}
+.kpi.p::before{background:var(--profit)}
+.kpi-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.kpi-val{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600}
+.kpi.s .kpi-val{color:var(--supply)}
+.kpi.w .kpi-val{color:var(--wage)}
+.kpi.a .kpi-val{color:var(--accum)}
+.kpi.p .kpi-val{color:var(--profit)}
+.kpi-sub{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.5}
+
+/* ── STACKED BAR CHART ── */
+.card{background:var(--surface);border:1px solid var(--border);padding:26px 28px;margin-bottom:20px}
+.card-title{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;margin-bottom:3px}
+.card-sub{font-size:11px;color:var(--muted);margin-bottom:22px;line-height:1.6}
+
+.stacked-wrap{overflow-x:auto;padding-bottom:4px}
+.stacked-chart{min-width:700px}
+.sc-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.sc-year{font-family:'IBM Plex Mono',monospace;font-size:11px;width:42px;flex-shrink:0;text-align:right;color:var(--ink)}
+.sc-bars{flex:1;height:30px;display:flex;gap:2px}
+.sc-seg{height:100%;transition:width 1s ease;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;cursor:default}
+.sc-seg span{font-size:9px;font-family:'IBM Plex Mono',monospace;font-weight:600;color:#fff;white-space:nowrap;padding:0 4px}
+.sc-profit{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);width:70px;flex-shrink:0}
+.sc-legend{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap}
+.sc-leg{display:flex;align-items:center;gap:6px;font-size:11px}
+.sc-dot{width:12px;height:12px;flex-shrink:0}
+
+/* ── RATIO LINE CHART ── */
+svg{overflow:visible}
+
+/* ── LABOR DISTRIBUTION ── */
+.ldist-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:4px}
+.ldist-card{background:var(--surface);border:1px solid var(--border);padding:14px 12px;text-align:center}
+.ldist-year{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:6px}
+.ldist-val{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:600}
+.ldist-label{font-size:9px;color:var(--muted);margin-top:3px}
+.ldist-bar{height:5px;margin-top:8px;background:var(--grid);border-radius:2px;overflow:hidden}
+.ldist-fill{height:100%;border-radius:2px;transition:width 1s ease}
+
+/* ── TOOLTIP ── */
+.tip{position:fixed;background:#1c2030;border:1px solid #334;padding:10px 14px;font-size:11px;pointer-events:none;opacity:0;transition:opacity .15s;z-index:99;line-height:1.9;font-family:'IBM Plex Mono',monospace;color:#e2e8f0;border-radius:2px}
+
+/* ── ANNOTATION ── */
+.anno{background:var(--ink);color:#fff;padding:24px 28px;margin-bottom:20px}
+.anno h3{font-family:'Noto Serif JP',serif;font-size:13px;color:#e8c84a;margin-bottom:14px;letter-spacing:1px}
+.anno-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.anno-item{border-left:3px solid #2d3148;padding:8px 12px;font-size:11px;color:#9fb0c8;line-height:1.75}
+.anno-item strong{color:#e2e8f0;display:block;margin-bottom:4px}
+
+footer{font-size:10px;color:var(--muted);border-top:1px solid var(--border);padding-top:14px;line-height:1.9}
+
+@media(max-width:640px){
+  .kpi-row{grid-template-columns:1fr 1fr}
+  .anno-grid{grid-template-columns:1fr}
+  .ldist-grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="eyebrow">財務省 法人企業統計 ／ 内閣府 ／ 2014–2023年度</div>
+  <h1>企業収益は何に使われてきたか<br><span style="font-size:17px;font-weight:400">— 供給力投資・賃金還元・金融的蓄積の10年</span></h1>
+  <p>「内部留保の増加」を所与とし、企業が稼いだ付加価値・利益がどの用途に配分されたかを3軸で整理する。<br>株式取得・土地購入・現金保有は供給力（生産能力・人的資本）を直接高めないため「金融的蓄積」に分類。</p>
+</header>
+
+<!-- 3軸定義 -->
+<div class="frame-box">
+  <div class="axis">
+    <span class="tag s">供給力投資</span>
+    <p>生産設備（有形固定資産）・ソフトウェア・R&D費用・人材育成費。国内の生産・サービス能力を物理的・技術的に高める支出。</p>
+  </div>
+  <div class="axis">
+    <span class="tag w">賃金還元</span>
+    <p>従業員給与・賞与・福利厚生費（役員報酬除く）。労働者の実質購買力・生活水準・人的資本を直接高める分配。</p>
+  </div>
+  <div class="axis">
+    <span class="tag a">金融的蓄積</span>
+    <p>利益剰余金への積み増し・株式等投融資・土地購入・現預金増加・配当＆自社株買い。供給力を直接高めない資金運用。</p>
+  </div>
+</div>
+
+<!-- KPI -->
+<div class="kpi-row">
+  <div class="kpi p">
+    <div class="kpi-label">経常利益 増加倍率</div>
+    <div class="kpi-val">×2.7</div>
+    <div class="kpi-sub">2014年 39.3兆→<br>2023年 106.8兆円</div>
+  </div>
+  <div class="kpi s">
+    <div class="kpi-label">設備投資 増加倍率</div>
+    <div class="kpi-val">×1.3</div>
+    <div class="kpi-sub">2014年 78.9兆→<br>2023年 101.8兆円</div>
+  </div>
+  <div class="kpi w">
+    <div class="kpi-label">人件費 増加倍率</div>
+    <div class="kpi-val">×1.2</div>
+    <div class="kpi-sub">2014年 172兆→<br>2023年 205兆円</div>
+  </div>
+  <div class="kpi a">
+    <div class="kpi-label">配当金 増加倍率</div>
+    <div class="kpi-val">×2.4</div>
+    <div class="kpi-sub">2014年 約14兆→<br>2023年 約34兆円</div>
+  </div>
+</div>
+
+<!-- 積み上げ横棒チャート：利益の使途 -->
+<div class="card">
+  <div class="card-title">経常利益（付加価値の純益部分）の使途構成</div>
+  <div class="card-sub">
+    各年度の当期純利益（≒経常利益 × 0.65 after税）を「供給力投資超過分」「賃金への配分増」「配当」「内部留保積み増し」に概念分解。<br>
+    棒の長さ＝純利益規模。構成比の変化に注目。
+  </div>
+  <div class="stacked-wrap">
+    <div class="stacked-chart" id="stackedChart"></div>
+  </div>
+  <div class="sc-legend">
+    <div class="sc-leg"><div class="sc-dot" style="background:var(--supply)"></div>設備・R&D投資（供給力）</div>
+    <div class="sc-leg"><div class="sc-dot" style="background:var(--wage)"></div>人件費増分（賃金還元）</div>
+    <div class="sc-leg"><div class="sc-dot" style="background:#e67e22"></div>配当・自社株買い</div>
+    <div class="sc-leg"><div class="sc-dot" style="background:var(--accum)"></div>内部留保積み増し（金融的蓄積）</div>
+  </div>
+</div>
+
+<!-- 比率折れ線チャート -->
+<div class="card">
+  <div class="card-title">利益に対する各使途の比率推移（%）</div>
+  <div class="card-sub">経常利益を分母とした各項目の比率。利益拡大の果実がどこに向かったかが一目で分かる。凡例クリックで表示切替可。</div>
+  <div id="ratioLegend" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px"></div>
+  <svg id="ratioChart" viewBox="0 0 920 300" preserveAspectRatio="none" style="width:100%;height:300px"></svg>
+  <div class="tip" id="tip"></div>
+</div>
+
+<!-- 労働分配率 -->
+<div class="card">
+  <div class="card-title">労働分配率の推移（付加価値に占める人件費の割合）</div>
+  <div class="card-sub">分配率低下＝利益拡大の果実が賃金に回りにくくなっていることを示す。2020年のコロナ特需（利益急減）を除くと、長期的な低下傾向が続く。</div>
+  <div class="ldist-grid" id="ldistGrid"></div>
+  <p style="font-size:10px;color:var(--muted);margin-top:10px">※付加価値＝人件費＋支払利息等＋賃借料＋租税公課＋営業純益。出典：財務省法人企業統計</p>
+</div>
+
+<!-- 解説 -->
+<div class="anno">
+  <h3>◆ データが示す「利益の偏り」— 3つの構造的事実</h3>
+  <div class="anno-grid">
+    <div class="anno-item">
+      <strong>① 利益成長 ≫ 設備投資成長</strong>
+      内閣府白書によれば、経常利益は2000年代以降に設備投資を大幅に上回るペースで拡大。<br>
+      1990年代まで設備投資は経常利益を上回っていたが、2010年代は経常利益が設備投資の2〜3倍規模に拡大。国内の生産力増強への再投資率が構造的に低下。
+    </div>
+    <div class="anno-item">
+      <strong>② 人件費は付加価値の増加についていかない</strong>
+      内閣官房データによれば、2000〜2020年に大企業の利益は91%増加、配当は483%増加した一方、人件費は0.4%の減少。<br>
+      労働分配率は2010年代に長期低下。利益の果実は株主（配当）と内部留保に集中。
+    </div>
+    <div class="anno-item">
+      <strong>③ 配当は「最も急増した」使途</strong>
+      2012年〜2016年の4年間で大企業の配当は5兆円増（+50%超）。同期間の人件費増は1兆円。<br>
+      足元2023年度の配当は約34兆円と2014年比で2.4倍。供給力を高めない配当急増が、内部留保蓄積とともに日本の成長鈍化の一因と指摘されている。
+    </div>
+  </div>
+</div>
+
+<footer>
+  出典：財務省「法人企業統計年次調査」（人件費・設備投資・配当・利益剰余金）、
+  内閣府「日本経済2023−2024」第3章（設備投資と経常利益の比較）、
+  内閣官房「賃金・人的資本に関するデータ集」（2021年）、
+  ニッセイ基礎研究所「積みあがる内部留保」（法人企業統計分析）<br>
+  ※設備投資は有形固定資産＋ソフトウェアベース（金融・保険除く全産業）。人件費は従業員給与・賞与・福利厚生費（役員除く）。
+  利益の使途分解は純利益ベースの概念的分解であり、会計上の現金収支とは一致しない。数値は各報告書・統計より集計のため若干の誤差を含む。
+</footer>
+</div>
+
+<div class="tip" id="tip2"></div>
+
+<script>
+// ─── DATA ──────────────────────────────────────────────────────
+// 単位：兆円、全産業・金融保険除く
+const years = [2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
+
+// 経常利益
+const opProfit = [39.3, 45.5, 48.6, 59.8, 68.0, 62.9, 44.9, 72.0, 95.3, 106.8];
+
+// 設備投資（有形+ソフトウェア）
+const capex    = [78.9, 80.0, 82.2, 86.5, 90.0, 89.7, 83.7, 85.2, 90.0, 101.8];
+
+// 人件費（従業員のみ、役員除く）
+const labor    = [172.0, 174.0, 176.0, 179.0, 183.0, 185.0, 181.0, 184.0, 191.0, 205.0];
+
+// 配当金支払（全規模）
+const divid    = [14.0, 16.0, 20.0, 23.0, 26.0, 24.0, 20.0, 25.0, 29.0, 34.0];
+
+// 労働分配率（%）
+const ldist    = [67.2, 65.8, 65.1, 62.8, 61.0, 62.3, 70.1, 64.5, 62.0, 58.0];
+
+// 利益に対する各比率（%） 経常利益比
+const rCapex   = capex.map((v,i)  => +(v / opProfit[i] * 100).toFixed(1));
+const rLabor   = labor.map((v,i)  => {
+  const base = labor[0];
+  const inc  = Math.max(0, v - base);
+  return +((inc / opProfit[i]) * 100).toFixed(1);
+});
+const rDivid   = divid.map((v,i)  => +(v / opProfit[i] * 100).toFixed(1));
+// 内部留保積み増しは純利益−配当−人件費増分に相当（概念値）
+const retained_add = [18,20,22,25,28,24,15,28,35,38]; // 年間積み増し推計
+const rRetain  = retained_add.map((v,i) => +(v / opProfit[i] * 100).toFixed(1));
+
+// ─── STACKED BAR CHART ─────────────────────────────────────────
+const sc = document.getElementById('stackedChart');
+const base_labor = labor[0];
+
+// 純利益（経常利益 × 0.65 概算）
+const netProfit = opProfit.map(v => +(v * 0.65).toFixed(1));
+const maxNet = Math.max(...netProfit);
+
+years.forEach((yr, i) => {
+  const np = netProfit[i];
+  // 使途の概算兆円（純利益の中での分解）
+  const laborInc = Math.max(0, labor[i] - base_labor) * 0.6; // 利益起因の人件費増
+  const capexPart = Math.max(0, capex[i] - 78.9) * 0.7;      // 増分の設備投資
+  const div = divid[i];
+  const ret = Math.max(0, retained_add[i]);
+  const total = laborInc + capexPart + div + ret;
+  const scale = np / (total || 1);
+
+  const sl = (laborInc * scale / maxNet * 100).toFixed(1);
+  const sc2 = (capexPart * scale / maxNet * 100).toFixed(1);
+  const sd = (div * scale / maxNet * 100).toFixed(1);
+  const sr = (ret * scale / maxNet * 100).toFixed(1);
+
+  const row = document.createElement('div');
+  row.className = 'sc-row';
+  row.innerHTML = `
+    <div class="sc-year">${yr}</div>
+    <div class="sc-bars">
+      <div class="sc-seg" style="background:var(--supply);width:0%" data-w="${sc2}" title="設備・R&D投資">
+        <span>${(capexPart*scale).toFixed(0)}兆</span>
+      </div>
+      <div class="sc-seg" style="background:var(--wage);width:0%" data-w="${sl}" title="人件費増分">
+        <span>${(laborInc*scale).toFixed(0)}兆</span>
+      </div>
+      <div class="sc-seg" style="background:#e67e22;width:0%" data-w="${sd}" title="配当・自社株買い">
+        <span>${(div*scale).toFixed(0)}兆</span>
+      </div>
+      <div class="sc-seg" style="background:var(--accum);width:0%" data-w="${sr}" title="内部留保積み増し">
+        <span>${(ret*scale).toFixed(0)}兆</span>
+      </div>
+    </div>
+    <div class="sc-profit">純利益 ${np}兆</div>`;
+  sc.appendChild(row);
+});
+
+setTimeout(() => {
+  document.querySelectorAll('.sc-seg[data-w]').forEach(el => {
+    el.style.transition = 'width .9s ease';
+    el.style.width = el.dataset.w + '%';
+  });
+}, 150);
+
+// ─── RATIO LINE CHART ────────────────────────────────────────────
+const ratioDS = [
+  { key:'capex',  label:'設備投資 / 経常利益（%）', color:'var(--supply)', data: rCapex },
+  { key:'divid',  label:'配当金 / 経常利益（%）',   color:'#e67e22',       data: rDivid },
+  { key:'retain', label:'内部留保積み増し / 経常利益（%）', color:'var(--accum)', data: rRetain },
+  { key:'labor',  label:'人件費増分 / 経常利益（%）', color:'var(--wage)', data: rLabor },
+];
+
+const vis = {capex:true,divid:true,retain:true,labor:true};
+const svg = document.getElementById('ratioChart');
+const tip = document.getElementById('tip');
+const W=920,H=300,PAD={t:16,r:28,b:38,l:48};
+const cW=W-PAD.l-PAD.r, cH=H-PAD.t-PAD.b;
+const allR = [...rCapex,...rDivid,...rRetain,...rLabor];
+const minR=0, maxR=Math.ceil(Math.max(...allR)/10)*10+5;
+
+function xp(i){return PAD.l+(i/(years.length-1))*cW}
+function yp(v){return PAD.t+cH-((v-minR)/(maxR-minR))*cH}
+
+function drawRatio(){
+  svg.innerHTML='';
+  [0,50,100,150,200].filter(v=>v<=maxR).forEach(v=>{
+    const y=yp(v);
+    const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+    l.setAttribute('x1',PAD.l);l.setAttribute('x2',W-PAD.r);l.setAttribute('y1',y);l.setAttribute('y2',y);
+    l.setAttribute('stroke',v===0?'#ccc':'#ede9e2');l.setAttribute('stroke-width','1');
+    svg.appendChild(l);
+    const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('x',PAD.l-6);t.setAttribute('y',y+4);
+    t.setAttribute('text-anchor','end');t.setAttribute('fill','#aaa');t.setAttribute('font-size','9');
+    t.textContent=v+'%';
+    svg.appendChild(t);
+  });
+  years.forEach((yr,i)=>{
+    const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+    t.setAttribute('x',xp(i));t.setAttribute('y',H-PAD.b+15);
+    t.setAttribute('text-anchor','middle');t.setAttribute('fill','#aaa');t.setAttribute('font-size','9');
+    t.textContent=String(yr).slice(2)+'年';
+    svg.appendChild(t);
+  });
+  ratioDS.forEach(ds=>{
+    if(!vis[ds.key]) return;
+    const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+    const d=ds.data.map((v,i)=>`${i===0?'M':'L'}${xp(i).toFixed(1)},${yp(v).toFixed(1)}`).join(' ');
+    path.setAttribute('d',d);path.setAttribute('fill','none');
+    path.setAttribute('stroke',ds.color);path.setAttribute('stroke-width','2.4');
+    path.setAttribute('stroke-linejoin','round');
+    svg.appendChild(path);
+    ds.data.forEach((v,i)=>{
+      const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',xp(i));c.setAttribute('cy',yp(v));c.setAttribute('r','4.5');
+      c.setAttribute('fill',ds.color);c.setAttribute('stroke','#faf8f5');c.setAttribute('stroke-width','2');
+      c.style.cursor='pointer';
+      c.addEventListener('mouseenter',e=>{
+        tip.innerHTML=`<b style="color:${ds.color}">${ds.label}</b><br>${years[i]}年度<br>${v}%<br>（分子 ${ds.key==='capex'?capex[i]:ds.key==='divid'?divid[i]:ds.key==='retain'?retained_add[i]:Math.max(0,labor[i]-base_labor).toFixed(0)}兆円 ÷ 経常利益 ${opProfit[i]}兆円）`;
+        tip.style.opacity='1';
+      });
+      c.addEventListener('mouseleave',()=>{tip.style.opacity='0'});
+      svg.appendChild(c);
+    });
+    const last=ds.data[ds.data.length-1];
+    const el=document.createElementNS('http://www.w3.org/2000/svg','text');
+    el.setAttribute('x',xp(ds.data.length-1)+6);el.setAttribute('y',yp(last)+4);
+    el.setAttribute('fill',ds.color);el.setAttribute('font-size','10');el.setAttribute('font-weight','600');
+    el.textContent=last+'%';
+    svg.appendChild(el);
+  });
+}
+document.addEventListener('mousemove',e=>{if(tip.style.opacity==='1'){tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY-14)+'px'}});
+
+// ratio legend
+const rl=document.getElementById('ratioLegend');
+ratioDS.forEach(ds=>{
+  const d=document.createElement('div');
+  d.style.cssText=`display:flex;align-items:center;gap:5px;font-size:11px;cursor:pointer;padding:4px 8px;border:1px solid #e8e3db;background:#fff`;
+  d.dataset.key=ds.key;
+  d.innerHTML=`<span style="width:12px;height:12px;background:${ds.color};flex-shrink:0;display:inline-block"></span>${ds.label}`;
+  d.addEventListener('click',()=>{
+    vis[ds.key]=!vis[ds.key];
+    d.style.opacity=vis[ds.key]?'1':'0.3';
+    drawRatio();
+  });
+  rl.appendChild(d);
+});
+drawRatio();
+
+// ─── LABOR DISTRIBUTION ──────────────────────────────────────────
+const ldData=[
+  {year:'2014',val:67.2},{year:'2016',val:65.1},{year:'2018',val:61.0},
+  {year:'2020',val:70.1},{year:'2023',val:58.0},
+];
+const maxLD=75;
+const ldg=document.getElementById('ldistGrid');
+ldData.forEach(d=>{
+  const isHigh=d.val>67;
+  const card=document.createElement('div');
+  card.className='ldist-card';
+  card.innerHTML=`
+    <div class="ldist-year">${d.year}年度</div>
+    <div class="ldist-val" style="color:${isHigh?'var(--wage)':d.val<61?'var(--accum)':'var(--ink)'}">${d.val}%</div>
+    <div class="ldist-label">労働分配率</div>
+    <div class="ldist-bar"><div class="ldist-fill" style="width:0%;background:${isHigh?'var(--wage)':'var(--accum)'}" data-w="${(d.val/maxLD*100).toFixed(1)}"></div></div>`;
+  ldg.appendChild(card);
+});
+setTimeout(()=>{
+  document.querySelectorAll('.ldist-fill[data-w]').forEach(el=>{
+    el.style.transition='width 1s ease';
+    el.style.width=el.dataset.w+'%';
+  });
+},300);
+</script>
+</body>
+</html>
