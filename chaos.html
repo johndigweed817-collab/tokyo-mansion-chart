@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Action Fractal: Cycle of Life</title>
+    <title>Human Behavior Fractal - Legacy & Decay</title>
     <style>
         body { margin: 0; background: #000; overflow: hidden; font-family: sans-serif; }
         canvas { display: block; }
@@ -11,6 +11,7 @@
             color: #fff; background: rgba(0, 0, 0, 0.8);
             padding: 15px; border-radius: 8px; border: 1px solid #ff4400;
             max-width: 320px; pointer-events: none;
+            box-shadow: 0 0 15px rgba(255, 68, 0, 0.3);
         }
         h1 { font-size: 1.2rem; margin: 0 0 10px 0; color: #ff4400; }
         p { font-size: 0.8rem; line-height: 1.5; color: #ccc; margin: 5px 0; }
@@ -19,10 +20,11 @@
 <body>
 
 <div id="ui">
-    <h1>Action Fractal: Life Cycle</h1>
-    <p>・5回移動で「子」を生成（計3回まで）</p>
-    <p>・4回目の出産機会で「爆発・消滅」</p>
-    <p>・個体の死と生のループを視覚化</p>
+    <h1>Action Fractal: Legacy</h1>
+    <p>・生存：自分の全軌跡を鮮明に維持する</p>
+    <p>・死後：爆発とともに軌跡が闇へ溶け出す</p>
+    <p>・過密：周囲に人が多いと増殖を抑制</p>
+    <p style="color:#888; margin-top:10px;">画面クリックで再起動</p>
 </div>
 
 <canvas id="c"></canvas>
@@ -30,28 +32,30 @@
 <script>
     const canvas = document.getElementById('c');
     const ctx = canvas.getContext('2d');
-
     let w = canvas.width = window.innerWidth;
     let h = canvas.height = window.innerHeight;
 
     const mu = 1.5;
     const speed = 4;
+    const CHECK_RADIUS = 60; 
+    const LIMIT_COUNT = 2;   
     let agents = [];
-    let particles = []; // 爆発演出用
+    let particles = [];
 
     class Agent {
         constructor(x, y, color) {
             this.x = x;
             this.y = y;
+            this.history = [{x: x, y: y, jump: false}]; // 生存中に描き続ける歴史
             this.angle = Math.random() * Math.PI * 2;
             this.targetL = 0;
             this.currentL = 0;
             this.waitMax = 0;
             this.waitTime = 0;
             this.isMoving = false;
-            this.color = color || `hsla(${Math.random() * 360}, 100%, 60%, 0.5)`;
+            this.color = color || `hsla(${Math.random() * 360}, 100%, 60%, 0.8)`;
             this.moveCount = 0; 
-            this.spawnCount = 0; // 何回産んだか
+            this.actionAttemptCount = 0;
             this.isDead = false;
             this.timer = 0;
             this.decideNext();
@@ -62,30 +66,40 @@
             return Math.max(min, Math.min(val, max));
         }
 
+        countNeighbors() {
+            let count = 0;
+            for (let a of agents) {
+                if (a === this || a.isDead) continue;
+                const dx = a.x - this.x;
+                const dy = a.y - this.y;
+                if (dx*dx + dy*dy < CHECK_RADIUS*CHECK_RADIUS) count++;
+            }
+            return count;
+        }
+
         decideNext() {
             if (this.isMoving) {
                 this.isMoving = false;
-                this.waitMax = this.waitTime = this.getLevy(20, 300);
+                this.waitMax = this.waitTime = this.getLevy(40, 250);
             } else {
                 this.moveCount++;
-                
-                // 5回移動するごとにアクション
                 if (this.moveCount >= 5) {
-                    this.spawnCount++;
-                    if (this.spawnCount >= 4) {
-                        this.explode(); // 4回目で爆発
+                    this.actionAttemptCount++;
+                    if (this.actionAttemptCount >= 4) {
+                        this.explode();
                         return;
-                    } else {
-                        this.spawnChild(); // 3回目までは子を産む
+                    } else if (this.countNeighbors() < LIMIT_COUNT) {
+                        this.spawnChild();
                     }
                     this.moveCount = 0;
                 }
-
                 this.isMoving = true;
-                this.targetL = this.getLevy(10, w / 3);
+                this.targetL = this.getLevy(20, w / 2);
                 this.currentL = 0;
                 this.angle = Math.random() * Math.PI * 2;
-                this.color = `hsla(${Math.random() * 360}, 100%, 60%, 0.5)`;
+                // 色を少しだけずらして血統を感じさせる
+                const hue = (parseFloat(this.color.match(/\d+/)[0]) + 15) % 360;
+                this.color = `hsla(${hue}, 100%, 60%, 0.8)`;
             }
         }
 
@@ -95,15 +109,11 @@
 
         explode() {
             this.isDead = true;
-            // 爆発パーティクルの生成
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 30; i++) {
                 particles.push({
-                    x: this.x,
-                    y: this.y,
-                    vx: (Math.random() - 0.5) * 10,
-                    vy: (Math.random() - 0.5) * 10,
-                    life: 30,
-                    color: this.color
+                    x: this.x, y: this.y,
+                    vx: (Math.random() - 0.5) * 12, vy: (Math.random() - 0.5) * 12,
+                    life: 40, color: this.color
                 });
             }
         }
@@ -111,64 +121,100 @@
         update() {
             if (this.isDead) return;
             this.timer++;
+
             if (this.isMoving) {
-                ctx.beginPath();
-                ctx.strokeStyle = this.color;
-                ctx.moveTo(this.x, this.y);
+                let oldX = this.x;
+                let oldY = this.y;
                 this.x += Math.cos(this.angle) * speed;
                 this.y += Math.sin(this.angle) * speed;
                 this.currentL += speed;
-                if (this.x < 0) this.x = w; if (this.x > w) this.x = 0;
-                if (this.y < 0) this.y = h; if (this.y > h) this.y = 0;
-                ctx.lineTo(this.x, this.y);
-                ctx.stroke();
+
+                let jumped = false;
+                if (this.x < 0) { this.x = w; jumped = true; }
+                if (this.x > w) { this.x = 0; jumped = true; }
+                if (this.y < 0) { this.y = h; jumped = true; }
+                if (this.y > h) { this.y = 0; jumped = true; }
+
+                this.history.push({x: this.x, y: this.y, jump: jumped});
+
                 if (this.currentL >= this.targetL) this.decideNext();
             } else {
-                const progress = this.waitTime / this.waitMax;
-                const pulse = Math.sin(this.timer * 0.15) * 0.5 + 0.5;
-                const size = 1 + (10 * progress * pulse);
-                ctx.fillStyle = this.color.replace('0.5)', (0.2 + pulse * 0.4) + ')');
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
-                ctx.fill();
                 this.waitTime--;
                 if (this.waitTime <= 0) this.decideNext();
             }
         }
-    }
 
-    function init() {
-        ctx.fillStyle = '#000';
-        ctx.fillRect(0, 0, w, h);
-        agents = [new Agent(w / 2, h / 2)];
-        particles = [];
+        draw() {
+            if (this.isDead || this.history.length < 2) return;
+
+            // 1. 軌跡の描画（生存中のみ毎フレーム実行）
+            ctx.beginPath();
+            ctx.strokeStyle = this.color;
+            ctx.lineWidth = 1.2;
+            for (let i = 1; i < this.history.length; i++) {
+                const p1 = this.history[i-1];
+                const p2 = this.history[i];
+                if (!p2.jump) {
+                    ctx.moveTo(p1.x, p1.y);
+                    ctx.lineTo(p2.x, p2.y);
+                }
+            }
+            ctx.stroke();
+
+            // 2. 脈動する本体
+            if (!this.isMoving) {
+                const pulse = Math.sin(this.timer * 0.15) * 0.5 + 0.5;
+                const size = 1 + (8 * pulse);
+                ctx.fillStyle = this.color.replace('0.8)', (0.4 + pulse * 0.6) + ')');
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
     }
 
     function loop() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.02)';
+        // 【ハック：死後の忘却レイヤー】
+        // 画面全体を極薄の黒で塗りつぶす。
+        // 生存者の draw() はこの後に呼ばれるため、生存者の線だけが上書きされて消えない。
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.03)'; 
         ctx.fillRect(0, 0, w, h);
 
-        // パーティクルの描画
-        particles.forEach((p, i) => {
+        particles.forEach(p => {
             ctx.fillStyle = p.color;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-            ctx.fill();
-            p.x += p.vx;
-            p.y += p.vy;
-            p.life--;
+            ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI * 2); ctx.fill();
+            p.x += p.vx; p.y += p.vy; p.life--;
         });
         particles = particles.filter(p => p.life > 0);
 
-        // エージェントの更新
-        agents.forEach(a => a.update());
+        // 生存エージェントの処理
+        for (let a of agents) {
+            a.update();
+            a.draw();
+        }
+        
+        // 死んだエージェントをリストから排除（＝再描画が止まり、風化が始まる）
         agents = agents.filter(a => !a.isDead);
 
         requestAnimationFrame(loop);
     }
 
-    window.addEventListener('click', init);
-    init();
+    window.addEventListener('click', () => {
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, w, h);
+        agents = [new Agent(w / 2, h / 2)];
+        particles = [];
+    });
+
+    window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+    });
+
+    // 初期化
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, w, h);
+    agents.push(new Agent(w / 2, h / 2));
     loop();
 </script>
 </body>
