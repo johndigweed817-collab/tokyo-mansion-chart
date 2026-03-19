@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashi Driven Simulator - Data Driven Edition</title>
+    <style>
+        :root { --bg: #fdfaf5; --accent: #d4a373; --text: #5d4037; --card-bg: #ffffff; }
+        body { font-family: sans-serif; background: var(--bg); margin: 0; color: var(--text); touch-action: manipulation; }
+        header { background: #fff; text-align: center; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .main-container { display: flex; flex-direction: column; align-items: center; width: 95%; max-width: 600px; gap: 15px; margin: 15px auto; padding-bottom: 50px; }
+
+        .method-selector { display: flex; gap: 8px; width: 100%; background: #eee; padding: 5px; border-radius: 30px; }
+        .method-btn { flex: 1; padding: 10px; border-radius: 25px; border: none; font-size: 12px; font-weight: bold; cursor: pointer; background: transparent; color: #888; }
+        .method-btn.active { background: #fff; color: var(--text); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        .palette { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+        .ing { padding: 10px 14px; background: #fff; border: 1px solid #ddd; border-radius: 12px; font-size: 13px; cursor: grab; }
+        .ing.dragging { opacity: 0.6; transform: scale(1.1); z-index: 1000; position: fixed; pointer-events: none; border: 2px solid var(--accent); }
+
+        .cooking-stage { display: flex; width: 100%; gap: 10px; }
+        .pot-wrapper { position: relative; width: 200px; height: 200px; flex-shrink: 0; }
+        .pot-svg { width: 100%; height: 100%; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2)); }
+        .inventory { flex-grow: 1; height: 200px; background: rgba(255,255,255,0.6); border-radius: 15px; padding: 10px; border: 1px dashed #ccc; overflow-y: auto; font-size: 12px; }
+
+        .chart-card { background: var(--card-bg); width: 100%; padding: 20px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        
+        /* 解説エリアのスタイリング */
+        .explanation-card { background: #fff; width: 100%; padding: 20px; border-radius: 20px; border-left: 5px solid var(--accent); box-sizing: border-box; }
+        .explanation-card h3 { margin: 0 0 15px 0; font-size: 1rem; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        .exp-section { margin-bottom: 15px; }
+        .exp-tag { font-weight: bold; color: var(--accent); font-size: 11px; display: block; margin-bottom: 4px; text-transform: uppercase; }
+        .exp-text { font-size: 13px; line-height: 1.6; color: #666; }
+
+        .btn-reset { margin-top: 15px; padding: 10px 30px; border-radius: 25px; border: 1.5px solid var(--accent); background: transparent; color: var(--accent); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header><strong>DASHI DRIVEN SIMULATOR</strong></header>
+
+<div class="main-container">
+    <div id="method-container" class="method-selector"></div>
+
+    <div class="palette" id="palette-container"></div>
+
+    <div class="cooking-stage">
+        <div class="pot-wrapper">
+            <svg class="pot-svg" viewBox="0 0 100 100">
+                <defs>
+                    <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#fff" id="s-in" />
+                        <stop offset="100%" stop-color="#fff" id="s-out" />
+                    </radialGradient>
+                </defs>
+                <circle cx="50" cy="50" r="48" fill="#333" />
+                <circle cx="50" cy="50" r="44" fill="#555" />
+                <circle cx="50" cy="50" r="0" id="water-vol" fill="url(#grad)" opacity="0.9" />
+            </svg>
+            <div id="drop-zone" style="position:absolute; inset:0; border-radius:50%"></div>
+        </div>
+        <div class="inventory" id="inv-list"></div>
+    </div>
+
+    <div class="chart-card">
+        <canvas id="radar" width="300" height="300"></canvas>
+    </div>
+
+    <div class="explanation-card">
+        <h3>📊 科学的解析データ</h3>
+        <div id="explanation-container"></div>
+    </div>
+
+    <button class="btn-reset" onclick="resetAll()">リセット</button>
+</div>
+
+<script>
+/**
+ * ==========================================
+ * データ定義セクション（将来的なJSONの雛形）
+ * ==========================================
+ */
+
+const METHOD_DATA = {
+    water: {
+        id: "water", name: "水出し", emoji: "❄️",
+        coeffs: { g: 0.6, n: 0.4, boost: 0.8, aroma: 1.5, depth: 0.5 },
+        description: "低温抽出によりタンパク質の熱変性を抑え、雑味の原因となる成分の流出を防ぎます。揮発性の高い香気成分が液体内に留まるため、最も上品な香りとキレを実現します。"
+    },
+    simmer: {
+        id: "simmer", name: "煮出し", emoji: "🔥",
+        coeffs: { g: 1.0, n: 1.0, boost: 1.0, aroma: 1.0, depth: 1.0 },
+        description: "60〜85℃の熱を加えることで、素材の細胞膜を透過しやすくし、アミノ酸と核酸を効率よく引き出します。旨みのバランスが最も安定する黄金律の抽出法です。"
+    },
+    express: {
+        id: "express", name: "高温短時間", emoji: "⚡",
+        coeffs: { g: 1.3, n: 1.4, boost: 1.1, aroma: 0.5, depth: 1.5 },
+        description: "沸騰状態の熱エネルギーで強制的に成分を叩き出します。短時間で高い旨み強度を得られますが、熱に弱い香気成分は失われ、苦味や酸味が強調される傾向にあります。"
+    }
+};
+
+const INGREDIENT_DATA = {
+    kombu: { id: "kombu", name: "真昆布", icon: "🌿", glu: 3200, nuc: 0, 
+        science_note: "主成分のグルタミン酸は『旨みの土台』を形成します。海水のミネラル分が適度な塩味と厚みを与えます。" },
+    katsuo: { id: "katsuo", name: "本枯節", icon: "🐟", glu: 50, nuc: 700, 
+        science_note: "豊富なイノシン酸が、グルタミン酸と出会うことで旨みを指数関数的に高めます。燻製工程による特有の香気成分を持ちます。" },
+    shiitake: { id: "shiitake", name: "干し椎茸", icon: "🍄", glu: 200, nuc: 150, 
+        science_note: "乾燥工程で生成されるグアニル酸は、第3の旨みとして相乗効果をさらにブーストし、味の持続性（奥行き）を強化します。" },
+    niboshi: { id: "niboshi", name: "煮干し", icon: "⚓", glu: 100, nuc: 550, 
+        science_note: "イノシン酸に加え、カルシウム等のミネラル分が力強いパンチ（重心）を与えます。雑味成分も含むため、抽出管理が重要です。" },
+    asari: { id: "asari", name: "あさり", icon: "🐚", glu: 150, nuc: 120, 
+        science_note: "特有のコハク酸は、単独でも強い旨みを持ちますが、他素材と混ざることで味の輪郭をはっきりさせ、キレを向上させます。" }
+};
+
+const COMBINATION_LOGIC = [
+    {
+        trigger: (g, n) => g > 0 && n > 0,
+        tag: "旨みの相乗効果",
+        text: "アミノ酸と核酸が結合し、味覚受容体の構造を変化させています。これにより、単体よりも数倍強い信号が脳に送られています。"
+    },
+    {
+        trigger: (g, n, items) => items.some(i => i.id === 'shiitake'),
+        tag: "奥行き（余韻）の拡張",
+        text: "グアニル酸によるブーストが働いています。これは口の中に旨みを長く留める効果があり、後味に豊かな奥行きをもたらします。"
+    }
+];
+
+/**
+ * ==========================================
+ * シミュレーターロジックセクション
+ * ==========================================
+ */
+
+let currentItems = [];
+let activeMethodId = "water";
+const ctx = document.getElementById('radar').getContext('2d');
+
+// --- 初期描画 ---
+function init() {
+    const mc = document.getElementById('method-container');
+    Object.values(METHOD_DATA).forEach(m => {
+        const btn = document.createElement('button');
+        btn.className = `method-btn ${m.id === activeMethodId ? 'active' : ''}`;
+        btn.id = `btn-${m.id}`;
+        btn.innerText = `${m.emoji} ${m.name}`;
+        btn.onclick = () => setMethod(m.id);
+        mc.appendChild(btn);
+    });
+
+    const pc = document.getElementById('palette-container');
+    Object.values(INGREDIENT_DATA).forEach(i => {
+        const div = document.createElement('div');
+        div.className = 'ing';
+        div.innerText = `${i.icon} ${i.name}`;
+        div.setAttribute('draggable', 'true');
+        div.dataset.id = i.id;
+        div.addEventListener('touchstart', dragStart, { passive: false });
+        div.addEventListener('mousedown', dragStart);
+        pc.appendChild(div);
+    });
+    update();
+}
+
+function setMethod(id) {
+    activeMethodId = id;
+    document.querySelectorAll('.method-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(`btn-${id}`).classList.add('active');
+    update();
+}
+
+// --- ドラッグ＆ドロップ（汎用） ---
+function dragStart(e) {
+    const target = e.currentTarget;
+    const touch = e.touches ? e.touches[0] : e;
+    const dragEl = target.cloneNode(true);
+    dragEl.classList.add('dragging');
+    document.body.appendChild(dragEl);
+    const move = (ev) => {
+        const t = ev.touches ? ev.touches[0] : ev;
+        dragEl.style.left = (t.pageX - dragEl.offsetWidth/2) + 'px';
+        dragEl.style.top = (t.pageY - dragEl.offsetHeight/2) + 'px';
+        if (ev.cancelable) ev.preventDefault();
+    };
+    const end = (ev) => {
+        const t = ev.changedTouches ? ev.changedTouches[0] : ev;
+        const rect = document.getElementById('drop-zone').getBoundingClientRect();
+        if (t.clientX >= rect.left && t.clientX <= rect.right && t.clientY >= rect.top && t.clientY <= rect.bottom) {
+            currentItems.push(INGREDIENT_DATA[target.dataset.id]);
+            update();
+        }
+        document.body.removeChild(dragEl);
+        document.removeEventListener('touchmove', move);
+        document.removeEventListener('touchend', end);
+        document.removeEventListener('mousemove', move);
+        document.removeEventListener('mouseup', end);
+    };
+    document.addEventListener('touchmove', move, { passive: false });
+    document.addEventListener('touchend', end);
+    document.addEventListener('mousemove', move);
+    document.addEventListener('mouseup', end);
+    move(e);
+}
+
+function resetAll() { currentItems = []; update(); }
+
+function update() {
+    const method = METHOD_DATA[activeMethodId];
+    let totalG = 0, totalN = 0, counts = {};
+    currentItems.forEach(i => {
+        totalG += i.glu; totalN += i.nuc;
+        counts[i.id] = (counts[i.id] || 0) + 1;
+    });
+
+    const finalG = totalG * method.coeffs.g;
+    const finalN = totalN * method.coeffs.n;
+    let boost = 1.0;
+    if (finalG > 0 && finalN > 0) {
+        boost = 1 + (Math.min(finalG, finalN) / Math.max(finalG, finalN) * 7.5) * method.coeffs.boost;
+    }
+
+    // --- 解説文の生成ロジック ---
+    const expContainer = document.getElementById('explanation-container');
+    expContainer.innerHTML = "";
+
+    // 1. メソッドの解説
+    addExpSection("抽出メソッドの解析", method.description);
+
+    // 2. 素材ごとの解説（投入されているもののみ）
+    const activeIds = [...new Set(currentItems.map(i => i.id))];
+    activeIds.forEach(id => {
+        addExpSection(`${INGREDIENT_DATA[id].name}の寄与`, INGREDIENT_DATA[id].science_note);
+    });
+
+    // 3. 組み合わせロジックの判定
+    COMBINATION_LOGIC.forEach(logic => {
+        if (logic.trigger(finalG, finalN, currentItems)) {
+            addExpSection(logic.tag, logic.text);
+        }
+    });
+
+    // --- その他UI更新 ---
+    const inv = document.getElementById('inv-list');
+    inv.innerHTML = Object.keys(counts).map(id => `<div>${INGREDIENT_DATA[id].icon} ${INGREDIENT_DATA[id].name} x${counts[id]}</div>`).join('') || "鍋は空です";
+    const water = document.getElementById('water-vol');
+    water.setAttribute('r', currentItems.length ? Math.min(42, 28 + currentItems.length * 2) : 0);
+    const hue = 60 - (totalN/(totalG+totalN||1)*25);
+    document.getElementById('s-in').setAttribute('stop-color', `hsl(${hue}, 60%, 95%)`);
+    document.getElementById('s-out').setAttribute('stop-color', `hsl(${hue}, 75%, 75%)`);
+
+    drawRadar(finalG, finalN, boost, activeIds.length, method.coeffs);
+}
+
+function addExpSection(tag, text) {
+    const div = document.createElement('div');
+    div.className = 'exp-section';
+    div.innerHTML = `<span class="exp-tag">${tag}</span><div class="exp-text">${text}</div>`;
+    document.getElementById('explanation-container').appendChild(div);
+}
+
+function drawRadar(g, n, b, typeCount, cfs) {
+    ctx.clearRect(0,0,300,300);
+    const center=150, radius=90;
+    const scores = [
+        Math.min(100, (g+n)*b/180),
+        Math.min(100, typeCount * 25 + currentItems.length * 2),
+        Math.max(10, (100 - (b * 8)) * (activeMethodId === 'water' ? 1.2 : 1)),
+        Math.min(100, (n/6 + typeCount*5) * cfs.depth),
+        Math.min(100, (40 + (currentItems.length * 5)) * cfs.aroma)
+    ];
+    radarCtx = ctx; // 既存ロジック互換用
+    ctx.strokeStyle = "#eee";
+    for(let j=1; j<=5; j++){
+        ctx.beginPath();
+        for(let i=0; i<5; i++){
+            const ang = (Math.PI*2/5)*i - Math.PI/2;
+            ctx.lineTo(center+Math.cos(ang)*radius*j/5, center+Math.sin(ang)*radius*j/5);
+        }
+        ctx.closePath(); ctx.stroke();
+    }
+    ctx.fillStyle = "rgba(212, 163, 115, 0.5)"; ctx.strokeStyle = "var(--accent)"; ctx.lineWidth = 2;
+    ctx.beginPath();
+    for(let i=0; i<5; i++){
+        const ang = (Math.PI*2/5)*i - Math.PI/2;
+        ctx.lineTo(center+Math.cos(ang)*(scores[i]/100*radius), center+Math.sin(ang)*(scores[i]/100*radius));
+    }
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    const lbls = ["旨み強度", "複雑性", "素材依存度", "奥行き", "香り"];
+    ctx.fillStyle = "#888"; ctx.font="10px sans-serif"; ctx.textAlign="center";
+    for(let i=0; i<5; i++){
+        const ang = (Math.PI*2/5)*i - Math.PI/2;
+        ctx.fillText(lbls[i], center+Math.cos(ang)*(radius+25), center+Math.sin(ang)*(radius+25));
+    }
+}
+
+init();
+</script>
+</body>
+</html>
+
