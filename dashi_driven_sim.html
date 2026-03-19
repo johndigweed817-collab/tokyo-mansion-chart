@@ -3,204 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dashi Driven Simulator - Expert Logic</title>
+    <title>Dashi Driven Simulator - Master Edition</title>
     <style>
-        :root { --bg: #fdfaf5; --accent: #d4a373; --error: #e63946; --text: #5d4037; }
+        :root { --bg: #fcfaf2; --accent: #d4a373; --error: #e63946; --text: #4a3a35; }
         body { font-family: sans-serif; background: var(--bg); margin: 0; color: var(--text); touch-action: manipulation; }
-        .main-container { display: flex; flex-direction: column; align-items: center; width: 95%; max-width: 600px; gap: 15px; margin: 15px auto; padding-bottom: 50px; }
+        header { background: #fff; text-align: center; padding: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .main-container { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 600px; gap: 15px; margin: 0 auto; padding-bottom: 50px; }
 
-        /* アラート表示 */
-        #alert-box { 
-            width: 100%; display: none; background: #fff1f0; border: 1px solid var(--error); 
-            color: var(--error); padding: 12px; border-radius: 12px; font-size: 13px; 
-            font-weight: bold; margin-bottom: 10px; animation: shake 0.5s;
+        /* 横スクロールパレット */
+        .scroll-wrapper { width: 100%; overflow-x: auto; background: #fff; padding: 15px 0; border-bottom: 1px solid #eee; -webkit-overflow-scrolling: touch; }
+        .palette { display: inline-flex; gap: 10px; padding: 0 15px; }
+        .ing { 
+            flex: 0 0 auto; width: 85px; height: 85px; background: #fafafa; border: 1.5px solid #eee; 
+            border-radius: 15px; display: flex; flex-direction: column; align-items: center; 
+            justify-content: center; font-size: 11px; font-weight: bold; cursor: grab;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
         }
-        @keyframes shake { 0%, 100% {transform: translateX(0);} 25% {transform: translateX(-5px);} 75% {transform: translateX(5px);} }
+        .ing span { font-size: 24px; margin-bottom: 5px; }
+        .ing.dragging { opacity: 0.5; position: fixed; z-index: 1000; pointer-events: none; transform: scale(1.1); background: #fff; border-color: var(--accent); }
 
-        .method-selector { display: flex; gap: 8px; width: 100%; background: #eee; padding: 5px; border-radius: 30px; }
-        .method-btn { flex: 1; padding: 10px; border-radius: 25px; border: none; font-size: 12px; font-weight: bold; cursor: pointer; background: transparent; color: #888; }
-        .method-btn.active { background: #fff; color: var(--text); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-
-        .palette { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
-        .ing { padding: 10px 14px; background: #fff; border: 1px solid #ddd; border-radius: 12px; font-size: 13px; cursor: grab; }
-        .ing.dragging { opacity: 0.6; transform: scale(1.1); z-index: 1000; position: fixed; pointer-events: none; border: 2px solid var(--accent); }
-
-        .cooking-stage { display: flex; width: 100%; gap: 10px; }
-        .pot-wrapper { position: relative; width: 180px; height: 180px; flex-shrink: 0; }
+        /* 調理エリア */
+        .stage { display: flex; width: 92%; gap: 10px; margin-top: 10px; }
+        .pot-box { position: relative; width: 180px; height: 180px; flex-shrink: 0; }
         .pot-svg { width: 100%; height: 100%; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2)); }
-        .inventory { flex-grow: 1; height: 180px; background: rgba(255,255,255,0.6); border-radius: 15px; padding: 10px; border: 1px dashed #ccc; overflow-y: auto; font-size: 11px; }
+        .inventory { flex-grow: 1; height: 180px; background: rgba(255,255,255,0.7); border-radius: 15px; padding: 10px; border: 1px dashed #ccc; overflow-y: auto; font-size: 11px; box-sizing: border-box; }
 
-        .chart-card { background: #fff; width: 100%; padding: 20px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .explanation-card { background: #fff; width: 100%; padding: 20px; border-radius: 20px; border-left: 5px solid var(--accent); box-sizing: border-box; }
-        .exp-section { margin-bottom: 12px; font-size: 13px; line-height: 1.5; }
-        .exp-tag { font-weight: bold; color: var(--accent); font-size: 11px; display: block; margin-bottom: 2px; }
+        /* メソッド選択 */
+        .method-bar { display: flex; gap: 5px; width: 92%; background: #eee; padding: 4px; border-radius: 25px; }
+        .m-btn { flex: 1; border: none; background: none; padding: 8px; font-size: 11px; font-weight: bold; color: #888; border-radius: 20px; cursor: pointer; }
+        .m-btn.active { background: #fff; color: var(--text); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+        /* アラート・チャート・解説 */
+        #alert { width: 92%; display: none; background: #fff1f0; border: 1px solid var(--error); color: var(--error); padding: 10px; border-radius: 10px; font-size: 12px; font-weight: bold; }
+        .chart-card { background: #fff; width: 92%; padding: 15px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); box-sizing: border-box; }
+        .exp-card { background: #fff; width: 92%; padding: 15px; border-radius: 15px; border-left: 5px solid var(--accent); font-size: 12px; line-height: 1.6; box-sizing: border-box; }
+        .btn-reset { margin-top: 10px; padding: 10px 40px; border-radius: 25px; border: 1.5px solid #ccc; background: none; color: #999; font-weight: bold; }
     </style>
 </head>
 <body>
 
+<header><strong>DASHI DRIVEN SIMULATOR</strong></header>
+
 <div class="main-container">
-    <div id="alert-box">⚠️ 警告：不適切な調理法が検出されました</div>
+    <div class="scroll-wrapper">
+        <div class="palette" id="palette"></div>
+    </div>
 
-    <div id="method-container" class="method-selector"></div>
-    <div class="palette" id="palette-container"></div>
+    <div class="method-bar" id="methods"></div>
+    <div id="alert"></div>
 
-    <div class="cooking-stage">
-        <div class="pot-wrapper">
+    <div class="stage">
+        <div class="pot-box">
             <svg class="pot-svg" viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="48" fill="#333" />
-                <circle cx="50" cy="50" r="44" fill="#555" />
-                <circle cx="50" cy="50" r="0" id="water-vol" fill="#ffd700" opacity="0.6" />
+                <circle cx="50" cy="50" r="44" fill="#444" />
+                <circle cx="50" cy="50" r="0" id="water" fill="#ffd700" opacity="0.7" />
             </svg>
             <div id="drop-zone" style="position:absolute; inset:0;"></div>
         </div>
-        <div class="inventory" id="inv-list"></div>
+        <div class="inventory" id="inv">鍋は空です</div>
     </div>
 
     <div class="chart-card">
-        <canvas id="radar" width="300" height="300"></canvas>
+        <canvas id="radar" width="300" height="300" style="width:100%; height:auto;"></canvas>
     </div>
 
-    <div class="explanation-card">
-        <div id="explanation-container"></div>
-    </div>
+    <div class="exp-card" id="exp">素材を投入してください。</div>
 
-    <button style="margin-top:20px; border:none; background:none; color:#aaa; font-size:12px;" onclick="resetAll()">リセット</button>
+    <button class="btn-reset" onclick="resetAll()">RESET</button>
 </div>
 
 <script>
 /**
- * 体系化された「だし」データマスタ
+ * 拡充された素材マスタデータ
  */
-const DATA = {
-    methods: {
-        water: { id: "water", name: "水出し", emoji: "❄️", desc: "低温で雑味を抑える抽出法。" },
-        simmer: { id: "simmer", name: "煮出し", emoji: "🔥", desc: "80℃前後でバランス良く抽出。" },
-        express: { id: "express", name: "高温", emoji: "⚡", desc: "沸騰状態で一気に引き出す。" }
-    },
+const MASTER = {
     ingredients: {
-        kombu: { id: "kombu", name: "昆布", icon: "🌿", glu: 3000, nuc: 0,
-            eff: { water: 1.2, simmer: 1.0, express: 0.7 }, // 水出しが最も上品
-            note: "昆布は低温でこそ澄んだ旨みが出ます。高温ではぬめり成分が流出します。" },
-        katsuo: { id: "katsuo", name: "鰹節", icon: "🐟", glu: 50, nuc: 700,
-            eff: { water: 0.4, simmer: 1.0, express: 1.2 }, // 熱が必要
-            note: "節類は熱を加えることでイノシン酸が溶け出します。" },
-        asari: { id: "asari", name: "あさり", icon: "🐚", glu: 100, nuc: 100,
-            eff: { water: 0.05, simmer: 1.0, express: 1.5 }, // 水出しではほぼゼロ
-            note: "貝類は加熱によるタンパク質収縮でコハク酸が放出されます。" }
+        kombu_ma: { n: "真昆布", i: "🌿", g: 3200, n: 0, eff: {w:1.2, s:1.0, e:0.6}, note: "上品で甘みのあるだし。低温抽出が理想。" },
+        kombu_ri: { n: "利尻昆布", i: "🍃", g: 2800, n: 0, eff: {w:1.1, s:1.0, e:0.7}, note: "澄んだ色味と強いコシ。懐石料理の定番。" },
+        katsuo_k: { n: "本枯節", i: "🐟", g: 50, n: 750, eff: {w:0.3, s:1.0, e:1.2}, note: "カビ付けによる芳醇な香りとキレ。" },
+        katsuo_a: { n: "荒節", i: "🔥", g: 80, n: 600, eff: {w:0.4, s:1.0, e:1.3}, note: "燻製の香りが強く、力強い味わい。" },
+        sababushi: { n: "さば節", i: "🌊", g: 100, n: 500, eff: {w:0.4, s:1.0, e:1.4}, note: "コクと甘みが強く、混合だしに最適。" },
+        niboshi: { n: "煮干し", i: "⚓", g: 120, n: 550, eff: {w:0.8, s:1.0, e:1.5}, note: "魚の力強さ。高温では雑味も出る。" },
+        asari: { n: "あさり", i: "🐚", g: 150, n: 120, eff: {w:0.05, s:1.0, e:1.8}, note: "コハク酸のパンチ。加熱は必須。" },
+        torigara: { n: "鶏ガラ", i: "🍗", g: 500, n: 100, eff: {w:0.1, s:0.8, e:1.5}, note: "動物性の厚み。長時間加熱で本領発揮。" },
+        tonkotsu: { n: "豚骨", i: "🐖", g: 300, n: 50, eff: {w:0.0, s:0.5, e:2.0}, note: "強烈なボディと脂質。沸騰抽出が基本。" },
+        shiitake: { n: "干し椎茸", i: "🍄", g: 250, n: 200, eff: {w:1.3, s:1.0, e:0.8}, note: "グアニル酸の奥行き。水出しが推奨。" },
+        onion: { n: "玉ねぎ", i: "🧅", g: 150, n: 0, eff: {w:0.6, s:1.0, e:1.2}, note: "野菜の甘み。和洋問わずベースになる。" }
     },
-    warnings: [
-        {
-            check: (m, items) => m === 'water' && items.some(i => i.id === 'asari'),
-            level: "ERROR",
-            msg: "⚠️ 【衛生警告】生の貝類を水出しするのは非常に危険です。コハク酸も抽出されず、細菌繁殖のリスクが高まります。必ず加熱してください。"
-        },
-        {
-            check: (m, items) => m === 'express' && items.some(i => i.id === 'kombu'),
-            level: "CAUTION",
-            msg: "⚠️ 【品質警告】昆布を高熱で煮立たせると、アルギン酸が溶け出し、だしに強い濁りとエグみが生じます。"
-        }
+    methods: {
+        w: { n: "水出し", e: "❄️", d: "熱を加えず、素材のピュアな香りを封じ込める手法。" },
+        s: { n: "煮出し", e: "🔥", d: "最も汎用的な温度。旨みの相乗効果が安定する。" },
+        e: { n: "高温抽出", e: "⚡", d: "沸騰の熱で成分を叩き出す。動物系や貝類に有効。" }
+    },
+    rules: [
+        { check: (m, items) => m==='w' && items.some(i=>i.n==="あさり"), msg: "⚠️ 警告: あさりの水出しは衛生リスクが高く、旨みも出ません。" },
+        { check: (m, items) => m==='e' && items.some(i=>i.n.includes("昆布")), msg: "⚠️ 注意: 昆布の高温抽出はぬめり（雑味）の原因になります。" }
     ]
 };
 
 let currentItems = [];
-let activeMethodId = "water";
-const canvas = document.getElementById('radar');
-const ctx = canvas.getContext('2d');
+let activeMethod = 'w';
+const radarCtx = document.getElementById('radar').getContext('2d');
 
 function init() {
-    const mc = document.getElementById('method-container');
-    Object.values(DATA.methods).forEach(m => {
-        const btn = document.createElement('button');
-        btn.className = `method-btn ${m.id === activeMethodId ? 'active' : ''}`;
-        btn.id = `btn-${m.id}`;
-        btn.innerText = `${m.emoji} ${m.name}`;
-        btn.onclick = () => { activeMethodId = m.id; update(); };
-        mc.appendChild(btn);
+    const pc = document.getElementById('palette');
+    Object.keys(MASTER.ingredients).forEach(key => {
+        const item = MASTER.ingredients[key];
+        const div = document.createElement('div');
+        div.className = 'ing'; div.innerHTML = `<span>${item.i}</span>${item.n}`;
+        div.onmousedown = (e) => startDrag(e, key);
+        div.ontouchstart = (e) => startDrag(e, key);
+        pc.appendChild(div);
     });
 
-    const pc = document.getElementById('palette-container');
-    Object.values(DATA.ingredients).forEach(i => {
-        const div = document.createElement('div');
-        div.className = 'ing'; div.innerText = `${i.icon} ${i.name}`;
-        div.onmousedown = (e) => startDrag(e, i.id);
-        div.ontouchstart = (e) => startDrag(e, i.id);
-        pc.appendChild(div);
+    const mb = document.getElementById('methods');
+    Object.keys(MASTER.methods).forEach(key => {
+        const m = MASTER.methods[key];
+        const btn = document.createElement('button');
+        btn.className = `m-btn ${key===activeMethod?'active':''}`;
+        btn.id = `m-${key}`; btn.innerText = `${m.e} ${m.n}`;
+        btn.onclick = () => { activeMethod = key; update(); };
+        mb.appendChild(btn);
     });
     update();
 }
 
 function update() {
-    // 1. メソッド切り替え
-    document.querySelectorAll('.method-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById(`btn-${activeMethodId}`).classList.add('active');
+    document.querySelectorAll('.m-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(`m-${activeMethod}`).classList.add('active');
 
-    // 2. 警告チェック
-    const alertBox = document.getElementById('alert-box');
-    const activeWarnings = DATA.warnings.filter(w => w.check(activeMethodId, currentItems));
-    if (activeWarnings.length > 0) {
-        alertBox.style.display = 'block';
-        alertBox.innerText = activeWarnings[0].msg;
-        alertBox.style.borderColor = activeWarnings[0].level === "ERROR" ? "#e63946" : "#f4a261";
-    } else {
-        alertBox.style.display = 'none';
-    }
+    const alertEl = document.getElementById('alert');
+    const warning = MASTER.rules.find(r => r.check(activeMethod, currentItems));
+    if(warning) { alertEl.style.display='block'; alertEl.innerText=warning.msg; }
+    else alertEl.style.display='none';
 
-    // 3. スコア計算（素材×抽出方法の係数を適用）
-    let totalG = 0, totalN = 0, counts = {};
+    let tg=0, tn=0, counts={};
     currentItems.forEach(i => {
-        const coeff = i.eff[activeMethodId];
-        totalG += i.glu * coeff;
-        totalN += i.nuc * coeff;
-        counts[i.name] = (counts[i.name] || 0) + 1;
+        const c = i.eff[activeMethod];
+        tg += i.g * c; tn += i.n * c;
+        counts[i.n] = (counts[i.n] || 0) + 1;
     });
 
-    let boost = 1.0;
-    if (totalG > 0 && totalN > 0) {
-        boost = 1 + (Math.min(totalG, totalN) / Math.max(totalG, totalN) * 7.5);
-    }
-
-    // 4. 解説表示
-    const exp = document.getElementById('explanation-container');
-    exp.innerHTML = `<div class="exp-section"><span class="exp-tag">抽出解説</span>${DATA.methods[activeMethodId].desc}</div>`;
-    [...new Set(currentItems.map(i=>i.id))].forEach(id => {
-        exp.innerHTML += `<div class="exp-section"><span class="exp-tag">${DATA.ingredients[id].name}の状態</span>${DATA.ingredients[id].note}</div>`;
-    });
-
-    // 5. ビジュアル更新
-    document.getElementById('inv-list').innerText = Object.entries(counts).map(([k,v])=>`${k}x${v}`).join(', ') || "空";
-    document.getElementById('water-vol').setAttribute('r', currentItems.length ? 30 + currentItems.length * 2 : 0);
+    let boost = (tg > 0 && tn > 0) ? 1 + (Math.min(tg, tn) / Math.max(tg, tn) * 8) : 1;
     
-    drawRadar(totalG, totalN, boost);
+    document.getElementById('inv').innerHTML = Object.entries(counts).map(([k,v])=>`<div>${k} x${v}</div>`).join('') || "空";
+    document.getElementById('water').setAttribute('r', currentItems.length ? Math.min(42, 25+currentItems.length*2) : 0);
+    
+    // 解説欄
+    let expStr = `<strong>【${MASTER.methods[activeMethod].n}】</strong>${MASTER.methods[activeMethod].d}<br>`;
+    [...new Set(currentItems.map(i=>i.n))].forEach(n => {
+        const target = Object.values(MASTER.ingredients).find(i=>i.n===n);
+        expStr += `<br>・${n}: ${target.note}`;
+    });
+    document.getElementById('exp').innerHTML = expStr;
+
+    drawRadar(tg, tn, boost);
 }
 
-// 簡易ドラッグ（デモ用）
-function startDrag(e, id) {
-    currentItems.push(DATA.ingredients[id]);
+function startDrag(e, key) {
+    currentItems.push(MASTER.ingredients[key]);
     update();
 }
 
 function resetAll() { currentItems = []; update(); }
 
 function drawRadar(g, n, b) {
-    ctx.clearRect(0,0,300,300);
-    const center=150, radius=90, labels=["旨み", "複雑性", "依存度", "奥行き", "香り"];
-    const s = [Math.min(100, (g+n)*b/150), Math.min(100, currentItems.length*15), 50, Math.min(100, n/5), 50];
+    radarCtx.clearRect(0,0,300,300);
+    const center=150, radius=90, labels=["旨み強度", "複雑性", "素材感", "奥行き", "香り"];
+    const s = [Math.min(100, (g+n)*b/180), Math.min(100, currentItems.length*15), 50, Math.min(100, n/6), 50];
     
-    ctx.strokeStyle = "#eee";
+    radarCtx.strokeStyle = "#eee";
     for(let j=1; j<=5; j++){
-        ctx.beginPath();
+        radarCtx.beginPath();
         for(let i=0; i<5; i++){
             const a = (Math.PI*2/5)*i - Math.PI/2;
-            ctx.lineTo(center+Math.cos(a)*radius*j/5, center+Math.sin(a)*radius*j/5);
+            radarCtx.lineTo(center+Math.cos(a)*radius*j/5, center+Math.sin(a)*radius*j/5);
         }
-        ctx.closePath(); ctx.stroke();
+        radarCtx.closePath(); radarCtx.stroke();
     }
-    ctx.fillStyle = "rgba(212, 163, 115, 0.5)"; ctx.beginPath();
+    radarCtx.fillStyle = "rgba(212, 163, 115, 0.5)"; radarCtx.beginPath();
     for(let i=0; i<5; i++){
         const a = (Math.PI*2/5)*i - Math.PI/2;
-        ctx.lineTo(center+Math.cos(a)*(s[i]/100*radius), center+Math.sin(a)*(s[i]/100*radius));
+        radarCtx.lineTo(center+Math.cos(a)*(s[i]/100*radius), center+Math.sin(a)*(s[i]/100*radius));
     }
-    ctx.fill();
+    radarCtx.fill();
+    radarCtx.fillStyle = "#aaa"; radarCtx.font="10px sans-serif"; radarCtx.textAlign="center";
+    for(let i=0; i<5; i++){
+        const a = (Math.PI*2/5)*i - Math.PI/2;
+        radarCtx.fillText(labels[i], center+Math.cos(a)*(radius+25), center+Math.sin(a)*(radius+25));
+    }
 }
 init();
 </script>
