@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Dashi Driven Simulator - Ver 5.0</title>
+    <title>Dashi Driven Simulator - Ver 6.0</title>
     <style>
         :root { --bg: #fdfaf5; --accent: #d4a373; --error: #e63946; --text: #5d4037; }
         body { font-family: sans-serif; background: var(--bg); margin: 0; color: var(--text); touch-action: manipulation; }
@@ -16,7 +16,7 @@
         .ing { 
             flex: 0 0 auto; width: 90px; height: 90px; background: #fff; border: 2px solid #eee; 
             border-radius: 18px; display: flex; flex-direction: column; align-items: center; 
-            justify-content: center; font-size: 12px; font-weight: bold; cursor: pointer;
+            justify-content: center; font-size: 11px; font-weight: bold; cursor: pointer;
             box-shadow: 0 2px 6px rgba(0,0,0,0.04); transition: all 0.2s;
         }
         .ing span { font-size: 28px; margin-bottom: 4px; }
@@ -24,20 +24,20 @@
 
         /* 調理エリア */
         .stage { display: flex; width: 92%; gap: 12px; margin-top: 5px; align-items: flex-start; }
-        .pot-wrapper { position: relative; width: 180px; height: 180px; flex-shrink: 0; }
+        .pot-wrapper { position: relative; width: 170px; height: 170px; flex-shrink: 0; }
         .pot-svg { width: 100%; height: 100%; filter: drop-shadow(0 8px 15px rgba(0,0,0,0.2)); }
         
         .inventory { 
-            flex-grow: 1; height: 180px; background: rgba(255,255,255,0.7); 
+            flex-grow: 1; height: 170px; background: rgba(255,255,255,0.7); 
             border-radius: 15px; padding: 12px; border: 1px dashed #c0b0a0; 
             overflow-y: auto; font-size: 12px; box-sizing: border-box;
         }
-        .inv-item { display: flex; justify-content: space-between; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1px solid #eee; }
-        .inv-item b { color: var(--accent); }
+        .inv-item { display: flex; justify-content: space-between; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #f0f0f0; }
+        .inv-item b { color: var(--accent); font-size: 14px; }
 
         /* メソッドとアラート */
         .method-bar { display: flex; gap: 6px; width: 92%; background: #eee; padding: 4px; border-radius: 30px; }
-        .m-btn { flex: 1; border: none; background: none; padding: 10px; font-size: 12px; font-weight: bold; color: #888; border-radius: 25px; cursor: pointer; }
+        .m-btn { flex: 1; border: none; background: none; padding: 10px; font-size: 11px; font-weight: bold; color: #888; border-radius: 25px; cursor: pointer; }
         .m-btn.active { background: #fff; color: var(--text); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         
         #alert { width: 88%; display: none; background: #fff1f0; border: 1px solid var(--error); color: var(--error); padding: 10px; border-radius: 12px; font-size: 12px; font-weight: bold; text-align: center; }
@@ -72,7 +72,6 @@
                 <circle cx="50" cy="50" r="44" fill="#4a4a4a" />
                 <circle cx="50" cy="50" r="0" id="water" fill="url(#waterGrad)" opacity="0.9" />
             </svg>
-            <div style="position:absolute; inset:0; border-radius:50%;" id="drop-target"></div>
         </div>
         <div class="inventory" id="inv">鍋の中身は空です</div>
     </div>
@@ -88,21 +87,21 @@
 
 <script>
 /**
- * 体系化された素材マスタ（表示名修正版）
+ * 体系化された素材マスタ
  */
 const MASTER = {
     ingredients: [
-        { id: "kombu_ma", n: "真昆布", i: "🌿", g: 3200, n: 0, eff: {w:1.2, s:1.0, e:0.6}, note: "上品で甘みのあるだし。低温抽出が理想。" },
-        { id: "kombu_ri", n: "利尻昆布", i: "🍃", g: 2800, n: 0, eff: {w:1.1, s:1.0, e:0.7}, note: "澄んだ色味と強いコシ。懐石料理の定番。" },
-        { id: "katsuo_k", n: "本枯節", i: "🐟", g: 50, n: 750, eff: {w:0.3, s:1.0, e:1.2}, note: "カビ付けによる芳醇な香りとキレ。" },
-        { id: "katsuo_a", n: "荒節", i: "🔥", g: 80, n: 600, eff: {w:0.4, s:1.0, e:1.3}, note: "燻製の香りが強く、力強い味わい。" },
-        { id: "sababushi", n: "さば節", i: "🌊", g: 100, n: 500, eff: {w:0.4, s:1.0, e:1.4}, note: "コクと甘みが強く、混合だしに最適。" },
-        { id: "niboshi", n: "煮干し", i: "⚓", g: 120, n: 550, eff: {w:0.8, s:1.0, e:1.5}, note: "魚の力強さ。高温では雑味も出る。" },
-        { id: "asari", n: "あさり", i: "🐚", g: 150, n: 120, eff: {w:0.05, s:1.0, e:1.8}, note: "コハク酸のパンチ。加熱は必須。" },
-        { id: "torigara", n: "鶏ガラ", i: "🍗", g: 500, n: 100, eff: {w:0.1, s:0.8, e:1.5}, note: "動物性の厚み。長時間加熱で本領発揮。" },
-        { id: "tonkotsu", n: "豚骨", i: "🐖", g: 300, n: 50, eff: {w:0.0, s:0.5, e:2.0}, note: "強烈なボディと脂質。沸騰抽出が基本。" },
-        { id: "shiitake", n: "干し椎茸", i: "🍄", g: 250, n: 200, eff: {w:1.3, s:1.0, e:0.8}, note: "グアニル酸の奥行き。水出しが推奨。" },
-        { id: "onion", n: "玉ねぎ", i: "🧅", g: 150, n: 0, eff: {w:0.6, s:1.0, e:1.2}, note: "野菜の甘み。和洋問わずベースになる。" }
+        { id: "kombu_ma", n: "真昆布", i: "🌿", g: 3200, nuc: 0, eff: {w:1.2, s:1.0, e:0.6}, note: "上品で甘みのあるだし。低温抽出が理想。" },
+        { id: "kombu_ri", n: "利尻昆布", i: "🍃", g: 2800, nuc: 0, eff: {w:1.1, s:1.0, e:0.7}, note: "澄んだ色味と強いコシ。懐石料理の定番。" },
+        { id: "katsuo_k", n: "本枯節", i: "🐟", g: 50, nuc: 750, eff: {w:0.3, s:1.0, e:1.2}, note: "カビ付けによる芳醇な香りとキレ。" },
+        { id: "katsuo_a", n: "荒節", i: "🔥", g: 80, nuc: 600, eff: {w:0.4, s:1.0, e:1.3}, note: "燻製の香りが強く、力強い味わい。" },
+        { id: "sababushi", n: "さば節", i: "🌊", g: 100, nuc: 500, eff: {w:0.4, s:1.0, e:1.4}, note: "コクと甘みが強く、混合だしに最適。" },
+        { id: "niboshi", n: "煮干し", i: "⚓", g: 120, nuc: 550, eff: {w:0.8, s:1.0, e:1.5}, note: "魚の力強さ。高温では雑味も出る。" },
+        { id: "asari", n: "あさり", i: "🐚", g: 150, nuc: 120, eff: {w:0.05, s:1.0, e:1.8}, note: "コハク酸のパンチ。加熱は必須。" },
+        { id: "torigara", n: "鶏ガラ", i: "🍗", g: 500, nuc: 100, eff: {w:0.1, s:0.8, e:1.5}, note: "動物性の厚み。長時間加熱で本領発揮。" },
+        { id: "tonkotsu", n: "豚骨", i: "🐖", g: 300, nuc: 50, eff: {w:0.0, s:0.5, e:2.0}, note: "強烈なボディと脂質。沸騰抽出が基本。" },
+        { id: "shiitake", n: "干し椎茸", i: "🍄", g: 250, nuc: 200, eff: {w:1.3, s:1.0, e:0.8}, note: "グアニル酸の奥行き。水出しが推奨。" },
+        { id: "onion", n: "玉ねぎ", i: "🧅", g: 150, nuc: 0, eff: {w:0.6, s:1.0, e:1.2}, note: "野菜の甘み。和洋問わずベースになる。" }
     ],
     methods: {
         w: { n: "水出し", e: "❄️", d: "低温抽出で、素材本来の香りを雑味なく封じ込めます。" },
@@ -124,7 +123,8 @@ function init() {
     MASTER.ingredients.forEach(item => {
         const div = document.createElement('div');
         div.className = 'ing'; div.innerHTML = `<span>${item.i}</span>${item.n}`;
-        div.onclick = () => { currentItems.push(item); update(); };
+        // タップで投入
+        div.onclick = () => { currentItems.push(JSON.parse(JSON.stringify(item))); update(); };
         pc.appendChild(div);
     });
 
@@ -141,35 +141,42 @@ function init() {
 }
 
 function update() {
+    // ボタン状態の更新
     document.querySelectorAll('.m-btn').forEach(b => b.classList.remove('active'));
     document.getElementById(`m-${activeMethod}`).classList.add('active');
 
+    // 警告チェック
     const alertEl = document.getElementById('alert');
     const warning = MASTER.rules.find(r => r.check(activeMethod, currentItems));
     if(warning) { alertEl.style.display='block'; alertEl.innerText=warning.msg; }
     else alertEl.style.display='none';
 
+    // スコア計算
     let tg=0, tn=0, counts={};
     currentItems.forEach(i => {
         const c = i.eff[activeMethod];
-        tg += i.g * c; tn += i.n * c;
-        counts[i.n] = { c: (counts[i.n]?.c || 0) + 1, icon: i.i };
+        tg += i.g * c; tn += i.nuc * c;
+        // countsキーを名称(n)に固定
+        if(!counts[i.n]) counts[i.n] = { c: 0, icon: i.i };
+        counts[i.n].c += 1;
     });
 
     let boost = (tg > 0 && tn > 0) ? 1 + (Math.min(tg, tn) / Math.max(tg, tn) * 7.5) : 1;
     
-    // リストの更新（アイコン付き）
+    // リストの更新
     const invEl = document.getElementById('inv');
-    invEl.innerHTML = Object.keys(counts).map(key => `
+    const invHtml = Object.keys(counts).map(name => `
         <div class="inv-item">
-            <span>${counts[key].icon} ${key}</span>
-            <b>x${counts[key].c}</b>
+            <span>${counts[name].icon} ${name}</span>
+            <b>x${counts[name].c}</b>
         </div>
-    `).join('') || "鍋は空です";
+    `).join('');
+    invEl.innerHTML = invHtml || "鍋の中身は空です";
 
-    // 鍋演出
+    // 鍋の演出
     const water = document.getElementById('water');
-    water.setAttribute('r', currentItems.length ? Math.min(42, 26+currentItems.length*1.5) : 0);
+    const rVal = currentItems.length ? Math.min(42, 26+currentItems.length*1.5) : 0;
+    water.setAttribute('r', rVal);
     const hue = 60 - (tn/(tg+tn||1)*25);
     const sat = 20 + (boost-1)*10;
     document.getElementById('s-in').setAttribute('stop-color', `hsl(${hue}, ${sat}%, 95%)`);
@@ -177,9 +184,9 @@ function update() {
     
     // 解説欄
     let expStr = `<strong>【${MASTER.methods[activeMethod].n}】</strong><br>${MASTER.methods[activeMethod].d}<br>`;
-    [...new Set(currentItems.map(i=>i.n))].forEach(n => {
-        const target = MASTER.ingredients.find(i=>i.n===n);
-        expStr += `<br>・${n}: ${target.note}`;
+    [...new Set(currentItems.map(i=>i.n))].forEach(name => {
+        const target = MASTER.ingredients.find(i=>i.n===name);
+        expStr += `<br>・${name}: ${target.note}`;
     });
     document.getElementById('exp').innerHTML = expStr;
 
