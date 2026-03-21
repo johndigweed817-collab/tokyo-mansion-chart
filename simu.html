@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DASHI DRIVEN ARCHITECTURE DESIGN SIMULATOR</title>
+    <style>
+        :root {
+            --bg: #fdfaf5;
+            --accent: #d4a373;
+            --error: #e63946;
+            --text: #5d4037;
+            --gold: #ffcc00;
+            --cold: #a2d9ff;
+            --hot: #ff4d4d;
+            --water-empty: #b3e5fc;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            color: var(--text);
+            transition: filter 0.5s, background 0.5s;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            z-index: 2000;
+            position: sticky;
+            top: 0;
+        }
+
+        .header-title {
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin: 0;
+            font-size: 1.1rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .menu-btn {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            width: 340px;
+            background: #fff;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            display: none;
+            padding: 15px;
+            z-index: 3000;
+            border: 1px solid #eee;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .dropdown.show {
+            display: block;
+        }
+
+        .history-item {
+            padding: 12px;
+            border: 1px solid #f0f0f0;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            background: #fff;
+            font-size: 12px;
+        }
+
+        .history-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .history-name {
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--accent);
+            flex-grow: 1;
+        }
+
+        .btn-mini {
+            font-size: 9px;
+            padding: 4px 8px;
+            cursor: pointer;
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .scroll-wrapper {
+            width: 100%;
+            background: rgba(240, 237, 233, 0.9);
+            padding: 20px 0;
+            border-radius: 15px;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .scroll-wrapper::-webkit-scrollbar {
+            height: 10px;
+            display: block;
+        }
+
+        .scroll-wrapper::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 10px;
+            border: 2px solid #f0ede9;
+        }
+
+        .palette {
+            display: inline-flex;
+            gap: 12px;
+            padding: 0 20px;
+        }
+
+        .ing {
+            flex: 0 0 auto;
+            width: 85px;
+            height: 85px;
+            background: #fff;
+            border: 2px solid #eee;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: grab;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+            user-select: none;
+            touch-action: none;
+        }
+
+        .ing span {
+            font-size: 30px;
+            pointer-events: none;
+        }
+
+        .ing.dragging {
+            opacity: 0.8;
+            position: fixed;
+            z-index: 10000;
+            transform: scale(1.2) rotate(5deg);
+            pointer-events: none;
+            border: 2px solid var(--accent);
+            background: #fff;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        #global-tooltip {
+            position: fixed;
+            display: none;
+            width: 230px;
+            background: #5d4037;
+            color: #fff;
+            padding: 15px;
+            border-radius: 14px;
+            font-size: 11px;
+            z-index: 99999;
+            pointer-events: none;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        #global-tooltip::before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -8px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent transparent #5d4037 transparent;
+        }
+
+        .tooltip-tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .tag-a {
+            background: var(--error);
+            color: #fff;
+        }
+
+        .tag-v {
+            background: #4caf50;
+            color: #fff;
+        }
+
+        .stage-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .method-bar {
+            display: flex;
+            gap: 6px;
+            width: 100%;
+            max-width: 450px;
+            background: rgba(0, 0, 0, 0.05);
+            padding: 5px;
+            border-radius: 40px;
+        }
+
+        .m-btn {
+            flex: 1;
+            border: none;
+            background: none;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #888;
+            border-radius: 35px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .m-btn.active {
+            background: #fff;
+            color: var(--text);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .pot-wrapper {
+            position: relative;
+            width: 260px;
+            height: 260px;
+        }
+
+        .aura {
+            position: absolute;
+            top: -120px;
+            left: -120px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: 1.5s;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .golden-mode .aura {
+            background: radial-gradient(circle, var(--gold) 0%, rgba(255, 204, 0, 0.4) 50%, transparent 80%);
+            opacity: 0.95;
+            animation: aura-pulse 1.2s infinite ease-in-out;
+            filter: blur(25px);
+        }
+
+        @keyframes aura-pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.95;
+            }
+
+            50% {
+                transform: scale(1.15);
+                opacity: 0.6;
+            }
+        }
+
+        .steam-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 120px;
+            pointer-events: none;
+            z-index: 9999;
+            bottom: 80px;
+        }
+
+        .steam-particle {
+            position: absolute;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 50%;
+            opacity: 0;
+            filter: blur(12px);
+            pointer-events: none;
+        }
+
+        .bubbles {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 110px;
+            pointer-events: none;
+            z-index: 60;
+            bottom: 25px;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.45);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            bottom: 0;
+            pointer-events: none;
+            animation: bubble-rise linear forwards;
+        }
+
+        @keyframes bubble-rise {
+            0% {
+                transform: translateY(0) scale(0.3);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.9;
+            }
+
+            100% {
+                transform: translateY(-130px) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .pot-svg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        #pot-body {
+            fill: #3a3a3a;
+            stroke: #222;
+            stroke-width: 2;
+        }
+
+        #pot-lip {
+            fill: #444;
+            stroke: #222;
+            stroke-width: 2;
+        }
+
+        .liquid-group {
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-origin: bottom;
+        }
+
+        .inventory {
+            position: relative;
+            width: 320px;
+            height: 260px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px dashed #c0b0a0;
+            border-radius: 20px;
+            padding: 15px;
+            font-size: 13px;
+            overflow-y: auto;
+            box-sizing: border-box;
+            z-index: 20;
+        }
+
+        .inv-group {
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background: #fff;
+        }
+
+        .group-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 5px;
+            padding-bottom: 2px;
+        }
+
+        .group-label {
+            font-size: 10px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .method-badge {
+            font-size: 8px;
+            background: #f0ede9;
+            padding: 1px 6px;
+            border-radius: 10px;
+            color: #888;
+            font-weight: bold;
+        }
+
+        .inv-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .save-dialog {
+            background: #fff;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 2px solid #f0ede9;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .dialog-btns {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-confirm {
+            flex: 1;
+            background: var(--gold);
+            color: #5d4037;
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-cancel {
+            flex: 1;
+            background: #eee;
+            color: #888;
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .analysis-box {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .chart-card {
+            position: relative;
+            background: #fff;
+            border-radius: 30px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            height: 440px;
+        }
+
+        .chart-bg-text {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 320px !important;
+            font-weight: 900;
+            color: rgba(255, 204, 0, 0.18);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 1s;
+            z-index: 1;
+            letter-spacing: -0.2em;
+            transform: rotate(-5deg);
+            white-space: nowrap;
+        }
+
+        .golden-mode .chart-bg-text {
+            opacity: 1;
+        }
+
+        .exp-card {
+            background: #fff;
+            border-radius: 25px;
+            padding: 35px;
+            border-left: 10px solid var(--accent);
+            font-size: 14px;
+            line-height: 1.8;
+            box-sizing: border-box;
+        }
+
+        .exp-section {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 20px;
+        }
+
+        .exp-tag {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 11px;
+            display: block;
+            margin-bottom: 8px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .exp-title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .cutin {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100000;
+        }
+
+        .cutin.active {
+            display: flex;
+        }
+
+        .cutin-text {
+            font-size: clamp(80px, 15vw, 150px);
+            font-weight: 900;
+            text-align: center;
+            animation: zoomIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            line-height: 1;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        body.debuff {
+            filter: grayscale(1) contrast(1.2);
+            background: #000;
+        }
+
+        body.golden-mode:not(.debuff) {
+            background: linear-gradient(180deg, #fff9e6 0%, #fff 100%);
+        }
+
+        .control-btns {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-tool {
+            padding: 12px 25px;
+            border-radius: 40px;
+            border: 2px solid #ddd;
+            background: #fff;
+            color: #999;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body class="method-w">
+
+    <div id="global-tooltip"></div>
+
+    <div class="modal-overlay" id="save-modal">
+        <div class="save-dialog">
+            <h3 style="color:var(--accent); margin-bottom:20px;">神ダシレシピを保存する</h3>
+            <input type="text" id="recipe-name" class="form-input" placeholder="設計名称">
+            <input type="text" id="recipe-author" class="form-input" placeholder="設計者名">
+            <div class="dialog-btns">
+                <button class="btn-cancel" onclick="closeSaveForm()">戻る</button>
+                <button class="btn-confirm" onclick="saveRecipeJSON()">保存確定</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cutin" id="cutin-gold" onclick="this.classList.remove('active')">
+        <div class="cutin-text" style="color:var(--gold); text-shadow: 0 0 40px var(--gold);">神ダシ！</div>
+    </div>
+    <div class="cutin" id="cutin-error" onclick="this.classList.remove('active')">
+        <div class="cutin-text" style="color:var(--error); text-shadow: 0 0 40px var(--error);">ダメダシ！</div>
+    </div>
+
+    <header>
+        <div style="width:120px"></div>
+        <h2 class="header-title">DASHI DRIVEN ARCHITECTURE DESIGN SIMULATOR</h2>
+        <div class="recipe-menu-container">
+            <button class="menu-btn" onclick="toggleMenu()">📜 レシピ帳</button>
+            <div class="dropdown" id="history-dropdown">
+                <div style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px;">
+                    <button class="btn-mini" onclick="document.getElementById('importFile').click()"
+                        style="width:100%; padding:8px; cursor:pointer;">📥 ファイルから復元</button>
+                    <input type="file" id="importFile" style="display:none" accept=".json" onchange="importJSON(event)">
+                </div>
+                <div id="dropdown-content"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="scroll-wrapper">
+            <div class="palette" id="palette"></div>
+        </div>
+
+        <div class="stage-box">
+            <div class="method-bar" id="methods"></div>
+            <div id="alert"></div>
+            <div class="pot-container">
+                <div class="pot-wrapper" id="pot-area">
+                    <div class="aura"></div>
+                    <div class="steam-container" id="steam-box"></div>
+                    <div class="bubbles" id="boil-bubbles"></div>
+                    <svg class="pot-svg" viewBox="0 0 100 110">
+                        <defs>
+                            <radialGradient id="waterGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#fff" id="s-in" />
+                                <stop offset="100%" stop-color="var(--water-empty)" id="s-out" />
+                            </radialGradient>
+                        </defs>
+                        <rect x="5" y="40" width="10" height="20" rx="3" fill="#333" />
+                        <rect x="85" y="40" width="10" height="20" rx="3" fill="#333" />
+                        <path id="pot-body" d="M15,20 L85,20 L82,95 A32,12 0 0,1 18,95 Z" stroke="#222"
+                            stroke-width="2" />
+                        <ellipse id="pot-lip" cx="50" cy="20" rx="35" ry="10" stroke="#222" stroke-width="2" />
+                        <g class="liquid-group" id="liquid-grp">
+                            <path id="liquid-body-path" d="M20,55 L80,55 L78,90 A28,10 0 0,1 22,90 Z" opacity="0.75" />
+                            <ellipse id="liquid-surface-path" cx="50" cy="55" rx="28" ry="8" opacity="0.9" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="inventory" id="inv-area">鍋は空です。鍋に素材を放り込んでください。</div>
+            </div>
+            <div id="save-panel" style="display:none">
+                <button class="save-btn"
+                    style="background:var(--gold); color:#5d4037; border:none; padding:12px 30px; border-radius:30px; font-weight:bold; cursor:pointer;"
+                    onclick="openSaveForm()">✨ 神ダシを保存する</button>
+            </div>
+            <div class="control-btns"><button class="btn-tool" onclick="undoLast()">UNDO</button><button
+                    class="btn-tool" onclick="resetAll()">RESET POT</button></div>
+        </div>
+
+        <div class="analysis-box">
+            <div class="chart-card">
+                <div class="chart-bg-text">神ダシ</div>
+                <canvas id="radar" width="400" height="400" style="position:relative; z-index:10;"></canvas>
+            </div>
+            <div class="exp-card" id="exp-container"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div style="font-weight:bold; margin-bottom:5px; color:var(--text); letter-spacing:0.1em;">DASHI DRIVEN
+            ARCHITECTURE SYSTEMS</div>
+        Powerd By <a href="https://youside.me" target="_blank"
+            style="text-decoration:none; color:var(--accent); font-weight:bold;">youside<span>.me</span></a>
+    </footer>
+
+    <script>
+        const MASTER = {
+            ingredients: [
+                { id: "kombu_ma", n: "真昆布", i: "🌿", unit: "枚", type: "v", g: 3200, nuc: 0, aroma: 20, note: "アミノ酸の王様。だしの『土台』を形成。" },
+                { id: "kombu_ri", n: "利尻昆布", i: "🍃", unit: "枚", type: "v", g: 2800, nuc: 0, aroma: 25, note: "澄んだキレと上品な甘みを提供。" },
+                { id: "katsuo_k", n: "本枯節", i: "🐟", unit: "g", type: "v", g: 50, nuc: 750, aroma: 90, note: "至高の核酸。芳醇な香りの核心。" },
+                { id: "katsuo_a", n: "荒節", i: "🔥", unit: "g", type: "v", g: 80, nuc: 600, aroma: 100, note: "力強い燻製香。濃い料理に負けない芯。" },
+                { id: "sababushi", n: "さば節", i: "🌊", unit: "g", type: "v", g: 100, nuc: 500, aroma: 70, note: "深いコク。味のレイヤーを多層化。" },
+                { id: "niboshi", n: "煮干し", i: "⚓", unit: "個", type: "v", g: 120, nuc: 550, aroma: 85, note: "魚の力強さと野趣あふれる香り。" },
+                { id: "asari", n: "あさり", i: "🐚", unit: "個", type: "a", g: 150, nuc: 120, aroma: 60, note: "重心を下げ、潮の香りを付与。" },
+                { id: "torigara", n: "鶏ガラ", i: "🍗", unit: "本", type: "a", g: 500, nuc: 100, aroma: 40, note: "現代的な『厚み』。動物性のボディ感。" },
+                { id: "tonkotsu", n: "豚骨", i: "🐖", unit: "個", type: "a", g: 300, nuc: 50, aroma: 30, note: "圧倒的なボディ感。濃厚なコクの基底。" },
+                { id: "shiitake", n: "干し椎茸", i: "🍄", unit: "枚", type: "v", g: 250, nuc: 200, aroma: 80, note: "グアニル酸による余韻の持続。" },
+                { id: "onion", n: "玉ねぎ", i: "🧅", unit: "個", type: "v", g: 150, nuc: 0, aroma: 50, note: "全体を調和させる甘い香りのバランサー。" }
+            ],
+            methods: {
+                w: { n: "水出し", e: "❄️", d: "素材の香りを保持。澄んだ旨みを抽出する設計。", aroma_eff: 1.0 },
+                s: { n: "煮出し", e: "🔥", d: "成分が効率よく結合。香りと旨みの黄金律。", aroma_eff: 0.8 },
+                e: { n: "高温抽出", e: "⚡", d: "物理エネルギーにより強引に成分を引き出す手法。香りは損失。", aroma_eff: 0.4 }
+            },
+            rules: [
+                { id: "r1", check: (m, items) => m === 'w' && items.some(i => i.type === "a" && !i.isExtracted), type: "ERROR", msg: "⚠️ カタストロフ：生の動物性素材の水出しは衛生リスク過大です。" },
+                { id: "r2", check: (m, items) => m === 'e' && items.some(i => i.id.includes("kombu") && !i.isExtracted), type: "CAUTION", msg: "⚠️ 注意：生の昆布を高温抽出するとエグみの原因になります。" }
+            ]
+        };
+
+        let stack = [], activeMethod = 'w', goldTriggered = false, errorTriggered = false, tipTimer;
+        const radarCtx = document.getElementById('radar').getContext('2d'), gt = document.getElementById('global-tooltip');
+
+        function init() {
+            const pc = document.getElementById('palette');
+            MASTER.ingredients.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'ing'; div.innerHTML = `<span>${item.i}</span>${item.n}`;
+                div.onmouseenter = (e) => { tipTimer = setTimeout(() => showTooltip(e, item), 500); };
+                div.onmouseleave = () => { clearTimeout(tipTimer); hideTooltip(); };
+                div.onmousedown = (e) => { clearTimeout(tipTimer); hideTooltip(); startDrag(e, { type: 'single', ingredient: { ...item, isExtracted: false } }); };
+                div.ontouchstart = (e) => { e.preventDefault(); showTooltip(e, item); startDrag(e, { type: 'single', ingredient: { ...item, isExtracted: false } }); };
+                pc.appendChild(div);
+            });
+            const mb = document.getElementById('methods');
+            Object.keys(MASTER.methods).forEach(key => {
+                const btn = document.createElement('button');
+                btn.className = `m-btn ${key === activeMethod ? 'active' : ''}`;
+                btn.id = `btn-${key}`; btn.innerText = `${MASTER.methods[key].e} ${MASTER.methods[key].n}`;
+                btn.onclick = () => { activeMethod = key; update(true); };
+                mb.appendChild(btn);
+            });
+            setInterval(() => { if (stack.length > 0) spawnSteam(); }, 300);
+            setInterval(() => { if (stack.length > 0) spawnBubbles(); }, 180);
+            loadHistory(); update(false);
+        }
+
+        function showTooltip(e, item) {
+            const rect = e.target.getBoundingClientRect();
+            const tag = item.type === 'a' ? 'tag-a' : 'tag-v';
+            gt.innerHTML = `<div class="tooltip-row"><strong>${item.n}</strong> <span class="tooltip-tag ${tag}">${item.type === 'a' ? '動物性' : '植物性'}</span></div><div style="margin: 8px 0; color: #ddd;">${item.note}</div>`;
+            gt.style.display = 'block'; gt.style.left = (rect.left + rect.width / 2 - 115) + 'px'; gt.style.top = (rect.bottom + 15) + 'px';
+            setTimeout(() => gt.style.opacity = 1, 10);
+        }
+        function hideTooltip() { gt.style.display = 'none'; gt.style.opacity = 0; }
+
+        function startDrag(e, entry) {
+            const touch = e.touches ? e.touches[0] : e;
+            const dragEl = document.createElement('div');
+            dragEl.className = 'ing dragging';
+            dragEl.innerHTML = entry.type === 'single' ? `<span>${entry.ingredient.i}</span>${entry.ingredient.n}` : `<span>📦</span>${entry.recipe_name}`;
+            document.body.appendChild(dragEl);
+            const move = (ev) => {
+                const t = ev.touches ? ev.touches[0] : ev;
+                dragEl.style.left = (t.pageX - 42) + 'px'; dragEl.style.top = (t.pageY - 42) + 'px';
+                if (ev.cancelable) ev.preventDefault();
+            };
+            const end = (ev) => {
+                const t = ev.changedTouches ? ev.changedTouches[0] : ev;
+                const rectPot = document.getElementById('pot-area').getBoundingClientRect();
+                const rectInv = document.getElementById('inv-area').getBoundingClientRect();
+                if ((t.clientX >= rectPot.left && t.clientX <= rectPot.right && t.clientY >= rectPot.top && t.clientY <= rectPot.bottom) ||
+                    (t.clientX >= rectInv.left && t.clientX <= rectInv.right && t.clientY >= rectInv.top && t.clientY <= rectInv.bottom)) {
+                    stack.push(JSON.parse(JSON.stringify(entry))); triggerSplash(); update(true);
+                }
+                if (document.body.contains(dragEl)) document.body.removeChild(dragEl);
+                document.removeEventListener('mousemove', move); document.removeEventListener('mouseup', end);
+                document.removeEventListener('touchmove', move); document.removeEventListener('touchend', end);
+            };
+            document.addEventListener('mousemove', move); document.addEventListener('mouseup', end);
+            document.addEventListener('touchmove', move, { passive: false }); document.addEventListener('touchend', end);
+        }
+
+        function triggerSplash() {
+            const grp = document.getElementById('liquid-grp');
+            grp.style.animation = 'none'; void grp.offsetWidth; grp.style.animation = 'splash 0.6s ease-out';
+        }
+
+        function collectAllDeepIngs(item) {
+            if (item.type === 'single') {
+                return [{ ...item.ingredient }];
+            }
+            let res = [];
+            item.items.forEach(child => {
+                res = res.concat(collectAllDeepIngs(child));
+            });
+            return res;
+        }
+
+        function update(allowCutin) {
+            document.querySelectorAll('.m-btn').forEach(b => b.classList.remove('active'));
+            const activeBtn = document.getElementById(`btn-${activeMethod}`);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            let allFlatIngs = [];
+            stack.forEach(entry => allFlatIngs = allFlatIngs.concat(collectAllDeepIngs(entry)));
+
+            const rules = MASTER.rules.filter(r => r.check(activeMethod, allFlatIngs));
+            const hasError = rules.some(r => r.type === "ERROR");
+            const alertEl = document.getElementById('alert');
+            alertEl.style.display = rules.length ? 'block' : 'none';
+            if (rules.length) alertEl.innerHTML = `<div style="background:var(--error); color:#fff; padding:10px; border-radius:10px; font-size:12px; font-weight:bold; margin-bottom:10px;">${rules[0].msg}</div>`;
+
+            if (allowCutin && hasError && !errorTriggered) { document.getElementById('cutin-error').classList.add('active'); errorTriggered = true; }
+            else if (!hasError) errorTriggered = false;
+            document.body.classList.toggle('debuff', hasError);
+
+            let tg = 0, tn = 0, ta = 0, invHTML = "";
+            const displayStack = [];
+
+            // 表示用のスタック整理：単品が連続する場合のみ合算する
+            stack.forEach(entry => {
+                if (entry.type === 'single') {
+                    if (displayStack.length > 0 && displayStack[displayStack.length - 1].type === 'single' && displayStack[displayStack.length - 1].id === entry.ingredient.id) {
+                        displayStack[displayStack.length - 1].count++;
+                    } else {
+                        displayStack.push({ type: 'single', id: entry.ingredient.id, name: entry.ingredient.n, unit: entry.ingredient.unit, count: 1 });
+                    }
+                } else {
+                    displayStack.push(entry);
+                }
+            });
+
+            displayStack.forEach(entry => {
+                if (entry.type === 'single') {
+                    invHTML += `<div class="inv-group"><div class="inv-item"><span>${entry.name}</span><b>${entry.count}${entry.unit}</b></div></div>`;
+                } else {
+                    const mBadge = entry.method_id ? MASTER.methods[entry.method_id].e + " " + MASTER.methods[entry.method_id].n : "";
+                    invHTML += `<div class="inv-group"><div class="group-header"><span class="group-label">📦 ${entry.recipe_name}</span><span class="method-badge">${mBadge}</span></div>`;
+
+                    const innerCounts = {};
+                    const innerIngs = collectAllDeepIngs(entry);
+                    innerIngs.forEach(it => {
+                        innerCounts[it.id] = (innerCounts[it.id] || 0) + 1;
+                    });
+
+                    Object.entries(innerCounts).forEach(([id, count]) => {
+                        const it = MASTER.ingredients.find(m => m.id === id);
+                        invHTML += `<div class="inv-item"><span>${it.n}</span><b>${count}${it.unit}</b></div>`;
+                    });
+                    invHTML += `</div>`;
+                }
+            });
+
+            // 旨み計算
+            allFlatIngs.forEach(it => {
+                tg += (it.id.includes('kombu') ? it.g / 50 : it.g); tn += it.nuc; ta += it.aroma;
+            });
+
+            const method = MASTER.methods[activeMethod];
+            let boost = (tg > 0 && tn > 0) ? 1 + (Math.min(tg, tn) / Math.max(tg, tn) * 7.5) : 1;
+            const balance = (tg > 0 && tn > 0) ? (Math.min(tg, tn) / Math.max(tg, tn)) : 0;
+            const ut = new Set(allFlatIngs.map(i => i.id)).size;
+            const isGold = balance >= 0.75 && boost >= 4.0 && ut >= 2 && !hasError;
+
+            if (allowCutin && isGold && !goldTriggered) { document.getElementById('cutin-gold').classList.add('active'); goldTriggered = true; }
+            else if (!isGold) goldTriggered = false;
+
+            document.body.classList.toggle('golden-mode', isGold && !hasError);
+            document.getElementById('save-panel').style.display = isGold ? 'block' : 'none';
+            document.getElementById('inv-area').innerHTML = invHTML || "鍋は空です。鍋に素材を放り込んでください。";
+
+            const scale = Math.min(1, 0.4 + allFlatIngs.length * 0.05);
+            document.getElementById('liquid-grp').style.transform = `scaleY(${scale})`;
+            const mix = Math.min(1, allFlatIngs.length / 10);
+            const r = Math.round(179 + (255 - 179) * mix), g = Math.round(229 + (204 - 229) * mix), b = Math.round(252 + (0 - 252) * mix);
+            document.getElementById('liquid-body-path').style.fill = `rgb(${r},${g},${b})`;
+            document.getElementById('liquid-surface-path').style.fill = `rgb(${Math.min(255, r + 20)},${Math.min(255, g + 20)},${Math.min(255, b + 20)})`;
+            document.getElementById('steam-box').style.bottom = (55 + (scale * 88)) + 'px';
+
+            const exp = document.getElementById('exp-container');
+            let h = `<div class="exp-section"><span class="exp-tag">Extraction Strategy</span><span class="exp-title">【${method.n}】の科学的アプローチ</span>${method.d}</div>`;
+            if (allFlatIngs.length) {
+                h += `<div class="exp-section"><span class="exp-tag">Synergy Analysis</span><span class="exp-title">適合率：${(balance * 100).toFixed(0)}% / 旨み増幅：${boost.toFixed(1)}x</span>${isGold ? '【神ダシ確定】理想的な結合を果たしました。' : '素材の配合バランスを整えることで、さらなる覚醒が期待できます。'}</div>`;
+                h += `<div class="exp-section"><span class="exp-tag">Ingredient Roles</span>`;
+                [...new Set(allFlatIngs.map(i => i.id))].forEach(id => { const it = MASTER.ingredients.find(i => i.id === id); h += `<div style="margin-bottom:12px;"><span class="exp-title" style="font-size:14px;">${it.i} ${it.n}の寄与</span>${it.note}</div>`; });
+                h += `</div>`;
+            } else { h = `<div style="text-align:center; color:#aaa; padding:20px; font-size:12px;">Architectureを構成する素材を投入してください。</div>`; }
+            exp.innerHTML = h;
+            drawRadar(tg, tn, boost, hasError, isGold, ut, ta, method.aroma_eff || 1.0);
+        }
+
+        function saveRecipeJSON() {
+            const recipeData = {
+                recipe_name: document.getElementById('recipe-name').value || "無題の設計",
+                author_name: document.getElementById('recipe-author').value || "職人",
+                method_id: activeMethod,
+                items: JSON.parse(JSON.stringify(stack)),
+                timestamp: new Date().toISOString()
+            };
+            let mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
+            mylist.push(recipeData); sessionStorage.setItem('dashi_mylist', JSON.stringify(mylist));
+            closeSaveForm(); loadHistory(); toggleMenu();
+        }
+
+        function restoreFromJSON(index) {
+            const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
+            const data = mylist[index]; if (!data) return;
+            activeMethod = data.method_id;
+            stack = data.items ? JSON.parse(JSON.stringify(data.items)) : [];
+            update(true); toggleMenu();
+        }
+
+        // --- スマート・アンパック（自動展開）の実装 ---
+        function forceExtract(item) {
+            if (item.type === 'single') {
+                item.ingredient.isExtracted = true;
+            } else if (item.type === 'recipe') {
+                item.items.forEach(child => forceExtract(child));
+            }
+        }
+
+        function injectRecipe(index) {
+            const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
+            const data = mylist[index];
+            activeMethod = data.method_id;
+
+            const items = data.items ? JSON.parse(JSON.stringify(data.items)) : [];
+            const isComplex = items.some(i => i.type === 'recipe');
+
+            if (isComplex) {
+                // 複合レシピ：箱から出して中身をそのままスタックに展開
+                items.forEach(it => {
+                    forceExtract(it);
+                    stack.push(it);
+                });
+            } else {
+                // 基礎レシピ：全体を1つの箱としてスタックに積む
+                const recipeEntry = {
+                    type: 'recipe',
+                    recipe_name: data.recipe_name,
+                    method_id: data.method_id,
+                    items: items
+                };
+                forceExtract(recipeEntry);
+                stack.push(recipeEntry);
+            }
+            triggerSplash(); update(true); toggleMenu();
+        }
+
+        function undoLast() { if (stack.length > 0) { stack.pop(); goldTriggered = false; errorTriggered = false; update(false); } }
+        function openSaveForm() { document.getElementById('save-modal').style.display = 'flex'; }
+        function closeSaveForm() { document.getElementById('save-modal').style.display = 'none'; }
+        function toggleMenu() { document.getElementById('history-dropdown').classList.toggle('show'); }
+        function resetAll() { stack = []; goldTriggered = false; errorTriggered = false; update(false); }
+
+        function spawnSteam() {
+            if (activeMethod === 'w') return;
+            const container = document.getElementById('steam-box');
+            const s = document.createElement('div'); s.className = 'steam-particle';
+            const size = Math.random() * 25 + 15;
+            s.style.width = size + 'px'; s.style.height = size + 'px'; s.style.left = Math.random() * 100 + '%';
+            container.appendChild(s);
+            s.animate([{ transform: 'translateY(0) scale(1)', opacity: 0 }, { transform: 'translateY(-40px) scale(1.5)', opacity: 0.6 }, { transform: 'translateY(-140px) scale(2.5)', opacity: 0 }], { duration: 2800 }).onfinish = () => s.remove();
+        }
+
+        function spawnBubbles() {
+            if (activeMethod === 'w') return;
+            const b = document.createElement('div'); b.className = 'bubble';
+            const isHigh = activeMethod === 'e';
+            const size = isHigh ? (Math.random() * 20 + 10) : (Math.random() * 6 + 3);
+            const duration = isHigh ? 800 : 1500;
+            b.style.width = size + 'px'; b.style.height = size + 'px'; b.style.left = (Math.random() * 80 + 10) + '%';
+            b.style.animationDuration = duration + 'ms';
+            document.getElementById('boil-bubbles').appendChild(b);
+            setTimeout(() => b.remove(), duration);
+        }
+
+        function exportRecipe(index) {
+            const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
+            const data = mylist[index];
+            const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 4)], { type: 'application/json' })); a.download = `${data.recipe_name}.json`; a.click();
+        }
+
+        function importJSON(e) {
+            const file = e.target.files[0]; if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+                try {
+                    const data = JSON.parse(ev.target.result);
+                    let mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
+                    if (Array.isArray(data)) mylist = data; else mylist.push(data);
+                    sessionStorage.setItem('dashi_mylist', JSON.stringify(mylist));
+                    loadHistory(); alert('復元完了');
+                } catch (err) { alert('形式エラー'); }
+            };
+            reader.readAsText(file);
+        }
+
+        function loadHistory() {
+            const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
+            const container = document.getElementById('dropdown-content');
+            if (mylist.length === 0) { container.innerHTML = `<div style="font-size:12px; color:#aaa; text-align:center; padding:20px;">空です</div>`; return; }
+            container.innerHTML = mylist.slice().reverse().map((data, i) => {
+                const originalIndex = mylist.length - 1 - i;
+                return `<div class="history-item"><div class="history-main"><div class="history-name" onclick="restoreFromJSON(${originalIndex})"><b>${data.recipe_name}</b><br><small>${data.author_name}</small></div><div class="history-actions"><button class="btn-mini btn-inject" onclick="injectRecipe(${originalIndex})">＋ 組み込む</button><button class="btn-mini" onclick="exportRecipe(${originalIndex})" style="background:var(--accent);color:#fff;border:none;">保存</button></div></div></div>`;
+            }).join('');
+        }
+
+        function drawRadar(g, n, b, isE, isG, ut, ta, me) {
+            radarCtx.clearRect(0, 0, 400, 400); const c = 200, r = 130;
+            const s = [Math.min(100, (g + n) * b / 15), Math.min(100, ut * 25), Math.min(100, (ut > 5 ? 100 : ut * 20)), Math.min(100, n / 5.5), Math.min(100, (ta / (ut || 1)) * me + 10)];
+            radarCtx.strokeStyle = "#eee";
+            for (let j = 1; j <= 5; j++) { radarCtx.beginPath(); for (let i = 0; i < 5; i++) { const a = (Math.PI * 2 / 5) * i - Math.PI / 2; radarCtx.lineTo(c + Math.cos(a) * r * j / 5, c + Math.sin(a) * r * j / 5); } radarCtx.closePath(); radarCtx.stroke(); }
+            if (isE) { radarCtx.fillStyle = "rgba(230,57,70,0.4)"; radarCtx.strokeStyle = "var(--error)"; }
+            else if (isG) { radarCtx.fillStyle = "rgba(255,215,0,0.7)"; radarCtx.strokeStyle = "#ffcc00"; radarCtx.lineWidth = 4; }
+            else { radarCtx.fillStyle = "rgba(212,163,115,0.45)"; radarCtx.strokeStyle = "var(--accent)"; }
+            radarCtx.beginPath(); for (let i = 0; i < 5; i++) { const a = (Math.PI * 2 / 5) * i - Math.PI / 2; radarCtx.lineTo(c + Math.cos(a) * (s[i] / 100 * r), c + Math.sin(a) * (s[i] / 100 * r)); }
+            radarCtx.closePath(); radarCtx.fill(); radarCtx.stroke();
+            const lbls = ["旨み強度", "複雑性", "素材感", "奥行き", "香り"];
+            radarCtx.fillStyle = isG ? "#b8860b" : "#8d6e63"; radarCtx.font = "bold 13px sans-serif"; radarCtx.textAlign = "center";
+            for (let i = 0; i < 5; i++) { const a = (Math.PI * 2 / 5) * i - Math.PI / 2; radarCtx.fillText(lbls[i], c + Math.cos(a) * (r + 35), c + Math.sin(a) * (r + 35) + 5); }
+        }
+        init();
+    </script>
+</body>
+
+</html>
