@@ -120,30 +120,77 @@
             gap: 25px;
         }
 
+        /* パレットナビゲーション：スマート版 */
+        .palette-container {
+            position: relative;
+            width: 100%;
+            background: rgba(240, 237, 233, 0.6);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .nav-arrow {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            cursor: pointer;
+            color: var(--accent);
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .nav-arrow.left {
+            left: 0;
+            background: linear-gradient(to right, rgba(240, 237, 233, 1) 20%, rgba(240, 237, 233, 0));
+        }
+
+        .nav-arrow.right {
+            right: 0;
+            background: linear-gradient(to left, rgba(240, 237, 233, 1) 20%, rgba(240, 237, 233, 0));
+        }
+
+        .nav-arrow span {
+            background: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-arrow:hover span {
+            background: var(--accent);
+            color: #fff;
+        }
+
         .scroll-wrapper {
             width: 100%;
-            background: rgba(240, 237, 233, 0.9);
-            padding: 20px 0;
-            border-radius: 15px;
+            padding: 25px 0;
             overflow-x: scroll;
             -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
         }
 
         .scroll-wrapper::-webkit-scrollbar {
             height: 10px;
-            display: block;
         }
 
         .scroll-wrapper::-webkit-scrollbar-thumb {
-            background: var(--accent);
+            background: rgba(189, 154, 122, 0.3);
             border-radius: 10px;
-            border: 2px solid #f0ede9;
         }
 
         .palette {
             display: inline-flex;
             gap: 12px;
-            padding: 0 20px;
+            padding: 0 60px;
         }
 
         .ing {
@@ -151,7 +198,7 @@
             width: 85px;
             height: 85px;
             background: #fff;
-            border: 2px solid #eee;
+            border: 1px solid rgba(0, 0, 0, 0.05);
             border-radius: 20px;
             display: flex;
             flex-direction: column;
@@ -160,7 +207,7 @@
             font-size: 10px;
             font-weight: bold;
             cursor: grab;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
             user-select: none;
             touch-action: none;
         }
@@ -168,6 +215,7 @@
         .ing span {
             font-size: 30px;
             pointer-events: none;
+            margin-bottom: 4px;
         }
 
         .ing.dragging {
@@ -230,6 +278,23 @@
         .tag-v {
             background: #4caf50;
             color: #fff;
+        }
+
+        .tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            align-items: center;
+        }
+
+        .tooltip-score {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 8px;
+            font-weight: bold;
+            color: var(--gold);
         }
 
         .stage-box {
@@ -304,7 +369,7 @@
             }
 
             50% {
-                transform: scale(1.15);
+                transform: scale(1.2);
                 opacity: 0.6;
             }
         }
@@ -448,38 +513,40 @@
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 10000;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 100000;
             display: none;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(8px);
+            padding: 20px;
         }
 
         .save-dialog {
             background: #fff;
-            width: 90%;
+            width: 100%;
             max-width: 400px;
             border-radius: 30px;
-            padding: 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px 30px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
 
         .form-input {
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             margin-bottom: 15px;
-            border-radius: 12px;
+            border-radius: 15px;
             border: 2px solid #f0ede9;
             box-sizing: border-box;
             outline: none;
+            font-size: 16px;
         }
 
         .dialog-btns {
             display: flex;
             gap: 10px;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         .btn-confirm {
@@ -487,8 +554,8 @@
             background: var(--gold);
             color: #5d4037;
             border: none;
-            padding: 15px;
-            border-radius: 15px;
+            padding: 18px;
+            border-radius: 18px;
             font-weight: bold;
             cursor: pointer;
         }
@@ -498,8 +565,8 @@
             background: #eee;
             color: #888;
             border: none;
-            padding: 15px;
-            border-radius: 15px;
+            padding: 18px;
+            border-radius: 18px;
             cursor: pointer;
         }
 
@@ -605,18 +672,6 @@
             line-height: 1;
         }
 
-        @keyframes zoomIn {
-            from {
-                transform: scale(0);
-                opacity: 0;
-            }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
         body.debuff {
             filter: grayscale(1) contrast(1.2);
             background: #000;
@@ -659,7 +714,7 @@
 
     <div class="modal-overlay" id="save-modal">
         <div class="save-dialog">
-            <h3 style="color:var(--accent); margin-bottom:20px;">神ダシレシピを保存する</h3>
+            <h3 style="color:var(--accent); margin-top:0; margin-bottom:25px; font-size:24px;">神ダシレシピを保存する</h3>
             <input type="text" id="recipe-name" class="form-input" placeholder="設計名称">
             <input type="text" id="recipe-author" class="form-input" placeholder="設計者名">
             <div class="dialog-btns">
@@ -693,8 +748,12 @@
     </header>
 
     <div class="wrapper">
-        <div class="scroll-wrapper">
-            <div class="palette" id="palette"></div>
+        <div class="palette-container">
+            <div class="nav-arrow left" onclick="slidePalette(-1)"><span>‹</span></div>
+            <div class="scroll-wrapper" id="palette-scroll">
+                <div class="palette" id="palette"></div>
+            </div>
+            <div class="nav-arrow right" onclick="slidePalette(1)"><span>›</span></div>
         </div>
 
         <div class="stage-box">
@@ -744,8 +803,6 @@
     </div>
 
     <footer>
-        <div style="font-weight:bold; margin-bottom:5px; color:var(--text); letter-spacing:0.1em;">DASHI DRIVEN
-            ARCHITECTURE SYSTEMS</div>
         Powerd By <a href="https://youside.me" target="_blank"
             style="text-decoration:none; color:var(--accent); font-weight:bold;">youside<span>.me</span></a>
     </footer>
@@ -766,13 +823,13 @@
                 { id: "onion", n: "玉ねぎ", i: "🧅", unit: "個", type: "v", g: 150, nuc: 0, aroma: 50, note: "全体を調和させる甘い香りのバランサー。" }
             ],
             methods: {
-                w: { n: "水出し", e: "❄️", d: "素材の香りを保持。澄んだ旨みを抽出する設計。", aroma_eff: 1.0 },
+                w: { n: "水出し", e: "❄️", d: "素材の香りを100%保持。澄んだ旨みを抽出する設計。", aroma_eff: 1.0 },
                 s: { n: "煮出し", e: "🔥", d: "成分が効率よく結合。香りと旨みの黄金律。", aroma_eff: 0.8 },
                 e: { n: "高温抽出", e: "⚡", d: "物理エネルギーにより強引に成分を引き出す手法。香りは損失。", aroma_eff: 0.4 }
             },
             rules: [
                 { id: "r1", check: (m, items) => m === 'w' && items.some(i => i.type === "a" && !i.isExtracted), type: "ERROR", msg: "⚠️ カタストロフ：生の動物性素材の水出しは衛生リスク過大です。" },
-                { id: "r2", check: (m, items) => m === 'e' && items.some(i => i.id.includes("kombu") && !i.isExtracted), type: "CAUTION", msg: "⚠️ 注意：生の昆布を高温抽出するとエグみの原因になります。" }
+                { id: "r2", check: (m, items) => m === 'e' && items.some(i => i.id.includes("kombu") && !i.isExtracted), type: "CAUTION", msg: "⚠️ 注意：昆布を高温抽出しすぎるとエグみの原因になります。" }
             ]
         };
 
@@ -784,10 +841,10 @@
             MASTER.ingredients.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'ing'; div.innerHTML = `<span>${item.i}</span>${item.n}`;
-                div.onmouseenter = (e) => { tipTimer = setTimeout(() => showTooltip(e, item), 500); };
-                div.onmouseleave = () => { clearTimeout(tipTimer); hideTooltip(); };
-                div.onmousedown = (e) => { clearTimeout(tipTimer); hideTooltip(); startDrag(e, { type: 'single', ingredient: { ...item, isExtracted: false } }); };
-                div.ontouchstart = (e) => { e.preventDefault(); showTooltip(e, item); startDrag(e, { type: 'single', ingredient: { ...item, isExtracted: false } }); };
+                div.onmouseenter = (e) => { if (window.matchMedia('(pointer: fine)').matches) tipTimer = setTimeout(() => showTooltip(e, item), 500); };
+                div.onmouseleave = () => { hideTooltip(); };
+                div.onmousedown = (e) => { hideTooltip(); startDrag(e, { type: 'single', ingredient: { ...item, isExtracted: false } }); };
+                div.ontouchstart = (e) => { showTooltip(e, item); startDrag(e, { type: 'single', ingredient: { ...item, isExtracted: false } }); };
                 pc.appendChild(div);
             });
             const mb = document.getElementById('methods');
@@ -803,14 +860,19 @@
             loadHistory(); update(false);
         }
 
+        function slidePalette(dir) {
+            const scroll = document.getElementById('palette-scroll');
+            scroll.scrollLeft += dir * 240;
+        }
+
         function showTooltip(e, item) {
             const rect = e.target.getBoundingClientRect();
-            const tag = item.type === 'a' ? 'tag-a' : 'tag-v';
-            gt.innerHTML = `<div class="tooltip-row"><strong>${item.n}</strong> <span class="tooltip-tag ${tag}">${item.type === 'a' ? '動物性' : '植物性'}</span></div><div style="margin: 8px 0; color: #ddd;">${item.note}</div>`;
+            const tagClass = item.type === 'a' ? 'tag-a' : 'tag-v';
+            gt.innerHTML = `<div class="tooltip-row"><strong>${item.n}</strong> <span class="tooltip-tag ${tagClass}">${item.type === 'a' ? '動物性' : '植物性'}</span></div><div style="margin: 8px 0; color: #ddd;">${item.note}</div><div class="tooltip-row"><span>香り係数:</span> <span>${item.aroma}</span></div><div class="tooltip-row"><span>基準単位:</span> <span>1${item.unit}</span></div><div class="tooltip-score"><span>Glutamic: ${item.g}</span><span>Nucleic: ${item.nuc}</span></div>`;
             gt.style.display = 'block'; gt.style.left = (rect.left + rect.width / 2 - 115) + 'px'; gt.style.top = (rect.bottom + 15) + 'px';
             setTimeout(() => gt.style.opacity = 1, 10);
         }
-        function hideTooltip() { gt.style.display = 'none'; gt.style.opacity = 0; }
+        function hideTooltip() { clearTimeout(tipTimer); gt.style.display = 'none'; gt.style.opacity = 0; }
 
         function startDrag(e, entry) {
             const touch = e.touches ? e.touches[0] : e;
@@ -831,6 +893,7 @@
                     (t.clientX >= rectInv.left && t.clientX <= rectInv.right && t.clientY >= rectInv.top && t.clientY <= rectInv.bottom)) {
                     stack.push(JSON.parse(JSON.stringify(entry))); triggerSplash(); update(true);
                 }
+                hideTooltip();
                 if (document.body.contains(dragEl)) document.body.removeChild(dragEl);
                 document.removeEventListener('mousemove', move); document.removeEventListener('mouseup', end);
                 document.removeEventListener('touchmove', move); document.removeEventListener('touchend', end);
@@ -844,14 +907,11 @@
             grp.style.animation = 'none'; void grp.offsetWidth; grp.style.animation = 'splash 0.6s ease-out';
         }
 
-        function collectAllDeepIngs(item) {
-            if (item.type === 'single') {
-                return [{ ...item.ingredient }];
-            }
+        function collectDeep(item, forceExtracted = false) {
+            const isExtracted = forceExtracted || item.type === 'recipe' || (item.ingredient && item.ingredient.isExtracted);
+            if (item.type === 'single') return [{ ...item.ingredient, isExtracted: isExtracted }];
             let res = [];
-            item.items.forEach(child => {
-                res = res.concat(collectAllDeepIngs(child));
-            });
+            item.items.forEach(child => res = res.concat(collectDeep(child, isExtracted)));
             return res;
         }
 
@@ -861,7 +921,7 @@
             if (activeBtn) activeBtn.classList.add('active');
 
             let allFlatIngs = [];
-            stack.forEach(entry => allFlatIngs = allFlatIngs.concat(collectAllDeepIngs(entry)));
+            stack.forEach(entry => allFlatIngs = allFlatIngs.concat(collectDeep(entry)));
 
             const rules = MASTER.rules.filter(r => r.check(activeMethod, allFlatIngs));
             const hasError = rules.some(r => r.type === "ERROR");
@@ -875,8 +935,6 @@
 
             let tg = 0, tn = 0, ta = 0, invHTML = "";
             const displayStack = [];
-
-            // 表示用のスタック整理：単品が連続する場合のみ合算する
             stack.forEach(entry => {
                 if (entry.type === 'single') {
                     if (displayStack.length > 0 && displayStack[displayStack.length - 1].type === 'single' && displayStack[displayStack.length - 1].id === entry.ingredient.id) {
@@ -884,24 +942,18 @@
                     } else {
                         displayStack.push({ type: 'single', id: entry.ingredient.id, name: entry.ingredient.n, unit: entry.ingredient.unit, count: 1 });
                     }
-                } else {
-                    displayStack.push(entry);
-                }
+                } else displayStack.push(entry);
             });
 
             displayStack.forEach(entry => {
                 if (entry.type === 'single') {
+                    const it = MASTER.ingredients.find(m => m.id === entry.id);
                     invHTML += `<div class="inv-group"><div class="inv-item"><span>${entry.name}</span><b>${entry.count}${entry.unit}</b></div></div>`;
                 } else {
                     const mBadge = entry.method_id ? MASTER.methods[entry.method_id].e + " " + MASTER.methods[entry.method_id].n : "";
                     invHTML += `<div class="inv-group"><div class="group-header"><span class="group-label">📦 ${entry.recipe_name}</span><span class="method-badge">${mBadge}</span></div>`;
-
                     const innerCounts = {};
-                    const innerIngs = collectAllDeepIngs(entry);
-                    innerIngs.forEach(it => {
-                        innerCounts[it.id] = (innerCounts[it.id] || 0) + 1;
-                    });
-
+                    collectDeep(entry).forEach(it => { innerCounts[it.id] = (innerCounts[it.id] || 0) + 1; });
                     Object.entries(innerCounts).forEach(([id, count]) => {
                         const it = MASTER.ingredients.find(m => m.id === id);
                         invHTML += `<div class="inv-item"><span>${it.n}</span><b>${count}${it.unit}</b></div>`;
@@ -910,10 +962,7 @@
                 }
             });
 
-            // 旨み計算
-            allFlatIngs.forEach(it => {
-                tg += (it.id.includes('kombu') ? it.g / 50 : it.g); tn += it.nuc; ta += it.aroma;
-            });
+            allFlatIngs.forEach(it => { tg += (it.id.includes('kombu') ? it.g / 50 : it.g); tn += it.nuc; ta += it.aroma; });
 
             const method = MASTER.methods[activeMethod];
             let boost = (tg > 0 && tn > 0) ? 1 + (Math.min(tg, tn) / Math.max(tg, tn) * 7.5) : 1;
@@ -930,12 +979,12 @@
 
             const scale = Math.min(1, 0.4 + allFlatIngs.length * 0.05);
             document.getElementById('liquid-grp').style.transform = `scaleY(${scale})`;
-            const mix = Math.min(1, allFlatIngs.length / 10);
+            const mix = Math.min(1, allFlatIngs.length / 12);
             const r = Math.round(179 + (255 - 179) * mix), g = Math.round(229 + (204 - 229) * mix), b = Math.round(252 + (0 - 252) * mix);
-            document.getElementById('liquid-body-path').style.fill = `rgb(${r},${g},${b})`;
-            document.getElementById('liquid-surface-path').style.fill = `rgb(${Math.min(255, r + 20)},${Math.min(255, g + 20)},${Math.min(255, b + 20)})`;
-            document.getElementById('steam-box').style.bottom = (55 + (scale * 88)) + 'px';
+            document.getElementById('liquid-body-path').style.fill = hasError ? "#222" : `rgb(${r},${g},${b})`;
+            document.getElementById('liquid-surface-path').style.fill = hasError ? "#333" : `rgb(${Math.min(255, r + 20)},${Math.min(255, g + 20)},${Math.min(255, b + 20)})`;
 
+            // 解説欄：完全復元
             const exp = document.getElementById('exp-container');
             let h = `<div class="exp-section"><span class="exp-tag">Extraction Strategy</span><span class="exp-title">【${method.n}】の科学的アプローチ</span>${method.d}</div>`;
             if (allFlatIngs.length) {
@@ -943,19 +992,13 @@
                 h += `<div class="exp-section"><span class="exp-tag">Ingredient Roles</span>`;
                 [...new Set(allFlatIngs.map(i => i.id))].forEach(id => { const it = MASTER.ingredients.find(i => i.id === id); h += `<div style="margin-bottom:12px;"><span class="exp-title" style="font-size:14px;">${it.i} ${it.n}の寄与</span>${it.note}</div>`; });
                 h += `</div>`;
-            } else { h = `<div style="text-align:center; color:#aaa; padding:20px; font-size:12px;">Architectureを構成する素材を投入してください。</div>`; }
+            } else h = `<div style="text-align:center; color:#aaa; padding:20px; font-size:12px;">Architectureを構成する素材を投入してください。</div>`;
             exp.innerHTML = h;
             drawRadar(tg, tn, boost, hasError, isGold, ut, ta, method.aroma_eff || 1.0);
         }
 
         function saveRecipeJSON() {
-            const recipeData = {
-                recipe_name: document.getElementById('recipe-name').value || "無題の設計",
-                author_name: document.getElementById('recipe-author').value || "職人",
-                method_id: activeMethod,
-                items: JSON.parse(JSON.stringify(stack)),
-                timestamp: new Date().toISOString()
-            };
+            const recipeData = { recipe_name: document.getElementById('recipe-name').value || "無題", author_name: document.getElementById('recipe-author').value || "職人", method_id: activeMethod, items: JSON.parse(JSON.stringify(stack)), timestamp: new Date().toISOString() };
             let mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
             mylist.push(recipeData); sessionStorage.setItem('dashi_mylist', JSON.stringify(mylist));
             closeSaveForm(); loadHistory(); toggleMenu();
@@ -964,106 +1007,34 @@
         function restoreFromJSON(index) {
             const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
             const data = mylist[index]; if (!data) return;
-            activeMethod = data.method_id;
-            stack = data.items ? JSON.parse(JSON.stringify(data.items)) : [];
+            activeMethod = data.method_id; stack = data.items ? JSON.parse(JSON.stringify(data.items)) : [];
             update(true); toggleMenu();
         }
 
-        // --- スマート・アンパック（自動展開）の実装 ---
-        function forceExtract(item) {
-            if (item.type === 'single') {
-                item.ingredient.isExtracted = true;
-            } else if (item.type === 'recipe') {
-                item.items.forEach(child => forceExtract(child));
-            }
+        function forceExtractRecursive(item) {
+            if (item.type === 'single') item.ingredient.isExtracted = true;
+            else if (item.type === 'recipe') item.items.forEach(child => forceExtractRecursive(child));
         }
 
         function injectRecipe(index) {
             const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
-            const data = mylist[index];
-            activeMethod = data.method_id;
-
+            const data = mylist[index]; activeMethod = data.method_id;
             const items = data.items ? JSON.parse(JSON.stringify(data.items)) : [];
             const isComplex = items.some(i => i.type === 'recipe');
-
-            if (isComplex) {
-                // 複合レシピ：箱から出して中身をそのままスタックに展開
-                items.forEach(it => {
-                    forceExtract(it);
-                    stack.push(it);
-                });
-            } else {
-                // 基礎レシピ：全体を1つの箱としてスタックに積む
-                const recipeEntry = {
-                    type: 'recipe',
-                    recipe_name: data.recipe_name,
-                    method_id: data.method_id,
-                    items: items
-                };
-                forceExtract(recipeEntry);
-                stack.push(recipeEntry);
-            }
+            if (isComplex) items.forEach(it => { forceExtractRecursive(it); stack.push(it); });
+            else { const recipeEntry = { type: 'recipe', recipe_name: data.recipe_name, method_id: data.method_id, items: items }; forceExtractRecursive(recipeEntry); stack.push(recipeEntry); }
             triggerSplash(); update(true); toggleMenu();
         }
 
-        function undoLast() { if (stack.length > 0) { stack.pop(); goldTriggered = false; errorTriggered = false; update(false); } }
         function openSaveForm() { document.getElementById('save-modal').style.display = 'flex'; }
         function closeSaveForm() { document.getElementById('save-modal').style.display = 'none'; }
         function toggleMenu() { document.getElementById('history-dropdown').classList.toggle('show'); }
-        function resetAll() { stack = []; goldTriggered = false; errorTriggered = false; update(false); }
-
-        function spawnSteam() {
-            if (activeMethod === 'w') return;
-            const container = document.getElementById('steam-box');
-            const s = document.createElement('div'); s.className = 'steam-particle';
-            const size = Math.random() * 25 + 15;
-            s.style.width = size + 'px'; s.style.height = size + 'px'; s.style.left = Math.random() * 100 + '%';
-            container.appendChild(s);
-            s.animate([{ transform: 'translateY(0) scale(1)', opacity: 0 }, { transform: 'translateY(-40px) scale(1.5)', opacity: 0.6 }, { transform: 'translateY(-140px) scale(2.5)', opacity: 0 }], { duration: 2800 }).onfinish = () => s.remove();
-        }
-
-        function spawnBubbles() {
-            if (activeMethod === 'w') return;
-            const b = document.createElement('div'); b.className = 'bubble';
-            const isHigh = activeMethod === 'e';
-            const size = isHigh ? (Math.random() * 20 + 10) : (Math.random() * 6 + 3);
-            const duration = isHigh ? 800 : 1500;
-            b.style.width = size + 'px'; b.style.height = size + 'px'; b.style.left = (Math.random() * 80 + 10) + '%';
-            b.style.animationDuration = duration + 'ms';
-            document.getElementById('boil-bubbles').appendChild(b);
-            setTimeout(() => b.remove(), duration);
-        }
-
-        function exportRecipe(index) {
-            const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
-            const data = mylist[index];
-            const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 4)], { type: 'application/json' })); a.download = `${data.recipe_name}.json`; a.click();
-        }
-
-        function importJSON(e) {
-            const file = e.target.files[0]; if (!file) return;
-            const reader = new FileReader();
-            reader.onload = (ev) => {
-                try {
-                    const data = JSON.parse(ev.target.result);
-                    let mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
-                    if (Array.isArray(data)) mylist = data; else mylist.push(data);
-                    sessionStorage.setItem('dashi_mylist', JSON.stringify(mylist));
-                    loadHistory(); alert('復元完了');
-                } catch (err) { alert('形式エラー'); }
-            };
-            reader.readAsText(file);
-        }
-
-        function loadHistory() {
-            const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]");
-            const container = document.getElementById('dropdown-content');
-            if (mylist.length === 0) { container.innerHTML = `<div style="font-size:12px; color:#aaa; text-align:center; padding:20px;">空です</div>`; return; }
-            container.innerHTML = mylist.slice().reverse().map((data, i) => {
-                const originalIndex = mylist.length - 1 - i;
-                return `<div class="history-item"><div class="history-main"><div class="history-name" onclick="restoreFromJSON(${originalIndex})"><b>${data.recipe_name}</b><br><small>${data.author_name}</small></div><div class="history-actions"><button class="btn-mini btn-inject" onclick="injectRecipe(${originalIndex})">＋ 組み込む</button><button class="btn-mini" onclick="exportRecipe(${originalIndex})" style="background:var(--accent);color:#fff;border:none;">保存</button></div></div></div>`;
-            }).join('');
-        }
+        function resetAll() { stack = []; goldTriggered = false; update(false); }
+        function undoLast() { if (stack.length > 0) { stack.pop(); goldTriggered = false; update(false); } }
+        function spawnSteam() { if (activeMethod === 'w') return; const s = document.createElement('div'); s.className = 'steam-particle'; s.style.width = (Math.random() * 25 + 15) + 'px'; s.style.left = Math.random() * 100 + '%'; document.getElementById('steam-box').appendChild(s); s.animate([{ transform: 'translateY(0)', opacity: 0 }, { transform: 'translateY(-120px)', opacity: 0 }], { duration: 2500 }).onfinish = () => s.remove(); }
+        function spawnBubbles() { if (activeMethod === 'w') return; const b = document.createElement('div'); b.className = 'bubble'; const isHigh = activeMethod === 'e'; b.style.width = (isHigh ? 20 : 6) + 'px'; b.style.left = (Math.random() * 80 + 10) + '%'; document.getElementById('boil-bubbles').appendChild(b); setTimeout(() => b.remove(), isHigh ? 800 : 1500); }
+        function importJSON(e) { const file = e.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = (ev) => { try { const data = JSON.parse(ev.target.result); let mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]"); if (Array.isArray(data)) mylist = data; else mylist.push(data); sessionStorage.setItem('dashi_mylist', JSON.stringify(mylist)); loadHistory(); alert('復元完了'); } catch (e) { alert('形式エラー'); } }; reader.readAsText(file); }
+        function loadHistory() { const mylist = JSON.parse(sessionStorage.getItem('dashi_mylist') || "[]"); const c = document.getElementById('dropdown-content'); if (mylist.length === 0) { c.innerHTML = `<div style="font-size:12px; color:#aaa; text-align:center; padding:20px;">空です</div>`; return; } c.innerHTML = mylist.slice().reverse().map((data, i) => `<div class="history-item"><div class="history-main"><div class="history-name" onclick="restoreFromJSON(${mylist.length - 1 - i})"><b>${data.recipe_name}</b></div><div class="history-actions"><button class="btn-mini btn-inject" onclick="injectRecipe(${mylist.length - 1 - i})">＋ 組み込む</button></div></div></div>`).join(''); }
 
         function drawRadar(g, n, b, isE, isG, ut, ta, me) {
             radarCtx.clearRect(0, 0, 400, 400); const c = 200, r = 130;
