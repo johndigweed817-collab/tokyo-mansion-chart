@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>家族の未来設計図 | ライフプランシミュレーター</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Kaisei+Decol:wght@400;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0f0e17; --surface:#1a1928; --surface2:#232238; --border:#2e2d4a;
+  --accent:#e8c547; --accent2:#7c6af7; --accent3:#4ecdc4;
+  --text:#e8e6f0; --muted:#8885a8;
+  --danger:#ff6b6b; --success:#6bffb8; --invest:#a78bfa;
+  --font-d:'Kaisei Decol',serif; --font-b:'Noto Serif JP',serif; --font-m:'JetBrains Mono',monospace;
+  --r:12px; --sh:0 8px 32px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
+.app{position:relative;z-index:1}
+
+/* HEADER */
+header{padding:20px 40px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);background:rgba(15,14,23,.85)}
+.logo{font-family:var(--font-d);font-size:20px;color:var(--accent);letter-spacing:.05em}
+.logo span{color:var(--muted);font-size:11px;display:block;font-family:var(--font-b);letter-spacing:.12em;margin-top:2px}
+.hactions{display:flex;gap:8px;align-items:center}
+
+/* TABS */
+.tabs{display:flex;gap:4px;padding:14px 40px;border-bottom:1px solid var(--border);overflow-x:auto}
+.tab{padding:7px 18px;border-radius:20px;cursor:pointer;font-family:var(--font-b);font-size:13px;color:var(--muted);border:1px solid transparent;transition:all .2s;white-space:nowrap;background:transparent}
+.tab:hover{color:var(--text);border-color:var(--border)}
+.tab.active{background:var(--accent);color:var(--bg);font-weight:700;border-color:var(--accent)}
+
+/* LAYOUT */
+.main{padding:28px 40px;max-width:1440px;margin:0 auto}
+.panel{display:none}.panel.active{display:block}
+
+/* CARD */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.card-title{font-family:var(--font-d);font-size:15px;color:var(--accent);margin-bottom:18px;padding-bottom:11px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+
+/* STAT CARDS */
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px 22px;position:relative;overflow:hidden}
+.stat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.stat.s-inc::before{background:var(--success)}
+.stat.s-exp::before{background:var(--danger)}
+.stat.s-bal::before{background:var(--accent)}
+.stat.s-cum::before{background:var(--accent2)}
+.stat.s-inv::before{background:var(--invest)}
+.stat-lbl{font-size:10px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.stat-val{font-family:var(--font-m);font-size:24px;font-weight:300}
+.stat-val.pos{color:var(--success)}.stat-val.neg{color:var(--danger)}.stat-val.neu{color:var(--accent)}.stat-val.inv{color:var(--invest)}
+.stat-sub{font-size:11px;color:var(--muted);margin-top:5px;font-family:var(--font-m)}
+
+/* FORM */
+.frow{display:flex;gap:10px;align-items:flex-end;margin-bottom:10px;flex-wrap:wrap}
+.fg{display:flex;flex-direction:column;gap:5px;flex:1;min-width:110px}
+label{font-size:11px;color:var(--muted);letter-spacing:.05em}
+input,select,textarea{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:7px 10px;border-radius:7px;font-family:var(--font-b);font-size:13px;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--accent2);box-shadow:0 0 0 3px rgba(124,106,247,.15)}
+select option{background:var(--surface2)}
+
+/* BUTTONS */
+.btn{padding:8px 18px;border-radius:7px;cursor:pointer;font-family:var(--font-b);font-size:13px;border:none;transition:all .18s;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+.bp{background:var(--accent);color:var(--bg);font-weight:700}
+.bp:hover{background:#f0d060;transform:translateY(-1px);box-shadow:0 4px 12px rgba(232,197,71,.3)}
+.bs{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
+.bs:hover{border-color:var(--accent2);color:var(--accent2)}
+.bd{background:rgba(255,107,107,.12);color:var(--danger);border:1px solid var(--danger)}
+.bd:hover{background:rgba(255,107,107,.22)}
+.bsm{padding:4px 10px;font-size:11px}
+.bic{padding:5px 7px;background:transparent;border:1px solid var(--border);color:var(--muted)}
+.bic:hover{color:var(--danger);border-color:var(--danger)}
+
+/* TABLE */
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;padding:9px 12px;color:var(--muted);font-weight:400;font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--border)}
+td{padding:9px 12px;border-bottom:1px solid rgba(46,45,74,.4);vertical-align:middle}
+tr:hover td{background:rgba(124,106,247,.04)}
+.ai{color:var(--success);font-family:var(--font-m)}
+.ae{color:var(--danger);font-family:var(--font-m)}
+.av{color:var(--invest);font-family:var(--font-m)}
+
+/* MEMBER BADGE — dynamic via JS */
+.mbadge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:14px;font-size:11px;font-weight:700;letter-spacing:.04em}
+
+/* TAGS */
+.tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-family:var(--font-m)}
+.tm{background:rgba(124,106,247,.15);color:var(--accent2)}
+.ty{background:rgba(78,205,196,.15);color:var(--accent3)}
+.to{background:rgba(232,197,71,.15);color:var(--accent)}
+.tv{background:rgba(167,139,250,.15);color:var(--invest)}
+
+/* CHART */
+.chart-wrap{position:relative;height:300px;margin-top:8px}
+canvas{border-radius:8px}
+
+/* TIMELINE */
+.tl{display:flex;flex-direction:column}
+.tly{display:flex;align-items:stretch}
+.tly-lbl{width:56px;min-width:56px;text-align:right;padding:7px 12px 7px 0;font-family:var(--font-m);font-size:11px;color:var(--muted);border-right:2px solid var(--border);flex-shrink:0;position:relative}
+.tly-lbl::after{content:'';position:absolute;right:-5px;top:50%;transform:translateY(-50%);width:7px;height:7px;border-radius:50%;background:var(--border)}
+.tly-lbl.hev::after{background:var(--accent)}
+.tly-c{flex:1;padding:5px 0 5px 16px}
+.tl-evs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:3px}
+.tl-ev{padding:2px 8px;border-radius:10px;font-size:11px;background:rgba(232,197,71,.1);color:var(--accent);border:1px solid rgba(232,197,71,.25)}
+.tl-bar{height:5px;border-radius:3px;background:linear-gradient(90deg,var(--success),var(--accent2));transition:width .5s ease}
+.tl-bar.neg{background:linear-gradient(90deg,var(--danger),#ff9f9f)}
+.tl-nums{display:flex;gap:14px;font-family:var(--font-m);font-size:10px;margin-top:3px;flex-wrap:wrap}
+
+/* EMPTY */
+.empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px}
+.empty .ico{font-size:36px;display:block;margin-bottom:10px}
+
+/* MODAL */
+.moverlay{position:fixed;inset:0;background:rgba(15,14,23,.88);display:flex;align-items:center;justify-content:center;z-index:1000;backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .2s}
+.moverlay.open{opacity:1;pointer-events:all}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;width:580px;max-width:95vw;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,.6);transform:translateY(18px);transition:transform .2s}
+.moverlay.open .modal{transform:translateY(0)}
+.modal-title{font-family:var(--font-d);font-size:18px;color:var(--accent);margin-bottom:20px}
+.mactions{display:flex;justify-content:flex-end;gap:8px;margin-top:24px}
+
+/* NOTICE */
+.notice{background:rgba(124,106,247,.1);border:1px solid rgba(124,106,247,.3);border-radius:7px;padding:10px 14px;font-size:12px;color:var(--accent2);margin-bottom:16px;display:flex;gap:7px;align-items:flex-start}
+
+/* MEMBER SETTING */
+.member-row{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;margin-bottom:8px}
+.member-row .dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.member-color-swatch{width:32px;height:32px;border-radius:6px;border:2px solid var(--border);cursor:pointer;overflow:hidden;position:relative}
+.member-color-swatch input[type=color]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+
+/* JSON area */
+.jarea{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:16px;font-family:var(--font-m);font-size:11px;color:var(--muted);white-space:pre-wrap;max-height:360px;overflow:auto;line-height:1.7}
+
+.sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.st{font-family:var(--font-d);font-size:19px}
+.spacer{height:16px}
+.fl{display:flex;gap:10px;align-items:center}
+.fw{display:flex;flex-wrap:wrap;gap:7px}
+.sep{height:1px;background:var(--border);margin:18px 0}
+
+@media(max-width:768px){
+  header{padding:14px 16px}.tabs{padding:10px 16px}.main{padding:16px}
+  .g2,.g3,.g5{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- HEADER -->
+<header>
+  <div class="logo">家族の未来設計図<span>FAMILY LIFE PLAN SIMULATOR</span></div>
+  <div class="hactions">
+    <button class="btn bs bsm" onclick="exportJSON()">📤 エクスポート</button>
+    <button class="btn bs bsm" onclick="triggerImport()">📥 インポート</button>
+    <input type="file" id="import-file" accept=".json" style="display:none" onchange="importJSON(event)">
+    <button class="btn bp bsm" onclick="saveToStorage()">💾 保存</button>
+  </div>
+</header>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('overview',this)">📊 サマリー</button>
+  <button class="tab" onclick="switchTab('income',this)">💚 収入</button>
+  <button class="tab" onclick="switchTab('expense',this)">🔴 支出</button>
+  <button class="tab" onclick="switchTab('invest',this)">📈 金融資産</button>
+  <button class="tab" onclick="switchTab('events',this)">📅 イベント</button>
+  <button class="tab" onclick="switchTab('timeline',this)">🗓 年表・グラフ</button>
+  <button class="tab" onclick="switchTab('members',this)">👥 家族設定</button>
+  <button class="tab" onclick="switchTab('data',this)">🗂 データ管理</button>
+</div>
+
+<div class="main">
+
+<!-- ===== OVERVIEW ===== -->
+<div class="panel active" id="panel-overview">
+  <div class="sh">
+    <div class="st">家族財務サマリー</div>
+    <div class="fl" style="gap:14px;flex-wrap:wrap">
+      <div class="fl"><label style="white-space:nowrap">基準年</label><input type="number" id="base-year" value="2025" min="2000" max="2080" style="width:80px" onchange="recalc()"></div>
+      <div class="fl"><label style="white-space:nowrap">シミュレーション年数</label><input type="number" id="sim-years" value="20" min="5" max="40" style="width:70px" onchange="recalc()"></div>
+    </div>
+  </div>
+  <div class="g5" style="margin-bottom:20px" id="stats-row">
+    <div class="stat s-inc"><div class="stat-lbl">年間収入（現在）</div><div class="stat-val pos" id="st-inc">¥0</div><div class="stat-sub" id="st-inc-s">—</div></div>
+    <div class="stat s-exp"><div class="stat-lbl">年間支出（現在）</div><div class="stat-val neg" id="st-exp">¥0</div><div class="stat-sub" id="st-exp-s">—</div></div>
+    <div class="stat s-bal"><div class="stat-lbl">年間収支（現在）</div><div class="stat-val neu" id="st-bal">¥0</div><div class="stat-sub" id="st-bal-s">—</div></div>
+    <div class="stat s-cum"><div class="stat-lbl">20年累計収支</div><div class="stat-val" id="st-cum">¥0</div><div class="stat-sub" id="st-cum-s">—</div></div>
+    <div class="stat s-inv"><div class="stat-lbl">金融資産残高（累計）</div><div class="stat-val inv" id="st-inv">¥0</div><div class="stat-sub" id="st-inv-s">NISA・株・その他投資</div></div>
+  </div>
+  <div class="g2">
+    <div class="card"><div class="card-title">👥 メンバー別 年間収支</div><div id="member-breakdown"></div></div>
+    <div class="card"><div class="card-title">📅 直近イベント・マイルストーン</div><div id="upcoming-events"></div></div>
+  </div>
+</div>
+
+<!-- ===== INCOME ===== -->
+<div class="panel" id="panel-income">
+  <div class="sh"><div class="st">収入設定</div><button class="btn bp" onclick="openItemModal('income')">＋ 収入を追加</button></div>
+  <div class="notice">💡 毎月・毎年・一時的な収入を設定できます。開始年・終了年で退職や就労開始も表現できます。</div>
+  <div class="card"><div class="tw"><table><thead><tr><th>名目</th><th>誰の</th><th>金額</th><th>頻度</th><th>開始年</th><th>終了年</th><th>年増率</th><th></th></tr></thead><tbody id="income-tbody"></tbody></table></div></div>
+</div>
+
+<!-- ===== EXPENSE ===== -->
+<div class="panel" id="panel-expense">
+  <div class="sh"><div class="st">支出設定</div><button class="btn bp" onclick="openItemModal('expense')">＋ 支出を追加</button></div>
+  <div class="notice">💡 固定費・教育費・一時的な大きな支出を管理できます。金融資産への投資は「金融資産」タブへ。</div>
+  <div class="card"><div class="tw"><table><thead><tr><th>名目</th><th>誰の</th><th>カテゴリ</th><th>金額</th><th>頻度</th><th>開始年</th><th>終了年</th><th>年増率</th><th></th></tr></thead><tbody id="expense-tbody"></tbody></table></div></div>
+</div>
+
+<!-- ===== INVEST ===== -->
+<div class="panel" id="panel-invest">
+  <div class="sh"><div class="st">金融資産 設定</div><button class="btn bp" onclick="openItemModal('invest')">＋ 投資を追加</button></div>
+  <div class="notice">💡 NISA・株・iDeCo・投資信託などの積立・一時投資を設定します。ここに登録した支出は通常支出とは分離され、「金融資産残高」として別途積み上がります。想定年利（リターン）を設定することで複利成長も反映されます。</div>
+  <div class="card"><div class="tw"><table><thead><tr><th>名目</th><th>誰の</th><th>種別</th><th>積立額</th><th>頻度</th><th>開始年</th><th>終了年</th><th>想定年利(%)</th><th></th></tr></thead><tbody id="invest-tbody"></tbody></table></div></div>
+</div>
+
+<!-- ===== EVENTS ===== -->
+<div class="panel" id="panel-events">
+  <div class="sh"><div class="st">家族イベント・マイルストーン</div><button class="btn bp" onclick="openEventModal()">＋ イベントを追加</button></div>
+  <div class="notice">💡 入学・進学・結婚・住宅購入・退職など人生の節目を記録しましょう。年表に表示されます。</div>
+  <div class="card"><div class="tw"><table><thead><tr><th>年</th><th>イベント名</th><th>誰の</th><th>種別</th><th>メモ</th><th></th></tr></thead><tbody id="events-tbody"></tbody></table></div></div>
+</div>
+
+<!-- ===== TIMELINE ===== -->
+<div class="panel" id="panel-timeline">
+  <div class="sh"><div class="st">年表・財務グラフ</div></div>
+  <div class="card" style="margin-bottom:18px">
+    <div class="card-title">📈 収支・金融資産 推移グラフ</div>
+    <div class="chart-wrap"><canvas id="main-chart"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">🗓 年別詳細タイムライン</div>
+    <div class="tl" id="tl-detail"></div>
+  </div>
+</div>
+
+<!-- ===== MEMBERS ===== -->
+<div class="panel" id="panel-members">
+  <div class="sh">
+    <div class="st">家族設定</div>
+    <button class="btn bp" onclick="addMember()">＋ メンバーを追加</button>
+  </div>
+  <div class="notice">💡 名前・続柄・生年・テーマカラーを自由に設定できます。メンバーIDは収入・支出・イベントのひも付けに使われます。削除すると関連データのメンバー表示が「不明」になります。</div>
+  <div class="card">
+    <div id="member-list"></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="card">
+    <div class="card-title">👁 現在の家族構成</div>
+    <div id="member-preview" style="display:flex;flex-wrap:wrap;gap:10px;padding:4px 0"></div>
+  </div>
+</div>
+
+<!-- ===== DATA ===== -->
+<div class="panel" id="panel-data">
+  <div class="sh"><div class="st">データ管理</div></div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-title">📤 JSONエクスポート</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:14px">現在の設定をJSONファイルとして保存します。他端末への移行・バックアップに使えます。</p>
+      <button class="btn bp" onclick="exportJSON()">JSONをダウンロード</button>
+      <div class="spacer"></div>
+      <div class="jarea" id="json-preview"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📥 JSONインポート</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:14px">保存したJSONファイルを読み込んで設定を復元します。</p>
+      <button class="btn bs" onclick="triggerImport()">JSONファイルを選択</button>
+      <div class="spacer"></div>
+      <div style="font-size:11px;color:var(--muted);line-height:1.9">
+        <p>● LocalStorage: タブを閉じても自動保存されます</p>
+        <p>● JSON: 他デバイスへの移行・共有に使用</p>
+      </div>
+      <div class="sep"></div>
+      <button class="btn bd bsm" onclick="clearAllData()">⚠️ すべてのデータを削除</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- .main -->
+</div><!-- .app -->
+
+<!-- ===== ITEM MODAL (income / expense / invest) ===== -->
+<div class="moverlay" id="item-modal">
+  <div class="modal">
+    <div class="modal-title" id="item-modal-title">項目を追加</div>
+    <input type="hidden" id="item-mode"> <!-- income | expense | invest -->
+    <input type="hidden" id="item-edit-id">
+    <div class="frow">
+      <div class="fg" style="flex:2"><label>名目 *</label><input type="text" id="item-name" placeholder="例: 父 給与収入" maxlength="40"></div>
+      <div class="fg"><label>誰の</label><select id="item-member"></select></div>
+    </div>
+    <div class="frow" id="item-cat-row">
+      <div class="fg"><label>カテゴリ</label>
+        <select id="item-cat">
+          <option value="education">教育費</option><option value="living">生活費</option>
+          <option value="housing">住宅費</option><option value="medical">医療費</option>
+          <option value="insurance">保険</option><option value="leisure">娯楽・旅行</option>
+          <option value="car">自動車</option><option value="other">その他</option>
+        </select>
+      </div>
+    </div>
+    <div class="frow" id="item-invest-cat-row" style="display:none">
+      <div class="fg"><label>投資種別</label>
+        <select id="item-invest-cat">
+          <option value="nisa">NISA（積立）</option><option value="nisa-l">NISA（成長投資枠）</option>
+          <option value="ideco">iDeCo</option><option value="stock">個別株</option>
+          <option value="fund">投資信託</option><option value="bond">債券</option>
+          <option value="other">その他投資</option>
+        </select>
+      </div>
+      <div class="fg"><label>想定年利（%）</label><input type="number" id="item-yield" placeholder="5.0" step="0.1" min="0" max="30"></div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label>金額（円）*</label><input type="number" id="item-amount" placeholder="0" min="0"></div>
+      <div class="fg"><label>頻度</label>
+        <select id="item-freq">
+          <option value="monthly">毎月</option>
+          <option value="yearly">毎年（年1回）</option>
+          <option value="onetime">一時のみ</option>
+        </select>
+      </div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label>開始年</label><input type="number" id="item-start" min="1990" max="2100"></div>
+      <div class="fg"><label>終了年（空白=制限なし）</label><input type="number" id="item-end" min="1990" max="2100"></div>
+      <div class="fg" id="item-growth-row"><label>年間増加率（%）</label><input type="number" id="item-growth" placeholder="0" step="0.1"></div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label>メモ</label><input type="text" id="item-note" placeholder="任意のメモ" maxlength="60"></div>
+    </div>
+    <div class="mactions">
+      <button class="btn bs" onclick="closeModal('item-modal')">キャンセル</button>
+      <button class="btn bp" onclick="saveItem()">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== EVENT MODAL ===== -->
+<div class="moverlay" id="event-modal">
+  <div class="modal">
+    <div class="modal-title">イベントを追加 / 編集</div>
+    <input type="hidden" id="ev-edit-id">
+    <div class="frow">
+      <div class="fg"><label>年 *</label><input type="number" id="ev-year" min="1990" max="2100"></div>
+      <div class="fg"><label>誰の</label><select id="ev-member"></select></div>
+      <div class="fg"><label>種別</label>
+        <select id="ev-type">
+          <option value="education">🎓 進学・入学</option><option value="work">💼 就職・転職・退職</option>
+          <option value="housing">🏠 住宅</option><option value="family">👨‍👩‍👧‍👦 家族</option>
+          <option value="milestone">⭐ マイルストーン</option><option value="other">📌 その他</option>
+        </select>
+      </div>
+    </div>
+    <div class="frow">
+      <div class="fg" style="flex:2"><label>イベント名 *</label><input type="text" id="ev-name" placeholder="例: 紘都 中学入学" maxlength="40"></div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label>メモ</label><input type="text" id="ev-note" placeholder="任意のメモ"></div>
+    </div>
+    <div class="mactions">
+      <button class="btn bs" onclick="closeModal('event-modal')">キャンセル</button>
+      <button class="btn bp" onclick="saveEvent()">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MEMBER MODAL ===== -->
+<div class="moverlay" id="member-modal">
+  <div class="modal">
+    <div class="modal-title" id="mem-modal-title">メンバーを追加</div>
+    <input type="hidden" id="mem-edit-id">
+    <div class="frow">
+      <div class="fg"><label>名前 *</label><input type="text" id="mem-name" placeholder="例: 紘都" maxlength="10"></div>
+      <div class="fg"><label>続柄</label>
+        <select id="mem-role">
+          <option value="father">父</option><option value="mother">母</option>
+          <option value="child">子</option><option value="grandparent">祖父母</option>
+          <option value="other">その他</option>
+        </select>
+      </div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label>生年（西暦）</label><input type="number" id="mem-birth" placeholder="1985" min="1900" max="2030"></div>
+      <div class="fg"><label>テーマカラー</label>
+        <input type="color" id="mem-color" value="#7c6af7" style="height:38px;width:100%;padding:3px;border-radius:7px;cursor:pointer">
+      </div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label>メモ</label><input type="text" id="mem-note" placeholder="任意メモ"></div>
+    </div>
+    <div class="mactions">
+      <button class="btn bs" onclick="closeModal('member-modal')">キャンセル</button>
+      <button class="btn bp" onclick="saveMember()">保存</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+// ====================================================
+// DEFAULT STATE
+// ====================================================
+const DEFAULT_MEMBERS = [
+  { id:'father', name:'父',   role:'father',  birth:1980, color:'#7c6af7', note:'' },
+  { id:'mother', name:'母',   role:'mother',  birth:1982, color:'#f76a8c', note:'' },
+  { id:'koto',   name:'紘都', role:'child',   birth:2012, color:'#4ecdc4', note:'' },
+  { id:'yuto',   name:'裕都', role:'child',   birth:2015, color:'#f7a26a', note:'' },
+];
+
+let state = {
+  members: JSON.parse(JSON.stringify(DEFAULT_MEMBERS)),
+  incomes: [],
+  expenses: [],
+  invests: [],   // 金融資産への積立
+  events: [],
+};
+
+// ====================================================
+// MEMBER HELPERS
+// ====================================================
+function getMember(id) { return state.members.find(m => m.id === id) || null; }
+function memberLabel(id) { const m = getMember(id); return m ? m.name : id === 'family' ? '家族共通' : '不明'; }
+function memberColor(id) { if(id==='family') return '#e8c547'; const m = getMember(id); return m ? m.color : '#8885a8'; }
+function memberBadgeHtml(id) {
+  const lbl = memberLabel(id);
+  const col = memberColor(id);
+  const bg = hexToRgba(col, 0.18);
+  return `<span class="mbadge" style="background:${bg};color:${col};border:1px solid ${col}">${lbl}</span>`;
+}
+function hexToRgba(hex, a) {
+  const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+function buildMemberOptions(selectEl, includeFamily=true) {
+  const prev = selectEl.value;
+  selectEl.innerHTML = '';
+  if (includeFamily) {
+    const o = document.createElement('option'); o.value='family'; o.textContent='家族共通';
+    selectEl.appendChild(o);
+  }
+  state.members.forEach(m => {
+    const o = document.createElement('option'); o.value=m.id; o.textContent=`${m.name}（${roleLabel(m.role)}）`;
+    selectEl.appendChild(o);
+  });
+  if ([...selectEl.options].some(o => o.value===prev)) selectEl.value = prev;
+}
+function roleLabel(r) {
+  return {father:'父',mother:'母',child:'子',grandparent:'祖父母',other:'その他'}[r]||r;
+}
+function uid() { return Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
+
+// ====================================================
+// LOCAL STORAGE
+// ====================================================
+const LS_KEY = 'family-finance-sim-v2';
+function saveToStorage() {
+  localStorage.setItem(LS_KEY, JSON.stringify(state));
+  showToast('💾 保存しました');
+}
+function loadFromStorage() {
+  const raw = localStorage.getItem(LS_KEY);
+  if (!raw) return;
+  try {
+    const d = JSON.parse(raw);
+    if (d.members) state = d;
+    // migrate old format without invests
+    if (!state.invests) state.invests = [];
+    showToast('✅ 前回のデータを読み込みました');
+  } catch(e) {}
+}
+function showToast(msg) {
+  const t = document.createElement('div');
+  t.style.cssText='position:fixed;bottom:22px;right:22px;background:#232238;color:#e8e6f0;padding:10px 18px;border-radius:9px;font-size:12px;z-index:9999;border:1px solid #2e2d4a;box-shadow:0 8px 24px rgba(0,0,0,.4);font-family:"Noto Serif JP",serif';
+  t.textContent=msg; document.body.appendChild(t);
+  setTimeout(()=>t.remove(),2200);
+}
+
+// ====================================================
+// TAB SWITCHING
+// ====================================================
+function switchTab(name, el) {
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+  if (el) el.classList.add('active');
+  if (name==='timeline') renderTimeline();
+  if (name==='data') renderJsonPreview();
+  if (name==='overview') renderOverview();
+  if (name==='members') renderMemberList();
+}
+
+// ====================================================
+// CALCULATIONS
+// ====================================================
+function getBaseYear() { return parseInt(document.getElementById('base-year').value)||2025; }
+function getSimYears() {
+  const base=getBaseYear(), n=parseInt(document.getElementById('sim-years').value)||20;
+  return Array.from({length:n},(_,i)=>base+i);
+}
+function getYearlyAmount(item, year) {
+  const start = item.start ? parseInt(item.start) : getBaseYear();
+  const end = item.end ? parseInt(item.end) : 9999;
+  if (year<start||year>end) return 0;
+  const g = item.growth ? parseFloat(item.growth)/100 : 0;
+  const base = parseFloat(item.amount)||0;
+  const adj = base * Math.pow(1+g, year-start);
+  if (item.freq==='monthly') return adj*12;
+  if (item.freq==='yearly') return adj;
+  if (item.freq==='onetime') return year===start ? adj : 0;
+  return adj*12;
+}
+// Compound investment portfolio value up to given year
+function getInvestPortfolioValue(upToYear) {
+  let portfolio = 0;
+  const base = getBaseYear();
+  for (let y = base; y <= upToYear; y++) {
+    state.invests.forEach(inv => {
+      const contrib = getYearlyAmount(inv, y);
+      const yld = inv.yield ? parseFloat(inv.yield)/100 : 0;
+      // contributions made this year grow from mid-year onwards (simplified)
+      const yearsGrow = upToYear - y + 0.5;
+      portfolio += contrib * Math.pow(1+yld, yearsGrow);
+    });
+  }
+  return portfolio;
+}
+// Annual investment outflow (cash cost)
+function getYearInvestOutflow(year) {
+  return state.invests.reduce((s,inv)=>s+getYearlyAmount(inv,year),0);
+}
+function getYearData(year) {
+  const income  = state.incomes.reduce((s,i)=>s+getYearlyAmount(i,year),0);
+  const expense = state.expenses.reduce((s,e)=>s+getYearlyAmount(e,year),0);
+  const invest  = getYearInvestOutflow(year);
+  return { income, expense, invest, cashBalance: income - expense - invest };
+}
+function isActiveInYear(item, year) {
+  const s = item.start ? parseInt(item.start) : 0;
+  const e = item.end ? parseInt(item.end) : 9999;
+  return year>=s && year<=e;
+}
+
+// ====================================================
+// OVERVIEW
+// ====================================================
+function renderOverview() {
+  const by = getBaseYear(), years = getSimYears();
+  const d = getYearData(by);
+  // Stats
+  set('st-inc', fmtYen(d.income));
+  set('st-inc-s', `${state.incomes.filter(i=>isActiveInYear(i,by)).length}件の収入項目`);
+  set('st-exp', fmtYen(d.expense));
+  set('st-exp-s', `${state.expenses.filter(e=>isActiveInYear(e,by)).length}件の支出項目`);
+  const balEl = document.getElementById('st-bal');
+  balEl.textContent = fmtYen(d.cashBalance);
+  balEl.className = 'stat-val '+(d.cashBalance>=0?'pos':'neg');
+  set('st-bal-s', `月平均: ${fmtYen(d.cashBalance/12)}`);
+  const cum = years.reduce((s,y)=>s+getYearData(y).cashBalance,0);
+  const cumEl = document.getElementById('st-cum');
+  cumEl.textContent = fmtYen(cum);
+  cumEl.className = 'stat-val '+(cum>=0?'pos':'neg');
+  set('st-cum-s', `${years.length}年間累計`);
+  const lastYear = years[years.length-1];
+  const invPort = getInvestPortfolioValue(lastYear);
+  set('st-inv', fmtYen(invPort));
+  set('st-inv-s', `${state.invests.length}件・${years.length}年後の評価額`);
+
+  // Member breakdown
+  const mb = document.getElementById('member-breakdown');
+  const allIds = [...state.members.map(m=>m.id), 'family'];
+  let html = '<table style="width:100%;font-size:12px;border-collapse:collapse">';
+  html += '<tr><th style="text-align:left;padding:5px;color:var(--muted);font-weight:400;font-size:10px;border-bottom:1px solid var(--border)">メンバー</th><th style="text-align:right;padding:5px;color:var(--muted);font-weight:400;font-size:10px;border-bottom:1px solid var(--border)">収入</th><th style="text-align:right;padding:5px;color:var(--muted);font-weight:400;font-size:10px;border-bottom:1px solid var(--border)">支出</th><th style="text-align:right;padding:5px;color:var(--muted);font-weight:400;font-size:10px;border-bottom:1px solid var(--border)">投資</th><th style="text-align:right;padding:5px;color:var(--muted);font-weight:400;font-size:10px;border-bottom:1px solid var(--border)">収支</th></tr>';
+  for (const id of allIds) {
+    const inc = state.incomes.filter(i=>i.member===id&&isActiveInYear(i,by)).reduce((s,i)=>s+getYearlyAmount(i,by),0);
+    const exp = state.expenses.filter(e=>e.member===id&&isActiveInYear(e,by)).reduce((s,e)=>s+getYearlyAmount(e,by),0);
+    const inv = state.invests.filter(i=>i.member===id&&isActiveInYear(i,by)).reduce((s,i)=>s+getYearlyAmount(i,by),0);
+    if (inc===0&&exp===0&&inv===0) continue;
+    const bal = inc-exp-inv;
+    html += `<tr>
+      <td style="padding:7px 5px">${memberBadgeHtml(id)}</td>
+      <td style="text-align:right;padding:7px 5px;font-family:var(--font-m);color:var(--success)">${fmtYen(inc)}</td>
+      <td style="text-align:right;padding:7px 5px;font-family:var(--font-m);color:var(--danger)">${fmtYen(exp)}</td>
+      <td style="text-align:right;padding:7px 5px;font-family:var(--font-m);color:var(--invest)">${fmtYen(inv)}</td>
+      <td style="text-align:right;padding:7px 5px;font-family:var(--font-m);color:${bal>=0?'var(--success)':'var(--danger)'}">${fmtYen(bal)}</td>
+    </tr>`;
+  }
+  html += '</table>';
+  mb.innerHTML = html;
+
+  // Upcoming events
+  const ue = document.getElementById('upcoming-events');
+  const evs = [...state.events].filter(e=>parseInt(e.year)>=by).sort((a,b)=>parseInt(a.year)-parseInt(b.year)).slice(0,8);
+  if (!evs.length) { ue.innerHTML='<div class="empty"><span class="ico">📅</span>イベントがまだありません</div>'; return; }
+  ue.innerHTML = evs.map(ev=>`
+    <div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border)">
+      <span style="font-family:var(--font-m);font-size:11px;color:var(--muted);min-width:38px">${ev.year}</span>
+      <span>${EV_ICONS[ev.type]||'📌'}</span>
+      <span style="flex:1;font-size:12px">${esc(ev.name)}</span>
+      ${memberBadgeHtml(ev.member)}
+    </div>`).join('');
+}
+
+// ====================================================
+// ITEM TABLE RENDERING (income/expense/invest)
+// ====================================================
+const CATS = {education:'教育費',living:'生活費',housing:'住宅費',medical:'医療費',insurance:'保険',leisure:'娯楽・旅行',car:'自動車',other:'その他'};
+const INVEST_CATS = {nisa:'NISA積立',nisa_l:'NISA成長',ideco:'iDeCo',stock:'個別株',fund:'投資信託',bond:'債券',other:'その他投資'};
+const FREQ = {monthly:'毎月',yearly:'毎年',onetime:'一時のみ'};
+const FTAG = {monthly:'tm',yearly:'ty',onetime:'to'};
+
+function renderItemTable(type) {
+  const arr = state[type+'s'];
+  const tbody = document.getElementById(type+'-tbody');
+  if (!arr.length) {
+    tbody.innerHTML=`<tr><td colspan="9"><div class="empty"><span class="ico">${type==='income'?'💰':type==='expense'?'💸':'📈'}</span>項目がありません。「＋ 追加」から登録してください。</div></td></tr>`;
+    return;
+  }
+  tbody.innerHTML = arr.map(item=>{
+    const catHtml = type==='invest'
+      ? `<span style="font-size:11px;color:var(--invest)">${INVEST_CATS[item.investCat]||item.investCat||'—'}</span>`
+      : `<span style="font-size:11px;color:var(--muted)">${CATS[item.cat]||item.cat||'—'}</span>`;
+    const amtClass = type==='income'?'ai':type==='expense'?'ae':'av';
+    const yieldHtml = type==='invest' ? `<td style="font-family:var(--font-m);font-size:11px;color:var(--invest)">${item.yield||0}%</td>` : `<td style="font-family:var(--font-m);font-size:11px">${item.growth?item.growth+'%':'0%'}</td>`;
+    return `<tr>
+      <td><strong>${esc(item.name)}</strong>${item.note?`<br><span style="font-size:10px;color:var(--muted)">${esc(item.note)}</span>`:''}${type==='income'?'':''}</td>
+      <td>${memberBadgeHtml(item.member)}</td>
+      ${type!=='income'?`<td>${catHtml}</td>`:''}
+      <td><span class="${amtClass}">${fmtYen(parseFloat(item.amount)||0)}</span></td>
+      <td><span class="tag ${FTAG[item.freq]||'to'}">${FREQ[item.freq]||item.freq}</span></td>
+      <td style="font-family:var(--font-m);font-size:11px">${item.start||'—'}</td>
+      <td style="font-family:var(--font-m);font-size:11px">${item.end||'—'}</td>
+      ${yieldHtml}
+      <td><div style="display:flex;gap:3px">
+        <button class="btn bic bsm" onclick="openItemModal('${type}','${item.id}')">✏️</button>
+        <button class="btn bic bsm" onclick="deleteItem('${type}','${item.id}')">🗑️</button>
+      </div></td>
+    </tr>`;
+  }).join('');
+}
+
+// ====================================================
+// ITEM MODAL
+// ====================================================
+function openItemModal(type, id) {
+  const titles = {income:'収入を追加/編集', expense:'支出を追加/編集', invest:'金融資産（投資）を追加/編集'};
+  set('item-modal-title', titles[type]);
+  setV('item-mode', type);
+  setV('item-edit-id', '');
+  setV('item-name',''); setV('item-amount',''); setV('item-freq','monthly');
+  setV('item-start', getBaseYear()); setV('item-end','');
+  setV('item-growth',''); setV('item-note',''); setV('item-yield','5');
+  document.getElementById('item-cat-row').style.display = type==='expense'?'':'none';
+  document.getElementById('item-invest-cat-row').style.display = type==='invest'?'':'none';
+  document.getElementById('item-growth-row').style.display = type==='invest'?'none':'';
+  buildMemberOptions(document.getElementById('item-member'), true);
+  document.getElementById('item-member').value = type==='income'?'father':'family';
+
+  if (id) {
+    const item = state[type+'s'].find(i=>i.id===id);
+    if (item) {
+      setV('item-edit-id', id);
+      setV('item-name', item.name); setV('item-amount', item.amount);
+      setV('item-freq', item.freq); setV('item-start', item.start||'');
+      setV('item-end', item.end||''); setV('item-growth', item.growth||'');
+      setV('item-note', item.note||''); setV('item-yield', item.yield||'5');
+      setV('item-cat', item.cat||'living');
+      setV('item-invest-cat', item.investCat||'nisa');
+      document.getElementById('item-member').value = item.member;
+    }
+  }
+  openModal('item-modal');
+}
+
+function saveItem() {
+  const type = gv('item-mode');
+  const name = gv('item-name').trim();
+  if (!name) { alert('名目を入力してください'); return; }
+  const amount = parseFloat(gv('item-amount'));
+  if (isNaN(amount)||amount<0) { alert('正しい金額を入力してください'); return; }
+  const id = gv('item-edit-id') || uid();
+  const item = {
+    id, name, member: gv('item-member'), amount,
+    freq: gv('item-freq'), start: gv('item-start'), end: gv('item-end'),
+    growth: type!=='invest' ? gv('item-growth') : '',
+    note: gv('item-note'),
+    cat: type==='expense' ? gv('item-cat') : undefined,
+    investCat: type==='invest' ? gv('item-invest-cat') : undefined,
+    yield: type==='invest' ? gv('item-yield') : undefined,
+  };
+  const arr = state[type+'s'];
+  const idx = arr.findIndex(i=>i.id===id);
+  if (idx>=0) arr[idx]=item; else arr.push(item);
+  closeModal('item-modal');
+  renderItemTable(type); recalc(); saveToStorage();
+}
+
+function deleteItem(type, id) {
+  if (!confirm('この項目を削除しますか？')) return;
+  state[type+'s'] = state[type+'s'].filter(i=>i.id!==id);
+  renderItemTable(type); recalc(); saveToStorage();
+}
+
+// ====================================================
+// EVENTS
+// ====================================================
+const EV_ICONS = {education:'🎓',work:'💼',housing:'🏠',family:'👨‍👩‍👧‍👦',milestone:'⭐',other:'📌'};
+
+function renderEventsTable() {
+  const tbody = document.getElementById('events-tbody');
+  const sorted = [...state.events].sort((a,b)=>parseInt(a.year)-parseInt(b.year));
+  if (!sorted.length) { tbody.innerHTML=`<tr><td colspan="6"><div class="empty"><span class="ico">🗓</span>イベントがありません。</div></td></tr>`; return; }
+  tbody.innerHTML = sorted.map(ev=>`<tr>
+    <td style="font-family:var(--font-m);font-size:12px;color:var(--accent)">${ev.year}</td>
+    <td><strong>${EV_ICONS[ev.type]||'📌'} ${esc(ev.name)}</strong></td>
+    <td>${memberBadgeHtml(ev.member)}</td>
+    <td><span style="font-size:11px;color:var(--muted)">${EV_ICONS[ev.type]||''} ${ev.type}</span></td>
+    <td style="font-size:11px;color:var(--muted)">${esc(ev.note||'')}</td>
+    <td><div style="display:flex;gap:3px">
+      <button class="btn bic bsm" onclick="openEventModal('${ev.id}')">✏️</button>
+      <button class="btn bic bsm" onclick="deleteEvent('${ev.id}')">🗑️</button>
+    </div></td>
+  </tr>`).join('');
+}
+
+function openEventModal(id) {
+  setV('ev-edit-id',''); setV('ev-year',''); setV('ev-name',''); setV('ev-note','');
+  buildMemberOptions(document.getElementById('ev-member'), true);
+  document.getElementById('ev-member').value = 'family';
+  if (id) {
+    const ev = state.events.find(e=>e.id===id);
+    if (ev) {
+      setV('ev-edit-id',id); setV('ev-year',ev.year); setV('ev-name',ev.name);
+      setV('ev-note',ev.note||''); setV('ev-type',ev.type);
+      document.getElementById('ev-member').value = ev.member;
+    }
+  }
+  openModal('event-modal');
+}
+
+function saveEvent() {
+  const year = parseInt(gv('ev-year'));
+  if (isNaN(year)) { alert('年を入力してください'); return; }
+  const name = gv('ev-name').trim();
+  if (!name) { alert('イベント名を入力してください'); return; }
+  const id = gv('ev-edit-id') || uid();
+  const item = { id, year:String(year), name, member:gv('ev-member'), type:gv('ev-type'), note:gv('ev-note') };
+  const idx = state.events.findIndex(e=>e.id===id);
+  if (idx>=0) state.events[idx]=item; else state.events.push(item);
+  closeModal('event-modal');
+  renderEventsTable(); recalc(); saveToStorage();
+}
+
+function deleteEvent(id) {
+  if (!confirm('このイベントを削除しますか？')) return;
+  state.events = state.events.filter(e=>e.id!==id);
+  renderEventsTable(); recalc(); saveToStorage();
+}
+
+// ====================================================
+// MEMBER SETTINGS
+// ====================================================
+function renderMemberList() {
+  const el = document.getElementById('member-list');
+  if (!state.members.length) { el.innerHTML='<div class="empty"><span class="ico">👥</span>メンバーがいません</div>'; return; }
+  el.innerHTML = state.members.map(m=>`
+    <div class="member-row">
+      <div class="dot" style="background:${m.color}"></div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:14px;font-weight:600">${esc(m.name)} <span style="font-size:11px;color:var(--muted);font-weight:400">（${roleLabel(m.role)}）</span></div>
+        <div style="font-size:11px;color:var(--muted)">${m.birth?m.birth+'年生まれ':''}${m.note?' · '+esc(m.note):''}</div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <button class="btn bs bsm" onclick="openMemberModal('${m.id}')">✏️ 編集</button>
+        <button class="btn bd bsm" onclick="deleteMember('${m.id}')">削除</button>
+      </div>
+    </div>`).join('');
+  // Preview
+  const prev = document.getElementById('member-preview');
+  prev.innerHTML = state.members.map(m=>memberBadgeHtml(m.id)).join('') + memberBadgeHtml('family');
+}
+
+function addMember() { openMemberModal(null); }
+
+function openMemberModal(id) {
+  set('mem-modal-title', id ? 'メンバーを編集' : 'メンバーを追加');
+  setV('mem-edit-id',''); setV('mem-name',''); setV('mem-role','child');
+  setV('mem-birth',''); setV('mem-note','');
+  document.getElementById('mem-color').value = '#7c6af7';
+  if (id) {
+    const m = getMember(id);
+    if (m) {
+      setV('mem-edit-id',id); setV('mem-name',m.name); setV('mem-role',m.role);
+      setV('mem-birth',m.birth||''); setV('mem-note',m.note||'');
+      document.getElementById('mem-color').value = m.color||'#7c6af7';
+    }
+  }
+  openModal('member-modal');
+}
+
+function saveMember() {
+  const name = gv('mem-name').trim();
+  if (!name) { alert('名前を入力してください'); return; }
+  const editId = gv('mem-edit-id');
+  const id = editId || name.toLowerCase().replace(/[^a-z0-9]/g,'_')+'_'+Date.now().toString(36);
+  const item = { id, name, role:gv('mem-role'), birth:gv('mem-birth')?parseInt(gv('mem-birth')):null, color:document.getElementById('mem-color').value, note:gv('mem-note') };
+  if (editId) {
+    const idx = state.members.findIndex(m=>m.id===editId);
+    if (idx>=0) state.members[idx]=item;
+  } else {
+    state.members.push(item);
+  }
+  closeModal('member-modal');
+  renderMemberList(); renderAll(); saveToStorage();
+}
+
+function deleteMember(id) {
+  if (!confirm(`このメンバーを削除しますか？\n関連する収支・イベントのメンバー表示は「不明」になります。`)) return;
+  state.members = state.members.filter(m=>m.id!==id);
+  renderMemberList(); renderAll(); saveToStorage();
+}
+
+// ====================================================
+// TIMELINE & CHART
+// ====================================================
+let mainChart = null;
+
+function renderTimeline() {
+  const years = getSimYears();
+  let cumCash = 0;
+  const incArr=[], expArr=[], invOutArr=[], cashBalArr=[], cumArr=[], portArr=[];
+
+  years.forEach(y => {
+    const d = getYearData(y);
+    cumCash += d.cashBalance;
+    const port = getInvestPortfolioValue(y);
+    incArr.push(d.income); expArr.push(d.expense);
+    invOutArr.push(d.invest); cashBalArr.push(d.cashBalance);
+    cumArr.push(cumCash); portArr.push(port);
+  });
+
+  // Chart
+  const ctx = document.getElementById('main-chart').getContext('2d');
+  if (mainChart) mainChart.destroy();
+  mainChart = new Chart(ctx, {
+    type:'bar',
+    data: {
+      labels: years.map(y=>y+'年'),
+      datasets:[
+        { label:'年間収入', data:incArr.map(v=>v/1e4), backgroundColor:'rgba(107,255,184,.35)', borderColor:'rgba(107,255,184,.75)', borderWidth:1, order:3 },
+        { label:'年間支出', data:expArr.map(v=>-v/1e4), backgroundColor:'rgba(255,107,107,.35)', borderColor:'rgba(255,107,107,.75)', borderWidth:1, order:3 },
+        { label:'年間投資', data:invOutArr.map(v=>-v/1e4), backgroundColor:'rgba(167,139,250,.35)', borderColor:'rgba(167,139,250,.75)', borderWidth:1, order:3 },
+        { label:'累計収支', data:cumArr.map(v=>v/1e4), type:'line', borderColor:'#e8c547', backgroundColor:'rgba(232,197,71,.06)', borderWidth:2, pointRadius:2, fill:true, tension:.3, order:1, yAxisID:'y2' },
+        { label:'金融資産残高', data:portArr.map(v=>v/1e4), type:'line', borderColor:'#a78bfa', backgroundColor:'rgba(167,139,250,.06)', borderWidth:2, pointRadius:2, fill:true, tension:.3, order:1, yAxisID:'y2', borderDash:[4,3] },
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{
+        legend:{ labels:{ color:'#8885a8', font:{family:'Noto Serif JP',size:11}, boxWidth:14, padding:12 } },
+        tooltip:{ backgroundColor:'#1a1928', borderColor:'#2e2d4a', borderWidth:1, titleColor:'#e8e6f0', bodyColor:'#8885a8',
+          callbacks:{ label:c=>`${c.dataset.label}: ${c.parsed.y.toLocaleString('ja-JP')}万円` } }
+      },
+      scales:{
+        x:{ stacked:false, grid:{color:'rgba(46,45,74,.4)'}, ticks:{color:'#8885a8',font:{size:10}} },
+        y:{ stacked:false, grid:{color:'rgba(46,45,74,.4)'}, ticks:{color:'#8885a8',font:{size:10},callback:v=>v.toLocaleString()+'万'} },
+        y2:{ position:'right', grid:{drawOnChartArea:false}, ticks:{color:'#e8c547',font:{size:10},callback:v=>v.toLocaleString()+'万'} }
+      }
+    }
+  });
+
+  // Timeline detail
+  const evByYear = {};
+  state.events.forEach(ev=>{ if(!evByYear[ev.year]) evByYear[ev.year]=[]; evByYear[ev.year].push(ev); });
+  const maxAbs = Math.max(...incArr, ...expArr, 1);
+  const tlEl = document.getElementById('tl-detail');
+  tlEl.innerHTML = years.map((year,i)=>{
+    const evs = evByYear[String(year)]||[];
+    const bal = cashBalArr[i], isNeg = bal<0;
+    const barW = Math.round(Math.abs(bal)/maxAbs*78);
+    return `<div class="tly">
+      <div class="tly-lbl ${evs.length?'hev':''}">${year}</div>
+      <div class="tly-c">
+        ${evs.length?`<div class="tl-evs">${evs.map(ev=>`<span class="tl-ev">${EV_ICONS[ev.type]||'📌'} ${esc(ev.name)}</span>`).join('')}</div>`:''}
+        <div class="tl-bar ${isNeg?'neg':''}" style="width:${barW}%"></div>
+        <div class="tl-nums">
+          <span style="color:var(--success)">収入 ${fmtMan(incArr[i])}</span>
+          <span style="color:var(--danger)">支出 ${fmtMan(expArr[i])}</span>
+          <span style="color:var(--invest)">投資 ${fmtMan(invOutArr[i])}</span>
+          <span style="color:${isNeg?'var(--danger)':'var(--success)'}">収支 ${isNeg?'-':''}${fmtMan(Math.abs(bal))}</span>
+          <span style="color:var(--accent)">累計 ${fmtMan(cumArr[i])}</span>
+          <span style="color:var(--invest)">資産 ${fmtMan(portArr[i])}</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ====================================================
+// JSON IMPORT / EXPORT
+// ====================================================
+function exportJSON() {
+  const json = JSON.stringify(state, null, 2);
+  const blob = new Blob([json],{type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href=url; a.download=`family-finance-${new Date().toISOString().slice(0,10)}.json`;
+  a.click(); URL.revokeObjectURL(url);
+  showToast('📤 エクスポートしました');
+}
+function triggerImport() { document.getElementById('import-file').click(); }
+function importJSON(ev) {
+  const file = ev.target.files[0]; if(!file) return;
+  const r = new FileReader();
+  r.onload = e => {
+    try {
+      const d = JSON.parse(e.target.result);
+      if (!d.incomes||!d.expenses||!d.events) throw new Error();
+      if (!d.members) d.members = DEFAULT_MEMBERS;
+      if (!d.invests) d.invests = [];
+      state = d; renderAll(); saveToStorage();
+      showToast('✅ インポートしました');
+    } catch { alert('JSONファイルの形式が正しくありません'); }
+  };
+  r.readAsText(file); ev.target.value='';
+}
+function renderJsonPreview() { document.getElementById('json-preview').textContent = JSON.stringify(state,null,2); }
+function clearAllData() {
+  if (!confirm('すべてのデータを削除します。この操作は取り消せません。')) return;
+  state = { members:JSON.parse(JSON.stringify(DEFAULT_MEMBERS)), incomes:[], expenses:[], invests:[], events:[] };
+  localStorage.removeItem(LS_KEY); renderAll(); showToast('🗑️ データを削除しました');
+}
+
+// ====================================================
+// MODAL HELPERS
+// ====================================================
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.moverlay').forEach(m=>m.addEventListener('click',e=>{ if(e.target===m) m.classList.remove('open'); }));
+});
+
+// ====================================================
+// DOM HELPERS
+// ====================================================
+function set(id,v) { const e=document.getElementById(id); if(e) e.textContent=v; }
+function setV(id,v) { const e=document.getElementById(id); if(e) e.value=v; }
+function gv(id) { const e=document.getElementById(id); return e?e.value:''; }
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function fmtYen(n) {
+  const abs=Math.abs(n), sign=n<0?'-':'';
+  if(abs>=1e8) return sign+'¥'+(abs/1e8).toFixed(1)+'億';
+  if(abs>=1e4) return sign+'¥'+Math.round(abs/1e4).toLocaleString('ja-JP')+'万';
+  return sign+'¥'+Math.round(abs).toLocaleString('ja-JP');
+}
+function fmtMan(n) {
+  const abs=Math.abs(n), sign=n<0?'-':'';
+  if(abs>=1e8) return sign+(abs/1e8).toFixed(1)+'億';
+  return sign+Math.round(abs/1e4).toLocaleString('ja-JP')+'万';
+}
+
+// ====================================================
+// RECALC (called on settings change)
+// ====================================================
+function recalc() {
+  renderOverview();
+  const active = document.querySelector('.panel.active');
+  if (active && active.id==='panel-timeline') renderTimeline();
+}
+
+// ====================================================
+// RENDER ALL
+// ====================================================
+function renderAll() {
+  renderOverview();
+  renderItemTable('income');
+  renderItemTable('expense');
+  renderItemTable('invest');
+  renderEventsTable();
+  renderMemberList();
+}
+
+// ====================================================
+// INIT
+// ====================================================
+window.addEventListener('DOMContentLoaded', () => {
+  loadFromStorage();
+  renderAll();
+});
+</script>
+</body>
+</html>
