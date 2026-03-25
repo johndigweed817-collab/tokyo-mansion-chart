@@ -324,6 +324,9 @@ canvas{border-radius:8px}
       <div class="fg"><label>頻度</label>
         <select id="item-freq">
           <option value="monthly">毎月</option>
+          <option value="bimonthly">隔月（年6回）</option>
+          <option value="quarterly">四半期（年4回）</option>
+          <option value="semiannual">半期（年2回）</option>
           <option value="yearly">毎年（年1回）</option>
           <option value="onetime">一時のみ</option>
         </select>
@@ -513,9 +516,12 @@ function getYearlyAmount(item, year) {
   const g = item.growth ? parseFloat(item.growth)/100 : 0;
   const base = parseFloat(item.amount)||0;
   const adj = base * Math.pow(1+g, year-start);
-  if (item.freq==='monthly') return adj*12;
-  if (item.freq==='yearly') return adj;
-  if (item.freq==='onetime') return year===start ? adj : 0;
+  if (item.freq==='monthly')     return adj*12;
+  if (item.freq==='bimonthly')   return adj*6;
+  if (item.freq==='quarterly')   return adj*4;
+  if (item.freq==='semiannual')  return adj*2;
+  if (item.freq==='yearly')      return adj;
+  if (item.freq==='onetime')     return year===start ? adj : 0;
   return adj*12;
 }
 // Compound investment portfolio value up to given year
@@ -614,8 +620,8 @@ function renderOverview() {
 // ====================================================
 const CATS = {education:'教育費',living:'生活費',housing:'住宅費',medical:'医療費',insurance:'保険',leisure:'娯楽・旅行',car:'自動車',other:'その他'};
 const INVEST_CATS = {nisa:'NISA積立',nisa_l:'NISA成長',ideco:'iDeCo',stock:'個別株',fund:'投資信託',bond:'債券',other:'その他投資'};
-const FREQ = {monthly:'毎月',yearly:'毎年',onetime:'一時のみ'};
-const FTAG = {monthly:'tm',yearly:'ty',onetime:'to'};
+const FREQ = {monthly:'毎月',bimonthly:'隔月',quarterly:'四半期',semiannual:'半期',yearly:'毎年',onetime:'一時のみ'};
+const FTAG = {monthly:'tm',bimonthly:'tm',quarterly:'ty',semiannual:'ty',yearly:'ty',onetime:'to'};
 
 function renderItemTable(type) {
   const arr = state[type+'s'];
