@@ -1,0 +1,87 @@
+{
+    "themeColor": "#1A237E",
+    "title": "🍹 {name}専用！特製ジュース職人への道！③究極のジュース",
+    "description": "ついに最終ステージ！ ＋、－、×、÷が全部混ざった難しい注文が来たよ。<br>ルールは１つ。<strong>「ミキサー（×、÷）を先にやって、仕分け（＋、－）は一番最後！」</strong><br>順番を間違えずに、お姫様に届ける最高のジュースを完成させよう！",
+    "questions": [
+        {
+            "q": "2<i class='var'>x</i> × 3 + 4<i class='var'>x</i>",
+            "a": [
+                "10x"
+            ],
+            "h": "かけ算「2<i class='var'>x</i> × 3」を先に計算してジュースにしよう。"
+        },
+        {
+            "q": "12<i class='var'>x</i> ÷ 2 - 3<i class='var'>x</i>",
+            "a": [
+                "3x"
+            ],
+            "h": "ひき算より、わり算「12<i class='var'>x</i> ÷ 2」が先だよ！"
+        },
+        {
+            "q": "3<i class='var'>x</i> + 2<i class='var'>x</i> × 4",
+            "a": [
+                "11x"
+            ],
+            "h": "うしろに「×」が隠れているよ！「2<i class='var'>x</i> × 4」を先にやろう。"
+        },
+        {
+            "q": "5<i class='var'>x</i> × 2<i class='var'>y</i> - 3<i class='var'>x</i><i class='var'>y</i>",
+            "a": [
+                "7xy",
+                "7yx"
+            ],
+            "h": "左のかけ算をすると「10<i class='var'>x</i><i class='var'>y</i>」になるね。"
+        },
+        {
+            "q": "10<i class='var'>x</i> - 8<i class='var'>x</i><i class='var'>y</i> ÷ 2<i class='var'>y</i>",
+            "a": [
+                "6x"
+            ],
+            "h": "うしろにあるわり算を先にやっつけよう！"
+        },
+        {
+            "q": "4<i class='var'>x</i> × 3 - 2<i class='var'>x</i> × 5",
+            "a": [
+                "2x"
+            ],
+            "h": "かけ算が2ヶ所あるね。左と右、別々にミキサーにかけよう。"
+        },
+        {
+            "q": "6<i class='var'>x</i><i class='var'>y</i> ÷ 3<i class='var'>x</i> + 2<i class='var'>y</i>",
+            "a": [
+                "4y"
+            ],
+            "h": "わり算をすると「2<i class='var'>y</i>」になるね。あとは足すだけ！"
+        },
+        {
+            "q": "3<i class='var'>x</i> + 4<i class='var'>y</i> - <i class='var'>x</i> × 2",
+            "a": [
+                "x+4y",
+                "4y+x",
+                "1x+4y",
+                "4y+1x"
+            ],
+            "h": "リンゴ（<i class='var'>x</i>）はリンゴ同士で計算！ミカンはそのまま横に置こう。"
+        },
+        {
+            "q": "12<i class='var'>x</i><i class='var'>y</i> ÷ 4<i class='var'>y</i> - 3<i class='var'>x</i>",
+            "a": [
+                "0"
+            ],
+            "h": "全部なくなったら、答えはどう書くんだっけ？"
+        },
+        {
+            "q": "2<i class='var'>x</i> × 3<i class='var'>y</i> + 10<i class='var'>x</i><i class='var'>y</i> ÷ 2",
+            "a": [
+                "11xy",
+                "11yx"
+            ],
+            "h": "最後の注文！ 左のかけ算と右のわり算をそれぞれ計算してから足そう。"
+        }
+    ],
+    "success": {
+        "title": "✨ 👸 お姫様が大喜び！究極のジュース完成！ ✨",
+        "text": "ゴクゴクゴク……<br><br><strong>「こんなに美味しいジュースは初めて！！」</strong><br><br>お姫様が最高の笑顔でジュースを飲んでくれたよ！<br>ミキサーと仕分けがごちゃまぜになった難しい注文を完璧にこなしてくれた{name}{honorific}は、立派なジュース職人だね。<br>「×や÷の固まりを見つけて先に片付ける」という必殺技があれば、これからの数学もバッチリだよ！",
+        "nextData": null
+    }
+}

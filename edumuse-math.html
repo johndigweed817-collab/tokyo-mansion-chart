@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特製ジュース職人への道</title>
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --secondary: #FF9800;
+            --bg: #F0F8FF;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Hiragino Maru Gothic ProN', 'Rounded M+ 1c', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px 20px 300px 20px;
+            /* キーボード用の余白 */
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            line-height: 1.4;
+        }
+
+        .description {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .var {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            padding: 0 2px;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .question-text {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .input-area {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"] {
+            font-size: 1.5rem;
+            padding: 10px;
+            width: 160px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            font-weight: bold;
+            background: #fafafa;
+            cursor: text;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="text"].active {
+            border-color: var(--secondary);
+            background: #fff;
+            box-shadow: 0 0 8px rgba(255, 152, 0, 0.4);
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-check {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-check:hover {
+            opacity: 0.8;
+        }
+
+        .btn-hint {
+            background-color: #FFE0B2;
+            color: #E65100;
+            border: 1px solid #FFB74D;
+        }
+
+        .btn-hint:hover {
+            background-color: #FFCC80;
+        }
+
+        .hint-container {
+            display: none;
+            background: #FFF8E1;
+            padding: 10px;
+            border-left: 4px solid var(--secondary);
+            margin-top: 10px;
+            font-size: 0.95rem;
+            border-radius: 0 6px 6px 0;
+        }
+
+        #final-message {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border: 4px solid var(--secondary);
+        }
+
+        #final-title {
+            font-size: 1.8rem;
+        }
+
+        .btn-next {
+            background-color: #E91E63;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+        }
+
+        .btn-next:hover {
+            transform: translateY(-3px);
+        }
+
+        /* --- 洗練された入力パッド --- */
+        #keyboard {
+            position: fixed;
+            left: 0;
+            bottom: -100%;
+            width: 100%;
+            background: #e0e5ec;
+            padding: 10px 5px 25px 5px;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+            transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        #keyboard.show {
+            bottom: 0;
+        }
+
+        .kb-header {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: right;
+            padding-bottom: 8px;
+        }
+
+        .kb-close-btn {
+            background: transparent;
+            color: #555;
+            border: none;
+            font-size: 1rem;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+
+        .kb-container {
+            display: flex;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .kb-section {
+            display: grid;
+            gap: 6px;
+        }
+
+        .kb-numbers {
+            grid-template-columns: repeat(3, 1fr);
+            flex: 3;
+        }
+
+        .kb-symbols {
+            grid-template-columns: repeat(2, 1fr);
+            flex: 2;
+        }
+
+        .k-btn {
+            padding: 12px 0;
+            font-size: 1.4rem;
+            font-weight: bold;
+            background: #fff;
+            border: 1px solid #c0c5ce;
+            border-radius: 8px;
+            box-shadow: 0 2px 0 #c0c5ce;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .k-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 0 0 #c0c5ce;
+            background: #f0f0f0;
+        }
+
+        .k-btn.btn-zero {
+            grid-column: span 3;
+        }
+
+        .k-btn.btn-sym {
+            background: #f8f9fa;
+            color: var(--primary);
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+
+        .k-btn.btn-op {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .k-btn.btn-del {
+            background: #ffebee;
+            color: #d32f2f;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="main-title">データ読込中...</h1>
+    <div class="description" id="main-desc">少々お待ちください。</div>
+
+    <div id="quiz-container"></div>
+
+    <div id="final-message">
+        <h2 id="final-title"></h2>
+        <p id="final-text"></p>
+        <button class="btn-next" id="btn-go-next" onclick="goToNext()">次の仕事へ進む！</button>
+    </div>
+
+    <div id="keyboard">
+        <div class="kb-header">
+            <button class="kb-close-btn" onclick="closeKeyboard()">▼ とじる</button>
+        </div>
+        <div class="kb-container">
+            <div class="kb-section kb-numbers">
+                <button class="k-btn" onclick="typeKey('7')">7</button><button class="k-btn"
+                    onclick="typeKey('8')">8</button><button class="k-btn" onclick="typeKey('9')">9</button>
+                <button class="k-btn" onclick="typeKey('4')">4</button><button class="k-btn"
+                    onclick="typeKey('5')">5</button><button class="k-btn" onclick="typeKey('6')">6</button>
+                <button class="k-btn" onclick="typeKey('1')">1</button><button class="k-btn"
+                    onclick="typeKey('2')">2</button><button class="k-btn" onclick="typeKey('3')">3</button>
+                <button class="k-btn btn-zero" onclick="typeKey('0')">0</button>
+            </div>
+            <div class="kb-section kb-symbols">
+                <button class="k-btn btn-sym" onclick="typeKey('x')">x</button><button class="k-btn btn-sym"
+                    onclick="typeKey('y')">y</button>
+                <button class="k-btn btn-sym" onclick="typeKey('a')">a</button><button class="k-btn btn-sym"
+                    onclick="typeKey('b')">b</button>
+                <button class="k-btn btn-op" onclick="typeKey('+')">+</button><button class="k-btn btn-op"
+                    onclick="typeKey('-')">-</button>
+                <button class="k-btn btn-del" style="grid-column: span 2;" onclick="backspace()">⌫ 消す</button>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script>
+        // URLパラメータの取得
+        const urlParams = new URLSearchParams(window.location.search);
+        const playerName = urlParams.get('name') || 'きみ';
+        const honorific = (playerName === 'きみ') ? '' : '君';
+        const dataFile = urlParams.get('data') || 'math-001'; // デフォルトは math-001
+
+        let stageData = null;
+        let activeIdx = null;
+        let correctCount = 0;
+        let answered = [];
+
+        // JSONデータの読み込み
+        fetch(`${dataFile}.json`)
+            .then(response => {
+                if (!response.ok) throw new Error("JSON load failed");
+                return response.json();
+            })
+            .then(data => {
+                stageData = data;
+                initStage();
+            })
+            .catch(err => {
+                document.getElementById('main-title').innerText = "⚠️ エラー";
+                document.getElementById('main-desc').innerText = `データ(${dataFile}.json)が読み込めませんでした。ローカルサーバーで実行しているか確認してください。`;
+                console.error(err);
+            });
+
+        function initStage() {
+            // テーマカラーやテキストの反映
+            document.documentElement.style.setProperty('--primary', stageData.themeColor);
+            document.title = stageData.title.replace('{name}', playerName);
+            document.getElementById('main-title').innerHTML = stageData.title.replace('{name}', playerName);
+            document.getElementById('main-desc').innerHTML = stageData.description;
+
+            answered = new Array(stageData.questions.length).fill(false);
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = "";
+
+            stageData.questions.forEach((q, i) => {
+                container.innerHTML += `
+                <div class='question-card'>
+                    <div class='question-text'>${q.q}</div>
+                    <div class='input-area'>
+                        <input type='text' id='ans-${i}' readonly placeholder="タップして入力" onclick='openKeyboard(${i})'>
+                        <button class='btn-check' onclick='checkAnswer(${i})'>答え合わせ</button>
+                        <button class='btn-hint' onclick='toggleHint(${i})'>ヒント</button>
+                    </div>
+                    <div id='hint-${i}' class='hint-container'>${q.h}</div>
+                </div>`;
+            });
+        }
+
+        // --- キーボードと入力制御 ---
+        function openKeyboard(i) {
+            // 以前のアクティブを解除
+            document.querySelectorAll('input[type="text"]').forEach(el => el.classList.remove('active'));
+            activeIdx = i;
+            document.getElementById(`ans-${i}`).classList.add('active');
+            document.getElementById('keyboard').classList.add('show');
+        }
+        function closeKeyboard() {
+            document.getElementById('keyboard').classList.remove('show');
+            document.querySelectorAll('input[type="text"]').forEach(el => el.classList.remove('active'));
+            activeIdx = null;
+        }
+        function typeKey(key) {
+            if (activeIdx === null) return;
+            const inp = document.getElementById(`ans-${activeIdx}`);
+            inp.value += key;
+        }
+        function backspace() {
+            if (activeIdx === null) return;
+            const inp = document.getElementById(`ans-${activeIdx}`);
+            inp.value = inp.value.slice(0, -1);
+        }
+        function toggleHint(i) {
+            const hintDiv = document.getElementById(`hint-${i}`);
+            hintDiv.style.display = hintDiv.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // --- 判定とクリア処理 ---
+        function checkAnswer(i) {
+            if (answered[i]) return;
+            const inputStr = document.getElementById(`ans-${i}`).value.toLowerCase().replace(/\s/g, "");
+            if (stageData.questions[i].a.includes(inputStr)) {
+                answered[i] = true;
+                correctCount++;
+                document.getElementById(`ans-${i}`).style.borderColor = "#4CAF50";
+                document.getElementById(`ans-${i}`).style.backgroundColor = "#e8f5e9";
+                fireSmallConfetti();
+
+                if (correctCount === stageData.questions.length) {
+                    closeKeyboard();
+                    showFinalMessage();
+                }
+            } else {
+                // 間違い演出（揺れる）
+                const inp = document.getElementById(`ans-${i}`);
+                inp.style.animation = 'none';
+                setTimeout(() => { inp.style.animation = 'shake 0.4s ease'; }, 10);
+                setTimeout(() => { toggleHint(i); }, 500); // 間違えたらヒントを開く
+            }
+        }
+
+        function showFinalMessage() {
+            document.getElementById('quiz-container').style.display = 'none';
+            const msgDiv = document.getElementById('final-message');
+            msgDiv.style.display = 'block';
+
+            document.getElementById('final-title').innerHTML = stageData.success.title;
+            document.getElementById('final-text').innerHTML = stageData.success.text.replace(/\{name\}/g, playerName).replace(/\{honorific\}/g, honorific);
+
+            if (stageData.success.nextData) {
+                const btn = document.getElementById('btn-go-next');
+                btn.innerText = stageData.success.nextButtonText;
+                btn.style.display = 'inline-block';
+                btn.onclick = () => {
+                    window.location.href = `index.html?name=${encodeURIComponent(playerName)}&data=${stageData.success.nextData}`;
+                };
+                fireBigConfetti();
+            } else {
+                // ラスボス（姫の演出）
+                document.getElementById('btn-go-next').style.display = 'none';
+                fireUltraConfetti();
+            }
+        }
+
+        // --- 紙吹雪（Confetti）アニメーション ---
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let animationId;
+        let ultraMode = false;
+
+        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resizeCanvas); resizeCanvas();
+
+        function createParticle(x, y, isBig) {
+            const colors = ['#f44336', '#e91e63', '#9c27b0', '#2196f3', '#4CAF50', '#FFEB3B', '#FF9800'];
+            return {
+                x: x, y: y, r: (Math.random() * 6 + 4) * (isBig ? 1.5 : 1),
+                dx: Math.random() * 10 - 5, dy: Math.random() * -10 - 5,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                tilt: Math.floor(Math.random() * 10) - 10, tiltAngle: 0, tiltAngleInc: (Math.random() * 0.07) + 0.05
+            };
+        }
+        function fireSmallConfetti() {
+            for (let i = 0; i < 30; i++) particles.push(createParticle(window.innerWidth / 2, window.innerHeight / 2, false));
+            if (!animationId) loop();
+        }
+        function fireBigConfetti() {
+            for (let i = 0; i < 150; i++) particles.push(createParticle(window.innerWidth / 2, window.innerHeight + 20, true));
+            if (!animationId) loop();
+        }
+        function fireUltraConfetti() {
+            ultraMode = true;
+            for (let i = 0; i < 200; i++) particles.push(createParticle(window.innerWidth / 2, window.innerHeight + 20, true));
+            if (!animationId) loop();
+        }
+        function loop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (ultraMode && particles.length < 150) particles.push(createParticle(Math.random() * canvas.width, -20, true));
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.tiltAngle += p.tiltAngleInc;
+                p.y += (Math.cos(p.tiltAngle) + 1 + p.r / 2) / 2;
+                p.x += Math.sin(p.tiltAngle) * 2;
+                p.dy = (ultraMode && p.dy === undefined) ? Math.random() * 2 + 1 : (p.dy || 0) + 0.1;
+                p.y += p.dy;
+                ctx.beginPath(); ctx.lineWidth = p.r; ctx.strokeStyle = p.color;
+                ctx.moveTo(p.x + p.tilt + p.r, p.y); ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r); ctx.stroke();
+            }
+            particles = particles.filter(p => p.y <= canvas.height);
+            if (particles.length > 0 || ultraMode) animationId = requestAnimationFrame(loop);
+            else { animationId = null; ctx.clearRect(0, 0, canvas.width, canvas.height); }
+        }
+    </script>
+</body>
+
+</html>
