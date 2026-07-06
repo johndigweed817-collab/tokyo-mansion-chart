@@ -28,6 +28,63 @@
             color: var(--primary);
             font-size: 1.6rem;
             line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        /* --- ステージナビゲーション --- */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .nav-btn {
+            padding: 8px 16px;
+            font-size: 0.95rem;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            background: #e0e0e0;
+            color: #999;
+            cursor: not-allowed;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .nav-btn.unlocked {
+            background: #fff;
+            color: #333;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn.unlocked:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-btn.active {
+            border-color: var(--secondary);
+            color: var(--secondary);
+            background: #fff8e1;
+        }
+
+        .btn-reset {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            background: #bdbdbd;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.2s;
+        }
+
+        .btn-reset:hover {
+            background: #9e9e9e;
         }
 
         .description {
@@ -86,7 +143,7 @@
             font-style: italic;
             font-weight: bold;
             background: #fafafa;
-            cursor: text;
+            cursor: pointer;
             outline: none;
             transition: 0.2s;
         }
@@ -277,6 +334,14 @@
 <body>
 
     <h1 id="main-title">データ読込中...</h1>
+
+    <div class="nav-container">
+        <button class="nav-btn" id="nav-math-001" onclick="loadStage('math-001')">①仕分け</button>
+        <button class="nav-btn" id="nav-math-002" onclick="loadStage('math-002')">②ミキサー</button>
+        <button class="nav-btn" id="nav-math-003" onclick="loadStage('math-003')">③究極</button>
+        <button class="btn-reset" onclick="resetData()">リセット</button>
+    </div>
+
     <div class="description" id="main-desc">少々お待ちください。</div>
 
     <div id="quiz-container"></div>
@@ -316,18 +381,50 @@
     <canvas id="confetti-canvas"></canvas>
 
     <script>
-        // URLパラメータの取得
-        const urlParams = new URLSearchParams(window.location.search);
-        const playerName = urlParams.get('name') || 'きみ';
-        const honorific = (playerName === 'きみ') ? '' : '君';
-        const dataFile = urlParams.get('data') || 'math-001'; // デフォルトは math-001
+        // --- LocalStorage キー定義 ---
+        const LS_NAME_KEY = 'juiceMaker_name';
+        const LS_CLEARED_KEY = 'juiceMaker_cleared';
+        const LS_CURRENT_KEY = 'juiceMaker_currentData';
 
+        // --- URLパラメータの確認と保存 ---
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.has('name')) localStorage.setItem(LS_NAME_KEY, urlParams.get('name'));
+        const playerName = localStorage.getItem(LS_NAME_KEY) || 'きみ';
+        const honorific = (playerName === 'きみ') ? '' : '君';
+
+        if (urlParams.has('data')) localStorage.setItem(LS_CURRENT_KEY, urlParams.get('data'));
+        const dataFile = localStorage.getItem(LS_CURRENT_KEY) || 'math-001';
+
+        let clearedStages = JSON.parse(localStorage.getItem(LS_CLEARED_KEY) || '[]');
         let stageData = null;
         let activeIdx = null;
         let correctCount = 0;
         let answered = [];
 
-        // JSONデータの読み込み
+        // --- ナビゲーションの更新 ---
+        function updateNav() {
+            const stages = ['math-001', 'math-002', 'math-003'];
+            stages.forEach((stage, index) => {
+                const btn = document.getElementById(`nav-${stage}`);
+                if (!btn) return;
+
+                // 解放条件：最初から、またはクリア済み、または一つ前がクリア済み
+                const isUnlocked = stage === 'math-001' || clearedStages.includes(stage) || (index > 0 && clearedStages.includes(stages[index - 1]));
+
+                if (isUnlocked) {
+                    btn.classList.add('unlocked');
+                    btn.disabled = false;
+                } else {
+                    btn.classList.remove('unlocked');
+                    btn.disabled = true;
+                }
+                if (stage === dataFile) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+        }
+
+        // --- JSONデータの読み込み ---
         fetch(`${dataFile}.json`)
             .then(response => {
                 if (!response.ok) throw new Error("JSON load failed");
@@ -339,12 +436,13 @@
             })
             .catch(err => {
                 document.getElementById('main-title').innerText = "⚠️ エラー";
-                document.getElementById('main-desc').innerText = `データ(${dataFile}.json)が読み込めませんでした。ローカルサーバーで実行しているか確認してください。`;
+                document.getElementById('main-desc').innerHTML = `データ(${dataFile}.json)が読み込めませんでした。<br>ローカルサーバー(Live Server等)で実行しているか確認してください。`;
                 console.error(err);
             });
 
         function initStage() {
-            // テーマカラーやテキストの反映
+            updateNav();
+
             document.documentElement.style.setProperty('--primary', stageData.themeColor);
             document.title = stageData.title.replace('{name}', playerName);
             document.getElementById('main-title').innerHTML = stageData.title.replace('{name}', playerName);
@@ -359,18 +457,36 @@
                 <div class='question-card'>
                     <div class='question-text'>${q.q}</div>
                     <div class='input-area'>
-                        <input type='text' id='ans-${i}' readonly placeholder="タップして入力" onclick='openKeyboard(${i})'>
+                        <input type='text' id='ans-${i}' readonly placeholder="タップで入力" onclick='openKeyboard(${i})'>
                         <button class='btn-check' onclick='checkAnswer(${i})'>答え合わせ</button>
-                        <button class='btn-hint' onclick='toggleHint(${i})'>ヒント</button>
+                        <button class='btn-hint' onclick='toggleHint(${i})'>ヒント💡</button>
                     </div>
                     <div id='hint-${i}' class='hint-container'>${q.h}</div>
                 </div>`;
             });
         }
 
+        // --- ステージの移動とリセット ---
+        function loadStage(stageId) {
+            if (stageId === dataFile) return;
+            localStorage.setItem(LS_CURRENT_KEY, stageId);
+            window.location.href = `edumuse-math.html`; // パラメータなしでリロード
+        }
+
+        function goToNext() {
+            window.location.href = `edumuse-math.html`; // 次のステージがLSに保存されているのでリロードでOK
+        }
+
+        function resetData() {
+            if (confirm("クリア状況をリセットして最初からやり直しますか？")) {
+                localStorage.removeItem(LS_CLEARED_KEY);
+                localStorage.removeItem(LS_CURRENT_KEY);
+                window.location.href = `edumuse-math.html`;
+            }
+        }
+
         // --- キーボードと入力制御 ---
         function openKeyboard(i) {
-            // 以前のアクティブを解除
             document.querySelectorAll('input[type="text"]').forEach(el => el.classList.remove('active'));
             activeIdx = i;
             document.getElementById(`ans-${i}`).classList.add('active');
@@ -412,15 +528,20 @@
                     showFinalMessage();
                 }
             } else {
-                // 間違い演出（揺れる）
                 const inp = document.getElementById(`ans-${i}`);
                 inp.style.animation = 'none';
                 setTimeout(() => { inp.style.animation = 'shake 0.4s ease'; }, 10);
-                setTimeout(() => { toggleHint(i); }, 500); // 間違えたらヒントを開く
+                setTimeout(() => { toggleHint(i); }, 500);
             }
         }
 
         function showFinalMessage() {
+            // --- セーブ機能：クリア状況を記録 ---
+            if (!clearedStages.includes(dataFile)) {
+                clearedStages.push(dataFile);
+                localStorage.setItem(LS_CLEARED_KEY, JSON.stringify(clearedStages));
+            }
+
             document.getElementById('quiz-container').style.display = 'none';
             const msgDiv = document.getElementById('final-message');
             msgDiv.style.display = 'block';
@@ -429,18 +550,18 @@
             document.getElementById('final-text').innerHTML = stageData.success.text.replace(/\{name\}/g, playerName).replace(/\{honorific\}/g, honorific);
 
             if (stageData.success.nextData) {
+                // セーブ機能：次のステージを記録
+                localStorage.setItem(LS_CURRENT_KEY, stageData.success.nextData);
+
                 const btn = document.getElementById('btn-go-next');
                 btn.innerText = stageData.success.nextButtonText;
                 btn.style.display = 'inline-block';
-                btn.onclick = () => {
-                    window.location.href = `edumuse-math.html?name=${encodeURIComponent(playerName)}&data=${stageData.success.nextData}`;
-                };
                 fireBigConfetti();
             } else {
-                // ラスボス（姫の演出）
                 document.getElementById('btn-go-next').style.display = 'none';
                 fireUltraConfetti();
             }
+            updateNav();
         }
 
         // --- 紙吹雪（Confetti）アニメーション ---
