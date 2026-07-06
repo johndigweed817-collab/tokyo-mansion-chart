@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">きみ専用：リンゴとミカン仕分けの仕事！で、苦手な方程式を克服する！</title>
+<style>
+    :root {
+        --primary: #4CAF50;
+        --secondary: #FF9800;
+        --bg: #F0F8FF;
+        --text: #333;
+    }
+    body {
+        font-family: 'Hiragino Maru Gothic ProN', 'Rounded M+ 1c', 'Meiryo', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        color: var(--primary);
+        font-size: 1.8rem;
+    }
+    .description {
+        margin-bottom: 30px;
+        color: #555;
+        line-height: 1.6;
+    }
+    .question-card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 15px auto;
+        max-width: 600px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: left;
+    }
+    .question-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    .input-area {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    input[type="text"] {
+        font-size: 1.2rem;
+        padding: 8px;
+        width: 150px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        text-align: center;
+    }
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+    .btn-check { background-color: var(--primary); color: white; }
+    .btn-check:hover { background-color: #45a049; }
+    .btn-hint { background-color: #e0e0e0; color: #333; }
+    .btn-hint:hover { background-color: #ccc; }
+    .hint-text {
+        display: none;
+        background: #fff3e0;
+        padding: 10px;
+        border-left: 4px solid var(--secondary);
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #d35400;
+        border-radius: 0 6px 6px 0;
+    }
+    .result-mark {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 10px;
+        display: inline-block;
+    }
+    .correct { color: #e74c3c; animation: pop 0.5s ease; }
+    .incorrect { color: #34495e; animation: shake 0.4s ease; }
+    
+    #final-message {
+        display: none;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        margin: 30px auto;
+        max-width: 600px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        border: 4px solid var(--secondary);
+    }
+    #final-message h2 { color: var(--secondary); }
+    .btn-retry {
+        background-color: #3498db;
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px 30px;
+        margin-top: 20px;
+    }
+    .btn-retry:hover { background-color: #2980b9; }
+
+    @keyframes pop {
+        0% { transform: scale(0.5); opacity: 0; }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-10px); }
+        50% { transform: translateX(10px); }
+        75% { transform: translateX(-10px); }
+    }
+
+    #confetti-canvas {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+    }
+</style>
+</head>
+<body>
+
+<h1 id="main-title">🚀 きみ専用！リンゴとミカン仕分けの仕事！クエスト</h1>
+<p class="description">
+    xは「リンゴ」、yは「ミカン」だよ。<br>
+    同じ果物同士はまとめられるけど、違う果物は混ざらない！<br>
+    箱の中を整理整頓するゲームだと思ってやってみよう。
+</p>
+
+<div id="quiz-container"></div>
+
+<div id="final-message">
+    <h2 id="final-title"></h2>
+    <p id="final-text"></p>
+    <button class="btn-retry" onclick="resetQuiz()">もう一度挑戦する！</button>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+
+    // --- GETパラメータから名前を取得する処理 ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const playerName = urlParams.get('name') || 'きみ';
+    
+    // 「きみ」の場合は敬称を外し、それ以外は「君」をつける
+    const honorific = (playerName === 'きみ') ? '' : '君';
+
+    // 画面の表示名を更新
+    document.getElementById('page-title').innerText = `${playerName}専用：リンゴとミカン仕分けの仕事！で、苦手な方程式を克服する！`;
+    document.getElementById('main-title').innerText = `🚀 ${playerName}専用！リンゴとミカン仕分けの仕事！クエスト`;
+
+    const questions = [
+        { q: "3x + 2x", a: ["5x"], hint: "xをリンゴだと思ってみよう。リンゴ3個とリンゴ2個を合わせると全部で何個？" },
+        { q: "4x + 3y + 2x", a: ["6x+3y", "3y+6x"], hint: "リンゴ(x)はリンゴ同士でまとめよう。ミカン(y)はそのまま横に置いておくよ。" },
+        { q: "5x - 2x + 4y", a: ["3x+4y", "4y+3x"], hint: "リンゴ5個から2個減ったね。ミカンはそのまま！" },
+        { q: "2a + 5b + 3a - b", a: ["5a+4b", "4b+5a"], hint: "今回はaがリンゴ、bがミカンだよ。-bは「ミカンが1個減る(-1b)」ってことだよ。" },
+        { q: "x + y + x + y", a: ["2x+2y", "2y+2x"], hint: "xだけの時は「1x」のこと。目には見えないけど、1が隠れているんだ！" },
+        { q: "6x - 3x + 2y - 2y", a: ["3x"], hint: "ミカン(y)は2個から2個引かれるから…0個！0個になったら文字ごと書かなくてOKだよ。" },
+        { q: "-2x + 5y + 4x - y", a: ["2x+4y", "4y+2x"], hint: "マイナスは「借金」や「足りない」状態。-2個に4個足すとどうなるかな？" },
+        { q: "3a - 4b - a + 6b", a: ["2a+2b", "2b+2a"], hint: "-aは「-1a」のことだよ。aチームとbチーム、それぞれ計算してみよう。" },
+        { q: "x - 3y - 2x - y", a: ["-x-4y", "-4y-x", "-1x-4y", "-4y-1x"], hint: "x - 2x と -3y - y の計算だよ。マイナスの数に気をつけて！" },
+        { q: "2x + 3y - 2x - 3y", a: ["0"], hint: "リンゴもミカンも全部なくなっちゃったら、文字は消えて数字の「0」だけでOK！" }
+    ];
+
+    let correctCount = 0;
+    let answered = new Array(questions.length).fill(false);
+
+    function initQuiz() {
+        const container = document.getElementById("quiz-container");
+        container.innerHTML = "";
+        
+        questions.forEach((item, index) => {
+            const card = document.createElement("div");
+            card.className = "question-card";
+            card.innerHTML = `
+                <div class="question-text">${item.q}</div>
+                <div class="input-area">
+                    <input type="text" id="ans-${index}" placeholder="答えを入力" autocomplete="off">
+                    <button class="btn-check" onclick="checkAnswer(${index})">答え合わせ</button>
+                    <button class="btn-hint" onclick="toggleHint(${index})">ヒント💡</button>
+                </div>
+                <span id="mark-${index}" class="result-mark"></span>
+                <div id="hint-${index}" class="hint-text">${item.hint}</div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    window.toggleHint = function(index) {
+        const hintDiv = document.getElementById(`hint-${index}`);
+        hintDiv.style.display = hintDiv.style.display === "block" ? "none" : "block";
+    };
+
+    window.checkAnswer = function(index) {
+        if (answered[index]) return;
+
+        const input = document.getElementById(`ans-${index}`).value;
+        const normalizedInput = input.replace(/\\s+/g, "").toLowerCase();
+        const mark = document.getElementById(`mark-${index}`);
+        
+        let isCorrect = false;
+        for (let ans of questions[index].a) {
+            if (normalizedInput === ans.toLowerCase()) {
+                isCorrect = true;
+                break;
+            }
+        }
+
+        if (isCorrect) {
+            mark.textContent = "⭕️ 素晴らしい！";
+            mark.className = "result-mark correct";
+            answered[index] = true;
+            correctCount++;
+            fireSmallConfetti();
+            document.getElementById(`ans-${index}`).disabled = true;
+            checkAllComplete();
+        } else {
+            mark.textContent = "❌ おっと！ヒントを見てみよう";
+            mark.className = "result-mark incorrect";
+            mark.style.animation = 'none';
+            setTimeout(() => mark.style.animation = '', 10);
+        }
+    };
+
+    function checkAllComplete() {
+        if (correctCount === questions.length) {
+            document.getElementById("quiz-container").style.display = "none";
+            const finalMsg = document.getElementById("final-message");
+            finalMsg.style.display = "block";
+            
+            document.getElementById("final-title").innerText = "🎉 全問クリア！おめでとう！ 🎉";
+            // 最後のメッセージにも名前と敬称を反映
+            document.getElementById("final-text").innerHTML = `
+                ${playerName}${honorific}、すごい！！<br>
+                最初は「なんだこれ？」って思っていた文字の計算も、<br>
+                実は「リンゴとミカンを分けるだけ」って脳が気付けた証拠だよ。<br><br>
+                これで脳の配線が新しく繋がったから、もう学校のプリントを見ても<br>
+                「うわっ」てならずに「はいはい、仕分けね」って思えるはず！<br>
+                本当によく頑張ったね！
+            `;
+            
+            fireBigConfetti();
+        }
+    }
+
+    window.resetQuiz = function() {
+        correctCount = 0;
+        answered = new Array(questions.length).fill(false);
+        document.getElementById("quiz-container").style.display = "block";
+        document.getElementById("final-message").style.display = "none";
+        clearConfetti();
+        initQuiz();
+    };
+
+    // --- 紙吹雪（Confetti）演出 ---
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animationId;
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function createParticle(x, y, isBig) {
+        const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50', '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800', '#FF5722'];
+        return {
+            x: x,
+            y: y,
+            r: (Math.random() * 6 + 4) * (isBig ? 1.5 : 1),
+            dx: Math.random() * 10 - 5,
+            dy: Math.random() * -10 - 5,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            tilt: Math.floor(Math.random() * 10) - 10,
+            tiltAngle: 0,
+            tiltAngleInc: (Math.random() * 0.07) + 0.05
+        };
+    }
+
+    function fireSmallConfetti() {
+        for (let i = 0; i < 30; i++) {
+            particles.push(createParticle(window.innerWidth / 2, window.innerHeight / 2, false));
+        }
+        if (!animationId) loop();
+    }
+
+    function fireBigConfetti() {
+        for (let i = 0; i < 200; i++) {
+            particles.push(createParticle(window.innerWidth / 2, window.innerHeight + 20, true));
+        }
+        if (!animationId) loop();
+    }
+
+    function clearConfetti() {
+        particles = [];
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if(animationId) {
+            cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+    }
+
+    function loop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        let active = false;
+        for (let i = 0; i < particles.length; i++) {
+            let p = particles[i];
+            p.tiltAngle += p.tiltAngleInc;
+            p.y += (Math.cos(p.tiltAngle) + 1 + p.r / 2) / 2;
+            p.x += Math.sin(p.tiltAngle) * 2;
+            p.dy += 0.1; 
+            p.y += p.dy;
+            
+            if (p.y <= canvas.height) active = true;
+
+            ctx.beginPath();
+            ctx.lineWidth = p.r;
+            ctx.strokeStyle = p.color;
+            ctx.moveTo(p.x + p.tilt + p.r, p.y);
+            ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r);
+            ctx.stroke();
+        }
+        
+        particles = particles.filter(p => p.y <= canvas.height);
+
+        if (particles.length > 0) {
+            animationId = requestAnimationFrame(loop);
+        } else {
+            animationId = null;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    }
+
+    initQuiz();
+});
+</script>
+</body>
+</html>
