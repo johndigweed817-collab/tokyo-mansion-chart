@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>令和8年度 1学年 夏休みの宿題チェックリスト</title>
+  <style>
+    :root {
+      --primary-color: #2b5c8f;
+      --accent-color: #e67e22;
+      --bg-color: #f4f7f9;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --border-color: #e1e8ed;
+      --completed-color: #888888;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", MeiRyo, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), #1e3c72);
+      color: white;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .progress-container {
+      background-color: var(--card-bg);
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+
+    .progress-bar-bg {
+      background-color: var(--border-color);
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-bar-fill {
+      background-color: #27ae60;
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .subject-card {
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .subject-title {
+      font-size: 18px;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .todo-item:last-child {
+      border-bottom: none;
+    }
+
+    .todo-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+      margin-top: 3px;
+      cursor: pointer;
+      accent-color: var(--primary-color);
+    }
+
+    .todo-content {
+      flex: 1;
+    }
+
+    .todo-label {
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .todo-details {
+      font-size: 13px;
+      color: #666;
+      margin-top: 3px;
+    }
+
+    .badge-date {
+      display: inline-block;
+      background-color: #fff3cd;
+      color: #856404;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 4px;
+      border: 1px solid #ffeeba;
+    }
+
+    .badge-urgent {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .completed .todo-label {
+      text-decoration: line-through;
+      color: var(--completed-color);
+    }
+
+    .completed .todo-details {
+      color: #bbb;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .btn-reset {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .btn-reset:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>令和8年度 1学年 夏休みの宿題チェックリスト</h1>
+    <p>チェックを入れると自動で状態が保存されます（ブラウザ内保存）。</p>
+  </header>
+
+  <div class="progress-container">
+    <div style="display: flex; justify-content: space-between; font-weight: bold;">
+      <span>全体進捗状況</span>
+      <span id="progress-text">0 / 0 (0%)</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- 国語 -->
+  <div class="subject-card">
+    <div class="subject-title">📕 国語</div>
+    
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="jp-1">
+      <div class="todo-content">
+        <label class="todo-label" for="jp-1">① ビブリオバトル用本の選定</label>
+        <div class="todo-details">ピンクの別紙プリントに記入して提出</div>
+        <span class="badge-date">提出日：9/1(火)</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="jp-2">
+      <div class="todo-content">
+        <label class="todo-label" for="jp-2">② 漢字練習</label>
+        <div class="todo-details">『漢字の反復練習』P.22〜25</div>
+        <span class="badge-date">2学期最初の授業で30問テスト実施（提出なし）</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="jp-3">
+      <div class="todo-content">
+        <label class="todo-label" for="jp-3">③ 文法の復習（自主勉強）</label>
+        <div class="todo-details">ワーク P.48〜50を解いて復習（提出なし）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 数学 -->
+  <div class="subject-card">
+    <div class="subject-title">📐 数学</div>
+    
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="math-1">
+      <div class="todo-content">
+        <label class="todo-label" for="math-1">① サマースクール</label>
+        <div class="todo-details">全ページ解答・丸付け・直しまで実施。※右ページも評価対象。※本体のみ提出（ガイド・解答等は提出不要）</div>
+        <span class="badge-date">提出日：2学期最初の授業</span>
+        <span class="badge-date">確認テスト：2学期最初の授業</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="math-2">
+      <div class="todo-content">
+        <label class="todo-label" for="math-2">② 2章単元テストの勉強</label>
+        <div class="todo-details">教科書、COM-PASSで2章の内容を勉強する</div>
+        <span class="badge-date">単元テスト：9/8(火)の授業</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 社会 -->
+  <div class="subject-card">
+    <div class="subject-title">🌍 社会</div>
+    
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="soc-1">
+      <div class="todo-content">
+        <label class="todo-label" for="soc-1">歴史プリント 2・3・4</label>
+        <div class="todo-details">中間考査に向けての準備（提出なし）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 理科 -->
+  <div class="subject-card">
+    <div class="subject-title">🧪 理科</div>
+    
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="sci-1">
+      <div class="todo-content">
+        <label class="todo-label" for="sci-1">① 植物・動物カードの作成</label>
+        <div class="todo-details">詳細は別途配布プリントを参照</div>
+        <span class="badge-date">提出日：9/1(火)</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="sci-2">
+      <div class="todo-content">
+        <label class="todo-label" for="sci-2">② 中間考査の勉強</label>
+        <div class="todo-details">小テストの解きなおしなど（クラスルームの過去問等活用）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 英語 -->
+  <div class="subject-card">
+    <div class="subject-title">🔤 英語</div>
+    
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="eng-1">
+      <div class="todo-content">
+        <label class="todo-label" for="eng-1">① 語順トレーニング</label>
+        <div class="todo-details">p.2〜13（丸付け・直しまで）</div>
+        <span class="badge-date">提出＆テスト：2学期初回授業</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="eng-2">
+      <div class="todo-content">
+        <label class="todo-label" for="eng-2">② ライティングノート</label>
+        <div class="todo-details">101〜200まで（100文）</div>
+        <span class="badge-date">提出日：初回授業</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="eng-3">
+      <div class="todo-content">
+        <label class="todo-label" for="eng-3">③ 語句練習「夏休み編」</label>
+        <div class="todo-details">復習とテスト対策</div>
+        <span class="badge-date">テスト：2学期2回目の授業</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="eng-4">
+      <div class="todo-content">
+        <label class="todo-label" for="eng-4">④ 中間考査の勉強</label>
+        <div class="todo-details">ジョイフルワークなどを自主的に進めておく</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 音楽 -->
+  <div class="subject-card">
+    <div class="subject-title">🎵 音楽</div>
+    
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="mus-1">
+      <div class="todo-content">
+        <label class="todo-label" for="mus-1">① レポート作成「クラス合唱成功の秘訣」</label>
+        <div class="todo-details">合唱や歌のコツ、課題曲・自由曲のポイント等を本やネットで調べて作成</div>
+        <span class="badge-date">提出日：9/1(火) 始業式（音楽係が集金・回収）</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="mus-2">
+      <div class="todo-content">
+        <label class="todo-label" for="mus-2">② 歌詞の暗記</label>
+        <div class="todo-details">課題曲・自由曲の歌詞を自然に歌えるように覚える</div>
+        <span class="badge-date">歌詞テスト（筆記穴埋め）：夏休み明け1回目授業</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 校外学習 -->
+  <div class="subject-card">
+    <div class="subject-title">🚌 校外学習の宿題</div>
+    
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="trip-1">
+      <div class="todo-content">
+        <label class="todo-label" for="trip-1">事前学習「ガイドブックを作ろう」</label>
+        <div class="todo-details">※別途資料配布</div>
+        <span class="badge-date badge-urgent">提出期限：8/14(金)までにクラスルーム提出</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 学年共通 -->
+  <div class="subject-card">
+    <div class="subject-title">🏫 学年共通</div>
+    
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="com-1">
+      <div class="todo-content">
+        <label class="todo-label" for="com-1">① 社会を明るくする運動作文</label>
+        <div class="todo-details">原稿用紙 400字詰め 3〜5枚（右上ホチキス留め）</div>
+        <span class="badge-date">提出日：9/1(火) 始業式</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="com-2">
+      <div class="todo-content">
+        <label class="todo-label" for="com-2">② 上履きを洗う</label>
+        <div class="todo-details">消えそうな名前の書き直し・記入を確認</div>
+        <span class="badge-date">提出日：9/1(火) 始業式持参</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="com-3">
+      <div class="todo-content">
+        <label class="todo-label" for="com-3">③ 「心の健康観察」アンケート回答</label>
+        <div class="todo-details">8/24配信の全校生徒クラスルームから回答</div>
+        <span class="badge-date badge-urgent">回答期限：8/30(日)まで</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <button class="btn-reset" id="reset-btn">チェックをすべてリセット</button>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkboxes = document.querySelectorAll('.save-state');
+      const progressText = document.getElementById('progress-text');
+      const progressFill = document.getElementById('progress-fill');
+      const resetBtn = document.getElementById('reset-btn');
+
+      // 進捗状況を更新する関数
+      function updateProgress() {
+        const total = checkboxes.length;
+        let checkedCount = 0;
+
+        checkboxes.forEach(cb => {
+          if (cb.checked) checkedCount++;
+        });
+
+        const percent = Math.round((checkedCount / total) * 100);
+        progressText.textContent = `${checkedCount} / ${total} (${percent}%)`;
+        progressFill.style.width = `${percent}%`;
+      }
+
+      // 各チェックボックスの初期化とイベント設定
+      checkboxes.forEach(checkbox => {
+        const id = checkbox.id;
+        const savedState = localStorage.getItem('homework_' + id);
+
+        if (savedState === 'true') {
+          checkbox.checked = true;
+          checkbox.closest('.todo-item').classList.add('completed');
+        }
+
+        checkbox.addEventListener('change', (e) => {
+          const isChecked = e.target.checked;
+          localStorage.setItem('homework_' + id, isChecked);
+
+          if (isChecked) {
+            e.target.closest('.todo-item').classList.add('completed');
+          } else {
+            e.target.closest('.todo-item').classList.remove('completed');
+          }
+
+          updateProgress();
+        });
+      });
+
+      // リセットボタン
+      resetBtn.addEventListener('click', () => {
+        if (confirm('すべてのチェックをクリアしてもよろしいですか？')) {
+          checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+            checkbox.closest('.todo-item').classList.remove('completed');
+            localStorage.removeItem('homework_' + checkbox.id);
+          });
+          updateProgress();
+        }
+      });
+
+      // 初回進捗計算
+      updateProgress();
+    });
+  </script>
+</body>
+</html>
