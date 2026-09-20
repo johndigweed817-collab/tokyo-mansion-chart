@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新規のお客様向け予約ページ | 常連客づくりCRM モック</title>
+<style>
+  :root {
+    --espresso: #2A211C;
+    --espresso2: #4A3B30;
+    --caramel: #C08552;
+    --gold: #D4AF37;
+    --cream: #F3ECE2;
+    --muted: #8A7C6E;
+    --muted-d: #6B5A48;
+    --white: #FFFFFF;
+    --lightcard: #F7F3EE;
+    --border: #ECE3D8;
+    --warn: #B85042;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif; background: var(--lightcard); }
+  a { color: var(--caramel); }
+  a:hover { color: var(--espresso2); }
+
+  .page { width: 100%; min-height: 100vh; background: var(--lightcard); }
+
+  .hero { background: linear-gradient(135deg, var(--espresso), var(--espresso2)); color: var(--cream); padding: 34px 40px; }
+  .back-link { display: inline-block; font-size: 12px; color: #C9BEB2; margin-bottom: 14px; }
+  .back-link:hover { color: var(--gold); }
+  .hero-eyebrow { font-size: 12px; letter-spacing: 2.5px; color: var(--gold); font-weight: 800; margin-bottom: 10px; }
+  .hero-title { font-size: 28px; font-weight: 800; color: var(--white); }
+  .hero-sub { font-size: 13px; color: #C9BEB2; margin-top: 8px; }
+
+  .content { display: flex; gap: 26px; padding: 28px 40px 40px; flex-wrap: wrap; max-width: 1140px; margin: 0 auto; }
+  .book-card { flex: 1.5 1 420px; background: var(--white); border-radius: 20px; padding: 32px 34px; box-shadow: 0 6px 22px rgba(42,33,28,0.07); }
+  .info-card { flex: 1 1 260px; background: var(--white); border-radius: 20px; padding: 26px; box-shadow: 0 6px 22px rgba(42,33,28,0.07); height: fit-content; }
+
+  .step-label { font-size: 12.5px; font-weight: 800; color: var(--muted-d); letter-spacing: 0.4px; margin-bottom: 12px; }
+  .step-block { margin-bottom: 26px; }
+  .chip-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .date-chip { min-width: 78px; text-align: center; padding: 12px 6px; border-radius: 12px; background: var(--lightcard); font-size: 13px; color: var(--muted-d); font-weight: 700; cursor: pointer; border: 2px solid transparent; }
+  .date-chip.selected { background: var(--espresso); color: var(--white); }
+  .time-chip { padding: 12px 20px; border-radius: 12px; background: var(--lightcard); font-size: 13.5px; color: var(--espresso); font-weight: 700; cursor: pointer; border: 2px solid transparent; }
+  .time-chip.selected { background: var(--caramel); color: var(--white); }
+
+  .field-row { display: flex; gap: 16px; }
+  .field { flex: 1; display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+  .field label { font-size: 12.5px; font-weight: 700; color: var(--muted-d); }
+  .field input { border: 1.5px solid var(--border); border-radius: 10px; padding: 12px 14px; font-size: 14px; font-family: inherit; color: var(--espresso); background: var(--lightcard); }
+  .field input:focus { outline: none; border-color: var(--caramel); background: var(--white); }
+  .field-error { font-size: 11.5px; color: var(--warn); }
+
+  .contact-tabs { display: inline-flex; background: var(--lightcard); border-radius: 10px; padding: 4px; gap: 4px; margin-bottom: 12px; }
+  .contact-tab { padding: 8px 16px; border-radius: 7px; font-size: 12.5px; font-weight: 700; color: var(--muted-d); cursor: pointer; }
+  .contact-tab.active { background: var(--espresso); color: var(--white); }
+
+  .submit-btn { background: var(--gold); color: var(--espresso); font-weight: 800; font-size: 14.5px; padding: 15px; border-radius: 12px; text-align: center; cursor: pointer; border: none; width: 100%; font-family: inherit; margin-top: 6px; }
+
+  .info-photo { height: 130px; border-radius: 14px; background: linear-gradient(160deg, #D9C4B0, #8A5A34); margin-bottom: 18px; }
+  .info-name { font-size: 17px; font-weight: 800; color: var(--espresso); margin-bottom: 10px; }
+  .info-row { font-size: 12.5px; color: var(--muted-d); line-height: 1.8; margin-bottom: 4px; }
+  .info-note { font-size: 11px; color: var(--muted); margin-top: 14px; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 12px; }
+
+  .confirm-box { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 60px 20px; gap: 16px; }
+  .confirm-ic { width: 66px; height: 66px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; color: var(--espresso); }
+  .confirm-title { font-size: 19px; font-weight: 800; color: var(--espresso); }
+  .confirm-sub { font-size: 13.5px; color: var(--muted-d); line-height: 1.7; }
+  .confirm-again { color: var(--caramel); font-size: 13px; font-weight: 700; cursor: pointer; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <a class="back-link" href="index.html">&larr; モック一覧に戻る</a>
+    <div class="hero-eyebrow">ONLINE RESERVATION</div>
+    <div class="hero-title">ご来店のご予約はこちら</div>
+    <div class="hero-sub">初めてのお客様も、会員登録なしでご予約いただけます。</div>
+  </div>
+
+  <div class="content">
+    <div class="book-card">
+      <div id="confirm-view" style="display:none">
+        <div class="confirm-box">
+          <div class="confirm-ic">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5 11-11"></path></svg>
+          </div>
+          <div class="confirm-title">ご予約ありがとうございます</div>
+          <div class="confirm-sub" id="confirm-summary"></div>
+          <div class="confirm-again" id="btn-reset">別の日時で予約し直す</div>
+        </div>
+      </div>
+
+      <div id="form-view">
+        <div class="step-block">
+          <div class="step-label">STEP 1 ・ 来店日を選択</div>
+          <div class="chip-row" id="date-chips"></div>
+        </div>
+
+        <div class="step-block">
+          <div class="step-label">STEP 2 ・ 時間帯を選択</div>
+          <div class="chip-row" id="time-chips"></div>
+        </div>
+
+        <div class="step-block">
+          <div class="step-label">STEP 3 ・ お客様情報</div>
+          <div class="field">
+            <label>お名前</label>
+            <input type="text" id="input-name" placeholder="山田 花子">
+            <div class="field-error" id="error-name" style="display:none">お名前を入力してください</div>
+          </div>
+
+          <div class="contact-tabs">
+            <div class="contact-tab active" id="tab-phone">電話番号で連絡</div>
+            <div class="contact-tab" id="tab-email">メールアドレスで連絡</div>
+          </div>
+          <div class="field">
+            <label id="contact-label">電話番号</label>
+            <input type="tel" id="input-contact" placeholder="090-1234-5678">
+            <div class="field-error" id="error-contact" style="display:none"></div>
+          </div>
+        </div>
+
+        <div class="submit-btn" id="btn-submit">この内容で予約する</div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-photo"></div>
+      <div class="info-name">HAIR SALON TOKI</div>
+      <div class="info-row">営業時間 10:00 - 19:00(火曜定休)</div>
+      <div class="info-row">ご予約後、担当スタッフより確認のご連絡をする場合がございます。</div>
+      <div class="info-note">※ 住所・営業時間・写真はサンプル表示です。本番導入時に店舗情報を設定します。</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var DATES = ['9/15(火)', '9/16(水)', '9/17(木)', '9/18(金)', '9/19(土)', '9/20(日)', '9/22(火)'];
+  var TIMES = ['10:00', '11:30', '13:00', '15:00', '16:30', '18:00'];
+
+  var state = {
+    selectedDate: 0,
+    selectedTime: 0,
+    name: '',
+    contactMethod: 'phone',
+    phoneValue: '',
+    emailValue: '',
+    validated: false,
+    confirmed: false,
+  };
+
+  function contactValue() { return state.contactMethod === 'phone' ? state.phoneValue : state.emailValue; }
+  function contactLabel() { return state.contactMethod === 'phone' ? '電話番号' : 'メールアドレス'; }
+
+  function renderChips() {
+    document.getElementById('date-chips').innerHTML = DATES.map(function (label, i) {
+      return '<div class="date-chip' + (i === state.selectedDate ? ' selected' : '') + '" data-i="' + i + '">' + label + '</div>';
+    }).join('');
+    document.getElementById('time-chips').innerHTML = TIMES.map(function (label, i) {
+      return '<div class="time-chip' + (i === state.selectedTime ? ' selected' : '') + '" data-i="' + i + '">' + label + '</div>';
+    }).join('');
+    document.querySelectorAll('#date-chips .date-chip').forEach(function (el) {
+      el.addEventListener('click', function () { state.selectedDate = Number(el.getAttribute('data-i')); render(); });
+    });
+    document.querySelectorAll('#time-chips .time-chip').forEach(function (el) {
+      el.addEventListener('click', function () { state.selectedTime = Number(el.getAttribute('data-i')); render(); });
+    });
+  }
+
+  function renderContactTabs() {
+    document.getElementById('tab-phone').classList.toggle('active', state.contactMethod === 'phone');
+    document.getElementById('tab-email').classList.toggle('active', state.contactMethod === 'email');
+    document.getElementById('contact-label').textContent = contactLabel();
+    var input = document.getElementById('input-contact');
+    input.type = state.contactMethod === 'phone' ? 'tel' : 'email';
+    input.placeholder = state.contactMethod === 'phone' ? '090-1234-5678' : 'you@example.com';
+    input.value = contactValue();
+  }
+
+  function renderErrors() {
+    var nameErr = state.validated && state.name.trim() === '';
+    var contactErr = state.validated && contactValue().trim() === '';
+    document.getElementById('error-name').style.display = nameErr ? 'block' : 'none';
+    var ce = document.getElementById('error-contact');
+    ce.style.display = contactErr ? 'block' : 'none';
+    ce.textContent = contactLabel() + 'を入力してください';
+  }
+
+  function render() {
+    if (state.confirmed) {
+      document.getElementById('confirm-view').style.display = 'block';
+      document.getElementById('form-view').style.display = 'none';
+      var name = state.name || 'お客様';
+      document.getElementById('confirm-summary').innerHTML =
+        DATES[state.selectedDate] + ' ' + TIMES[state.selectedTime] + ' に、' + name + ' 様のご予約を承りました。<br>初めてのご来店を、スタッフ一同お待ちしております。';
+      return;
+    }
+    document.getElementById('confirm-view').style.display = 'none';
+    document.getElementById('form-view').style.display = 'block';
+    document.getElementById('input-name').value = state.name;
+    renderChips();
+    renderContactTabs();
+    renderErrors();
+  }
+
+  document.getElementById('input-name').addEventListener('input', function (e) { state.name = e.target.value; });
+  document.getElementById('input-contact').addEventListener('input', function (e) {
+    if (state.contactMethod === 'phone') state.phoneValue = e.target.value;
+    else state.emailValue = e.target.value;
+  });
+  document.getElementById('tab-phone').addEventListener('click', function () { state.contactMethod = 'phone'; render(); });
+  document.getElementById('tab-email').addEventListener('click', function () { state.contactMethod = 'email'; render(); });
+  document.getElementById('btn-submit').addEventListener('click', function () {
+    if (state.name.trim() === '' || contactValue().trim() === '') {
+      state.validated = true;
+      render();
+      return;
+    }
+    state.confirmed = true;
+    render();
+  });
+  document.getElementById('btn-reset').addEventListener('click', function () {
+    state = { selectedDate: state.selectedDate, selectedTime: state.selectedTime, name: '', contactMethod: 'phone', phoneValue: '', emailValue: '', validated: false, confirmed: false };
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スニーカーのサイドマークから読む、ブランド戦争の100年</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1714;
+  --ink2: #3d3a36;
+  --ink3: #7a756e;
+  --paper: #f7f4ef;
+  --paper2: #ede9e2;
+  --paper3: #e2ddd5;
+  --accent: #c0392b;
+  --accent2: #e67e22;
+  --blue: #2563a8;
+  --green: #1a6b4a;
+  --serif: 'Noto Serif JP', serif;
+  --sans: 'Noto Sans JP', sans-serif;
+  --mono: 'DM Mono', monospace;
+  --max: 720px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--serif);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.9;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── COVER ── */
+.cover {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 64px;
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.cover-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 70% 40%, #2a1f14 0%, #0f0d0b 100%);
+}
+
+/* decorative swoosh-like strokes */
+.cover-deco {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.cover-deco svg { width: 100%; height: 100%; }
+
+.cover-inner {
+  position: relative; z-index: 2;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+}
+
+.cover-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b8a990;
+  margin-bottom: 24px;
+}
+
+.cover-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  color: #f0ebe3;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.cover-title em {
+  font-style: normal;
+  color: #e8a87c;
+  display: block;
+}
+
+.cover-sub {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: #9a9088;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+
+.cover-meta {
+  display: flex; gap: 24px; align-items: center;
+  font-family: var(--mono); font-size: 11px; color: #6a6058;
+  letter-spacing: 0.05em;
+}
+.cover-meta span::before { content: '—'; margin-right: 8px; }
+
+/* ── BODY LAYOUT ── */
+.article {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 32px 120px;
+}
+
+/* ── SECTION DIVIDER ── */
+.chapter {
+  margin-bottom: 80px;
+}
+
+.chapter-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 6px;
+}
+
+.chapter-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1.5px solid var(--paper3);
+}
+
+/* ── PROSE ── */
+p {
+  margin-bottom: 20px;
+  color: var(--ink2);
+  font-size: 17px;
+  line-height: 1.95;
+}
+
+strong { font-weight: 700; color: var(--ink); }
+
+/* ── PULL QUOTE ── */
+.pullquote {
+  margin: 40px 0;
+  padding: 24px 32px;
+  border-left: 3px solid var(--accent);
+  background: var(--paper2);
+  border-radius: 0 8px 8px 0;
+}
+.pullquote p {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── BRAND TABLE ── */
+.brand-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 14px;
+  font-family: var(--sans);
+}
+.brand-table th {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  font-weight: 500;
+  padding: 10px 14px;
+  border-bottom: 1.5px solid var(--paper3);
+  text-align: left;
+}
+.brand-table td {
+  padding: 12px 14px;
+  border-bottom: 0.5px solid var(--paper3);
+  color: var(--ink2);
+  vertical-align: top;
+  line-height: 1.55;
+}
+.brand-table tr:last-child td { border-bottom: none; }
+.brand-table .brand-name-cell { font-weight: 700; color: var(--ink); white-space: nowrap; }
+.brand-table .mark-cell { font-weight: 500; color: var(--blue); }
+
+/* ── TAG PILL ── */
+.tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+.tag-func   { background: #dbeafe; color: #1e40af; }
+.tag-sym    { background: #ede9fe; color: #4c1d95; }
+.tag-let    { background: #dcfce7; color: #14532d; }
+.tag-cult   { background: #fef3c7; color: #78350f; }
+.tag-lux    { background: #fee2e2; color: #7f1d1d; }
+.tag-meta   { background: #f0fdf4; color: #166534; }
+
+/* ── TIMELINE ── */
+.timeline { position: relative; padding-left: 28px; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 6px; top: 8px; bottom: 8px;
+  width: 1px; background: var(--paper3);
+}
+.tl-item { position: relative; margin-bottom: 28px; }
+.tl-dot {
+  position: absolute; left: -28px; top: 6px;
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid var(--paper);
+}
+.tl-year {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--ink3); letter-spacing: 0.08em;
+  margin-bottom: 3px;
+}
+.tl-brand { font-weight: 700; font-family: var(--sans); font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+.tl-mark  { font-size: 13px; color: var(--blue); font-family: var(--sans); margin-bottom: 6px; font-weight: 500; }
+.tl-desc  { font-size: 15px; line-height: 1.7; color: var(--ink2); font-family: var(--sans); }
+
+/* ── INSIGHT BOXES ── */
+.insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 32px 0; }
+.insight-card {
+  padding: 18px 20px;
+  background: var(--paper2);
+  border-radius: 10px;
+  border: 0.5px solid var(--paper3);
+}
+.insight-label {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink3); margin-bottom: 8px;
+}
+.insight-text {
+  font-family: var(--sans); font-size: 14px;
+  color: var(--ink2); line-height: 1.65;
+  margin: 0;
+}
+
+/* ── 5 TYPE GRID ── */
+.type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 32px 0; }
+.type-card {
+  border: 0.5px solid var(--paper3);
+  border-radius: 10px; overflow: hidden;
+}
+.type-head {
+  padding: 12px 16px 10px;
+  border-bottom: 0.5px solid var(--paper3);
+  background: var(--paper2);
+}
+.type-name  { font-size: 14px; font-weight: 700; font-family: var(--sans); color: var(--ink); }
+.type-sub   { font-size: 11px; color: var(--ink3); font-family: var(--mono); margin-top: 2px; }
+.type-body  { padding: 12px 16px; }
+.type-brands { font-size: 13px; font-weight: 500; font-family: var(--sans); color: var(--ink); margin-bottom: 5px; }
+.type-desc  { font-size: 13px; font-family: var(--sans); color: var(--ink2); line-height: 1.6; }
+
+/* ── MARKET TABLE ── */
+.market-row {
+  display: grid; grid-template-columns: 1fr 50px 1fr;
+  border-bottom: 0.5px solid var(--paper3);
+  font-family: var(--sans); font-size: 14px;
+}
+.market-row:last-child { border-bottom: none; }
+.market-row.header {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink3); font-weight: 500;
+  background: var(--paper2); border-bottom: 1.5px solid var(--paper3);
+}
+.mc { padding: 12px 14px; color: var(--ink2); line-height: 1.5; }
+.mc-r { border-right: 0.5px solid var(--paper3); }
+.mc-mid {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--paper2); border-right: 0.5px solid var(--paper3);
+  font-size: 10px; color: var(--ink3);
+}
+.mc-strong { color: var(--ink); font-weight: 700; }
+.up   { color: var(--green); font-weight: 700; }
+.down { color: var(--accent); font-weight: 700; }
+.flat { color: var(--accent2); font-weight: 700; }
+
+.market-wrap {
+  border: 0.5px solid var(--paper3);
+  border-radius: 10px; overflow: hidden;
+  margin: 28px 0;
+}
+
+/* ── VERDICT CARDS ── */
+.verdict-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 32px 0; }
+.verdict-card {
+  border-radius: 10px; overflow: hidden;
+  border: 0.5px solid var(--paper3);
+}
+.verdict-head { padding: 10px 14px; border-bottom: 0.5px solid var(--paper3); }
+.verdict-q    { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; margin-bottom: 5px; }
+.verdict-a    { font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.3; }
+.verdict-body { padding: 10px 14px; font-family: var(--sans); font-size: 12px; color: var(--ink2); line-height: 1.6; }
+.v-no  .verdict-q { color: var(--accent); }
+.v-ok  .verdict-q { color: var(--accent2); }
+.v-yes .verdict-q { color: var(--green); }
+
+/* ── CHALLENGER CARDS ── */
+.challenger-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 28px 0; }
+.ch-card { border: 0.5px solid var(--paper3); border-radius: 10px; padding: 16px; }
+.ch-name { font-size: 15px; font-weight: 700; font-family: var(--sans); color: var(--ink); }
+.ch-origin { font-family: var(--mono); font-size: 10px; color: var(--ink3); margin: 3px 0 10px; }
+.ch-kpi { font-size: 24px; font-weight: 700; font-family: var(--sans); margin-bottom: 2px; }
+.ch-kpi-label { font-size: 11px; color: var(--ink3); margin-bottom: 10px; }
+.ch-desc { font-size: 13px; color: var(--ink2); line-height: 1.6; font-family: var(--sans); }
+
+/* ── CONCLUSION ── */
+.conclusion {
+  background: var(--ink);
+  color: #f0ebe3;
+  border-radius: 12px;
+  padding: 36px 40px;
+  margin-top: 48px;
+}
+.conclusion h3 {
+  font-family: var(--serif);
+  font-size: 20px; font-weight: 700;
+  color: #e8a87c;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #2a2520;
+}
+.con-section { margin-bottom: 20px; }
+.con-label {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: #7a6e62; margin-bottom: 6px;
+}
+.con-body { font-family: var(--sans); font-size: 14px; color: #b8b0a5; line-height: 1.7; }
+.con-body strong { color: #e8d5c0; }
+
+/* ── GENEALOGY ── */
+.gene-wrap { border: 0.5px solid var(--paper3); border-radius: 10px; overflow: hidden; margin: 28px 0; }
+.gene-row { display: grid; grid-template-columns: 100px 1fr; border-bottom: 0.5px solid var(--paper3); }
+.gene-row:last-child { border-bottom: none; }
+.gene-era { padding: 10px 14px; background: var(--paper2); border-right: 0.5px solid var(--paper3); font-family: var(--mono); font-size: 11px; color: var(--ink2); display: flex; align-items: center; }
+.gene-items { padding: 8px 14px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.gene-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; padding: 3px 10px; border-radius: 20px;
+  border: 0.5px solid var(--paper3);
+  color: var(--ink2); font-family: var(--sans);
+  background: var(--paper);
+}
+.gene-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+/* ── NOTE FOOTER ── */
+.note-footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1.5px solid var(--paper3);
+  font-family: var(--sans); font-size: 13px; color: var(--ink3);
+  line-height: 1.7;
+}
+.note-footer a { color: var(--blue); text-decoration: none; }
+
+@media (max-width: 600px) {
+  .insight-grid, .type-grid, .verdict-grid, .challenger-grid { grid-template-columns: 1fr; }
+  .cover-title { font-size: 26px; }
+  .article { padding: 48px 20px 80px; }
+  .conclusion { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ COVER ══════════════ -->
+<div class="cover">
+  <div class="cover-bg"></div>
+  <div class="cover-deco">
+    <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <!-- large swoosh-like form -->
+      <path d="M-100 600 Q400 100 1300 250" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.06"/>
+      <path d="M-100 650 Q500 200 1300 320" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.04"/>
+      <!-- three stripes (adidas echo) -->
+      <rect x="900" y="0" width="18" height="700" fill="#ffffff" opacity="0.025" transform="rotate(-15 980 350)"/>
+      <rect x="950" y="0" width="18" height="700" fill="#ffffff" opacity="0.02" transform="rotate(-15 980 350)"/>
+      <rect x="1000" y="0" width="18" height="700" fill="#ffffff" opacity="0.015" transform="rotate(-15 980 350)"/>
+      <!-- X crossing (ASICS echo) -->
+      <line x1="80" y1="120" x2="320" y2="480" stroke="#e8a87c" stroke-width="0.8" opacity="0.08"/>
+      <line x1="80" y1="480" x2="320" y2="120" stroke="#e8a87c" stroke-width="0.8" opacity="0.08"/>
+    </svg>
+  </div>
+  <div class="cover-inner">
+    <div class="cover-eyebrow">Deep dive · スニーカー文化論</div>
+    <h1 class="cover-title">
+      スニーカーのサイドマークから読む、
+      <em>ブランド戦争の100年</em>
+    </h1>
+    <p class="cover-sub">スウッシュ、3本線、タイガーストライプ——。靴の側面に刻まれたあの記号たちはどこから来て、なぜここまで強くなったのか。そして今、その「戦場」はどこへ移ったのか。</p>
+    <div class="cover-meta">
+      <span>歴史</span>
+      <span>デザイン言語</span>
+      <span>市場分析</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ ARTICLE BODY ══════════════ -->
+<div class="article">
+
+  <!-- ── CH 0: はじめに ── -->
+  <div class="chapter">
+    <p>スニーカーのサイドを見れば、ブランドが分かる。それは当たり前のようでいて、実はごく最近——歴史的には「たった70年ほど」の出来事だ。</p>
+    <p>ナイキのスウッシュ、アディダスの3本線、プーマのフォームストリップ。これらのアイコンは最初から「ロゴ」として設計されたわけではなかった。補強パーツ、競合への対抗、コスト35ドルのデザイン発注——それぞれに偶然と必然が絡んだ誕生秘話がある。</p>
+    <p>この記事では、スニーカーのサイドマークという切り口から、ブランド間の権力闘争・文化の変遷・市場構造の転換を読み解く。さらに現在のOn・Hoka・Salomonといった新勢力が「サイドマーク戦争」をどう変えているかまで整理する。</p>
+  </div>
+
+  <!-- ── CH 1: 年代別系譜 ── -->
+  <div class="chapter">
+    <div class="chapter-num">Chapter 01</div>
+    <h2 class="chapter-title">サイドマーク誕生の系譜——競争が多様性を生んだ</h2>
+
+    <p>スニーカーのサイドマークは、すべて「他社への反応」として生まれた。アディダスに対してプーマが、オニツカタイガーに対してナイキが——それぞれ差別化の必要に迫られ、新しい記号を作り続けた。</p>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#3b82f6"></div>
+        <div class="tl-year">1910年代〜 / フィンランド</div>
+        <div class="tl-brand">Karhu — 3本ストライプの起源</div>
+        <div class="tl-mark">Three Stripes（の原型）</div>
+        <div class="tl-desc">スポーツシューズのサイドに縫い付けた3本の「機能的補強パーツ」として誕生。当時はブランドロゴの概念すらなかった。のちにアディダスへ売却される運命を辿る。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#7c3aed"></div>
+        <div class="tl-year">1952年 / ドイツ</div>
+        <div class="tl-brand">Adidas — 商標取得</div>
+        <div class="tl-mark">Three Stripes（3本ストライプ）<span class="tag tag-func" style="margin-left:8px">機能→象徴へ</span></div>
+        <div class="tl-desc">ヘルシンキ五輪の後、Karhuから約1,600ユーロとウイスキー2本という破格の値段で商標を購入。2本・4本と試した末に3本へ。アディダスは自社を「3本ストライプのブランド」と呼び始めた。これが後の「ロゴ戦争」の火種となる。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#dc2626"></div>
+        <div class="tl-year">1958年 / ドイツ</div>
+        <div class="tl-brand">Puma — 兄への対抗</div>
+        <div class="tl-mark">Formstrip（フォームストリップ）<span class="tag tag-sym" style="margin-left:8px">競合対抗</span></div>
+        <div class="tl-desc">アディダス創業者アドルフ・ダスラーの兄ルドルフが分裂して設立したプーマ。「3本線には絶対似せるな」という制約のもと、トゥからヒールへ流れる曲線のストライプを考案。兄弟対立がデザイン言語の多様化を促した。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#16a34a"></div>
+        <div class="tl-year">1966年 / 日本</div>
+        <div class="tl-brand">Onitsuka Tiger — 社内コンペから</div>
+        <div class="tl-mark">Tiger Stripes（タイガーストライプ）<span class="tag tag-func" style="margin-left:8px">機能×デザイン統合</span></div>
+        <div class="tl-desc">1968年メキシコ五輪に向け社内で200案以上から選抜。X字に交差する2本の曲線が靴紐と連動し、横方向の安定性を向上させる機能を持つ。京都大学との共同検証で機能性が証明された珍しいケース。「機能が形を決めた」という意味でアディダス3本線と同じ系譜。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#d97706"></div>
+        <div class="tl-year">1971年 / アメリカ</div>
+        <div class="tl-brand">Nike（旧Blue Ribbon Sports）</div>
+        <div class="tl-mark">Swoosh（スウッシュ）<span class="tag tag-sym" style="margin-left:8px">純粋シンボル</span></div>
+        <div class="tl-desc">デザイン学生キャロライン・デイビッドソンがわずか35ドルで制作。指示は「アディダスの3本線に絶対に似せるな」のみ。ナイキの女神の翼からインスパイアされた一筆書きの流線形。1995年、社名のワードマークを廃してスウッシュ単体で世界的認知を確立した。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#2563a8"></div>
+        <div class="tl-year">1982年 / アメリカ</div>
+        <div class="tl-brand">New Balance — 990モデルで確立</div>
+        <div class="tl-mark">"N" ロゴ<span class="tag tag-let" style="margin-left:8px">レター戦略</span></div>
+        <div class="tl-desc">初の100ドルスニーカー「990」で「N」レターロゴが定着。機能的意味を持たない純粋な頭文字をシューズ側面に大きく配するレターマーク戦略の先駆け。モデルによってサイズ・素材・配色が変わり、それ自体がコレクター性を生んだ。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#d97706"></div>
+        <div class="tl-year">1984〜88年 / アメリカ</div>
+        <div class="tl-brand">Nike × Michael Jordan</div>
+        <div class="tl-mark">Jumpman（ジャンプマン）<span class="tag tag-cult" style="margin-left:8px">カルチャー融合</span></div>
+        <div class="tl-desc">Air Jordan 1の登場でスウッシュが文化アイコンへ昇華。1988年にシルエットロゴ「Jumpman」が誕生し、「選手個人をデザイン言語にする」シグネチャーロゴという新カテゴリーを開拓した。スウッシュが単なる記号から「象徴」になったのは、デザイン誕生から約13年後のことだ。</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#db2777"></div>
+        <div class="tl-year">2015年〜現在</div>
+        <div class="tl-brand">Off-White / コラボ時代</div>
+        <div class="tl-mark">解体・引用型デザイン言語<span class="tag tag-meta" style="margin-left:8px">メタ</span></div>
+        <div class="tl-desc">Virgil Ablohが「"SHOELACES"」タグや括弧の引用符でナイキのデザインを「解体」したThe Tenシリーズ（2017）。サイドマークを変えるのではなく、サイドマークへの「視点そのもの」を変えるメタなデザイン言語が確立した。</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── CH 2: 分類 ── -->
+  <div class="chapter">
+    <div class="chapter-num">Chapter 02</div>
+    <h2 class="chapter-title">デザイン言語の6類型</h2>
+
+    <p>100年の歴史を整理すると、スニーカーのサイドマークは6つの類型に分類できる。重要なのは、<strong>どの類型が「優れている」かではなく、それぞれの類型がどんな競争環境から生まれたか</strong>だ。</p>
+
+    <div class="type-grid">
+      <div class="type-card">
+        <div class="type-head" style="border-top: 3px solid #2563a8">
+          <div class="type-name">① 機能ストライプ型</div>
+          <div class="type-sub">Functional Stripe</div>
+        </div>
+        <div class="type-body">
+          <div class="type-brands">Adidas · Puma · Karhu</div>
+          <div class="type-desc">補強・安定・サポートとして縫われたパーツがそのままブランド記号になった。機能が形を決めた最も純粋な系譜。後付けの意味づけが最小で、「自然発生したロゴ」とも言える。</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-head" style="border-top: 3px solid #7c3aed">
+          <div class="type-name">② 機能×意匠統合型</div>
+          <div class="type-sub">Functional + Aesthetic</div>
+        </div>
+        <div class="type-body">
+          <div class="type-brands">Onitsuka Tiger/ASICS · Mizuno Wave · Reebok Vector</div>
+          <div class="type-desc">機能的意図（安定性・通気）をデザインとして意識的に昇華。形に必然性があるため他社に模倣されにくく、機能美として語れる強みがある。</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-head" style="border-top: 3px solid #dc2626">
+          <div class="type-name">③ 純粋シンボル型</div>
+          <div class="type-sub">Pure Symbol</div>
+        </div>
+        <div class="type-body">
+          <div class="type-brands">Nike Swoosh · Converse Star · Vans Jazz Stripe</div>
+          <div class="type-desc">機能的根拠を持たない抽象記号。速さ・勝利・反骨など、意味だけを持つ。最もスケールしやすく文化横断できるが、記号単体では意味を持てないため「文化的文脈」が必須になる。</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-head" style="border-top: 3px solid #16a34a">
+          <div class="type-name">④ レター・ワードマーク型</div>
+          <div class="type-sub">Lettermark</div>
+        </div>
+        <div class="type-body">
+          <div class="type-brands">New Balance N · Fila F · Champion C</div>
+          <div class="type-desc">ブランド頭文字をそのままサイドに配置。説明不要の直接性が強みだが、他ブランドとの差別化難度が高い。NBの場合、モデルごとのNの変化がコレクター性を生んでいる。</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-head" style="border-top: 3px solid #d97706">
+          <div class="type-name">⑤ シグネチャー型</div>
+          <div class="type-sub">Athlete Signature</div>
+        </div>
+        <div class="type-body">
+          <div class="type-brands">Jordan Jumpman · Converse Chuck Taylor · Puma Clyde</div>
+          <div class="type-desc">選手個人をデザイン言語化した現代的手法の元祖。ブランドの傘下に「サブブランド」を構築し、ファンダムが購買力に直結する。Jordanブランドの売上はNike本体の20%超。</div>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-head" style="border-top: 3px solid #db2777">
+          <div class="type-name">⑥ 解体・引用型</div>
+          <div class="type-sub">Deconstruction / Meta</div>
+        </div>
+        <div class="type-body">
+          <div class="type-brands">Off-White · Maison Mihara · Balenciaga Triple S</div>
+          <div class="type-desc">既存のサイドマークを「引用・解体・過剰化」して新たな意味を生む。マークを変えるのではなく、マークへの視点を変える。2010年代以降に確立したメタなデザイン言語。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pullquote">
+      <p>「機能が先、おしゃれは後から来た」——Adidas、Onitsuka Tiger、Salomonはいずれもこの順序で偉大なデザイン言語を作った。</p>
+    </div>
+  </div>
+
+  <!-- ── CH 3: 構造的洞察 ── -->
+  <div class="chapter">
+    <div class="chapter-num">Chapter 03</div>
+    <h2 class="chapter-title">歴史から見える4つの構造</h2>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <div class="insight-label">洞察 01 — 競争が多様化を生んだ</div>
+        <p class="insight-text">アディダス3本線に対して「似せるな」と言われたスウッシュ、兄への対抗で生まれたプーマ・フォームストリップ、200案から生まれたタイガーストライプ。競合関係が直接、デザイン言語の分岐を引き起こした。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">洞察 02 — 五輪が「デビューステージ」だった</div>
+        <p class="insight-text">アディダス（1952年ヘルシンキ）、オニツカタイガー（1968年メキシコ）、ナイキ（1972年ミュンヘン）。五輪は世界中継という最大の露出機会であり、各ブランドがサイドマークを確立する絶好のタイミングだった。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">洞察 03 — 機能→記号→文化の3段階進化</div>
+        <p class="insight-text">どのブランドも「①機能的パーツ」→「②視覚的アイデンティティ」→「③文化的シンボル」という3段階を経ている。スウッシュが文化になったのはMJ契約から約10年後のこと。デザインの誕生と文化的確立の間には必ずタイムラグがある。</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">洞察 04 — 「引用符」がデザイン言語になった時代</div>
+        <p class="insight-text">Virgil Abloh以降、サイドマーク自体を「ネタ化・解体・過剰引用」することが新しいデザイン言語となった。マークを変えるのではなく、マークへの視点を変える。記号の記号化とも言えるこの転換が2010年代最大の変化だ。</p>
+      </div>
+    </div>
+
+    <p>また、系譜の流れを見ると「デザイン言語の遺伝関係」が浮かび上がる。</p>
+
+    <div class="gene-wrap">
+      <div class="gene-row">
+        <div class="gene-era">1910–50s<br>黎明期</div>
+        <div class="gene-items">
+          <div class="gene-pill"><div class="gene-dot" style="background:#3b82f6"></div>Karhu 3本ストライプ（起源）</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#888"></div>Converse All Star（星マーク）</div>
+        </div>
+      </div>
+      <div class="gene-row">
+        <div class="gene-era">1952–70s<br>確立期</div>
+        <div class="gene-items">
+          <div class="gene-pill"><div class="gene-dot" style="background:#7c3aed"></div>Adidas（Karhuより取得）</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#dc2626"></div>Puma Formstrip（対アディダス）</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#16a34a"></div>Onitsuka Tiger Stripes</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#d97706"></div>Nike Swoosh（対アディダス）</div>
+        </div>
+      </div>
+      <div class="gene-row">
+        <div class="gene-era">1980–99<br>文化融合期</div>
+        <div class="gene-items">
+          <div class="gene-pill"><div class="gene-dot" style="background:#2563a8"></div>New Balance N</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#d97706"></div>Jordan Jumpman</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#db2777"></div>高級ブランド参入（Gucci・Prada）</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#888"></div>Run-DMC×Adidas</div>
+        </div>
+      </div>
+      <div class="gene-row">
+        <div class="gene-era">2000s〜現在<br>メタ・コラボ期</div>
+        <div class="gene-items">
+          <div class="gene-pill"><div class="gene-dot" style="background:#db2777"></div>Off-White 解体引用</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#db2777"></div>Supreme×Nike</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#16a34a"></div>On / Hoka / Salomon台頭</div>
+          <div class="gene-pill"><div class="gene-dot" style="background:#16a34a"></div>Onitsuka Tiger・ASICS復権</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CH 4: 現在の市場 ── -->
+  <div class="chapter">
+    <div class="chapter-num">Chapter 04</div>
+    <h2 class="chapter-title">「スニーカーブームは終わったか」——3つの問いへの答え</h2>
+
+    <div class="verdict-grid">
+      <div class="verdict-card v-no">
+        <div class="verdict-head">
+          <div class="verdict-q">ブームは終わったか？</div>
+          <div class="verdict-a">転売バブルが<br>終わった</div>
+        </div>
+        <div class="verdict-body">「スニーカーブーム終焉」は正確には<strong>レアスニーカー転売バブルの崩壊</strong>。市場全体は年率5%成長を続けており、スニーカー自体は終わっていない。終わったのは「インスタのために買う」熱狂と転売プレミアム。</div>
+      </div>
+      <div class="verdict-card v-ok">
+        <div class="verdict-head">
+          <div class="verdict-q">日本だけのブームか？</div>
+          <div class="verdict-a">グローバルだが<br>熱度は日本特有</div>
+        </div>
+        <div class="verdict-body">StockX崩落、Nike過剰在庫は全世界共通。ただし日本（裏原・スニダン文化）の密度は特別。逆説的に、Nikeの北米・欧州が失速する一方、<strong>アジア（特に日本）は堅調</strong>という現象が起きている。</div>
+      </div>
+      <div class="verdict-card v-yes">
+        <div class="verdict-head">
+          <div class="verdict-q">On等の新勢力は？</div>
+          <div class="verdict-a">構造交代が<br>始まっている</div>
+        </div>
+        <div class="verdict-body">2024年、チャレンジャーブランド群（On・Hoka・ASICS・Salomon等）が<strong>ビッグ4の経済的利益を初めて上回った</strong>（McKinsey調査）。単なる流行ではなく市場構造の転換点。</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:20px; font-weight:700; margin: 36px 0 16px; font-family: var(--serif);">インカンベント vs チャレンジャー</h3>
+
+    <div class="market-wrap">
+      <div class="market-row header">
+        <div class="mc mc-r">旧来の巨人（インカンベント）</div>
+        <div class="mc-mid"></div>
+        <div class="mc">新興勢力（チャレンジャー）</div>
+      </div>
+      <div class="market-row">
+        <div class="mc mc-r"><span class="down">Nike — 4四半期連続減収</span><br>市場シェア63%→51%（2018→2023）。Air Jordan・Dunkの過剰供給が自ら希少性を破壊。</div>
+        <div class="mc-mid" style="font-size:10px; color:var(--ink3);">売上</div>
+        <div class="mc"><span class="up">On — +28.5%成長</span><br>2024年売上CHF 2.3B。CloudTec®をアイコンにDTC（直販）を強化。</div>
+      </div>
+      <div class="market-row">
+        <div class="mc mc-r"><span class="flat">Adidas — 一進一退</span><br>Sambaブームで一時回復するも過剰供給で失速。Kanye分裂後のYeezy在庫問題が尾を引く。</div>
+        <div class="mc-mid" style="font-size:10px; color:var(--ink3);">戦略</div>
+        <div class="mc"><span class="up">Hoka — +24%（ただし減速兆候）</span><br>$2.2B。コア層（実走者）に強いが、ライフスタイル層への広がりが課題。</div>
+      </div>
+      <div class="market-row">
+        <div class="mc mc-r"><span class="down">Puma / Reebok — 存在感低下</span><br>Speedcat等を試みるも大きな文化的インパクトなし。定位置を欠く。</div>
+        <div class="mc-mid" style="font-size:10px; color:var(--ink3);">文化</div>
+        <div class="mc"><span class="up">Salomon / ASICS / Mizuno</span><br>Salomon XT-6がストリート侵食。ASICS +645%（GOAT）。Mizuno +124%（2025年最速成長）。</div>
+      </div>
+      <div class="market-row">
+        <div class="mc mc-r"><span class="flat">New Balance — 例外的に好調</span><br>売上$6.5B→$10B目標。990・574のヘリテージで大人層を捕捉。インカンベントで唯一チャレンジャー的ポジション。</div>
+        <div class="mc-mid" style="font-size:10px; color:var(--ink3);">次の波</div>
+        <div class="mc"><span class="up">Anta（中国）/ 新興</span><br>Kyrie Irving着用でStockX +1,901%。中国ブランドの台頭が次の地殻変動を予告。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CH 5: 新勢力のデザイン言語 ── -->
+  <div class="chapter">
+    <div class="chapter-num">Chapter 05</div>
+    <h2 class="chapter-title">On・Hoka・Salomon——なぜ「サイドマーク」を持たないのか</h2>
+
+    <p>チャレンジャーブランドに共通するのは、<strong>サイドマーク戦争に参加しなかった</strong>という点だ。スウッシュや3本線が支配する「側面」という戦場を避け、それぞれ別の場所にアイコンを作った。</p>
+
+    <div class="challenger-grid">
+      <div class="ch-card">
+        <div class="ch-name">On（オン）</div>
+        <div class="ch-origin">スイス | 2010年創業</div>
+        <div class="ch-kpi" style="color: #2563a8">+28.5%</div>
+        <div class="ch-kpi-label">2024年売上成長率</div>
+        <div class="ch-desc">サイドマークはシンプルな小文字「On」ロゴのみ。本当のアイコンは<strong>CloudTec®ソール</strong>（雲形ポッド）。「見せ場を側面から底面へ転換」した新世代の発想。スウッシュと競うのではなく、スウッシュが存在しない場所へ出た。</div>
+      </div>
+      <div class="ch-card">
+        <div class="ch-name">Hoka</div>
+        <div class="ch-origin">フランス→米国 | 2009年創業</div>
+        <div class="ch-kpi" style="color: #dc2626">$2.2B</div>
+        <div class="ch-kpi-label">2025年売上（前年比+24%）</div>
+        <div class="ch-desc">サイドの視覚言語は<strong>極端に肥大したミッドソールのシルエット</strong>そのもの。ロゴより形状が先に目に入る。「デカすぎて見間違えない」という機能主導の差別化。ナイキ・アディダスとは真逆のアプローチ。</div>
+      </div>
+      <div class="ch-card">
+        <div class="ch-name">Salomon</div>
+        <div class="ch-origin">フランス | 1947年創業</div>
+        <div class="ch-kpi" style="color: #16a34a">$1B超</div>
+        <div class="ch-kpi-label">2024年フットウェア初の1B突破</div>
+        <div class="ch-desc">もとはスキーバインディングブランド。<strong>XT-6のアウトドア機能美</strong>がそのままストリートアイコンになった。MM6 Maison Margielaとのコラボで文化的地位を確立。「機能が先、おしゃれは後」——1968年オニツカタイガーと同じ構造の再演。</div>
+      </div>
+    </div>
+
+    <div class="pullquote">
+      <p>これは歴史の繰り返しだ。Adidas 3本線が機能的補強だったように、On CloudTec®は走行機能として設計されたが、それ自体が視覚的アイコンになった。</p>
+    </div>
+
+    <p>さらに注目すべきは、<strong>ASICSのタイガーストライプ、MizunoのWaveが「クール」として再発見</strong>されていること。これは日本・フランスのアウトドア機能美が、欧米のヘリテージへの飽きとちょうどシンクロした逆輸入現象だ。ASICSの転売プラットフォームGOATにおける伸びは+645%、Mizunoは2025年最速成長ブランドのひとつとなっている。</p>
+  </div>
+
+  <!-- ── 結論 ── -->
+  <div class="conclusion">
+    <h3>整理——終わったもの、続くもの、始まるもの</h3>
+    <div class="con-section">
+      <div class="con-label">終わったもの</div>
+      <div class="con-body">限定品転売プレミアム・Air Jordan/Dunk/Yeezyへの盲目的ハイプ・「インスタに上げるために買う」消費行動・2015〜2023年型のヘッズ文化。</div>
+    </div>
+    <div class="con-section">
+      <div class="con-label">続くもの</div>
+      <div class="con-body">スニーカー市場そのものは年率5%成長（2033年に約160兆円予測）。履くための靴・ランニング用途・女性向け市場は拡大中。<strong>日本のスニーカー熱は独自に持続</strong>。裏原型コレクター文化は周期的に復活する。</div>
+    </div>
+    <div class="con-section">
+      <div class="con-label">始まるもの</div>
+      <div class="con-body">On・Hoka・Salomon・ASICS・Mizunoによる<strong>「機能→記号」サイクルの第二波</strong>。Antaら中国ブランドの台頭。デザイン言語の戦場が「サイドマーク」から「<strong>ソール形状・シルエット全体</strong>」へ移動。そして20〜30年後、これらのチャレンジャーが「レガシーブランド」になったとき、また新たな挑戦者が現れる。</div>
+    </div>
+  </div>
+
+  <div class="note-footer">
+    <p>本稿は市場データ・ブランド公式情報・業界レポート（McKinsey Global Fashion Index 2024等）をもとに構成しました。数値はすべて公開情報に基づきます。</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>利用者向けアプリ | 常連客づくりCRM モック</title>
+<style>
+  :root {
+    --espresso: #2A211C;
+    --espresso2: #4A3B30;
+    --caramel: #C08552;
+    --gold: #D4AF37;
+    --cream: #F3ECE2;
+    --muted: #8A7C6E;
+    --muted-d: #6B5A48;
+    --white: #FFFFFF;
+    --border: #ECE3D8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif; background: #EFE9E1; }
+  a { color: var(--caramel); }
+  a:hover { color: var(--espresso2); }
+
+  .back-link { display: block; text-align: center; font-size: 12px; color: var(--muted-d); padding: 14px 0 0; }
+  .back-link:hover { color: var(--espresso); }
+
+  .stage { width: 100%; max-width: 430px; min-height: 100vh; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #EFE9E1; padding: 20px 0; }
+  .phone { width: 390px; max-width: 92vw; height: 830px; background: #17110D; border-radius: 46px; padding: 12px; box-shadow: 0 30px 70px rgba(42,33,28,0.30); }
+  .notch { width: 120px; height: 20px; margin: 0 auto 4px; background: #17110D; border-radius: 0 0 14px 14px; }
+  .screen { width: 100%; height: calc(100% - 24px); background: #FBF9F7; border-radius: 34px; overflow: hidden; display: flex; flex-direction: column; }
+
+  .header { background: linear-gradient(135deg, var(--espresso), var(--espresso2)); padding: 22px 22px 22px; color: var(--cream); flex-shrink: 0; }
+  .header-brand { font-size: 11px; letter-spacing: 2px; color: var(--gold); font-weight: 700; margin-bottom: 12px; }
+  .header-row { display: flex; align-items: center; justify-content: space-between; }
+  .header-greet { font-size: 18px; font-weight: 700; }
+  .header-rank { background: var(--gold); color: var(--espresso); font-size: 11px; font-weight: 800; padding: 5px 11px; border-radius: 999px; }
+  .header-sub { font-size: 11.5px; color: #C9BEB2; margin-top: 8px; }
+
+  .body { padding: 16px 18px; display: flex; flex-direction: column; gap: 14px; flex: 1; overflow: auto; }
+  .view { display: none; flex-direction: column; gap: 14px; }
+  .view.active { display: flex; }
+
+  .card { background: var(--white); border-radius: 18px; padding: 16px; box-shadow: 0 6px 20px rgba(42,33,28,0.07); }
+  .qr-card { text-align: center; }
+  .qr-grid { display: grid; grid-template-columns: repeat(11, 1fr); grid-template-rows: repeat(11, 1fr); width: 128px; height: 128px; margin: 0 auto 10px; border-radius: 10px; overflow: hidden; }
+  .qr-cap { font-size: 11px; color: var(--muted); font-weight: 700; }
+
+  .sec-label { font-size: 12px; font-weight: 800; color: var(--muted-d); letter-spacing: 0.3px; margin-bottom: 8px; }
+  .strip { display: flex; gap: 8px; overflow: hidden; }
+  .st-card { background: var(--white); border-radius: 14px; padding: 7px; box-shadow: 0 4px 14px rgba(42,33,28,0.06); flex-shrink: 0; }
+  .st-pair { display: flex; gap: 3px; }
+  .st-photo { width: 38px; height: 50px; border-radius: 6px; }
+  .st-b { background: linear-gradient(160deg,#D9C4B0,#B08A62); }
+  .st-a { background: linear-gradient(160deg,#C08552,#8A5A34); }
+  .st-date { font-size: 9px; color: #A79A8C; text-align: center; margin-top: 5px; }
+
+  .notice-text { font-size: 13px; color: #3A2E25; line-height: 1.6; margin-bottom: 12px; }
+  .cta { background: var(--gold); color: var(--espresso); text-align: center; font-weight: 800; font-size: 13px; padding: 11px; border-radius: 12px; cursor: pointer; }
+
+  .hist-row { display: flex; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .hist-row:last-child { border-bottom: none; }
+  .hist-photos { display: flex; gap: 3px; flex-shrink: 0; }
+  .hist-photo { width: 34px; height: 44px; border-radius: 6px; }
+  .hist-date { font-size: 13px; font-weight: 700; color: var(--espresso); }
+  .hist-menu { font-size: 11.5px; color: var(--muted-d); margin-top: 2px; }
+
+  .chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .date-chip { flex: 1; min-width: 58px; text-align: center; padding: 10px 4px; border-radius: 12px; background: var(--white); font-size: 12px; color: var(--muted-d); font-weight: 700; cursor: pointer; border: 2px solid transparent; }
+  .date-chip.selected { background: var(--espresso); color: var(--white); }
+  .time-chip { padding: 12px 4px; border-radius: 12px; background: var(--white); font-size: 13px; color: var(--espresso); font-weight: 700; cursor: pointer; text-align: center; border: 2px solid transparent; }
+  .time-chip.selected { background: var(--caramel); color: var(--white); }
+  .time-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+
+  .confirm-box { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 40px 10px; gap: 14px; }
+  .confirm-ic { width: 62px; height: 62px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; color: var(--espresso); }
+  .confirm-title { font-size: 17px; font-weight: 800; color: var(--espresso); }
+  .confirm-sub { font-size: 13px; color: var(--muted-d); line-height: 1.6; }
+
+  .member-card { background: linear-gradient(135deg, var(--espresso), var(--espresso2)); border-radius: 18px; padding: 20px; color: var(--white); }
+  .member-name { font-size: 18px; font-weight: 800; }
+  .member-no { font-size: 11px; color: #C9BEB2; letter-spacing: 1px; margin-top: 4px; }
+  .member-rank { display: inline-block; margin-top: 12px; background: var(--gold); color: var(--espresso); font-size: 11px; font-weight: 800; padding: 5px 12px; border-radius: 999px; }
+  .stat-row { display: flex; gap: 10px; }
+  .stat-box { flex: 1; background: var(--white); border-radius: 14px; padding: 14px; text-align: center; box-shadow: 0 4px 14px rgba(42,33,28,0.06); }
+  .stat-box .v { font-size: 20px; font-weight: 800; color: var(--espresso); }
+  .stat-box .l { font-size: 10.5px; color: var(--muted); margin-top: 3px; }
+
+  .settings-row { display: flex; align-items: center; justify-content: space-between; }
+  .settings-label { font-size: 13.5px; font-weight: 700; color: var(--espresso); }
+  .switch { width: 42px; height: 24px; border-radius: 999px; background: var(--border); position: relative; cursor: pointer; flex-shrink: 0; }
+  .switch-knob { width: 18px; height: 18px; border-radius: 50%; background: var(--white); position: absolute; top: 3px; left: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.25); transition: left .15s ease; }
+  .switch.on { background: var(--caramel); }
+  .switch.on .switch-knob { left: 21px; }
+
+  .navbar { display: flex; justify-content: space-around; padding: 10px 6px 16px; border-top: 1px solid var(--border); background: var(--white); flex-shrink: 0; }
+  .nav-i { display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; color: #A79A8C; }
+  .nav-i svg { width: 21px; height: 21px; }
+  .nav-i span { font-size: 9px; font-weight: 700; }
+  .nav-i.on { color: var(--caramel); }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="screen">
+
+      <div id="header-home" class="header">
+        <div class="header-brand">HAIR SALON TOKI</div>
+        <div class="header-row">
+          <div class="header-greet">花子 様</div>
+          <div class="header-rank">GOLD</div>
+        </div>
+        <div class="header-sub">来店32回 ・ 次回来店目安 3週間後</div>
+      </div>
+      <div id="header-mypage" class="header" style="display:none">
+        <div class="header-brand">HAIR SALON TOKI</div>
+        <div class="header-row"><div class="header-greet">マイページ</div></div>
+      </div>
+      <div id="header-history" class="header" style="display:none">
+        <div class="header-brand">HAIR SALON TOKI</div>
+        <div class="header-row"><div class="header-greet">来店履歴</div></div>
+      </div>
+      <div id="header-reserve" class="header" style="display:none">
+        <div class="header-brand">HAIR SALON TOKI</div>
+        <div class="header-row"><div class="header-greet">予約</div></div>
+      </div>
+
+      <div class="body">
+        <div class="view" data-view="home">
+          <div class="card qr-card">
+            <div class="qr-grid" id="qr-grid"></div>
+            <div class="qr-cap">来店時はこのQRでチェックイン</div>
+          </div>
+          <div>
+            <div class="sec-label">髪型の変遷</div>
+            <div class="strip">
+              <div class="st-card"><div class="st-pair"><div class="st-photo st-b"></div><div class="st-photo st-a"></div></div><div class="st-date">6/12</div></div>
+              <div class="st-card"><div class="st-pair"><div class="st-photo st-b"></div><div class="st-photo st-a"></div></div><div class="st-date">7/10</div></div>
+              <div class="st-card"><div class="st-pair"><div class="st-photo st-b"></div><div class="st-photo st-a"></div></div><div class="st-date">8/24</div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="notice-text">そろそろ次回のご来店がおすすめの時期です。お好きな日時でご予約ください。</div>
+            <div class="cta" id="btn-go-reserve">予約する</div>
+          </div>
+        </div>
+
+        <div class="view" data-view="history">
+          <div class="card" id="history-list"></div>
+        </div>
+
+        <div class="view" data-view="reserve">
+          <div id="reserve-confirmed" style="display:none">
+            <div class="confirm-box">
+              <div class="confirm-ic">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5 11-11"></path></svg>
+              </div>
+              <div class="confirm-title">ご予約が完了しました</div>
+              <div class="confirm-sub" id="confirm-summary"></div>
+              <div class="cta" style="width: 100%" id="btn-back-home">ホームに戻る</div>
+            </div>
+          </div>
+          <div id="reserve-form">
+            <div>
+              <div class="sec-label">来店日を選択</div>
+              <div class="chip-row" id="date-chips"></div>
+            </div>
+            <div>
+              <div class="sec-label">時間帯を選択</div>
+              <div class="time-grid" id="time-chips"></div>
+            </div>
+            <div class="cta" id="btn-confirm-reserve">この内容で予約する</div>
+          </div>
+        </div>
+
+        <div class="view" data-view="mypage">
+          <div class="member-card">
+            <div class="member-name">花子 様</div>
+            <div class="member-no">MEMBER No. 0000-3241</div>
+            <div class="member-rank">GOLD会員</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-box"><div class="v">32回</div><div class="l">来店回数</div></div>
+            <div class="stat-box"><div class="v">3週間後</div><div class="l">次回来店予測</div></div>
+          </div>
+          <div class="card">
+            <div class="settings-row">
+              <div class="settings-label">LINE通知を受け取る</div>
+              <div class="switch on" id="notify-switch"><div class="switch-knob"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar">
+        <div class="nav-i" data-view="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5 12 4l8 7.5"></path><path d="M6 10v9a1 1 0 0 0 1 1h3v-5h4v5h3a1 1 0 0 0 1-1v-9"></path></svg>
+          <span>ホーム</span>
+        </div>
+        <div class="nav-i" data-view="history">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>
+          <span>履歴</span>
+        </div>
+        <div class="nav-i" data-view="reserve">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 9.5h17"></path><path d="M8 3v4M16 3v4"></path></svg>
+          <span>予約</span>
+        </div>
+        <div class="nav-i" data-view="mypage">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"></path></svg>
+          <span>マイページ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="back-link" href="index.html">&larr; モック一覧に戻る</a>
+</div>
+
+<script>
+(function () {
+  var DATES = ['9/13(日)', '9/14(月)', '9/15(火)', '9/16(水)', '9/17(木)'];
+  var TIMES = ['10:00', '11:30', '13:00', '15:00', '16:30'];
+  var VISITS = [
+    { date: '8/24', menu: 'カラー+カット', staff: '中村' },
+    { date: '7/10', menu: 'カット', staff: '中村' },
+    { date: '6/12', menu: 'カラー', staff: '山本' },
+    { date: '5/2', menu: 'カット+トリートメント', staff: '中村' },
+  ];
+
+  var state = {
+    view: 'home',
+    selectedDate: 1,
+    selectedTime: 2,
+    confirmed: false,
+    notifyOn: true,
+  };
+
+  function setState(patch) { Object.assign(state, patch); render(); }
+
+  function buildQr() {
+    var DARK = '#2A211C', LIGHT = '#FBF9F7', N = 11;
+    var seed = 17;
+    function rnd() { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; }
+    var zones = [[0, 0], [0, 7], [7, 0]];
+    var html = '';
+    for (var row = 0; row < N; row++) {
+      for (var col = 0; col < N; col++) {
+        var zone = null;
+        for (var zi = 0; zi < zones.length; zi++) {
+          var z = zones[zi];
+          if (row >= z[0] && row < z[0] + 4 && col >= z[1] && col < z[1] + 4) { zone = z; break; }
+        }
+        var bg;
+        if (zone) {
+          var lr = row - zone[0], lc = col - zone[1];
+          bg = (lr === 0 || lr === 3 || lc === 0 || lc === 3) ? DARK : LIGHT;
+        } else {
+          bg = rnd() < 0.45 ? DARK : LIGHT;
+        }
+        html += '<div style="background:' + bg + '"></div>';
+      }
+    }
+    document.getElementById('qr-grid').innerHTML = html;
+  }
+
+  function renderNav() {
+    ['home', 'mypage', 'history', 'reserve'].forEach(function (v) {
+      var h = document.getElementById('header-' + v);
+      if (h) h.style.display = state.view === v ? 'block' : 'none';
+    });
+    document.querySelectorAll('.view').forEach(function (el) {
+      el.classList.toggle('active', el.getAttribute('data-view') === state.view);
+    });
+    document.querySelectorAll('.nav-i').forEach(function (el) {
+      el.classList.toggle('on', el.getAttribute('data-view') === state.view);
+    });
+  }
+
+  function renderHistory() {
+    document.getElementById('history-list').innerHTML = VISITS.map(function (v) {
+      return '<div class="hist-row"><div class="hist-photos"><div class="hist-photo st-b"></div><div class="hist-photo st-a"></div></div>' +
+        '<div><div class="hist-date">' + v.date + '</div><div class="hist-menu">' + v.menu + ' ・ 担当 ' + v.staff + '</div></div></div>';
+    }).join('');
+  }
+
+  function renderReserve() {
+    var confirmedEl = document.getElementById('reserve-confirmed');
+    var formEl = document.getElementById('reserve-form');
+    if (state.confirmed) {
+      confirmedEl.style.display = 'block';
+      formEl.style.display = 'none';
+      document.getElementById('confirm-summary').innerHTML = DATES[state.selectedDate] + ' ' + TIMES[state.selectedTime] + ' でご予約を承りました。<br>店舗でお会いできるのを楽しみにしております。';
+      return;
+    }
+    confirmedEl.style.display = 'none';
+    formEl.style.display = 'block';
+    document.getElementById('date-chips').innerHTML = DATES.map(function (label, i) {
+      return '<div class="date-chip' + (i === state.selectedDate ? ' selected' : '') + '" data-i="' + i + '">' + label + '</div>';
+    }).join('');
+    document.getElementById('time-chips').innerHTML = TIMES.map(function (label, i) {
+      return '<div class="time-chip' + (i === state.selectedTime ? ' selected' : '') + '" data-i="' + i + '">' + label + '</div>';
+    }).join('');
+    document.querySelectorAll('#date-chips .date-chip').forEach(function (el) {
+      el.addEventListener('click', function () { setState({ selectedDate: Number(el.getAttribute('data-i')) }); });
+    });
+    document.querySelectorAll('#time-chips .time-chip').forEach(function (el) {
+      el.addEventListener('click', function () { setState({ selectedTime: Number(el.getAttribute('data-i')) }); });
+    });
+  }
+
+  function renderMypage() {
+    document.getElementById('notify-switch').classList.toggle('on', state.notifyOn);
+  }
+
+  function render() {
+    renderNav();
+    renderHistory();
+    renderReserve();
+    renderMypage();
+  }
+
+  document.querySelectorAll('.nav-i').forEach(function (el) {
+    el.addEventListener('click', function () { setState({ view: el.getAttribute('data-view') }); });
+  });
+  document.getElementById('btn-go-reserve').addEventListener('click', function () { setState({ view: 'reserve', confirmed: false }); });
+  document.getElementById('btn-confirm-reserve').addEventListener('click', function () { setState({ confirmed: true }); });
+  document.getElementById('btn-back-home').addEventListener('click', function () { setState({ confirmed: false, view: 'home' }); });
+  document.getElementById('notify-switch').addEventListener('click', function () { setState({ notifyOn: !state.notifyOn }); });
+
+  buildQr();
+  render();
+})();
+</script>
+</body>
+</html>

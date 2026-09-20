@@ -1,0 +1,23 @@
+{
+  "themeColor": "#4CAF50",
+  "title": "🍎 {name}専用！特製ジュース職人への道！①果物の仕分け",
+  "description": "ジュース作りの第一歩は「仕分け」の仕事だよ！<br><i class='var'>x</i>は「リンゴ」、<i class='var'>y</i>は「ミカン」。<br>同じ果物同士はまとめられるけど、違う果物は混ざらないように注意してね！",
+  "questions": [
+    { "q": "3<i class='var'>x</i> + 2<i class='var'>x</i>", "a": ["5x"], "h": "<i class='var'>x</i>をリンゴだと思おう。リンゴ3個と2個で何個？" },
+    { "q": "4<i class='var'>x</i> + 3<i class='var'>y</i> + 2<i class='var'>x</i>", "a": ["6x+3y", "3y+6x"], "h": "リンゴ(<i class='var'>x</i>)同士を先にまとめよう。" },
+    { "q": "5<i class='var'>x</i> - 2<i class='var'>x</i> + 4<i class='var'>y</i>", "a": ["3x+4y", "4y+3x"], "h": "リンゴ5個から2個減らすよ。" },
+    { "q": "2<i class='var'>a</i> + 5<i class='var'>b</i> + 3<i class='var'>a</i> - <i class='var'>b</i>", "a": ["5a+4b", "4b+5a"], "h": "<i class='var'>a</i>チームと<i class='var'>b</i>チームに分けてね。" },
+    { "q": "<i class='var'>x</i> + <i class='var'>y</i> + <i class='var'>x</i> + <i class='var'>y</i>", "a": ["2x+2y", "2y+2x"], "h": "<i class='var'>x</i>だけの時は1<i class='var'>x</i>のこと！" },
+    { "q": "6<i class='var'>x</i> - 3<i class='var'>x</i> + 2<i class='var'>y</i> - 2<i class='var'>y</i>", "a": ["3x"], "h": "ミカン(<i class='var'>y</i>)が消えるよ。" },
+    { "q": "-2<i class='var'>x</i> + 5<i class='var'>y</i> + 4<i class='var'>x</i> - <i class='var'>y</i>", "a": ["2x+4y", "4y+2x"], "h": "マイナスは借金と考えよう。" },
+    { "q": "3<i class='var'>a</i> - 4<i class='var'>b</i> - <i class='var'>a</i> + 6<i class='var'>b</i>", "a": ["2a+2b", "2b+2a"], "h": "-<i class='var'>a</i>は -1<i class='var'>a</i>のことだよ。" },
+    { "q": "<i class='var'>x</i> - 3<i class='var'>y</i> - 2<i class='var'>x</i> - <i class='var'>y</i>", "a": ["-x-4y", "-4y-x", "-1x-4y", "-4y-1x"], "h": "<i class='var'>x</i> - 2<i class='var'>x</i> を先に計算！" },
+    { "q": "2<i class='var'>x</i> + 3<i class='var'>y</i> - 2<i class='var'>x</i> - 3<i class='var'>y</i>", "a": ["0"], "h": "全部なくなったら0と書こう。" }
+  ],
+  "success": {
+    "title": "🎉 仕分け完了！",
+    "text": "{name}{honorific}、すごい！！<br>見事に果物の「仕分け」の仕事を完了したね！<br>リンゴとミカンを整理できるようになったから、いよいよ次はミキサーを使って「特製ジュース」にする仕事だ！",
+    "nextData": "math-002",
+    "nextButtonText": "次の仕事（ミキサー）へ！"
+  }
+}

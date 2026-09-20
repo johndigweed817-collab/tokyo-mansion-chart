@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>店舗向け管理画面 | 常連客づくりCRM モック</title>
+<style>
+  :root {
+    --espresso: #2A211C;
+    --espresso2: #4A3B30;
+    --caramel: #C08552;
+    --gold: #D4AF37;
+    --cream: #F3ECE2;
+    --muted: #8A7C6E;
+    --muted-d: #6B5A48;
+    --warn: #B85042;
+    --white: #FFFFFF;
+    --lightcard: #F7F3EE;
+    --border: #ECE3D8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--lightcard); }
+  a { color: var(--caramel); }
+  a:hover { color: var(--espresso2); }
+  .app-shell {
+    width: 100%; max-width: 1440px; min-height: 100vh; margin: 0 auto;
+    display: flex;
+    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+    background: var(--lightcard);
+  }
+  .sidebar {
+    width: 232px; flex-shrink: 0;
+    background: var(--espresso); color: var(--cream);
+    display: flex; flex-direction: column;
+    padding: 26px 20px;
+  }
+  .back-link { display: block; font-size: 11.5px; color: #C9BEB2; margin-bottom: 18px; }
+  .back-link:hover { color: var(--gold); }
+  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 30px; }
+  .brand-mark {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--espresso); font-weight: 700; font-size: 15px; flex-shrink: 0;
+  }
+  .brand-name { font-size: 16px; font-weight: 700; letter-spacing: 0.5px; }
+  .nav { display: flex; flex-direction: column; gap: 4px; }
+  .nav-item {
+    display: flex; align-items: center; gap: 12px; padding: 11px 12px; border-radius: 10px;
+    font-size: 14px; color: #C9BEB2; cursor: pointer; user-select: none;
+  }
+  .nav-item.active { background: var(--espresso2); color: var(--white); font-weight: 700; }
+  .nav-ic { width: 20px; height: 20px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .nav-item.active .nav-ic { color: var(--gold); }
+  .nav-ic svg { width: 20px; height: 20px; }
+  .side-foot { margin-top: auto; font-size: 11px; color: var(--muted); line-height: 1.7; }
+
+  .main { flex: 1; padding: 34px 40px; min-width: 0; }
+  .view { display: none; }
+  .view.active { display: block; }
+  .view-title { font-size: 20px; font-weight: 700; color: var(--espresso); margin: 0 0 4px; }
+  .view-sub { font-size: 12.5px; color: var(--muted-d); margin: 0 0 22px; }
+
+  .top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+  .chips { display: flex; gap: 10px; align-items: center; }
+  .chip {
+    width: 44px; height: 44px; border-radius: 50%; background: #E7DCCB;
+    display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--muted-d); font-weight: 700;
+    border: 2px solid transparent; cursor: pointer;
+  }
+  .chip.selected { border-color: var(--caramel); background: var(--caramel); color: var(--white); }
+
+  .grid { display: flex; gap: 22px; flex-wrap: wrap; }
+  .col-main { flex: 1.55 1 420px; display: flex; flex-direction: column; gap: 18px; }
+  .col-side { flex: 1 1 260px; display: flex; flex-direction: column; gap: 16px; }
+
+  .card { background: var(--white); border-radius: 16px; padding: 22px 24px; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .cust-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .cust-name { font-size: 21px; font-weight: 700; color: var(--espresso); }
+  .badge { background: #FBF1DD; color: #A8791A; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px; }
+  .cust-sub { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+
+  .section-label { font-size: 12.5px; font-weight: 700; color: var(--muted-d); margin: 18px 0 10px; }
+  .timeline { display: flex; gap: 14px; }
+  .snap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .snap-pair { display: flex; gap: 3px; }
+  .snap-photo { width: 52px; height: 68px; border-radius: 8px; }
+  .snap-b { background: linear-gradient(160deg,#D9C4B0,#B08A62); }
+  .snap-a { background: linear-gradient(160deg,#C08552,#8A5A34); }
+  .snap-date { font-size: 10px; color: #A79A8C; }
+
+  .ai-card { background: var(--espresso); border-radius: 16px; padding: 20px 24px; color: var(--cream); display: flex; gap: 16px; align-items: flex-start; }
+  .ai-ic { width: 38px; height: 38px; border-radius: 50%; background: var(--gold); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--espresso); font-size: 12px; }
+  .ai-label { font-size: 11.5px; color: var(--gold); font-weight: 700; margin-bottom: 6px; letter-spacing: 0.5px; }
+  .ai-text { font-size: 13.5px; line-height: 1.7; color: #EDE3D8; }
+
+  .stat-card { background: var(--white); border-radius: 16px; padding: 18px 20px; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .stat-label { font-size: 11.5px; color: var(--muted); font-weight: 700; margin-bottom: 8px; }
+  .stat-value { font-size: 30px; font-weight: 800; color: var(--espresso); }
+  .stat-value.warn { color: var(--warn); }
+  .stat-sub { font-size: 11px; color: #A79A8C; margin-top: 4px; }
+
+  table.tbl { width: 100%; border-collapse: collapse; }
+  table.tbl th { text-align: left; font-size: 11.5px; color: var(--muted); font-weight: 700; padding: 0 14px 12px; border-bottom: 1px solid var(--border); }
+  table.tbl td { font-size: 13.5px; color: var(--espresso); padding: 14px; border-bottom: 1px solid var(--border); background: var(--white); }
+  table.tbl tr td:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px; font-weight: 700; }
+  table.tbl tr td:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px; color: var(--muted-d); }
+
+  .checkin-panel { display: flex; gap: 22px; flex-wrap: wrap; }
+  .scan-box { width: 260px; flex-shrink: 0; background: var(--white); border-radius: 16px; padding: 28px; text-align: center; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .scan-frame { width: 160px; height: 160px; margin: 0 auto 18px; border-radius: 14px; border: 2.5px dashed var(--caramel); display: flex; align-items: center; justify-content: center; color: var(--caramel); }
+  .scan-frame svg { width: 64px; height: 64px; }
+  .scan-caption { font-size: 12px; color: var(--muted-d); line-height: 1.6; margin-bottom: 18px; }
+  .btn-primary { background: var(--gold); color: var(--espresso); font-weight: 800; font-size: 13.5px; padding: 12px 20px; border-radius: 12px; text-align: center; cursor: pointer; border: none; width: 100%; font-family: inherit; }
+  .checkin-log { flex: 1 1 260px; background: var(--white); border-radius: 16px; padding: 8px 4px; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .checkin-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 22px; border-bottom: 1px solid var(--border); }
+  .checkin-row:last-child { border-bottom: none; }
+  .checkin-name { font-size: 14px; font-weight: 700; color: var(--espresso); }
+  .checkin-time { font-size: 12.5px; color: var(--muted-d); }
+
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .kpi-card { background: var(--white); border-radius: 16px; padding: 22px; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .kpi-title { font-size: 13px; font-weight: 700; color: var(--espresso); margin-bottom: 6px; }
+  .kpi-value { font-size: 24px; font-weight: 800; color: var(--caramel); margin-bottom: 12px; }
+  .kpi-track { height: 8px; border-radius: 999px; background: var(--border); overflow: hidden; }
+  .kpi-fill { height: 100%; border-radius: 999px; background: var(--gold); }
+  .kpi-note { font-size: 11px; color: var(--muted); margin-top: 20px; }
+
+  .settings-list { display: flex; flex-direction: column; gap: 2px; background: var(--white); border-radius: 16px; padding: 6px 4px; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .settings-row { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; border-bottom: 1px solid var(--border); gap: 16px; }
+  .settings-row:last-child { border-bottom: none; }
+  .settings-label { font-size: 14px; font-weight: 700; color: var(--espresso); }
+  .settings-desc { font-size: 12px; color: var(--muted-d); margin-top: 3px; }
+  .switch { width: 42px; height: 24px; border-radius: 999px; background: var(--border); position: relative; cursor: pointer; flex-shrink: 0; }
+  .switch-knob { width: 18px; height: 18px; border-radius: 50%; background: var(--white); position: absolute; top: 3px; left: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.25); transition: left .15s ease; }
+  .switch.on { background: var(--caramel); }
+  .switch.on .switch-knob { left: 21px; }
+
+  .mode-toggle { display: inline-flex; background: var(--white); border-radius: 12px; padding: 4px; gap: 4px; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .mode-btn { padding: 8px 18px; border-radius: 9px; font-size: 13px; font-weight: 700; color: var(--muted-d); cursor: pointer; }
+  .mode-btn.active { background: var(--espresso); color: var(--white); }
+  .sched-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; flex-wrap: wrap; gap: 12px; }
+  .week-nav { display: flex; align-items: center; gap: 14px; }
+  .week-nav-btn { width: 30px; height: 30px; border-radius: 50%; background: var(--white); box-shadow: 0 4px 14px rgba(42,33,28,0.08); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--espresso); flex-shrink: 0; }
+  .week-nav-btn svg { width: 15px; height: 15px; }
+  .week-label { font-size: 14px; font-weight: 700; color: var(--espresso); min-width: 220px; text-align: center; }
+  .week-cols { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+  .week-col { background: var(--white); border-radius: 14px; padding: 12px 10px; min-height: 340px; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .week-col-head { text-align: center; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .week-col-head .dow { font-size: 11px; color: var(--muted); font-weight: 700; }
+  .week-col-head .d { font-size: 16px; color: var(--espresso); font-weight: 800; margin-top: 2px; }
+  .week-col.past .week-col-head .d { color: var(--muted); }
+  .appt-chip { border-radius: 10px; padding: 8px 9px; font-size: 11.5px; margin-bottom: 7px; }
+  .appt-chip.upcoming { background: #FBF1DD; color: #8A5A17; }
+  .appt-chip.done { background: var(--lightcard); color: var(--muted-d); }
+  .appt-time { font-weight: 800; margin-bottom: 2px; }
+  .appt-empty { font-size: 11px; color: #C8BEB2; text-align: center; margin-top: 14px; }
+
+  .month-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+  .weekday-label { text-align: center; font-size: 11.5px; font-weight: 700; color: var(--muted); padding-bottom: 6px; }
+  .month-cell { aspect-ratio: 1; border-radius: 12px; background: var(--white); padding: 8px; box-shadow: 0 3px 12px rgba(42,33,28,0.05); cursor: pointer; display: flex; flex-direction: column; }
+  .month-cell.pad { background: transparent; box-shadow: none; cursor: default; }
+  .month-cell.selected { outline: 2px solid var(--caramel); }
+  .month-daynum { font-size: 12.5px; font-weight: 700; color: var(--espresso); }
+  .month-cell.past .month-daynum { color: var(--muted); }
+  .month-count { margin-top: auto; align-self: flex-start; font-size: 10.5px; font-weight: 800; padding: 2px 7px; border-radius: 999px; }
+  .month-count.upcoming { background: var(--gold); color: var(--espresso); }
+  .month-count.done { background: var(--border); color: var(--muted-d); }
+  .month-detail { margin-top: 20px; background: var(--white); border-radius: 16px; padding: 18px 22px; box-shadow: 0 4px 18px rgba(42,33,28,0.06); }
+  .month-detail-title { font-size: 14px; font-weight: 800; color: var(--espresso); margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="back-link" href="index.html">&larr; モック一覧に戻る</a>
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div class="brand-name">SALON OS</div>
+    </div>
+    <div class="nav">
+      <div class="nav-item" data-view="dashboard">
+        <span class="nav-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"></rect><rect x="13" y="3" width="8" height="5" rx="1.5"></rect><rect x="13" y="10" width="8" height="11" rx="1.5"></rect><rect x="3" y="13" width="8" height="8" rx="1.5"></rect></svg></span>
+        <span>ダッシュボード</span>
+      </div>
+      <div class="nav-item" data-view="customers">
+        <span class="nav-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"></path><circle cx="17" cy="7" r="2.3"></circle><path d="M15.5 12.2c2.6.4 4.5 2.6 4.5 5.3"></path></svg></span>
+        <span>顧客一覧</span>
+      </div>
+      <div class="nav-item" data-view="schedule">
+        <span class="nav-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 9.5h17"></path><path d="M8 3v4M16 3v4"></path></svg></span>
+        <span>スケジュール</span>
+      </div>
+      <div class="nav-item" data-view="checkin">
+        <span class="nav-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8V5a2 2 0 0 1 2-2h3"></path><path d="M16 3h3a2 2 0 0 1 2 2v3"></path><path d="M21 16v3a2 2 0 0 1-2 2h-3"></path><path d="M8 21H5a2 2 0 0 1-2-2v-3"></path><rect x="9" y="9" width="6" height="6" rx="1"></rect></svg></span>
+        <span>チェックイン(履歴)</span>
+      </div>
+      <div class="nav-item" data-view="reports">
+        <span class="nav-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"></path><path d="M12 20V4"></path><path d="M20 20v-7"></path></svg></span>
+        <span>レポート</span>
+      </div>
+      <div class="nav-item" data-view="settings">
+        <span class="nav-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v2.2M12 18.8V21M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M3 12h2.2M18.8 12H21M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"></path></svg></span>
+        <span>設定</span>
+      </div>
+    </div>
+    <div class="side-foot">Hair Salon TOKI<br>ブランド設定でロゴ・配色を変更可能</div>
+  </aside>
+
+  <main class="main">
+    <div class="view" data-view="dashboard">
+      <h1 class="view-title">ダッシュボード</h1>
+      <p class="view-sub">本日のご来店状況と、選択したお客様の履歴・AI提案を確認できます。</p>
+      <div class="top-row">
+        <div></div>
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="grid">
+        <div class="col-main">
+          <div class="card">
+            <div class="cust-head">
+              <div class="cust-name"><span id="cust-name"></span> 様</div>
+              <div class="badge" id="cust-badge"></div>
+            </div>
+            <div class="cust-sub" id="cust-sub"></div>
+            <div class="section-label">施術履歴(前後スナップ)</div>
+            <div class="timeline">
+              <div class="snap"><div class="snap-pair"><div class="snap-photo snap-b"></div><div class="snap-photo snap-a"></div></div><div class="snap-date">6/12</div></div>
+              <div class="snap"><div class="snap-pair"><div class="snap-photo snap-b"></div><div class="snap-photo snap-a"></div></div><div class="snap-date">7/10</div></div>
+              <div class="snap"><div class="snap-pair"><div class="snap-photo snap-b"></div><div class="snap-photo snap-a"></div></div><div class="snap-date" id="snap-date-3"></div></div>
+            </div>
+          </div>
+          <div class="ai-card">
+            <div class="ai-ic">AI</div>
+            <div>
+              <div class="ai-label">AIからの接客提案</div>
+              <div class="ai-text" id="cust-ai"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-side">
+          <div class="stat-card"><div class="stat-label">今月の来店者数</div><div class="stat-value">128</div><div class="stat-sub">前月比 +12%(サンプル)</div></div>
+          <div class="stat-card"><div class="stat-label">リピート率</div><div class="stat-value">76%</div><div class="stat-sub">前月比 +4pt(サンプル)</div></div>
+          <div class="stat-card"><div class="stat-label">要フォローのお客様</div><div class="stat-value warn">3名</div><div class="stat-sub">来店周期を超過</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view" data-view="customers">
+      <h1 class="view-title">顧客一覧</h1>
+      <p class="view-sub">来店履歴・ランク・次回来店予測をまとめて確認できます。</p>
+      <table class="tbl">
+        <thead><tr><th>氏名</th><th>ランク</th><th>来店回数</th><th>前回来店</th><th>次回来店予測</th></tr></thead>
+        <tbody id="customers-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="view" data-view="schedule">
+      <h1 class="view-title">スケジュール</h1>
+      <p class="view-sub">予約状況と過去の来店を、週・月のタイムラインで振り返れます。</p>
+      <div class="sched-toolbar">
+        <div class="mode-toggle">
+          <div class="mode-btn" data-mode="week">週表示</div>
+          <div class="mode-btn" data-mode="month">月表示</div>
+        </div>
+        <div class="week-nav" id="week-nav-controls">
+          <div class="week-nav-btn" id="prev-week"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></div>
+          <div class="week-label" id="week-label"></div>
+          <div class="week-nav-btn" id="next-week"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></div>
+        </div>
+        <div class="week-nav" id="month-nav-controls" style="display:none">
+          <div class="week-nav-btn" id="prev-month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></div>
+          <div class="week-label" id="month-label"></div>
+          <div class="week-nav-btn" id="next-month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></div>
+        </div>
+      </div>
+
+      <div class="week-cols" id="week-cols"></div>
+
+      <div id="month-view" style="display:none">
+        <div class="month-grid" id="month-grid"></div>
+        <div class="month-detail" id="month-detail" style="display:none">
+          <div class="month-detail-title" id="month-detail-title"></div>
+          <div id="month-detail-appts"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view" data-view="checkin">
+      <h1 class="view-title">チェックイン履歴</h1>
+      <p class="view-sub">実際のチェックインは入口設置のタブレット端末(別デバイス)のカメラで行われます。ここではその記録を確認できます。</p>
+      <div class="checkin-panel">
+        <div class="scan-box">
+          <div class="scan-frame">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"></path><path d="M9 20.5l1.8 1.8L15 18.5"></path></svg>
+          </div>
+          <div class="scan-caption">通常のチェックインは入口のタブレット端末で行われます。何かあった場合のみ、ここから手動で記録してください。</div>
+          <button class="btn-primary" id="btn-checkin">手動チェックインする</button>
+        </div>
+        <div class="checkin-log" id="checkin-log"></div>
+      </div>
+    </div>
+
+    <div class="view" data-view="reports">
+      <h1 class="view-title">効果検証で見ていく指標</h1>
+      <p class="view-sub">ご提案書のKPIをもとにしたサンプル表示です。</p>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">来店周期の安定度</div>
+          <div class="kpi-value">±3.2日</div>
+          <div class="kpi-track"><div class="kpi-fill" style="width: 72%"></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">リピート率</div>
+          <div class="kpi-value">76%</div>
+          <div class="kpi-track"><div class="kpi-fill" style="width: 76%"></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">LINE登録・開封率</div>
+          <div class="kpi-value">88% / 64%</div>
+          <div class="kpi-track"><div class="kpi-fill" style="width: 64%"></div></div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">紹介・口コミの増加</div>
+          <div class="kpi-value">月4件</div>
+          <div class="kpi-track"><div class="kpi-fill" style="width: 40%"></div></div>
+        </div>
+      </div>
+      <div class="kpi-note">※すべてサンプルデータです。具体的な目標値は運用開始後の実データをもとに設定します。</div>
+    </div>
+
+    <div class="view" data-view="settings">
+      <h1 class="view-title">設定</h1>
+      <p class="view-sub">記録する項目は店舗ごとにカスタマイズできます。オン/オフを切り替えてみてください。</p>
+      <div class="settings-list" id="settings-list"></div>
+    </div>
+  </main>
+</div>
+
+<script>
+(function () {
+  var CUSTOMERS = [
+    { id: 0, name: '佐藤 花子', initials: '佐藤', rank: 'ゴールド会員', visits: 32, lastVisit: '8/24', nextPredict: '3週間後', lastMenu: 'カラー+カット', ai: '佐藤様はここ3回連続でアッシュ系カラーをご利用です。季節の変わり目に合わせて、暖色系のトーンをご提案してみてはいかがでしょうか。' },
+    { id: 1, name: '田中 由美', initials: '田中', rank: 'シルバー会員', visits: 14, lastVisit: '8/10', nextPredict: '2週間後', lastMenu: 'パーマ', ai: '田中様は前回パーマの持ちを気にされていました。次回はトリートメントの追加をご提案すると喜ばれそうです。' },
+    { id: 2, name: '鈴木 蓮', initials: '鈴木', rank: 'レギュラー会員', visits: 5, lastVisit: '7/28', nextPredict: '周期が不安定', lastMenu: 'カット', ai: '鈴木様は来店間隔が空きがちです。次回はご来店しやすい時間帯のご提案をしてみましょう。' },
+  ];
+
+  var DEFAULT_CHECKINS = [
+    { name: '佐藤 花子', time: '10:12' },
+    { name: '田中 由美', time: '11:40' },
+    { name: '鈴木 蓮', time: '13:05' },
+  ];
+
+  var SETTINGS_DEFS = [
+    { key: 'basic', label: '基本情報', desc: '氏名・生年月日・連絡先・初回来店日' },
+    { key: 'history', label: '施術履歴', desc: '来店日時・担当・メニュー・使用薬剤・料金' },
+    { key: 'visual', label: 'ビジュアル履歴', desc: '施術前後のスナップ写真、髪型・カラーの変遷' },
+    { key: 'prefs', label: '嗜好・接客メモ', desc: 'なりたい髪型の傾向、苦手な施術、会話の好み' },
+    { key: 'life', label: 'ライフイベント', desc: '誕生日、記念日、家族の利用状況' },
+    { key: 'loyalty', label: 'ロイヤルティ情報', desc: '来店回数、利用金額、ランク、紹介実績' },
+  ];
+
+  var WEEK_SETS = {
+    '-1': {
+      label: '9/1(月) - 9/7(日) ・ 先週',
+      days: [
+        { dow: '月', date: '9/1', past: true, appts: [{ time: '11:00', name: '田中 由美' }] },
+        { dow: '火', date: '9/2', past: true, appts: [] },
+        { dow: '水', date: '9/3', past: true, appts: [{ time: '14:00', name: '佐藤 花子' }] },
+        { dow: '木', date: '9/4', past: true, appts: [] },
+        { dow: '金', date: '9/5', past: true, appts: [{ time: '16:00', name: '鈴木 蓮' }] },
+        { dow: '土', date: '9/6', past: true, appts: [{ time: '11:00', name: '佐藤 花子' }, { time: '15:00', name: '田中 由美' }] },
+        { dow: '日', date: '9/7', past: true, appts: [] },
+      ],
+    },
+    '0': {
+      label: '9/8(月) - 9/14(日) ・ 今週',
+      days: [
+        { dow: '月', date: '9/8', past: true, appts: [{ time: '10:00', name: '佐藤 花子' }] },
+        { dow: '火', date: '9/9', past: true, appts: [] },
+        { dow: '水', date: '9/10', past: true, appts: [{ time: '13:00', name: '田中 由美' }] },
+        { dow: '木', date: '9/11', past: true, appts: [] },
+        { dow: '金', date: '9/12', past: false, appts: [{ time: '15:00', name: '鈴木 蓮' }] },
+        { dow: '土', date: '9/13', past: false, appts: [{ time: '11:00', name: '佐藤 花子' }, { time: '16:00', name: '田中 由美' }] },
+        { dow: '日', date: '9/14', past: false, appts: [] },
+      ],
+    },
+    '1': {
+      label: '9/15(月) - 9/21(日) ・ 来週',
+      days: [
+        { dow: '月', date: '9/15', past: false, appts: [] },
+        { dow: '火', date: '9/16', past: false, appts: [{ time: '11:00', name: '佐藤 花子' }] },
+        { dow: '水', date: '9/17', past: false, appts: [] },
+        { dow: '木', date: '9/18', past: false, appts: [{ time: '14:00', name: '鈴木 蓮' }] },
+        { dow: '金', date: '9/19', past: false, appts: [] },
+        { dow: '土', date: '9/20', past: false, appts: [{ time: '10:00', name: '田中 由美' }, { time: '13:00', name: '佐藤 花子' }] },
+        { dow: '日', date: '9/21', past: false, appts: [] },
+      ],
+    },
+  };
+
+  var BASE_YEAR = 2026, BASE_MONTH = 8; // September 2026, 0-indexed
+
+  var state = {
+    view: 'dashboard',
+    selectedIndex: 0,
+    checkinLog: DEFAULT_CHECKINS.slice(),
+    settings: { basic: true, history: true, visual: true, prefs: true, life: false, loyalty: true },
+    scheduleMode: 'week',
+    weekOffset: 0,
+    monthOffset: 0,
+    selectedDay: null,
+    selectedDayMonthOffset: null,
+  };
+
+  function esc(s) { var d = document.createElement('div'); d.textContent = String(s); return d.innerHTML; }
+
+  function setState(patch) { Object.assign(state, patch); render(); }
+
+  function renderNav() {
+    document.querySelectorAll('.nav-item').forEach(function (el) {
+      el.classList.toggle('active', el.getAttribute('data-view') === state.view);
+    });
+    document.querySelectorAll('.view').forEach(function (el) {
+      el.classList.toggle('active', el.getAttribute('data-view') === state.view);
+    });
+  }
+
+  function renderDashboard() {
+    var chipsEl = document.getElementById('chips');
+    chipsEl.innerHTML = CUSTOMERS.map(function (c) {
+      return '<div class="chip' + (c.id === state.selectedIndex ? ' selected' : '') + '" data-id="' + c.id + '">' + esc(c.initials) + '</div>';
+    }).join('');
+    chipsEl.querySelectorAll('.chip').forEach(function (el) {
+      el.addEventListener('click', function () { setState({ selectedIndex: Number(el.getAttribute('data-id')) }); });
+    });
+
+    var c = CUSTOMERS[state.selectedIndex] || CUSTOMERS[0];
+    document.getElementById('cust-name').textContent = c.name;
+    document.getElementById('cust-badge').textContent = c.rank;
+    document.getElementById('cust-sub').textContent = '来店' + c.visits + '回目 ・ 次回来店予測 ' + c.nextPredict + ' ・ 前回 ' + c.lastVisit + ' ' + c.lastMenu;
+    document.getElementById('cust-ai').textContent = c.ai;
+    document.getElementById('snap-date-3').textContent = c.lastVisit;
+  }
+
+  function renderCustomers() {
+    document.getElementById('customers-tbody').innerHTML = CUSTOMERS.map(function (c) {
+      return '<tr><td>' + esc(c.name) + '</td><td>' + esc(c.rank) + '</td><td>' + c.visits + '回</td><td>' + esc(c.lastVisit) + '</td><td>' + esc(c.nextPredict) + '</td></tr>';
+    }).join('');
+  }
+
+  function renderCheckin() {
+    document.getElementById('checkin-log').innerHTML = state.checkinLog.map(function (ci) {
+      return '<div class="checkin-row"><div class="checkin-name">' + esc(ci.name) + '</div><div class="checkin-time">' + esc(ci.time) + '</div></div>';
+    }).join('');
+  }
+
+  function renderSettings() {
+    document.getElementById('settings-list').innerHTML = SETTINGS_DEFS.map(function (s) {
+      var on = !!state.settings[s.key];
+      return '<div class="settings-row"><div><div class="settings-label">' + esc(s.label) + '</div><div class="settings-desc">' + esc(s.desc) + '</div></div>' +
+        '<div class="switch' + (on ? ' on' : '') + '" data-key="' + s.key + '"><div class="switch-knob"></div></div></div>';
+    }).join('');
+    document.querySelectorAll('#settings-list .switch').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var key = el.getAttribute('data-key');
+        var next = Object.assign({}, state.settings);
+        next[key] = !next[key];
+        setState({ settings: next });
+      });
+    });
+  }
+
+  function renderScheduleToolbar() {
+    document.querySelectorAll('.mode-btn').forEach(function (el) {
+      el.classList.toggle('active', el.getAttribute('data-mode') === state.scheduleMode);
+    });
+    var isWeek = state.scheduleMode === 'week';
+    document.getElementById('week-nav-controls').style.display = isWeek ? 'flex' : 'none';
+    document.getElementById('month-nav-controls').style.display = isWeek ? 'none' : 'flex';
+    document.getElementById('week-cols').style.display = isWeek ? 'grid' : 'none';
+    document.getElementById('month-view').style.display = isWeek ? 'none' : 'block';
+  }
+
+  function renderWeek() {
+    var weekOffset = Math.max(-1, Math.min(1, state.weekOffset));
+    var weekSet = WEEK_SETS[String(weekOffset)] || WEEK_SETS['0'];
+    document.getElementById('week-label').textContent = weekSet.label;
+    document.getElementById('week-cols').innerHTML = weekSet.days.map(function (d) {
+      var apptsHtml = d.appts.map(function (a) {
+        return '<div class="appt-chip ' + (d.past ? 'done' : 'upcoming') + '"><div class="appt-time">' + esc(a.time) + '</div><div>' + esc(a.name) + '</div></div>';
+      }).join('');
+      if (d.appts.length === 0) apptsHtml = '<div class="appt-empty">予約なし</div>';
+      return '<div class="week-col' + (d.past ? ' past' : '') + '"><div class="week-col-head"><div class="dow">' + esc(d.dow) + '</div><div class="d">' + esc(d.date) + '</div></div>' + apptsHtml + '</div>';
+    }).join('');
+  }
+
+  function renderMonth() {
+    var monthOffset = Math.max(-1, Math.min(1, state.monthOffset));
+    var targetMonthIndex = BASE_MONTH + monthOffset;
+    var daysInMonth = new Date(BASE_YEAR, targetMonthIndex + 1, 0).getDate();
+    var firstDow = new Date(BASE_YEAR, targetMonthIndex, 1).getDay();
+    var monthLabel = (targetMonthIndex + 1) + '月' + (monthOffset === 0 ? ' ・ 今月' : monthOffset < 0 ? ' ・ 先月(振り返り)' : ' ・ 来月');
+    var todayDay = monthOffset === 0 ? 14 : null;
+    document.getElementById('month-label').textContent = monthLabel;
+
+    var seed = 100 + monthOffset * 7;
+    function rnd() { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; }
+    var dayCounts = [];
+    for (var d = 1; d <= daysInMonth; d++) {
+      var r = rnd();
+      dayCounts.push(r < 0.35 ? 0 : Math.ceil(r * 4));
+    }
+
+    var hasSelectedDay = state.selectedDay != null && state.selectedDayMonthOffset === monthOffset;
+    var weekdayLabels = ['日', '月', '火', '水', '木', '金', '土'];
+    var cellsHtml = weekdayLabels.map(function (wl) { return '<div class="weekday-label">' + wl + '</div>'; }).join('');
+    for (var i = 0; i < firstDow; i++) cellsHtml += '<div class="month-cell pad"></div>';
+    for (var dd = 1; dd <= daysInMonth; dd++) {
+      var count = dayCounts[dd - 1];
+      var isPast = todayDay != null ? dd < todayDay : monthOffset < 0;
+      var hasCount = count > 0;
+      var cls = 'month-cell' + (isPast ? ' past' : '') + (hasSelectedDay && state.selectedDay === dd ? ' selected' : '');
+      var inner = '<div class="month-daynum">' + dd + '</div>';
+      if (hasCount) inner += '<div class="month-count ' + (isPast ? 'done' : 'upcoming') + '">' + count + '件</div>';
+      cellsHtml += '<div class="' + cls + '" data-day="' + dd + '" data-has-count="' + (hasCount ? '1' : '0') + '">' + inner + '</div>';
+    }
+    var monthGridEl = document.getElementById('month-grid');
+    monthGridEl.innerHTML = cellsHtml;
+    monthGridEl.querySelectorAll('.month-cell[data-has-count="1"]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        setState({ selectedDay: Number(el.getAttribute('data-day')), selectedDayMonthOffset: monthOffset });
+      });
+    });
+
+    var NAMES = ['佐藤 花子', '田中 由美', '鈴木 蓮'];
+    var TIMES = ['10:00', '11:30', '13:00', '15:00', '16:30'];
+    var detailEl = document.getElementById('month-detail');
+    if (hasSelectedDay) {
+      var cnt = dayCounts[state.selectedDay - 1] || 0;
+      var isPastSel = todayDay != null ? state.selectedDay < todayDay : monthOffset < 0;
+      document.getElementById('month-detail-title').textContent = (targetMonthIndex + 1) + '月' + state.selectedDay + '日の予定(' + cnt + '件)';
+      var apptsHtml = '';
+      for (var k = 0; k < cnt; k++) {
+        apptsHtml += '<div class="appt-chip ' + (isPastSel ? 'done' : 'upcoming') + '"><div class="appt-time">' + TIMES[(state.selectedDay + k) % TIMES.length] + '</div><div>' + NAMES[(state.selectedDay + k) % NAMES.length] + '</div></div>';
+      }
+      document.getElementById('month-detail-appts').innerHTML = apptsHtml;
+      detailEl.style.display = 'block';
+    } else {
+      detailEl.style.display = 'none';
+    }
+  }
+
+  function render() {
+    renderNav();
+    renderDashboard();
+    renderCustomers();
+    renderCheckin();
+    renderSettings();
+    renderScheduleToolbar();
+    renderWeek();
+    renderMonth();
+  }
+
+  document.querySelectorAll('.nav-item').forEach(function (el) {
+    el.addEventListener('click', function () { setState({ view: el.getAttribute('data-view') }); });
+  });
+  document.querySelectorAll('.mode-btn').forEach(function (el) {
+    el.addEventListener('click', function () { setState({ scheduleMode: el.getAttribute('data-mode') }); });
+  });
+  document.getElementById('prev-week').addEventListener('click', function () { setState({ weekOffset: Math.max(-1, state.weekOffset - 1) }); });
+  document.getElementById('next-week').addEventListener('click', function () { setState({ weekOffset: Math.min(1, state.weekOffset + 1) }); });
+  document.getElementById('prev-month').addEventListener('click', function () { setState({ monthOffset: Math.max(-1, state.monthOffset - 1) }); });
+  document.getElementById('next-month').addEventListener('click', function () { setState({ monthOffset: Math.min(1, state.monthOffset + 1) }); });
+  document.getElementById('btn-checkin').addEventListener('click', function () {
+    setState({ checkinLog: [{ name: '新規のお客様', time: 'たった今' }].concat(state.checkinLog) });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

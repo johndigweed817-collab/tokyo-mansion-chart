@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>夏休みの宿題チェックリスト（弟さん用）</title>
+  <style>
+    :root {
+      --primary-color: #2e8b57;
+      --accent-color: #f39c12;
+      --bg-color: #f0f7f4;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --border-color: #dcece3;
+      --completed-color: #888888;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto; }
+    header { background: linear-gradient(135deg, var(--primary-color), #27ae60); color: white; padding: 24px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+    header h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    header p { font-size: 14px; opacity: 0.9; }
+    .progress-container { background-color: var(--card-bg); padding: 16px 20px; border-radius: 10px; margin-bottom: 24px; border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+    .progress-bar-bg { background-color: var(--border-color); height: 12px; border-radius: 6px; overflow: hidden; margin-top: 8px; }
+    .progress-bar-fill { background-color: var(--accent-color); height: 100%; width: 0%; transition: width 0.3s ease; }
+    .subject-card { background-color: var(--card-bg); border-radius: 10px; padding: 20px; margin-bottom: 20px; border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+    .subject-title { font-size: 18px; color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 6px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+    .todo-item { display: flex; align-items: flex-start; padding: 10px 0; border-bottom: 1px dashed var(--border-color); }
+    .todo-item:last-child { border-bottom: none; }
+    .todo-item input[type="checkbox"] { width: 18px; height: 18px; margin-right: 12px; margin-top: 3px; cursor: pointer; accent-color: var(--primary-color); }
+    .todo-content { flex: 1; }
+    .todo-label { font-weight: 600; font-size: 15px; cursor: pointer; }
+    .todo-details { font-size: 13px; color: #666; margin-top: 3px; }
+    .badge-info { display: inline-block; background-color: #d1ecf1; color: #0c5460; font-size: 12px; font-weight: bold; padding: 2px 8px; border-radius: 4px; margin-top: 4px; border: 1px solid #bee5eb; }
+    .badge-optional { display: inline-block; background-color: #e2e3e5; color: #383d41; font-size: 12px; font-weight: bold; padding: 2px 8px; border-radius: 4px; margin-top: 4px; border: 1px solid #d6d8db; }
+    .completed .todo-label { text-decoration: line-through; color: var(--completed-color); }
+    .completed .todo-details { color: #bbb; }
+    footer { text-align: center; margin-top: 30px; padding: 20px; color: #777; font-size: 13px; }
+    .btn-reset { background-color: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; margin-top: 10px; }
+    .btn-reset:hover { background-color: #c0392b; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>夏休みの宿題チェックリスト（弟さん用）</h1>
+    <p>「自分で計画を立てて取り組みましょう。」チェックを入れると自動で保存されます。</p>
+  </header>
+
+  <div class="progress-container">
+    <div style="display: flex; justify-content: space-between; font-weight: bold;">
+      <span>全体進捗状況（希望者のみの課題は除く）</span>
+      <span id="progress-text">0 / 0 (0%)</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="subject-card">
+    <div class="subject-title">✏️ 毎日の学習・ドリル</div>
+    
+    <div class="todo-item required-item">
+      <input type="checkbox" class="save-state" id="y-drill-1">
+      <div class="todo-content">
+        <label class="todo-label" for="y-drill-1">① ドリルパーク（国算理社）</label>
+        <div class="todo-details">課題ドリルを終わらせる</div>
+      </div>
+    </div>
+
+    <div class="todo-item required-item">
+      <input type="checkbox" class="save-state" id="y-abc-1">
+      <div class="todo-content">
+        <label class="todo-label" for="y-abc-1">⑥ ABCノート</label>
+        <div class="todo-details">P24まで進める（終わった人はさらに進めても構いません）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subject-card">
+    <div class="subject-title">🎨 表現・調べ学習</div>
+    
+    <div class="todo-item required-item">
+      <input type="checkbox" class="save-state" id="y-book-1">
+      <div class="todo-content">
+        <label class="todo-label" for="y-book-1">② 本の紹介カード</label>
+        <div class="todo-details">本を読んで紹介カードを作成する</div>
+      </div>
+    </div>
+
+    <div class="todo-item required-item">
+      <input type="checkbox" class="save-state" id="y-home-1">
+      <div class="todo-content">
+        <label class="todo-label" for="y-home-1">③ 家庭科の課題</label>
+        <div class="todo-details">「ゆでておいしい料理を作ろう」「マイプランに挑戦（整理整とん）」</div>
+        <span class="badge-info">オクリンクプラス 7/17(金)の配信を確認</span>
+      </div>
+    </div>
+
+    <div class="todo-item">
+      <input type="checkbox" class="save-state" id="y-sci-1">
+      <div class="todo-content">
+        <label class="todo-label" for="y-sci-1">⑤ 科学展出展作品</label>
+        <div class="todo-details">自由研究や工作など</div>
+        <span class="badge-optional">希望者のみ</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="subject-card">
+    <div class="subject-title">🏠 生活</div>
+    
+    <div class="todo-item required-item">
+      <input type="checkbox" class="save-state" id="y-help-1">
+      <div class="todo-content">
+        <label class="todo-label" for="y-help-1">④ おうちの人のお手伝い</label>
+        <div class="todo-details">毎日続けるお手伝いを決めて取り組む</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <button class="btn-reset" id="reset-btn">チェックをすべてリセット</button>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkboxes = document.querySelectorAll('.save-state');
+      const requiredItems = document.querySelectorAll('.required-item input[type="checkbox"]');
+      const progressText = document.getElementById('progress-text');
+      const progressFill = document.getElementById('progress-fill');
+      const resetBtn = document.getElementById('reset-btn');
+
+      function updateProgress() {
+        const total = requiredItems.length;
+        let checkedCount = 0;
+
+        requiredItems.forEach(cb => {
+          if (cb.checked) checkedCount++;
+        });
+
+        const percent = total > 0 ? Math.round((checkedCount / total) * 100) : 0;
+        progressText.textContent = `${checkedCount} / ${total} (${percent}%)`;
+        progressFill.style.width = `${percent}%`;
+      }
+
+      checkboxes.forEach(checkbox => {
+        const id = checkbox.id;
+        // 弟用と兄用でIDが被らないようにプレフィックスを付ける
+        const savedState = localStorage.getItem('y_homework_' + id);
+
+        if (savedState === 'true') {
+          checkbox.checked = true;
+          checkbox.closest('.todo-item').classList.add('completed');
+        }
+
+        checkbox.addEventListener('change', (e) => {
+          const isChecked = e.target.checked;
+          localStorage.setItem('y_homework_' + id, isChecked);
+
+          if (isChecked) {
+            e.target.closest('.todo-item').classList.add('completed');
+          } else {
+            e.target.closest('.todo-item').classList.remove('completed');
+          }
+
+          updateProgress();
+        });
+      });
+
+      resetBtn.addEventListener('click', () => {
+        if (confirm('すべてのチェックをクリアしてもよろしいですか？')) {
+          checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+            checkbox.closest('.todo-item').classList.remove('completed');
+            localStorage.removeItem('y_homework_' + checkbox.id);
+          });
+          updateProgress();
+        }
+      });
+
+      updateProgress();
+    });
+  </script>
+</body>
+</html>

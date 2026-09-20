@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スニーカー サイドマーク図鑑</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:    #0c0b09;
+  --bg2:   #141210;
+  --bg3:   #1b1814;
+  --line:  #252118;
+  --line2: #312d24;
+  --text:  #e6dece;
+  --text2: #968e7a;
+  --text3: #524d42;
+  --gold:  #c4a23a;
+  --gold2: #e8c870;
+  --sans:  'Noto Sans JP', sans-serif;
+  --disp:  'Bebas Neue', sans-serif;
+  --mono:  'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+
+/* ── HEADER ── */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg); border-bottom: 1px solid var(--line2);
+  padding: 0 28px;
+}
+.header-top {
+  display: flex; align-items: baseline; gap: 20px;
+  padding: 14px 0 10px;
+  border-bottom: 1px solid var(--line);
+}
+.site-title {
+  font-family: var(--disp); font-size: 22px; letter-spacing: 0.06em;
+  color: var(--text); line-height: 1;
+}
+.site-title span { color: var(--gold); }
+.brand-count {
+  font-family: var(--mono); font-size: 10px; color: var(--text3);
+  letter-spacing: 0.1em;
+}
+.header-filters {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  padding: 10px 0 12px; align-items: center;
+}
+.filter-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--text3); margin-right: 4px;
+}
+.filter-btn {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em;
+  padding: 4px 12px; border-radius: 2px; cursor: pointer;
+  border: 1px solid var(--line2); background: transparent;
+  color: var(--text2); transition: all 0.15s ease; white-space: nowrap;
+}
+.filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+.filter-btn.active { background: var(--gold); border-color: var(--gold); color: var(--bg); font-weight: 500; }
+
+/* ── GRID ── */
+.grid-wrap { padding: 20px 20px 80px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--bg2);
+  display: flex; flex-direction: column;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  cursor: default;
+}
+.card.hidden { display: none; }
+.card:hover { background: var(--bg3); z-index: 1; }
+
+.card-mark {
+  position: relative;
+  padding: 28px 20px 20px;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 140px;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.card-mark::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg, transparent, transparent 19px, var(--line) 19px, var(--line) 20px
+  );
+  opacity: 0.2;
+}
+.card-num {
+  position: absolute; top: 8px; left: 10px;
+  font-family: var(--mono); font-size: 9px; color: var(--text3); letter-spacing: 0.1em;
+}
+.card-type-dot {
+  position: absolute; top: 10px; right: 10px;
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.card-mark svg { position: relative; z-index: 1; }
+
+/* "no mark" placeholder */
+.no-mark-placeholder {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+}
+.no-mark-line {
+  width: 60px; height: 1px; background: var(--line2);
+}
+.no-mark-text {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; color: var(--text3);
+}
+
+.card-info { padding: 14px 14px 16px; flex: 1; }
+.card-brand {
+  font-family: var(--disp); font-size: 20px; letter-spacing: 0.05em;
+  color: var(--text); line-height: 1; margin-bottom: 4px;
+}
+.card-mark-name {
+  font-family: var(--mono); font-size: 10px; color: var(--gold);
+  letter-spacing: 0.08em; margin-bottom: 8px; line-height: 1.3;
+}
+.card-origin {
+  font-size: 11px; color: var(--text3); margin-bottom: 8px; line-height: 1.4;
+}
+.card-desc {
+  font-size: 12px; color: var(--text2); line-height: 1.65; font-weight: 300;
+}
+.card-tag {
+  display: inline-block; margin-top: 10px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.06em;
+  padding: 2px 8px; border: 1px solid; border-radius: 2px;
+}
+
+/* type colors */
+.t-func   { color: #4a90d9; border-color: #4a90d9; }
+.t-int    { color: #3aaa6a; border-color: #3aaa6a; }
+.t-sym    { color: #c4a23a; border-color: #c4a23a; }
+.t-let    { color: #d44; border-color: #d44; }
+.t-sig    { color: #a06ad4; border-color: #a06ad4; }
+.t-sol    { color: #e07030; border-color: #e07030; }
+.t-none   { color: var(--text3); border-color: var(--text3); }
+
+/* dot colors */
+.d-func  { background: #4a90d9; }
+.d-int   { background: #3aaa6a; }
+.d-sym   { background: #c4a23a; }
+.d-let   { background: #d44; }
+.d-sig   { background: #a06ad4; }
+.d-sol   { background: #e07030; }
+.d-none  { background: var(--text3); }
+
+/* empty state */
+.empty-state {
+  display: none; text-align: center; padding: 80px 20px;
+  font-family: var(--mono); font-size: 12px; color: var(--text3); letter-spacing: 0.1em;
+  grid-column: 1 / -1;
+}
+.empty-state.show { display: block; }
+
+/* count badge update */
+#visible-count { color: var(--gold); }
+
+@media (max-width: 500px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .site-title { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="site-title">SIDE<span>MARK</span> 図鑑</div>
+    <div class="brand-count"><span id="visible-count">26</span> / 26 brands</div>
+  </div>
+  <div class="header-filters">
+    <span class="filter-label">TYPE</span>
+    <button class="filter-btn active" data-type="all">すべて</button>
+    <button class="filter-btn" data-type="func">機能ストライプ型</button>
+    <button class="filter-btn" data-type="int">機能×意匠統合型</button>
+    <button class="filter-btn" data-type="sym">純粋シンボル型</button>
+    <button class="filter-btn" data-type="let">レター型</button>
+    <button class="filter-btn" data-type="sig">シグネチャー型</button>
+    <button class="filter-btn" data-type="sol">ソール・シルエット型</button>
+    <button class="filter-btn" data-type="none">サイドマークなし</button>
+  </div>
+</header>
+
+<div class="grid-wrap">
+<div class="grid" id="grid">
+
+  <!-- 01 Adidas -->
+  <div class="card" data-type="func">
+    <div class="card-mark">
+      <div class="card-num">01</div>
+      <div class="card-type-dot d-func"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <rect x="22" y="8" width="26" height="84" rx="4" fill="#e6dece"/>
+        <rect x="67" y="8" width="26" height="84" rx="4" fill="#e6dece"/>
+        <rect x="112" y="8" width="26" height="84" rx="4" fill="#e6dece"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Adidas</div>
+      <div class="card-mark-name">THREE STRIPES</div>
+      <div class="card-origin">🇩🇪 1949 / 商標取得 1952</div>
+      <div class="card-desc">フィンランドKarhuの補強ストライプを約€1,600＋ウイスキー2本で購入。2本・4本を試し3本へ。機能パーツがそのまま世界最強ロゴになった。</div>
+      <span class="card-tag t-func">機能ストライプ型</span>
+    </div>
+  </div>
+
+  <!-- 02 Puma -->
+  <div class="card" data-type="func">
+    <div class="card-mark">
+      <div class="card-num">02</div>
+      <div class="card-type-dot d-func"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <path d="M10 92 C35 80 90 45 155 38 L155 54 C90 62 38 98 10 104 Z" fill="#e6dece"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Puma</div>
+      <div class="card-mark-name">FORMSTRIP</div>
+      <div class="card-origin">🇩🇪 1948 / Formstrip 1958</div>
+      <div class="card-desc">「3本線に似せるな」という制約から生まれた曲線ストライプ。ダスラー兄弟の対立がデザイン言語の多様化を生んだ。</div>
+      <span class="card-tag t-func">機能ストライプ型</span>
+    </div>
+  </div>
+
+  <!-- 03 Karhu -->
+  <div class="card" data-type="func">
+    <div class="card-mark">
+      <div class="card-num">03</div>
+      <div class="card-type-dot d-func"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <rect x="18" y="10" width="20" height="80" rx="3" fill="#e6dece" opacity="0.9"/>
+        <rect x="52" y="10" width="20" height="80" rx="3" fill="#e6dece" opacity="0.9"/>
+        <rect x="86" y="10" width="20" height="80" rx="3" fill="#e6dece" opacity="0.9"/>
+        <!-- M mark -->
+        <text x="122" y="70" font-family="'Bebas Neue',sans-serif" font-size="58" fill="#c4a23a" opacity="0.9">M</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Karhu</div>
+      <div class="card-mark-name">3 STRIPES → M（MESTARI）</div>
+      <div class="card-origin">🇫🇮 1916 / フィンランド最古</div>
+      <div class="card-desc">3本線の真の発明者。Adidasに売却後は「M（チャンピオン）」マークに転換。現在も現役で、歴史最大のトレードの被害者とも評される。</div>
+      <span class="card-tag t-func">機能ストライプ型</span>
+    </div>
+  </div>
+
+  <!-- 04 Nike -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">04</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <path d="M6 78 Q55 10 152 28 Q100 44 28 78 Z" fill="#e6dece"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Nike</div>
+      <div class="card-mark-name">SWOOSH</div>
+      <div class="card-origin">🇺🇸 1971 / $35で発注</div>
+      <div class="card-desc">デザイン学生Caroline Davidsonが$35で制作。「3本線に似せるな」が唯一の指示。機能的根拠ゼロ、純粋な抽象記号。MJ契約でスウッシュが文化になった。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 05 Onitsuka Tiger -->
+  <div class="card" data-type="int">
+    <div class="card-mark">
+      <div class="card-num">05</div>
+      <div class="card-type-dot d-int"></div>
+      <svg viewBox="0 0 160 110" width="150" height="100">
+        <path d="M12 18 Q70 55 152 88" fill="none" stroke="#e6dece" stroke-width="14" stroke-linecap="round"/>
+        <path d="M12 88 Q70 55 152 18" fill="none" stroke="#cc2200" stroke-width="14" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Onitsuka Tiger</div>
+      <div class="card-mark-name">TIGER STRIPES</div>
+      <div class="card-origin">🇯🇵 1949 / Mexico 66</div>
+      <div class="card-desc">200案以上の社内コンペから誕生。X字交差の2本線が靴紐と連動し横安定性を向上。京都大学との共同研究で機能性を実証した稀有なケース。</div>
+      <span class="card-tag t-int">機能×意匠統合型</span>
+    </div>
+  </div>
+
+  <!-- 06 ASICS -->
+  <div class="card" data-type="int">
+    <div class="card-mark">
+      <div class="card-num">06</div>
+      <div class="card-type-dot d-int"></div>
+      <svg viewBox="0 0 160 110" width="150" height="100">
+        <path d="M12 18 Q70 55 152 88" fill="none" stroke="#e6dece" stroke-width="14" stroke-linecap="round"/>
+        <path d="M12 88 Q70 55 152 18" fill="none" stroke="#4a90d9" stroke-width="14" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">ASICS</div>
+      <div class="card-mark-name">ASICS STRIPE</div>
+      <div class="card-origin">🇯🇵 1977 / Onitsuka Tigerより改称</div>
+      <div class="card-desc">タイガーストライプをそのまま継承。長年競技者向けとして地道に続け、2020年代に欧米ストリートで爆発的再評価。GOAT伸び率+645%。</div>
+      <span class="card-tag t-int">機能×意匠統合型</span>
+    </div>
+  </div>
+
+  <!-- 07 Mizuno -->
+  <div class="card" data-type="int">
+    <div class="card-mark">
+      <div class="card-num">07</div>
+      <div class="card-type-dot d-int"></div>
+      <svg viewBox="0 0 160 110" width="150" height="100">
+        <!-- Wave plate cross-section suggestion -->
+        <path d="M10 80 Q40 30 80 55 Q120 80 150 28" fill="none" stroke="#e6dece" stroke-width="3" stroke-linecap="round"/>
+        <path d="M10 92 Q40 42 80 67 Q120 92 150 40" fill="none" stroke="#e6dece" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+        <!-- Runbird mark -->
+        <path d="M60 25 Q80 10 100 28 Q85 30 80 42 Q75 30 60 25Z" fill="#c4a23a"/>
+        <path d="M80 42 Q85 30 100 28 Q92 46 80 42Z" fill="#c4a23a" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Mizuno</div>
+      <div class="card-mark-name">RUNBIRD + WAVE PLATE</div>
+      <div class="card-origin">🇯🇵 1906 / 大阪</div>
+      <div class="card-desc">鳥が羽を広げる「Runbird」マークと、ミッドソール内部のWaveプレートが二重のアイコン。Waveは1997年発明の機能技術で視覚的特徴にもなった。2025年最速成長ブランドのひとつ。</div>
+      <span class="card-tag t-int">機能×意匠統合型</span>
+    </div>
+  </div>
+
+  <!-- 08 Reebok -->
+  <div class="card" data-type="func">
+    <div class="card-mark">
+      <div class="card-num">08</div>
+      <div class="card-type-dot d-func"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <rect x="14" y="24" width="132" height="10" rx="3" fill="#cc2200" transform="rotate(-8 80 29)"/>
+        <rect x="14" y="42" width="100" height="9"  rx="3" fill="#003399" transform="rotate(-8 80 47)"/>
+        <rect x="14" y="58" width="68"  height="8"  rx="3" fill="#cc2200" transform="rotate(-8 80 63)" opacity="0.85"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Reebok</div>
+      <div class="card-mark-name">VECTOR</div>
+      <div class="card-origin">🇬🇧 1958 / Bolton, UK</div>
+      <div class="card-desc">赤×青のVectorマーク。英国旗Union Jackからインスパイア。1980年代にAerobic/Classicブームで台頭。現在はAuthentics等でヘリテージ路線。</div>
+      <span class="card-tag t-func">機能ストライプ型</span>
+    </div>
+  </div>
+
+  <!-- 09 New Balance -->
+  <div class="card" data-type="let">
+    <div class="card-mark">
+      <div class="card-num">09</div>
+      <div class="card-type-dot d-let"></div>
+      <svg viewBox="0 0 160 110" width="150" height="100">
+        <text x="50%" y="95" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="104" fill="#e6dece" letter-spacing="-2">N</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">New Balance</div>
+      <div class="card-mark-name">"N" LOGO</div>
+      <div class="card-origin">🇺🇸 1906 / 990モデルで確立 1982</div>
+      <div class="card-desc">初の$100スニーカー990で定着。モデルごとにNのサイズ・素材・配色が違い、それがコレクター性を生む。インカンベント中で唯一チャレンジャー的ポジション。</div>
+      <span class="card-tag t-let">レター型</span>
+    </div>
+  </div>
+
+  <!-- 10 Fila -->
+  <div class="card" data-type="let">
+    <div class="card-mark">
+      <div class="card-num">10</div>
+      <div class="card-type-dot d-let"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <text x="50%" y="82" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="96" fill="#e6dece" letter-spacing="2">F</text>
+        <rect x="20" y="85" width="120" height="4" rx="2" fill="#cc2200"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Fila</div>
+      <div class="card-mark-name">"F" BOX LOGO</div>
+      <div class="card-origin">🇮🇹→🇰🇷 1911 / イタリア創業、韓国資本</div>
+      <div class="card-desc">大きな「F」にレッドラインの組み合わせ。テニス・バスケで人気を博した後、2010年代に90sリバイバルで再評価。韓国企業が買収後もイタリアンスポーツのDNAを維持。</div>
+      <span class="card-tag t-let">レター型</span>
+    </div>
+  </div>
+
+  <!-- 11 Champion -->
+  <div class="card" data-type="let">
+    <div class="card-mark">
+      <div class="card-num">11</div>
+      <div class="card-type-dot d-let"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <text x="50%" y="80" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="90" fill="#e6dece">C</text>
+        <!-- script C suggestion -->
+        <path d="M95 38 Q110 20 120 38" fill="none" stroke="#c4a23a" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Champion</div>
+      <div class="card-mark-name">"C" SCRIPT LOGO</div>
+      <div class="card-origin">🇺🇸 1919 / アスレジャー</div>
+      <div class="card-desc">袖のスクリプト「C」がアイコン。スニーカーへの展開は比較的後発だが、2010年代のアスレジャーブームで急成長。ストリートウェアとの親和性が高い。</div>
+      <span class="card-tag t-let">レター型</span>
+    </div>
+  </div>
+
+  <!-- 12 Converse -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">12</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 110" width="150" height="100">
+        <polygon points="80,10 94,46 132,46 102,68 113,104 80,82 47,104 58,68 28,46 66,46" fill="#e6dece"/>
+        <path d="M30 108 L80 94 L130 108" fill="none" stroke="#e6dece" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Converse</div>
+      <div class="card-mark-name">STAR + CHEVRON</div>
+      <div class="card-origin">🇺🇸 1908 / All Star 1917</div>
+      <div class="card-desc">100年以上変わらないシルエット。バスケ→ロック→パンクと3つの文化運動に順番に採用された。ロゴが文化を選んだのではなく、文化がロゴを選び続けた。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 13 Vans -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">13</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <path d="M8 72 L152 72" fill="none" stroke="#e6dece" stroke-width="7" stroke-linecap="round"/>
+        <path d="M8 72 Q48 92 80 62 Q108 38 152 72" fill="none" stroke="#cc2200" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Vans</div>
+      <div class="card-mark-name">JAZZ STRIPE / SIDESTRIPE</div>
+      <div class="card-origin">🇺🇸 1966 / カリフォルニア</div>
+      <div class="card-desc">底部を走るストライプと、ウェーブ状のJazz Stripe。スケートボード文化のDIY精神がそのまま形になった。カラーウェイとチェッカー柄も立派なデザイン言語。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 14 Jordan -->
+  <div class="card" data-type="sig">
+    <div class="card-mark">
+      <div class="card-num">14</div>
+      <div class="card-type-dot d-sig"></div>
+      <svg viewBox="0 0 160 110" width="150" height="100">
+        <!-- Jumpman silhouette simplified -->
+        <circle cx="80" cy="22" r="9" fill="#e6dece"/>
+        <path d="M80 31 L80 62" stroke="#e6dece" stroke-width="5" stroke-linecap="round"/>
+        <path d="M80 44 L52 38" stroke="#e6dece" stroke-width="4" stroke-linecap="round"/>
+        <path d="M80 44 L108 32" stroke="#e6dece" stroke-width="4" stroke-linecap="round"/>
+        <path d="M80 62 L60 88" stroke="#e6dece" stroke-width="4" stroke-linecap="round"/>
+        <path d="M80 62 L108 82" stroke="#e6dece" stroke-width="4" stroke-linecap="round"/>
+        <path d="M108 82 L130 75" stroke="#e6dece" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Jordan</div>
+      <div class="card-mark-name">JUMPMAN</div>
+      <div class="card-origin">🇺🇸 Nike傘下 / 1988年</div>
+      <div class="card-desc">Air Jordan 1（1984）でスウッシュが文化的象徴へ。1988年にMJのダンクシルエット「Jumpman」が誕生し、選手個人をデザイン言語化するシグネチャー型の完成形を示した。</div>
+      <span class="card-tag t-sig">シグネチャー型</span>
+    </div>
+  </div>
+
+  <!-- 15 Kappa -->
+  <div class="card" data-type="sig">
+    <div class="card-mark">
+      <div class="card-num">15</div>
+      <div class="card-type-dot d-sig"></div>
+      <svg viewBox="0 0 160 110" width="150" height="100">
+        <!-- Omini: two figures back to back -->
+        <circle cx="58" cy="26" r="10" fill="#e6dece"/>
+        <circle cx="102" cy="26" r="10" fill="#e6dece"/>
+        <path d="M58 36 L58 72 L44 92" stroke="#e6dece" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M58 36 L70 60" stroke="#e6dece" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M102 36 L102 72 L116 92" stroke="#e6dece" stroke-width="5" stroke-linecap="round" fill="none"/>
+        <path d="M102 36 L90 60" stroke="#e6dece" stroke-width="4" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Kappa</div>
+      <div class="card-mark-name">OMINI（男女背合わせ）</div>
+      <div class="card-origin">🇮🇹 1967 / トリノ</div>
+      <div class="card-desc">男女が背中合わせで座るシルエット「Omini」。スポーツロゴとして異例の官能性を持つ。1978年に現在の形に確定し、サッカーユニフォームで世界的認知を獲得。</div>
+      <span class="card-tag t-sig">シグネチャー型</span>
+    </div>
+  </div>
+
+  <!-- 16 On -->
+  <div class="card" data-type="sol">
+    <div class="card-mark">
+      <div class="card-num">16</div>
+      <div class="card-type-dot d-sol"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- CloudTec pods -->
+        <rect x="6"  y="36" width="22" height="18" rx="9"  fill="#4a90d9" opacity="0.95"/>
+        <rect x="34" y="32" width="22" height="22" rx="11" fill="#4a90d9" opacity="0.95"/>
+        <rect x="62" y="34" width="22" height="20" rx="10" fill="#4a90d9" opacity="0.95"/>
+        <rect x="90" y="36" width="22" height="18" rx="9"  fill="#4a90d9" opacity="0.95"/>
+        <rect x="118" y="38" width="22" height="16" rx="8" fill="#4a90d9" opacity="0.95"/>
+        <line x1="6" y1="58" x2="140" y2="58" stroke="#252118" stroke-width="2"/>
+        <!-- "on" wordmark small -->
+        <text x="148" y="30" font-family="'DM Mono',monospace" font-size="11" fill="#e6dece" text-anchor="middle" letter-spacing="-0.5">on</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">On</div>
+      <div class="card-mark-name">CLOUDTEC® SOLE</div>
+      <div class="card-origin">🇨🇭 2010 / スイス</div>
+      <div class="card-desc">サイドマークは「on」のミニマルなワードマークのみ。アイコンはCloudTec®ソール（雲形ポッド）。「側面」という戦場を回避し底面へ。+28.5%成長（2024）。</div>
+      <span class="card-tag t-sol">ソール・シルエット型</span>
+    </div>
+  </div>
+
+  <!-- 17 Hoka -->
+  <div class="card" data-type="sol">
+    <div class="card-mark">
+      <div class="card-num">17</div>
+      <div class="card-type-dot d-sol"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- exaggerated midsole -->
+        <path d="M8 72 Q30 22 80 20 Q130 18 152 72 Z" fill="#e07030" opacity="0.9"/>
+        <path d="M8 72 L152 72" stroke="#252118" stroke-width="2" fill="none"/>
+        <!-- upper suggestion -->
+        <path d="M20 72 Q30 45 80 40 Q130 38 140 72" fill="#e6dece" opacity="0.15"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Hoka</div>
+      <div class="card-mark-name">OVERSIZED MIDSOLE</div>
+      <div class="card-origin">🇫🇷→🇺🇸 2009 / Deckers傘下</div>
+      <div class="card-desc">極端に肥大したミッドソールのシルエット自体がアイコン。ロゴより形状が先に目に入る「デカすぎて見間違えない」差別化。売上$2.2B、前年比+24%。</div>
+      <span class="card-tag t-sol">ソール・シルエット型</span>
+    </div>
+  </div>
+
+  <!-- 18 Salomon -->
+  <div class="card" data-type="sol">
+    <div class="card-mark">
+      <div class="card-num">18</div>
+      <div class="card-type-dot d-sol"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- XT-6 aggressive sole lugs -->
+        <path d="M10 65 Q50 18 150 32" fill="none" stroke="#3aaa6a" stroke-width="5" stroke-linecap="round"/>
+        <path d="M10 78 Q50 30 150 44" fill="none" stroke="#3aaa6a" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="28" cy="56" r="5" fill="#3aaa6a"/>
+        <circle cx="62" cy="40" r="5" fill="#3aaa6a"/>
+        <circle cx="96" cy="36" r="5" fill="#3aaa6a"/>
+        <circle cx="130" cy="38" r="5" fill="#3aaa6a"/>
+        <!-- Salomon wordmark -->
+        <text x="80" y="95" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#e6dece" letter-spacing="0.12em">SALOMON</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Salomon</div>
+      <div class="card-mark-name">XT TRAIL SOLE + WORDMARK</div>
+      <div class="card-origin">🇫🇷 1947 / スキーブランドから転身</div>
+      <div class="card-desc">スキーバインディングブランドが起源。XT-6のアウトドア機能美がストリートアイコンに。MM6 Maison Margielaコラボで文化的地位を確立。フットウェア初の$1B突破（2024）。</div>
+      <span class="card-tag t-sol">ソール・シルエット型</span>
+    </div>
+  </div>
+
+  <!-- 19 Anta -->
+  <div class="card" data-type="let">
+    <div class="card-mark">
+      <div class="card-num">19</div>
+      <div class="card-type-dot d-let"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- Anta A mark -->
+        <path d="M44 85 L80 15 L116 85" fill="none" stroke="#e6dece" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M58 60 L102 60" stroke="#e6dece" stroke-width="8" stroke-linecap="round"/>
+        <!-- flame-like inner fill -->
+        <path d="M80 15 L95 52 L80 46 L65 52 Z" fill="#cc2200" opacity="0.8"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Anta（安踏）</div>
+      <div class="card-mark-name">ANTA "A" MARK</div>
+      <div class="card-origin">🇨🇳 1991 / 福建省晋江</div>
+      <div class="card-desc">炎を模した「A」マーク。Kyrie Irving着用でStockX価格+1,901%を記録。中国国内で既にNikeを追い抜く規模。Li-Ning・Peakと並び中国スポーツブランドの雄。</div>
+      <span class="card-tag t-let">レター型</span>
+    </div>
+  </div>
+
+  <!-- 20 Li-Ning -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">20</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- Li-Ning swoosh-like mark -->
+        <path d="M18 75 Q55 20 145 38 Q100 55 28 78 Z" fill="#e6dece" opacity="0.9"/>
+        <path d="M18 75 Q55 20 145 38" fill="none" stroke="#cc2200" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Li-Ning（李寧）</div>
+      <div class="card-mark-name">LI-NING MARK</div>
+      <div class="card-origin">🇨🇳 1990 / 体操金メダリスト創業</div>
+      <div class="card-desc">1988年五輪体操金メダリスト李寧が創業。スウッシュに似た流線形マークを持つが独自の文化的文脈がある。「中国のナイキ」と呼ばれ、国潮（グオチャオ）ブームの旗手。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 21 Peak -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">21</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- mountain peak mark -->
+        <path d="M40 82 L80 22 L120 82 Z" fill="none" stroke="#e6dece" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M60 60 L80 22 L100 60" fill="#e6dece" opacity="0.3"/>
+        <text x="80" y="96" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#e6dece" letter-spacing="0.1em">PEAK</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Peak（匹克）</div>
+      <div class="card-mark-name">PEAK MOUNTAIN MARK</div>
+      <div class="card-origin">🇨🇳 1989 / 福建省</div>
+      <div class="card-desc">山頂を抽象化した三角形マーク。NBAプレイヤーとの契約で知名度を拡大。中国発でグローバル展開を進める中堅ブランド。「匹克」表記で国内認知も高い。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 22 Brooks -->
+  <div class="card" data-type="sol">
+    <div class="card-mark">
+      <div class="card-num">22</div>
+      <div class="card-type-dot d-sol"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- Brooks wordmark + forward motion swoosh -->
+        <path d="M14 62 Q50 28 148 40" fill="none" stroke="#e6dece" stroke-width="6" stroke-linecap="round"/>
+        <text x="80" y="88" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="22" fill="#e6dece" letter-spacing="0.12em">BROOKS</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Brooks</div>
+      <div class="card-mark-name">WORDMARK + RUN STRIPE</div>
+      <div class="card-origin">🇺🇸 1914 / ランニング特化</div>
+      <div class="card-desc">ランナーのためだけに存在するブランド。サイドマークより「ランニングに特化する」というポジション自体がアイデンティティ。売上$1B超でOnに次ぐプレミアムランニング市場の雄。</div>
+      <span class="card-tag t-sol">ソール・シルエット型</span>
+    </div>
+  </div>
+
+  <!-- 23 Saucony -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">23</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- 3 dots + S mark -->
+        <circle cx="44" cy="50" r="10" fill="#cc2200"/>
+        <circle cx="80" cy="50" r="10" fill="#e6dece"/>
+        <circle cx="116" cy="50" r="10" fill="#e6dece"/>
+        <text x="80" y="90" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#e6dece" letter-spacing="0.08em">SAUCONY</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Saucony</div>
+      <div class="card-mark-name">3 DOTS MARK</div>
+      <div class="card-origin">🇺🇸 1898 / ペンシルベニア</div>
+      <div class="card-desc">3つの丸が特徴のサイドマーク。ランニング起源でJazz Original等のレトロモデルがストリートで人気。Wolverine World Wideグループ傘下。OnやHokaに比べ認知度は低いが復権中。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 24 Lotto -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">24</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- diamond mark -->
+        <polygon points="80,18 118,50 80,82 42,50" fill="none" stroke="#e6dece" stroke-width="5"/>
+        <polygon points="80,32 102,50 80,68 58,50" fill="#e6dece" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Lotto</div>
+      <div class="card-mark-name">DIAMOND MARK</div>
+      <div class="card-origin">🇮🇹 1973 / トレヴィーゾ</div>
+      <div class="card-desc">ダイアモンド形のサイドマーク。テニスとサッカーで強い存在感。イタリアンスポーツウェアの流れを汲み、Fila・Kappa同様、80〜90年代ヴィンテージとして再評価中。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 25 Maison Margiela / Tabi -->
+  <div class="card" data-type="none">
+    <div class="card-mark">
+      <div class="card-num">25</div>
+      <div class="card-type-dot d-none"></div>
+      <div class="no-mark-placeholder">
+        <div class="no-mark-line"></div>
+        <!-- tabi toe suggestion -->
+        <svg viewBox="0 0 100 60" width="90" height="54">
+          <path d="M10 55 L10 10 Q10 5 20 5 L45 5 Q50 5 50 10 L50 55 Z" fill="#e6dece" opacity="0.5"/>
+          <path d="M50 55 L50 10 Q50 5 60 5 L80 5 Q90 5 90 10 L90 55 Z" fill="#e6dece" opacity="0.3"/>
+          <!-- no branding mark deliberately -->
+        </svg>
+        <div class="no-mark-line"></div>
+        <div class="no-mark-text">NO SIDE MARK</div>
+      </div>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Maison Margiela</div>
+      <div class="card-mark-name">NO LOGO（意図的無記名）</div>
+      <div class="card-origin">🇫🇷 1988 / パリ</div>
+      <div class="card-desc">4つのステッチのみ、ブランド名なし。「ロゴを持たない」こと自体がデザイン言語。Tabi Sneakerの割れたつま先シルエットがアイコン。反ロゴの極致。</div>
+      <span class="card-tag t-none">サイドマークなし</span>
+    </div>
+  </div>
+
+  <!-- 26 Common Projects -->
+  <div class="card" data-type="none">
+    <div class="card-mark">
+      <div class="card-num">26</div>
+      <div class="card-type-dot d-none"></div>
+      <div class="no-mark-placeholder">
+        <div class="no-mark-line"></div>
+        <svg viewBox="0 0 120 40" width="100" height="34">
+          <text x="10" y="28" font-family="'DM Mono',monospace" font-size="11" fill="#524d42" letter-spacing="0.12em">461927 36</text>
+        </svg>
+        <div class="no-mark-line"></div>
+        <div class="no-mark-text">SERIAL NUMBER ONLY</div>
+      </div>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Common Projects</div>
+      <div class="card-mark-name">GOLD SERIAL NUMBER</div>
+      <div class="card-origin">🇮🇹/🇺🇸 2004 / NY×イタリア製</div>
+      <div class="card-desc">ブランド名もロゴも一切なし。ヒールにゴールドの製品番号のみ。「番号だけ」という極めてミニマルな記号が逆説的に最高の識別子になった。知る人ぞ知るという排他性がブランド価値。</div>
+      <span class="card-tag t-none">サイドマークなし</span>
+    </div>
+  </div>
+
+  <!-- 27 Balenciaga -->
+  <div class="card" data-type="none">
+    <div class="card-mark">
+      <div class="card-num">27</div>
+      <div class="card-type-dot d-none"></div>
+      <div class="no-mark-placeholder">
+        <div class="no-mark-line"></div>
+        <svg viewBox="0 0 130 50" width="110" height="42">
+          <text x="65" y="32" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="16" fill="#524d42" letter-spacing="0.16em">BALENCIAGA</text>
+        </svg>
+        <div class="no-mark-line"></div>
+        <div class="no-mark-text">WORDMARK ONLY</div>
+      </div>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Balenciaga</div>
+      <div class="card-mark-name">WORDMARK（サイドマークなし）</div>
+      <div class="card-origin">🇪🇸→🇫🇷 1919 / Kering傘下</div>
+      <div class="card-desc">Triple SやSpeed Trainerはシルエットと巨大なBaleciagaロゴのみ。サイドに独立したマークはなく、シューズの形状そのものが識別子。デコンストラクション美学を引っ張った。</div>
+      <span class="card-tag t-none">サイドマークなし</span>
+    </div>
+  </div>
+
+  <!-- 28 Novesta -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">28</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- star with N -->
+        <polygon points="80,16 91,48 126,48 98,68 109,100 80,80 51,100 62,68 34,48 69,48" fill="#e6dece" opacity="0.85"/>
+        <text x="80" y="64" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="22" fill="#0c0b09">N</text>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Novesta</div>
+      <div class="card-mark-name">STAR MARK</div>
+      <div class="card-origin">🇸🇰 1939 / スロバキア</div>
+      <div class="card-desc">スロバキア最古のシューズブランド。星型のサイドマーク。共産主義時代から続く手工業的製法と素朴なデザインが欧州ヴィンテージ好きに再評価。良心的な価格帯も魅力。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 29 New Era (shoes) / Diadora -->
+  <div class="card" data-type="int">
+    <div class="card-mark">
+      <div class="card-num">29</div>
+      <div class="card-type-dot d-int"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- Diadora mark: two overlapping D shapes -->
+        <path d="M38 20 L38 80 Q38 88 60 88 Q90 88 90 54 Q90 20 60 20 Z" fill="none" stroke="#e6dece" stroke-width="5"/>
+        <path d="M58 34 L58 74 Q58 80 74 80 Q94 80 94 54 Q94 28 74 28 Z" fill="#e6dece" opacity="0.35"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Diadora</div>
+      <div class="card-mark-name">DIADORA MARK</div>
+      <div class="card-origin">🇮🇹 1948 / ヴェネト州</div>
+      <div class="card-desc">イタリアのスポーツ老舗。テニスとサイクリングで名声を確立。Björn Borgが着用したN.9000等のヘリテージモデルが再評価中。ロゴより歴史的カラーブロッキングが記号として機能。</div>
+      <span class="card-tag t-int">機能×意匠統合型</span>
+    </div>
+  </div>
+
+  <!-- 30 Hummel -->
+  <div class="card" data-type="func">
+    <div class="card-mark">
+      <div class="card-num">30</div>
+      <div class="card-type-dot d-func"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- chevron stripes -->
+        <path d="M25 78 L65 22 L80 38 L55 78 Z" fill="#e6dece" opacity="0.9"/>
+        <path d="M65 78 L105 22 L120 38 L95 78 Z" fill="#e6dece" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Hummel</div>
+      <div class="card-mark-name">CHEVRON STRIPES</div>
+      <div class="card-origin">🇩🇰 1923 / コペンハーゲン</div>
+      <div class="card-desc">V字型のシェブロンストライプ。デンマーク発のスポーツブランドで、スカンジナビアデザインの美学を体現。サッカーユニフォームで知名度を持ち、ライフスタイル転換に成功。</div>
+      <span class="card-tag t-func">機能ストライプ型</span>
+    </div>
+  </div>
+
+  <!-- 31 Lacoste -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">31</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- crocodile simplified -->
+        <path d="M20 58 Q40 40 70 42 Q100 44 130 36 Q140 34 148 40 Q140 48 120 50 Q100 52 80 58 Q60 64 20 72 Z" fill="#3aaa6a"/>
+        <!-- eye -->
+        <circle cx="140" cy="40" r="3" fill="#e6dece"/>
+        <!-- teeth -->
+        <path d="M130 36 L125 44 M120 37 L116 45 M110 38 L107 46" stroke="#e6dece" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Lacoste</div>
+      <div class="card-mark-name">CROCODILE（ワニ）</div>
+      <div class="card-origin">🇫🇷 1933 / René Lacoste創業</div>
+      <div class="card-desc">テニスプレイヤーRené Lacosteのニックネーム「Le Crocodile」から。シューズへの展開は後発だが、ワニのアイコンはポロシャツ同様に機能する希有な動物マーク。Lerond等で存在感。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 32 Ellesse -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">32</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- half-ball / sun mark -->
+        <path d="M30 75 Q30 28 80 28 Q130 28 130 75 Z" fill="#e6dece" opacity="0.9"/>
+        <path d="M30 75 L130 75" stroke="#e6dece" stroke-width="3"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Ellesse</div>
+      <div class="card-mark-name">HALF-BALL MARK</div>
+      <div class="card-origin">🇮🇹 1959 / ペルージャ</div>
+      <div class="card-desc">半球形のサイドマーク。スキーとテニスで人気を博した後、80〜90年代のカジュアルウェアに展開。英国のカジュアル文化（テラスウェア）での人気が高く、復権が著しい。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <!-- 33 Yonex -->
+  <div class="card" data-type="sym">
+    <div class="card-mark">
+      <div class="card-num">33</div>
+      <div class="card-type-dot d-sym"></div>
+      <svg viewBox="0 0 160 100" width="150" height="90">
+        <!-- stylized Y / infinity-like mark -->
+        <path d="M30 20 L80 55 L130 20" fill="none" stroke="#e6dece" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="80" y1="55" x2="80" y2="85" stroke="#e6dece" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="card-info">
+      <div class="card-brand">Yonex</div>
+      <div class="card-mark-name">Y MARK</div>
+      <div class="card-origin">🇯🇵 1946 / 新潟</div>
+      <div class="card-desc">バドミントン・テニスで圧倒的シェアを持つ日本ブランド。シューズではパワークッション技術がアイコン。スポーツ特化ゆえスニーカー市場での認知は限定的だがコア層に根強い支持。</div>
+      <span class="card-tag t-sym">純粋シンボル型</span>
+    </div>
+  </div>
+
+  <div class="empty-state" id="empty">表示するブランドがありません</div>
+</div>
+</div>
+
+<script>
+const btns  = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.card[data-type]');
+const countEl = document.getElementById('visible-count');
+const total   = cards.length;
+const emptyEl = document.getElementById('empty');
+
+function updateCount() {
+  const visible = document.querySelectorAll('.card:not(.hidden)').length;
+  countEl.textContent = visible;
+  emptyEl.classList.toggle('show', visible === 0);
+}
+
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const type = btn.dataset.type;
+    cards.forEach(card => {
+      if (type === 'all' || card.dataset.type === type) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+    updateCount();
+  });
+});
+
+// initial count
+updateCount();
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+    "themeColor": "#9C27B0",
+    "title": "🌪️ {name}専用！特製ジュース職人への道！②ミキサー",
+    "description": "<strong>たし算・ひき算</strong>は「カゴの整理（仕分け）」だったね。<br><strong>かけ算・わり算</strong>は「ミキサーの仕事（全部混ぜて特製ジュースにする）」だよ！<br>÷（わり算）のうしろにあるものは、分母（下）にもぐりこませよう🍹",
+    "questions": [
+        {
+            "q": "2<i class='var'>x</i> × 3<i class='var'>y</i>",
+            "a": [
+                "6xy",
+                "6yx"
+            ],
+            "h": "数字は数字、文字は文字でかけ算しよう。"
+        },
+        {
+            "q": "12<i class='var'>x</i><i class='var'>y</i> ÷ 4<i class='var'>x</i>",
+            "a": [
+                "3y"
+            ],
+            "h": "÷のうしろの4<i class='var'>x</i>が下（分母）にいくよ。上下の<i class='var'>x</i>が消えるね。"
+        },
+        {
+            "q": "2<i class='var'>x</i> × 4<i class='var'>y</i> ÷ 2<i class='var'>x</i>",
+            "a": [
+                "4y"
+            ],
+            "h": "2<i class='var'>x</i>が下にもぐりこんで、上下で相殺されるよ！"
+        },
+        {
+            "q": "15<i class='var'>x</i><i class='var'>y</i> ÷ 3<i class='var'>y</i>",
+            "a": [
+                "5x"
+            ],
+            "h": "上下の<i class='var'>y</i>を消して、数字を計算しよう。"
+        },
+        {
+            "q": "-3<i class='var'>a</i> × 4<i class='var'>b</i>",
+            "a": [
+                "-12ab",
+                "-12ba"
+            ],
+            "h": "(－) × (＋) だから、答えはマイナスになるね。"
+        },
+        {
+            "q": "10<i class='var'>x</i><i class='var'>y</i> ÷ (-5<i class='var'>x</i>)",
+            "a": [
+                "-2y"
+            ],
+            "h": "マイナスで割るから、符号に気をつけて！"
+        },
+        {
+            "q": "4<i class='var'>x</i> × 3<i class='var'>y</i> ÷ 2",
+            "a": [
+                "6xy",
+                "6yx"
+            ],
+            "h": "数字の2だけが下（分母）にいくよ。"
+        },
+        {
+            "q": "8<i class='var'>x</i> ÷ 2<i class='var'>x</i> × 3<i class='var'>y</i>",
+            "a": [
+                "12y"
+            ],
+            "h": "左から順番に。「8<i class='var'>x</i> ÷ 2<i class='var'>x</i>」から計算！"
+        },
+        {
+            "q": "6<i class='var'>a</i><i class='var'>b</i> ÷ 2<i class='var'>a</i> ÷ 3<i class='var'>b</i>",
+            "a": [
+                "1"
+            ],
+            "h": "上が6<i class='var'>a</i><i class='var'>b</i>、下も6<i class='var'>a</i><i class='var'>b</i>になるね。全部消えたらどうなる？"
+        },
+        {
+            "q": "4<i class='var'>x</i> × 5<i class='var'>y</i> ÷ 20<i class='var'>x</i><i class='var'>y</i>",
+            "a": [
+                "1"
+            ],
+            "h": "これも上下が全く同じものになるよ！"
+        }
+    ],
+    "success": {
+        "title": "🎉 ミキサーの仕事、完了！",
+        "text": "{name}{honorific}、素晴らしい！！<br>たし算の「仕分け」と、かけ算・わり算の「ミキサー」、2つの全く違うルールをしっかりマスターしたね！<br>さあ、次はいよいよお姫様に届ける究極の特製ジュース作りだ！",
+        "nextData": "math-003",
+        "nextButtonText": "最後の仕事（究極のジュース作り）へ！"
+    }
+}

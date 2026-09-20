@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Human Behavior Fractal - Legacy & Decay</title>
+    <style>
+        html, body { margin: 0; background: #000; overflow: hidden; font-family: sans-serif; height: 100%; }
+        canvas { display: block; transition: filter 0.4s ease; }
+        canvas.paused { filter: grayscale(1) brightness(0.5); }
+
+        /* --- タイトルスプラッシュ（起動後数秒表示してからフェードアウト） --- */
+        #splash {
+            position: fixed; inset: 0; background: #000; z-index: 200;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 1; transition: opacity 0.8s ease;
+        }
+        #splash.fadeOut { opacity: 0; pointer-events: none; }
+        #splashInner { text-align: center; color: #eee; padding: 20px; }
+        #splashInner h1 {
+            font-size: clamp(1.5rem, 5vw, 2.6rem); margin: 0; color: #ff5500; font-weight: 600;
+            letter-spacing: 0.03em; text-shadow: 0 0 24px rgba(255, 68, 0, 0.55);
+        }
+        #splashInner .sub {
+            font-size: 0.85rem; color: #ff9966; letter-spacing: 0.35em; margin-top: 10px; text-transform: uppercase;
+        }
+        #splashInner p { font-size: 0.8rem; color: #888; margin-top: 26px; line-height: 1.6; }
+
+        /* --- クリック/タップで一時停止したときのオーバーレイ（リセット・設定ボタン） --- */
+        #pauseOverlay {
+            position: fixed; inset: 0; z-index: 40; display: none;
+            align-items: center; justify-content: center; gap: 18px;
+            background: rgba(0, 0, 0, 0.25);
+        }
+        #pauseOverlay.show { display: flex; }
+        button.bigBtn {
+            background: rgba(20, 8, 0, 0.85); border: 1px solid #ff5500; color: #ffcc99;
+            padding: 14px 26px; border-radius: 10px; cursor: pointer; font-size: 0.95rem;
+            display: flex; flex-direction: column; align-items: center; gap: 4px;
+            box-shadow: 0 0 20px rgba(255, 68, 0, 0.3); transition: background 0.15s ease, transform 0.15s ease;
+        }
+        button.bigBtn:hover { background: rgba(255, 68, 0, 0.35); transform: translateY(-2px); }
+        button.bigBtn .ic { font-size: 1.4rem; }
+
+        /* --- 配置モード中の上部バナー --- */
+        #placeBanner {
+            position: fixed; top: 18px; left: 50%; transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.75); border: 1px solid #ffaa55; color: #ffcc99;
+            padding: 8px 16px; border-radius: 20px; font-size: 0.8rem; z-index: 45;
+            display: none; pointer-events: none; white-space: nowrap;
+        }
+        #placeBanner.show { display: block; }
+
+        /* --- 設定オーバーレイ --- */
+        #overlay {
+            position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6);
+            display: none; align-items: center; justify-content: center; z-index: 100;
+        }
+        #overlay.open { display: flex; }
+
+        #dialog {
+            width: min(520px, 92vw); max-height: 86vh; overflow-y: auto;
+            background: rgba(8, 8, 8, 0.96); border: 1px solid #ff4400; border-radius: 12px;
+            padding: 22px 24px; color: #eee; box-shadow: 0 0 40px rgba(255, 68, 0, 0.25);
+        }
+        #dialog h2 { margin: 0 0 6px 0; color: #ff5500; font-size: 1.15rem; }
+        #dialog h3 {
+            margin: 22px 0 8px 0; color: #ff8855; font-size: 0.85rem;
+            border-bottom: 1px solid rgba(255, 68, 0, 0.3); padding-bottom: 4px;
+            text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        #dialog p.desc { font-size: 0.78rem; line-height: 1.6; color: #aaa; margin: 4px 0; }
+        #dialog p.hint { font-size: 0.72rem; color: #777; margin-top: 18px; line-height: 1.5; }
+
+        .paramRow {
+            display: flex; align-items: center; gap: 10px; margin: 9px 0; font-size: 0.78rem;
+        }
+        .paramRow label { flex: 1 1 auto; color: #ddd; }
+        .paramRow input[type="range"] { flex: 1 1 140px; accent-color: #ff5500; }
+        .paramRow .paramVal {
+            flex: 0 0 48px; text-align: right; color: #ff9966; font-family: monospace; font-size: 0.75rem;
+        }
+
+        .btnRow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        button.ctrlBtn {
+            background: rgba(255, 68, 0, 0.12); border: 1px solid rgba(255, 68, 0, 0.5);
+            color: #ffcc99; padding: 7px 12px; border-radius: 6px; cursor: pointer;
+            font-size: 0.75rem; transition: background 0.15s ease;
+        }
+        button.ctrlBtn:hover { background: rgba(255, 68, 0, 0.3); }
+        button.ctrlBtn.active { background: #ff4400; color: #fff; }
+
+        #dialogFooter {
+            display: flex; justify-content: space-between; gap: 8px; margin-top: 24px;
+            padding-top: 14px; border-top: 1px solid rgba(255, 68, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div id="splash">
+    <div id="splashInner">
+        <h1>Human Behavior Fractal</h1>
+        <div class="sub">Legacy &amp; Decay</div>
+        <p>人間の行動を模した個体の軌跡から、フラクタルは生まれるか。</p>
+    </div>
+</div>
+
+<div id="placeBanner">アトラクター配置モード：クリックで設置 / 既存をクリックで削除 / Escで終了</div>
+
+<div id="pauseOverlay">
+    <button class="bigBtn" id="pauseResetBtn"><span class="ic">⟲</span>リセット</button>
+    <button class="bigBtn" id="pauseSettingsBtn"><span class="ic">⚙</span>設定</button>
+</div>
+
+<div id="overlay">
+    <div id="dialog">
+        <h2>Action Fractal: Legacy</h2>
+        <p class="desc">
+            レヴィ飛行で移動する個体群のシミュレーション。生存中は自分の全軌跡を鮮明に維持し、死ぬと軌跡は闇へ溶ける。
+            周囲が過密だと増殖を抑制する。以下のパラメータは全て初期値＝配布時の基準仕様。動かして違いを観察してください。
+        </p>
+
+        <h3>基本パラメータ（生態・寿命）</h3>
+        <div id="group-basic"></div>
+
+        <h3>行動モデル（人間行動の仮説）</h3>
+        <p class="desc">
+            0＝純粋レヴィ飛行（初期仕様）。値を上げるほど各仮説の影響が移動方向にブレンドされる。複数を同時に効かせて組み合わせ可能。
+        </p>
+        <div id="group-behavior"></div>
+
+        <h3>環境・集団</h3>
+        <p class="desc">初期集団数を増やすと、異なる出自を持つ複数の系統が同時に生まれる。アトラクターは個体を引き寄せる資源点。</p>
+        <div id="group-env"></div>
+        <div class="btnRow">
+            <button class="ctrlBtn" id="placeAttractorBtn">アトラクター配置モード</button>
+            <button class="ctrlBtn" id="clearAttractorsBtn">アトラクターを全削除</button>
+        </div>
+
+        <h3>設定の保存・読込</h3>
+        <p class="desc">現在のパラメータとアトラクター配置をJSONファイルとして書き出し／読み込みできます。</p>
+        <div class="btnRow">
+            <button class="ctrlBtn" id="exportBtn">JSONエクスポート</button>
+            <button class="ctrlBtn" id="importBtn">JSONインポート</button>
+        </div>
+        <input type="file" id="importFileInput" accept="application/json,.json" style="display:none">
+
+        <div id="dialogFooter">
+            <button class="ctrlBtn" id="resetDefaultsBtn">初期値に戻す</button>
+            <button class="ctrlBtn" id="restartBtn">この設定で再生成</button>
+            <button class="ctrlBtn" id="closeDialogBtn">閉じる</button>
+        </div>
+        <p class="hint">画面をクリック／タップすると一時停止し、リセット・設定ボタンが表示されます。空いた場所をもう一度クリックすると再開します。</p>
+    </div>
+</div>
+
+<canvas id="c"></canvas>
+
+<script>
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
+
+    // ============ パラメータ（初期値 = 配布時の基準仕様） ============
+    const DEFAULTS = {
+        mu: 1.5,
+        speed: 4,
+        moveMin: 20,
+        moveMaxFactor: 0.5,      // 最大移動距離 = w * moveMaxFactor
+        waitMin: 40,
+        waitMax: 250,
+        checkRadius: 60,
+        limitCount: 2,
+        deathAttempts: 4,
+        moveCyclesPerAttempt: 5,
+        fadeAlpha: 0.03,
+        particleCount: 30,
+        particleLife: 40,
+        // 行動モデル（0 = 初期仕様。純粋ランダム方向のみ）
+        homingWeight: 0,
+        repulsionWeight: 0,
+        imitationWeight: 0,
+        // 環境
+        initialPopulation: 1,
+        attractorWeight: 0,
+        attractorRadius: 400,
+    };
+    let CONFIG = { ...DEFAULTS };
+
+    // 各行動仮説の「効き」の強さ（重み1のときランダム成分に対してどれだけ支配的か）
+    const HOMING_SCALE = 3.5;
+    const REPULSION_SCALE = 3.5;
+    const IMITATION_SCALE = 3.0;
+    const ATTRACTOR_SCALE = 3.5;
+
+    // スプラッシュの表示時間・フェード時間
+    const SPLASH_DURATION_MS = 3000;
+    const SPLASH_FADE_MS = 800;
+
+    let agents = [];
+    let particles = [];
+    let attractors = []; // {x, y}
+    let placingAttractor = false;
+    let paused = false;
+    let frameCount = 0;
+
+    class Agent {
+        constructor(x, y, color, homeX, homeY) {
+            this.x = x;
+            this.y = y;
+            this.homeX = homeX ?? x;
+            this.homeY = homeY ?? y;
+            this.history = [{ x: x, y: y, jump: false }]; // 生存中に描き続ける歴史
+            this.angle = Math.random() * Math.PI * 2;
+            this.targetL = 0;
+            this.currentL = 0;
+            this.waitMax = 0;
+            this.waitTime = 0;
+            this.isMoving = false;
+            this.color = color || `hsla(${Math.random() * 360}, 100%, 60%, 0.8)`;
+            this.moveCount = 0;
+            this.actionAttemptCount = 0;
+            this.isDead = false;
+            this.timer = 0;
+            this.decideNext();
+        }
+
+        getLevy(min, max) {
+            let val = 2 * Math.pow(Math.random(), -1 / (CONFIG.mu - 1));
+            return Math.max(min, Math.min(val, max));
+        }
+
+        countNeighbors() {
+            let count = 0;
+            for (let a of agents) {
+                if (a === this || a.isDead) continue;
+                const dx = a.x - this.x;
+                const dy = a.y - this.y;
+                if (dx * dx + dy * dy < CONFIG.checkRadius * CONFIG.checkRadius) count++;
+            }
+            return count;
+        }
+
+        // 行動仮説（帰巣性／群衆反発／模倣／アトラクター誘引）をブレンドして移動方向を決める。
+        // 全ての重みが0なら純粋ランダム方向（初期仕様と同一）になる。
+        computeAngle() {
+            const baseA = Math.random() * Math.PI * 2;
+            let vx = Math.cos(baseA);
+            let vy = Math.sin(baseA);
+
+            if (CONFIG.homingWeight > 0) {
+                const dx = this.homeX - this.x, dy = this.homeY - this.y;
+                const d = Math.hypot(dx, dy) || 1;
+                vx += (dx / d) * CONFIG.homingWeight * HOMING_SCALE;
+                vy += (dy / d) * CONFIG.homingWeight * HOMING_SCALE;
+            }
+
+            if (CONFIG.repulsionWeight > 0) {
+                let rx = 0, ry = 0, n = 0;
+                for (const a of agents) {
+                    if (a === this || a.isDead) continue;
+                    const dx = this.x - a.x, dy = this.y - a.y;
+                    const d2 = dx * dx + dy * dy;
+                    if (d2 < CONFIG.checkRadius * CONFIG.checkRadius && d2 > 0.01) {
+                        const d = Math.sqrt(d2);
+                        rx += dx / d; ry += dy / d; n++;
+                    }
+                }
+                if (n > 0) {
+                    vx += (rx / n) * CONFIG.repulsionWeight * REPULSION_SCALE;
+                    vy += (ry / n) * CONFIG.repulsionWeight * REPULSION_SCALE;
+                }
+            }
+
+            if (CONFIG.imitationWeight > 0) {
+                let sx = 0, sy = 0, n = 0;
+                for (const a of agents) {
+                    if (a === this || a.isDead || !a.isMoving) continue;
+                    const dx = a.x - this.x, dy = a.y - this.y;
+                    if (dx * dx + dy * dy < CONFIG.checkRadius * CONFIG.checkRadius) {
+                        sx += Math.cos(a.angle); sy += Math.sin(a.angle); n++;
+                    }
+                }
+                if (n > 0) {
+                    vx += (sx / n) * CONFIG.imitationWeight * IMITATION_SCALE;
+                    vy += (sy / n) * CONFIG.imitationWeight * IMITATION_SCALE;
+                }
+            }
+
+            if (CONFIG.attractorWeight > 0 && attractors.length > 0) {
+                let ax = 0, ay = 0, wsum = 0;
+                for (const at of attractors) {
+                    const dx = at.x - this.x, dy = at.y - this.y;
+                    const d = Math.hypot(dx, dy) || 1;
+                    if (d < CONFIG.attractorRadius) {
+                        const wgt = 1 - d / CONFIG.attractorRadius;
+                        ax += (dx / d) * wgt; ay += (dy / d) * wgt; wsum += wgt;
+                    }
+                }
+                if (wsum > 0) {
+                    vx += (ax / wsum) * CONFIG.attractorWeight * ATTRACTOR_SCALE;
+                    vy += (ay / wsum) * CONFIG.attractorWeight * ATTRACTOR_SCALE;
+                }
+            }
+
+            return Math.atan2(vy, vx);
+        }
+
+        decideNext() {
+            if (this.isMoving) {
+                this.isMoving = false;
+                this.waitMax = this.waitTime = this.getLevy(CONFIG.waitMin, CONFIG.waitMax);
+            } else {
+                this.moveCount++;
+                if (this.moveCount >= CONFIG.moveCyclesPerAttempt) {
+                    this.actionAttemptCount++;
+                    if (this.actionAttemptCount >= CONFIG.deathAttempts) {
+                        this.explode();
+                        return;
+                    } else if (this.countNeighbors() < CONFIG.limitCount) {
+                        this.spawnChild();
+                    }
+                    this.moveCount = 0;
+                }
+                this.isMoving = true;
+                this.targetL = this.getLevy(CONFIG.moveMin, w * CONFIG.moveMaxFactor);
+                this.currentL = 0;
+                this.angle = this.computeAngle();
+                // 色を少しだけずらして血統を感じさせる
+                const hue = (parseFloat(this.color.match(/\d+/)[0]) + 15) % 360;
+                this.color = `hsla(${hue}, 100%, 60%, 0.8)`;
+            }
+        }
+
+        spawnChild() {
+            // 出生地（home）は系統で継承 → 同じ血統は同じ「territory」に引き寄せられる
+            agents.push(new Agent(this.x, this.y, this.color, this.homeX, this.homeY));
+        }
+
+        explode() {
+            this.isDead = true;
+            for (let i = 0; i < CONFIG.particleCount; i++) {
+                particles.push({
+                    x: this.x, y: this.y,
+                    vx: (Math.random() - 0.5) * 12, vy: (Math.random() - 0.5) * 12,
+                    life: CONFIG.particleLife, color: this.color
+                });
+            }
+        }
+
+        update() {
+            if (this.isDead) return;
+            this.timer++;
+
+            if (this.isMoving) {
+                this.x += Math.cos(this.angle) * CONFIG.speed;
+                this.y += Math.sin(this.angle) * CONFIG.speed;
+                this.currentL += CONFIG.speed;
+
+                let jumped = false;
+                if (this.x < 0) { this.x = w; jumped = true; }
+                if (this.x > w) { this.x = 0; jumped = true; }
+                if (this.y < 0) { this.y = h; jumped = true; }
+                if (this.y > h) { this.y = 0; jumped = true; }
+
+                this.history.push({ x: this.x, y: this.y, jump: jumped });
+
+                if (this.currentL >= this.targetL) this.decideNext();
+            } else {
+                this.waitTime--;
+                if (this.waitTime <= 0) this.decideNext();
+            }
+        }
+
+        draw() {
+            if (this.isDead || this.history.length < 2) return;
+
+            // 1. 軌跡の描画（生存中のみ毎フレーム実行）
+            ctx.beginPath();
+            ctx.strokeStyle = this.color;
+            ctx.lineWidth = 1.2;
+            for (let i = 1; i < this.history.length; i++) {
+                const p1 = this.history[i - 1];
+                const p2 = this.history[i];
+                if (!p2.jump) {
+                    ctx.moveTo(p1.x, p1.y);
+                    ctx.lineTo(p2.x, p2.y);
+                }
+            }
+            ctx.stroke();
+
+            // 2. 脈動する本体
+            if (!this.isMoving) {
+                const pulse = Math.sin(this.timer * 0.15) * 0.5 + 0.5;
+                const size = 1 + (8 * pulse);
+                ctx.fillStyle = this.color.replace('0.8)', (0.4 + pulse * 0.6) + ')');
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+    }
+
+    function drawAttractors() {
+        for (const at of attractors) {
+            const pulse = 0.5 + 0.5 * Math.sin(frameCount * 0.03 + at.x * 0.01);
+            const r = 40 + pulse * 10;
+            const grad = ctx.createRadialGradient(at.x, at.y, 0, at.x, at.y, r);
+            grad.addColorStop(0, 'rgba(255,255,255,0.9)');
+            grad.addColorStop(0.15, 'rgba(255,220,120,0.5)');
+            grad.addColorStop(1, 'rgba(255,220,120,0)');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(at.x, at.y, r, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = 'rgba(255,255,255,0.9)';
+            ctx.beginPath();
+            ctx.arc(at.x, at.y, 3, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        if (placingAttractor) {
+            ctx.save();
+            ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+            ctx.setLineDash([4, 6]);
+            for (const at of attractors) {
+                ctx.beginPath();
+                ctx.arc(at.x, at.y, CONFIG.attractorRadius, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+            ctx.restore();
+        }
+    }
+
+    function loop() {
+        if (!paused) {
+            frameCount++;
+
+            // 【ハック：死後の忘却レイヤー】
+            // 画面全体を極薄の黒で塗りつぶす。
+            // 生存者の draw() はこの後に呼ばれるため、生存者の線だけが上書きされて消えない。
+            ctx.fillStyle = `rgba(0, 0, 0, ${CONFIG.fadeAlpha})`;
+            ctx.fillRect(0, 0, w, h);
+
+            drawAttractors();
+
+            particles.forEach(p => {
+                ctx.fillStyle = p.color;
+                ctx.beginPath(); ctx.arc(p.x, p.y, 2, 0, Math.PI * 2); ctx.fill();
+                p.x += p.vx; p.y += p.vy; p.life--;
+            });
+            particles = particles.filter(p => p.life > 0);
+
+            // 生存エージェントの処理
+            for (let a of agents) {
+                a.update();
+                a.draw();
+            }
+
+            // 死んだエージェントをリストから排除（＝再描画が止まり、風化が始まる）
+            agents = agents.filter(a => !a.isDead);
+        }
+
+        requestAnimationFrame(loop);
+    }
+
+    function resetSimulation() {
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, w, h);
+        agents = [];
+        particles = [];
+        const n = Math.max(1, Math.round(CONFIG.initialPopulation));
+        if (n === 1) {
+            agents.push(new Agent(w / 2, h / 2));
+        } else {
+            for (let i = 0; i < n; i++) {
+                agents.push(new Agent(Math.random() * w, Math.random() * h));
+            }
+        }
+        // アトラクターはリセットで消さない（環境を保ったまま個体群だけ再実験できるように）
+    }
+
+    function pauseSimulation() {
+        paused = true;
+        canvas.classList.add('paused');
+        pauseOverlay.classList.add('show');
+    }
+
+    function resumeSimulation() {
+        paused = false;
+        canvas.classList.remove('paused');
+        pauseOverlay.classList.remove('show');
+    }
+
+    // ============ 入力イベント ============
+    // canvas自身にだけ付ける（スプラッシュ／一時停止オーバーレイ／設定ダイアログはcanvasの兄弟要素なので
+    // それらをクリックしてもここには伝播せず、余計なガードが要らない）
+    canvas.addEventListener('click', (e) => {
+        if (overlay.classList.contains('open')) return;
+        if (placingAttractor) {
+            const idx = attractors.findIndex(a => Math.hypot(a.x - e.clientX, a.y - e.clientY) < 14);
+            if (idx >= 0) attractors.splice(idx, 1);
+            else attractors.push({ x: e.clientX, y: e.clientY });
+            return;
+        }
+        pauseSimulation();
+    });
+
+    window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        if (placingAttractor) { setPlacing(false); resumeSimulation(); return; }
+        if (overlay.classList.contains('open')) { overlay.classList.remove('open'); return; }
+        if (paused) resumeSimulation();
+    });
+
+    // ============ 設定ダイアログ UI 生成 ============
+    const overlay = document.getElementById('overlay');
+    const dialog = document.getElementById('dialog');
+    const pauseOverlay = document.getElementById('pauseOverlay');
+    const placeBanner = document.getElementById('placeBanner');
+    const placeAttractorBtn = document.getElementById('placeAttractorBtn');
+
+    // ダイアログ内のクリックは他のハンドラへ伝播させない
+    dialog.addEventListener('click', (e) => e.stopPropagation());
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) { e.stopPropagation(); overlay.classList.remove('open'); }
+    });
+
+    // 一時停止オーバーレイ：空いている場所（背景）をクリックすると再開
+    pauseOverlay.addEventListener('click', (e) => {
+        if (e.target === pauseOverlay) resumeSimulation();
+    });
+    document.getElementById('pauseResetBtn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        resetSimulation();
+        resumeSimulation();
+    });
+    document.getElementById('pauseSettingsBtn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        overlay.classList.add('open'); // 一時停止したまま設定を開く
+    });
+
+    const PARAM_SPECS = [
+        { key: 'mu', label: 'レヴィ指数 μ', min: 1.05, max: 3, step: 0.05, group: 'basic' },
+        { key: 'speed', label: '移動速度', min: 1, max: 15, step: 0.5, group: 'basic' },
+        { key: 'moveMin', label: '最小移動距離', min: 5, max: 150, step: 5, group: 'basic' },
+        { key: 'moveMaxFactor', label: '最大移動距離（画面幅比）', min: 0.1, max: 1, step: 0.05, group: 'basic' },
+        { key: 'waitMin', label: '最小待機フレーム', min: 5, max: 200, step: 5, group: 'basic' },
+        { key: 'waitMax', label: '最大待機フレーム', min: 20, max: 600, step: 10, group: 'basic' },
+        { key: 'checkRadius', label: '過密判定半径', min: 10, max: 250, step: 5, group: 'basic' },
+        { key: 'limitCount', label: '過密抑制の近傍数', min: 0, max: 12, step: 1, group: 'basic' },
+        { key: 'deathAttempts', label: '寿命（試行回数）', min: 1, max: 20, step: 1, group: 'basic' },
+        { key: 'moveCyclesPerAttempt', label: '1試行あたりの移動サイクル数', min: 1, max: 15, step: 1, group: 'basic' },
+        { key: 'fadeAlpha', label: '風化速度（残光減衰）', min: 0.005, max: 0.15, step: 0.005, group: 'basic' },
+        { key: 'particleCount', label: '爆発パーティクル数', min: 0, max: 100, step: 5, group: 'basic' },
+        { key: 'particleLife', label: 'パーティクル寿命', min: 5, max: 150, step: 5, group: 'basic' },
+
+        { key: 'homingWeight', label: '帰巣性（出生地に戻る力）', min: 0, max: 1, step: 0.05, group: 'behavior' },
+        { key: 'repulsionWeight', label: '群衆反発（他者を避ける力）', min: 0, max: 1, step: 0.05, group: 'behavior' },
+        { key: 'imitationWeight', label: '模倣（周囲に同調する力）', min: 0, max: 1, step: 0.05, group: 'behavior' },
+
+        { key: 'initialPopulation', label: '初期集団数', min: 1, max: 30, step: 1, group: 'env' },
+        { key: 'attractorWeight', label: 'アトラクターへの誘引力', min: 0, max: 1, step: 0.05, group: 'env' },
+        { key: 'attractorRadius', label: 'アトラクターの影響半径', min: 50, max: 1000, step: 10, group: 'env' },
+    ];
+
+    function buildParamRows() {
+        const groups = {
+            basic: document.getElementById('group-basic'),
+            behavior: document.getElementById('group-behavior'),
+            env: document.getElementById('group-env'),
+        };
+        for (const g of Object.values(groups)) g.innerHTML = '';
+
+        for (const spec of PARAM_SPECS) {
+            const row = document.createElement('div');
+            row.className = 'paramRow';
+
+            const label = document.createElement('label');
+            label.textContent = spec.label;
+            label.htmlFor = 'p_' + spec.key;
+
+            const input = document.createElement('input');
+            input.type = 'range';
+            input.id = 'p_' + spec.key;
+            input.min = spec.min; input.max = spec.max; input.step = spec.step;
+            input.value = CONFIG[spec.key];
+
+            const val = document.createElement('span');
+            val.className = 'paramVal';
+            val.id = 'v_' + spec.key;
+            val.textContent = CONFIG[spec.key];
+
+            input.addEventListener('input', () => {
+                CONFIG[spec.key] = parseFloat(input.value);
+                val.textContent = input.value;
+            });
+
+            row.appendChild(label);
+            row.appendChild(input);
+            row.appendChild(val);
+            groups[spec.group].appendChild(row);
+        }
+    }
+
+    function refreshAllInputs() {
+        for (const spec of PARAM_SPECS) {
+            const input = document.getElementById('p_' + spec.key);
+            const val = document.getElementById('v_' + spec.key);
+            input.value = CONFIG[spec.key];
+            val.textContent = CONFIG[spec.key];
+        }
+    }
+
+    function setPlacing(on) {
+        placingAttractor = on;
+        canvas.style.cursor = on ? 'crosshair' : 'default';
+        placeBanner.classList.toggle('show', on);
+        placeAttractorBtn.classList.toggle('active', on);
+        placeAttractorBtn.textContent = on ? 'アトラクター配置モード：ON' : 'アトラクター配置モード';
+    }
+
+    document.getElementById('resetDefaultsBtn').addEventListener('click', () => {
+        CONFIG = { ...DEFAULTS };
+        refreshAllInputs();
+    });
+
+    document.getElementById('restartBtn').addEventListener('click', () => {
+        resetSimulation();
+        overlay.classList.remove('open');
+        resumeSimulation();
+    });
+
+    document.getElementById('closeDialogBtn').addEventListener('click', () => {
+        overlay.classList.remove('open');
+    });
+
+    placeAttractorBtn.addEventListener('click', () => {
+        setPlacing(!placingAttractor);
+        overlay.classList.remove('open');
+        resumeSimulation(); // 配置中は生きた画面を見ながら置きたい／解除時はそのまま再開
+    });
+
+    document.getElementById('clearAttractorsBtn').addEventListener('click', () => {
+        attractors = [];
+    });
+
+    // ============ 設定のJSONエクスポート／インポート ============
+    document.getElementById('exportBtn').addEventListener('click', () => {
+        const data = { version: 1, config: CONFIG, attractors: attractors };
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'fractal-settings.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+
+    const importFileInput = document.getElementById('importFileInput');
+    document.getElementById('importBtn').addEventListener('click', () => importFileInput.click());
+    importFileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            try {
+                const data = JSON.parse(reader.result);
+                const cfg = data.config || data; // config直下でもラップ済みでも受け付ける
+                for (const key of Object.keys(DEFAULTS)) {
+                    if (typeof cfg[key] === 'number' && !Number.isNaN(cfg[key])) {
+                        CONFIG[key] = cfg[key];
+                    }
+                }
+                if (Array.isArray(data.attractors)) {
+                    attractors = data.attractors
+                        .filter(a => a && typeof a.x === 'number' && typeof a.y === 'number')
+                        .map(a => ({ x: a.x, y: a.y }));
+                }
+                refreshAllInputs();
+            } catch (err) {
+                alert('設定ファイルの読み込みに失敗しました: ' + err.message);
+            }
+        };
+        reader.readAsText(file);
+        importFileInput.value = '';
+    });
+
+    // ============ 起動シーケンス（スプラッシュ → シミュレーション開始） ============
+    function startSimulation() {
+        resetSimulation();
+        loop();
+    }
+
+    function showSplashThenStart() {
+        const splash = document.getElementById('splash');
+        setTimeout(() => {
+            splash.classList.add('fadeOut');
+            setTimeout(() => {
+                splash.remove();
+                startSimulation();
+            }, SPLASH_FADE_MS);
+        }, SPLASH_DURATION_MS);
+    }
+
+    // ============ 初期化 ============
+    buildParamRows();
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, w, h);
+    showSplashThenStart();
+</script>
+</body>
+</html>

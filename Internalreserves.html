@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>内部留保と現金実態 — 修正版レポート</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f7f4ef;
+  --ink:#1c1c28;
+  --surface:#ffffff;
+  --border:#e2ddd5;
+  --retained:#b5451b;
+  --cash:#2563a8;
+  --equity:#16a085;
+  --fixed:#8e44ad;
+  --muted:#7a7a8c;
+  --warn:#e67e22;
+  --grid:#ede9e2;
+}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',sans-serif;padding:36px 20px 56px;min-height:100vh}
+.page{max-width:980px;margin:0 auto}
+
+/* correction banner */
+.correction-banner{
+  background:var(--ink);color:#fff;padding:14px 22px;
+  display:flex;align-items:flex-start;gap:14px;margin-bottom:32px;
+  border-left:5px solid var(--warn);
+}
+.correction-banner .icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.correction-banner p{font-size:12px;line-height:1.75}
+.correction-banner strong{color:var(--warn)}
+
+/* header */
+header{margin-bottom:32px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+h1{font-family:'Noto Serif JP',serif;font-size:24px;font-weight:700;line-height:1.4}
+header p{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* concept box */
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
+.concept-card{background:var(--surface);border:1px solid var(--border);padding:20px}
+.concept-card h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;display:inline-block}
+.concept-card p{font-size:12px;color:var(--muted);line-height:1.75}
+.concept-card .big{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:600;margin:8px 0 4px}
+
+/* asset waterfall */
+.card{background:var(--surface);border:1px solid var(--border);padding:28px;margin-bottom:20px}
+.card-title{font-family:'Noto Serif JP',serif;font-size:15px;margin-bottom:4px}
+.card-sub{font-size:11px;color:var(--muted);margin-bottom:22px}
+
+.waterfall{display:flex;flex-direction:column;gap:8px}
+.wf-row{display:flex;align-items:center;gap:12px}
+.wf-label{width:130px;font-size:11px;flex-shrink:0;text-align:right;color:var(--ink)}
+.wf-bar-outer{flex:1;height:28px;background:var(--grid);position:relative;overflow:hidden}
+.wf-bar-fill{height:100%;display:flex;align-items:center;padding-left:8px;transition:width 1.1s ease}
+.wf-bar-fill span{font-size:11px;font-family:'IBM Plex Mono',monospace;white-space:nowrap;color:#fff;font-weight:600}
+.wf-val{width:80px;font-size:11px;font-family:'IBM Plex Mono',monospace;flex-shrink:0;color:var(--muted)}
+
+/* main line chart */
+#mainChart{width:100%;height:340px}
+
+/* legend */
+.legend-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
+.leg{display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;user-select:none;padding:4px 8px;border:1px solid var(--border);background:var(--surface)}
+.leg.dimmed{opacity:.3}
+.leg-dot{width:10px;height:10px;border-radius:50%}
+
+/* ratio section */
+.ratio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.ratio-card{background:var(--surface);border:1px solid var(--border);padding:16px;text-align:center}
+.ratio-card .year{font-size:10px;color:var(--muted);margin-bottom:6px;font-family:'IBM Plex Mono',monospace}
+.ratio-card .pct{font-family:'IBM Plex Mono',monospace;font-size:24px;font-weight:600}
+.ratio-card .label{font-size:10px;color:var(--muted);margin-top:4px}
+.ratio-card.hi .pct{color:var(--cash)}
+
+/* annotation */
+.anno-card{background:var(--ink);color:#fff;padding:24px 28px;margin-bottom:20px}
+.anno-card h3{font-family:'Noto Serif JP',serif;font-size:13px;color:#f0c060;margin-bottom:16px;letter-spacing:1px}
+.anno-2col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.anno-item{border-left:2px solid #2d3148;padding:8px 12px;font-size:12px;color:#b0bcd4;line-height:1.7}
+.anno-item strong{color:#e2e8f0;display:block;margin-bottom:3px}
+
+/* tooltip */
+.tooltip{position:fixed;background:#1c2030;border:1px solid #334;padding:10px 14px;border-radius:3px;font-size:11px;pointer-events:none;opacity:0;transition:opacity .15s;z-index:99;line-height:1.9;font-family:'IBM Plex Mono',monospace;color:#e2e8f0}
+
+footer{font-size:10px;color:var(--muted);border-top:1px solid var(--border);padding-top:14px;line-height:1.9}
+
+@media(max-width:600px){
+  .concept-grid,.anno-2col,.ratio-grid{grid-template-columns:1fr 1fr}
+  .ratio-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- 訂正バナー -->
+<div class="correction-banner">
+  <div class="icon">⚠</div>
+  <p>
+    <strong>前レポートの補足・修正：</strong>「内部留保≒現金の蓄積」という誤解を修正します。
+    内部留保（利益剰余金）は<strong>会計上の純資産の部の概念</strong>であり、資産の保有形態を示しません。
+    実際には設備投資・株式投資・固定資産・売掛金など多様な資産として運用されており、
+    現金・預金（法人企業統計）は2024年で<strong>約301兆円（全資産の13%）</strong>に過ぎません。
+    本レポートでは内部留保と現金・流動資産を明確に分けて対比します。
+  </p>
+</div>
+
+<header>
+  <div class="eyebrow">財務省 法人企業統計 ／ 日銀 資金循環統計 ／ 2014–2024</div>
+  <h1>内部留保637兆円の「中身」を解剖する</h1>
+  <p>利益剰余金（内部留保）・現金預金・投資有価証券・固定資産の10年推移対比</p>
+</header>
+
+<!-- 概念説明 -->
+<div class="concept-grid">
+  <div class="concept-card">
+    <h4><span class="dot" style="background:var(--retained)"></span>内部留保（利益剰余金）とは</h4>
+    <div class="big" style="color:var(--retained)">637兆円</div>
+    <p>貸借対照表の<strong>純資産の部</strong>に計上される会計上の概念。過去に稼いだ利益の累積額から配当を差し引いたもの。<strong>資産の保有形態ではなく</strong>、資金がどこに使われたかを示さない。</p>
+  </div>
+  <div class="concept-card">
+    <h4><span class="dot" style="background:var(--cash)"></span>現金・預金（実際の手元資金）</h4>
+    <div class="big" style="color:var(--cash)">301兆円</div>
+    <p>内部留保の約<strong>47%</strong>相当。残りは設備・土地・株式投資等に転換済み。法人企業統計では「現金・預金」として流動資産に計上。コロナ禍に急増後、横ばい傾向。</p>
+  </div>
+</div>
+
+<!-- 2024年 資産構成 waterfall -->
+<div class="card">
+  <div class="card-title">2024年度末 — 企業資産の構成（全産業、金融保険業除く）</div>
+  <div class="card-sub">総資産 約2,270兆円の内訳。内部留保637兆円がどの資産形態に分散しているかを示す</div>
+  <div class="waterfall" id="wfChart"></div>
+  <p style="font-size:10px;color:var(--muted);margin-top:14px">※各資産は複数の調達源（負債・資本金等）に裏付けられるため合計は総資産と一致しない。出典：法人企業統計・第一生命経済研究所</p>
+</div>
+
+<!-- メイン折れ線チャート -->
+<div class="card">
+  <div class="card-title">4指標の推移比較（2014年度＝100）</div>
+  <div class="card-sub">現金保有の増加ペースは内部留保より緩やか。凡例クリックで表示切替可能</div>
+  <div class="legend-row" id="legend"></div>
+  <svg id="mainChart" viewBox="0 0 920 320" preserveAspectRatio="none"></svg>
+  <div class="tooltip" id="tooltip"></div>
+</div>
+
+<!-- 現金・預金の対総資産比率 -->
+<div class="card">
+  <div class="card-title">現金・預金の対総資産比率の推移</div>
+  <div class="card-sub">内部留保が倍増する一方、現金比率は横ばい〜微増。利益は主に株式・固定資産投資に向かっている</div>
+  <div class="ratio-grid" id="ratioGrid"></div>
+</div>
+
+<!-- 解説 -->
+<div class="anno-card">
+  <h3>◆ 内部留保の「中身」— 資金はどこへ向かったか</h3>
+  <div class="anno-2col">
+    <div class="anno-item">
+      <strong>株式・投融資（最大項目）</strong>
+      2023年度末時点で投融資うち株式が372.6兆円と資産最大項目。M&A・持合い・子会社出資が積み上がっており、現金化困難な場合も多い。
+    </div>
+    <div class="anno-item">
+      <strong>現金・預金（301兆円 / 総資産13%）</strong>
+      2024年は301兆円。うち約6割が中小零細企業の保有。大企業の手元現金は全体の1〜2割程度で、「大企業が溜め込んでいる」とは言いにくい構造。
+    </div>
+    <div class="anno-item">
+      <strong>固定資産（595兆円）— 2020年以降回復</strong>
+      バブル崩壊後に停滞していた固定資産は2020年に90年代ピークを回復。2024年は595兆円。DX・GX・AI投資の加速で今後も増加見込み。
+    </div>
+    <div class="anno-item">
+      <strong>コロナ禍（2020年）の現金急増</strong>
+      2019年→2020年で現金・預金は約230兆→272兆円と18%急増（法人企業統計）。先行き不透明感による予防的保有が主因。その後は緩やかな増加に転換。
+    </div>
+  </div>
+</div>
+
+<footer>
+  出典：財務省「法人企業統計年次調査」（内部留保・現金預金・設備投資）、日本銀行「資金循環統計」（民間非金融法人現預金）、
+  第一生命経済研究所「これから"日本株式会社"はどう動いていくのか」（2024年）、
+  慶應義塾大学 蔡怡ブン「日本の上場企業の現金保有の影響要因に関する考察」（2024年）、
+  内閣官房「賃金・人的資本に関するデータ集」（2021年）<br>
+  ※現金・預金は法人企業統計（金融保険業除く）ベース。数値は各報告・研究より集計のため若干の誤差を含む。
+</footer>
+</div>
+
+<script>
+// ─── Waterfall data ───────────────────────────────────────────
+const wfData = [
+  { label:'現金・預金',     val:301, pct:13.3, color:'#2563a8', note:'全資産の13%' },
+  { label:'売掛金・受取手形', val:240, pct:10.6, color:'#2d9e8e', note:'流動資産' },
+  { label:'投融資（株式等）', val:373, pct:16.4, color:'#8e44ad', note:'最大資産項目' },
+  { label:'有形固定資産',    val:332, pct:14.6, color:'#c0392b', note:'設備・建物' },
+  { label:'土地',           val:201, pct: 8.8, color:'#e67e22', note:'' },
+  { label:'その他資産',      val:823, pct:36.3, color:'#95a5a6', note:'無形資産等含む' },
+];
+const wfMax = 823;
+const wf = document.getElementById('wfChart');
+wfData.forEach(d => {
+  const row = document.createElement('div');
+  row.className = 'wf-row';
+  row.innerHTML = `
+    <div class="wf-label">${d.label}<br><span style="font-size:10px;color:var(--muted)">${d.note}</span></div>
+    <div class="wf-bar-outer">
+      <div class="wf-bar-fill" style="width:0%;background:${d.color}" data-w="${(d.val/wfMax*100).toFixed(1)}">
+        <span>${d.val}兆円</span>
+      </div>
+    </div>
+    <div class="wf-val">${d.pct}%</div>`;
+  wf.appendChild(row);
+});
+setTimeout(() => {
+  document.querySelectorAll('.wf-bar-fill[data-w]').forEach(el => {
+    el.style.transition = 'width 1s ease';
+    el.style.width = el.dataset.w + '%';
+  });
+}, 150);
+
+// ─── Line chart data ──────────────────────────────────────────
+const years = [2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+
+const datasets = [
+  {
+    key:'retained', label:'内部留保（利益剰余金）',
+    color:'#b5451b',
+    // 321→354→375→403→446→475→484→516→554→601→637
+    idx:[100,110.3,116.8,125.5,138.9,147.9,150.8,160.8,172.5,187.2,198.4]
+  },
+  {
+    key:'cash', label:'現金・預金',
+    color:'#2563a8',
+    // 185→193→200→210→220→230→272→280→285→301→301
+    idx:[100,104.3,108.1,113.5,118.9,124.3,147.0,151.4,154.1,162.7,162.7]
+  },
+  {
+    key:'equity', label:'投融資（株式等）',
+    color:'#16a085',
+    // 220→250→270→295→300→305→310→340→360→373→385（推計）
+    idx:[100,113.6,122.7,134.1,136.4,138.6,140.9,154.5,163.6,169.5,175.0]
+  },
+  {
+    key:'fixed', label:'有形固定資産',
+    color:'#8e44ad',
+    // 280→283→287→293→300→305→302→308→318→332→345（推計）
+    idx:[100,101.1,102.5,104.6,107.1,108.9,107.9,110.0,113.6,118.6,123.2]
+  },
+];
+
+// ─── SVG line chart ───────────────────────────────────────────
+const visible = {retained:true,cash:true,equity:true,fixed:true};
+const W=920,H=320,PAD={t:20,r:24,b:40,l:48};
+const cW=W-PAD.l-PAD.r, cH=H-PAD.t-PAD.b;
+const minV=90, maxV=215;
+function xp(i){return PAD.l+(i/(years.length-1))*cW}
+function yp(v){return PAD.t+cH-((v-minV)/(maxV-minV))*cH}
+function mkPath(arr){return arr.map((v,i)=>`${i===0?'M':'L'}${xp(i).toFixed(1)},${yp(v).toFixed(1)}`).join(' ')}
+
+const svg = document.getElementById('mainChart');
+const tooltip = document.getElementById('tooltip');
+
+function drawChart(){
+  svg.innerHTML='';
+  // grid
+  [100,120,140,160,180,200].forEach(v=>{
+    const y=yp(v);
+    const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1',PAD.l);line.setAttribute('x2',W-PAD.r);
+    line.setAttribute('y1',y);line.setAttribute('y2',y);
+    line.setAttribute('stroke',v===100?'#c0bdb8':'#e5e0d8');
+    line.setAttribute('stroke-width',v===100?'1.5':'0.8');
+    svg.appendChild(line);
+    const lbl=document.createElementNS('http://www.w3.org/2000/svg','text');
+    lbl.setAttribute('x',PAD.l-6);lbl.setAttribute('y',y+4);
+    lbl.setAttribute('text-anchor','end');lbl.setAttribute('fill','#999');lbl.setAttribute('font-size','9');
+    lbl.textContent=v;
+    svg.appendChild(lbl);
+  });
+  // x axis
+  years.forEach((yr,i)=>{
+    const lbl=document.createElementNS('http://www.w3.org/2000/svg','text');
+    lbl.setAttribute('x',xp(i));lbl.setAttribute('y',H-PAD.b+16);
+    lbl.setAttribute('text-anchor','middle');lbl.setAttribute('fill','#999');lbl.setAttribute('font-size','9');
+    lbl.textContent=String(yr).slice(2)+'年';
+    svg.appendChild(lbl);
+  });
+  // lines
+  datasets.forEach(ds=>{
+    if(!visible[ds.key]) return;
+    // area
+    const ap=mkPath(ds.idx)+` L${xp(ds.idx.length-1)},${yp(100)} L${xp(0)},${yp(100)} Z`;
+    const area=document.createElementNS('http://www.w3.org/2000/svg','path');
+    area.setAttribute('d',ap);area.setAttribute('fill',ds.color);area.setAttribute('fill-opacity','0.05');
+    svg.appendChild(area);
+    // line
+    const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d',mkPath(ds.idx));path.setAttribute('fill','none');
+    path.setAttribute('stroke',ds.color);path.setAttribute('stroke-width','2.2');
+    path.setAttribute('stroke-linejoin','round');
+    svg.appendChild(path);
+    // dots
+    ds.idx.forEach((v,i)=>{
+      const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',xp(i));c.setAttribute('cy',yp(v));
+      c.setAttribute('r','4');c.setAttribute('fill',ds.color);
+      c.setAttribute('stroke',getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()||'#f7f4ef');
+      c.setAttribute('stroke-width','2');c.style.cursor='pointer';
+      c.addEventListener('mouseenter',e=>showTip(e,yr,ds,v,i));
+      c.addEventListener('mouseleave',()=>{tooltip.style.opacity='0'});
+      svg.appendChild(c);
+    });
+    // end label
+    const last=ds.idx[ds.idx.length-1];
+    const el=document.createElementNS('http://www.w3.org/2000/svg','text');
+    el.setAttribute('x',xp(ds.idx.length-1)+6);el.setAttribute('y',yp(last)+4);
+    el.setAttribute('fill',ds.color);el.setAttribute('font-size','10');el.setAttribute('font-weight','600');
+    el.textContent=Math.round(last);
+    svg.appendChild(el);
+  });
+}
+
+function showTip(e,yr,ds,v,i){
+  const raw={'retained':[321,354,375,403,446,475,484,516,554,601,637],'cash':[185,193,200,210,220,230,272,280,285,301,301],'equity':[220,250,270,295,300,305,310,340,360,373,385],'fixed':[280,283,287,293,300,305,302,308,318,332,345]};
+  const abs=raw[ds.key][i];
+  const yoy=i>0?((v/ds.idx[i-1]-1)*100).toFixed(1):'—';
+  tooltip.innerHTML=`<span style="color:${ds.color};font-weight:600">${ds.label}</span><br>${years[i]}年度<br>指数: ${v.toFixed(1)}<br>実額: 約${abs}兆円<br>前年比: ${yoy!=='—'?(yoy>0?'+':'')+yoy+'%':'—'}`;
+  tooltip.style.opacity='1';
+  tooltip.style.left=(e.clientX+14)+'px';
+  tooltip.style.top=(e.clientY-14)+'px';
+}
+document.addEventListener('mousemove',e=>{if(tooltip.style.opacity==='1'){tooltip.style.left=(e.clientX+14)+'px';tooltip.style.top=(e.clientY-14)+'px'}});
+
+// Legend
+const legDiv=document.getElementById('legend');
+datasets.forEach(ds=>{
+  const d=document.createElement('div');
+  d.className='leg';d.dataset.key=ds.key;
+  d.innerHTML=`<span class="leg-dot" style="background:${ds.color}"></span>${ds.label}`;
+  d.addEventListener('click',()=>{
+    visible[ds.key]=!visible[ds.key];
+    d.classList.toggle('dimmed');drawChart();
+  });
+  legDiv.appendChild(d);
+});
+drawChart();
+
+// ─── Ratio grid ───────────────────────────────────────────────
+const ratioData=[
+  {year:'2014',pct:12.4,hi:false},{year:'2016',pct:12.7,hi:false},
+  {year:'2019',pct:12.7,hi:false},{year:'2020',pct:14.5,hi:true},
+  {year:'2021',pct:13.9,hi:false},{year:'2022',pct:13.5,hi:false},
+  {year:'2023',pct:14.3,hi:false},{year:'2024',pct:13.3,hi:false},
+];
+const rg=document.getElementById('ratioGrid');
+ratioData.forEach(d=>{
+  const card=document.createElement('div');
+  card.className='ratio-card'+(d.hi?' hi':'');
+  card.innerHTML=`<div class="year">${d.year}年度</div><div class="pct" style="color:${d.hi?'var(--cash)':'var(--ink)'}">${d.pct}%</div><div class="label">現預金／総資産</div>`;
+  rg.appendChild(card);
+});
+</script>
+</body>
+</html>

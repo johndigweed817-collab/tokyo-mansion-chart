@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JBL スピーカー図鑑 — 機能美の系譜</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap');
+
+:root {
+  --bg: #0c0c0a;
+  --bg2: #141410;
+  --bg3: #1c1c16;
+  --border: rgba(255,255,255,0.08);
+  --border2: rgba(255,255,255,0.15);
+  --text: #e8e4d8;
+  --text2: #9a9680;
+  --text3: #5a5850;
+  --gold: #c8a84a;
+  --gold2: #6a4a0a;
+  --cream: #f0ead6;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ─── HEADER ─── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(12,12,10,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 54px;
+}
+.logo { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--gold); }
+nav { display: flex; gap: 2rem; }
+nav a { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--text3); text-decoration: none; transition: color .2s; }
+nav a:hover { color: var(--text); }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 7rem 2rem 5rem;
+  max-width: 860px; margin: 0 auto;
+  border-bottom: 0.5px solid var(--border);
+}
+.eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1.5rem; }
+h1 { font-family: 'DM Serif Display', serif; font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.05; color: var(--cream); margin-bottom: 1rem; }
+h1 em { font-style: italic; color: var(--gold); }
+.hero-sub { font-size: 15px; color: var(--text2); max-width: 500px; line-height: 1.85; }
+
+/* ─── SECTION WRAPPER ─── */
+.section { max-width: 1100px; margin: 0 auto; padding: 3.5rem 2rem; border-bottom: 0.5px solid var(--border); }
+.section-label {
+  font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--gold2);
+  display: flex; align-items: center; gap: 14px; margin-bottom: 2rem;
+}
+.section-label::after { content:''; flex:1; height:0.5px; background:var(--border); max-width:240px; }
+
+/* ─── FLAT CATALOG GRID ─── */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0;
+  background: var(--border);
+  border: 0.5px solid var(--border);
+}
+
+.catalog-card {
+  background: var(--bg2);
+  display: flex; flex-direction: column;
+  transition: background .18s;
+  text-decoration: none; color: inherit;
+}
+.catalog-card:hover { background: var(--bg3); }
+
+.card-visual {
+  width: 100%; aspect-ratio: 4/3;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg);
+  border-bottom: 0.5px solid var(--border);
+  overflow: hidden;
+}
+
+.card-body { padding: 1.25rem 1.25rem 1.25rem; flex:1; display:flex; flex-direction:column; }
+.card-meta { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.1em; color:var(--text3); margin-bottom:5px; }
+.card-name { font-family:'DM Serif Display',serif; font-size:1.35rem; color:var(--cream); margin-bottom:8px; line-height:1.2; }
+.card-desc { font-size:13px; color:var(--text2); line-height:1.7; flex:1; }
+
+.card-footer {
+  margin-top:1rem; padding-top:1rem;
+  border-top: 0.5px solid var(--border);
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;
+}
+.badge-row { display:flex; gap:5px; flex-wrap:wrap; }
+.badge {
+  font-family:'DM Mono',monospace; font-size:9px; letter-spacing:0.06em;
+  padding:3px 7px; border:0.5px solid var(--border2); color:var(--text3); border-radius:2px;
+}
+.ref-link {
+  font-family:'DM Mono',monospace; font-size:10px; color:var(--gold);
+  text-decoration:none; letter-spacing:0.06em;
+  display:inline-flex; align-items:center; gap:3px; opacity:.8; transition:opacity .2s; white-space:nowrap;
+}
+.ref-link:hover { opacity:1; }
+.ref-link::after { content:'↗'; }
+
+/* ─── 4312 FEATURE CARD ─── */
+.feature-wrap {
+  max-width: 1100px; margin: 0 auto; padding: 3.5rem 2rem;
+}
+
+.feature-header {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 3rem;
+}
+@media (max-width: 700px) { .feature-header { grid-template-columns: 1fr; } }
+
+.feature-title-block {}
+.feature-eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.18em; color:var(--gold); margin-bottom:1rem; }
+.feature-title { font-family:'DM Serif Display',serif; font-size:clamp(2.2rem,5vw,4rem); color:var(--cream); line-height:1.05; margin-bottom:1rem; }
+.feature-subtitle { font-size:13px; color:var(--text2); line-height:1.8; }
+
+.feature-visual { display:flex; justify-content:center; }
+
+/* ─── TABS ─── */
+.tabs { display:flex; gap:0; border-bottom:0.5px solid var(--border); margin-bottom:2rem; }
+.tab {
+  padding:9px 18px; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.08em;
+  color:var(--text3); cursor:pointer; border:none; background:none;
+  border-bottom:2px solid transparent; margin-bottom:-0.5px; transition:color .2s, border-color .2s;
+}
+.tab.active { color:var(--cream); border-bottom-color:var(--gold); }
+.tab:hover:not(.active) { color:var(--text); }
+
+.panel { display:none; }
+.panel.active { display:block; }
+
+/* ─── PANEL: 設計思想 ─── */
+.design-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5px; background:var(--border); border:0.5px solid var(--border); }
+@media (max-width:600px) { .design-grid { grid-template-columns:1fr; } }
+.design-cell { background:var(--bg2); padding:1.5rem; }
+.design-cell-title { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.1em; color:var(--gold); margin-bottom:10px; }
+.design-cell p { font-size:13px; color:var(--text2); line-height:1.75; }
+
+/* ─── PANEL: 系譜 ─── */
+.tl-row { display:grid; grid-template-columns:70px 1fr; gap:0 2rem; padding:1.1rem 0; border-bottom:0.5px solid var(--border); align-items:start; }
+.tl-year { font-family:'DM Mono',monospace; font-size:12px; color:var(--gold); padding-top:2px; letter-spacing:0.06em; }
+.tl-model { font-size:14px; font-weight:500; color:var(--cream); margin-bottom:4px; }
+.tl-desc { font-size:13px; color:var(--text2); line-height:1.65; }
+.tl-row:last-child { border-bottom:none; }
+
+/* ─── PANEL: スペック ─── */
+.spec-table { width:100%; border-collapse:collapse; font-size:13px; }
+.spec-table tr { border-bottom:0.5px solid var(--border); }
+.spec-table tr:last-child { border-bottom:none; }
+.spec-table td { padding:10px 0; vertical-align:top; }
+.spec-table td:first-child {
+  font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.08em;
+  color:var(--text3); width:200px; padding-right:1rem;
+}
+.spec-table td:last-child { color:var(--text); }
+
+/* ─── PANEL: ユニット ─── */
+.unit-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:var(--border); border:0.5px solid var(--border); }
+@media (max-width:600px) { .unit-grid { grid-template-columns:1fr; } }
+.unit-cell { background:var(--bg2); padding:1.5rem; }
+.unit-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.1em; color:var(--gold); margin-bottom:8px; }
+.unit-name { font-size:14px; font-weight:500; color:var(--cream); margin-bottom:6px; }
+.unit-detail { font-size:13px; color:var(--text2); line-height:1.7; }
+
+/* ─── PANEL: 歴史的意義 ─── */
+.heritage-list { display:flex; flex-direction:column; gap:0; border:0.5px solid var(--border); }
+.heritage-item { display:flex; gap:1.5rem; padding:1.25rem 1.5rem; border-bottom:0.5px solid var(--border); background:var(--bg2); }
+.heritage-item:last-child { border-bottom:none; }
+.heritage-num { font-family:'DM Mono',monospace; font-size:11px; color:var(--text3); min-width:24px; padding-top:2px; }
+.heritage-body {}
+.heritage-title { font-size:14px; font-weight:500; color:var(--cream); margin-bottom:4px; }
+.heritage-desc { font-size:13px; color:var(--text2); line-height:1.7; }
+
+/* ─── FOOTER ─── */
+footer { padding:3rem 2rem; text-align:center; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.12em; color:var(--text3); border-top:0.5px solid var(--border); }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="logo">JBL ZUKAN</span>
+  <nav>
+    <a href="#catalog">図鑑</a>
+    <a href="#4312">4312</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="eyebrow">FUNCTIONAL BEAUTY OF JBL</p>
+  <h1>JBL<br><em>図鑑</em></h1>
+  <p class="hero-sub">音もいいが、なにより機能美。<br>音響的必然がそのまま造形になる——JBLスピーカーの系譜をたどる。</p>
+</div>
+
+<!-- ─── CATALOG: 全機種フラットグリッド ─── -->
+<div class="section" id="catalog">
+  <div class="section-label">スピーカー図鑑</div>
+  <div class="catalog-grid">
+
+    <!-- GO型 BOX -->
+    <div class="catalog-card">
+      <div class="card-visual">
+        <svg viewBox="0 0 300 225" width="300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="225" fill="#121210"/>
+          <rect x="54" y="20" width="192" height="185" rx="4" fill="#0e0e0a" stroke="#2a2a1a" stroke-width="1.5"/>
+          <rect x="63" y="28" width="174" height="169" rx="3" fill="#0a0a06"/>
+          <circle cx="150" cy="115" r="62" fill="none" stroke="#222" stroke-width="1"/>
+          <circle cx="150" cy="115" r="54" fill="#080806" stroke="#1a1a10" stroke-width="1"/>
+          <circle cx="150" cy="115" r="38" fill="#0a0a08"/>
+          <circle cx="150" cy="115" r="23" fill="#141412" stroke="#2a2a18" stroke-width="1"/>
+          <circle cx="150" cy="115" r="10" fill="#1e1e14" stroke="#3a3a28" stroke-width="1"/>
+          <circle cx="150" cy="115" r="4" fill="#4a4a38"/>
+          <rect x="218" y="54" width="14" height="82" rx="3" fill="#1a1a12" stroke="#2a2a1a" stroke-width="0.5"/>
+          <rect x="221" y="62" width="8" height="9" rx="1.5" fill="#2a2a1a"/>
+          <rect x="221" y="75" width="8" height="9" rx="1.5" fill="#2a2a1a"/>
+          <rect x="221" y="88" width="8" height="9" rx="1.5" fill="#2a2a1a"/>
+          <text x="150" y="200" text-anchor="middle" fill="#2a2a18" font-size="8" font-family="'DM Mono',monospace" letter-spacing="2">PROFESSIONAL MONITOR</text>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">劇場用モニター · 1940s–</div>
+        <div class="card-name">GO型 BOX</div>
+        <div class="card-desc">映画館の音響を支えた角型エンクロージャー。合板の直方体に剛性と音響効率を凝縮し、スタジオ標準として長く君臨した原点的な設計。</div>
+        <div class="card-footer">
+          <div class="badge-row"><span class="badge">劇場用</span><span class="badge">モニター</span><span class="badge">合板BOX</span></div>
+          <a class="ref-link" href="https://jblpro.com/products/categories/installed-sound" target="_blank" rel="noopener">JBL Pro</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- サウンドコラム -->
+    <div class="catalog-card">
+      <div class="card-visual">
+        <svg viewBox="0 0 300 225" width="300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="225" fill="#0e1420"/>
+          <rect x="127" y="10" width="46" height="205" rx="5" fill="#0a1020" stroke="#1a2840" stroke-width="1.5"/>
+          <ellipse cx="150" cy="32" rx="16" ry="16" fill="#060c18" stroke="#1a2840" stroke-width="1"/>
+          <ellipse cx="150" cy="32" rx="9" ry="9" fill="#040a14"/>
+          <circle cx="150" cy="32" r="3" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <ellipse cx="150" cy="73" rx="16" ry="16" fill="#060c18" stroke="#1a2840" stroke-width="1"/>
+          <ellipse cx="150" cy="73" rx="9" ry="9" fill="#040a14"/>
+          <circle cx="150" cy="73" r="3" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <ellipse cx="150" cy="113" rx="16" ry="16" fill="#060c18" stroke="#1a2840" stroke-width="1"/>
+          <ellipse cx="150" cy="113" rx="9" ry="9" fill="#040a14"/>
+          <circle cx="150" cy="113" r="3" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <ellipse cx="150" cy="153" rx="16" ry="16" fill="#060c18" stroke="#1a2840" stroke-width="1"/>
+          <ellipse cx="150" cy="153" rx="9" ry="9" fill="#040a14"/>
+          <circle cx="150" cy="153" r="3" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <ellipse cx="150" cy="193" rx="16" ry="16" fill="#060c18" stroke="#1a2840" stroke-width="1"/>
+          <ellipse cx="150" cy="193" rx="9" ry="9" fill="#040a14"/>
+          <circle cx="150" cy="193" r="3" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <text x="150" y="218" text-anchor="middle" fill="#1a3050" font-size="8" font-family="'DM Mono',monospace" letter-spacing="1">SOUND COLUMN</text>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">サウンドコラム · 1950s</div>
+        <div class="card-name">サウンドコラム</div>
+        <div class="card-desc">縦長キャビネットに複数ユニットを垂直配列。コンサートホール・公会堂の壁面に設置し、垂直方向の指向性を制御して均一な音場を形成する音響建築の一部。</div>
+        <div class="card-footer">
+          <div class="badge-row"><span class="badge">コラム型</span><span class="badge">垂直配列</span><span class="badge">壁面設置</span></div>
+          <a class="ref-link" href="https://jblpro.com/products/categories/installed-sound" target="_blank" rel="noopener">JBL Pro Installed</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paragon D44000 -->
+    <div class="catalog-card">
+      <div class="card-visual">
+        <svg viewBox="0 0 300 225" width="300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="225" fill="#100c04"/>
+          <rect x="14" y="56" width="272" height="152" rx="5" fill="#0c0a04" stroke="#2a2008" stroke-width="1.5"/>
+          <path d="M14 90 Q150 46 286 90" fill="#0a0804" stroke="#3a2808" stroke-width="1.5"/>
+          <rect x="14" y="90" width="272" height="118" fill="#0c0a04"/>
+          <ellipse cx="150" cy="116" rx="56" ry="28" fill="#080804" stroke="#2a1e06" stroke-width="1"/>
+          <circle cx="150" cy="116" r="17" fill="#060604" stroke="#3a2808" stroke-width="1"/>
+          <circle cx="150" cy="116" r="7" fill="#141008" stroke="#5a4010" stroke-width="1"/>
+          <circle cx="150" cy="116" r="3" fill="#8a7040"/>
+          <ellipse cx="52" cy="146" rx="23" ry="23" fill="#060604" stroke="#1e1804" stroke-width="0.8"/>
+          <circle cx="52" cy="146" r="9" fill="#040404"/>
+          <ellipse cx="248" cy="146" rx="23" ry="23" fill="#060604" stroke="#1e1804" stroke-width="0.8"/>
+          <circle cx="248" cy="146" r="9" fill="#040404"/>
+          <text x="150" y="192" text-anchor="middle" fill="#5a4818" font-size="9" font-family="'DM Mono',monospace" letter-spacing="3">PARAGON  D44000</text>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">ステレオコンソール · 1957–1983</div>
+        <div class="card-name">Paragon D44000</div>
+        <div class="card-desc">中央の曲面バッフルが左右の音波を反射させ、ステレオ音場を空間に溶け込ませる。家具としての佇まいと音響装置としての機能が完全に統合されたJBL最高傑作のひとつ。</div>
+        <div class="card-footer">
+          <div class="badge-row"><span class="badge">曲面反射</span><span class="badge">ステレオ</span><span class="badge">家具調</span></div>
+          <a class="ref-link" href="https://www.jbl.com/heritage-series/" target="_blank" rel="noopener">JBL Heritage</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- D130 -->
+    <div class="catalog-card">
+      <div class="card-visual">
+        <svg viewBox="0 0 300 225" width="300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="225" fill="#060e06"/>
+          <circle cx="150" cy="112" r="92" fill="none" stroke="#122012" stroke-width="1.5"/>
+          <circle cx="150" cy="112" r="84" fill="#040c04" stroke="#0e1e0e" stroke-width="1"/>
+          <circle cx="150" cy="112" r="68" fill="#060e06" stroke="#122012" stroke-width="0.5"/>
+          <circle cx="150" cy="112" r="50" fill="#040c04" stroke="#0e1a0e" stroke-width="0.5"/>
+          <circle cx="150" cy="112" r="34" fill="#040c04" stroke="#0e1a0e" stroke-width="0.5"/>
+          <circle cx="150" cy="112" r="20" fill="#0c1c0c" stroke="#1e3a1e" stroke-width="1"/>
+          <circle cx="150" cy="112" r="10" fill="#163016" stroke="#2a5a2a" stroke-width="1"/>
+          <circle cx="150" cy="112" r="4" fill="#2a6a2a"/>
+          <circle cx="150" cy="112" r="2" fill="#4a9a4a"/>
+          <text x="150" y="210" text-anchor="middle" fill="#1a4a1a" font-size="8" font-family="'DM Mono',monospace" letter-spacing="2">D130 · 15" WOOFER</text>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">ウーファー · 1947–</div>
+        <div class="card-name">D130 / LE15</div>
+        <div class="card-desc">ランシングが設計した38cm大口径ウーファーの源流。軽量紙コーンと強力な磁気回路の組み合わせがJBLサウンドのDNAを決定した一枚。</div>
+        <div class="card-footer">
+          <div class="badge-row"><span class="badge">38cm</span><span class="badge">フルレンジ</span><span class="badge">ハイセンシ</span></div>
+          <a class="ref-link" href="https://www.lansingheritage.org/html/jbl/reference/drivers/d130.htm" target="_blank" rel="noopener">Lansing Heritage</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hartsfield -->
+    <div class="catalog-card">
+      <div class="card-visual">
+        <svg viewBox="0 0 300 225" width="300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="225" fill="#100804"/>
+          <path d="M20 210 L20 48 Q20 22 66 22 L228 22 Q292 22 292 94 L292 210 Z" fill="#0a0604" stroke="#2a1406" stroke-width="1.5"/>
+          <path d="M44 210 L44 68 Q44 46 82 46 L208 46 Q264 46 264 104 L264 210" fill="none" stroke="#1e1004" stroke-width="1"/>
+          <path d="M70 210 L70 90 Q70 72 100 72 L142 72 Q188 72 188 114 L188 210" fill="#060402" stroke="#140c04" stroke-width="1"/>
+          <circle cx="130" cy="158" r="30" fill="#060402" stroke="#1e1006" stroke-width="1"/>
+          <circle cx="130" cy="158" r="19" fill="#040302" stroke="#140c04" stroke-width="0.5"/>
+          <circle cx="130" cy="158" r="9" fill="#0a0804" stroke="#2a1808" stroke-width="1"/>
+          <circle cx="130" cy="158" r="3.5" fill="#3a2010"/>
+          <circle cx="228" cy="82" r="19" fill="#060402" stroke="#1e1006" stroke-width="0.8"/>
+          <circle cx="228" cy="82" r="9" fill="#040302"/>
+          <text x="150" y="218" text-anchor="middle" fill="#3a2010" font-size="8" font-family="'DM Mono',monospace" letter-spacing="1">HARTSFIELD CORNER HORN</text>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">コーナーホーン · 1954–1963</div>
+        <div class="card-name">Hartsfield</div>
+        <div class="card-desc">部屋のコーナー自体を巨大なホーンの一部として活用する設計。折り曲げたホーンロードが低域を豊かに放射し、建築と音響装置が不可分に融合した傑作。</div>
+        <div class="card-footer">
+          <div class="badge-row"><span class="badge">コーナーホーン</span><span class="badge">折曲ホーン</span><span class="badge">部屋一体型</span></div>
+          <a class="ref-link" href="https://www.lansingheritage.org/html/jbl/reference/speakers/hartsfield.htm" target="_blank" rel="noopener">Lansing Heritage</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- L100 Century -->
+    <div class="catalog-card">
+      <div class="card-visual">
+        <svg viewBox="0 0 300 225" width="300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="225" fill="#100604"/>
+          <rect x="46" y="10" width="208" height="205" rx="6" fill="#0c0502" stroke="#1a0804" stroke-width="1.5"/>
+          <rect x="53" y="16" width="194" height="193" rx="4" fill="#b84018" opacity="0.92"/>
+          <g opacity="0.65">
+            <circle cx="77" cy="38" r="5" fill="#7a2008"/><circle cx="101" cy="38" r="5" fill="#7a2008"/><circle cx="125" cy="38" r="5" fill="#7a2008"/>
+            <circle cx="149" cy="38" r="5" fill="#7a2008"/><circle cx="173" cy="38" r="5" fill="#7a2008"/><circle cx="197" cy="38" r="5" fill="#7a2008"/><circle cx="221" cy="38" r="5" fill="#7a2008"/>
+            <circle cx="77" cy="62" r="5" fill="#7a2008"/><circle cx="101" cy="62" r="5" fill="#7a2008"/><circle cx="125" cy="62" r="5" fill="#7a2008"/>
+            <circle cx="149" cy="62" r="5" fill="#7a2008"/><circle cx="173" cy="62" r="5" fill="#7a2008"/><circle cx="197" cy="62" r="5" fill="#7a2008"/><circle cx="221" cy="62" r="5" fill="#7a2008"/>
+            <circle cx="77" cy="158" r="5" fill="#7a2008"/><circle cx="101" cy="158" r="5" fill="#7a2008"/><circle cx="125" cy="158" r="5" fill="#7a2008"/>
+            <circle cx="149" cy="158" r="5" fill="#7a2008"/><circle cx="173" cy="158" r="5" fill="#7a2008"/><circle cx="197" cy="158" r="5" fill="#7a2008"/><circle cx="221" cy="158" r="5" fill="#7a2008"/>
+            <circle cx="77" cy="182" r="5" fill="#7a2008"/><circle cx="101" cy="182" r="5" fill="#7a2008"/><circle cx="125" cy="182" r="5" fill="#7a2008"/>
+            <circle cx="149" cy="182" r="5" fill="#7a2008"/><circle cx="173" cy="182" r="5" fill="#7a2008"/><circle cx="197" cy="182" r="5" fill="#7a2008"/><circle cx="221" cy="182" r="5" fill="#7a2008"/>
+          </g>
+          <circle cx="150" cy="110" r="57" fill="#0c0502" stroke="#0e0602" stroke-width="1" opacity="0.93"/>
+          <circle cx="150" cy="110" r="45" fill="#080402" stroke="#0a0402" stroke-width="0.5" opacity="0.95"/>
+          <circle cx="150" cy="110" r="28" fill="#0c0804" stroke="#141008" stroke-width="1" opacity="0.97"/>
+          <circle cx="150" cy="110" r="12" fill="#181208" stroke="#282018" stroke-width="1"/>
+          <circle cx="150" cy="110" r="5" fill="#3a2e18"/>
+          <text x="150" y="212" text-anchor="middle" fill="#b84018" font-size="9" font-family="'DM Mono',monospace" letter-spacing="2">L100 CENTURY</text>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">ホームスピーカー · 1970–</div>
+        <div class="card-name">L100 Century</div>
+        <div class="card-desc">4310スタジオモニターの家庭版。オレンジのQuadlexフォームグリルが70年代ロック文化を象徴し、現在も復刻生産が続く不朽の名機。</div>
+        <div class="card-footer">
+          <div class="badge-row"><span class="badge">ホーム用</span><span class="badge">Quadlex</span><span class="badge">復刻</span></div>
+          <a class="ref-link" href="https://www.jbl.com/loudspeakers/L100CLASSIC.html" target="_blank" rel="noopener">JBL L100 Classic</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ライン・アレイ -->
+    <div class="catalog-card">
+      <div class="card-visual">
+        <svg viewBox="0 0 300 225" width="300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="225" fill="#080e18"/>
+          <rect x="96" y="10" width="108" height="19" rx="3" fill="#060c16" stroke="#1a3050" stroke-width="1"/>
+          <rect x="104" y="14" width="16" height="11" rx="2" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <rect x="124" y="15" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="124" y="21" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="96" y="33" width="108" height="19" rx="3" fill="#060c16" stroke="#1a3050" stroke-width="1"/>
+          <rect x="104" y="37" width="16" height="11" rx="2" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <rect x="124" y="38" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="124" y="44" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="96" y="56" width="108" height="19" rx="3" fill="#060c16" stroke="#1a3050" stroke-width="1"/>
+          <rect x="104" y="60" width="16" height="11" rx="2" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <rect x="124" y="61" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="124" y="67" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="96" y="79" width="108" height="19" rx="3" fill="#060c16" stroke="#1a3050" stroke-width="1"/>
+          <rect x="104" y="83" width="16" height="11" rx="2" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <rect x="124" y="84" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="124" y="90" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="96" y="102" width="108" height="19" rx="3" fill="#060c16" stroke="#1a3050" stroke-width="1"/>
+          <rect x="104" y="106" width="16" height="11" rx="2" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <rect x="124" y="107" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="124" y="113" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="96" y="125" width="108" height="19" rx="3" fill="#060c16" stroke="#1a3050" stroke-width="1"/>
+          <rect x="104" y="129" width="16" height="11" rx="2" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <rect x="124" y="130" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="124" y="136" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="96" y="148" width="108" height="19" rx="3" fill="#060c16" stroke="#1a3050" stroke-width="1"/>
+          <rect x="104" y="152" width="16" height="11" rx="2" fill="#0a1828" stroke="#1a3a60" stroke-width="0.5"/>
+          <rect x="124" y="153" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="124" y="159" width="72" height="3.5" rx="1" fill="#0a1828" stroke="#1a3a60" stroke-width="0.3"/>
+          <rect x="130" y="172" width="40" height="5" rx="2.5" fill="#1a3050"/>
+          <text x="150" y="200" text-anchor="middle" fill="#185fa5" font-size="8" font-family="'DM Mono',monospace" letter-spacing="2">LINE ARRAY</text>
+          <text x="150" y="213" text-anchor="middle" fill="#0e3a60" font-size="8" font-family="'DM Mono',monospace" letter-spacing="1">DIRECTIONAL CONTROL</text>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">プロPA · 1990s–</div>
+        <div class="card-name">ライン・アレイ</div>
+        <div class="card-desc">垂直に連結する筐体が音の指向性を精密に制御する現代PAの主流形態。大型会場でも客席全体に均一なカバレッジを実現。スケーラブルな構成美。</div>
+        <div class="card-footer">
+          <div class="badge-row"><span class="badge">プロPA</span><span class="badge">指向性制御</span><span class="badge">スケーラブル</span></div>
+          <a class="ref-link" href="https://jblpro.com/products/vtx-a12" target="_blank" rel="noopener">JBL VTX A12</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VTX/SRX -->
+    <div class="catalog-card">
+      <div class="card-visual">
+        <svg viewBox="0 0 300 225" width="300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="225" fill="#0c0820"/>
+          <rect x="66" y="18" width="168" height="185" rx="7" fill="#080618" stroke="#1e1440" stroke-width="1.5"/>
+          <rect x="74" y="25" width="152" height="112" rx="3" fill="#04030e" stroke="#12103a" stroke-width="0.8"/>
+          <circle cx="106" cy="46" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="126" cy="46" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="146" cy="46" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="166" cy="46" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="186" cy="46" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="206" cy="46" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="106" cy="66" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="126" cy="66" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="146" cy="66" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="166" cy="66" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="186" cy="66" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="206" cy="66" r="6" fill="#0a0820" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="150" cy="100" r="34" fill="#06041a" stroke="#1e1450" stroke-width="1"/>
+          <circle cx="150" cy="100" r="22" fill="#04030e" stroke="#12103a" stroke-width="0.5"/>
+          <circle cx="150" cy="100" r="11" fill="#0c0a24" stroke="#241a60" stroke-width="1"/>
+          <circle cx="150" cy="100" r="5" fill="#1e1450"/>
+          <rect x="74" y="144" width="152" height="30" rx="3" fill="#04030e" stroke="#12103a" stroke-width="0.5"/>
+          <rect x="82" y="150" width="40" height="12" rx="2" fill="#0a0820" stroke="#12103a" stroke-width="0.3"/>
+          <text x="102" y="159" text-anchor="middle" fill="#281880" font-size="8" font-family="'DM Mono',monospace">DSP</text>
+          <rect x="130" y="150" width="40" height="12" rx="2" fill="#0a0820" stroke="#12103a" stroke-width="0.3"/>
+          <text x="150" y="159" text-anchor="middle" fill="#281880" font-size="8" font-family="'DM Mono',monospace">NET</text>
+          <rect x="178" y="150" width="40" height="12" rx="2" fill="#0a0820" stroke="#12103a" stroke-width="0.3"/>
+          <text x="198" y="159" text-anchor="middle" fill="#281880" font-size="8" font-family="'DM Mono',monospace">AMP</text>
+          <text x="150" y="196" text-anchor="middle" fill="#281880" font-size="8" font-family="'DM Mono',monospace" letter-spacing="2">VTX / SRX</text>
+          <text x="150" y="209" text-anchor="middle" fill="#18104a" font-size="8" font-family="'DM Mono',monospace" letter-spacing="1">DSP INTEGRATED</text>
+        </svg>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">フライアブルPA · 2000s–</div>
+        <div class="card-name">SRX / VTX シリーズ</div>
+        <div class="card-desc">DSP内蔵・ネットワーク制御でシステム全体をデジタルに統括。アンプ、プロセッサー、スピーカーを一体化し、機能のすべてを筐体に内包した現代の機能美。</div>
+        <div class="card-footer">
+          <div class="badge-row"><span class="badge">DSP内蔵</span><span class="badge">フライアブル</span><span class="badge">デジタル</span></div>
+          <a class="ref-link" href="https://jblpro.com/products/vtx-v20" target="_blank" rel="noopener">JBL VTX V20</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /catalog-grid -->
+</div><!-- /section -->
+
+
+<!-- ─── 4312 FEATURE SECTION ─── -->
+<div style="border-top:0.5px solid var(--border); background:var(--bg);" id="4312">
+<div class="feature-wrap">
+
+  <div class="feature-header">
+    <div class="feature-title-block">
+      <p class="feature-eyebrow">FEATURED · STUDIO MONITOR</p>
+      <h2 class="feature-title">4312<br>シリーズ</h2>
+      <p class="feature-subtitle">レコーディングスタジオの標準器として<br>半世紀以上愛用された3ウェイ密閉型。<br>フロントアッテネーターが機能美を象徴する。</p>
+      <div style="margin-top:1.5rem; display:flex; gap:8px; flex-wrap:wrap;">
+        <span class="badge" style="border-color:var(--gold); color:var(--gold);">3ウェイ密閉</span>
+        <span class="badge" style="border-color:var(--gold); color:var(--gold);">スタジオ標準</span>
+        <span class="badge" style="border-color:var(--gold); color:var(--gold);">1971–現在</span>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <a class="ref-link" href="https://www.jbl.com/loudspeakers/4312G.html" target="_blank" rel="noopener">JBL 4312G 公式</a>
+      </div>
+    </div>
+
+    <div class="feature-visual">
+      <svg viewBox="0 0 340 460" width="340" xmlns="http://www.w3.org/2000/svg">
+        <title>JBL 4312G フロントバッフル詳細図</title>
+        <rect x="20" y="10" width="300" height="440" rx="6" fill="#0a0a06" stroke="#1e1e14" stroke-width="1.5"/>
+        <rect x="28" y="17" width="284" height="426" rx="4" fill="#060604"/>
+        <!-- ウーファー 250mm -->
+        <circle cx="160" cy="228" r="122" fill="none" stroke="#1a1a10" stroke-width="1"/>
+        <circle cx="160" cy="228" r="112" fill="#040402" stroke="#121210" stroke-width="1"/>
+        <circle cx="160" cy="228" r="92" fill="#060604" stroke="#0e0e0c" stroke-width="0.5"/>
+        <circle cx="160" cy="228" r="68" fill="#040402" stroke="#0e0e0c" stroke-width="0.5"/>
+        <circle cx="160" cy="228" r="46" fill="#080806" stroke="#141412" stroke-width="0.5"/>
+        <circle cx="160" cy="228" r="28" fill="#0e0e0c" stroke="#1e1e18" stroke-width="1"/>
+        <circle cx="160" cy="228" r="13" fill="#181814" stroke="#2a2a24" stroke-width="1"/>
+        <circle cx="160" cy="228" r="5.5" fill="#3a3a30"/>
+        <circle cx="160" cy="228" r="2.5" fill="#6a6a54"/>
+        <!-- ツイーター -->
+        <circle cx="268" cy="78" r="38" fill="#040402" stroke="#141412" stroke-width="1"/>
+        <circle cx="268" cy="78" r="28" fill="#060604" stroke="#1a1a18" stroke-width="0.5"/>
+        <circle cx="268" cy="78" r="15" fill="#0c0c0a" stroke="#242422" stroke-width="1"/>
+        <circle cx="268" cy="78" r="6" fill="#242420"/>
+        <!-- スコーカー -->
+        <circle cx="268" cy="208" r="54" fill="#040402" stroke="#141412" stroke-width="1"/>
+        <circle cx="268" cy="208" r="42" fill="#060604" stroke="#121210" stroke-width="0.5"/>
+        <circle cx="268" cy="208" r="27" fill="#0a0a08" stroke="#1e1e1a" stroke-width="0.5"/>
+        <circle cx="268" cy="208" r="15" fill="#0e0e0c" stroke="#242420" stroke-width="1"/>
+        <circle cx="268" cy="208" r="6" fill="#2a2a24"/>
+        <!-- アッテネーター -->
+        <rect x="36" y="342" width="62" height="54" rx="28" fill="#060604" stroke="#141412" stroke-width="0.8"/>
+        <circle cx="67" cy="369" r="19" fill="#0a0a08" stroke="#1e1e1a" stroke-width="0.5"/>
+        <circle cx="67" cy="369" r="10" fill="#080806"/>
+        <circle cx="67" cy="369" r="4.5" fill="#1a1a14"/>
+        <rect x="112" y="346" width="30" height="46" rx="4" fill="#080806" stroke="#141412" stroke-width="0.8"/>
+        <rect x="117" y="350" width="20" height="38" rx="2" fill="#060604"/>
+        <rect x="150" y="346" width="30" height="46" rx="4" fill="#080806" stroke="#141412" stroke-width="0.8"/>
+        <rect x="155" y="350" width="20" height="38" rx="2" fill="#060604"/>
+        <rect x="188" y="346" width="24" height="46" rx="4" fill="#080806" stroke="#141412" stroke-width="0.8"/>
+        <rect x="193" y="350" width="14" height="38" rx="2" fill="#060604"/>
+        <!-- ラベル -->
+        <text x="36" y="36" fill="#262616" font-size="14" font-family="'DM Mono',monospace" font-weight="500" letter-spacing="2">JBL</text>
+        <text x="36" y="52" fill="#1a1a10" font-size="10" font-family="'DM Mono',monospace" letter-spacing="1">4312G</text>
+        <!-- leader lines + labels -->
+        <line x1="296" y1="62" x2="296" y2="38" stroke="#2a2a1a" stroke-width="0.5" stroke-dasharray="3 3"/>
+        <text x="300" y="36" fill="#3a3a28" font-size="9" font-family="'DM Mono',monospace">ツイーター 25mm · HF</text>
+        <line x1="296" y1="170" x2="296" y2="150" stroke="#2a2a1a" stroke-width="0.5" stroke-dasharray="3 3"/>
+        <text x="300" y="148" fill="#3a3a28" font-size="9" font-family="'DM Mono',monospace">スコーカー 130mm · MF</text>
+        <line x1="280" y1="320" x2="296" y2="300" stroke="#2a2a1a" stroke-width="0.5" stroke-dasharray="3 3"/>
+        <text x="300" y="298" fill="#3a3a28" font-size="9" font-family="'DM Mono',monospace">ウーファー 250mm · LF</text>
+        <text x="160" y="426" text-anchor="middle" fill="#1e1e12" font-size="9" font-family="'DM Mono',monospace" letter-spacing="3">3-WAY SEALED ENCLOSURE</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('design')">設計思想</button>
+    <button class="tab" onclick="switchTab('history')">系譜</button>
+    <button class="tab" onclick="switchTab('spec')">スペック</button>
+    <button class="tab" onclick="switchTab('unit')">ユニット</button>
+    <button class="tab" onclick="switchTab('heritage')">歴史的意義</button>
+  </div>
+
+  <!-- PANEL: 設計思想 -->
+  <div id="design" class="panel active">
+    <div class="design-grid">
+      <div class="design-cell">
+        <div class="design-cell-title">密閉型エンクロージャー</div>
+        <p>バスレフを使わず密閉箱を採用。ポートのコンプレッション特性を排除し、過渡応答の速さを優先。ドラムのアタック、ベースの輪郭がポートの干渉なく再生される。スタジオ現場での"正確な確認"には密閉の剛直さが必要だという哲学。</p>
+      </div>
+      <div class="design-cell">
+        <div class="design-cell-title">フロントアッテネーター</div>
+        <p>MFとHFのレベルを独立調整できるアッテネーターをフロントバッフルに配置。エンジニアが手元で音場を調整しながら作業できる。機能がそのまま造形になった代表的な例。</p>
+      </div>
+      <div class="design-cell">
+        <div class="design-cell-title">3ウェイ・ブックシェルフ</div>
+        <p>コンソール上に置けるサイズに3ウェイを凝縮。LF/MF/HFそれぞれを専門ユニットに分担させることで各帯域の純度を確保。帯域分割点は約1.5kHzと10kHz。</p>
+      </div>
+      <div class="design-cell">
+        <div class="design-cell-title">モニターとしての中立性</div>
+        <p>「気持ちよく聴こえる」より「正確に聴こえる」を優先。低域は量感より解像度、高域は艶より明瞭度。ミックスの問題点が浮かび上がってくる鳴り方が設計目標。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL: 系譜 -->
+  <div id="history" class="panel">
+    <div class="tl-row">
+      <div class="tl-year">1968</div>
+      <div><div class="tl-model">4310 Monitor</div><div class="tl-desc">ロサンゼルスのレコーディングスタジオ向けに開発されたコントロールルームモニターの原型。3ウェイ構成・密閉箱の概念を確立。</div></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">1970</div>
+      <div><div class="tl-model">4311 / L100 Century</div><div class="tl-desc">4310の改良版と家庭用L100が並行登場。オレンジのQuadlexグリルが時代のアイコンに。70年代ロック黄金期の録音現場を支えた。</div></div>
+    </div>
+    <div class="tl-row" style="background:rgba(200,168,74,0.04);">
+      <div class="tl-year">1971</div>
+      <div><div class="tl-model" style="color:var(--gold);">4312（初代）</div><div class="tl-desc">4311の正常進化版として誕生。スタジオ標準器の地位を確立した記念碑的モデル。</div></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">1980s</div>
+      <div><div class="tl-model">4312A / 4312B</div><div class="tl-desc">クロスオーバーネットワーク改良、ユニット更新。スタジオのデジタル化に対応しつつ基本設計を継承。</div></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">2000s</div>
+      <div><div class="tl-model">4312D / 4312SE</div><div class="tl-desc">アルニコ磁気回路への回帰。スペシャルエディションで原点回帰路線を強化。</div></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-year">2021–</div>
+      <div><div class="tl-model" style="color:var(--cream);">4312G / 4312E</div><div class="tl-desc">最新世代。改良型250mmウーファー、25mmドームツイーター採用。誕生から50年以上、基本哲学は不変。</div></div>
+    </div>
+  </div>
+
+  <!-- PANEL: スペック -->
+  <div id="spec" class="panel">
+    <table class="spec-table">
+      <tr><td>形式</td><td>3ウェイ密閉型ブックシェルフ</td></tr>
+      <tr><td>周波数特性</td><td>45Hz – 20kHz（±3dB）</td></tr>
+      <tr><td>インピーダンス</td><td>8Ω（公称）</td></tr>
+      <tr><td>感度</td><td>90 dB / 1W / 1m</td></tr>
+      <tr><td>推奨アンプ出力</td><td>25 – 150W（連続プログラム）</td></tr>
+      <tr><td>クロスオーバー周波数</td><td>1.5kHz（LF-MF）/ 10kHz（MF-HF）</td></tr>
+      <tr><td>外形寸法</td><td>382 × 591 × 305mm（W×H×D）</td></tr>
+      <tr><td>質量</td><td>約 22 kg</td></tr>
+      <tr><td>仕上げ</td><td>ウォールナット突板 / ブラック仕上げ</td></tr>
+    </table>
+  </div>
+
+  <!-- PANEL: ユニット -->
+  <div id="unit" class="panel">
+    <div class="unit-grid">
+      <div class="unit-cell">
+        <div class="unit-label">LF · ウーファー</div>
+        <div class="unit-name">250mm コーン型</div>
+        <div class="unit-detail">紙パルプコーン+フェライト/アルニコ磁気回路。深いストローク設計で低域解像度を確保。4312の音色の核心。</div>
+      </div>
+      <div class="unit-cell">
+        <div class="unit-label">MF · スコーカー</div>
+        <div class="unit-name">130mm コーン型</div>
+        <div class="unit-detail">ボーカル帯域・楽器の倍音を担当。独立したサブエンクロージャーに収め、ウーファーの振動を遮断。</div>
+      </div>
+      <div class="unit-cell">
+        <div class="unit-label">HF · ツイーター</div>
+        <div class="unit-name">25mm ドーム型</div>
+        <div class="unit-detail">現行モデルはチタン振動板採用。10kHz以上を担当。フロントアッテネーターで±数dB調整可能。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL: 歴史的意義 -->
+  <div id="heritage" class="panel">
+    <div class="heritage-list">
+      <div class="heritage-item">
+        <div class="heritage-num">01</div>
+        <div class="heritage-body">
+          <div class="heritage-title">スタジオ標準という称号</div>
+          <div class="heritage-desc">Capitol Records、A&amp;M Studios、Atlantic Recordingなど1970〜80年代の名盤製作スタジオのコントロールルームに普及。エンジニアが4312の音で判断した録音が無数に存在する。</div>
+        </div>
+      </div>
+      <div class="heritage-item">
+        <div class="heritage-num">02</div>
+        <div class="heritage-body">
+          <div class="heritage-title">「4312の音」が基準になった</div>
+          <div class="heritage-desc">世界中のエンジニアが4312で判断したため、その音のバランスがひとつの業界標準となった。ソフトウェアも4312での再生を前提に調整されたものが存在するとも言われる。</div>
+        </div>
+      </div>
+      <div class="heritage-item">
+        <div class="heritage-num">03</div>
+        <div class="heritage-body">
+          <div class="heritage-title">50年以上の設計継続</div>
+          <div class="heritage-desc">基本コンセプト（3ウェイ密閉・フロントアッテネーター）を変えず半世紀以上継続生産。工業製品として極めて稀なケース。設計の正しさが時間によって証明された。</div>
+        </div>
+      </div>
+      <div class="heritage-item">
+        <div class="heritage-num">04</div>
+        <div class="heritage-body">
+          <div class="heritage-title">日本市場との深い縁</div>
+          <div class="heritage-desc">1970〜80年代の日本のオーディオブームで爆発的に普及。「JBL＝4312」というイメージが日本で特に強い。国内向けに本国仕様と異なるチューニングのモデルも存在した。</div>
+        </div>
+      </div>
+      <div class="heritage-item">
+        <div class="heritage-num">05</div>
+        <div class="heritage-body">
+          <div class="heritage-title">機能が形を決めた美しさ</div>
+          <div class="heritage-desc">フロントアッテネーターの配置、バッフル上のユニット配列、ウォールナット仕上げのキャビネット——いずれも音響上の必然から生まれた。装飾が一切ない。機能美の純粋な実例。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /feature-wrap -->
+</div><!-- /4312 feature section -->
+
+<footer>
+  JBL SPEAKER ZUKAN · 機能美の系譜 · Made with Claude
+</footer>
+
+<script>
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(name).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>

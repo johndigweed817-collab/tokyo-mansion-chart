@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>常連客づくりCRM モック一覧</title>
+<style>
+  :root {
+    --espresso: #2A211C;
+    --espresso2: #4A3B30;
+    --caramel: #C08552;
+    --gold: #D4AF37;
+    --cream: #F3ECE2;
+    --muted: #8A7C6E;
+    --muted-d: #6B5A48;
+    --white: #FFFFFF;
+    --border: #ECE3D8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif; }
+  a { color: var(--caramel); text-decoration: none; }
+
+  .page { min-height: 100vh; background: var(--espresso); padding: 46px 24px; }
+  .inner { max-width: 860px; margin: 0 auto; }
+  .eyebrow { font-size: 12px; letter-spacing: 3px; color: var(--gold); font-weight: 800; margin-bottom: 12px; }
+  .title { font-size: 27px; font-weight: 800; color: var(--white); margin-bottom: 12px; }
+  .lead { font-size: 13.5px; color: #D9CFC4; line-height: 1.8; margin-bottom: 30px; max-width: 760px; }
+
+  .cards { display: flex; flex-direction: column; gap: 14px; }
+  .card { background: var(--white); border-radius: 16px; padding: 20px 24px; display: flex; gap: 18px; align-items: flex-start; transition: transform .12s ease, box-shadow .12s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.18); }
+  .num { width: 34px; height: 34px; border-radius: 50%; background: var(--gold); color: var(--espresso); font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .card-name { font-size: 15.5px; font-weight: 800; color: var(--espresso); margin-bottom: 4px; }
+  .card-desc { font-size: 12.5px; color: var(--muted-d); line-height: 1.6; margin-bottom: 6px; }
+  .card-hint { font-size: 11.5px; color: var(--caramel); font-weight: 700; }
+
+  .foot { margin-top: 26px; font-size: 11px; color: #8A7C6E; line-height: 1.7; border-top: 1px solid #4A3B30; padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="inner">
+    <div class="eyebrow">常連客づくりCRM ・ MOCK INDEX</div>
+    <div class="title">モック一覧</div>
+    <div class="lead">企画提案書でお伝えした構想をもとにした、クリックして操作できるプロトタイプです。下のカードをクリックすると、それぞれの画面を開いて実際に操作できます。表示されているデータはすべてサンプルです。</div>
+
+    <div class="cards">
+      <a class="card" href="main.html">
+        <div class="num">1</div>
+        <div>
+          <div class="card-name">店舗向け管理画面</div>
+          <div class="card-desc">来店客の履歴・AI提案の確認、顧客一覧、週/月のスケジュール、チェックイン履歴、記録項目の設定までを行う店主・スタッフ向けのダッシュボードです。</div>
+          <div class="card-hint">クリックして開く →</div>
+        </div>
+      </a>
+      <a class="card" href="customer.html">
+        <div class="num">2</div>
+        <div>
+          <div class="card-name">利用者向けアプリ</div>
+          <div class="card-desc">既存のお客様がLINE上で使うイメージの画面です。来店QR、髪型の変遷、来店履歴の確認、次回来店の予約までを行えます。</div>
+          <div class="card-hint">クリックして開く →</div>
+        </div>
+      </a>
+      <a class="card" href="checkin.html">
+        <div class="num">3</div>
+        <div>
+          <div class="card-name">チェックイン用キオスク端末</div>
+          <div class="card-desc">店舗の入口などに常設するタブレット等での利用を想定した専用画面です。実機のカメラ映像への接続を試み、チェックインの流れを体験できます。</div>
+          <div class="card-hint">クリックして開く →</div>
+        </div>
+      </a>
+      <a class="card" href="booking.html">
+        <div class="num">4</div>
+        <div>
+          <div class="card-name">新規のお客様向け予約ページ</div>
+          <div class="card-desc">会員登録前の新規のお客様が、自店舗のホームページから直接予約できる画面です。お名前と、電話番号またはメールアドレスのいずれかをご入力いただきます。</div>
+          <div class="card-hint">クリックして開く →</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="foot">各画面の左上(または上部)の「モック一覧に戻る」リンクからこのページに戻れます。掲載データはすべてサンプルであり、実際の店舗・顧客情報ではありません。</div>
+  </div>
+</div>
+</body>
+</html>
