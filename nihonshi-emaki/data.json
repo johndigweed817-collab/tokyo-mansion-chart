@@ -668,20 +668,20 @@
   },
   {
    "year": 1582,
+   "title": "太閤検地",
+   "detail": "秀吉が全国で検地を行い、田畑の生産力を石高で把握した。",
+   "lesson": "数字で現実を把握することが、統治の土台になる。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 1582,
    "month": 6,
    "title": "本能寺の変",
    "detail": "明智光秀が信長を討ち、のち秀吉が山崎の戦いで光秀を破って主導権を握る。",
    "lesson": "絶頂の権力にも、足元の不満という盲点はある。",
    "level": 1,
    "kind": "politics"
-  },
-  {
-   "year": 1582,
-   "title": "太閤検地",
-   "detail": "秀吉が全国で検地を行い、田畑の生産力を石高で把握した。",
-   "lesson": "数字で現実を把握することが、統治の土台になる。",
-   "level": 2,
-   "kind": "society"
   },
   {
    "year": 1588,
@@ -1152,6 +1152,55 @@
    "detail": "大阪で万博が開かれ、世界各国が最新の技術と文化を発信した。",
    "level": 3,
    "kind": "society"
+  },
+  {
+   "year": 2026,
+   "month": 1,
+   "day": 9,
+   "title": "アンチフレーム理論",
+   "detail": "noteアカウント「ANTI FRAME」がアンチフレーム理論を発表。のち、活動の場をnoteからnot/onへ移した。",
+   "level": 1,
+   "kind": "society",
+   "refs": [
+    {
+     "t": "not/on @anti_frame",
+     "u": "https://noton.youside.me/@anti_frame"
+    }
+   ]
+  },
+  {
+   "year": 2026,
+   "month": 1,
+   "day": 25,
+   "title": "youside発足",
+   "detail": "松山 大可と折口 仁らが、デジタルコモンズの実装を企図するグループ「youside.me」を発足。同時に、認知科学に基づく英単語学習サービス「EduMuse」を公開した。",
+   "level": 1,
+   "kind": "society",
+   "refs": [
+    {
+     "t": "youside.me",
+     "u": "https://youside.me/"
+    },
+    {
+     "t": "EduMuse",
+     "u": "https://edumuse.youside.me/"
+    }
+   ]
+  },
+  {
+   "year": 2026,
+   "month": 6,
+   "day": 15,
+   "title": "理論2.0へ更新",
+   "detail": "「ANTI FRAME」がアンチフレーム理論を2.0に更新した。",
+   "level": 2,
+   "kind": "society",
+   "refs": [
+    {
+     "t": "note",
+     "u": "https://note.com/john_mat_digweed/n/n586d82d875a7"
+    }
+   ]
   }
  ],
  "persons": [
