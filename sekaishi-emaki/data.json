@@ -2228,5 +2228,1472 @@
    ],
    "region": "europe"
   }
+ ],
+ "persons": [
+  {
+   "id": "socrates",
+   "region": "europe",
+   "name": "ソクラテス",
+   "born": -470,
+   "died": -399,
+   "role": "哲学者",
+   "kind": "culture",
+   "level": 2,
+   "detail": "街角で問答を重ね、人々に自分の無知を自覚させた。のち裁判で死刑となった。",
+   "face": {
+    "h": "monk",
+    "k": "toga",
+    "c": "#e8e2d0",
+    "b": "beard",
+    "a": 1,
+    "e": "calm"
+   },
+   "lesson": "「無知の知」—疑うことから学びが始まる。"
+  },
+  {
+   "id": "alexander",
+   "region": "europe",
+   "name": "アレクサンドロス大王",
+   "born": -356,
+   "died": -323,
+   "role": "マケドニア王",
+   "kind": "war",
+   "level": 1,
+   "detail": "二十代で東方遠征に出て、エジプトからインド北西部までを征服した。",
+   "face": {
+    "h": "curly",
+    "k": "toga",
+    "c": "#5a3a8a",
+    "x": [
+     "diadem"
+    ],
+    "e": "strong"
+   }
+  },
+  {
+   "id": "aristotle",
+   "region": "europe",
+   "name": "アリストテレス",
+   "born": -384,
+   "died": -322,
+   "role": "哲学者",
+   "kind": "culture",
+   "level": 2,
+   "detail": "論理学・自然学・政治学など「万学の祖」。アレクサンドロスの家庭教師でもあった。",
+   "face": {
+    "h": "curly",
+    "k": "toga",
+    "c": "#6a6a70",
+    "b": "beard",
+    "a": 1,
+    "e": "calm"
+   }
+  },
+  {
+   "id": "caesar",
+   "region": "europe",
+   "name": "カエサル",
+   "born": -100,
+   "died": -44,
+   "role": "ローマの将軍・政治家",
+   "kind": "politics",
+   "level": 1,
+   "detail": "ガリアを征服して独裁官となったが、共和政の守護者に暗殺された。",
+   "face": {
+    "h": "laurel",
+    "k": "toga",
+    "c": "#5a3a8a",
+    "e": "strong",
+    "w": 1
+   }
+  },
+  {
+   "id": "augustus",
+   "region": "europe",
+   "name": "アウグストゥス",
+   "born": -63,
+   "died": 14,
+   "role": "初代ローマ皇帝",
+   "kind": "politics",
+   "level": 2,
+   "detail": "共和政の形を残しつつ、事実上の帝政を築き、「ローマの平和」をもたらした。",
+   "face": {
+    "h": "laurel",
+    "k": "toga",
+    "c": "#e8e2d0",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "constantine",
+   "region": "europe",
+   "name": "コンスタンティヌス",
+   "born": 272,
+   "died": 337,
+   "role": "ローマ皇帝",
+   "kind": "politics",
+   "level": 3,
+   "detail": "キリスト教を公認し、都をコンスタンティノープルに移した。",
+   "face": {
+    "h": "curly",
+    "k": "toga",
+    "c": "#5a3a8a",
+    "x": [
+     "diadem"
+    ],
+    "e": "strong"
+   },
+   "bornApprox": true
+  },
+  {
+   "id": "charlemagne",
+   "region": "europe",
+   "name": "カール大帝",
+   "born": 748,
+   "died": 814,
+   "role": "フランク王",
+   "kind": "politics",
+   "level": 2,
+   "detail": "西欧の大半を統一し、教皇からローマ皇帝の冠を受けた。",
+   "face": {
+    "h": "long",
+    "k": "cloak",
+    "c": "#5a3a8a",
+    "x": [
+     "crown"
+    ],
+    "b": "mustache",
+    "e": "strong",
+    "a": 1
+   }
+  },
+  {
+   "id": "leonardo",
+   "region": "europe",
+   "name": "レオナルド",
+   "born": 1452,
+   "died": 1519,
+   "role": "芸術家・技術者",
+   "kind": "culture",
+   "level": 1,
+   "detail": "絵画・解剖・機械設計を横断し、観察と実験を重んじた。",
+   "face": {
+    "h": "long",
+    "k": "robe",
+    "c": "#a23a2e",
+    "b": "beard",
+    "a": 1,
+    "e": "calm"
+   },
+   "lesson": "分野を横断して観察することが、新しい発見を生む。"
+  },
+  {
+   "id": "gutenberg",
+   "region": "europe",
+   "name": "グーテンベルク",
+   "born": 1400,
+   "died": 1468,
+   "role": "印刷職人",
+   "kind": "tech",
+   "level": 2,
+   "detail": "活字と印刷機を組み合わせ、聖書の大量印刷を実現した。",
+   "face": {
+    "h": "beret",
+    "k": "coat",
+    "c": "#6b4a2e",
+    "b": "mustache",
+    "e": "calm"
+   },
+   "bornApprox": true
+  },
+  {
+   "id": "columbus",
+   "region": "europe",
+   "name": "コロンブス",
+   "born": 1451,
+   "died": 1506,
+   "role": "航海者",
+   "kind": "economy",
+   "level": 1,
+   "detail": "西回りでアジアを目指し、カリブ海に到達した。その後の征服と搾取の端緒にもなった。",
+   "face": {
+    "h": "long",
+    "k": "coat",
+    "c": "#a23a2e",
+    "a": 1,
+    "e": "strong"
+   }
+  },
+  {
+   "id": "luther",
+   "region": "europe",
+   "name": "ルター",
+   "born": 1483,
+   "died": 1546,
+   "role": "宗教改革者",
+   "kind": "society",
+   "level": 1,
+   "detail": "『九十五か条の論題』で教会を批判し、宗教改革の火付け役となった。",
+   "face": {
+    "h": "beret",
+    "k": "robe",
+    "c": "#2b2b33",
+    "f": "round",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "galileo",
+   "region": "europe",
+   "name": "ガリレオ",
+   "born": 1564,
+   "died": 1642,
+   "role": "天文学者",
+   "kind": "tech",
+   "level": 2,
+   "detail": "望遠鏡で天体を観測し、地動説を支持して教会に裁かれた。",
+   "face": {
+    "h": "monk",
+    "k": "coat",
+    "c": "#2b2b33",
+    "b": "goatee",
+    "a": 1,
+    "e": "calm"
+   }
+  },
+  {
+   "id": "newton",
+   "region": "europe",
+   "name": "ニュートン",
+   "born": 1642,
+   "died": 1727,
+   "role": "物理学者",
+   "kind": "tech",
+   "level": 1,
+   "detail": "万有引力と運動の法則を示し、近代科学の枠組みを作った。",
+   "face": {
+    "h": "wig",
+    "k": "coat",
+    "c": "#6b4a2e",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "louis14",
+   "region": "europe",
+   "name": "ルイ14世",
+   "born": 1638,
+   "died": 1715,
+   "role": "フランス王",
+   "kind": "politics",
+   "level": 3,
+   "detail": "七十余年在位し、絶対王政の象徴となった。ヴェルサイユ宮殿を築いた。",
+   "face": {
+    "h": "wig",
+    "k": "coat",
+    "c": "#a23a2e",
+    "b": "mustache",
+    "e": "strong",
+    "hc": "#2b2522"
+   }
+  },
+  {
+   "id": "rousseau",
+   "region": "europe",
+   "name": "ルソー",
+   "born": 1712,
+   "died": 1778,
+   "role": "思想家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『社会契約論』で人民主権を説き、フランス革命に影響した。",
+   "face": {
+    "h": "wig",
+    "k": "coat",
+    "c": "#3f6b4a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "napoleon",
+   "region": "europe",
+   "name": "ナポレオン",
+   "born": 1769,
+   "died": 1821,
+   "role": "フランス皇帝",
+   "kind": "war",
+   "level": 1,
+   "detail": "革命後の混乱を収めて皇帝となり、欧州各地へ戦争と法を広げた。",
+   "face": {
+    "h": "bicorne",
+    "k": "uniform",
+    "c": "#1f2f4f",
+    "e": "strong",
+    "f": "round"
+   }
+  },
+  {
+   "id": "darwin",
+   "region": "europe",
+   "name": "ダーウィン",
+   "born": 1809,
+   "died": 1882,
+   "role": "博物学者",
+   "kind": "tech",
+   "level": 2,
+   "detail": "『種の起源』で、生物が自然選択によって進化するという説を示した。",
+   "face": {
+    "h": "monk",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "beard",
+    "a": 1,
+    "e": "calm"
+   }
+  },
+  {
+   "id": "marx",
+   "region": "europe",
+   "name": "マルクス",
+   "born": 1818,
+   "died": 1883,
+   "role": "思想家・経済学者",
+   "kind": "society",
+   "level": 2,
+   "detail": "『資本論』で資本主義を分析し、のちの社会主義運動に影響を与えた。",
+   "face": {
+    "h": "long",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "beard",
+    "a": 1,
+    "e": "strong"
+   }
+  },
+  {
+   "id": "victoria",
+   "region": "europe",
+   "name": "ヴィクトリア女王",
+   "born": 1819,
+   "died": 1901,
+   "role": "英国女王",
+   "kind": "politics",
+   "level": 3,
+   "detail": "六十三年余り在位し、大英帝国の最盛期を象徴した。",
+   "face": {
+    "h": "bun",
+    "k": "dress",
+    "c": "#2b2b33",
+    "x": [
+     "crown"
+    ],
+    "sex": "f",
+    "a": 1,
+    "e": "strong"
+   }
+  },
+  {
+   "id": "bismarck",
+   "region": "europe",
+   "name": "ビスマルク",
+   "born": 1815,
+   "died": 1898,
+   "role": "ドイツ帝国宰相",
+   "kind": "politics",
+   "level": 3,
+   "detail": "「鉄血政策」でドイツ統一を主導し、複雑な同盟網で欧州の均衡を保った。",
+   "face": {
+    "h": "pickel",
+    "k": "uniform",
+    "c": "#e8e2d0",
+    "b": "mustache",
+    "e": "strong",
+    "a": 1
+   }
+  },
+  {
+   "id": "lenin",
+   "region": "europe",
+   "name": "レーニン",
+   "born": 1870,
+   "died": 1924,
+   "role": "革命家",
+   "kind": "politics",
+   "level": 2,
+   "detail": "ロシア革命を指導し、ソ連の初代指導者となった。",
+   "face": {
+    "h": "monk",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "goatee",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "einstein",
+   "region": "europe",
+   "name": "アインシュタイン",
+   "born": 1879,
+   "died": 1955,
+   "role": "物理学者",
+   "kind": "tech",
+   "level": 1,
+   "detail": "相対性理論を発表。のち米国に亡命し、核兵器の危険も訴えた。",
+   "face": {
+    "h": "wild",
+    "k": "suit",
+    "c": "#6a6a70",
+    "b": "mustache",
+    "a": 1,
+    "e": "calm"
+   }
+  },
+  {
+   "id": "hitler",
+   "region": "europe",
+   "name": "ヒトラー",
+   "born": 1889,
+   "died": 1945,
+   "role": "ナチス・ドイツ総統",
+   "kind": "politics",
+   "level": 1,
+   "detail": "合法的に政権を握り、侵略戦争とホロコーストを引き起こした。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#6b4a2e",
+    "b": "mustache",
+    "e": "strong",
+    "hc": "#2b2522"
+   },
+   "lesson": "民主的な手続きも、条件が揃えば独裁に利用される。"
+  },
+  {
+   "id": "churchill",
+   "region": "europe",
+   "name": "チャーチル",
+   "born": 1874,
+   "died": 1965,
+   "role": "英国首相",
+   "kind": "politics",
+   "level": 2,
+   "detail": "第二次世界大戦で英国を率い、戦後は冷戦の始まりを「鉄のカーテン」と表現した。",
+   "face": {
+    "h": "monk",
+    "k": "suit",
+    "c": "#2b2b33",
+    "f": "round",
+    "e": "strong",
+    "a": 1
+   }
+  },
+  {
+   "id": "gorbachev",
+   "region": "europe",
+   "name": "ゴルバチョフ",
+   "born": 1931,
+   "died": 2022,
+   "role": "ソ連の最後の指導者",
+   "kind": "politics",
+   "level": 3,
+   "detail": "ペレストロイカと冷戦終結を進めたが、ソ連は崩壊した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "jeanne",
+   "region": "europe",
+   "name": "ジャンヌ・ダルク",
+   "born": 1412,
+   "died": 1431,
+   "role": "フランスの少女兵",
+   "kind": "war",
+   "level": 2,
+   "detail": "百年戦争でフランス軍を鼓舞したが、異端として処刑された。のち聖女となった。",
+   "face": {
+    "h": "bob",
+    "k": "armor",
+    "c": "#6a6a70",
+    "sex": "f",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "elizabeth1",
+   "region": "europe",
+   "name": "エリザベス1世",
+   "born": 1533,
+   "died": 1603,
+   "role": "イングランド女王",
+   "kind": "politics",
+   "level": 3,
+   "detail": "スペイン無敵艦隊を破り、英国が海洋国家へ向かう基盤を築いた。",
+   "face": {
+    "h": "bun",
+    "k": "dress",
+    "c": "#a23a2e",
+    "x": [
+     "crown"
+    ],
+    "sex": "f",
+    "hc": "#c0572a",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "buddha",
+   "region": "asia",
+   "name": "ブッダ",
+   "born": -463,
+   "died": -383,
+   "role": "仏教の開祖",
+   "kind": "society",
+   "level": 1,
+   "detail": "王子の身分を捨て、苦しみからの解放を説いた。(生没は諸説あり)",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#b8862b",
+    "e": "calm",
+    "s": "#cf9f70"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "confucius",
+   "region": "asia",
+   "name": "孔子",
+   "born": -551,
+   "died": -479,
+   "role": "思想家",
+   "kind": "culture",
+   "level": 1,
+   "detail": "徳と礼による政治を説き、弟子の言葉が『論語』にまとめられた。",
+   "face": {
+    "h": "guan",
+    "k": "kimono",
+    "c": "#2f4a7a",
+    "b": "beard",
+    "a": 1,
+    "e": "calm"
+   }
+  },
+  {
+   "id": "shihuangdi",
+   "region": "asia",
+   "name": "始皇帝",
+   "born": -259,
+   "died": -210,
+   "role": "秦の皇帝",
+   "kind": "politics",
+   "level": 1,
+   "detail": "中国を初めて統一し、文字・度量衡・貨幣を揃えた。万里の長城や兵馬俑でも知られる。",
+   "face": {
+    "h": "mian",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "b": "beard",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "zhangqian",
+   "region": "asia",
+   "name": "張騫",
+   "born": -164,
+   "died": -114,
+   "role": "漢の使者",
+   "kind": "economy",
+   "level": 3,
+   "detail": "武帝の命で西域へ旅し、のちのシルクロードの道を開いた。",
+   "face": {
+    "h": "guan",
+    "k": "kimono",
+    "c": "#3f6b4a",
+    "b": "beard",
+    "e": "calm"
+   },
+   "bornApprox": true
+  },
+  {
+   "id": "xuanzang",
+   "region": "asia",
+   "name": "玄奘",
+   "born": 602,
+   "died": 664,
+   "role": "唐の僧",
+   "kind": "culture",
+   "level": 2,
+   "detail": "十数年かけてインドへ旅し、膨大な仏典を持ち帰って訳した。『西遊記』のモデル。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#b8862b",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "taizong",
+   "region": "asia",
+   "name": "太宗(李世民)",
+   "born": 598,
+   "died": 649,
+   "role": "唐の第二代皇帝",
+   "kind": "politics",
+   "level": 3,
+   "detail": "人材を登用して安定した政治を行い、「貞観の治」と呼ばれた。",
+   "face": {
+    "h": "mian",
+    "k": "kimono",
+    "c": "#a23a2e",
+    "b": "beard",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "harun",
+   "region": "asia",
+   "name": "ハールーン",
+   "born": 763,
+   "died": 809,
+   "role": "アッバース朝のカリフ",
+   "kind": "politics",
+   "level": 3,
+   "detail": "バグダードを中心に、学問と文化が栄えた最盛期のカリフ。",
+   "face": {
+    "h": "turban",
+    "k": "robe",
+    "c": "#3f6b4a",
+    "x": [
+     "crown"
+    ],
+    "b": "beard",
+    "e": "calm",
+    "s": "#cf9f70"
+   }
+  },
+  {
+   "id": "avicenna",
+   "region": "asia",
+   "name": "イブン・シーナー",
+   "born": 980,
+   "died": 1037,
+   "role": "医学者・哲学者",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『医学典範』は、のち欧州の大学で数百年にわたって教科書となった。",
+   "face": {
+    "h": "turban",
+    "k": "robe",
+    "c": "#2f4a7a",
+    "b": "beard",
+    "e": "calm",
+    "s": "#cf9f70"
+   }
+  },
+  {
+   "id": "genghis",
+   "region": "asia",
+   "name": "チンギス・カン",
+   "born": 1162,
+   "died": 1227,
+   "role": "モンゴル帝国の創始者",
+   "kind": "war",
+   "level": 1,
+   "detail": "遊牧の諸部族を統一し、ユーラシア横断の帝国の基礎を築いた。",
+   "face": {
+    "h": "mongol",
+    "k": "robe",
+    "c": "#6b4a2e",
+    "b": "mustache",
+    "e": "strong",
+    "s": "#e6c496"
+   },
+   "bornApprox": true
+  },
+  {
+   "id": "kublai",
+   "region": "asia",
+   "name": "フビライ",
+   "born": 1215,
+   "died": 1294,
+   "role": "元の初代皇帝",
+   "kind": "politics",
+   "level": 2,
+   "detail": "大都に都を置き、元を建国した。日本にも遠征軍を送った。",
+   "face": {
+    "h": "mongol",
+    "k": "kimono",
+    "c": "#a23a2e",
+    "b": "mustache",
+    "e": "strong",
+    "f": "round",
+    "s": "#e6c496"
+   }
+  },
+  {
+   "id": "zhenghe",
+   "region": "asia",
+   "name": "鄭和",
+   "born": 1371,
+   "died": 1433,
+   "role": "明の提督",
+   "kind": "economy",
+   "level": 1,
+   "detail": "宦官から提督となり、七回にわたってインド洋へ大艦隊を率いた。",
+   "face": {
+    "h": "guan",
+    "k": "kimono",
+    "c": "#2f4a7a",
+    "e": "strong"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "akbar",
+   "region": "asia",
+   "name": "アクバル",
+   "born": 1542,
+   "died": 1605,
+   "role": "ムガル帝国皇帝",
+   "kind": "politics",
+   "level": 3,
+   "detail": "宗教に寛容な政策をとり、ムガル帝国の基盤を固めた。",
+   "face": {
+    "h": "turban",
+    "k": "robe",
+    "c": "#a23a2e",
+    "b": "mustache",
+    "e": "strong",
+    "s": "#cf9f70"
+   }
+  },
+  {
+   "id": "kangxi",
+   "region": "asia",
+   "name": "康熙帝",
+   "born": 1654,
+   "died": 1722,
+   "role": "清の第四代皇帝",
+   "kind": "politics",
+   "level": 3,
+   "detail": "六十一年在位し、清の最盛期の基礎を築いた。",
+   "face": {
+    "h": "qing",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "gandhi",
+   "region": "asia",
+   "name": "ガンディー",
+   "born": 1869,
+   "died": 1948,
+   "role": "インド独立運動の指導者",
+   "kind": "politics",
+   "level": 1,
+   "detail": "非暴力・不服従の運動を率い、インド独立を導いた。暗殺された。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#e8e2d0",
+    "g": 1,
+    "b": "mustache",
+    "a": 1,
+    "e": "calm",
+    "s": "#a8764e"
+   }
+  },
+  {
+   "id": "sunyat",
+   "region": "asia",
+   "name": "孫文",
+   "born": 1866,
+   "died": 1925,
+   "role": "中国の革命家",
+   "kind": "politics",
+   "level": 2,
+   "detail": "辛亥革命を指導し、中華民国の初代臨時大総統となった。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#6a6a70",
+    "b": "mustache",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "mao",
+   "region": "asia",
+   "name": "毛沢東",
+   "born": 1893,
+   "died": 1976,
+   "role": "中華人民共和国の建国者",
+   "kind": "politics",
+   "level": 1,
+   "detail": "中華人民共和国の成立を宣言した。大躍進や文化大革命は大きな混乱も生んだ。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#6a6a70",
+    "f": "round",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "ho",
+   "region": "asia",
+   "name": "ホー・チ・ミン",
+   "born": 1890,
+   "died": 1969,
+   "role": "ベトナムの指導者",
+   "kind": "politics",
+   "level": 3,
+   "detail": "ベトナムの独立を指導し、ベトナム民主共和国の初代大統領となった。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#b8862b",
+    "b": "goatee",
+    "a": 1,
+    "e": "calm"
+   }
+  },
+  {
+   "id": "deng",
+   "region": "asia",
+   "name": "鄧小平",
+   "born": 1904,
+   "died": 1997,
+   "role": "中国の指導者",
+   "kind": "politics",
+   "level": 2,
+   "detail": "改革開放を進め、中国を高度成長へ導いた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "smile",
+    "a": 1
+   }
+  },
+  {
+   "id": "ramses",
+   "region": "africa",
+   "name": "ラムセス2世",
+   "born": -1303,
+   "died": -1213,
+   "role": "古代エジプトのファラオ",
+   "kind": "politics",
+   "level": 2,
+   "detail": "六十年以上在位し、アブ・シンベル神殿など大建築を残した。",
+   "face": {
+    "h": "nemes",
+    "k": "usekh",
+    "c": "#b8862b",
+    "e": "strong",
+    "s": "#a8764e"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "cleopatra",
+   "region": "africa",
+   "name": "クレオパトラ7世",
+   "born": -69,
+   "died": -30,
+   "role": "エジプトの女王",
+   "kind": "politics",
+   "level": 2,
+   "detail": "プトレマイオス朝最後の女王。ローマの権力者と結んで、独立を保とうとした。",
+   "face": {
+    "h": "bob",
+    "k": "usekh",
+    "c": "#b8862b",
+    "x": [
+     "diadem"
+    ],
+    "sex": "f",
+    "e": "strong",
+    "s": "#cf9f70"
+   }
+  },
+  {
+   "id": "hannibal",
+   "region": "africa",
+   "name": "ハンニバル",
+   "born": -247,
+   "died": -183,
+   "role": "カルタゴの将軍",
+   "kind": "war",
+   "level": 2,
+   "detail": "象を連れてアルプスを越え、ローマ本土に迫った。",
+   "face": {
+    "h": "curly",
+    "k": "armor",
+    "c": "#6a6a70",
+    "b": "beard",
+    "x": [
+     "eyepatch"
+    ],
+    "e": "strong",
+    "s": "#cf9f70"
+   }
+  },
+  {
+   "id": "augustine",
+   "region": "africa",
+   "name": "アウグスティヌス",
+   "born": 354,
+   "died": 430,
+   "role": "神学者",
+   "kind": "society",
+   "level": 3,
+   "detail": "北アフリカ出身の教父。『告白』を著し、西欧のキリスト教思想に影響した。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#2b2b33",
+    "b": "beard",
+    "a": 1,
+    "e": "calm",
+    "s": "#cf9f70"
+   }
+  },
+  {
+   "id": "musa",
+   "region": "africa",
+   "name": "マンサ・ムーサ",
+   "born": 1280,
+   "died": 1337,
+   "role": "マリ帝国の王",
+   "kind": "economy",
+   "level": 1,
+   "detail": "大量の金を携えてメッカへ巡礼し、その富が地中海世界に知られた。",
+   "face": {
+    "h": "turban",
+    "k": "robe",
+    "c": "#b8862b",
+    "b": "beard",
+    "e": "calm",
+    "s": "#8a5a3a"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "battuta",
+   "region": "africa",
+   "name": "イブン・バットゥータ",
+   "born": 1304,
+   "died": 1368,
+   "role": "旅行家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "モロッコから出発してアフリカ・アジアを旅し、『大旅行記』を残した。",
+   "face": {
+    "h": "turban",
+    "k": "robe",
+    "c": "#3f6b4a",
+    "b": "beard",
+    "e": "smile",
+    "s": "#cf9f70"
+   },
+   "diedApprox": true
+  },
+  {
+   "id": "muhammad_ali",
+   "region": "africa",
+   "name": "ムハンマド・アリー",
+   "born": 1769,
+   "died": 1849,
+   "role": "エジプト総督",
+   "kind": "politics",
+   "level": 3,
+   "detail": "軍・産業・教育の近代化を進め、現代エジプトの基礎を築いた。",
+   "face": {
+    "h": "turban",
+    "k": "robe",
+    "c": "#a23a2e",
+    "b": "beard",
+    "a": 1,
+    "e": "strong",
+    "s": "#cf9f70"
+   }
+  },
+  {
+   "id": "menelik",
+   "region": "africa",
+   "name": "メネリク2世",
+   "born": 1844,
+   "died": 1913,
+   "role": "エチオピア皇帝",
+   "kind": "politics",
+   "level": 2,
+   "detail": "アドワの戦いでイタリアを破り、エチオピアの独立を守った。",
+   "face": {
+    "h": "turban",
+    "k": "robe",
+    "c": "#5a3a8a",
+    "b": "mustache",
+    "e": "strong",
+    "s": "#8a5a3a"
+   }
+  },
+  {
+   "id": "nkrumah",
+   "region": "africa",
+   "name": "ンクルマ",
+   "born": 1909,
+   "died": 1972,
+   "role": "ガーナ初代大統領",
+   "kind": "politics",
+   "level": 2,
+   "detail": "サハラ以南で初めて独立を達成し、アフリカの統一を唱えた。",
+   "face": {
+    "h": "western",
+    "k": "cloak",
+    "c": "#b8862b",
+    "e": "strong",
+    "s": "#6e4630"
+   }
+  },
+  {
+   "id": "nasser",
+   "region": "africa",
+   "name": "ナセル",
+   "born": 1918,
+   "died": 1970,
+   "role": "エジプト大統領",
+   "kind": "politics",
+   "level": 2,
+   "detail": "スエズ運河を国有化し、アラブ民族主義の象徴となった。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "smile",
+    "s": "#cf9f70"
+   }
+  },
+  {
+   "id": "lumumba",
+   "region": "africa",
+   "name": "ルムンバ",
+   "born": 1925,
+   "died": 1961,
+   "role": "コンゴ初代首相",
+   "kind": "politics",
+   "level": 3,
+   "detail": "独立直後の混乱の中で失脚し、殺害された。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "g": 1,
+    "b": "mustache",
+    "e": "calm",
+    "s": "#6e4630"
+   }
+  },
+  {
+   "id": "mandela",
+   "region": "africa",
+   "name": "マンデラ",
+   "born": 1918,
+   "died": 2013,
+   "role": "南アフリカ元大統領",
+   "kind": "politics",
+   "level": 1,
+   "detail": "二十七年の獄中生活を経て、同国初の黒人大統領となった。",
+   "face": {
+    "h": "western",
+    "k": "shirt",
+    "c": "#b8862b",
+    "a": 1,
+    "e": "smile",
+    "s": "#6e4630"
+   },
+   "lesson": "報復ではなく、和解で社会を一つにしようとした。"
+  },
+  {
+   "id": "maathai",
+   "region": "africa",
+   "name": "ワンガリ・マータイ",
+   "born": 1940,
+   "died": 2011,
+   "role": "環境運動家",
+   "kind": "society",
+   "level": 3,
+   "detail": "植樹運動(グリーンベルト運動)を率い、ノーベル平和賞を受けた。",
+   "face": {
+    "h": "headwrap",
+    "k": "dress",
+    "c": "#a23a2e",
+    "hw": "#c9892b",
+    "sex": "f",
+    "e": "smile",
+    "s": "#6e4630"
+   }
+  },
+  {
+   "id": "moctezuma",
+   "region": "america",
+   "name": "モクテスマ2世",
+   "born": 1466,
+   "died": 1520,
+   "role": "アステカ王",
+   "kind": "politics",
+   "level": 2,
+   "detail": "スペイン人の到来時の王。混乱の中で亡くなった。",
+   "face": {
+    "h": "feather",
+    "k": "cloak",
+    "c": "#2f4a7a",
+    "e": "calm",
+    "s": "#a8764e"
+   }
+  },
+  {
+   "id": "atahualpa",
+   "region": "america",
+   "name": "アタワルパ",
+   "born": 1502,
+   "died": 1533,
+   "role": "インカ最後の皇帝",
+   "kind": "politics",
+   "level": 3,
+   "detail": "ピサロに捕らえられ、身代金を払ったが処刑された。",
+   "face": {
+    "h": "headband",
+    "k": "cloak",
+    "c": "#a23a2e",
+    "e": "calm",
+    "s": "#a8764e"
+   }
+  },
+  {
+   "id": "cortes",
+   "region": "america",
+   "name": "コルテス",
+   "born": 1485,
+   "died": 1547,
+   "role": "スペインの軍人",
+   "kind": "war",
+   "level": 2,
+   "detail": "先住民の同盟と疫病を利用して、アステカ王国を征服した。",
+   "face": {
+    "h": "beret",
+    "k": "coat",
+    "c": "#2b2b33",
+    "b": "beard",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "washington",
+   "region": "america",
+   "name": "ワシントン",
+   "born": 1732,
+   "died": 1799,
+   "role": "初代アメリカ大統領",
+   "kind": "politics",
+   "level": 1,
+   "detail": "独立戦争の総司令官を務め、のち初代大統領となった。",
+   "face": {
+    "h": "wig",
+    "k": "coat",
+    "c": "#1f2f4f",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "jefferson",
+   "region": "america",
+   "name": "ジェファソン",
+   "born": 1743,
+   "died": 1826,
+   "role": "アメリカ第三代大統領",
+   "kind": "politics",
+   "level": 2,
+   "detail": "独立宣言を起草した。一方、奴隷を所有していた。",
+   "face": {
+    "h": "western",
+    "k": "coat",
+    "c": "#6b4a2e",
+    "hc": "#b0502a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "franklin",
+   "region": "america",
+   "name": "フランクリン",
+   "born": 1706,
+   "died": 1790,
+   "role": "科学者・政治家",
+   "kind": "tech",
+   "level": 3,
+   "detail": "雷の実験や出版で知られ、独立宣言の起草にも関わった。",
+   "face": {
+    "h": "long",
+    "k": "coat",
+    "c": "#6b4a2e",
+    "g": 1,
+    "a": 1,
+    "e": "smile"
+   }
+  },
+  {
+   "id": "toussaint",
+   "region": "america",
+   "name": "トゥーサン",
+   "born": 1743,
+   "died": 1803,
+   "role": "ハイチ革命の指導者",
+   "kind": "war",
+   "level": 2,
+   "detail": "奴隷から解放軍の指導者となり、ハイチ革命を主導した。",
+   "face": {
+    "h": "headwrap",
+    "k": "coat",
+    "c": "#1f2f4f",
+    "hw": "#c0572a",
+    "e": "strong",
+    "s": "#6e4630",
+    "a": 1
+   }
+  },
+  {
+   "id": "bolivar",
+   "region": "america",
+   "name": "ボリバル",
+   "born": 1783,
+   "died": 1830,
+   "role": "南米独立の指導者",
+   "kind": "war",
+   "level": 2,
+   "detail": "ベネズエラ・コロンビアなどの独立を導き、「解放者」と呼ばれた。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#1f2f4f",
+    "b": "mustache",
+    "e": "strong",
+    "s": "#e6c496"
+   }
+  },
+  {
+   "id": "lincoln",
+   "region": "america",
+   "name": "リンカーン",
+   "born": 1809,
+   "died": 1865,
+   "role": "アメリカ第十六代大統領",
+   "kind": "politics",
+   "level": 1,
+   "detail": "南北戦争を戦い抜き、奴隷解放宣言を出した。暗殺された。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "chinstrap",
+    "e": "calm",
+    "w": 1
+   }
+  },
+  {
+   "id": "edison",
+   "region": "america",
+   "name": "エジソン",
+   "born": 1847,
+   "died": 1931,
+   "role": "発明家",
+   "kind": "tech",
+   "level": 2,
+   "detail": "白熱電球や蓄音機など、多くの発明で産業を変えた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "a": 1,
+    "e": "smile"
+   }
+  },
+  {
+   "id": "fdr",
+   "region": "america",
+   "name": "F・ルーズベルト",
+   "born": 1882,
+   "died": 1945,
+   "role": "アメリカ第三十二代大統領",
+   "kind": "politics",
+   "level": 2,
+   "detail": "ニューディールを進め、第二次世界大戦で連合国を率いた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "g": 1,
+    "e": "smile"
+   }
+  },
+  {
+   "id": "oppenheimer",
+   "region": "america",
+   "name": "オッペンハイマー",
+   "born": 1904,
+   "died": 1967,
+   "role": "物理学者",
+   "kind": "tech",
+   "level": 2,
+   "detail": "マンハッタン計画を指導し、のち核の危険を訴えた。",
+   "face": {
+    "h": "fedora",
+    "k": "suit",
+    "c": "#6a6a70",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "kennedy",
+   "region": "america",
+   "name": "ケネディ",
+   "born": 1917,
+   "died": 1963,
+   "role": "アメリカ第三十五代大統領",
+   "kind": "politics",
+   "level": 2,
+   "detail": "キューバ危機に対処し、月面着陸を国家目標に掲げた。暗殺された。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "smile",
+    "hc": "#6b4a2e"
+   }
+  },
+  {
+   "id": "king",
+   "region": "america",
+   "name": "キング牧師",
+   "born": 1929,
+   "died": 1968,
+   "role": "公民権運動の指導者",
+   "kind": "society",
+   "level": 1,
+   "detail": "非暴力の公民権運動を率い、「私には夢がある」と演説した。暗殺された。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "mustache",
+    "e": "strong",
+    "s": "#6e4630"
+   }
+  },
+  {
+   "id": "armstrong",
+   "region": "america",
+   "name": "アームストロング",
+   "born": 1930,
+   "died": 2012,
+   "role": "宇宙飛行士",
+   "kind": "tech",
+   "level": 2,
+   "detail": "アポロ11号で、人類として初めて月面に降り立った。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#e8e2d0",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "jobs",
+   "region": "america",
+   "name": "ジョブズ",
+   "born": 1955,
+   "died": 2011,
+   "role": "Apple共同創業者",
+   "kind": "tech",
+   "level": 2,
+   "detail": "パソコンやiPhoneで、情報端末のあり方を変えた。",
+   "face": {
+    "h": "western",
+    "k": "turtle",
+    "c": "#2b2b33",
+    "g": 1,
+    "e": "strong"
+   }
+  },
+  {
+   "id": "shotoku",
+   "name": "聖徳太子",
+   "born": 574,
+   "died": 622,
+   "role": "摂政・政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "冠位十二階や十七条憲法を定め、遣隋使を送った。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "b": "mustache",
+    "e": "calm"
+   },
+   "region": "asia",
+   "jp": "shotoku"
+  },
+  {
+   "id": "nobunaga",
+   "name": "織田信長",
+   "born": 1534,
+   "died": 1582,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "鉄砲を活用し、楽市楽座で経済を動かした。本能寺で倒れた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#a23a2e",
+    "b": "mustache",
+    "e": "sharp",
+    "f": "long"
+   },
+   "region": "asia",
+   "jp": "nobunaga"
+  },
+  {
+   "id": "meiji",
+   "name": "明治天皇",
+   "born": 1852,
+   "died": 1912,
+   "role": "明治天皇",
+   "kind": "politics",
+   "level": 3,
+   "detail": "五箇条の御誓文から憲法発布まで、近代国家づくりの象徴となった。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#1f2f4f",
+    "b": "beard",
+    "e": "strong"
+   },
+   "region": "asia",
+   "jp": "meiji"
+  }
  ]
 }
