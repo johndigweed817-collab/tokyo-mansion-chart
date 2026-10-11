@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs><radialGradient id="g" cx="30%" cy="40%" r="80%"><stop offset="0" stop-color="#3a2d24"/><stop offset="1" stop-color="#1b1410"/></radialGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#d7b45a" stroke-width="2" opacity=".55"/>
+  <g transform="translate(272 315) scale(1.1) translate(-256 -282)"><defs><clipPath id="p"><rect x="104" y="176" width="304" height="160"/></clipPath></defs>
+  <!-- paper -->
+  <rect x="104" y="176" width="304" height="160" fill="#f4e9cd"/>
+  <g clip-path="url(#p)">
+    <circle cx="312" cy="226" r="26" fill="#c8503c"/>
+    <path d="M104 336 L186 244 L238 306 L300 258 L408 336 Z" fill="#3f5f8f"/>
+    <ellipse cx="170" cy="296" rx="74" ry="10" fill="#eed68c" opacity=".9"/>
+    <ellipse cx="338" cy="306" rx="62" ry="9" fill="#eed68c" opacity=".9"/>
+  </g>
+  <rect x="104" y="176" width="304" height="160" fill="none" stroke="#d7b45a" stroke-width="4"/>
+  <!-- rollers -->
+  <rect x="76" y="156" width="36" height="200" rx="14" fill="#8a6a43"/>
+  <rect x="400" y="156" width="36" height="200" rx="14" fill="#8a6a43"/>
+  <rect x="70" y="148" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="70" y="348" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="394" y="148" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="394" y="348" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <!-- timeline ruler -->
+  <path d="M100 394H412" stroke="#d7b45a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M104 394v22M184 394v14M264 394v22M344 394v14M408 394v22" stroke="#d7b45a" stroke-width="5" stroke-linecap="round"/></g>
+  <g font-family="Noto Serif CJK JP, serif">
+    <text x="560" y="300" font-size="100" font-weight="700" fill="#d7b45a" letter-spacing="8">日本史絵巻</text>
+    <path d="M564 330H1100" stroke="#d7b45a" stroke-width="3" opacity=".7"/>
+    <text x="562" y="392" font-size="32" fill="#f4e9cd" letter-spacing="2">歴史を学ぶのは、歴史に学ぶため</text>
+    <text x="562" y="446" font-size="25" fill="#cbb98f" letter-spacing="1">横スクロールの絵巻で、日本史をたどる</text>
+    <text x="562" y="488" font-size="21" fill="#a8977a">ホイールとピンチで拡大・縮小</text>
+  </g>
+</svg>
