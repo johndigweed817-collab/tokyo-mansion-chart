@@ -45,9 +45,15 @@
     <div id="bands"></div>
     <div id="mists"></div>
     <div class="ground"></div>
+    <div id="span" hidden><i class="sl"></i><i class="sr"></i><em class="y1"></em><em class="y2"></em></div>
     <div id="events"></div>
+    <div id="people"></div>
     <div id="legend"></div>
-    <div id="hint">ホイール／ピンチで拡大縮小 ・ ドラッグで移動 ・ ダブルタップで拡大 ・ 札をタップで詳細へ</div>
+    <aside id="panel" hidden>
+      <button type="button" id="pclose" aria-label="閉じる">×</button>
+      <div id="pbody"></div>
+    </aside>
+    <div id="hint">ホイール／ピンチで拡大縮小 ・ ドラッグで移動 ・ ダブルタップで拡大 ・ 札・人物をタップで詳細へ</div>
 
     <div id="fallback" hidden>
       <p><b>data.json を読み込めませんでした。</b></p>
@@ -64,6 +70,7 @@
   <canvas id="mini" aria-label="全体ミニマップ"></canvas>
 </footer>
 
+<script src="face.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,171 +1,2505 @@
 {
-  "meta": {
-    "title": "日本史絵巻",
-    "tagline": "歴史を学ぶのは、歴史に学ぶため",
-    "version": 1
+ "meta": {
+  "title": "日本史絵巻",
+  "tagline": "歴史を学ぶのは、歴史に学ぶため",
+  "version": 1
+ },
+ "kinds": [
+  {
+   "id": "politics",
+   "name": "政治",
+   "color": "#b5453a"
   },
-  "kinds": [
-    { "id": "politics", "name": "政治", "color": "#b5453a" },
-    { "id": "war", "name": "戦い", "color": "#5b4a86" },
-    { "id": "culture", "name": "文化", "color": "#c08a2b" },
-    { "id": "foreign", "name": "外交・交流", "color": "#2f7f86" },
-    { "id": "society", "name": "社会・技術", "color": "#5f8a3a" },
-    { "id": "disaster", "name": "災害", "color": "#6a6a6a" }
-  ],
-  "eras": [
-    { "id": "jomon", "name": "縄文", "start": -14000, "end": -300, "weight": 5, "color": "#7a5f40", "motif": "hut", "summary": "狩猟・採集・漁労と定住。土器と竪穴住居、豊かな精神文化。" },
-    { "id": "yayoi", "name": "弥生", "start": -300, "end": 250, "weight": 4, "color": "#a38a3e", "motif": "granary", "summary": "稲作と金属器が広がり、ムラからクニへ。身分の差が生まれる。" },
-    { "id": "kofun", "name": "古墳", "start": 250, "end": 592, "weight": 4, "color": "#5f7f49", "motif": "kofun", "summary": "前方後円墳が各地に築かれ、ヤマト政権が広い地域を統合。" },
-    { "id": "asuka", "name": "飛鳥", "start": 592, "end": 710, "weight": 5, "color": "#b0654a", "motif": "pagoda", "summary": "仏教と大陸の制度を取り入れ、律令国家の基礎が整う。" },
-    { "id": "nara", "name": "奈良", "start": 710, "end": 794, "weight": 5, "color": "#8f5c78", "motif": "hall", "summary": "平城京を都に、律令体制が整い天平文化が花開く。" },
-    { "id": "heian", "name": "平安", "start": 794, "end": 1185, "weight": 9, "color": "#6f66a0", "motif": "shinden", "summary": "貴族政治から院政、武士の台頭へ。国風文化が生まれる。" },
-    { "id": "kamakura", "name": "鎌倉", "start": 1185, "end": 1333, "weight": 7, "color": "#3f7585", "motif": "daibutsu", "summary": "武士が政権を握り、御恩と奉公の主従関係で社会を動かす。" },
-    { "id": "muromachi", "name": "室町", "start": 1333, "end": 1573, "weight": 9, "color": "#55705c", "motif": "pavilion", "summary": "南北朝の争いから応仁の乱、戦国へ。庶民文化と東アジア交易が栄える。" },
-    { "id": "azuchi", "name": "安土桃山", "start": 1573, "end": 1603, "weight": 4.5, "color": "#b8862a", "motif": "castle", "summary": "信長・秀吉による天下統一。検地と刀狩で社会の枠組みを改める。" },
-    { "id": "edo", "name": "江戸", "start": 1603, "end": 1868, "weight": 14, "color": "#a24a3f", "motif": "machiya", "summary": "約260年の幕藩体制。平和のもとで都市と町人文化、学問が発達。" },
-    { "id": "meiji", "name": "明治", "start": 1868, "end": 1912, "weight": 8, "color": "#3f5f8f", "motif": "brick", "summary": "明治維新で近代国家へ。憲法・産業・軍備を急速に整える。" },
-    { "id": "taisho", "name": "大正", "start": 1912, "end": 1926, "weight": 3.5, "color": "#b0607a", "motif": "yokan", "summary": "大正デモクラシーと都市文化。関東大震災で試練を迎える。" },
-    { "id": "showa", "name": "昭和", "start": 1926, "end": 1989, "weight": 12, "color": "#5a6670", "motif": "tower", "summary": "戦争と敗戦、占領、そして高度経済成長。激動の六十余年。" },
-    { "id": "heisei", "name": "平成", "start": 1989, "end": 2019, "weight": 5, "color": "#2f7a7a", "motif": "skyscrapers", "summary": "バブル崩壊と長期低迷、大災害、情報化とグローバル化。" },
-    { "id": "reiwa", "name": "令和", "start": 2019, "end": 2027, "weight": 3, "color": "#8d5fa0", "motif": "skytree", "open": true, "summary": "感染症、デジタル化、AI。いまも続く現在進行形の歴史。" }
-  ],
-  "events": [
-    { "year": -14000, "approx": true, "title": "最古級の土器", "detail": "約1万6000年前、日本列島で土器が作られ始め、煮炊きと定住が進む。", "lesson": "技術革新は暮らしの安定を支える。", "level": 1, "kind": "society" },
-    { "year": -3900, "approx": true, "title": "三内丸山の集落", "detail": "青森に大規模な集落が営まれ、クリの管理や各地との交易が行われた。", "lesson": "定住は交流と交易のネットワークを育てた。", "level": 2, "kind": "society" },
-    { "year": -3000, "approx": true, "title": "土偶に込めた祈り", "detail": "豊かな実りや安産を願う祈りの造形が、各地で作られた。", "level": 3, "kind": "culture" },
-
-    { "year": -300, "approx": true, "title": "稲作が広がる", "detail": "水田稲作と金属器が九州北部から各地へ伝わり、社会が大きく変わる。", "lesson": "新しい技術は富と同時に、格差と争いも生んだ。", "level": 1, "kind": "society" },
-    { "year": 57, "title": "漢委奴国王の金印", "detail": "後漢の光武帝が、倭の奴国の使者に印綬を授けたと記される。", "lesson": "外の権威を得ることが、内での地位を高めた。", "level": 2, "kind": "foreign" },
-    { "year": 239, "title": "卑弥呼、魏へ使い", "detail": "邪馬台国の女王卑弥呼が魏に使者を送り、「親魏倭王」の称号を受けたとされる。", "lesson": "国際的な承認は、国内統治の後ろ盾になる。", "level": 1, "kind": "foreign" },
-    { "year": 247, "approx": true, "title": "卑弥呼の死", "detail": "卑弥呼が没したのち国は乱れ、壱与が女王に立てられたと伝わる。", "lesson": "カリスマに頼る統治は、継承の場面で揺らぐ。", "level": 3, "kind": "politics" },
-
-    { "year": 250, "approx": true, "title": "前方後円墳の出現", "detail": "奈良の箸墓古墳など大型の前方後円墳が築かれ、各地に広がる。", "lesson": "共通の墓の形は、同盟と秩序の目に見える印だった。", "level": 1, "kind": "politics" },
-    { "year": 478, "title": "倭王武の上表文", "detail": "倭王武（雄略天皇とされる）が宋に使者を送り、国内平定を述べた上表文を奉る。", "lesson": "国際関係の中で、国の格を高めようとした。", "level": 2, "kind": "foreign" },
-    { "year": 527, "title": "磐井の乱", "detail": "筑紫の豪族磐井がヤマト政権に反乱を起こすが、平定された。", "lesson": "地方の自立と中央集権の綱引きが続いた。", "level": 3, "kind": "war" },
-    { "year": 538, "approx": true, "title": "仏教の伝来", "detail": "百済から仏像・経典が伝わる（538年説と552年説がある）。", "lesson": "異文化の受容は、賛否の対立も生む。", "level": 1, "kind": "culture" },
-
-    { "year": 593, "title": "聖徳太子の摂政", "detail": "推古天皇のもとで聖徳太子が政治に加わり、国家づくりを進める。", "level": 2, "kind": "politics" },
-    { "year": 603, "title": "冠位十二階", "detail": "家柄ではなく、才能や功績で人を登用する制度。", "lesson": "出自より能力で人を活かす発想の始まり。", "level": 2, "kind": "politics" },
-    { "year": 604, "title": "憲法十七条", "detail": "役人の心得を説き、「和」を大切にすることを示した。", "lesson": "争いを避ける合意形成の精神が根にある。", "level": 1, "kind": "politics" },
-    { "year": 607, "title": "遣隋使の派遣", "detail": "小野妹子を隋に送り、対等な国交と大陸の文化・制度を求めた。", "lesson": "学ぶ姿勢と、対等であろうとする気概。", "level": 2, "kind": "foreign" },
-    { "year": 645, "title": "大化の改新", "detail": "中大兄皇子と中臣鎌足が蘇我入鹿を討ち、新しい国づくりが始まる。", "lesson": "改革は、大胆な決断と信頼できる同志から始まる。", "level": 1, "kind": "politics" },
-    { "year": 663, "title": "白村江の戦い", "detail": "百済復興を助けた倭の軍が唐・新羅に大敗し、防衛体制を急ぎ整える。", "lesson": "情報と準備を欠いた遠征は、国を危うくする。", "level": 2, "kind": "war" },
-    { "year": 672, "title": "壬申の乱", "detail": "天智天皇の死後、大海人皇子が大友皇子を破り、のちの天武天皇となる。", "lesson": "後継者争いは、国を二分する危機になる。", "level": 2, "kind": "war" },
-    { "year": 694, "title": "藤原京への遷都", "detail": "初の本格的な都城。碁盤目状の都市計画が導入された。", "level": 3, "kind": "politics" },
-    { "year": 701, "title": "大宝律令", "detail": "律令が完成し、法による統治の枠組みが整った。", "lesson": "ルールを成文化して、国を動かす仕組みにする。", "level": 2, "kind": "politics" },
-
-    { "year": 710, "title": "平城京への遷都", "detail": "唐の長安を手本にした都が奈良に造営された。", "lesson": "都市は、国家の姿を映す鏡になる。", "level": 1, "kind": "politics" },
-    { "year": 712, "title": "古事記の完成", "detail": "神話や伝承を記した、現存する日本最古の歴史書。", "level": 3, "kind": "culture" },
-    { "year": 743, "title": "墾田永年私財法", "detail": "開墾した土地の私有を認め、のちの荘園が広がる端緒となった。", "lesson": "制度の抜け道が、次の秩序をつくる。", "level": 2, "kind": "society" },
-    { "year": 752, "title": "東大寺大仏の開眼", "detail": "聖武天皇が発願した大仏が完成し、開眼供養が行われた。", "lesson": "国をあげた祈りと、人々の労力の結晶。", "level": 1, "kind": "culture" },
-    { "year": 753, "title": "鑑真の来日", "detail": "唐の高僧鑑真が苦難の末に来日し、戒律を伝えた。", "lesson": "危険をおかしてでも、学びを届けた人がいた。", "level": 3, "kind": "foreign" },
-
-    { "year": 794, "title": "平安京遷都", "detail": "桓武天皇が都を京都に移し、以後長く都として栄える。", "lesson": "都を移してでも、政治を刷新しようとした。", "level": 1, "kind": "politics" },
-    { "year": 804, "title": "最澄・空海入唐", "detail": "遣唐使船で唐に渡った二人が、のちに天台宗・真言宗を開く。", "level": 3, "kind": "culture" },
-    { "year": 894, "title": "遣唐使の停止", "detail": "菅原道真の提案で遣唐使が停止され、国風文化へ向かう。", "lesson": "外との関係を見直すと、内の文化が育つことがある。", "level": 2, "kind": "foreign" },
-    { "year": 939, "title": "平将門の乱", "detail": "関東で平将門が「新皇」を称して反乱を起こす。", "level": 3, "kind": "war" },
-    { "year": 1008, "approx": true, "title": "源氏物語", "detail": "紫式部による長編物語。宮廷の人間模様を細やかに描いた。", "level": 2, "kind": "culture" },
-    { "year": 1016, "title": "道長が摂政に", "detail": "娘を天皇に嫁がせ、藤原氏の摂関政治が最盛期を迎える。", "lesson": "婚姻を通じて、権力を一点に集中させる仕組み。", "level": 2, "kind": "politics" },
-    { "year": 1086, "title": "院政の開始", "detail": "白河上皇が、天皇の位を譲ったのち上皇として政治の実権を握った。", "lesson": "制度の外側へ、実権が移ることがある。", "level": 2, "kind": "politics" },
-    { "year": 1156, "title": "保元の乱", "detail": "天皇家と摂関家の内紛に武士が動員され、政治の主役が武士へ移り始める。", "level": 2, "kind": "war" },
-    { "year": 1159, "title": "平治の乱", "detail": "源義朝が敗れ、平清盛が勢力を伸ばす。", "level": 3, "kind": "war" },
-    { "year": 1167, "title": "平清盛、太政大臣", "detail": "武士として初めて太政大臣となり、平氏政権を築く。", "level": 2, "kind": "politics" },
-    { "year": 1175, "title": "法然、専修念仏", "detail": "法然が浄土宗を開き、念仏による救いを説いた。", "level": 3, "kind": "culture" },
-    { "year": 1180, "title": "源頼朝の挙兵", "detail": "平氏打倒の挙兵ののち、鎌倉を拠点に東国の武士を従えていく。", "lesson": "人心をまとめる大義と拠点が、勢力の核になる。", "level": 2, "kind": "war" },
-    { "year": 1185, "month": 3, "title": "壇ノ浦の戦い", "detail": "源義経らが平氏を滅ぼし、源平の争乱が終わる。", "lesson": "勝敗だけでなく、その後の統治の設計が問われた。", "level": 1, "kind": "war" },
-
-    { "year": 1185, "month": 11, "title": "守護・地頭の設置", "detail": "頼朝が守護・地頭を置くことを認められ、武家政権の基盤を固める。", "lesson": "現場に人を置く仕組みが、支配を実効あるものにする。", "level": 2, "kind": "politics" },
-    { "year": 1192, "title": "頼朝、征夷大将軍", "detail": "朝廷から征夷大将軍に任じられ、鎌倉幕府の体制が整う（1192年は通説）。", "lesson": "形式上の権威と実際の力を、どう組み合わせるか。", "level": 1, "kind": "politics" },
-    { "year": 1203, "title": "運慶・快慶の仏像", "detail": "東大寺南大門の金剛力士像が造られ、力強い写実の彫刻を示した。", "level": 3, "kind": "culture" },
-    { "year": 1221, "title": "承久の乱", "detail": "後鳥羽上皇が幕府打倒を図るも敗れ、幕府の支配が西国にも及ぶ。", "level": 2, "kind": "war" },
-    { "year": 1232, "title": "御成敗式目", "detail": "北条泰時が武士の慣習をまとめ、公平な裁判の基準とした。", "lesson": "暗黙のルールを明文化すると、信頼が生まれる。", "level": 2, "kind": "politics" },
-    { "year": 1274, "title": "文永の役", "detail": "元・高麗軍が博多湾に襲来。集団戦法と火器に苦戦した。", "level": 1, "kind": "war" },
-    { "year": 1281, "title": "弘安の役", "detail": "再び元軍が襲来するが、防塁と暴風雨もあり撃退された。", "lesson": "危機への備えは、のちの負担（恩賞の不足）を生んだ。", "level": 2, "kind": "war" },
-    { "year": 1297, "title": "永仁の徳政令", "detail": "御家人の困窮を救うため、売った土地を取り戻させる命令が出された。", "level": 3, "kind": "society" },
-    { "year": 1333, "title": "鎌倉幕府の滅亡", "detail": "後醍醐天皇の呼びかけに足利尊氏・新田義貞らが応じ、幕府が倒れる。", "lesson": "不満が蓄積した体制は、きっかけ一つで崩れる。", "level": 1, "kind": "politics" },
-
-    { "year": 1334, "title": "建武の新政", "detail": "後醍醐天皇が天皇中心の政治を目指したが、武士の不満を招いた。", "lesson": "理想だけでなく、担い手の納得が必要だった。", "level": 3, "kind": "politics" },
-    { "year": 1336, "title": "南北朝の分裂", "detail": "京都の北朝と吉野の南朝に朝廷が分かれ、約60年続く。", "level": 2, "kind": "politics" },
-    { "year": 1338, "title": "足利尊氏が将軍に", "detail": "北朝から征夷大将軍に任じられ、室町幕府が成立する。", "level": 2, "kind": "politics" },
-    { "year": 1392, "title": "南北朝の合一", "detail": "足利義満のもとで、南北朝が統一される。", "level": 2, "kind": "politics" },
-    { "year": 1397, "title": "金閣の造営", "detail": "足利義満が北山殿を造営。公家と武家の文化が融合した北山文化。", "level": 3, "kind": "culture" },
-    { "year": 1404, "title": "日明貿易の開始", "detail": "勘合を用いた公式貿易が始まり、銅銭や生糸が輸入された。", "lesson": "貿易は富と文化をもたらし、政権の財源にもなる。", "level": 2, "kind": "foreign" },
-    { "year": 1467, "title": "応仁の乱", "detail": "将軍家の後継争いなどから戦乱となり、京都は焼け、戦国の世へ。", "lesson": "後継ぎ争いが、制度への不信を広げた。", "level": 1, "kind": "war" },
-    { "year": 1482, "title": "銀閣の造営", "detail": "足利義政が東山山荘を営み、簡素で奥深い東山文化を育んだ。", "level": 3, "kind": "culture" },
-    { "year": 1543, "title": "鉄砲伝来", "detail": "種子島にポルトガル人が漂着し、鉄砲が伝わる。戦い方が一変した。", "lesson": "新技術は、戦のかたちと社会の力関係を変える。", "level": 1, "kind": "society" },
-    { "year": 1549, "title": "キリスト教伝来", "detail": "ザビエルが鹿児島に上陸し、布教を始める。", "lesson": "宗教や思想の伝来は、交易と一体で進んだ。", "level": 2, "kind": "foreign" },
-    { "year": 1560, "title": "桶狭間の戦い", "detail": "織田信長が少数の兵で今川義元を討ち、名を高める。", "lesson": "情報と奇襲で、数の不利をくつがえす。", "level": 2, "kind": "war" },
-    { "year": 1573, "title": "室町幕府の滅亡", "detail": "信長が足利義昭を京都から追放し、室町幕府が事実上終わる。", "level": 2, "kind": "politics" },
-
-    { "year": 1575, "title": "長篠の戦い", "detail": "信長・家康が鉄砲を効果的に使い、武田勝頼の軍を破る。", "lesson": "新技術と組織運用の組み合わせが、勝敗を分けた。", "level": 2, "kind": "war" },
-    { "year": 1576, "title": "安土城の築城", "detail": "琵琶湖畔に壮麗な天主を持つ城が築かれ、新しい権威の象徴となる。", "level": 3, "kind": "culture" },
-    { "year": 1582, "month": 6, "title": "本能寺の変", "detail": "明智光秀が信長を討ち、のち秀吉が山崎の戦いで光秀を破って主導権を握る。", "lesson": "絶頂の権力にも、足元の不満という盲点はある。", "level": 1, "kind": "politics" },
-    { "year": 1582, "title": "太閤検地", "detail": "秀吉が全国で検地を行い、田畑の生産力を石高で把握した。", "lesson": "数字で現実を把握することが、統治の土台になる。", "level": 2, "kind": "society" },
-    { "year": 1588, "title": "刀狩令", "detail": "農民から武器を集め、兵農分離と社会の安定を図った。", "level": 2, "kind": "society" },
-    { "year": 1590, "title": "秀吉の天下統一", "detail": "小田原の北条氏を降し、長い戦国の争乱をおさめる。", "level": 1, "kind": "politics" },
-    { "year": 1592, "title": "文禄の役", "detail": "秀吉が朝鮮に出兵（1592〜93年）。のち慶長の役（1597〜98年）も行われた。", "lesson": "拡大の野心は、国内外に大きな犠牲を生んだ。", "level": 3, "kind": "war" },
-
-    { "year": 1600, "title": "関ヶ原の戦い", "detail": "徳川家康の東軍が石田三成らの西軍を破り、覇権を握る。", "lesson": "天下分け目の戦いは、同盟と情報戦で決まった。", "level": 1, "kind": "war" },
-    { "year": 1603, "title": "江戸幕府の成立", "detail": "家康が征夷大将軍となり、江戸に幕府を開く。", "level": 1, "kind": "politics" },
-    { "year": 1615, "title": "大坂夏の陣", "detail": "豊臣氏が滅び、長い泰平の世が始まる。", "lesson": "ライバルの排除が、長期の安定をもたらした。", "level": 2, "kind": "war" },
-    { "year": 1635, "title": "参勤交代の制度化", "detail": "大名が江戸と領地を行き来する制度が定まり、街道と江戸の繁栄を促した。", "lesson": "移動と出費を通じて、大名を統制した。", "level": 2, "kind": "politics" },
-    { "year": 1637, "title": "島原の乱", "detail": "重い年貢とキリスト教弾圧に苦しむ人びとが立ち上がった。", "lesson": "圧政が積もれば、抵抗は大きな力になる。", "level": 3, "kind": "war" },
-    { "year": 1639, "title": "鎖国体制の完成", "detail": "ポルトガル船の来航を禁止。長崎などを通じた限定的な交流が続く。", "lesson": "管理された交流は安定を生むが、情報の窓を狭める。", "level": 1, "kind": "foreign" },
-    { "year": 1657, "title": "明暦の大火", "detail": "江戸の大半を焼いた大火。のち都市の防火と再整備が進んだ。", "lesson": "災害は、都市づくりを見直す契機になる。", "level": 3, "kind": "disaster" },
-    { "year": 1689, "title": "奥の細道の旅", "detail": "松尾芭蕉が東北・北陸を旅し、俳諧を芸術へ高めた。", "level": 3, "kind": "culture" },
-    { "year": 1716, "title": "享保の改革", "detail": "徳川吉宗が財政再建と法整備に取り組み、目安箱を置いた。", "lesson": "現場の声を集める仕組みが、改革を支える。", "level": 2, "kind": "politics" },
-    { "year": 1774, "title": "解体新書の刊行", "detail": "杉田玄白らがオランダ語の解剖書を訳し、蘭学の発展につながる。", "lesson": "他国の知を学ぶ姿勢が、近代科学の土台になった。", "level": 2, "kind": "culture" },
-    { "year": 1783, "title": "天明の大飢饉", "detail": "浅間山の噴火や冷害で凶作となり、各地で多くの人が亡くなった。", "level": 3, "kind": "disaster" },
-    { "year": 1800, "title": "伊能忠敬の測量", "detail": "蝦夷地から測量を始め、歩いて日本中を測る事業が動き出す。", "lesson": "地道な実測の積み重ねが、精密な地図を生む。", "level": 2, "kind": "society" },
-    { "year": 1821, "title": "伊能図の完成", "detail": "忠敬の没後、弟子たちが日本地図を完成させた。", "level": 3, "kind": "society" },
-    { "year": 1831, "approx": true, "title": "富嶽三十六景", "detail": "葛飾北斎が描いた浮世絵の連作。のち海外の芸術にも影響を与えた。", "level": 3, "kind": "culture" },
-    { "year": 1853, "title": "ペリー来航", "detail": "黒船が浦賀に来航し、開国を求める。", "lesson": "外圧は、国内の矛盾を一気に表面化させる。", "level": 1, "kind": "foreign" },
-    { "year": 1854, "title": "日米和親条約", "detail": "下田・箱館を開き、長く続いた鎖国体制が転換する。", "level": 2, "kind": "foreign" },
-    { "year": 1858, "title": "修好通商条約", "detail": "日米修好通商条約など。関税自主権がなく、領事裁判権を認める不平等な内容だった。", "level": 2, "kind": "foreign" },
-    { "year": 1866, "title": "薩長同盟", "detail": "対立していた薩摩藩と長州藩が手を結び、倒幕へ向かう。", "lesson": "昨日の敵とも、共通の目的で手を組める。", "level": 3, "kind": "politics" },
-    { "year": 1867, "title": "大政奉還", "detail": "徳川慶喜が政権を朝廷に返上し、江戸幕府が終わる。", "level": 1, "kind": "politics" },
-    { "year": 1868, "title": "江戸城無血開城", "detail": "西郷隆盛と勝海舟の会談で、江戸総攻撃が回避された。", "lesson": "対話が、多くの命と都市を救うこともある。", "level": 2, "kind": "politics" },
-
-    { "year": 1868, "title": "明治維新", "detail": "五箇条の御誓文が示され、新政府による近代国家づくりが始まる。", "lesson": "旧来の枠組みを変えるには、新しい目標の共有が要る。", "level": 1, "kind": "politics" },
-    { "year": 1871, "title": "廃藩置県", "detail": "藩を廃して県を置き、中央集権国家の基礎を固めた。", "level": 1, "kind": "politics" },
-    { "year": 1872, "title": "学制の公布", "detail": "国民皆学をめざし、全国に学校を置く方針が示された。", "lesson": "教育への投資が、近代化の土台になる。", "level": 2, "kind": "society" },
-    { "year": 1872, "month": 10, "title": "日本初の鉄道", "detail": "新橋〜横浜間で鉄道が開業し、物と人の流れが変わり始める。", "level": 2, "kind": "society" },
-    { "year": 1873, "title": "地租改正", "detail": "土地の価値に応じて、現金で税を納める仕組みへ改めた。", "lesson": "安定した税収が、国家運営を支えた。", "level": 2, "kind": "society" },
-    { "year": 1877, "title": "西南戦争", "detail": "西郷隆盛らが挙兵した、国内最後の大規模な内戦。", "level": 3, "kind": "war" },
-    { "year": 1889, "month": 2, "title": "大日本帝国憲法", "detail": "立憲君主制の憲法として発布され、翌年には議会が開かれた。", "lesson": "権力のルールを定めることで、国のかたちが決まる。", "level": 1, "kind": "politics" },
-    { "year": 1894, "title": "日清戦争", "detail": "朝鮮をめぐる対立から開戦。下関条約で台湾などを獲得した。", "level": 2, "kind": "war" },
-    { "year": 1904, "title": "日露戦争", "detail": "満州・朝鮮をめぐりロシアと戦い、ポーツマス条約で講和した。", "lesson": "勝利の陰で、国力の限界と国民の不満も積もった。", "level": 1, "kind": "war" },
-    { "year": 1910, "title": "韓国併合", "detail": "日本が韓国を併合し、植民地支配を行った。", "lesson": "拡張の歴史は、のちの摩擦と責任を残す。", "level": 3, "kind": "politics" },
-
-    { "year": 1914, "title": "第一次大戦に参戦", "detail": "日英同盟を理由にドイツへ宣戦し、アジアでの影響力を伸ばした。", "level": 2, "kind": "war" },
-    { "year": 1918, "title": "米騒動", "detail": "米価の高騰に怒った人びとの抗議が、全国に広がった。", "level": 3, "kind": "society" },
-    { "year": 1922, "title": "全国水平社の結成", "detail": "差別からの解放をめざす人びとが、自らの組織をつくった。", "level": 3, "kind": "society" },
-    { "year": 1923, "month": 9, "title": "関東大震災", "detail": "相模湾沖を震源とする地震と火災で、首都圏が壊滅的な被害を受けた。", "lesson": "備えと正確な情報が命を守る。流言の悲劇も忘れない。", "level": 1, "kind": "disaster" },
-    { "year": 1925, "title": "普通選挙法", "detail": "25歳以上の男子に選挙権が与えられた。同年、治安維持法も制定された。", "lesson": "権利の拡大と、統制の強化が同時に進んだ。", "level": 2, "kind": "politics" },
-
-    { "year": 1929, "title": "世界恐慌", "detail": "世界の不況が日本にも波及し、農村や都市の暮らしを直撃した。", "level": 3, "kind": "society" },
-    { "year": 1931, "month": 9, "title": "満州事変", "detail": "関東軍が柳条湖で鉄道を爆破し、満州の占領を拡大した。", "lesson": "現地軍の独走を止められなかったことが、戦争への道を開いた。", "level": 2, "kind": "war" },
-    { "year": 1936, "title": "二・二六事件", "detail": "陸軍青年将校が決起し、政治家を襲撃。軍の発言力が強まる。", "level": 2, "kind": "politics" },
-    { "year": 1937, "title": "日中戦争の始まり", "detail": "盧溝橋事件を機に全面戦争へ拡大し、長期化した。", "level": 2, "kind": "war" },
-    { "year": 1941, "month": 12, "title": "太平洋戦争の開戦", "detail": "真珠湾攻撃などにより、米英と開戦した。", "lesson": "国力の差と情報を冷静に見る姿勢が欠かせない。", "level": 1, "kind": "war" },
-    { "year": 1945, "month": 8, "title": "終戦の日", "detail": "広島・長崎への原爆投下を経て、ポツダム宣言を受諾し戦争が終結した。", "lesson": "戦争の犠牲を記憶し、二度と繰り返さない誓いに。", "level": 1, "kind": "war" },
-    { "year": 1946, "month": 11, "title": "日本国憲法の公布", "detail": "国民主権・基本的人権・平和主義を柱とする憲法が公布された。", "level": 1, "kind": "politics" },
-    { "year": 1951, "month": 9, "title": "平和条約の調印", "detail": "サンフランシスコ平和条約に調印し、翌年に主権を回復した。", "level": 2, "kind": "foreign" },
-    { "year": 1964, "month": 10, "title": "東京五輪と新幹線", "detail": "東京オリンピックが開かれ、東海道新幹線も開業した。", "lesson": "国をあげた目標が、インフラと自信を育てた。", "level": 1, "kind": "society" },
-    { "year": 1972, "title": "沖縄返還", "detail": "沖縄が日本に復帰し、同年には日中国交も正常化した。", "level": 2, "kind": "foreign" },
-    { "year": 1973, "title": "石油危機", "detail": "原油価格の高騰で物価が上がり、高度経済成長が終わる。", "lesson": "資源に依存する社会は、外の変化に弱い。", "level": 3, "kind": "society" },
-    { "year": 1989, "month": 1, "title": "平成への改元", "detail": "昭和天皇が崩御し、元号が平成に改まった。", "level": 2, "kind": "politics" },
-
-    { "year": 1991, "title": "バブルの崩壊", "detail": "株価と地価の急落で、長い景気低迷の時代に入る。", "lesson": "過熱した期待は、やがて現実に引き戻される。", "level": 2, "kind": "society" },
-    { "year": 1995, "month": 1, "title": "阪神・淡路大震災", "detail": "最大震度7の地震で都市が被災。ボランティア元年とも呼ばれる。", "lesson": "都市の災害には、備えと助け合いが欠かせない。", "level": 2, "kind": "disaster" },
-    { "year": 2008, "month": 9, "title": "世界金融危機", "detail": "米国発の金融危機が世界に波及し、日本経済も大きく落ち込んだ。", "level": 3, "kind": "society" },
-    { "year": 2011, "month": 3, "title": "東日本大震災", "detail": "巨大地震と津波、原発事故が重なる未曽有の災害となった。", "lesson": "想定を超える事態に備え、記録と教訓を未来へつなぐ。", "level": 1, "kind": "disaster" },
-    { "year": 2019, "month": 5, "title": "令和の始まり", "detail": "皇位継承に伴い、元号が平成から令和に改まった。", "level": 1, "kind": "politics" },
-
-    { "year": 2020, "title": "新型コロナの拡大", "detail": "感染症が世界に広がり、働き方や学び方、暮らしが大きく変わった。", "lesson": "危機は、社会のデジタル化を一気に押し進めた。", "level": 1, "kind": "disaster" },
-    { "year": 2021, "month": 7, "title": "東京五輪の開催", "detail": "1年延期のうえ、多くの会場で無観客で行われた。", "level": 3, "kind": "society" },
-    { "year": 2022, "month": 11, "title": "生成AIの普及", "detail": "対話型AIが一般に公開され、知的作業のやり方が変わり始める。", "lesson": "新しい道具が現れる時こそ、歴史に学ぶ。", "level": 2, "kind": "society" },
-    { "year": 2024, "month": 1, "title": "能登半島地震", "detail": "最大震度7の地震が能登を襲い、甚大な被害が出た。", "level": 3, "kind": "disaster" },
-    { "year": 2025, "month": 4, "title": "大阪・関西万博", "detail": "大阪で万博が開かれ、世界各国が最新の技術と文化を発信した。", "level": 3, "kind": "society" }
-  ]
+  {
+   "id": "war",
+   "name": "戦い",
+   "color": "#5b4a86"
+  },
+  {
+   "id": "culture",
+   "name": "文化",
+   "color": "#c08a2b"
+  },
+  {
+   "id": "foreign",
+   "name": "外交・交流",
+   "color": "#2f7f86"
+  },
+  {
+   "id": "society",
+   "name": "社会・技術",
+   "color": "#5f8a3a"
+  },
+  {
+   "id": "disaster",
+   "name": "災害",
+   "color": "#6a6a6a"
+  }
+ ],
+ "eras": [
+  {
+   "id": "jomon",
+   "name": "縄文",
+   "start": -14000,
+   "end": -300,
+   "weight": 5,
+   "color": "#7a5f40",
+   "motif": "hut",
+   "summary": "狩猟・採集・漁労と定住。土器と竪穴住居、豊かな精神文化。"
+  },
+  {
+   "id": "yayoi",
+   "name": "弥生",
+   "start": -300,
+   "end": 250,
+   "weight": 4,
+   "color": "#a38a3e",
+   "motif": "granary",
+   "summary": "稲作と金属器が広がり、ムラからクニへ。身分の差が生まれる。"
+  },
+  {
+   "id": "kofun",
+   "name": "古墳",
+   "start": 250,
+   "end": 592,
+   "weight": 4,
+   "color": "#5f7f49",
+   "motif": "kofun",
+   "summary": "前方後円墳が各地に築かれ、ヤマト政権が広い地域を統合。"
+  },
+  {
+   "id": "asuka",
+   "name": "飛鳥",
+   "start": 592,
+   "end": 710,
+   "weight": 5,
+   "color": "#b0654a",
+   "motif": "pagoda",
+   "summary": "仏教と大陸の制度を取り入れ、律令国家の基礎が整う。"
+  },
+  {
+   "id": "nara",
+   "name": "奈良",
+   "start": 710,
+   "end": 794,
+   "weight": 5,
+   "color": "#8f5c78",
+   "motif": "hall",
+   "summary": "平城京を都に、律令体制が整い天平文化が花開く。"
+  },
+  {
+   "id": "heian",
+   "name": "平安",
+   "start": 794,
+   "end": 1185,
+   "weight": 9,
+   "color": "#6f66a0",
+   "motif": "shinden",
+   "summary": "貴族政治から院政、武士の台頭へ。国風文化が生まれる。"
+  },
+  {
+   "id": "kamakura",
+   "name": "鎌倉",
+   "start": 1185,
+   "end": 1333,
+   "weight": 7,
+   "color": "#3f7585",
+   "motif": "daibutsu",
+   "summary": "武士が政権を握り、御恩と奉公の主従関係で社会を動かす。"
+  },
+  {
+   "id": "muromachi",
+   "name": "室町",
+   "start": 1333,
+   "end": 1573,
+   "weight": 9,
+   "color": "#55705c",
+   "motif": "pavilion",
+   "summary": "南北朝の争いから応仁の乱、戦国へ。庶民文化と東アジア交易が栄える。"
+  },
+  {
+   "id": "azuchi",
+   "name": "安土桃山",
+   "start": 1573,
+   "end": 1603,
+   "weight": 4.5,
+   "color": "#b8862a",
+   "motif": "castle",
+   "summary": "信長・秀吉による天下統一。検地と刀狩で社会の枠組みを改める。"
+  },
+  {
+   "id": "edo",
+   "name": "江戸",
+   "start": 1603,
+   "end": 1868,
+   "weight": 14,
+   "color": "#a24a3f",
+   "motif": "machiya",
+   "summary": "約260年の幕藩体制。平和のもとで都市と町人文化、学問が発達。"
+  },
+  {
+   "id": "meiji",
+   "name": "明治",
+   "start": 1868,
+   "end": 1912,
+   "weight": 8,
+   "color": "#3f5f8f",
+   "motif": "brick",
+   "summary": "明治維新で近代国家へ。憲法・産業・軍備を急速に整える。"
+  },
+  {
+   "id": "taisho",
+   "name": "大正",
+   "start": 1912,
+   "end": 1926,
+   "weight": 3.5,
+   "color": "#b0607a",
+   "motif": "yokan",
+   "summary": "大正デモクラシーと都市文化。関東大震災で試練を迎える。"
+  },
+  {
+   "id": "showa",
+   "name": "昭和",
+   "start": 1926,
+   "end": 1989,
+   "weight": 12,
+   "color": "#5a6670",
+   "motif": "tower",
+   "summary": "戦争と敗戦、占領、そして高度経済成長。激動の六十余年。"
+  },
+  {
+   "id": "heisei",
+   "name": "平成",
+   "start": 1989,
+   "end": 2019,
+   "weight": 5,
+   "color": "#2f7a7a",
+   "motif": "skyscrapers",
+   "summary": "バブル崩壊と長期低迷、大災害、情報化とグローバル化。"
+  },
+  {
+   "id": "reiwa",
+   "name": "令和",
+   "start": 2019,
+   "end": 2027,
+   "weight": 3,
+   "color": "#8d5fa0",
+   "motif": "skytree",
+   "open": true,
+   "summary": "感染症、デジタル化、AI。いまも続く現在進行形の歴史。"
+  }
+ ],
+ "events": [
+  {
+   "year": -14000,
+   "approx": true,
+   "title": "最古級の土器",
+   "detail": "約1万6000年前、日本列島で土器が作られ始め、煮炊きと定住が進む。",
+   "lesson": "技術革新は暮らしの安定を支える。",
+   "level": 1,
+   "kind": "society"
+  },
+  {
+   "year": -3900,
+   "approx": true,
+   "title": "三内丸山の集落",
+   "detail": "青森に大規模な集落が営まれ、クリの管理や各地との交易が行われた。",
+   "lesson": "定住は交流と交易のネットワークを育てた。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": -3000,
+   "approx": true,
+   "title": "土偶に込めた祈り",
+   "detail": "豊かな実りや安産を願う祈りの造形が、各地で作られた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": -300,
+   "approx": true,
+   "title": "稲作が広がる",
+   "detail": "水田稲作と金属器が九州北部から各地へ伝わり、社会が大きく変わる。",
+   "lesson": "新しい技術は富と同時に、格差と争いも生んだ。",
+   "level": 1,
+   "kind": "society"
+  },
+  {
+   "year": 57,
+   "title": "漢委奴国王の金印",
+   "detail": "後漢の光武帝が、倭の奴国の使者に印綬を授けたと記される。",
+   "lesson": "外の権威を得ることが、内での地位を高めた。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 239,
+   "title": "卑弥呼、魏へ使い",
+   "detail": "邪馬台国の女王卑弥呼が魏に使者を送り、「親魏倭王」の称号を受けたとされる。",
+   "lesson": "国際的な承認は、国内統治の後ろ盾になる。",
+   "level": 1,
+   "kind": "foreign"
+  },
+  {
+   "year": 247,
+   "approx": true,
+   "title": "卑弥呼の死",
+   "detail": "卑弥呼が没したのち国は乱れ、壱与が女王に立てられたと伝わる。",
+   "lesson": "カリスマに頼る統治は、継承の場面で揺らぐ。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 250,
+   "approx": true,
+   "title": "前方後円墳の出現",
+   "detail": "奈良の箸墓古墳など大型の前方後円墳が築かれ、各地に広がる。",
+   "lesson": "共通の墓の形は、同盟と秩序の目に見える印だった。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 478,
+   "title": "倭王武の上表文",
+   "detail": "倭王武（雄略天皇とされる）が宋に使者を送り、国内平定を述べた上表文を奉る。",
+   "lesson": "国際関係の中で、国の格を高めようとした。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 527,
+   "title": "磐井の乱",
+   "detail": "筑紫の豪族磐井がヤマト政権に反乱を起こすが、平定された。",
+   "lesson": "地方の自立と中央集権の綱引きが続いた。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 538,
+   "approx": true,
+   "title": "仏教の伝来",
+   "detail": "百済から仏像・経典が伝わる（538年説と552年説がある）。",
+   "lesson": "異文化の受容は、賛否の対立も生む。",
+   "level": 1,
+   "kind": "culture"
+  },
+  {
+   "year": 593,
+   "title": "聖徳太子の摂政",
+   "detail": "推古天皇のもとで聖徳太子が政治に加わり、国家づくりを進める。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 603,
+   "title": "冠位十二階",
+   "detail": "家柄ではなく、才能や功績で人を登用する制度。",
+   "lesson": "出自より能力で人を活かす発想の始まり。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 604,
+   "title": "憲法十七条",
+   "detail": "役人の心得を説き、「和」を大切にすることを示した。",
+   "lesson": "争いを避ける合意形成の精神が根にある。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 607,
+   "title": "遣隋使の派遣",
+   "detail": "小野妹子を隋に送り、対等な国交と大陸の文化・制度を求めた。",
+   "lesson": "学ぶ姿勢と、対等であろうとする気概。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 645,
+   "title": "大化の改新",
+   "detail": "中大兄皇子と中臣鎌足が蘇我入鹿を討ち、新しい国づくりが始まる。",
+   "lesson": "改革は、大胆な決断と信頼できる同志から始まる。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 663,
+   "title": "白村江の戦い",
+   "detail": "百済復興を助けた倭の軍が唐・新羅に大敗し、防衛体制を急ぎ整える。",
+   "lesson": "情報と準備を欠いた遠征は、国を危うくする。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 672,
+   "title": "壬申の乱",
+   "detail": "天智天皇の死後、大海人皇子が大友皇子を破り、のちの天武天皇となる。",
+   "lesson": "後継者争いは、国を二分する危機になる。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 694,
+   "title": "藤原京への遷都",
+   "detail": "初の本格的な都城。碁盤目状の都市計画が導入された。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 701,
+   "title": "大宝律令",
+   "detail": "律令が完成し、法による統治の枠組みが整った。",
+   "lesson": "ルールを成文化して、国を動かす仕組みにする。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 710,
+   "title": "平城京への遷都",
+   "detail": "唐の長安を手本にした都が奈良に造営された。",
+   "lesson": "都市は、国家の姿を映す鏡になる。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 712,
+   "title": "古事記の完成",
+   "detail": "神話や伝承を記した、現存する日本最古の歴史書。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 743,
+   "title": "墾田永年私財法",
+   "detail": "開墾した土地の私有を認め、のちの荘園が広がる端緒となった。",
+   "lesson": "制度の抜け道が、次の秩序をつくる。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 752,
+   "title": "東大寺大仏の開眼",
+   "detail": "聖武天皇が発願した大仏が完成し、開眼供養が行われた。",
+   "lesson": "国をあげた祈りと、人々の労力の結晶。",
+   "level": 1,
+   "kind": "culture"
+  },
+  {
+   "year": 753,
+   "title": "鑑真の来日",
+   "detail": "唐の高僧鑑真が苦難の末に来日し、戒律を伝えた。",
+   "lesson": "危険をおかしてでも、学びを届けた人がいた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 794,
+   "title": "平安京遷都",
+   "detail": "桓武天皇が都を京都に移し、以後長く都として栄える。",
+   "lesson": "都を移してでも、政治を刷新しようとした。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 804,
+   "title": "最澄・空海入唐",
+   "detail": "遣唐使船で唐に渡った二人が、のちに天台宗・真言宗を開く。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 894,
+   "title": "遣唐使の停止",
+   "detail": "菅原道真の提案で遣唐使が停止され、国風文化へ向かう。",
+   "lesson": "外との関係を見直すと、内の文化が育つことがある。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 939,
+   "title": "平将門の乱",
+   "detail": "関東で平将門が「新皇」を称して反乱を起こす。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1008,
+   "approx": true,
+   "title": "源氏物語",
+   "detail": "紫式部による長編物語。宮廷の人間模様を細やかに描いた。",
+   "level": 2,
+   "kind": "culture"
+  },
+  {
+   "year": 1016,
+   "title": "道長が摂政に",
+   "detail": "娘を天皇に嫁がせ、藤原氏の摂関政治が最盛期を迎える。",
+   "lesson": "婚姻を通じて、権力を一点に集中させる仕組み。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1086,
+   "title": "院政の開始",
+   "detail": "白河上皇が、天皇の位を譲ったのち上皇として政治の実権を握った。",
+   "lesson": "制度の外側へ、実権が移ることがある。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1156,
+   "title": "保元の乱",
+   "detail": "天皇家と摂関家の内紛に武士が動員され、政治の主役が武士へ移り始める。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1159,
+   "title": "平治の乱",
+   "detail": "源義朝が敗れ、平清盛が勢力を伸ばす。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1167,
+   "title": "平清盛、太政大臣",
+   "detail": "武士として初めて太政大臣となり、平氏政権を築く。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1175,
+   "title": "法然、専修念仏",
+   "detail": "法然が浄土宗を開き、念仏による救いを説いた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1180,
+   "title": "源頼朝の挙兵",
+   "detail": "平氏打倒の挙兵ののち、鎌倉を拠点に東国の武士を従えていく。",
+   "lesson": "人心をまとめる大義と拠点が、勢力の核になる。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1185,
+   "month": 3,
+   "title": "壇ノ浦の戦い",
+   "detail": "源義経らが平氏を滅ぼし、源平の争乱が終わる。",
+   "lesson": "勝敗だけでなく、その後の統治の設計が問われた。",
+   "level": 1,
+   "kind": "war"
+  },
+  {
+   "year": 1185,
+   "month": 11,
+   "title": "守護・地頭の設置",
+   "detail": "頼朝が守護・地頭を置くことを認められ、武家政権の基盤を固める。",
+   "lesson": "現場に人を置く仕組みが、支配を実効あるものにする。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1192,
+   "title": "頼朝、征夷大将軍",
+   "detail": "朝廷から征夷大将軍に任じられ、鎌倉幕府の体制が整う（1192年は通説）。",
+   "lesson": "形式上の権威と実際の力を、どう組み合わせるか。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1203,
+   "title": "運慶・快慶の仏像",
+   "detail": "東大寺南大門の金剛力士像が造られ、力強い写実の彫刻を示した。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1221,
+   "title": "承久の乱",
+   "detail": "後鳥羽上皇が幕府打倒を図るも敗れ、幕府の支配が西国にも及ぶ。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1232,
+   "title": "御成敗式目",
+   "detail": "北条泰時が武士の慣習をまとめ、公平な裁判の基準とした。",
+   "lesson": "暗黙のルールを明文化すると、信頼が生まれる。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1274,
+   "title": "文永の役",
+   "detail": "元・高麗軍が博多湾に襲来。集団戦法と火器に苦戦した。",
+   "level": 1,
+   "kind": "war"
+  },
+  {
+   "year": 1281,
+   "title": "弘安の役",
+   "detail": "再び元軍が襲来するが、防塁と暴風雨もあり撃退された。",
+   "lesson": "危機への備えは、のちの負担（恩賞の不足）を生んだ。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1297,
+   "title": "永仁の徳政令",
+   "detail": "御家人の困窮を救うため、売った土地を取り戻させる命令が出された。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1333,
+   "title": "鎌倉幕府の滅亡",
+   "detail": "後醍醐天皇の呼びかけに足利尊氏・新田義貞らが応じ、幕府が倒れる。",
+   "lesson": "不満が蓄積した体制は、きっかけ一つで崩れる。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1334,
+   "title": "建武の新政",
+   "detail": "後醍醐天皇が天皇中心の政治を目指したが、武士の不満を招いた。",
+   "lesson": "理想だけでなく、担い手の納得が必要だった。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1336,
+   "title": "南北朝の分裂",
+   "detail": "京都の北朝と吉野の南朝に朝廷が分かれ、約60年続く。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1338,
+   "title": "足利尊氏が将軍に",
+   "detail": "北朝から征夷大将軍に任じられ、室町幕府が成立する。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1392,
+   "title": "南北朝の合一",
+   "detail": "足利義満のもとで、南北朝が統一される。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1397,
+   "title": "金閣の造営",
+   "detail": "足利義満が北山殿を造営。公家と武家の文化が融合した北山文化。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1404,
+   "title": "日明貿易の開始",
+   "detail": "勘合を用いた公式貿易が始まり、銅銭や生糸が輸入された。",
+   "lesson": "貿易は富と文化をもたらし、政権の財源にもなる。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 1467,
+   "title": "応仁の乱",
+   "detail": "将軍家の後継争いなどから戦乱となり、京都は焼け、戦国の世へ。",
+   "lesson": "後継ぎ争いが、制度への不信を広げた。",
+   "level": 1,
+   "kind": "war"
+  },
+  {
+   "year": 1482,
+   "title": "銀閣の造営",
+   "detail": "足利義政が東山山荘を営み、簡素で奥深い東山文化を育んだ。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1543,
+   "title": "鉄砲伝来",
+   "detail": "種子島にポルトガル人が漂着し、鉄砲が伝わる。戦い方が一変した。",
+   "lesson": "新技術は、戦のかたちと社会の力関係を変える。",
+   "level": 1,
+   "kind": "society"
+  },
+  {
+   "year": 1549,
+   "title": "キリスト教伝来",
+   "detail": "ザビエルが鹿児島に上陸し、布教を始める。",
+   "lesson": "宗教や思想の伝来は、交易と一体で進んだ。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 1560,
+   "title": "桶狭間の戦い",
+   "detail": "織田信長が少数の兵で今川義元を討ち、名を高める。",
+   "lesson": "情報と奇襲で、数の不利をくつがえす。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1573,
+   "title": "室町幕府の滅亡",
+   "detail": "信長が足利義昭を京都から追放し、室町幕府が事実上終わる。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1575,
+   "title": "長篠の戦い",
+   "detail": "信長・家康が鉄砲を効果的に使い、武田勝頼の軍を破る。",
+   "lesson": "新技術と組織運用の組み合わせが、勝敗を分けた。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1576,
+   "title": "安土城の築城",
+   "detail": "琵琶湖畔に壮麗な天主を持つ城が築かれ、新しい権威の象徴となる。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1582,
+   "month": 6,
+   "title": "本能寺の変",
+   "detail": "明智光秀が信長を討ち、のち秀吉が山崎の戦いで光秀を破って主導権を握る。",
+   "lesson": "絶頂の権力にも、足元の不満という盲点はある。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1582,
+   "title": "太閤検地",
+   "detail": "秀吉が全国で検地を行い、田畑の生産力を石高で把握した。",
+   "lesson": "数字で現実を把握することが、統治の土台になる。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 1588,
+   "title": "刀狩令",
+   "detail": "農民から武器を集め、兵農分離と社会の安定を図った。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 1590,
+   "title": "秀吉の天下統一",
+   "detail": "小田原の北条氏を降し、長い戦国の争乱をおさめる。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1592,
+   "title": "文禄の役",
+   "detail": "秀吉が朝鮮に出兵（1592〜93年）。のち慶長の役（1597〜98年）も行われた。",
+   "lesson": "拡大の野心は、国内外に大きな犠牲を生んだ。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1600,
+   "title": "関ヶ原の戦い",
+   "detail": "徳川家康の東軍が石田三成らの西軍を破り、覇権を握る。",
+   "lesson": "天下分け目の戦いは、同盟と情報戦で決まった。",
+   "level": 1,
+   "kind": "war"
+  },
+  {
+   "year": 1603,
+   "title": "江戸幕府の成立",
+   "detail": "家康が征夷大将軍となり、江戸に幕府を開く。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1615,
+   "title": "大坂夏の陣",
+   "detail": "豊臣氏が滅び、長い泰平の世が始まる。",
+   "lesson": "ライバルの排除が、長期の安定をもたらした。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1635,
+   "title": "参勤交代の制度化",
+   "detail": "大名が江戸と領地を行き来する制度が定まり、街道と江戸の繁栄を促した。",
+   "lesson": "移動と出費を通じて、大名を統制した。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1637,
+   "title": "島原の乱",
+   "detail": "重い年貢とキリスト教弾圧に苦しむ人びとが立ち上がった。",
+   "lesson": "圧政が積もれば、抵抗は大きな力になる。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1639,
+   "title": "鎖国体制の完成",
+   "detail": "ポルトガル船の来航を禁止。長崎などを通じた限定的な交流が続く。",
+   "lesson": "管理された交流は安定を生むが、情報の窓を狭める。",
+   "level": 1,
+   "kind": "foreign"
+  },
+  {
+   "year": 1657,
+   "title": "明暦の大火",
+   "detail": "江戸の大半を焼いた大火。のち都市の防火と再整備が進んだ。",
+   "lesson": "災害は、都市づくりを見直す契機になる。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 1689,
+   "title": "奥の細道の旅",
+   "detail": "松尾芭蕉が東北・北陸を旅し、俳諧を芸術へ高めた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1716,
+   "title": "享保の改革",
+   "detail": "徳川吉宗が財政再建と法整備に取り組み、目安箱を置いた。",
+   "lesson": "現場の声を集める仕組みが、改革を支える。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1774,
+   "title": "解体新書の刊行",
+   "detail": "杉田玄白らがオランダ語の解剖書を訳し、蘭学の発展につながる。",
+   "lesson": "他国の知を学ぶ姿勢が、近代科学の土台になった。",
+   "level": 2,
+   "kind": "culture"
+  },
+  {
+   "year": 1783,
+   "title": "天明の大飢饉",
+   "detail": "浅間山の噴火や冷害で凶作となり、各地で多くの人が亡くなった。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 1800,
+   "title": "伊能忠敬の測量",
+   "detail": "蝦夷地から測量を始め、歩いて日本中を測る事業が動き出す。",
+   "lesson": "地道な実測の積み重ねが、精密な地図を生む。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 1821,
+   "title": "伊能図の完成",
+   "detail": "忠敬の没後、弟子たちが日本地図を完成させた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1831,
+   "approx": true,
+   "title": "富嶽三十六景",
+   "detail": "葛飾北斎が描いた浮世絵の連作。のち海外の芸術にも影響を与えた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1853,
+   "title": "ペリー来航",
+   "detail": "黒船が浦賀に来航し、開国を求める。",
+   "lesson": "外圧は、国内の矛盾を一気に表面化させる。",
+   "level": 1,
+   "kind": "foreign"
+  },
+  {
+   "year": 1854,
+   "title": "日米和親条約",
+   "detail": "下田・箱館を開き、長く続いた鎖国体制が転換する。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 1858,
+   "title": "修好通商条約",
+   "detail": "日米修好通商条約など。関税自主権がなく、領事裁判権を認める不平等な内容だった。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 1866,
+   "title": "薩長同盟",
+   "detail": "対立していた薩摩藩と長州藩が手を結び、倒幕へ向かう。",
+   "lesson": "昨日の敵とも、共通の目的で手を組める。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1867,
+   "title": "大政奉還",
+   "detail": "徳川慶喜が政権を朝廷に返上し、江戸幕府が終わる。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1868,
+   "title": "江戸城無血開城",
+   "detail": "西郷隆盛と勝海舟の会談で、江戸総攻撃が回避された。",
+   "lesson": "対話が、多くの命と都市を救うこともある。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1868,
+   "title": "明治維新",
+   "detail": "五箇条の御誓文が示され、新政府による近代国家づくりが始まる。",
+   "lesson": "旧来の枠組みを変えるには、新しい目標の共有が要る。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1871,
+   "title": "廃藩置県",
+   "detail": "藩を廃して県を置き、中央集権国家の基礎を固めた。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1872,
+   "title": "学制の公布",
+   "detail": "国民皆学をめざし、全国に学校を置く方針が示された。",
+   "lesson": "教育への投資が、近代化の土台になる。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 1872,
+   "month": 10,
+   "title": "日本初の鉄道",
+   "detail": "新橋〜横浜間で鉄道が開業し、物と人の流れが変わり始める。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 1873,
+   "title": "地租改正",
+   "detail": "土地の価値に応じて、現金で税を納める仕組みへ改めた。",
+   "lesson": "安定した税収が、国家運営を支えた。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 1877,
+   "title": "西南戦争",
+   "detail": "西郷隆盛らが挙兵した、国内最後の大規模な内戦。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1889,
+   "month": 2,
+   "title": "大日本帝国憲法",
+   "detail": "立憲君主制の憲法として発布され、翌年には議会が開かれた。",
+   "lesson": "権力のルールを定めることで、国のかたちが決まる。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1894,
+   "title": "日清戦争",
+   "detail": "朝鮮をめぐる対立から開戦。下関条約で台湾などを獲得した。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1904,
+   "title": "日露戦争",
+   "detail": "満州・朝鮮をめぐりロシアと戦い、ポーツマス条約で講和した。",
+   "lesson": "勝利の陰で、国力の限界と国民の不満も積もった。",
+   "level": 1,
+   "kind": "war"
+  },
+  {
+   "year": 1910,
+   "title": "韓国併合",
+   "detail": "日本が韓国を併合し、植民地支配を行った。",
+   "lesson": "拡張の歴史は、のちの摩擦と責任を残す。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1914,
+   "title": "第一次大戦に参戦",
+   "detail": "日英同盟を理由にドイツへ宣戦し、アジアでの影響力を伸ばした。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1918,
+   "title": "米騒動",
+   "detail": "米価の高騰に怒った人びとの抗議が、全国に広がった。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1922,
+   "title": "全国水平社の結成",
+   "detail": "差別からの解放をめざす人びとが、自らの組織をつくった。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1923,
+   "month": 9,
+   "title": "関東大震災",
+   "detail": "相模湾沖を震源とする地震と火災で、首都圏が壊滅的な被害を受けた。",
+   "lesson": "備えと正確な情報が命を守る。流言の悲劇も忘れない。",
+   "level": 1,
+   "kind": "disaster"
+  },
+  {
+   "year": 1925,
+   "title": "普通選挙法",
+   "detail": "25歳以上の男子に選挙権が与えられた。同年、治安維持法も制定された。",
+   "lesson": "権利の拡大と、統制の強化が同時に進んだ。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1929,
+   "title": "世界恐慌",
+   "detail": "世界の不況が日本にも波及し、農村や都市の暮らしを直撃した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1931,
+   "month": 9,
+   "title": "満州事変",
+   "detail": "関東軍が柳条湖で鉄道を爆破し、満州の占領を拡大した。",
+   "lesson": "現地軍の独走を止められなかったことが、戦争への道を開いた。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1936,
+   "title": "二・二六事件",
+   "detail": "陸軍青年将校が決起し、政治家を襲撃。軍の発言力が強まる。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1937,
+   "title": "日中戦争の始まり",
+   "detail": "盧溝橋事件を機に全面戦争へ拡大し、長期化した。",
+   "level": 2,
+   "kind": "war"
+  },
+  {
+   "year": 1941,
+   "month": 12,
+   "title": "太平洋戦争の開戦",
+   "detail": "真珠湾攻撃などにより、米英と開戦した。",
+   "lesson": "国力の差と情報を冷静に見る姿勢が欠かせない。",
+   "level": 1,
+   "kind": "war"
+  },
+  {
+   "year": 1945,
+   "month": 8,
+   "title": "終戦の日",
+   "detail": "広島・長崎への原爆投下を経て、ポツダム宣言を受諾し戦争が終結した。",
+   "lesson": "戦争の犠牲を記憶し、二度と繰り返さない誓いに。",
+   "level": 1,
+   "kind": "war"
+  },
+  {
+   "year": 1946,
+   "month": 11,
+   "title": "日本国憲法の公布",
+   "detail": "国民主権・基本的人権・平和主義を柱とする憲法が公布された。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 1951,
+   "month": 9,
+   "title": "平和条約の調印",
+   "detail": "サンフランシスコ平和条約に調印し、翌年に主権を回復した。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 1964,
+   "month": 10,
+   "title": "東京五輪と新幹線",
+   "detail": "東京オリンピックが開かれ、東海道新幹線も開業した。",
+   "lesson": "国をあげた目標が、インフラと自信を育てた。",
+   "level": 1,
+   "kind": "society"
+  },
+  {
+   "year": 1972,
+   "title": "沖縄返還",
+   "detail": "沖縄が日本に復帰し、同年には日中国交も正常化した。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 1973,
+   "title": "石油危機",
+   "detail": "原油価格の高騰で物価が上がり、高度経済成長が終わる。",
+   "lesson": "資源に依存する社会は、外の変化に弱い。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1989,
+   "month": 1,
+   "title": "平成への改元",
+   "detail": "昭和天皇が崩御し、元号が平成に改まった。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1991,
+   "title": "バブルの崩壊",
+   "detail": "株価と地価の急落で、長い景気低迷の時代に入る。",
+   "lesson": "過熱した期待は、やがて現実に引き戻される。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 1995,
+   "month": 1,
+   "title": "阪神・淡路大震災",
+   "detail": "最大震度7の地震で都市が被災。ボランティア元年とも呼ばれる。",
+   "lesson": "都市の災害には、備えと助け合いが欠かせない。",
+   "level": 2,
+   "kind": "disaster"
+  },
+  {
+   "year": 2008,
+   "month": 9,
+   "title": "世界金融危機",
+   "detail": "米国発の金融危機が世界に波及し、日本経済も大きく落ち込んだ。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 2011,
+   "month": 3,
+   "title": "東日本大震災",
+   "detail": "巨大地震と津波、原発事故が重なる未曽有の災害となった。",
+   "lesson": "想定を超える事態に備え、記録と教訓を未来へつなぐ。",
+   "level": 1,
+   "kind": "disaster"
+  },
+  {
+   "year": 2019,
+   "month": 5,
+   "title": "令和の始まり",
+   "detail": "皇位継承に伴い、元号が平成から令和に改まった。",
+   "level": 1,
+   "kind": "politics"
+  },
+  {
+   "year": 2020,
+   "title": "新型コロナの拡大",
+   "detail": "感染症が世界に広がり、働き方や学び方、暮らしが大きく変わった。",
+   "lesson": "危機は、社会のデジタル化を一気に押し進めた。",
+   "level": 1,
+   "kind": "disaster"
+  },
+  {
+   "year": 2021,
+   "month": 7,
+   "title": "東京五輪の開催",
+   "detail": "1年延期のうえ、多くの会場で無観客で行われた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 2022,
+   "month": 11,
+   "title": "生成AIの普及",
+   "detail": "対話型AIが一般に公開され、知的作業のやり方が変わり始める。",
+   "lesson": "新しい道具が現れる時こそ、歴史に学ぶ。",
+   "level": 2,
+   "kind": "society"
+  },
+  {
+   "year": 2024,
+   "month": 1,
+   "title": "能登半島地震",
+   "detail": "最大震度7の地震が能登を襲い、甚大な被害が出た。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 2025,
+   "month": 4,
+   "title": "大阪・関西万博",
+   "detail": "大阪で万博が開かれ、世界各国が最新の技術と文化を発信した。",
+   "level": 3,
+   "kind": "society"
+  }
+ ],
+ "persons": [
+  {
+   "id": "himiko",
+   "name": "卑弥呼",
+   "born": 170,
+   "died": 248,
+   "role": "邪馬台国の女王",
+   "kind": "politics",
+   "level": 1,
+   "detail": "呪術で国をまとめ、魏に使いを送って「親魏倭王」の称号を受けた。",
+   "face": {
+    "h": "long",
+    "k": "kimono",
+    "c": "#e8e2d0",
+    "sex": "f",
+    "x": [
+     "beads"
+    ],
+    "e": "calm"
+   },
+   "lesson": "権威と外交で、争いを収めようとした。",
+   "bornApprox": true
+  },
+  {
+   "id": "shotoku",
+   "name": "聖徳太子",
+   "born": 574,
+   "died": 622,
+   "role": "摂政・政治家",
+   "kind": "politics",
+   "level": 1,
+   "detail": "冠位十二階や十七条憲法を定め、遣隋使を送った。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "b": "mustache",
+    "e": "calm"
+   },
+   "lesson": "法と序列で国家を整えようとした。"
+  },
+  {
+   "id": "suiko",
+   "name": "推古天皇",
+   "born": 554,
+   "died": 628,
+   "role": "最初の女帝",
+   "kind": "politics",
+   "level": 2,
+   "detail": "飛鳥時代の女帝。甥の聖徳太子を摂政にして政治を進めた。",
+   "face": {
+    "h": "long",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "sex": "f",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "soga",
+   "name": "蘇我馬子",
+   "born": 551,
+   "died": 626,
+   "role": "大臣",
+   "kind": "politics",
+   "level": 3,
+   "detail": "天皇家と姻戚を結んで権勢を握り、仏教の受容を進めた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#3f6b4a",
+    "b": "beard",
+    "a": 1
+   },
+   "bornApprox": true
+  },
+  {
+   "id": "naka",
+   "name": "中大兄皇子",
+   "born": 626,
+   "died": 672,
+   "role": "天智天皇",
+   "kind": "politics",
+   "level": 1,
+   "detail": "大化の改新を主導し、のち天智天皇として即位した。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#3f6b4a",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "kamatari",
+   "name": "中臣鎌足",
+   "born": 614,
+   "died": 669,
+   "role": "藤原氏の祖",
+   "kind": "politics",
+   "level": 2,
+   "detail": "中大兄皇子と組んで蘇我氏を倒し、藤原姓を賜った。",
+   "face": {
+    "h": "eboshi",
+    "k": "kariginu",
+    "c": "#b8862b",
+    "b": "mustache",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "tenmu",
+   "name": "天武天皇",
+   "born": 631,
+   "died": 686,
+   "role": "壬申の乱の勝者",
+   "kind": "politics",
+   "level": 3,
+   "detail": "壬申の乱に勝って即位し、律令国家の骨格を築いた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#a23a2e",
+    "b": "beard",
+    "e": "strong"
+   },
+   "bornApprox": true
+  },
+  {
+   "id": "gyoki",
+   "name": "行基",
+   "born": 668,
+   "died": 749,
+   "role": "僧",
+   "kind": "society",
+   "level": 3,
+   "detail": "民衆に布教し、橋や池づくりも指導した。のち大仏造立に協力。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#b8862b",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "shomu",
+   "name": "聖武天皇",
+   "born": 701,
+   "died": 756,
+   "role": "天皇",
+   "kind": "politics",
+   "level": 2,
+   "detail": "疫病や反乱が続く中で、国分寺と東大寺の大仏造立を発願した。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "ganjin",
+   "name": "鑑真",
+   "born": 688,
+   "died": 763,
+   "role": "唐の高僧",
+   "kind": "foreign",
+   "level": 2,
+   "detail": "失明しながらも六度目の渡航で来日し、戒律を伝えた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "abe",
+   "name": "阿倍仲麻呂",
+   "born": 698,
+   "died": 770,
+   "role": "遣唐留学生",
+   "kind": "foreign",
+   "level": 3,
+   "detail": "唐に渡って官僚となり、帰国できないまま現地で生涯を終えた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#3f6b4a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "saicho",
+   "name": "最澄",
+   "born": 767,
+   "died": 822,
+   "role": "天台宗の開祖",
+   "kind": "culture",
+   "level": 2,
+   "detail": "唐で学び、比叡山で天台宗を開いた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#3f6b4a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "kukai",
+   "name": "空海",
+   "born": 774,
+   "died": 835,
+   "role": "真言宗の開祖",
+   "kind": "culture",
+   "level": 1,
+   "detail": "唐で密教を学び、高野山を開いた。書や土木にも通じた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#b8862b",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "sugawara",
+   "name": "菅原道真",
+   "born": 845,
+   "died": 903,
+   "role": "学者・政治家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "大宰府へ左遷され、のち学問の神として祀られた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#2b2b33",
+    "b": "goatee",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "michinaga",
+   "name": "藤原道長",
+   "born": 966,
+   "died": 1028,
+   "role": "摂関政治の頂点",
+   "kind": "politics",
+   "level": 1,
+   "detail": "娘を次々と后にし、摂関政治の全盛を築いた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "b": "mustache",
+    "e": "smile"
+   },
+   "lesson": "権力の集中は、のちの反発の種にもなる。"
+  },
+  {
+   "id": "shikibu",
+   "name": "紫式部",
+   "born": 973,
+   "died": 1031,
+   "role": "『源氏物語』の作者",
+   "kind": "culture",
+   "level": 1,
+   "detail": "宮廷に仕えながら、世界最古級の長編小説を著した。",
+   "face": {
+    "h": "long",
+    "k": "juni",
+    "c": "#5a3a8a",
+    "sex": "f",
+    "e": "calm"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "shonagon",
+   "name": "清少納言",
+   "born": 966,
+   "died": 1025,
+   "role": "『枕草子』の作者",
+   "kind": "culture",
+   "level": 2,
+   "detail": "鋭い観察眼で、宮廷の日々を随筆に書き留めた。",
+   "face": {
+    "h": "long",
+    "k": "juni",
+    "c": "#a23a2e",
+    "sex": "f",
+    "e": "smile"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "goshirakawa",
+   "name": "後白河法皇",
+   "born": 1127,
+   "died": 1192,
+   "role": "院政の主",
+   "kind": "politics",
+   "level": 3,
+   "detail": "院政を敷き、源平の争乱の間を巧みに立ち回った。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#5a3a8a",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "kiyomori",
+   "name": "平清盛",
+   "born": 1118,
+   "died": 1181,
+   "role": "平氏の棟梁",
+   "kind": "politics",
+   "level": 1,
+   "detail": "武士で初めて太政大臣となり、日宋貿易を進めた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#a23a2e",
+    "e": "strong"
+   },
+   "lesson": "武家の台頭と海外交易を結びつけたが、独占は反感を買った。"
+  },
+  {
+   "id": "yoritomo",
+   "name": "源頼朝",
+   "born": 1147,
+   "died": 1199,
+   "role": "鎌倉幕府初代将軍",
+   "kind": "politics",
+   "level": 1,
+   "detail": "鎌倉に武家政権を開き、守護・地頭の仕組みを築いた。",
+   "face": {
+    "h": "eboshi",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "b": "mustache",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "yoshitsune",
+   "name": "源義経",
+   "born": 1159,
+   "died": 1189,
+   "role": "武将",
+   "kind": "war",
+   "level": 2,
+   "detail": "平氏討伐で活躍したが、兄頼朝と対立し奥州で自害した。",
+   "face": {
+    "h": "eboshi",
+    "k": "armor",
+    "c": "#a23a2e",
+    "e": "smile"
+   }
+  },
+  {
+   "id": "masako",
+   "name": "北条政子",
+   "born": 1157,
+   "died": 1225,
+   "role": "「尼将軍」",
+   "kind": "politics",
+   "level": 2,
+   "detail": "頼朝の妻。承久の乱で御家人をまとめ、幕府の危機を救った。",
+   "face": {
+    "h": "nun",
+    "k": "kimono",
+    "c": "#e8e2d0",
+    "sex": "f",
+    "e": "strong",
+    "a": 1
+   }
+  },
+  {
+   "id": "shinran",
+   "name": "親鸞",
+   "born": 1173,
+   "died": 1262,
+   "role": "浄土真宗の開祖",
+   "kind": "society",
+   "level": 2,
+   "detail": "念仏によって誰もが救われると説き、広く民衆に支持された。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "dogen",
+   "name": "道元",
+   "born": 1200,
+   "died": 1253,
+   "role": "曹洞宗の開祖",
+   "kind": "culture",
+   "level": 3,
+   "detail": "宋で学び、ひたすら坐る「只管打坐」を説いた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#2b2b33",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "nichiren",
+   "name": "日蓮",
+   "born": 1222,
+   "died": 1282,
+   "role": "日蓮宗の開祖",
+   "kind": "society",
+   "level": 3,
+   "detail": "法華経を重んじ、他宗を批判して幕府に建言した。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#b8862b",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "tokimune",
+   "name": "北条時宗",
+   "born": 1251,
+   "died": 1284,
+   "role": "鎌倉幕府執権",
+   "kind": "politics",
+   "level": 2,
+   "detail": "元の服属要求を退け、文永・弘安の二度の襲来に備えた。",
+   "face": {
+    "h": "eboshi",
+    "k": "hitatare",
+    "c": "#3f6b4a",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "godaigo",
+   "name": "後醍醐天皇",
+   "born": 1288,
+   "died": 1339,
+   "role": "建武の新政",
+   "kind": "politics",
+   "level": 2,
+   "detail": "鎌倉幕府を倒して親政を行ったが、短期間で崩れた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#2b2b33",
+    "b": "mustache",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "kusunoki",
+   "name": "楠木正成",
+   "born": 1294,
+   "died": 1336,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "後醍醐天皇に従い、千早城などで幕府軍を翻弄した。",
+   "face": {
+    "h": "eboshi",
+    "k": "armor",
+    "c": "#1f2f4f",
+    "b": "beard",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "takauji",
+   "name": "足利尊氏",
+   "born": 1305,
+   "died": 1358,
+   "role": "室町幕府初代将軍",
+   "kind": "politics",
+   "level": 1,
+   "detail": "後醍醐天皇と対立して幕府を開き、南北朝の争乱を招いた。",
+   "face": {
+    "h": "eboshi",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "b": "mustache",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "yoshimitsu",
+   "name": "足利義満",
+   "born": 1358,
+   "died": 1408,
+   "role": "室町幕府三代将軍",
+   "kind": "politics",
+   "level": 1,
+   "detail": "南北朝を合一し、明との貿易を始め、金閣を建てた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#b8862b",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "zeami",
+   "name": "世阿弥",
+   "born": 1363,
+   "died": 1443,
+   "role": "能役者・能作者",
+   "kind": "culture",
+   "level": 2,
+   "detail": "父観阿弥と能を大成し、『風姿花伝』を著した。",
+   "face": {
+    "h": "eboshi",
+    "k": "kimono",
+    "c": "#5a3a8a",
+    "e": "calm",
+    "a": 1
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "ikkyu",
+   "name": "一休宗純",
+   "born": 1394,
+   "died": 1481,
+   "role": "禅僧",
+   "kind": "culture",
+   "level": 3,
+   "detail": "型破りな禅僧。権威を風刺し、庶民に慕われた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "b": "mustache",
+    "e": "smile",
+    "a": 1
+   }
+  },
+  {
+   "id": "sesshu",
+   "name": "雪舟",
+   "born": 1420,
+   "died": 1506,
+   "role": "水墨画家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "明に渡って水墨画を学び、日本の山水画を完成させた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "yoshimasa",
+   "name": "足利義政",
+   "born": 1436,
+   "died": 1490,
+   "role": "室町幕府八代将軍",
+   "kind": "culture",
+   "level": 3,
+   "detail": "応仁の乱を招いたが、銀閣に代表される東山文化を育てた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#5a3a8a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "soun",
+   "name": "北条早雲",
+   "born": 1432,
+   "died": 1519,
+   "role": "戦国大名の先駆け",
+   "kind": "war",
+   "level": 3,
+   "detail": "伊豆・小田原を手に入れ、下剋上の代表とされる。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#2f4a7a",
+    "e": "sharp",
+    "a": 1
+   },
+   "bornApprox": true
+  },
+  {
+   "id": "nobunaga",
+   "name": "織田信長",
+   "born": 1534,
+   "died": 1582,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 1,
+   "detail": "鉄砲を活用し、楽市楽座で経済を動かした。本能寺で倒れた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#a23a2e",
+    "b": "mustache",
+    "e": "sharp",
+    "f": "long"
+   },
+   "lesson": "新しい技術と経済を使う者が時代を動かす。ただし恨みを買い過ぎれば足元を失う。"
+  },
+  {
+   "id": "hideyoshi",
+   "name": "豊臣秀吉",
+   "born": 1537,
+   "died": 1598,
+   "role": "天下人",
+   "kind": "politics",
+   "level": 1,
+   "detail": "農民から関白となり、検地・刀狩で社会の身分を固定した。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#b8862b",
+    "b": "mustache",
+    "e": "smile",
+    "w": 1
+   }
+  },
+  {
+   "id": "ieyasu",
+   "name": "徳川家康",
+   "born": 1543,
+   "died": 1616,
+   "role": "江戸幕府初代将軍",
+   "kind": "politics",
+   "level": 1,
+   "detail": "関ヶ原に勝ち、二百六十年続く平和の枠組みを築いた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2f4a7a",
+    "e": "calm",
+    "f": "round"
+   },
+   "lesson": "待つことと制度づくりが、長い安定を生んだ。"
+  },
+  {
+   "id": "rikyu",
+   "name": "千利休",
+   "born": 1522,
+   "died": 1591,
+   "role": "茶人",
+   "kind": "culture",
+   "level": 2,
+   "detail": "わび茶を大成したが、秀吉に切腹を命じられた。",
+   "face": {
+    "h": "monk",
+    "k": "kimono",
+    "c": "#6a6a70",
+    "b": "goatee",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "shingen",
+   "name": "武田信玄",
+   "born": 1521,
+   "died": 1573,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "甲斐の戦国大名。上杉謙信と川中島で戦った。",
+   "face": {
+    "h": "monk",
+    "k": "armor",
+    "c": "#a23a2e",
+    "b": "mustache",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "kenshin",
+   "name": "上杉謙信",
+   "born": 1530,
+   "died": 1578,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "越後の龍。義を重んじ、信玄と川中島で戦った。",
+   "face": {
+    "h": "zukin",
+    "k": "kimono",
+    "c": "#e8e2d0",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "masamune",
+   "name": "伊達政宗",
+   "born": 1567,
+   "died": 1636,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "隻眼の東北の覇者。支倉常長を派遣して欧州との通商を探った。",
+   "face": {
+    "h": "kabuto",
+    "k": "armor",
+    "c": "#2b2b33",
+    "x": [
+     "eyepatch"
+    ],
+    "e": "strong"
+   }
+  },
+  {
+   "id": "mitsuhide",
+   "name": "明智光秀",
+   "born": 1528,
+   "died": 1582,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "本能寺で信長を討ったが、山崎の戦いで敗れた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "sharp",
+    "f": "long"
+   },
+   "bornApprox": true
+  },
+  {
+   "id": "mitsunari",
+   "name": "石田三成",
+   "born": 1560,
+   "died": 1600,
+   "role": "豊臣政権の側近",
+   "kind": "war",
+   "level": 3,
+   "detail": "関ヶ原で西軍を率いて敗れた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#3f6b4a",
+    "e": "sharp",
+    "f": "long"
+   }
+  },
+  {
+   "id": "iemitsu",
+   "name": "徳川家光",
+   "born": 1604,
+   "died": 1651,
+   "role": "江戸幕府三代将軍",
+   "kind": "politics",
+   "level": 3,
+   "detail": "参勤交代や鎖国体制を整え、幕府の支配を固めた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2b2b33",
+    "b": "mustache",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "basho",
+   "name": "松尾芭蕉",
+   "born": 1644,
+   "died": 1694,
+   "role": "俳人",
+   "kind": "culture",
+   "level": 1,
+   "detail": "俳諧を芸術に高め、『奥の細道』の旅で名句を残した。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "chikamatsu",
+   "name": "近松門左衛門",
+   "born": 1653,
+   "died": 1724,
+   "role": "劇作家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "浄瑠璃・歌舞伎の脚本家。町人の悲恋を描いた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "yoshimune",
+   "name": "徳川吉宗",
+   "born": 1684,
+   "died": 1751,
+   "role": "江戸幕府八代将軍",
+   "kind": "politics",
+   "level": 1,
+   "detail": "享保の改革で財政を立て直し、実学や目安箱も奨励した。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#3f6b4a",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "gennai",
+   "name": "平賀源内",
+   "born": 1728,
+   "died": 1780,
+   "role": "発明家・戯作者",
+   "kind": "culture",
+   "level": 3,
+   "detail": "本草学者でもあり、エレキテルを復元した多才な人物。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#a23a2e",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "genpaku",
+   "name": "杉田玄白",
+   "born": 1733,
+   "died": 1817,
+   "role": "蘭学者・医師",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『解体新書』を訳し、蘭学の礎を築いた。",
+   "face": {
+    "h": "monk",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "tadataka",
+   "name": "伊能忠敬",
+   "born": 1745,
+   "died": 1818,
+   "role": "測量家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "五十歳から学んで全国を歩き、精密な日本地図を作った。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "hokusai",
+   "name": "葛飾北斎",
+   "born": 1760,
+   "died": 1849,
+   "role": "浮世絵師",
+   "kind": "culture",
+   "level": 1,
+   "detail": "『富嶽三十六景』など。九十歳まで画業を究めようとした。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "a": 1
+   },
+   "lesson": "年を重ねても学び続ける姿勢。"
+  },
+  {
+   "id": "ii",
+   "name": "井伊直弼",
+   "born": 1815,
+   "died": 1860,
+   "role": "大老",
+   "kind": "politics",
+   "level": 3,
+   "detail": "開国を進めたが、安政の大獄後に桜田門外で暗殺された。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2b2b33",
+    "b": "mustache",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "shoin",
+   "name": "吉田松陰",
+   "born": 1830,
+   "died": 1859,
+   "role": "思想家・教育者",
+   "kind": "society",
+   "level": 2,
+   "detail": "松下村塾で高杉晋作らを育て、安政の大獄で処刑された。",
+   "face": {
+    "h": "shaggy",
+    "k": "kimono",
+    "c": "#6a6a70",
+    "e": "calm"
+   },
+   "lesson": "教育が、変革を担う世代を生んだ。"
+  },
+  {
+   "id": "kaishu",
+   "name": "勝海舟",
+   "born": 1823,
+   "died": 1899,
+   "role": "幕臣",
+   "kind": "politics",
+   "level": 2,
+   "detail": "咸臨丸で渡米し、江戸城の無血開城を西郷と取り決めた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "b": "mustache",
+    "e": "smile"
+   }
+  },
+  {
+   "id": "ryoma",
+   "name": "坂本龍馬",
+   "born": 1836,
+   "died": 1867,
+   "role": "志士",
+   "kind": "politics",
+   "level": 1,
+   "detail": "薩長同盟の仲介や船中八策で、新しい国の形を構想した。",
+   "face": {
+    "h": "shaggy",
+    "k": "kimono",
+    "c": "#2f4a7a",
+    "e": "smile"
+   }
+  },
+  {
+   "id": "saigo",
+   "name": "西郷隆盛",
+   "born": 1828,
+   "died": 1877,
+   "role": "薩摩の指導者",
+   "kind": "war",
+   "level": 1,
+   "detail": "江戸開城を実現したが、のち西南戦争で敗れた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#e8e2d0",
+    "b": "mustache",
+    "e": "strong",
+    "f": "round"
+   }
+  },
+  {
+   "id": "yoshinobu",
+   "name": "徳川慶喜",
+   "born": 1837,
+   "died": 1913,
+   "role": "最後の将軍",
+   "kind": "politics",
+   "level": 2,
+   "detail": "大政奉還を行い、のち趣味に生きた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "b": "mustache",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "meiji",
+   "name": "明治天皇",
+   "born": 1852,
+   "died": 1912,
+   "role": "明治天皇",
+   "kind": "politics",
+   "level": 1,
+   "detail": "五箇条の御誓文から憲法発布まで、近代国家づくりの象徴となった。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#1f2f4f",
+    "b": "beard",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "fukuzawa",
+   "name": "福沢諭吉",
+   "born": 1835,
+   "died": 1901,
+   "role": "啓蒙思想家",
+   "kind": "culture",
+   "level": 1,
+   "detail": "『学問のすゝめ』を著し、慶應義塾を創設した。",
+   "face": {
+    "h": "western",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "strong",
+    "a": 1
+   },
+   "lesson": "「独立自尊」—知識は個人と国の自立の土台。"
+  },
+  {
+   "id": "ito",
+   "name": "伊藤博文",
+   "born": 1841,
+   "died": 1909,
+   "role": "初代内閣総理大臣",
+   "kind": "politics",
+   "level": 1,
+   "detail": "大日本帝国憲法の起草を主導し、初代首相となった。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "beard",
+    "e": "strong",
+    "a": 1
+   }
+  },
+  {
+   "id": "itagaki",
+   "name": "板垣退助",
+   "born": 1837,
+   "died": 1919,
+   "role": "自由民権運動の指導者",
+   "kind": "politics",
+   "level": 3,
+   "detail": "「板垣死すとも自由は死せず」と伝えられる。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "beard",
+    "e": "strong",
+    "a": 1
+   }
+  },
+  {
+   "id": "shibusawa",
+   "name": "渋沢栄一",
+   "born": 1840,
+   "died": 1931,
+   "role": "実業家",
+   "kind": "society",
+   "level": 2,
+   "detail": "第一国立銀行など数百の企業設立に関わり、「日本資本主義の父」と呼ばれる。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "mustache",
+    "e": "smile",
+    "a": 1
+   },
+   "lesson": "道徳と経済は両立する—『論語と算盤』。"
+  },
+  {
+   "id": "tsuda",
+   "name": "津田梅子",
+   "born": 1864,
+   "died": 1929,
+   "role": "教育者",
+   "kind": "society",
+   "level": 3,
+   "detail": "六歳で渡米した女子留学生。津田塾大学の前身を創設した。",
+   "face": {
+    "h": "bun",
+    "k": "dress",
+    "c": "#6a6a70",
+    "sex": "f",
+    "g": 1,
+    "e": "calm"
+   }
+  },
+  {
+   "id": "higuchi",
+   "name": "樋口一葉",
+   "born": 1872,
+   "died": 1896,
+   "role": "作家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『たけくらべ』などを書き、二十四歳で亡くなった。",
+   "face": {
+    "h": "bun",
+    "k": "kimono",
+    "c": "#5a3a8a",
+    "sex": "f",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "soseki",
+   "name": "夏目漱石",
+   "born": 1867,
+   "died": 1916,
+   "role": "作家",
+   "kind": "culture",
+   "level": 1,
+   "detail": "『吾輩は猫である』『こころ』で、近代人の孤独を描いた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "mustache",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "akiko",
+   "name": "与謝野晶子",
+   "born": 1878,
+   "died": 1942,
+   "role": "歌人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『みだれ髪』の歌人。日露戦争時に「君死にたまふことなかれ」を発表。",
+   "face": {
+    "h": "bun",
+    "k": "kimono",
+    "c": "#a23a2e",
+    "sex": "f",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "noguchi",
+   "name": "野口英世",
+   "born": 1876,
+   "died": 1928,
+   "role": "細菌学者",
+   "kind": "society",
+   "level": 3,
+   "detail": "黄熱病の研究に取り組み、アフリカで感染して亡くなった。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#e8e2d0",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "hara",
+   "name": "原敬",
+   "born": 1856,
+   "died": 1921,
+   "role": "首相",
+   "kind": "politics",
+   "level": 3,
+   "detail": "初の本格的政党内閣を組織した「平民宰相」。東京駅で暗殺された。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "b": "mustache",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "showa",
+   "name": "昭和天皇",
+   "born": 1901,
+   "died": 1989,
+   "role": "昭和天皇",
+   "kind": "politics",
+   "level": 1,
+   "detail": "激動の六十四年間を在位し、戦後は象徴となった。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#6a6a70",
+    "g": 1,
+    "b": "mustache",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "yoshida",
+   "name": "吉田茂",
+   "born": 1878,
+   "died": 1967,
+   "role": "首相",
+   "kind": "politics",
+   "level": 2,
+   "detail": "戦後の首相。サンフランシスコ平和条約と日米安保条約に調印した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "smile",
+    "a": 1
+   }
+  },
+  {
+   "id": "konosuke",
+   "name": "松下幸之助",
+   "born": 1894,
+   "died": 1989,
+   "role": "実業家",
+   "kind": "society",
+   "level": 2,
+   "detail": "パナソニックの創業者。「水道哲学」で経営の神様と呼ばれた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "smile",
+    "a": 1
+   }
+  },
+  {
+   "id": "soichiro",
+   "name": "本田宗一郎",
+   "born": 1906,
+   "died": 1991,
+   "role": "実業家",
+   "kind": "society",
+   "level": 3,
+   "detail": "ホンダを創業し、技術で世界に挑んだ。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#e8e2d0",
+    "g": "dark",
+    "e": "smile"
+   }
+  },
+  {
+   "id": "yukawa",
+   "name": "湯川秀樹",
+   "born": 1907,
+   "died": 1981,
+   "role": "物理学者",
+   "kind": "culture",
+   "level": 2,
+   "detail": "日本人として初めてノーベル賞(物理学賞)を受賞した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "g": 1,
+    "e": "calm"
+   }
+  },
+  {
+   "id": "tezuka",
+   "name": "手塚治虫",
+   "born": 1928,
+   "died": 1989,
+   "role": "漫画家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『鉄腕アトム』など。日本のアニメ・漫画の基礎を築いた。",
+   "face": {
+    "h": "beret",
+    "k": "suit",
+    "c": "#6b4a2e",
+    "g": 1,
+    "e": "smile"
+   }
+  },
+  {
+   "id": "kurosawa",
+   "name": "黒澤明",
+   "born": 1910,
+   "died": 1998,
+   "role": "映画監督",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『七人の侍』など。世界の映画に影響を与えた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "g": "dark",
+    "e": "strong",
+    "a": 1
+   }
+  },
+  {
+   "id": "hibari",
+   "name": "美空ひばり",
+   "born": 1937,
+   "died": 1989,
+   "role": "歌手",
+   "kind": "culture",
+   "level": 3,
+   "detail": "昭和を代表する歌手。『川の流れのように』が晩年の代表曲。",
+   "face": {
+    "h": "bob",
+    "k": "dress",
+    "c": "#a23a2e",
+    "sex": "f",
+    "e": "smile"
+   }
+  },
+  {
+   "id": "tanaka",
+   "name": "田中角栄",
+   "born": 1918,
+   "died": 1993,
+   "role": "首相",
+   "kind": "politics",
+   "level": 3,
+   "detail": "日中国交正常化を実現し、『日本列島改造論』を唱えた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "smile",
+    "a": 1
+   }
+  }
+ ]
 }
