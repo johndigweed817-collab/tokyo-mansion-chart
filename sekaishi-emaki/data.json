@@ -1,0 +1,2232 @@
+{
+ "meta": {
+  "title": "世界史絵巻",
+  "tagline": "歴史を学ぶのは、歴史に学ぶため",
+  "version": 1,
+  "note": "mock data; 学習用の要約。年代・解釈には諸説あります。"
+ },
+ "regions": [
+  {
+   "id": "america",
+   "name": "アメリカ",
+   "short": "米",
+   "color": "60,140,100"
+  },
+  {
+   "id": "europe",
+   "name": "ヨーロッパ",
+   "short": "欧",
+   "color": "71,106,170"
+  },
+  {
+   "id": "asia",
+   "name": "アジア",
+   "short": "亜",
+   "color": "190,80,60"
+  },
+  {
+   "id": "africa",
+   "name": "アフリカ",
+   "short": "非",
+   "color": "196,140,40"
+  }
+ ],
+ "kinds": [
+  {
+   "id": "politics",
+   "name": "政治",
+   "color": "#6c4a8a"
+  },
+  {
+   "id": "war",
+   "name": "戦争",
+   "color": "#b23a2e"
+  },
+  {
+   "id": "culture",
+   "name": "文化",
+   "color": "#3f7f9a"
+  },
+  {
+   "id": "economy",
+   "name": "経済",
+   "color": "#b8862b"
+  },
+  {
+   "id": "tech",
+   "name": "技術",
+   "color": "#2f8f6b"
+  },
+  {
+   "id": "society",
+   "name": "社会",
+   "color": "#8a6a4a"
+  }
+ ],
+ "linkTypes": [
+  {
+   "id": "economy",
+   "name": "交易・経済",
+   "color": "#c9892b"
+  },
+  {
+   "id": "war",
+   "name": "戦争・征服",
+   "color": "#b23a2e"
+  },
+  {
+   "id": "culture",
+   "name": "文化・思想",
+   "color": "#2f78b0"
+  },
+  {
+   "id": "religion",
+   "name": "宗教",
+   "color": "#7a5aa8"
+  },
+  {
+   "id": "tech",
+   "name": "技術",
+   "color": "#1f9a6b"
+  },
+  {
+   "id": "disease",
+   "name": "疫病",
+   "color": "#7a8a1e"
+  },
+  {
+   "id": "politics",
+   "name": "政治・体制",
+   "color": "#8a5a3a"
+  },
+  {
+   "id": "people",
+   "name": "人の移動",
+   "color": "#c0507a"
+  }
+ ],
+ "ages": [
+  {
+   "id": "a1",
+   "name": "古代文明",
+   "start": -3200,
+   "end": -800,
+   "weight": 6,
+   "color": "176,140,70",
+   "summary": "文字と都市が生まれ、最初の王朝・帝国が各地に現れた。"
+  },
+  {
+   "id": "a2",
+   "name": "古典古代",
+   "start": -800,
+   "end": 476,
+   "weight": 14,
+   "color": "130,100,150",
+   "summary": "ギリシア・ローマ・漢・ペルシアなど大帝国が並び立ち、思想と宗教が根づいた。"
+  },
+  {
+   "id": "a3",
+   "name": "中世",
+   "start": 476,
+   "end": 1300,
+   "weight": 12,
+   "color": "90,110,130",
+   "summary": "イスラーム世界とモンゴルが東西を結び、欧州は封建社会から動き出す。"
+  },
+  {
+   "id": "a4",
+   "name": "大航海と近世",
+   "start": 1300,
+   "end": 1700,
+   "weight": 12,
+   "color": "70,130,140",
+   "summary": "大航海で海が世界を結び、銀・作物・疫病・奴隷が大陸を行き来した。"
+  },
+  {
+   "id": "a5",
+   "name": "革命と帝国の世紀",
+   "start": 1700,
+   "end": 1914,
+   "weight": 14,
+   "color": "160,100,70",
+   "summary": "産業革命と市民革命が世界を変え、列強が植民地を広げた。"
+  },
+  {
+   "id": "a6",
+   "name": "二つの大戦",
+   "start": 1914,
+   "end": 1945,
+   "weight": 10,
+   "color": "150,60,60",
+   "summary": "総力戦と恐慌、革命が世界秩序を作り替えた。"
+  },
+  {
+   "id": "a7",
+   "name": "現代",
+   "start": 1945,
+   "end": 2027,
+   "weight": 16,
+   "color": "80,110,100",
+   "open": true,
+   "summary": "冷戦、脱植民地化、グローバル化を経て、相互依存の時代へ。"
+  }
+ ],
+ "events": [
+  {
+   "id": "as_sumer",
+   "year": -3000,
+   "title": "メソポタミア文明",
+   "detail": "チグリス・ユーフラテス川流域で都市と文字(楔形文字)が生まれた。",
+   "lesson": "記録する技術が、国家と法を可能にした。",
+   "level": 1,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "af_egypt",
+   "year": -3000,
+   "title": "エジプト統一",
+   "detail": "ナイル川流域に統一王朝が成立し、ファラオの支配が始まった。",
+   "lesson": "年ごとの洪水が、暦と測量と官僚制を発達させた。",
+   "level": 1,
+   "kind": "politics",
+   "approx": true,
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "af_pyramid",
+   "year": -2560,
+   "title": "大ピラミッド",
+   "detail": "クフ王の巨大墓が建設され、王権の強さを示した。",
+   "lesson": "巨大建築は、国家の動員力の証明でもある。",
+   "level": 2,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_indus",
+   "year": -2500,
+   "title": "インダス文明",
+   "detail": "計画的な都市モヘンジョダロなどを築いた文明。",
+   "lesson": "高度な都市設計をもちながら、文字は未解読のまま。",
+   "level": 2,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "as_yin",
+   "year": -1600,
+   "title": "殷王朝",
+   "detail": "青銅器と甲骨文字をもつ、中国最古級の王朝。",
+   "lesson": "神への占いで政治を決める祭政一致の国家。",
+   "level": 2,
+   "kind": "politics",
+   "approx": true,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "am_olmec",
+   "year": -1200,
+   "title": "オルメカ文明",
+   "detail": "メソアメリカ最古級の文明で、巨石人頭像で知られる。",
+   "lesson": "のちのマヤ・アステカの文化の源流とされる。",
+   "level": 3,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "as_chunqiu",
+   "year": -770,
+   "title": "春秋時代",
+   "detail": "周が衰え、諸侯が覇を競う長い分裂期に入った。",
+   "lesson": "乱世が、諸子百家という思想の豊作期を生んだ。",
+   "level": 3,
+   "kind": "politics",
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "af_kush",
+   "year": -750,
+   "title": "クシュ王国",
+   "detail": "ヌビアの王がエジプトを支配し、第25王朝を開いた。",
+   "lesson": "エジプトの『辺境』が、一時はその支配者になった。",
+   "level": 3,
+   "kind": "politics",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_confucius",
+   "year": -551,
+   "title": "孔子",
+   "detail": "徳と礼による政治を説いた思想家が生まれた。",
+   "lesson": "儒教は東アジアの統治と家族観を二千年支えた。",
+   "level": 2,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "as_achaemenid",
+   "year": -550,
+   "title": "アケメネス朝",
+   "detail": "ペルシアが西アジアを統一し、広域を道と属州で治めた。",
+   "lesson": "多様な民族を緩やかに束ねる統治モデル。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "eu_persianwar",
+     "t": "war",
+     "note": "ペルシア帝国の西進と抵抗"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_athens",
+   "year": -508,
+   "title": "アテネ民主政",
+   "detail": "クレイステネスの改革で市民が直接政治に参加する仕組みが生まれた。",
+   "lesson": "権力を市民で分け持つ発想の原点。ただし女性・奴隷は除外された。",
+   "level": 1,
+   "kind": "politics",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "as_buddha",
+   "year": -500,
+   "title": "仏教の成立",
+   "detail": "ガウタマ・シッダールタが悟りを開き、苦からの解放を説いた。",
+   "lesson": "インドからアジア全域に広まる世界宗教となる。",
+   "level": 1,
+   "kind": "society",
+   "approx": true,
+   "links": [
+    {
+     "to": "as_gandhara",
+     "t": "culture",
+     "note": "ギリシア彫刻と出会い仏像が生まれる"
+    },
+    {
+     "to": "as_jp_buddhism",
+     "t": "religion",
+     "note": "仏教が日本に伝来"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_persianwar",
+   "year": -490,
+   "title": "ペルシア戦争",
+   "detail": "ギリシア諸都市が東方の大帝国に抗し、マラトンやサラミスで勝利した。",
+   "lesson": "小さな連合が大国に勝つ経験が、都市国家の自負を育てた。",
+   "level": 2,
+   "kind": "war",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "eu_alex",
+   "year": -334,
+   "title": "大王の東征",
+   "detail": "マケドニア王が東方へ遠征し、エジプトからインド北西部まで版図とした。",
+   "lesson": "征服が文化の混交(ヘレニズム)を生んだ。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "as_achaemenid",
+     "t": "war",
+     "note": "アケメネス朝を滅ぼす"
+    },
+    {
+     "to": "af_alexandria",
+     "t": "politics",
+     "note": "エジプトに新都市を建設"
+    },
+    {
+     "to": "as_gandhara",
+     "t": "culture",
+     "note": "ギリシア風の造形が仏教美術に混ざる"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_alexandria",
+   "year": -331,
+   "title": "アレクサンドリア",
+   "detail": "アレクサンドロスが港湾都市を建設し、学術の中心に育った。",
+   "lesson": "図書館と研究所が、ギリシア・東方の知を集めた。",
+   "level": 2,
+   "kind": "culture",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "eu_punic",
+   "year": -264,
+   "title": "ポエニ戦争",
+   "detail": "ローマとカルタゴが地中海の覇権を争い、ローマが勝利した。",
+   "lesson": "海を制する者が交易圏を制する。",
+   "level": 2,
+   "kind": "war",
+   "links": [
+    {
+     "to": "af_carthage",
+     "t": "war",
+     "note": "カルタゴを破壊"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "as_qin",
+   "year": -221,
+   "title": "秦の統一",
+   "detail": "始皇帝が中国を初めて統一し、文字・度量衡を揃えた。",
+   "lesson": "強引な統一は短命だったが、郡県制は後代へ残った。",
+   "level": 1,
+   "kind": "politics",
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "af_carthage",
+   "year": -146,
+   "title": "カルタゴ滅亡",
+   "detail": "ローマに攻略され、フェニキア系の海洋国家が消えた。",
+   "lesson": "勝者の側から書かれた歴史が残った。",
+   "level": 2,
+   "kind": "war",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_silkroad",
+   "year": -139,
+   "title": "張騫の西域行",
+   "detail": "漢の使者が西域へ赴き、のちの絹の道につながる道を開いた。",
+   "lesson": "使節の旅が、結果として東西交易の動脈を生んだ。",
+   "level": 1,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "eu_empire",
+     "t": "economy",
+     "note": "絹がローマの贅沢品となる"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "af_ptolemy",
+   "year": -30,
+   "title": "エジプト属州化",
+   "detail": "クレオパトラの死後、エジプトはローマの属州となった。",
+   "lesson": "ローマの穀倉となり、帝国を支えた。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "eu_empire",
+   "year": -27,
+   "title": "ローマ帝政",
+   "detail": "アウグストゥスが初代皇帝となり、地中海を囲む大帝国が安定した。",
+   "lesson": "共和政の形を残しつつ独裁へ移る手法は後世の手本・反面教師となる。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "af_ptolemy",
+     "t": "politics",
+     "note": "エジプトを属州に編入"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "as_gandhara",
+   "year": 50,
+   "title": "ガンダーラ美術",
+   "detail": "ギリシア風の技法で仏像が作られ始めた。",
+   "lesson": "文化は出会いの場で混ざり、新しい形を生む。",
+   "level": 3,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "as_jp_wa",
+   "year": 57,
+   "title": "金印を授かる",
+   "detail": "倭の奴国の使者が漢の皇帝から印を授けられたと記される。",
+   "lesson": "日本の記録は、まず外国の史書に現れる。",
+   "level": 3,
+   "kind": "politics",
+   "jp": 57,
+   "links": [
+    {
+     "to": "as_jp_himiko",
+     "t": "politics",
+     "note": "漢から魏へ、中国王朝との外交が続く"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_antoninus",
+   "year": 166,
+   "title": "大秦の使節",
+   "detail": "ローマ皇帝の使者を名乗る一行が漢に到達したと中国史書に記される。",
+   "lesson": "絹の道の両端が、初めて名前で互いを知った。",
+   "level": 3,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "as_silkroad",
+     "t": "economy",
+     "note": "絹の道の両端が接触"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "as_jp_himiko",
+   "year": 239,
+   "title": "卑弥呼、魏へ",
+   "detail": "倭の女王が魏に使いを送り、親魏倭王の称号を得た。",
+   "lesson": "外交が国内の権威づけに使われた。",
+   "level": 2,
+   "kind": "politics",
+   "jp": 239,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "am_maya",
+   "year": 250,
+   "title": "マヤ古典期",
+   "detail": "石造の都市、暦、文字を発達させたマヤの最盛期が始まった。",
+   "lesson": "高度な天文学を持ちながら、鉄器や車輪は使わなかった。",
+   "level": 2,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "eu_christ",
+   "year": 313,
+   "title": "キリスト教公認",
+   "detail": "ミラノ勅令で迫害が終わり、のちに国教へ向かう。",
+   "lesson": "弾圧された少数派が帝国の宗教になった。",
+   "level": 2,
+   "kind": "society",
+   "links": [
+    {
+     "to": "af_axum",
+     "t": "religion",
+     "note": "王がキリスト教に改宗"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_axum",
+   "year": 330,
+   "title": "アクスム王国改宗",
+   "detail": "エチオピア高原の王国がキリスト教を受け入れた。",
+   "lesson": "アフリカ最古級のキリスト教国は、現在まで続く教会を残した。",
+   "level": 2,
+   "kind": "society",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "eu_split",
+   "year": 395,
+   "title": "ローマ東西分裂",
+   "detail": "帝国は東西に分けて統治され、以後再統一されなかった。",
+   "lesson": "巨大化した組織は分割して初めて保てることもある。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "eu_fall",
+   "year": 476,
+   "title": "西ローマ滅亡",
+   "detail": "ゲルマン人傭兵隊長により最後の皇帝が退位させられた。",
+   "lesson": "古代の終わりと中世の始まりを分ける目印。",
+   "level": 1,
+   "kind": "politics",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "as_jp_buddhism",
+   "year": 538,
+   "title": "仏教公伝",
+   "detail": "百済から日本に仏像と経典が伝えられたとされる。",
+   "lesson": "大陸の宗教が政治抗争の争点にもなった。",
+   "level": 3,
+   "kind": "society",
+   "jp": 538,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "as_tang",
+   "year": 618,
+   "title": "唐の建国",
+   "detail": "律令と都市文化が栄えた、東アジアの中心的な帝国。",
+   "lesson": "周辺諸国は唐の制度を学んで国づくりをした。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "as_jp_kento",
+     "t": "culture",
+     "note": "唐の制度・文化を学ぶ"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "as_hijra",
+   "year": 622,
+   "title": "イスラーム成立",
+   "detail": "ムハンマドがメディナへ移り、イスラーム共同体が成立した。",
+   "lesson": "信仰と政治が結びつき、急速な拡大を遂げた。",
+   "level": 1,
+   "kind": "society",
+   "links": [
+    {
+     "to": "af_islam_north",
+     "t": "religion",
+     "note": "信仰と言語が北アフリカへ"
+    },
+    {
+     "to": "as_umayyad",
+     "t": "politics",
+     "note": "共同体が帝国に拡大"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "as_jp_kento",
+   "year": 630,
+   "title": "遣唐使",
+   "detail": "日本が唐に使節と留学生を送り、制度と文化を学んだ。",
+   "lesson": "学ぶ対象を選び、学び方を変えながら続けた。",
+   "level": 2,
+   "kind": "culture",
+   "jp": 630,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "af_islam_north",
+   "year": 647,
+   "title": "北アフリカ改宗",
+   "detail": "アラブ軍が北アフリカへ進出し、数世紀かけて言語と宗教が変わった。",
+   "lesson": "サハラ以南との交易路も、イスラームを運んだ。",
+   "level": 2,
+   "kind": "society",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_umayyad",
+   "year": 661,
+   "title": "ウマイヤ朝",
+   "detail": "イスラーム帝国が西は北アフリカ・イベリアまで広がった。",
+   "lesson": "アラビア語と信仰が広域を結ぶ共通基盤となった。",
+   "level": 2,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "eu_tours",
+     "t": "war",
+     "note": "北進を阻止された"
+    },
+    {
+     "to": "af_islam_north",
+     "t": "politics",
+     "note": "北アフリカを支配下に"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_tours",
+   "year": 732,
+   "title": "トゥール戦",
+   "detail": "フランク王国がイスラーム勢力の北進を押しとどめた。",
+   "lesson": "西欧とイスラーム世界の境界が固まった。",
+   "level": 2,
+   "kind": "war",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "as_talas",
+   "year": 751,
+   "title": "タラス河畔の戦い",
+   "detail": "唐とアッバース朝が衝突し、紙の製法がイスラーム世界へ伝わったとされる。",
+   "lesson": "技術は戦いや捕虜を通じても移動する。",
+   "level": 2,
+   "kind": "tech",
+   "links": [
+    {
+     "to": "eu_print",
+     "t": "tech",
+     "note": "紙の製法が西へ伝わる"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_franks",
+   "year": 800,
+   "title": "カール大帝戴冠",
+   "detail": "教皇がフランク王を西ローマ皇帝として戴冠させた。",
+   "lesson": "ローマ・ゲルマン・キリスト教の融合が西欧世界の核となる。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "af_ghana",
+   "year": 800,
+   "title": "ガーナ王国",
+   "detail": "サハラ交易で金と塩を扱い、西アフリカに繁栄した。",
+   "lesson": "砂漠を越える交易が、大国を生んだ。",
+   "level": 3,
+   "kind": "economy",
+   "approx": true,
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_wisdom",
+   "year": 830,
+   "title": "知恵の館",
+   "detail": "バグダードでギリシア語などの学術書がアラビア語に訳された。",
+   "lesson": "翻訳が知を保存し、のちに欧州へ還流した。",
+   "level": 2,
+   "kind": "culture",
+   "approx": true,
+   "links": [
+    {
+     "to": "eu_renaissance",
+     "t": "culture",
+     "note": "翻訳された古典が欧州へ還流"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "as_seljuk",
+   "year": 1071,
+   "title": "マンジケルト",
+   "detail": "セルジューク朝が東ローマを破り、小アジアへ進出した。",
+   "lesson": "東ローマの救援要請が、十字軍の契機の一つとなった。",
+   "level": 3,
+   "kind": "war",
+   "links": [
+    {
+     "to": "eu_crusade",
+     "t": "war",
+     "note": "聖地巡礼への圧迫が遠征の契機に"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_crusade",
+   "year": 1096,
+   "title": "十字軍",
+   "detail": "教皇の呼びかけで聖地エルサレム奪回の遠征が始まった。",
+   "lesson": "宗教的熱意と利権が絡み、東西の接触と対立を深めた。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "as_seljuk",
+     "t": "war",
+     "note": "聖地をめぐる戦争"
+    },
+    {
+     "to": "as_wisdom",
+     "t": "culture",
+     "note": "欧州がイスラームの学問に触れる"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_zimbabwe",
+   "year": 1100,
+   "title": "大ジンバブエ",
+   "detail": "南部アフリカに石造都市が築かれ、金と象牙の交易で栄えた。",
+   "lesson": "石の遺構は、植民地期に『アフリカ人が造った』とは認められなかった。",
+   "level": 3,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_mongol",
+   "year": 1206,
+   "title": "モンゴル帝国",
+   "detail": "チンギス・カンの下でユーラシアを横断する帝国が築かれた。",
+   "lesson": "征服は破壊とともに、東西交流の安全な道を開いた。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "eu_plague",
+     "t": "disease",
+     "note": "ペストが交易路沿いに伝播"
+    },
+    {
+     "to": "as_jp_mongol",
+     "t": "war",
+     "note": "元の軍が日本に来襲"
+    },
+    {
+     "to": "as_marcopolo",
+     "t": "economy",
+     "note": "ユーラシアの陸路が安全になる"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_magna",
+   "year": 1215,
+   "title": "マグナ・カルタ",
+   "detail": "貴族が国王に権力の制限を認めさせた文書。",
+   "lesson": "王も法の下にある、という立憲主義の源流。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "as_jp_mongol",
+   "year": 1274,
+   "title": "元寇",
+   "detail": "元と高麗の軍が九州に襲来した(文永・弘安の役)。",
+   "lesson": "防衛戦の恩賞問題が、鎌倉幕府を揺るがした。",
+   "level": 2,
+   "kind": "war",
+   "jp": 1274,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "as_marcopolo",
+   "year": 1275,
+   "title": "マルコ・ポーロ",
+   "detail": "ヴェネツィア商人が元の大都に至り、のちに旅の記録を残した。",
+   "lesson": "一冊の旅行記が、欧州人のアジア像と憧れを形づくった。",
+   "level": 3,
+   "kind": "culture",
+   "links": [
+    {
+     "to": "eu_renaissance",
+     "t": "culture",
+     "note": "東方への憧れと関心を広げる"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "as_ottoman",
+   "year": 1299,
+   "title": "オスマン帝国",
+   "detail": "アナトリアに興った国が、三大陸にまたがる大帝国となる。",
+   "lesson": "東西交易の関門を握り、欧州の航路探しを促した。",
+   "level": 2,
+   "kind": "politics",
+   "approx": true,
+   "links": [
+    {
+     "to": "eu_byz_fall",
+     "t": "war",
+     "note": "東ローマを攻略"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "af_mali",
+   "year": 1324,
+   "title": "マリの黄金",
+   "detail": "マリ王が大量の金を携えてメッカへ巡礼し、その富が地中海世界に知られた。",
+   "lesson": "金の存在が、欧州人の関心をアフリカに向けさせた。",
+   "level": 1,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "af_cape",
+     "t": "economy",
+     "note": "金を求めポルトガルが沿岸を南下"
+    }
+   ],
+   "region": "africa"
+  },
+  {
+   "id": "am_aztec",
+   "year": 1325,
+   "title": "テノチティトラン",
+   "detail": "湖上の都が築かれ、のちにアステカ王国の中心となった。",
+   "lesson": "人口は当時の欧州の大都市に匹敵したとされる。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "eu_plague",
+   "year": 1347,
+   "title": "黒死病",
+   "detail": "ペストが流行し、欧州人口の三割前後が失われたとされる。",
+   "lesson": "人手不足が農奴の地位向上と教会権威の動揺を招いた。",
+   "level": 1,
+   "kind": "society",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "as_ming",
+   "year": 1368,
+   "title": "明の建国",
+   "detail": "モンゴル支配を終わらせ、漢族王朝が復活した。",
+   "lesson": "海禁と朝貢の仕組みで対外関係を管理した。",
+   "level": 2,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "as_zhenghe",
+     "t": "politics",
+     "note": "朝貢関係を海上に広げる"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_renaissance",
+   "year": 1400,
+   "title": "ルネサンス",
+   "detail": "古典古代を学び直す動きがイタリアの都市から広まった。",
+   "lesson": "他文明(イスラーム世界)が保存した知を再発見した運動でもあった。",
+   "level": 1,
+   "kind": "culture",
+   "approx": true,
+   "links": [
+    {
+     "to": "eu_print",
+     "t": "culture",
+     "note": "古典の需要が出版を押し上げる"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_swahili",
+   "year": 1400,
+   "title": "スワヒリ海岸",
+   "detail": "東アフリカの港市がインド洋交易で栄え、アラブ・ペルシア・アフリカ文化が混ざった。",
+   "lesson": "海を介した交流が、独自の言語・文化を生んだ。",
+   "level": 2,
+   "kind": "economy",
+   "approx": true,
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_zhenghe",
+   "year": 1405,
+   "title": "鄭和の南海遠征",
+   "detail": "明の大艦隊がインド洋を渡り、東アフリカにまで達した。",
+   "lesson": "圧倒的な国力を誇示しつつ、植民地化はしなかった。",
+   "level": 1,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "af_swahili",
+     "t": "economy",
+     "note": "東アフリカの港市と交易"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "am_inca",
+   "year": 1438,
+   "title": "インカ帝国",
+   "detail": "アンデスに広がる道路網と統治を持つ帝国が拡大した。",
+   "lesson": "文字を持たず、結縄(キープ)で情報を管理した。",
+   "level": 2,
+   "kind": "politics",
+   "approx": true,
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "eu_print",
+   "year": 1450,
+   "title": "活版印刷",
+   "detail": "グーテンベルクが活字による印刷を実用化した。",
+   "lesson": "情報の複製コストが下がり、知識と思想が一気に拡散した。",
+   "level": 1,
+   "kind": "tech",
+   "links": [
+    {
+     "to": "eu_reform",
+     "t": "culture",
+     "note": "印刷が思想の拡散を加速"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "eu_byz_fall",
+   "year": 1453,
+   "title": "東ローマ滅亡",
+   "detail": "オスマン帝国がコンスタンティノープルを攻略した。",
+   "lesson": "地中海東部の交易路が変わり、大西洋へ目が向いた。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "eu_columbus",
+     "t": "economy",
+     "note": "東方への新航路の動機に"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_cape",
+   "year": 1488,
+   "title": "喜望峰到達",
+   "detail": "ポルトガルのディアスがアフリカ南端に達した。",
+   "lesson": "アフリカ沿岸が、欧州と他地域をつなぐ中継地となった。",
+   "level": 1,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "as_gama",
+     "t": "economy",
+     "note": "喜望峰を回ってインドへ"
+    }
+   ],
+   "region": "africa"
+  },
+  {
+   "id": "eu_columbus",
+   "year": 1492,
+   "title": "コロンブス到達",
+   "detail": "西回りでアジアを目指した航海が、カリブ海の島々に達した。",
+   "lesson": "偶然の到達が、二つの世界を恒常的に結びつけた。",
+   "level": 1,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "am_exchange",
+     "t": "disease",
+     "note": "作物・家畜・病原菌の交換"
+    },
+    {
+     "to": "am_aztec_fall",
+     "t": "war",
+     "note": "征服者(コンキスタドール)の到来"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "am_exchange",
+   "year": 1493,
+   "title": "コロンブス交換",
+   "detail": "旧大陸と新大陸の間で、作物・家畜・病原菌が移動した。",
+   "lesson": "ジャガイモやトウモロコシが世界の人口を支え、天然痘は先住民を激減させた。",
+   "level": 1,
+   "kind": "society",
+   "links": [
+    {
+     "to": "am_aztec_fall",
+     "t": "disease",
+     "note": "天然痘が先住民人口を激減させた"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "as_gama",
+   "year": 1498,
+   "title": "ガマ、インド到達",
+   "detail": "ポルトガルがアフリカ南端を回る航路でインドに達した。",
+   "lesson": "香辛料貿易に、欧州勢力がインド洋へ直接参入した。",
+   "level": 1,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "as_jp_gun",
+     "t": "economy",
+     "note": "ポルトガル人が東アジアへ"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "af_timbuktu",
+   "year": 1500,
+   "title": "トンブクトゥ",
+   "detail": "西アフリカの交易都市が、イスラーム学術の中心として栄えた。",
+   "lesson": "写本が今も残り、アフリカの知の歴史を伝える。",
+   "level": 3,
+   "kind": "culture",
+   "approx": true,
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "af_slave",
+   "year": 1510,
+   "title": "大西洋奴隷貿易",
+   "detail": "アフリカから南北アメリカへ、多くの人々が強制的に連行された。",
+   "lesson": "『人』を商品とした制度は、複数の大陸の経済を結びつけた。",
+   "level": 1,
+   "kind": "society",
+   "approx": true,
+   "links": [
+    {
+     "to": "am_plantation",
+     "t": "people",
+     "note": "奴隷労働でプランテーションが成立"
+    },
+    {
+     "to": "eu_indrev",
+     "t": "economy",
+     "note": "奴隷貿易の利益が資本蓄積に寄与"
+    }
+   ],
+   "region": "africa"
+  },
+  {
+   "id": "eu_reform",
+   "year": 1517,
+   "title": "宗教改革",
+   "detail": "ルターが教会を批判し、プロテスタントが分立した。",
+   "lesson": "印刷術が、思想を国境を超えて増幅させた。",
+   "level": 1,
+   "kind": "society",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "am_aztec_fall",
+   "year": 1521,
+   "title": "アステカ滅亡",
+   "detail": "コルテス率いるスペイン軍が、先住民同盟と天然痘の助けを得て都を陥落させた。",
+   "lesson": "兵器だけでなく、疫病と内部対立が大きく働いた。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "am_inca_fall",
+     "t": "war",
+     "note": "同様の手法でインカも征服"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "as_mughal",
+   "year": 1526,
+   "title": "ムガル帝国",
+   "detail": "北インドにイスラーム王朝が成立し、多様な文化を統合した。",
+   "lesson": "宗教の違いを超えた統治で、独自の文化を育てた。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "am_inca_fall",
+   "year": 1533,
+   "title": "インカ滅亡",
+   "detail": "ピサロが皇帝を捕らえ、帝国は崩れた。",
+   "lesson": "内戦直後の混乱が、征服を容易にした。",
+   "level": 2,
+   "kind": "war",
+   "links": [
+    {
+     "to": "am_silver",
+     "t": "economy",
+     "note": "銀山の開発が始まる"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "as_jp_gun",
+   "year": 1543,
+   "title": "鉄砲伝来",
+   "detail": "種子島にポルトガル人が漂着し、鉄砲が伝わった。",
+   "lesson": "新技術を短期間で国産化し、戦のかたちを変えた。",
+   "level": 2,
+   "kind": "tech",
+   "jp": 1543,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "am_silver",
+   "year": 1545,
+   "title": "ポトシ銀山",
+   "detail": "アンデスで巨大な銀鉱山が発見され、世界の銀の流れが変わった。",
+   "lesson": "銀は大西洋と太平洋を渡り、中国の経済に流れ込んだ。",
+   "level": 2,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "as_ming",
+     "t": "economy",
+     "note": "銀が中国に流入し税制が変わる"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "as_eic",
+   "year": 1600,
+   "title": "東インド会社",
+   "detail": "英国などが貿易会社を設立し、アジア進出の拠点とした。",
+   "lesson": "企業が軍と統治権を持つ、植民地支配の先駆け。",
+   "level": 2,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "as_opium",
+     "t": "economy",
+     "note": "貿易会社が対中貿易を拡大"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "am_plantation",
+   "year": 1619,
+   "title": "プランテーション",
+   "detail": "アフリカから連れてこられた人々の労働で、砂糖やタバコの大農園が広がった。",
+   "lesson": "安い労働力に頼る産業が、英国の資本蓄積を支えた。",
+   "level": 2,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "eu_indrev",
+     "t": "economy",
+     "note": "砂糖・綿が英国の産業を支える"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "eu_westphalia",
+   "year": 1648,
+   "title": "ウェストファリア",
+   "detail": "三十年戦争が終結し、主権国家が並び立つ秩序が生まれた。",
+   "lesson": "現代の国際関係の出発点とされる。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "eu_newton",
+   "year": 1687,
+   "title": "ニュートン力学",
+   "detail": "『プリンキピア』が出版され、自然を数式で説明する流れが決定的になった。",
+   "lesson": "科学革命が、のちの産業革命の土台となる。",
+   "level": 2,
+   "kind": "tech",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "eu_enlight",
+   "year": 1750,
+   "title": "啓蒙思想",
+   "detail": "理性と自由を重んじる思想が、フランスなどで広まった。",
+   "lesson": "権威を疑う姿勢が、革命の思想的燃料となった。",
+   "level": 2,
+   "kind": "culture",
+   "approx": true,
+   "links": [
+    {
+     "to": "am_indep",
+     "t": "culture",
+     "note": "自然権・社会契約の思想"
+    },
+    {
+     "to": "eu_french",
+     "t": "culture",
+     "note": "人権と主権在民の思想"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "eu_indrev",
+   "year": 1769,
+   "title": "産業革命",
+   "detail": "蒸気機関と機械化により、英国で工業社会が始まった。",
+   "lesson": "生産力と資源・市場への欲求が、世界を植民地で覆った。",
+   "level": 1,
+   "kind": "tech",
+   "links": [
+    {
+     "to": "as_opium",
+     "t": "war",
+     "note": "工業製品の市場と原料を求める"
+    },
+    {
+     "to": "af_suez",
+     "t": "tech",
+     "note": "蒸気船が短縮航路を要求"
+    },
+    {
+     "to": "af_partition",
+     "t": "economy",
+     "note": "資源と市場を求めて分割"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "am_indep",
+   "year": 1776,
+   "title": "アメリカ独立",
+   "detail": "13植民地が独立を宣言し、共和政の国家をつくった。",
+   "lesson": "啓蒙思想を実際の憲法に変えた最初期の例。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "eu_french",
+     "t": "culture",
+     "note": "独立が革命に勇気を与える"
+    },
+    {
+     "to": "as_jp_perry",
+     "t": "politics",
+     "note": "米国が太平洋進出で日本に開国を要求"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "eu_french",
+   "year": 1789,
+   "title": "フランス革命",
+   "detail": "身分制を倒し、人権宣言を掲げた革命が起きた。",
+   "lesson": "理念は国境を越え、各地の独立・革命に影響した。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "am_haiti",
+     "t": "politics",
+     "note": "革命の理念が植民地にも波及"
+    },
+    {
+     "to": "eu_napoleon",
+     "t": "politics",
+     "note": "革命から帝政へ"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_napoleon_egypt",
+   "year": 1798,
+   "title": "エジプト遠征",
+   "detail": "ナポレオンの軍が上陸し、近代欧州とエジプトの本格的接触が始まった。",
+   "lesson": "遠征に同行した学者が、ロゼッタ石を発見した。",
+   "level": 3,
+   "kind": "war",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "eu_napoleon",
+   "year": 1804,
+   "title": "ナポレオン帝政",
+   "detail": "革命の軍人が皇帝となり、欧州各地へ法と戦争を広げた。",
+   "lesson": "本国の混乱が、植民地の独立の隙をつくった。",
+   "level": 2,
+   "kind": "war",
+   "links": [
+    {
+     "to": "am_latin",
+     "t": "politics",
+     "note": "本国の混乱が独立の機会に"
+    },
+    {
+     "to": "af_napoleon_egypt",
+     "t": "war",
+     "note": "エジプトへ遠征"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "am_haiti",
+   "year": 1804,
+   "title": "ハイチ独立",
+   "detail": "奴隷として働かされた人々の革命で、世界初の黒人共和国が成立した。",
+   "lesson": "独立は認められず、巨額の賠償金を課された。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "am_latin",
+   "year": 1810,
+   "title": "中南米独立",
+   "detail": "ボリバルらの指導で、スペイン植民地が次々に独立した。",
+   "lesson": "本国の混乱が、独立運動の好機となった。",
+   "level": 2,
+   "kind": "politics",
+   "approx": true,
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "am_monroe",
+   "year": 1823,
+   "title": "モンロー宣言",
+   "detail": "米国が、欧州諸国の南北アメリカへの干渉に反対を表明した。",
+   "lesson": "のちに米国の介入政策の根拠にもなった。",
+   "level": 3,
+   "kind": "politics",
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "as_opium",
+   "year": 1840,
+   "title": "アヘン戦争",
+   "detail": "英国と清が戦い、清が敗れて開港と香港割譲に至った。",
+   "lesson": "貿易赤字の解消が、麻薬貿易と戦争に化けた。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "as_jp_perry",
+     "t": "politics",
+     "note": "清の敗北が日本の危機感を高める"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "as_jp_perry",
+   "year": 1853,
+   "title": "黒船来航",
+   "detail": "ペリー艦隊が浦賀に来航し、開国を迫った。",
+   "lesson": "外圧を契機に国内の政治体制が大きく動いた。",
+   "level": 2,
+   "kind": "politics",
+   "jp": 1853,
+   "links": [
+    {
+     "to": "as_jp_meiji",
+     "t": "politics",
+     "note": "開国が政変につながる"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "am_civil",
+   "year": 1861,
+   "title": "南北戦争",
+   "detail": "奴隷制をめぐって南北が分かれて戦い、北部が勝利した。",
+   "lesson": "制度の廃止は、その後の人種差別の終わりではなかった。",
+   "level": 2,
+   "kind": "war",
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "as_jp_meiji",
+   "year": 1868,
+   "title": "明治維新",
+   "detail": "幕府が倒れ、近代国家づくりが一気に進められた。",
+   "lesson": "西洋に学びつつ、独立を守るための急速な改革。",
+   "level": 2,
+   "kind": "politics",
+   "jp": 1868,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "af_suez",
+   "year": 1869,
+   "title": "スエズ運河",
+   "detail": "地中海と紅海を結ぶ運河が開通し、欧州・アジア間の航路が大きく短縮された。",
+   "lesson": "運河の支配権が、のちに英国の介入を招いた。",
+   "level": 2,
+   "kind": "tech",
+   "links": [
+    {
+     "to": "af_partition",
+     "t": "politics",
+     "note": "運河の支配が英国の介入を促す"
+    }
+   ],
+   "region": "africa"
+  },
+  {
+   "id": "eu_berlinconf",
+   "year": 1884,
+   "title": "ベルリン会議",
+   "detail": "列強がアフリカ分割のルールを、現地の代表抜きで取り決めた。",
+   "lesson": "線引きは民族や地形を無視して行われた。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "af_partition",
+     "t": "politics",
+     "note": "分割ルールが定められる"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_partition",
+   "year": 1884,
+   "title": "アフリカ分割",
+   "detail": "列強が大陸のほぼ全域を植民地として分け合った。",
+   "lesson": "国境線は、独立後も紛争の火種として残った。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "af_rwanda",
+     "t": "politics",
+     "note": "植民地の民族区分が後に悲劇の背景に"
+    },
+    {
+     "to": "af_year",
+     "t": "politics",
+     "note": "植民地体制への抵抗が独立運動に"
+    }
+   ],
+   "region": "africa"
+  },
+  {
+   "id": "af_adwa",
+   "year": 1896,
+   "title": "アドワの戦い",
+   "detail": "エチオピアがイタリア軍を破り、独立を守った。",
+   "lesson": "アフリカの独立を守った数少ない例として、のちの運動の象徴となった。",
+   "level": 3,
+   "kind": "war",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_xinhai",
+   "year": 1911,
+   "title": "辛亥革命",
+   "detail": "清朝が倒れ、アジア初の共和国が成立した。",
+   "lesson": "帝政の終わりは、長い内戦の始まりでもあった。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "eu_ww1",
+   "year": 1914,
+   "title": "第一次世界大戦",
+   "detail": "同盟と対立の連鎖が、総力戦と数千万の犠牲を生んだ。",
+   "lesson": "戦後処理の歪みが、次の大戦の種となった。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "eu_russia",
+     "t": "politics",
+     "note": "戦争の混乱が革命の引き金に"
+    },
+    {
+     "to": "eu_nazi",
+     "t": "politics",
+     "note": "敗戦の屈辱と賠償が極右を支えた"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "eu_russia",
+   "year": 1917,
+   "title": "ロシア革命",
+   "detail": "帝政が倒れ、世界初の社会主義国家が成立した。",
+   "lesson": "冷戦という対立軸の起点となる。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "eu_cold",
+     "t": "politics",
+     "note": "社会主義と資本主義の対立"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "am_depression",
+   "year": 1929,
+   "title": "世界恐慌",
+   "detail": "ニューヨーク株式市場の暴落から、世界的な不況が始まった。",
+   "lesson": "各国の保護主義が拡大し、政治の過激化を招いた。",
+   "level": 1,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "eu_nazi",
+     "t": "economy",
+     "note": "経済不安が極右の台頭を助長"
+    },
+    {
+     "to": "as_manchuria",
+     "t": "economy",
+     "note": "ブロック経済が日本の大陸進出を促した"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "as_manchuria",
+   "year": 1931,
+   "title": "満州事変",
+   "detail": "関東軍が満州を占領し、日本が国際連盟を脱退する道を進んだ。",
+   "lesson": "危機に乗じた軍の独走を、政府が止められなかった。",
+   "level": 2,
+   "kind": "war",
+   "jp": 1931,
+   "links": [
+    {
+     "to": "as_pacific",
+     "t": "war",
+     "note": "大陸での戦いが対米戦争へ拡大"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_nazi",
+   "year": 1933,
+   "title": "ナチス政権",
+   "detail": "世界恐慌の混乱の中で、合法的手続きを通じて独裁が成立した。",
+   "lesson": "経済不安と排外主義の結びつきは、民主政を内側から壊す。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "eu_ww2",
+     "t": "war",
+     "note": "侵略戦争の開始"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "am_newdeal",
+   "year": 1933,
+   "title": "ニューディール",
+   "detail": "政府が公共事業と規制で景気回復を図る政策が始まった。",
+   "lesson": "市場に任せるだけでなく、国家が支える発想へ。",
+   "level": 3,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "eu_cold",
+     "t": "economy",
+     "note": "国家が経済に関与する発想が広まる"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "eu_ww2",
+   "year": 1939,
+   "title": "第二次世界大戦",
+   "detail": "ドイツのポーランド侵攻で始まり、世界規模の戦争となった。",
+   "lesson": "戦後の国連・人権・冷戦の枠組みを決定した。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "as_pacific",
+     "t": "war",
+     "note": "欧州の戦争が世界戦争に"
+    },
+    {
+     "to": "am_moon",
+     "t": "tech",
+     "note": "ロケット技術者が米国へ"
+    },
+    {
+     "to": "af_year",
+     "t": "politics",
+     "note": "戦争で弱った旧宗主国の力の低下"
+    },
+    {
+     "to": "eu_cold",
+     "t": "politics",
+     "note": "連合国が東西に分裂"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "as_pacific",
+   "year": 1941,
+   "title": "太平洋戦争",
+   "detail": "日本が米英に開戦し、戦場はアジア太平洋に広がった。",
+   "lesson": "大国との国力差を軽視した決断の代償は大きかった。",
+   "level": 1,
+   "kind": "war",
+   "jp": 1941,
+   "links": [
+    {
+     "to": "as_atomic",
+     "t": "war",
+     "note": "戦争の終結をもたらした"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "am_manhattan",
+   "year": 1942,
+   "title": "マンハッタン計画",
+   "detail": "米国が極秘で原子爆弾の開発を進めた。",
+   "lesson": "科学者の亡命と国家の総力が、新兵器を生んだ。",
+   "level": 2,
+   "kind": "tech",
+   "links": [
+    {
+     "to": "as_atomic",
+     "t": "tech",
+     "note": "開発された原爆が実戦使用された"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "as_atomic",
+   "year": 1945,
+   "title": "原爆投下",
+   "detail": "広島・長崎に原子爆弾が投下され、日本は降伏した。",
+   "lesson": "核兵器が戦争と国際政治のあり方を変えた。",
+   "level": 1,
+   "kind": "war",
+   "jp": 1945,
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "eu_cold",
+   "year": 1947,
+   "title": "冷戦",
+   "detail": "米ソを軸に東西が対立し、核の均衡と代理戦争が続いた。",
+   "lesson": "直接戦わない対立が、周辺地域で戦火を広げた。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "am_marshall",
+     "t": "economy",
+     "note": "対ソ封じ込めの一環"
+    },
+    {
+     "to": "as_korea",
+     "t": "war",
+     "note": "陣営の対立が朝鮮半島で熱戦に"
+    },
+    {
+     "to": "am_cuba",
+     "t": "politics",
+     "note": "核の均衡が危機に"
+    },
+    {
+     "to": "as_vietnam",
+     "t": "war",
+     "note": "代理戦争としての介入"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "as_india_ind",
+   "year": 1947,
+   "title": "インド独立",
+   "detail": "英領インドが独立し、インドとパキスタンに分かれた。",
+   "lesson": "分離は大規模な移動と暴力を伴った。",
+   "level": 2,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "as_bandung",
+     "t": "politics",
+     "note": "新興独立国が会議を主導"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "am_marshall",
+   "year": 1947,
+   "title": "マーシャル計画",
+   "detail": "米国が西欧の戦後復興に巨額の援助を行った。",
+   "lesson": "経済援助は、冷戦期の陣営づくりの手段でもあった。",
+   "level": 2,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "eu_cold",
+     "t": "economy",
+     "note": "西欧の復興が陣営形成を促す"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "af_apartheid",
+   "year": 1948,
+   "title": "アパルトヘイト",
+   "detail": "南アフリカで人種隔離政策が法制化された。",
+   "lesson": "制度としての差別は、国際的な非難と制裁を受けた。",
+   "level": 2,
+   "kind": "society",
+   "links": [
+    {
+     "to": "af_mandela",
+     "t": "politics",
+     "note": "体制廃止への長い闘い"
+    }
+   ],
+   "region": "africa"
+  },
+  {
+   "id": "as_prc",
+   "year": 1949,
+   "title": "中華人民共和国",
+   "detail": "内戦を経て共産党が政権を握り、中華人民共和国が成立した。",
+   "lesson": "冷戦下のアジアの勢力図を一変させた。",
+   "level": 2,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "as_korea",
+     "t": "war",
+     "note": "中国軍が北朝鮮側で参戦"
+    },
+    {
+     "to": "as_reform",
+     "t": "politics",
+     "note": "政治体制は維持しつつ経済を改革"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "as_korea",
+   "year": 1950,
+   "title": "朝鮮戦争",
+   "detail": "南北朝鮮の戦いに米中が加わり、分断が固定化した。",
+   "lesson": "冷戦が、熱戦となったアジア最初の例。",
+   "level": 2,
+   "kind": "war",
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "as_bandung",
+   "year": 1955,
+   "title": "バンドン会議",
+   "detail": "アジア・アフリカの29か国が集まり、植民地主義に反対した。",
+   "lesson": "米ソ以外の第三の声が、初めて国際政治に現れた。",
+   "level": 2,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "af_year",
+     "t": "politics",
+     "note": "反植民地主義の連帯が独立を後押し"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "af_suezcrisis",
+   "year": 1956,
+   "title": "スエズ動乱",
+   "detail": "エジプトが運河を国有化し、英仏イスラエルが介入した。",
+   "lesson": "旧宗主国の力の限界が、米ソ主導の時代を示した。",
+   "level": 2,
+   "kind": "war",
+   "links": [
+    {
+     "to": "af_year",
+     "t": "politics",
+     "note": "旧宗主国の威信低下"
+    }
+   ],
+   "region": "africa"
+  },
+  {
+   "id": "eu_eec",
+   "year": 1957,
+   "title": "ローマ条約",
+   "detail": "欧州経済共同体が発足し、のちのEUへ発展した。",
+   "lesson": "戦争を繰り返さないため、経済で結び合う試み。",
+   "level": 3,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "eu_euro",
+     "t": "economy",
+     "note": "統合の深化"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_year",
+   "year": 1960,
+   "title": "アフリカの年",
+   "detail": "17か国が一挙に独立し、植民地体制が大きく崩れた。",
+   "lesson": "独立後も、経済構造や国境の問題は残された。",
+   "level": 1,
+   "kind": "politics",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "af_algeria",
+   "year": 1962,
+   "title": "アルジェリア独立",
+   "detail": "八年の独立戦争の末、フランスから独立した。",
+   "lesson": "脱植民地化の戦争は、旧宗主国の社会にも深い傷を残した。",
+   "level": 3,
+   "kind": "war",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "am_cuba",
+   "year": 1962,
+   "title": "キューバ危機",
+   "detail": "ソ連のミサイル配備をめぐり、米ソが核戦争の瀬戸際に立った。",
+   "lesson": "最終的には対話と妥協が、破局を回避した。",
+   "level": 2,
+   "kind": "politics",
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "am_civilrights",
+   "year": 1964,
+   "title": "公民権法",
+   "detail": "人種差別を禁じる法律が成立した。",
+   "lesson": "運動の積み重ねが法を変えたが、差別は残り続ける。",
+   "level": 2,
+   "kind": "society",
+   "links": [
+    {
+     "to": "af_mandela",
+     "t": "culture",
+     "note": "差別撤廃運動の連帯"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "as_vietnam",
+   "year": 1965,
+   "title": "ベトナム戦争",
+   "detail": "米軍が本格介入し、冷戦最大級の代理戦争となった。",
+   "lesson": "圧倒的軍事力が、必ずしも政治的勝利を生まない。",
+   "level": 2,
+   "kind": "war",
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "am_moon",
+   "year": 1969,
+   "title": "月面着陸",
+   "detail": "アポロ11号が人類を月に送った。",
+   "lesson": "冷戦下の技術競争が、宇宙開発を加速させた。",
+   "level": 2,
+   "kind": "tech",
+   "links": [],
+   "region": "america"
+  },
+  {
+   "id": "as_oil",
+   "year": 1973,
+   "title": "石油危機",
+   "detail": "中東戦争を機に原油価格が急騰し、世界経済が動揺した。",
+   "lesson": "資源の偏在が、先進国の成長神話を揺るがした。",
+   "level": 2,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "eu_euro",
+     "t": "economy",
+     "note": "通貨・エネルギー安全保障の再考"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "as_reform",
+   "year": 1978,
+   "title": "改革開放",
+   "detail": "中国が市場経済を取り入れ、高成長の時代に入った。",
+   "lesson": "世界の工場となり、国際分業の姿を変えた。",
+   "level": 2,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "af_china",
+     "t": "economy",
+     "note": "資源と市場を求めアフリカに進出"
+    }
+   ],
+   "region": "asia"
+  },
+  {
+   "id": "eu_berlin",
+   "year": 1989,
+   "title": "ベルリンの壁崩壊",
+   "detail": "東西分断の象徴が市民の手で開かれた。",
+   "lesson": "体制の終わりは、突然のように訪れる。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "eu_ussr",
+     "t": "politics",
+     "note": "東欧の体制転換が連鎖"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "eu_ussr",
+   "year": 1991,
+   "title": "ソ連崩壊",
+   "detail": "連邦が解体され、冷戦が終結した。",
+   "lesson": "一極化と民族問題の再燃が同時に起きた。",
+   "level": 1,
+   "kind": "politics",
+   "links": [
+    {
+     "to": "eu_euro",
+     "t": "politics",
+     "note": "統合の深化が進展"
+    },
+    {
+     "to": "eu_ukraine",
+     "t": "politics",
+     "note": "独立後のロシアとの関係が火種に"
+    }
+   ],
+   "region": "europe"
+  },
+  {
+   "id": "af_mandela",
+   "year": 1994,
+   "title": "マンデラ大統領",
+   "detail": "アパルトヘイトが撤廃され、全人種参加の選挙で政権が誕生した。",
+   "lesson": "報復でなく和解を掲げた移行は、世界に希望を与えた。",
+   "level": 1,
+   "kind": "politics",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "af_rwanda",
+   "year": 1994,
+   "title": "ルワンダ虐殺",
+   "detail": "百日ほどの間に、数十万人以上が殺された。",
+   "lesson": "植民地期に固定された民族区分が、悲劇の背景となった。",
+   "level": 3,
+   "kind": "society",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "am_internet",
+   "year": 1995,
+   "title": "ネット普及",
+   "detail": "ウェブが一般に普及し、情報と商取引の姿を変え始めた。",
+   "lesson": "軍事・学術の技術が、民間に開かれて世界を変えた。",
+   "level": 2,
+   "kind": "tech",
+   "links": [
+    {
+     "to": "am_2008",
+     "t": "tech",
+     "note": "金融の高速化と複雑化を支えた"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "eu_euro",
+   "year": 1999,
+   "title": "ユーロ導入",
+   "detail": "欧州の多くの国が単一通貨を採用した。",
+   "lesson": "通貨は統合しても財政は別という弱点を抱えた。",
+   "level": 2,
+   "kind": "economy",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "af_china",
+   "year": 2000,
+   "title": "中国アフリカ協力",
+   "detail": "中国がアフリカとの経済関係を拡大し、貿易・投資が急増した。",
+   "lesson": "新たな関係が、援助や債務をめぐる議論を呼んでいる。",
+   "level": 3,
+   "kind": "economy",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "as_afghan",
+   "year": 2001,
+   "title": "アフガン侵攻",
+   "detail": "同時多発テロへの報復として、米軍がアフガニスタンを攻撃した。",
+   "lesson": "二十年の戦争の末、政権は元に戻った。",
+   "level": 2,
+   "kind": "war",
+   "links": [],
+   "region": "asia"
+  },
+  {
+   "id": "am_911",
+   "year": 2001,
+   "title": "同時多発テロ",
+   "detail": "米国で四機の旅客機が乗っ取られ、約3000人が犠牲となった。",
+   "lesson": "対テロ戦争は、複数の地域に長期の影響を残した。",
+   "level": 1,
+   "kind": "war",
+   "links": [
+    {
+     "to": "as_afghan",
+     "t": "war",
+     "note": "報復としての軍事行動"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "af_au",
+   "year": 2002,
+   "title": "アフリカ連合",
+   "detail": "OAUを改組し、アフリカ諸国の統合と共同の課題解決を目指した。",
+   "lesson": "統合は、植民地由来の分断を越える試みである。",
+   "level": 3,
+   "kind": "politics",
+   "links": [],
+   "region": "africa"
+  },
+  {
+   "id": "am_2008",
+   "year": 2008,
+   "title": "リーマン危機",
+   "detail": "米国の住宅金融の破綻が、世界金融危機に発展した。",
+   "lesson": "複雑な金融商品が、危機を世界へ伝播させた。",
+   "level": 1,
+   "kind": "economy",
+   "links": [
+    {
+     "to": "eu_debt",
+     "t": "economy",
+     "note": "金融危機が欧州に波及"
+    }
+   ],
+   "region": "america"
+  },
+  {
+   "id": "eu_debt",
+   "year": 2010,
+   "title": "欧州債務危機",
+   "detail": "ギリシャの財政問題がユーロ圏全体の信用不安に広がった。",
+   "lesson": "金融危機は国境を越えて連鎖する。",
+   "level": 2,
+   "kind": "economy",
+   "links": [],
+   "region": "europe"
+  },
+  {
+   "id": "eu_ukraine",
+   "year": 2022,
+   "title": "ウクライナ侵攻",
+   "detail": "ロシアがウクライナへ全面侵攻し、欧州の安全保障が揺らいだ。",
+   "lesson": "エネルギーや食糧を通じて、遠い地域にも影響が及んだ。",
+   "level": 2,
+   "kind": "war",
+   "links": [
+    {
+     "to": "af_au",
+     "t": "economy",
+     "note": "食糧・エネルギー価格を通じて影響"
+    }
+   ],
+   "region": "europe"
+  }
+ ]
+}

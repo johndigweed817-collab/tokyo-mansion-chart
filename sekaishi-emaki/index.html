@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>世界史絵巻 — 地域のつながりで学ぶ</title>
+<meta name="description" content="ヨーロッパ・アジア・アフリカ・アメリカを縦に並べ、地域間の関連線でたどる世界史の絵巻。ホイール／ピンチで拡大縮小。">
+<meta name="theme-color" content="#2a211b">
+<link rel="icon" href="../nihonshi-emaki/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="../nihonshi-emaki/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../nihonshi-emaki/icons/apple-touch-icon.png">
+<link rel="manifest" href="../nihonshi-emaki/manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="top">
+  <div class="brand">
+    <h1>世界史絵巻</h1>
+    <p class="tag">歴史を学ぶのは、歴史に学ぶため</p>
+  </div>
+  <div id="now" aria-live="polite"><b></b><span></span></div>
+  <nav id="lanenav" aria-label="地域"></nav>
+  <div class="ctrl">
+    <div id="zbar" title="拡大率"><i></i></div>
+    <span id="zlabel">×1.0</span>
+    <button id="zout" type="button" aria-label="縮小">－</button>
+    <button id="zin" type="button" aria-label="拡大">＋</button>
+    <button id="zfit" type="button" aria-label="全体表示">全体</button>
+    <a class="jp" href="../nihonshi-emaki/" title="日本史絵巻へ">日本史 →</a>
+  </div>
+</header>
+
+<main id="scroll">
+  <div id="ribbon" aria-label="時代区分"></div>
+
+  <div id="view" data-lod="s">
+    <div id="bands"></div>
+    <div id="lanes"></div>
+    <svg id="links" aria-hidden="true"><defs id="defs"></defs><g id="lg"></g></svg>
+    <div id="events"></div>
+    <div id="legend"></div>
+    <aside id="panel" hidden>
+      <button type="button" id="pclose" aria-label="閉じる">×</button>
+      <div id="pbody"></div>
+    </aside>
+    <div id="hint">ホイール／ピンチで拡大縮小 ・ ドラッグで移動(縦=地域) ・ 札をタップすると関連線が浮かびます</div>
+
+    <div id="fallback" hidden>
+      <p><b>data.json を読み込めませんでした。</b></p>
+      <p>ローカルでは <code>python3 -m http.server</code> で配信するか、下のボタンで data.json を選択してください。</p>
+      <input type="file" id="fbfile" accept=".json,application/json">
+    </div>
+  </div>
+
+  <canvas id="ruler"></canvas>
+  <i class="roller l"></i><i class="roller r"></i>
+</main>
+
+<footer>
+  <canvas id="mini" aria-label="全体ミニマップ"></canvas>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
