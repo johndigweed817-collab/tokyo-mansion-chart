@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /review/
 
 # 公開前に、ドメインを実際のものへ差し替えてください
 Sitemap: https://nawano-survey.example/sitemap.xml

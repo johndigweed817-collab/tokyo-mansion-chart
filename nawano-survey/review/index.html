@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>修正要求シート｜縄野測量ホームページ</title>
+<link rel="stylesheet" href="review.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-title">
+    <h1>縄野測量 ホームページ　修正要求シート</h1>
+    <p id="ver" class="muted"></p>
+  </div>
+  <div class="bar-actions">
+    <span id="save-state" class="save-state" role="status" aria-live="polite"></span>
+    <button type="button" id="btn-json" class="btn btn-primary">保存（ファイルに書き出す）</button>
+    <button type="button" id="btn-csv" class="btn">表（CSV）で書き出す</button>
+    <button type="button" id="btn-copy" class="btn">内容をコピー</button>
+    <button type="button" id="btn-import" class="btn">ファイルを読み込む</button>
+    <input type="file" id="file-import" accept=".json,application/json" hidden>
+  </div>
+</header>
+
+<details class="guide" id="guide" open>
+  <summary>使い方（3ステップ）</summary>
+  <ol>
+    <li><b>ページから選ぶ</b>：左の目次か、中央の画面イメージの枠をクリックして、直したい箇所を選びます。</li>
+    <li><b>直す内容を書く</b>：右の欄で、直したい文言を選び、「修正後」に正しい内容を書きます。分からないことは「通信欄」に書いてください。</li>
+    <li><b>保存して送る</b>：入力はこのブラウザに自動で保存されます。終わったら「保存（ファイルに書き出す）」でできたファイルを、制作担当へお送りください。</li>
+  </ol>
+  <p class="muted">電話番号・所在地・登録番号など、仮の値（ダミー）は画面イメージで<span class="legend-dummy">橙の下線</span>が付いています。まとめて答えられる「ダミー値の確認」タブもあります。</p>
+</details>
+
+<nav class="tabs" role="tablist" aria-label="シートの切り替え">
+  <button type="button" role="tab" id="tab-pick" data-tab="pick" aria-selected="true">① ページから選ぶ</button>
+  <button type="button" role="tab" id="tab-dummy" data-tab="dummy" aria-selected="false">② ダミー値の確認<span class="count" id="cnt-dummy"></span></button>
+  <button type="button" role="tab" id="tab-list" data-tab="list" aria-selected="false">③ 修正要求一覧・全体への連絡<span class="count" id="cnt-list"></span></button>
+</nav>
+
+<main>
+  <section id="view-pick" class="view" aria-labelledby="tab-pick">
+    <div class="pick">
+      <aside class="index" id="index" aria-label="ページ構成"></aside>
+      <div class="preview" id="preview" aria-label="画面イメージ"></div>
+      <aside class="panel" id="panel" aria-label="選んだ箇所の修正"></aside>
+    </div>
+  </section>
+  <section id="view-dummy" class="view" hidden aria-labelledby="tab-dummy"></section>
+  <section id="view-list" class="view" hidden aria-labelledby="tab-list"></section>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="review.js"></script>
+</body>
+</html>
