@@ -1,5 +1,5 @@
-/* 縄野測量 — 決済日からの逆算ツール
-   決済日・契約日から、工程ごとの最晩の日付を営業日（土日除く）で逆算します。
+/* 縄野測量 — 納期の目安ツール
+   ご希望の納品日から、工程ごとの最も遅い日付を営業日（土日除く）で逆算します。
    日数は目安（ダミー）です。実際の値は測量士本人と決めてください。 */
 (function () {
   "use strict";
@@ -14,7 +14,7 @@
     m: { field: 5, draw: 4, label: "中規模（〜1,000㎡）" },
     l: { field: 8, draw: 6, label: "大規模（1,000㎡超）" },
   };
-  var BUFFER = 2; // 納品から決済日までの予備日
+  var BUFFER = 2; // 納品から、ご希望の納品日までの予備日
 
   function isWeekday(d) { var w = d.getDay(); return w !== 0 && w !== 6; }
 
@@ -64,7 +64,7 @@
     if (!v) {
       var warn0 = document.createElement("p");
       warn0.className = "calc-warn";
-      warn0.textContent = "決済日・契約日を入力してください。";
+      warn0.textContent = "ご希望の納品日を入力してください。";
       out.appendChild(warn0);
       form.elements.settle.focus();
       return;
@@ -85,15 +85,15 @@
     var summary = document.createElement("p");
     summary.className = "calc-summary";
     summary.textContent = consult < today
-      ? "通常の工程での最も遅いご相談日は、" + fmt(consult) + "でした。"
-      : "最も遅いご相談日は、" + fmt(consult) + "です。";
+      ? "通常の工程でご相談いただく期限は、" + fmt(consult) + "でした。"
+      : "遅くとも、" + fmt(consult) + "までにご相談ください。";
     out.appendChild(summary);
 
     if (consult < today) {
       var warn = document.createElement("p");
       warn.className = "calc-warn";
       warn.textContent =
-        "通常の工程では、決済日に間に合わない可能性があります。工程の短縮ができるかを個別に確認しますので、お電話かフォームでご相談ください。";
+        "通常の工程では、ご希望の納品日に間に合わない可能性があります。工程を短縮できるかを個別に確認しますので、お電話かフォームでご相談ください。";
       out.appendChild(warn);
     }
 
@@ -103,8 +103,8 @@
     ol.appendChild(item(order, "ご発注"));
     ol.appendChild(item(fieldStart, "現地測量", "日程調整から測量完了まで " + cfg.field + " 営業日"));
     ol.appendChild(item(drawStart, "図面作成・検査", cfg.draw + " 営業日"));
-    ol.appendChild(item(deliver, "成果品の納品", "決済日の " + BUFFER + " 営業日前"));
-    ol.appendChild(item(settle, "決済日・契約日", cfg.label + "の場合の目安", "t-final"));
+    ol.appendChild(item(deliver, "成果品の納品", "ご希望の納品日の " + BUFFER + " 営業日前"));
+    ol.appendChild(item(settle, "ご希望の納品日", cfg.label + "の場合の目安", "t-final"));
     out.appendChild(ol);
   });
 })();

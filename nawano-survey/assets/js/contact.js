@@ -99,7 +99,7 @@
       "物件の所在地：" + val("address"),
       "物件の種別：" + kind,
       "面積の目安：" + (val("area") || "未記入"),
-      "希望納期（決済日・契約日）：" + formatDeadline(val("deadline")),
+      "ご希望の納期：" + formatDeadline(val("deadline")),
       "",
       "相談内容：",
       val("message") || "（なし）",

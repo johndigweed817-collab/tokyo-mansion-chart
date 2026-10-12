@@ -8,7 +8,7 @@ HTML / CSS / JavaScript のみ。外部のライブラリ・フォント・解�
 ```
 index.html       トップ
 services.html    業務内容
-flow.html        ご依頼の流れ・納期（決済日からの逆算ツール）・費用の目安
+flow.html        ご依頼の流れ・納期（納期の目安ツール）・費用の目安
 works.html       実績
 about.html       会社概要・代表者メッセージ
 column.html      コラム（not/on へのリンクと一覧）
@@ -17,19 +17,18 @@ contact.html     案件の相談・見積依頼（窓口）
 privacy.html     プライバシーポリシー（雛形）
 assets/css/style.css   色・書体・余白は先頭の :root で一元管理
 assets/img/representative.jpg   代表者の写真（会社概要とトップで使用）
-assets/js/config.js    mock の ON/OFF、宛先メール、not/on の URL
+assets/js/config.js    ダミー表示の ON/OFF、宛先メール、not/on の URL
 assets/js/main.js      メニュー開閉、モック帯
 assets/js/columns.js   コラム一覧（現在はダミーデータ）
 assets/js/contact.js   問い合わせフォーム
-assets/js/schedule.js  決済日からの逆算ツール
+assets/js/schedule.js  納期の目安ツール
 ```
 
 ヘッダー・フッターは各 HTML に直書きしています。ナビや連絡先を変えるときは、全ページを検索置換してください。
 
 ## 本人に見せる前の注意
 
-`assets/js/config.js` の `mock: true` の間は、画面上部に「確認用のモック」の帯が出て、
-差し替え対象の箇所に点線の下線が付きます。公開前に `mock: false` にしてください。
+`assets/js/config.js` の `markDummy: true` にすると、差し替え対象（ダミーの値）に点線の下線・枠が付きます。差し替え漏れの確認に使います。
 
 ## 差し替えが必要な箇所（ダミー）
 
