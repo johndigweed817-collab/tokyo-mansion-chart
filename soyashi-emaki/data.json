@@ -1,0 +1,501 @@
+{
+ "meta": {
+  "title": "曽屋史絵巻",
+  "tagline": "曽屋史を学ぶのは、曽屋史に学ぶため",
+  "version": 1
+ },
+ "kinds": [
+  {
+   "id": "incident",
+   "name": "事変",
+   "color": "#b5453a"
+  },
+  {
+   "id": "case",
+   "name": "事件",
+   "color": "#5b4a86"
+  },
+  {
+   "id": "trend",
+   "name": "流行",
+   "color": "#c08a2b"
+  },
+  {
+   "id": "law",
+   "name": "制度",
+   "color": "#2f7f86"
+  },
+  {
+   "id": "oddity",
+   "name": "珍事",
+   "color": "#5f8a3a"
+  }
+ ],
+ "pkinds": [
+  {
+   "id": "justice",
+   "name": "正義",
+   "color": "#3a6ea5"
+  },
+  {
+   "id": "dark",
+   "name": "ダーク",
+   "color": "#5a3f6b"
+  },
+  {
+   "id": "rare",
+   "name": "レア",
+   "color": "#c9a227"
+  }
+ ],
+ "eras": [
+  {
+   "id": "yosho",
+   "name": "幼少",
+   "start": 1979,
+   "end": 1986,
+   "weight": 2,
+   "color": "#a38a3e",
+   "motif": "machiya",
+   "summary": "1979年、のちの曽屋世代がこの世に生まれる。まだ誰も、のちの事変を知らない。",
+   "catch": "すべての伝説は、ここから始まった",
+   "features": [
+    "1979年生まれの世代が誕生する",
+    "のちの正義とダーク側も、まだ同じ顔をして遊んでいた",
+    "事件簿は、まだ真っ白"
+   ]
+  },
+  {
+   "id": "shochu",
+   "name": "小中学",
+   "start": 1986,
+   "end": 1995,
+   "weight": 3,
+   "color": "#5f8a3a",
+   "motif": "hall",
+   "summary": "仲間と出会い、貸し借りと取り立てを覚える時代。のちの曽屋史の伏線が、静かに張られていく。",
+   "catch": "借りたものは、返ってくるとは限らない",
+   "features": [
+    "仲間との出会いと、貸し借りの文化",
+    "のちの事件の伏線が張られる",
+    "返ってきたものが「同じもの」とは限らない"
+   ]
+  },
+  {
+   "id": "soya",
+   "name": "曽屋",
+   "start": 1995,
+   "end": 1999,
+   "weight": 9,
+   "color": "#b5453a",
+   "motif": "tower",
+   "summary": "曽屋高の三年間。事変・事件・合法化が次々と起こり、曽屋史の中心となった黄金期。",
+   "catch": "事変と事件が、毎月のように起きた三年間",
+   "features": [
+    "教職員の車、校舎のガラス、修学旅行と、被害は校内外に及ぶ",
+    "屋上喫煙の合法化など、独自の制度が生まれる",
+    "正義とダーク側が入り乱れ、レアキャラも登場する",
+    "記録は仲間の記憶にだけ残る"
+   ]
+  },
+  {
+   "id": "seijin",
+   "name": "成人",
+   "start": 1999,
+   "end": 2020,
+   "weight": 3,
+   "color": "#4a6a8a",
+   "motif": "skyscrapers",
+   "summary": "それぞれの道へ。事変の当事者たちは、大人になって何食わぬ顔で暮らしている。",
+   "catch": "あの頃のことは、笑い話になった",
+   "features": [
+    "それぞれが社会に散っていく",
+    "集まれば、すぐに曽屋時代へ巻き戻る",
+    "語られるたびに、事件は少しずつ大きくなる"
+   ]
+  },
+  {
+   "id": "ima",
+   "name": "いま",
+   "start": 2020,
+   "end": 2026,
+   "weight": 2,
+   "color": "#8d5fa0",
+   "motif": "skytree",
+   "open": true,
+   "summary": "仲間内のジョークが、ついに絵巻になった。曽屋史は、いまも続いている。",
+   "catch": "曽屋史は、現在進行形",
+   "features": [
+    "仲間内の笑い話が、絵巻として記録される",
+    "当事者の記憶と、事実の間に少しの誇張",
+    "続きは、これから起こる"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "year": 1979,
+   "title": "曽屋世代、誕生",
+   "detail": "1979年、のちに曽屋史をつくる世代が、あちこちで生まれた。",
+   "lesson": "伝説は、産声から始まる。",
+   "level": 1,
+   "kind": "oddity"
+  },
+  {
+   "year": 1990,
+   "title": "関東スーファミ事件",
+   "detail": "関東くんのスーパーファミコンのコントローラが、よいおかに借りパクされた。催促して返ってきたものは、明らかに別物だった。",
+   "lesson": "返ってきたら、まず中身を疑え。",
+   "level": 1,
+   "kind": "case"
+  },
+  {
+   "year": 1996,
+   "title": "屋上喫煙合法化",
+   "detail": "「屋上での喫煙は心が健やかになる」として、屋上に限って喫煙が合法化された。",
+   "lesson": "法は、いつも現場の都合でつくられる。",
+   "level": 1,
+   "kind": "law",
+   "month": 5
+  },
+  {
+   "year": 1996,
+   "title": "ハンマーヘッド過呼吸",
+   "detail": "テニス部のハンマーヘッド先輩が、過呼吸を起こした。",
+   "lesson": "先輩の通り名は、一度聞いたら忘れない。",
+   "level": 1,
+   "kind": "oddity",
+   "month": 8
+  },
+  {
+   "year": 1996,
+   "title": "下級生学生服神隠し",
+   "detail": "下級生が帰ろうとしたとき、なぜか学生服がなくなっていた。今も犯人は不明で、神隠しとささやかれている。",
+   "lesson": "迷宮入りは、語り継がれて完成する。",
+   "level": 1,
+   "kind": "case",
+   "month": 12
+  },
+  {
+   "year": 1997,
+   "title": "ウォークマン転売流行",
+   "detail": "机の上にあったウォークマンを転売する、いまで言う転売ヤーが、先進的にこの時代から流行した。",
+   "lesson": "流行は、いつも少し早すぎる人が始める。",
+   "level": 1,
+   "kind": "trend",
+   "month": 5
+  },
+  {
+   "year": 1997,
+   "title": "オカナ・ニキビの変",
+   "detail": "野球をやっていたことに腹をたてたオカナ・ニキビが、校舎のガラスを蹴り破り、高額請求された。",
+   "lesson": "怒りの代償は、ガラス代で支払う。",
+   "level": 1,
+   "kind": "incident",
+   "month": 8
+  },
+  {
+   "year": 1997,
+   "title": "千々和窃盗事件多発",
+   "detail": "高校前の千々和で、窃盗事件が1997年〜1998年にかけて頻発した。店側も、サンプル提供品に値札を貼って販売するなど、闇深いシンジケート組織との関連が噂された。（※噂です）",
+   "lesson": "噂は、真相より先に走る。",
+   "level": 2,
+   "kind": "case",
+   "approx": true
+  },
+  {
+   "year": 1997,
+   "title": "教職員ナンバー曲げ事変",
+   "detail": "ヨーグーとともに、マツオが教職員の車のナンバープレートを曲げてみただけの事件。",
+   "lesson": "出来心で曲げたものは、思ったより曲がらない。",
+   "level": 1,
+   "kind": "incident",
+   "month": 12
+  },
+  {
+   "year": 1998,
+   "title": "修学旅行酒一揆",
+   "detail": "坂チューンが泥酔のうえ暴れ出し、最後は段ボールの中に収まった。",
+   "lesson": "酔っても、箱には収まる。",
+   "level": 1,
+   "kind": "incident",
+   "month": 10
+  },
+  {
+   "year": 2026,
+   "title": "曽屋史、編纂される",
+   "detail": "仲間内のジョークが、絵巻にまとめられた。事実と記憶の間には、少しの誇張が含まれる。",
+   "lesson": "笑い話は、時が経つほど価値が上がる。",
+   "level": 1,
+   "kind": "oddity"
+  }
+ ],
+ "persons": [
+  {
+   "id": "matsuo",
+   "name": "マツオ",
+   "kind": "justice",
+   "level": 1,
+   "role": "正義",
+   "detail": "ヨーグーとともに、教職員の車のナンバーを曲げてみた一人。曽屋の正義の中心。",
+   "lesson": "正義にも、ちょっとした出来心がある。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#3a4a6a",
+    "e": "smile"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "itaru",
+   "name": "イタル",
+   "kind": "justice",
+   "level": 1,
+   "role": "正義",
+   "detail": "曽屋の正義を支える一人。",
+   "lesson": "正義は、ひとりでは成り立たない。",
+   "face": {
+    "h": "shaggy",
+    "k": "uniform",
+    "c": "#3a4a6a",
+    "g": true,
+    "e": "calm"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "banba",
+   "name": "バンバ",
+   "kind": "justice",
+   "level": 1,
+   "role": "正義",
+   "detail": "曽屋の正義を支える一人。",
+   "lesson": "頼れる仲間は、名前を呼ぶだけで場が締まる。",
+   "face": {
+    "h": "curly",
+    "k": "uniform",
+    "c": "#3a4a6a",
+    "e": "strong"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "teshiyan",
+   "name": "テシヤン",
+   "kind": "justice",
+   "level": 1,
+   "role": "正義",
+   "detail": "曽屋の正義を支える一人。",
+   "lesson": "あだ名は、愛の証拠。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2f5f8a",
+    "b": "goatee",
+    "e": "smile"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "haya",
+   "name": "ハヤ",
+   "kind": "justice",
+   "level": 1,
+   "role": "正義",
+   "detail": "曽屋の正義を支える一人。",
+   "lesson": "足が速い人は、だいたい逃げ道も知っている。",
+   "face": {
+    "h": "headband",
+    "k": "uniform",
+    "c": "#3a4a6a",
+    "e": "sharp"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "yoioka",
+   "name": "よいおか",
+   "kind": "dark",
+   "level": 1,
+   "role": "ダーク側",
+   "detail": "関東くんのスーファミのコントローラを借りたまま、催促されて返したら別物だった、とされる。",
+   "lesson": "返ってきたら、まず中身を疑え。",
+   "face": {
+    "h": "wild",
+    "hc": "#2b2522",
+    "k": "uniform",
+    "c": "#2a2a3a",
+    "e": "sharp"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "okana",
+   "name": "オカナ・ニキビ",
+   "kind": "dark",
+   "level": 1,
+   "role": "ダーク側",
+   "detail": "野球をやっていたことに腹をたて、校舎のガラスを蹴り破り、高額請求されたとされる。",
+   "lesson": "怒りの矛先は、たいてい窓ガラスに向かう。",
+   "face": {
+    "h": "shaggy",
+    "k": "uniform",
+    "c": "#2a2a3a",
+    "x": [
+     "eyepatch"
+    ],
+    "e": "strong"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "switch",
+   "name": "スイッチ",
+   "kind": "dark",
+   "level": 1,
+   "role": "ダーク側",
+   "detail": "ダーク側の一人。入ったら最後、もう戻れない。",
+   "lesson": "スイッチは、押した人が責任を取る。",
+   "face": {
+    "h": "wild",
+    "hc": "#2b2522",
+    "k": "uniform",
+    "c": "#2a2a3a",
+    "g": true,
+    "e": "sharp"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "goemon",
+   "name": "腰ゴエモン",
+   "kind": "rare",
+   "level": 2,
+   "role": "レア",
+   "detail": "めったに現れないレアキャラ。",
+   "lesson": "レアは、見かけたら記録せよ。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#9a6a2a",
+    "b": "mustache",
+    "e": "strong"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "mochi",
+   "name": "もちくん",
+   "kind": "rare",
+   "level": 2,
+   "role": "レア",
+   "detail": "めったに現れないレアキャラ。",
+   "lesson": "やわらかい人は、場を丸くする。",
+   "face": {
+    "h": "bob",
+    "k": "uniform",
+    "c": "#c9a227",
+    "f": "round",
+    "e": "smile",
+    "sex": "f"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "shinbun",
+   "name": "新聞",
+   "kind": "rare",
+   "level": 2,
+   "role": "レア",
+   "detail": "めったに現れないレアキャラ。毎朝、何かが届く。",
+   "lesson": "情報は、読む前に届く。",
+   "face": {
+    "h": "fedora",
+    "k": "suit",
+    "c": "#6b6b6b",
+    "g": true,
+    "e": "calm"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "sakachun",
+   "name": "坂チューン",
+   "kind": "rare",
+   "level": 1,
+   "role": "レア",
+   "detail": "修学旅行で泥酔のうえ暴れ出し、最後は段ボールの中に収まった。",
+   "lesson": "入る箱は、自分で選ぶものではない。",
+   "face": {
+    "h": "wild",
+    "hc": "#2b2522",
+    "k": "uniform",
+    "c": "#9a4a2a",
+    "f": "round",
+    "e": "smile"
+   },
+   "born": 1979,
+   "died": 2026,
+   "alive": true,
+   "eras": [
+    "soya"
+   ]
+  }
+ ]
+}
