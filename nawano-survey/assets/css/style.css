@@ -117,7 +117,7 @@ h3 { font-size: 1.15rem; }
 }
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
 .brand-ja { font-family: var(--serif); font-weight: 700; font-size: 1.5rem; letter-spacing: 0.14em; }
-.brand-en { margin-top: 0.2em; font-size: 0.625rem; letter-spacing: 0.32em; color: var(--muted); }
+.brand-en { margin-top: 0.25em; font-size: 0.6875rem; letter-spacing: 0.04em; color: var(--muted); }
 
 .site-nav { display: flex; align-items: center; gap: 28px; }
 .site-nav ul { display: flex; gap: 22px; }
