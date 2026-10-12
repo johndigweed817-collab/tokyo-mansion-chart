@@ -23,63 +23,10 @@
 <meta name="theme-color" content="#2a211b">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="日本史絵巻">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="intro.css">
+<link rel="stylesheet" href="../emaki/engine-h.css">
+<link rel="stylesheet" href="../emaki/core/intro.css">
 </head>
 <body>
-
-<header id="top">
-  <div class="brand">
-    <h1>日本史絵巻</h1>
-    <p class="tag">歴史を学ぶのは、歴史に学ぶため</p>
-  </div>
-  <div id="now" aria-live="polite"><b></b><span></span></div>
-  <div class="ctrl">
-    <button id="eraintro" type="button" title="いまの時代の解説">時代解説</button>
-    <div id="zbar" title="拡大率"><i></i></div>
-    <span id="zlabel">×1.0</span>
-    <button id="zout" type="button" aria-label="縮小">－</button>
-    <button id="zin" type="button" aria-label="拡大">＋</button>
-    <button id="zfit" type="button" aria-label="全体表示">全体</button>
-    <a class="wl" href="../sekaishi-emaki/" title="世界史絵巻へ">世界史 →</a>
-    <a class="wl" href="../uchushi-emaki/" title="宇宙史絵巻へ">宇宙史 →</a>
-  </div>
-</header>
-
-<main id="scroll">
-  <div id="ribbon" aria-label="時代"></div>
-
-  <div id="view" data-lod="s">
-    <div id="bands"></div>
-    <div id="mists"></div>
-    <div class="ground"></div>
-    <div id="span" hidden><i class="sl"></i><i class="sr"></i><em class="y1"></em><em class="y2"></em></div>
-    <div id="events"></div>
-    <div id="people"></div>
-    <div id="legend"></div>
-    <aside id="panel" hidden>
-      <button type="button" id="pclose" aria-label="閉じる">×</button>
-      <div id="pbody"></div>
-    </aside>
-    <div id="hint">ホイール／ピンチで拡大縮小 ・ ドラッグで移動 ・ ダブルタップで拡大 ・ 札・人物をタップで詳細へ</div>
-
-    <div id="fallback" hidden>
-      <p><b>data.json を読み込めませんでした。</b></p>
-      <p>ローカルでは <code>python3 -m http.server</code> で配信するか、下のボタンで data.json を選択してください。<br>S3 / CloudFront などで配信する場合はそのまま動きます。</p>
-      <input type="file" id="fbfile" accept=".json,application/json">
-    </div>
-  </div>
-
-  <canvas id="ruler"></canvas>
-  <i class="roller l"></i><i class="roller r"></i>
-</main>
-
-<footer>
-  <canvas id="mini" aria-label="全体ミニマップ"></canvas>
-</footer>
-
-<script src="face.js"></script>
-<script src="intro.js"></script>
-<script src="app.js"></script>
+<script src="../emaki/boot.js" data-engine="h"></script>
 </body>
 </html>
