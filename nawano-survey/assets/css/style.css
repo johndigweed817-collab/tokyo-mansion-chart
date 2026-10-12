@@ -87,18 +87,31 @@ h3 { font-size: 1.15rem; }
 .brand-mark .twist { fill: none; stroke: var(--paper); stroke-width: 0.65; }
 .brand-mark .stake { fill: var(--ink); stroke: var(--paper); stroke-width: 1.4; }
 .brand-mark .stake-kp { fill: var(--accent); }
-/* ロゴの演出：縄がA地点から伸び、4本の杭をつないでロゴの形になる（トップのヘッダーのみ） */
+/* ロゴの演出：縄が引かれ、角に届くと杭が打たれて点滅し、次の縄が引かれる。最後に朱の杭が打たれてロゴの形になる（トップのヘッダーのみ）
+   縄の動き：A→B（0.15〜0.40秒）、B杭、B→C（0.72〜0.95秒）、C杭、C→D（1.27〜1.58秒）、D杭、D→A（1.90〜2.12秒）、A杭（2.12秒〜） */
 @media (prefers-reduced-motion: no-preference) {
-  .is-intro .rope { stroke-dasharray: 100; stroke-dashoffset: 100; animation: rope-pay 1.5s 0.15s linear forwards; }
-  .is-intro .stake { opacity: 0; transform-box: fill-box; transform-origin: center; animation: stake-pop 0.4s cubic-bezier(0.3, 1.6, 0.5, 1) forwards; }
-  .is-intro .stake-kp { animation: stake-pop 0.4s 0.15s cubic-bezier(0.3, 1.6, 0.5, 1) forwards, kp-pulse 0.5s 1.65s ease-out; }
-  .is-intro .s-b { animation-delay: 0.52s; }
-  .is-intro .s-c { animation-delay: 0.86s; }
-  .is-intro .s-d { animation-delay: 1.31s; }
+  .is-intro .rope { stroke-dasharray: 100; stroke-dashoffset: 100; animation: rope-pay 1.968s 0.15s linear forwards; }
+  .is-intro .stake { opacity: 0; transform-box: fill-box; transform-origin: center; animation: stake-drive 0.32s ease-out forwards; }
+  .is-intro .s-b { animation-delay: 0.4s; }
+  .is-intro .s-c { animation-delay: 0.95s; }
+  .is-intro .s-d { animation-delay: 1.58s; }
+  .is-intro .stake-kp { animation-delay: 2.12s; }
 }
-@keyframes rope-pay { to { stroke-dashoffset: 0; } }
-@keyframes stake-pop { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }
-@keyframes kp-pulse { 50% { transform: scale(1.4); } }
+@keyframes rope-pay {
+  0% { stroke-dashoffset: 100; animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1); }
+  12.5%, 28.76% { stroke-dashoffset: 75.36; animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1); }
+  40.5%, 56.76% { stroke-dashoffset: 52.34; animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1); }
+  72.46%, 88.72% { stroke-dashoffset: 22.85; animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1); }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes stake-drive {
+  0% { opacity: 0; transform: scale(1.9); }
+  18% { opacity: 1; transform: scale(1); }
+  34% { opacity: 0.1; }
+  50% { opacity: 1; }
+  66% { opacity: 0.25; }
+  82%, 100% { opacity: 1; transform: scale(1); }
+}
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
 .brand-ja { font-family: var(--serif); font-weight: 700; font-size: 1.5rem; letter-spacing: 0.14em; }
 .brand-en { margin-top: 0.2em; font-size: 0.625rem; letter-spacing: 0.32em; color: var(--muted); }
@@ -217,9 +230,9 @@ h3 { font-size: 1.15rem; }
 .plan-north { fill: var(--ink); }
 
 @media (prefers-reduced-motion: no-preference) {
-  .plan-lot { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: plan-draw 1.6s 0.9s cubic-bezier(0.6, 0, 0.2, 1) forwards; }
-  .plan-fade { opacity: 0; animation: plan-in 0.7s 2.3s ease forwards; }
-  .plan-fade-late { opacity: 0; animation: plan-in 0.7s 2.7s ease forwards; }
+  .plan-lot { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: plan-draw 1.6s 1.4s cubic-bezier(0.6, 0, 0.2, 1) forwards; }
+  .plan-fade { opacity: 0; animation: plan-in 0.7s 2.9s ease forwards; }
+  .plan-fade-late { opacity: 0; animation: plan-in 0.7s 3.3s ease forwards; }
 }
 @keyframes plan-draw { to { stroke-dashoffset: 0; } }
 @keyframes plan-in { to { opacity: 1; } }
