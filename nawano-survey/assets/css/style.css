@@ -87,6 +87,8 @@ h3 { font-size: 1.15rem; }
 .brand-mark .twist { fill: none; stroke: var(--paper); stroke-width: 0.65; }
 .brand-mark .stake { fill: var(--ink); stroke: var(--paper); stroke-width: 1.4; }
 .brand-mark .stake-kp { fill: var(--accent); }
+.brand-mark .reticle { fill: none; stroke: var(--accent); stroke-width: 0.7; }
+.brand-mark .reticle-dot { fill: var(--accent); stroke: none; }
 /* ロゴの演出：縄が引かれ、角に届くと杭が打たれて点滅し、次の縄が引かれる。最後に朱の杭が打たれてロゴの形になる（トップのヘッダーのみ）
    縄の動き：A→B（0.15〜0.40秒）、B杭、B→C（0.72〜0.95秒）、C杭、C→D（1.27〜1.58秒）、D杭、D→A（1.90〜2.12秒）、A杭（2.12秒〜） */
 @media (prefers-reduced-motion: no-preference) {
@@ -96,6 +98,7 @@ h3 { font-size: 1.15rem; }
   .is-intro .s-c { animation-delay: 0.95s; }
   .is-intro .s-d { animation-delay: 1.58s; }
   .is-intro .stake-kp { animation-delay: 2.12s; }
+  .is-intro .reticle { opacity: 0; transform-box: view-box; transform-origin: 25px 25px; animation: reticle-lock 0.7s 2.6s ease-out forwards; }
 }
 @keyframes rope-pay {
   0% { stroke-dashoffset: 100; animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1); }
@@ -441,3 +444,5 @@ h3 { font-size: 1.15rem; }
   .site-header, .dock, .cta-band { display: none; }
   body { background: #fff; }
 }
+
+@keyframes reticle-lock { 0%{opacity:0;transform:scale(1.5)} 55%{opacity:1;transform:scale(0.94)} 75%{opacity:.35;transform:scale(1)} 100%{opacity:1;transform:scale(1)} }
