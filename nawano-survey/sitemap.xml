@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 公開前に、ドメイン（nawano-survey.example）を実際のものへ一括置換してください -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://nawano-survey.example/</loc></url>
+  <url><loc>https://nawano-survey.example/services.html</loc></url>
+  <url><loc>https://nawano-survey.example/flow.html</loc></url>
+  <url><loc>https://nawano-survey.example/works.html</loc></url>
+  <url><loc>https://nawano-survey.example/about.html</loc></url>
+  <url><loc>https://nawano-survey.example/column.html</loc></url>
+  <url><loc>https://nawano-survey.example/faq.html</loc></url>
+  <url><loc>https://nawano-survey.example/contact.html</loc></url>
+  <url><loc>https://nawano-survey.example/privacy.html</loc></url>
+</urlset>

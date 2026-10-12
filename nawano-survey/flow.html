@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ご依頼の流れ・納期・費用｜縄野測量</title>
+<meta name="description" content="決済日から納期を逆算できます。ご依頼の流れ、工程ごとの日数、費用の目安をまとめています。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ご依頼の流れ・納期・費用｜縄野測量">
+<meta property="og:description" content="決済日から納期を逆算できます。ご依頼の流れ、工程ごとの日数、費用の目安をまとめています。">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="縄野測量 トップページ"><span class="brand-ja">縄野測量<svg class="brand-pt" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0v12M0 6h12" stroke="currentColor" stroke-width="1" fill="none"/><circle cx="6" cy="6" r="2.7"/></svg></span><span class="brand-en">NAWANO SURVEYING</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">メニュー</button>
+    <nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+      <ul>
+        <li><a href="services.html">業務内容</a></li><li><a href="flow.html" aria-current="page">ご依頼の流れ</a></li><li><a href="works.html">実績</a></li><li><a href="about.html">会社概要</a></li><li><a href="column.html">コラム</a></li><li><a href="faq.html">よくある質問</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="contact.html">案件を相談する</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <h1>ご依頼の流れ・納期・費用</h1>
+    <p>決済日から逆算して工程を組みます。依頼前に、いつまでに相談すればよいかを確かめられます。</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <h2 style="margin-bottom:32px">ご依頼の流れ</h2>
+    <ol class="steps steps-long">
+      <li class="step"><h3>ご相談・見積依頼</h3><p>お電話またはフォームから、物件の所在地・規模・希望納期（決済日）をお知らせください。1営業日以内に、可否と概算をお返しします。</p><p class="step-days">所要：1営業日以内</p></li>
+      <li class="step"><h3>見積・ご発注</h3><p>現地の状況を確認したうえで、費用と工程表をお示しします。内容にご同意いただいたら、ご発注となります。</p><p class="step-days">所要：<span class="dummy">1〜2営業日</span></p></li>
+      <li class="step"><h3>現地測量</h3><p>日程を調整し、現地で測量します。立入りに必要な手配があれば、事前にお知らせください。</p><p class="step-days">所要：<span class="dummy">日程調整から 3〜8 営業日</span>（規模による）</p></li>
+      <li class="step"><h3>図面作成・検査</h3><p>測った数字から図面を作成し、別の目で数字と図面を照合する検査をしてから納品します。</p><p class="step-days">所要：<span class="dummy">3〜6 営業日</span>（規模による）</p></li>
+      <li class="step"><h3>納品・ご説明</h3><p>PDFとCADデータで納品します。図面の読み方や数字のご質問にも対応します。</p><p class="step-days">決済日の<span class="dummy">2営業日前</span>を基準にします</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-ruled section-tint" id="calc">
+  <div class="wrap">
+    <h2 style="margin-bottom:12px">決済日から納期を逆算する</h2>
+    <p style="margin-bottom:28px">決済日・契約日と土地の規模を入れると、各工程の最も遅い日付を出します。</p>
+    <form id="calc-form" class="calc" novalidate>
+      <div class="field">
+        <label for="settle">決済日・契約日</label>
+        <input type="date" id="settle" name="settle" required>
+      </div>
+      <div class="field">
+        <label for="size">土地の規模</label>
+        <select id="size" name="size">
+          <option value="s">小規模（〜300㎡）</option>
+          <option value="m" selected>中規模（〜1,000㎡）</option>
+          <option value="l">大規模（1,000㎡超）</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" type="submit">逆算する</button>
+    </form>
+    <div id="calc-result" class="calc-result" aria-live="polite"></div>
+    <p class="fine" style="margin-top:20px">土日を除く営業日で計算しています。祝日・年末年始は含めていません。日数は目安で、現地の状況により前後します。<span class="dummy">（日数は仮の値です）</span></p>
+  </div>
+</section>
+
+<section class="section section-ruled" id="price">
+  <div class="wrap">
+    <h2 style="margin-bottom:12px">費用の目安</h2>
+    <p style="margin-bottom:28px">土地の形状・広さ・高低差・現地の状況で変わります。正式な金額は、見積でお示しします。</p>
+    <div class="table-wrap dummy-block">
+      <table class="table table-min">
+        <caption>税別・目安</caption>
+        <thead><tr><th>業務</th><th>条件</th><th class="r">費用（税別）</th></tr></thead>
+        <tbody>
+          <tr><th>現況測量</th><td>更地・〜300㎡</td><td class="r num">120,000円〜</td></tr>
+          <tr><th>現況測量</th><td>建物あり・〜300㎡</td><td class="r num">160,000円〜</td></tr>
+          <tr><th>面積・求積</th><td>〜300㎡</td><td class="r num">70,000円〜</td></tr>
+          <tr><th>高低・レベル測量</th><td>〜300㎡</td><td class="r num">90,000円〜</td></tr>
+          <tr><th>建物配置測量</th><td>〜300㎡</td><td class="r num">80,000円〜</td></tr>
+          <tr><th>地形測量</th><td>1,000㎡超</td><td class="r">要見積</td></tr>
+          <tr><th>真北測量</th><td>1か所</td><td class="r num">40,000円〜</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine" style="margin-top:20px">お急ぎの工程短縮が必要な場合は、別途ご相談ください。</p>
+  </div>
+</section>
+<section class="cta-band">
+  <div class="wrap">
+    <h2>工程と費用を、先に知りたい案件はありませんか。</h2>
+    <p>所在地と希望納期が分かれば、可否と概算を1営業日以内にお返しします。</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="contact.html">案件を相談する</a>
+      <a class="btn btn-light" href="tel:+81300000000">電話する　<span class="dummy">03-0000-0000</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-in">
+    <div>
+      <a class="brand" href="index.html" aria-label="縄野測量 トップページ"><span class="brand-ja">縄野測量<svg class="brand-pt" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0v12M0 6h12" stroke="currentColor" stroke-width="1" fill="none"/><circle cx="6" cy="6" r="2.7"/></svg></span><span class="brand-en">NAWANO SURVEYING</span></a>
+      <address class="footer-addr" style="font-style:normal">
+        <span class="dummy">〇〇県〇〇市〇〇町 0-0-0</span><br>
+        電話 <a href="tel:+81300000000"><span class="dummy">03-0000-0000</span></a>（<span class="dummy">平日 9:00〜18:00</span>）<br>
+        メール <a href="mailto:info@nawano-survey.example"><span class="dummy">info@nawano-survey.example</span></a>
+      </address>
+    </div>
+    <nav class="footer-nav" aria-label="フッターメニュー"><a href="services.html">業務内容</a><a href="flow.html">ご依頼の流れ</a><a href="works.html">実績</a><a href="about.html">会社概要</a><a href="column.html">コラム</a><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></nav>
+    <p class="copy">© 2026 縄野測量　測量士：<span class="dummy">登録番号 第00000号</span></p>
+  </div>
+</footer>
+<div class="dock">
+  <a href="tel:+81300000000">電話する</a>
+  <a href="contact.html">案件を相談する</a>
+</div>
+<script src="assets/js/schedule.js"></script>
+</body>
+</html>

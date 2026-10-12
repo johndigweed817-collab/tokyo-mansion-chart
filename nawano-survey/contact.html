@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>案件の相談・見積依頼｜縄野測量</title>
+<meta name="description" content="測量の見積依頼・案件の相談の窓口です。所在地と希望納期が分かれば、1営業日以内に一次回答します。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="案件の相談・見積依頼｜縄野測量">
+<meta property="og:description" content="測量の見積依頼・案件の相談の窓口です。所在地と希望納期が分かれば、1営業日以内に一次回答します。">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="縄野測量 トップページ"><span class="brand-ja">縄野測量<svg class="brand-pt" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0v12M0 6h12" stroke="currentColor" stroke-width="1" fill="none"/><circle cx="6" cy="6" r="2.7"/></svg></span><span class="brand-en">NAWANO SURVEYING</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">メニュー</button>
+    <nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+      <ul>
+        <li><a href="services.html">業務内容</a></li><li><a href="flow.html">ご依頼の流れ</a></li><li><a href="works.html">実績</a></li><li><a href="about.html">会社概要</a></li><li><a href="column.html">コラム</a></li><li><a href="faq.html">よくある質問</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="contact.html" aria-current="page">案件を相談する</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <h1>案件の相談・見積依頼</h1>
+    <p>見積・案件の相談は、このページに集約しています。所在地と希望納期が分かれば、1営業日以内に一次回答します。</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap contact-grid">
+    <div>
+      <form id="contact-form" class="form" novalidate>
+        <div class="field">
+          <label for="type">相談の種類</label>
+          <select id="type" name="type">
+            <option>現況測量の見積依頼</option>
+            <option>面積・求積の見積依頼</option>
+            <option>高低・レベル測量の見積依頼</option>
+            <option>建物配置測量の見積依頼</option>
+            <option>地形測量の見積依頼</option>
+            <option>真北測量の見積依頼</option>
+            <option>どの測量が必要か相談したい</option>
+          </select>
+        </div>
+        <div class="form-pair">
+          <div class="field">
+            <label for="company">会社名<span class="req">必須</span></label>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="person">ご担当者名<span class="req">必須</span></label>
+            <input type="text" id="person" name="person" autocomplete="name">
+          </div>
+        </div>
+        <div class="form-pair">
+          <div class="field">
+            <label for="email">メール<span class="req">必須</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email">
+          </div>
+          <div class="field">
+            <label for="tel">電話<span class="opt">任意</span></label>
+            <input type="tel" id="tel" name="tel" autocomplete="tel" inputmode="tel">
+            <span class="hint">お急ぎの場合は、電話番号もご記入ください。</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="address">物件の所在地<span class="req">必須</span></label>
+          <input type="text" id="address" name="address" autocomplete="street-address">
+          <span class="hint">番地まで分からない場合は、町名までで構いません。</span>
+        </div>
+        <div class="form-pair">
+          <div class="field">
+            <label for="kind">物件の種別</label>
+            <select id="kind" name="kind">
+              <option>更地</option>
+              <option>建物あり（戸建）</option>
+              <option>建物あり（共同住宅・事業用）</option>
+              <option>山林・傾斜地</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="area">面積の目安<span class="opt">任意</span></label>
+            <input type="text" id="area" name="area" placeholder="例：約300㎡">
+          </div>
+        </div>
+        <div class="field">
+          <label for="deadline">希望納期（決済日・契約日）<span class="opt">任意</span></label>
+          <input type="date" id="deadline" name="deadline">
+          <span class="hint">決まっていれば、お知らせください。工程を逆算して回答します。</span>
+        </div>
+        <div class="field">
+          <label for="message">相談内容<span class="opt">任意</span></label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <div class="field">
+          <label class="check"><input type="checkbox" id="agree" name="agree"><span><a href="privacy.html">個人情報の取り扱い</a>に同意します。<span class="req">必須</span></span></label>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">メールで送る</button>
+          <button class="btn" type="button" id="copy-btn">内容をコピーする</button>
+        </div>
+        <p class="fine">「メールで送る」を押すと、入力内容を入れたメールがメールソフトに作成されます。送信はメールソフトで行います。メールソフトが開かない場合は、「内容をコピーする」を使うか、お電話でご連絡ください。</p>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        <div id="compose" class="compose">
+          <label for="compose-text" class="fine" style="display:block;margin-bottom:6px">送信する内容</label>
+          <textarea id="compose-text" readonly></textarea>
+        </div>
+      </form>
+      <noscript><p class="notice">フォームの利用にはJavaScriptが必要です。お電話、またはメール（info@nawano-survey.example）で直接ご連絡ください。</p></noscript>
+    </div>
+
+    <aside>
+      <div class="aside-block">
+        <h2>お電話</h2>
+        <a class="aside-tel" href="tel:+81300000000"><span class="dummy">03-0000-0000</span></a>
+        <p><span class="dummy">平日 9:00〜18:00</span><br>現地測量中は折り返します。</p>
+      </div>
+      <div class="aside-block">
+        <h2>メール</h2>
+        <p><a href="mailto:info@nawano-survey.example"><span class="dummy">info@nawano-survey.example</span></a></p>
+        <p class="fine">1営業日以内に、一次回答します。</p>
+      </div>
+      <div class="aside-block">
+        <h2>ご相談の前に</h2>
+        <p class="fine">土地の筆界（境界）の確認や不動産登記の申請は、土地家屋調査士の業務のため、当事務所では行っていません。</p>
+        <p class="fine"><a href="flow.html#calc">決済日から納期を逆算する</a>こともできます。</p>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-in">
+    <div>
+      <a class="brand" href="index.html" aria-label="縄野測量 トップページ"><span class="brand-ja">縄野測量<svg class="brand-pt" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0v12M0 6h12" stroke="currentColor" stroke-width="1" fill="none"/><circle cx="6" cy="6" r="2.7"/></svg></span><span class="brand-en">NAWANO SURVEYING</span></a>
+      <address class="footer-addr" style="font-style:normal">
+        <span class="dummy">〇〇県〇〇市〇〇町 0-0-0</span><br>
+        電話 <a href="tel:+81300000000"><span class="dummy">03-0000-0000</span></a>（<span class="dummy">平日 9:00〜18:00</span>）<br>
+        メール <a href="mailto:info@nawano-survey.example"><span class="dummy">info@nawano-survey.example</span></a>
+      </address>
+    </div>
+    <nav class="footer-nav" aria-label="フッターメニュー"><a href="services.html">業務内容</a><a href="flow.html">ご依頼の流れ</a><a href="works.html">実績</a><a href="about.html">会社概要</a><a href="column.html">コラム</a><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></nav>
+    <p class="copy">© 2026 縄野測量　測量士：<span class="dummy">登録番号 第00000号</span></p>
+  </div>
+</footer>
+<div class="dock">
+  <a href="tel:+81300000000">電話する</a>
+  <a href="contact.html">案件を相談する</a>
+</div>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>
