@@ -1463,6 +1463,1491 @@
      "u": "https://note.com/john_mat_digweed/n/n586d82d875a7"
     }
    ]
+  },
+  {
+   "year": -6000,
+   "title": "縄文海進",
+   "detail": "気候の温暖化で海面が上がり、海が内陸まで入り込んだ。貝塚は当時の海岸線の手がかりになる。",
+   "level": 3,
+   "kind": "disaster",
+   "lesson": "環境の変化は、暮らしの場所そのものを変える。",
+   "approx": true
+  },
+  {
+   "year": -3500,
+   "title": "黒曜石の交易",
+   "detail": "和田峠や神津島などの黒曜石が、遠く離れた集落へ運ばれた。縄文人の広い交流網を示す。",
+   "level": 3,
+   "kind": "society",
+   "lesson": "ものの移動は、人とつながりの移動でもある。",
+   "approx": true
+  },
+  {
+   "year": -3000,
+   "title": "火焔型土器",
+   "detail": "新潟などの信濃川流域で、炎が燃え立つような装飾の土器がつくられた。",
+   "level": 3,
+   "kind": "culture",
+   "lesson": "実用品に、これほどの造形心を注いだ。",
+   "approx": true
+  },
+  {
+   "year": -2500,
+   "title": "縄文のビーナス",
+   "detail": "長野県茅野市の棚畑遺跡から、豊かな体つきの女性を表した国宝の土偶が出土している。",
+   "level": 3,
+   "kind": "culture",
+   "approx": true
+  },
+  {
+   "year": -1000,
+   "title": "遮光器土偶",
+   "detail": "青森の亀ヶ岡遺跡などに代表される、大きな目をもつ土偶。東北の縄文晩期の精神文化を伝える。",
+   "level": 3,
+   "kind": "culture",
+   "approx": true
+  },
+  {
+   "year": -400,
+   "title": "水田稲作の広がり",
+   "detail": "福岡の板付遺跡・菜畑遺跡などで、早い時期の水田が見つかっている。稲作は九州北部から東へ広がった。",
+   "level": 3,
+   "kind": "society",
+   "approx": true
+  },
+  {
+   "year": -200,
+   "title": "吉野ヶ里の環壕集落",
+   "detail": "佐賀県の吉野ヶ里遺跡は、深い濠と物見やぐらをもつ大規模な弥生の集落。争いと統合が進んだ姿を示す。",
+   "level": 3,
+   "kind": "society",
+   "approx": true
+  },
+  {
+   "year": -100,
+   "title": "銅鐸と銅剣・銅矛",
+   "detail": "青銅器は祭りの道具として使われ、地域ごとに好まれる型が異なった。",
+   "level": 3,
+   "kind": "culture",
+   "approx": true
+  },
+  {
+   "year": 100,
+   "title": "登呂の水田",
+   "detail": "静岡市の登呂遺跡では、水田の畦や木の農具が見つかり、弥生の稲作の様子がわかる。",
+   "level": 3,
+   "kind": "society",
+   "approx": true
+  },
+  {
+   "year": 107,
+   "title": "倭国王帥升、後漢に使い",
+   "detail": "『後漢書』に、倭国王の帥升らが生口（捕虜・奴隷）160人を献上したと記される。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 180,
+   "title": "倭国大乱",
+   "detail": "2世紀後半、倭国では争乱が続いた。のち、諸国が卑弥呼を女王に共立して治まったと『魏志倭人伝』は伝える。",
+   "level": 3,
+   "kind": "war",
+   "approx": true
+  },
+  {
+   "year": 266,
+   "title": "壱与、西晋に使い",
+   "detail": "卑弥呼の後を継いだ壱与（台与）が、西晋に使いを送ったと考えられている。",
+   "level": 3,
+   "kind": "foreign",
+   "approx": true
+  },
+  {
+   "year": 391,
+   "title": "倭、朝鮮半島に出兵",
+   "detail": "高句麗の好太王碑文は、倭が海を渡って百済・新羅を従えたと記す（391年の記事）。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 421,
+   "title": "倭王讃、宋に遣使",
+   "detail": "『宋書』に、倭王讃が宋に使者を送ったと記される。倭の五王（讃・珍・済・興・武）の最初の記事。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 450,
+   "title": "大仙陵古墳の築造",
+   "detail": "堺市の大仙陵古墳（仁徳天皇陵と伝わる）は、全長約480mの日本最大の前方後円墳。5世紀中ごろの築造とされる。",
+   "level": 2,
+   "kind": "culture",
+   "approx": true
+  },
+  {
+   "year": 471,
+   "title": "稲荷山古墳の鉄剣銘",
+   "detail": "埼玉県の稲荷山古墳の鉄剣に115字の銘文があり、「ワカタケル大王」に仕えたと刻まれる（辛亥年＝471年説）。",
+   "level": 2,
+   "kind": "culture"
+  },
+  {
+   "year": 587,
+   "title": "丁未の乱",
+   "detail": "仏教を受け入れる蘇我馬子と、反対する物部守屋が戦い、物部氏が滅びた。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 592,
+   "title": "崇峻天皇の暗殺",
+   "detail": "蘇我馬子と対立した崇峻天皇が暗殺された。ほどなく推古天皇が即位する。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 607,
+   "title": "法隆寺の創建",
+   "detail": "聖徳太子が斑鳩に建てたと伝わる法隆寺。現存する世界最古級の木造建築群。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 608,
+   "title": "裴世清の来日",
+   "detail": "小野妹子の帰国に同行して、隋の使者・裴世清が来日した。対等外交をめざす国書の返礼。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 630,
+   "title": "第1回遣唐使",
+   "detail": "犬上御田鍬らが唐に派遣された。以後、遣唐使は唐の制度・文化・仏教を持ち帰る窓口となる。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 646,
+   "title": "改新の詔",
+   "detail": "公地公民や班田収授などの方針を示した詔。のちの律令国家の出発点とされる。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 660,
+   "title": "百済の滅亡",
+   "detail": "唐・新羅の連合軍が百済を滅ぼした。日本は百済の再興を助けようとする。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 668,
+   "title": "天智天皇の即位",
+   "detail": "中大兄皇子が近江大津宮で即位した。近江令を定めたとも伝わる。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 670,
+   "title": "庚午年籍",
+   "detail": "日本最初の全国的な戸籍とされる。のちの班田や徴兵の基礎になった。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 689,
+   "title": "飛鳥浄御原令",
+   "detail": "天武天皇の時代から編まれた令が、持統天皇のもとで施行された。律令国家づくりの途中経過。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 702,
+   "title": "遣唐使の再開",
+   "detail": "粟田真人らが唐に渡った。このとき国号「日本」を名乗ったとされる。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 708,
+   "title": "和同開珎の鋳造",
+   "detail": "武蔵国から銅が献上されたことを機に、和同開珎が発行された。日本の古い流通貨幣の一つ。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 713,
+   "title": "風土記の編纂命令",
+   "detail": "諸国の地名の由来・産物・伝承を報告させた。出雲国風土記などが現存する。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 720,
+   "title": "日本書紀の完成",
+   "detail": "舎人親王らが編んだ、漢文による正史。神代から持統天皇までを記す。",
+   "level": 2,
+   "kind": "culture"
+  },
+  {
+   "year": 723,
+   "title": "三世一身法",
+   "detail": "開墾した土地を、三世代（または一代）に限り私有できるとした法。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 729,
+   "title": "長屋王の変",
+   "detail": "左大臣の長屋王が謀反の疑いで自害に追い込まれ、藤原氏が勢力を伸ばした。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 735,
+   "title": "天然痘の大流行",
+   "detail": "九州から広がった疫病で、藤原四兄弟も相次いで亡くなった（737年）。人口の大きな減少を招いた。",
+   "level": 2,
+   "kind": "disaster"
+  },
+  {
+   "year": 740,
+   "title": "藤原広嗣の乱",
+   "detail": "九州で起きた反乱。動揺した聖武天皇は、各地に都を移す彷徨を続けた。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 741,
+   "title": "国分寺建立の詔",
+   "detail": "疫病や戦乱を仏の力で鎮めるため、諸国に国分寺・国分尼寺の建立を命じた。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 759,
+   "title": "唐招提寺の創建",
+   "detail": "鑑真が建立した寺。金堂は奈良時代の姿をいまに伝える。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 759,
+   "title": "万葉集の最後の歌",
+   "detail": "『万葉集』の最後に収められた大伴家持の歌（759年）。約4500首をもつ日本最古の歌集。",
+   "level": 2,
+   "kind": "culture"
+  },
+  {
+   "year": 764,
+   "title": "百万塔陀羅尼",
+   "detail": "称徳天皇が百万基の小塔に経を納めさせた。現存最古級の印刷物とされる。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 784,
+   "title": "長岡京遷都",
+   "detail": "桓武天皇が奈良の仏教勢力から離れるため、山背の長岡に都を移した。10年で平安京へ。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 788,
+   "title": "比叡山寺の創建",
+   "detail": "最澄が比叡山に一乗止観院を開いた。のちの延暦寺。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 797,
+   "title": "坂上田村麻呂、征夷大将軍に",
+   "detail": "蝦夷の征討のため、坂上田村麻呂が征夷大将軍に任じられた。802年に胆沢城を築く。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 816,
+   "title": "高野山の開創",
+   "detail": "空海が嵯峨天皇から高野山を賜り、真言密教の修行の場を開いた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 858,
+   "title": "藤原良房、摂政に",
+   "detail": "幼い清和天皇のもと、藤原良房が実質的に摂政をつとめた。人臣で初めて。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 866,
+   "title": "応天門の変",
+   "detail": "朝堂院の応天門が焼け、大納言の伴善男らが処罰された。藤原氏の他氏排斥の一つ。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 884,
+   "title": "藤原基経、関白に",
+   "detail": "光孝天皇の即位とともに、藤原基経が政務を取り仕切った。関白の先例となる。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 901,
+   "title": "菅原道真の左遷",
+   "detail": "右大臣の道真が大宰府へ左遷された。のち「天神様」として信仰される。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 905,
+   "title": "古今和歌集",
+   "detail": "醍醐天皇の命で紀貫之らが編んだ最初の勅撰和歌集。仮名序で歌の心を語る。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 935,
+   "title": "土佐日記",
+   "detail": "紀貫之が女性になりすまして書いた、仮名による日記文学のはじまり。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 940,
+   "title": "平将門の最期",
+   "detail": "常陸・下総で「新皇」を名乗った将門は、藤原秀郷らに討たれた。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 941,
+   "title": "藤原純友の乱",
+   "detail": "瀬戸内海の海賊を率いた純友の反乱。将門の乱と合わせて「承平・天慶の乱」とよぶ。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 969,
+   "title": "安和の変",
+   "detail": "源高明が左遷され、藤原氏の摂関政治が確立した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1019,
+   "title": "刀伊の入寇",
+   "detail": "女真族とされる集団が対馬・壱岐・北九州を襲った。大宰府の藤原隆家らが撃退した。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1051,
+   "title": "前九年の役",
+   "detail": "陸奥の安倍氏と朝廷の戦い。源頼義・義家が出羽の清原氏の助けを得て平定した（1062年）。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1053,
+   "title": "平等院鳳凰堂",
+   "detail": "藤原頼通が宇治に建てた阿弥陀堂。極楽浄土を地上に表した。",
+   "level": 2,
+   "kind": "culture"
+  },
+  {
+   "year": 1083,
+   "title": "後三年の役",
+   "detail": "奥羽の清原氏の内紛に源義家が介入。勝者の藤原（清原）清衡が奥州藤原氏の祖となった。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1124,
+   "title": "中尊寺金色堂",
+   "detail": "奥州藤原氏の清衡が、平泉に全面金箔の阿弥陀堂を建てた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1180,
+   "title": "福原遷都",
+   "detail": "平清盛が、日宋貿易の拠点である福原（神戸）に都を移した。半年ほどで京に戻る。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1181,
+   "title": "養和の飢饉",
+   "detail": "西日本を中心とする大飢饉。京の街に死者があふれたようすは、のち『方丈記』が描いた。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 1183,
+   "title": "倶利伽羅峠の戦い",
+   "detail": "木曽義仲が平氏の大軍を破り、京へ入った。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1184,
+   "title": "一ノ谷の戦い",
+   "detail": "源義経らが崖を駆け下りる奇襲で平氏を破った（鵯越の逆落としの伝承）。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1185,
+   "title": "屋島の戦い",
+   "detail": "源義経が嵐の中を渡り、讃岐の屋島の平氏を急襲した。那須与一の扇の的で知られる。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1189,
+   "title": "奥州藤原氏の滅亡",
+   "detail": "頼朝が奥州へ出兵し、平泉の藤原泰衡を滅ぼした。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1199,
+   "title": "源頼朝の死",
+   "detail": "頼朝の死後、幼い頼家を支える十三人の合議や、北条氏の台頭がはじまる。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1203,
+   "title": "比企能員の変",
+   "detail": "北条時政が比企氏を滅ぼし、将軍頼家を伊豆に幽閉した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1205,
+   "title": "新古今和歌集",
+   "detail": "後鳥羽上皇の命で、藤原定家らが編んだ勅撰和歌集。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1212,
+   "title": "方丈記",
+   "detail": "鴨長明が、都の大火・地震・飢饉・遷都を見つめ、無常をつづった随筆。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1219,
+   "title": "源実朝の暗殺",
+   "detail": "鎌倉の鶴岡八幡宮で、三代将軍の実朝が暗殺され、源氏の将軍が絶えた。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1227,
+   "title": "道元、宋から帰国",
+   "detail": "曹洞宗を伝えた道元が、南宋から帰国した。「只管打坐」の坐禅を説く。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1253,
+   "title": "日蓮、法華宗を開く",
+   "detail": "日蓮が安房の清澄寺で「南無妙法蓮華経」の題目を唱え、教えを説きはじめた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1324,
+   "title": "正中の変",
+   "detail": "後醍醐天皇の討幕計画が発覚した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1331,
+   "title": "元弘の乱",
+   "detail": "後醍醐天皇が討幕の兵をあげた。笠置山で敗れ隠岐に流されるが、各地で呼応が広がる。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1350,
+   "title": "観応の擾乱",
+   "detail": "足利尊氏と弟の直義の対立が、全国に広がった内乱。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1368,
+   "title": "足利義満、将軍に",
+   "detail": "幼い義満が三代将軍となった。のち南北朝を合一し、幕府の安定をはかる。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1378,
+   "title": "花の御所",
+   "detail": "足利義満が京の室町に営んだ御所。「室町幕府」の名の由来となった。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1400,
+   "title": "風姿花伝",
+   "detail": "世阿弥が能の芸と心得を記した書。「秘すれば花」の言葉で知られる。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1428,
+   "title": "正長の土一揆",
+   "detail": "近江の馬借らが徳政を求めて蜂起した。民衆の一揆のはじまりとされる。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1441,
+   "title": "嘉吉の乱",
+   "detail": "赤松満祐が将軍足利義教を暗殺した。幕府の権威の低下が進む。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1485,
+   "title": "山城の国一揆",
+   "detail": "南山城の国人・農民が、畠山氏の軍を追い出し、8年間自治を行った。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1488,
+   "title": "加賀の一向一揆",
+   "detail": "一向宗の門徒らが守護の富樫政親を倒し、約100年「百姓の持ちたる国」とよばれた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1495,
+   "title": "北条早雲、小田原城を奪う",
+   "detail": "伊豆を押さえた早雲が小田原城を得て、戦国大名の先駆けとなった。",
+   "level": 3,
+   "kind": "war",
+   "approx": true
+  },
+  {
+   "year": 1523,
+   "title": "寧波の乱",
+   "detail": "大内氏と細川氏の使節が、明の寧波で争った。以後、勘合貿易は大内氏が担う。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1553,
+   "title": "川中島の戦い",
+   "detail": "武田信玄と上杉謙信が信濃の川中島でたびたび対陣した。最大の激戦は1561年。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1555,
+   "title": "厳島の戦い",
+   "detail": "毛利元就が奇襲で陶晴賢を破った。中国地方の覇者へのきっかけ。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1568,
+   "title": "織田信長の上洛",
+   "detail": "足利義昭を奉じて京に入り、義昭を15代将軍にすえた。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1570,
+   "title": "姉川の戦い",
+   "detail": "織田・徳川軍が、浅井・朝倉軍を近江の姉川で破った。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1571,
+   "title": "比叡山の焼き討ち",
+   "detail": "信長が、敵対する浅井・朝倉を助けた延暦寺を焼き討ちした。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1577,
+   "title": "楽市楽座",
+   "detail": "信長が安土城下で、座の特権をなくして自由な商いを許した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1582,
+   "title": "天正遣欧使節",
+   "detail": "大友・大村・有馬の三大名の名代として、少年使節がローマへ出発した。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1583,
+   "title": "賤ヶ岳の戦い",
+   "detail": "羽柴秀吉が柴田勝家を破り、信長の後継争いに勝利した。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1583,
+   "title": "大坂城の築城",
+   "detail": "秀吉が石山本願寺の跡に大坂城の築城を始めた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1587,
+   "title": "バテレン追放令",
+   "detail": "秀吉が宣教師の国外退去を命じた。ただし貿易は続けさせた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1587,
+   "title": "北野大茶湯",
+   "detail": "秀吉が京の北野天満宮で、身分を問わず参加できる大茶会を開いた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1591,
+   "title": "千利休の切腹",
+   "detail": "秀吉の命で、茶人の利休が切腹した。理由には諸説ある。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1597,
+   "title": "慶長の役",
+   "detail": "秀吉が再び朝鮮へ出兵した。翌年の秀吉の死で撤兵する。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1597,
+   "title": "日本二十六聖人の殉教",
+   "detail": "長崎で、26人のキリスト教徒が処刑された。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1598,
+   "title": "豊臣秀吉の死",
+   "detail": "幼い秀頼を五大老・五奉行が支えるはずが、家康と三成の対立が深まる。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1600,
+   "title": "リーフデ号の漂着",
+   "detail": "オランダ船リーフデ号が豊後に漂着した。ウィリアム・アダムス（三浦按針）は家康に仕えた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1603,
+   "title": "出雲阿国と歌舞伎",
+   "detail": "出雲の阿国が京で「かぶき踊り」を演じ、評判になった。歌舞伎のはじまり。",
+   "level": 3,
+   "kind": "culture",
+   "approx": true
+  },
+  {
+   "year": 1609,
+   "title": "薩摩藩の琉球侵攻",
+   "detail": "島津氏が琉球王国に出兵して服属させた。琉球は明・清との関係も保ち続けた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1614,
+   "title": "大坂冬の陣",
+   "detail": "徳川軍が大坂城を包囲した。真田信繁（幸村）が築いた真田丸で知られる。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1615,
+   "title": "武家諸法度・一国一城令",
+   "detail": "大名の城・婚姻・行動を規制する法。徳川の支配体制が固まった。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1641,
+   "title": "出島にオランダ商館を移す",
+   "detail": "平戸のオランダ商館が長崎の出島に移され、貿易はオランダ・中国船に限られた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1651,
+   "title": "慶安の変",
+   "detail": "由井正雪らの幕府転覆計画が発覚した。浪人の増加が背景にあった。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1673,
+   "title": "越後屋の創業",
+   "detail": "三井高利が江戸に呉服店「越後屋」を開き、現金掛け値なしの商法で人気を集めた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1682,
+   "title": "好色一代男",
+   "detail": "井原西鶴が、町人の生き方を描いた浮世草子を出し、評判となった。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1687,
+   "title": "生類憐みの令",
+   "detail": "五代将軍綱吉が、犬など生き物の殺生を禁じた。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1701,
+   "title": "赤穂事件",
+   "detail": "江戸城での浅野長矩の刃傷と切腹、翌年の大石内蔵助らによる討ち入り。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1703,
+   "title": "元禄地震",
+   "detail": "関東南部を襲った大地震。津波が房総・相模の海岸を襲った。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 1703,
+   "title": "曽根崎心中",
+   "detail": "近松門左衛門の世話浄瑠璃。実際の心中事件に取材して大評判となった。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1707,
+   "title": "宝永地震と富士山の噴火",
+   "detail": "南海トラフの大地震の49日後、富士山が噴火して江戸にも降灰した。",
+   "level": 2,
+   "kind": "disaster"
+  },
+  {
+   "year": 1721,
+   "title": "目安箱の設置",
+   "detail": "吉宗が庶民の意見を投書させた。小石川養生所の設立などにつながった。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1732,
+   "title": "享保の大飢饉",
+   "detail": "ウンカの大発生などで、西日本が大凶作となった。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 1742,
+   "title": "公事方御定書",
+   "detail": "裁判や刑罰の基準をまとめた幕府の法典。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1748,
+   "title": "仮名手本忠臣蔵",
+   "detail": "赤穂事件を題材にした浄瑠璃・歌舞伎の名作が初演された。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1765,
+   "title": "錦絵の誕生",
+   "detail": "鈴木春信らが多色刷りの浮世絵版画（錦絵）を完成させた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1772,
+   "title": "田沼意次、老中に",
+   "detail": "株仲間や貿易を重んじた経済政策をとった。賄賂が横行したとの批判もある。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1787,
+   "title": "寛政の改革",
+   "detail": "老中松平定信が、倹約や囲米、旧里帰農を行い、幕府財政の立て直しをめざした。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1792,
+   "title": "ラクスマンの来航",
+   "detail": "ロシア使節が根室に来航し、通商を求めた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1798,
+   "title": "古事記伝の完成",
+   "detail": "本居宣長が35年をかけて古事記を読み解いた注釈書。国学を大成した。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1808,
+   "title": "フェートン号事件",
+   "detail": "イギリス軍艦が長崎港に侵入し、オランダ商館員を人質にとった。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1814,
+   "title": "北斎漫画",
+   "detail": "葛飾北斎が、人物・動植物・風景のスケッチ集を刊行した。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1825,
+   "title": "異国船打払令",
+   "detail": "幕府が、沿岸に近づく外国船を砲撃して追い払うよう命じた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1833,
+   "title": "東海道五十三次",
+   "detail": "歌川広重が東海道の風景を描き、庶民の旅行ブームに応えた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1833,
+   "title": "天保の飢饉",
+   "detail": "冷害・長雨による凶作が数年続いた。各地で一揆や打ちこわしが起こる。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 1837,
+   "title": "大塩平八郎の乱",
+   "detail": "大坂町奉行所の元役人・大塩平八郎が、飢饉に苦しむ人々を救おうと蜂起した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1841,
+   "title": "天保の改革",
+   "detail": "老中水野忠邦が、倹約令や株仲間の解散を行い、幕府の財政難を打開しようとした。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1842,
+   "title": "薪水給与令",
+   "detail": "アヘン戦争での清の敗北を知った幕府は、異国船打払令を改めた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1855,
+   "title": "安政江戸地震",
+   "detail": "江戸を襲った直下型の大地震。死者は数千〜1万人ともいわれる。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 1858,
+   "title": "安政の大獄",
+   "detail": "大老井伊直弼が、反対派の公家・大名・志士を処罰した。",
+   "level": 2,
+   "kind": "politics"
+  },
+  {
+   "year": 1860,
+   "title": "桜田門外の変",
+   "detail": "江戸城の桜田門外で、水戸脱藩士らが井伊直弼を暗殺した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1860,
+   "title": "咸臨丸の太平洋横断",
+   "detail": "勝海舟、福沢諭吉らを乗せ、日本の船が初めて太平洋を横断した。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1862,
+   "title": "生麦事件",
+   "detail": "薩摩藩の行列を横切った英国人が殺傷された。翌年の薩英戦争につながる。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1863,
+   "title": "薩英戦争",
+   "detail": "生麦事件の報復で英国艦隊が鹿児島を砲撃した。薩摩は英国に接近する。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1864,
+   "title": "禁門の変",
+   "detail": "長州藩が京都御所の蛤御門で、会津・薩摩の兵と戦って敗れた。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1864,
+   "title": "池田屋事件",
+   "detail": "京都三条の旅籠・池田屋で、新選組が長州系の志士らを襲撃した。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1867,
+   "title": "パリ万国博覧会",
+   "detail": "幕府と薩摩・佐賀藩が出品。日本の工芸品はヨーロッパのジャポニスムの流行を促した。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1869,
+   "title": "版籍奉還",
+   "detail": "藩主が土地（版）と人民（籍）を天皇に返上した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1869,
+   "title": "五稜郭の戦い",
+   "detail": "旧幕府軍の榎本武揚らが函館の五稜郭にたてこもり、敗れた。戊辰戦争の終結。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1871,
+   "title": "岩倉使節団",
+   "detail": "岩倉具視を団長に、欧米を約2年かけて視察した。不平等条約の改正は果たせなかったが、近代化の指針を得た。",
+   "level": 2,
+   "kind": "foreign"
+  },
+  {
+   "year": 1873,
+   "title": "徴兵令",
+   "detail": "満20歳の男子に兵役の義務を課した。国民皆兵の考え方による。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1873,
+   "title": "明治六年の政変",
+   "detail": "征韓論に敗れた西郷隆盛・板垣退助らが政府を去った。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1874,
+   "title": "民撰議院設立建白書",
+   "detail": "板垣退助らが、国会（議会）開設を求める意見書を政府に提出した。自由民権運動のはじまり。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1877,
+   "title": "東京大学の創立",
+   "detail": "官立の東京大学が開かれた。近代日本の高等教育の中心となる。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1881,
+   "title": "国会開設の勅諭",
+   "detail": "10年後（1890年）の国会開設を約束した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1885,
+   "title": "内閣制度の創設",
+   "detail": "初代首相に伊藤博文が就任した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1890,
+   "title": "第1回帝国議会",
+   "detail": "日本初の議会が開かれた。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1890,
+   "title": "教育勅語の発布",
+   "detail": "国民教育の基本を示す文書。学校の儀式などで用いられた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1895,
+   "title": "下関条約",
+   "detail": "日清戦争の講和条約。清は台湾・遼東半島などを日本に譲り、賠償金を支払った。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1895,
+   "title": "三国干渉",
+   "detail": "ロシア・ドイツ・フランスが遼東半島の返還を勧告した。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1897,
+   "title": "金本位制の確立",
+   "detail": "日清戦争の賠償金を準備金に、日本も金本位制を採用した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1901,
+   "title": "八幡製鉄所の操業",
+   "detail": "官営の八幡製鉄所が操業を始めた。重工業の基礎となった。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1902,
+   "title": "日英同盟",
+   "detail": "ロシアに対抗するため、イギリスと軍事同盟を結んだ。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1905,
+   "title": "ポーツマス条約",
+   "detail": "日露戦争の講和条約。賠償金が得られず、国内で不満が高まった。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1905,
+   "title": "日比谷焼打ち事件",
+   "detail": "講和条約への不満から、東京で大規模な暴動が起きた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1909,
+   "title": "伊藤博文の暗殺",
+   "detail": "ハルビン駅で、韓国の独立運動家・安重根に暗殺された。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1911,
+   "title": "関税自主権の回復",
+   "detail": "小村寿太郎外相のもと、条約改正が完成した。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1912,
+   "title": "明治天皇の崩御と大正改元",
+   "detail": "乃木希典夫妻が殉死した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1914,
+   "title": "東京駅の開業",
+   "detail": "辰野金吾の設計による赤レンガの駅舎が、東京に開業した。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1915,
+   "title": "二十一か条の要求",
+   "detail": "中国に対し、山東省の権益などを求めた。中国の反日感情が高まった。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1920,
+   "title": "国際連盟に加入",
+   "detail": "日本は常任理事国となった。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1921,
+   "title": "ワシントン会議",
+   "detail": "海軍の軍備制限などが協議され、日英同盟は終わった（1921〜22年）。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1925,
+   "title": "ラジオ放送の開始",
+   "detail": "東京・大阪・名古屋でラジオ放送が始まり、大衆文化を広げた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1927,
+   "title": "金融恐慌",
+   "detail": "銀行の取り付けが相次ぎ、休業する銀行が続出した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1927,
+   "title": "地下鉄の開業",
+   "detail": "東京の浅草〜上野間に、日本初の地下鉄が開業した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1928,
+   "title": "張作霖爆殺事件",
+   "detail": "関東軍が、満州の軍閥・張作霖の列車を爆破して殺害した。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1932,
+   "title": "五・一五事件",
+   "detail": "海軍の青年将校らが犬養毅首相を暗殺した。政党内閣の時代が終わる。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1932,
+   "title": "満州国の建国",
+   "detail": "関東軍が満州を占領して、満州国をつくった。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1933,
+   "title": "国際連盟からの脱退",
+   "detail": "満州国をめぐる勧告案を不服として、日本は連盟を去った。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1940,
+   "title": "日独伊三国同盟",
+   "detail": "ドイツ・イタリアと軍事同盟を結んだ。アメリカとの対立が深まる。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1942,
+   "title": "ミッドウェー海戦",
+   "detail": "日本海軍が空母4隻を失う大敗北を喫した。戦局の転機。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1944,
+   "title": "サイパン島の陥落",
+   "detail": "日本の防衛線が崩れ、本土空襲が本格化した。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1945,
+   "title": "東京大空襲",
+   "detail": "3月10日、東京の下町が大規模な空襲を受け、約10万人が亡くなった。",
+   "level": 2,
+   "kind": "war",
+   "month": 3
+  },
+  {
+   "year": 1945,
+   "title": "沖縄戦",
+   "detail": "アメリカ軍が沖縄本島に上陸した。民間人を巻き込む地上戦で、多くの犠牲が出た。",
+   "level": 2,
+   "kind": "war",
+   "month": 4
+  },
+  {
+   "year": 1945,
+   "title": "広島・長崎への原爆投下",
+   "detail": "8月6日に広島、9日に長崎に原子爆弾が投下された。",
+   "level": 2,
+   "kind": "war",
+   "month": 8
+  },
+  {
+   "year": 1946,
+   "title": "東京裁判の開廷",
+   "detail": "極東国際軍事裁判が開廷した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1947,
+   "title": "日本国憲法の施行",
+   "detail": "5月3日、新憲法が施行された。現在の「憲法記念日」。",
+   "level": 3,
+   "kind": "politics",
+   "month": 5
+  },
+  {
+   "year": 1950,
+   "title": "朝鮮戦争と警察予備隊",
+   "detail": "朝鮮戦争が起こり、日本に警察予備隊が創設された。「特需」で経済が回復する。",
+   "level": 3,
+   "kind": "war"
+  },
+  {
+   "year": 1952,
+   "title": "主権の回復",
+   "detail": "サンフランシスコ平和条約が発効し、日本は独立を回復した。",
+   "level": 3,
+   "kind": "politics",
+   "month": 4
+  },
+  {
+   "year": 1954,
+   "title": "第五福竜丸事件",
+   "detail": "ビキニ環礁の水爆実験で、漁船の乗組員が被ばくした。原水爆禁止運動が広がる。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1954,
+   "title": "自衛隊の発足",
+   "detail": "防衛庁・自衛隊が発足した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1955,
+   "title": "55年体制",
+   "detail": "自由民主党が結成され、保守と革新の二大政党体制が長く続いた。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1956,
+   "title": "日ソ共同宣言と国連加盟",
+   "detail": "ソ連との国交が回復し、日本は国際連合に加盟した。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1950,
+   "title": "金閣寺の放火",
+   "detail": "見習い僧の放火で金閣が焼失した。のち三島由紀夫が小説『金閣寺』にした。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1953,
+   "title": "テレビ放送の開始",
+   "detail": "NHKが東京でテレビの本放送を始めた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1958,
+   "title": "東京タワーの完成",
+   "detail": "電波塔として建てられた。高さ333m。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1959,
+   "title": "皇太子ご成婚",
+   "detail": "ご成婚パレードの中継をみようと、テレビが一気に普及した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1960,
+   "title": "安保闘争",
+   "detail": "日米安全保障条約の改定に反対する、大規模なデモが続いた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1968,
+   "title": "川端康成のノーベル文学賞",
+   "detail": "日本人として初めて文学賞を受けた。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1970,
+   "title": "大阪万国博覧会",
+   "detail": "「人類の進歩と調和」をテーマに開かれ、約6400万人が訪れた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1978,
+   "title": "日中平和友好条約",
+   "detail": "日中の国交正常化（1972年）から6年、友好条約が結ばれた。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1978,
+   "title": "成田空港の開港",
+   "detail": "建設反対運動が続くなか、新東京国際空港が開港した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1979,
+   "title": "ウォークマンの発売",
+   "detail": "ソニーが携帯型カセットプレーヤー「ウォークマン」を発売した。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1983,
+   "title": "ファミリーコンピュータ発売",
+   "detail": "任天堂の家庭用ゲーム機が、ゲームを家庭の遊びにした。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1985,
+   "title": "プラザ合意",
+   "detail": "円高ドル安を進める協調介入で合意し、のちバブル景気の遠因となった。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 1985,
+   "title": "日航123便の墜落",
+   "detail": "群馬県の御巣鷹の尾根に墜落した。520人が亡くなった。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 1987,
+   "title": "国鉄の分割民営化",
+   "detail": "JR各社が発足した。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1993,
+   "title": "非自民連立政権",
+   "detail": "細川護熙内閣が発足し、55年体制が終わった。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 1994,
+   "title": "大江健三郎のノーベル文学賞",
+   "detail": "川端康成に続いて、日本人で2人目。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 1995,
+   "title": "地下鉄サリン事件",
+   "detail": "オウム真理教が、東京の地下鉄でサリンをまいた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1997,
+   "title": "消費税率5%",
+   "detail": "消費税率が3%から5%に引き上げられた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 1997,
+   "title": "京都議定書",
+   "detail": "京都で開かれた会議で、温室効果ガス削減の目標が採択された。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 2001,
+   "title": "小泉内閣の発足",
+   "detail": "「構造改革」を掲げた内閣が、約5年半続いた。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 2002,
+   "title": "日朝首脳会談",
+   "detail": "小泉首相が平壌を訪問し、金正日総書記と会談した。",
+   "level": 3,
+   "kind": "foreign"
+  },
+  {
+   "year": 2002,
+   "title": "日韓ワールドカップ",
+   "detail": "サッカーのW杯が、日本と韓国の共催で開かれた。",
+   "level": 3,
+   "kind": "society"
+  },
+  {
+   "year": 2009,
+   "title": "政権交代",
+   "detail": "衆議院選挙で民主党が大勝し、鳩山内閣が発足した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 2012,
+   "title": "東京スカイツリーの開業",
+   "detail": "高さ634mの電波塔が開業した。",
+   "level": 3,
+   "kind": "culture"
+  },
+  {
+   "year": 2012,
+   "title": "第2次安倍内閣の発足",
+   "detail": "自民党が政権を奪還した。",
+   "level": 3,
+   "kind": "politics"
+  },
+  {
+   "year": 2016,
+   "title": "熊本地震",
+   "detail": "4月に震度7の地震が2回続けて起きた。",
+   "level": 3,
+   "kind": "disaster"
+  },
+  {
+   "year": 2018,
+   "title": "西日本豪雨",
+   "detail": "広い範囲で記録的な大雨が降り、200人を超える死者が出た。",
+   "level": 3,
+   "kind": "disaster"
   }
  ],
  "persons": [
@@ -3007,6 +4492,2314 @@
     "e": "smile",
     "a": 1
    }
+  },
+  {
+   "id": "nukata",
+   "name": "額田王",
+   "born": 630,
+   "died": 690,
+   "role": "万葉の女性歌人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "天智・天武の二人の天皇にかかわる歌で知られる、万葉集初期を代表する歌人。生没年は不詳。",
+   "face": {
+    "h": "long",
+    "k": "juni",
+    "c": "#5a3a8a",
+    "sex": "f",
+    "e": "calm"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "jito",
+   "name": "持統天皇",
+   "born": 645,
+   "died": 703,
+   "role": "女帝",
+   "kind": "politics",
+   "level": 2,
+   "detail": "天武天皇の皇后。夫の遺志をついで飛鳥浄御原令を施行し、藤原京を営んだ。",
+   "face": {
+    "h": "long",
+    "k": "kariginu",
+    "c": "#a23a2e",
+    "sex": "f",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "genmei",
+   "name": "元明天皇",
+   "born": 660,
+   "died": 721,
+   "role": "女帝",
+   "kind": "politics",
+   "level": 3,
+   "detail": "平城京への遷都と古事記の完成、和同開珎の発行が行われた時代の天皇。",
+   "face": {
+    "h": "long",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "sex": "f",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "hitomaro",
+   "name": "柿本人麻呂",
+   "born": 660,
+   "died": 720,
+   "role": "歌人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "万葉集を代表する宮廷歌人。長歌に力強い表現を残した。歌聖とも呼ばれる。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "beard"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "okura",
+   "name": "山上憶良",
+   "born": 660,
+   "died": 733,
+   "role": "歌人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "貧しい人々や子を思う歌を詠んだ。「貧窮問答歌」で知られる。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#3f6b4a",
+    "e": "calm",
+    "b": "goatee",
+    "a": 1
+   }
+  },
+  {
+   "id": "tabito",
+   "name": "大伴旅人",
+   "born": 665,
+   "died": 731,
+   "role": "歌人・官人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "大宰府の長官として、山上憶良らとともに筑紫歌壇を作った。「梅花の宴」を催したと伝わる。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#2f4a7a",
+    "e": "calm",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "yakamochi",
+   "name": "大伴家持",
+   "born": 718,
+   "died": 785,
+   "role": "歌人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "万葉集の編者の一人とされ、最多の歌を収める。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#3f6b4a",
+    "e": "calm"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "komyo",
+   "name": "光明皇后",
+   "born": 701,
+   "died": 760,
+   "role": "皇后",
+   "kind": "society",
+   "level": 2,
+   "detail": "聖武天皇の皇后。悲田院・施薬院を設けて、貧しい人や病人を助けたと伝わる。",
+   "face": {
+    "h": "long",
+    "k": "kariginu",
+    "c": "#a23a2e",
+    "sex": "f",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "fuhito",
+   "name": "藤原不比等",
+   "born": 659,
+   "died": 720,
+   "role": "政治家",
+   "kind": "politics",
+   "level": 2,
+   "detail": "大宝律令・養老律令の編纂にかかわり、藤原氏繁栄の基礎を築いた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#b8862b",
+    "e": "calm",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "nagaya",
+   "name": "長屋王",
+   "born": 684,
+   "died": 729,
+   "role": "皇族・政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "奈良時代前期の左大臣。藤原氏と対立し、謀反の疑いをかけられて自害した。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "e": "calm"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "kibi",
+   "name": "吉備真備",
+   "born": 695,
+   "died": 775,
+   "role": "学者・政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "遣唐使として唐に学び、帰国後は聖武・孝謙・称徳に仕えた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#3f6b4a",
+    "e": "calm",
+    "b": "mustache",
+    "a": 1
+   }
+  },
+  {
+   "id": "kammu",
+   "name": "桓武天皇",
+   "born": 737,
+   "died": 806,
+   "role": "天皇",
+   "kind": "politics",
+   "level": 2,
+   "detail": "長岡京、ついで平安京へ都を移し、蝦夷への軍事行動など、強い天皇権力をめざした。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#a23a2e",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "tamuramaro",
+   "name": "坂上田村麻呂",
+   "born": 758,
+   "died": 811,
+   "role": "武人",
+   "kind": "war",
+   "level": 3,
+   "detail": "初代の征夷大将軍。蝦夷の指導者アテルイらを降伏させた。",
+   "face": {
+    "h": "eboshi",
+    "k": "armor",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "b": "beard"
+   }
+  },
+  {
+   "id": "saga",
+   "name": "嵯峨天皇",
+   "born": 786,
+   "died": 842,
+   "role": "天皇",
+   "kind": "culture",
+   "level": 3,
+   "detail": "空海・橘逸勢とともに「三筆」の一人とされる。文化・漢詩を愛した。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "ennin",
+   "name": "円仁",
+   "born": 794,
+   "died": 864,
+   "role": "僧",
+   "kind": "culture",
+   "level": 3,
+   "detail": "最澄の弟子。唐に渡り、旅行記『入唐求法巡礼行記』を著した。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "enchin",
+   "name": "円珍",
+   "born": 814,
+   "died": 891,
+   "role": "僧",
+   "kind": "culture",
+   "level": 3,
+   "detail": "天台宗の僧。唐で密教を学び、のち園城寺（三井寺）を再興した。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#3f6b4a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "narihira",
+   "name": "在原業平",
+   "born": 825,
+   "died": 880,
+   "role": "歌人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『伊勢物語』の主人公のモデルとされる。六歌仙の一人。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "e": "smile"
+   }
+  },
+  {
+   "id": "tsurayuki",
+   "name": "紀貫之",
+   "born": 866,
+   "died": 945,
+   "role": "歌人",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『古今和歌集』の編者のひとり。『土佐日記』で、仮名による日記文学の道を開いた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "mustache"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "masakado",
+   "name": "平将門",
+   "born": 903,
+   "died": 940,
+   "role": "武士",
+   "kind": "war",
+   "level": 2,
+   "detail": "関東で挙兵して「新皇」を名乗ったが、藤原秀郷らに討たれた。",
+   "face": {
+    "h": "eboshi",
+    "k": "armor",
+    "c": "#a23a2e",
+    "e": "strong",
+    "b": "mustache"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "kuya",
+   "name": "空也",
+   "born": 903,
+   "died": 972,
+   "role": "僧",
+   "kind": "culture",
+   "level": 3,
+   "detail": "市（まち）を歩いて念仏を広めた「市聖」。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "genshin",
+   "name": "源信",
+   "born": 942,
+   "died": 1017,
+   "role": "僧",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『往生要集』で極楽と地獄を描き、浄土信仰のきっかけをつくった。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#3f6b4a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "yorimichi",
+   "name": "藤原頼通",
+   "born": 992,
+   "died": 1074,
+   "role": "政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "父・道長の後を継いで摂政・関白を50年つとめ、宇治に平等院を建てた。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "e": "calm",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "shirakawa",
+   "name": "白河上皇",
+   "born": 1053,
+   "died": 1129,
+   "role": "上皇",
+   "kind": "politics",
+   "level": 3,
+   "detail": "院政を始めた。「賀茂川の水、双六の賽、山法師」は思うままにならぬと語ったと伝わる。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#5a3a8a",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "yoshiie",
+   "name": "源義家",
+   "born": 1039,
+   "died": 1106,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "前九年・後三年の役で活躍した。「八幡太郎」とよばれ、のちの源氏の棟梁の象徴となる。",
+   "face": {
+    "h": "eboshi",
+    "k": "armor",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "kiyohira",
+   "name": "藤原清衡",
+   "born": 1056,
+   "died": 1128,
+   "role": "奥州藤原氏の祖",
+   "kind": "politics",
+   "level": 3,
+   "detail": "後三年の役ののち、平泉に中尊寺を建て、奥州の平和をめざした。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#b8862b",
+    "e": "calm",
+    "b": "beard"
+   }
+  },
+  {
+   "id": "saigyo",
+   "name": "西行",
+   "born": 1118,
+   "died": 1190,
+   "role": "歌人・僧",
+   "kind": "culture",
+   "level": 2,
+   "detail": "もと北面の武士。出家して諸国を旅しながら歌を詠んだ。『山家集』。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "b": "goatee"
+   }
+  },
+  {
+   "id": "yoshinaka",
+   "name": "木曽義仲",
+   "born": 1154,
+   "died": 1184,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "信濃で挙兵して、平氏を京から追い払った。ほどなく義経らに敗れた。",
+   "face": {
+    "h": "eboshi",
+    "k": "armor",
+    "c": "#a23a2e",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "shigemori",
+   "name": "平重盛",
+   "born": 1138,
+   "died": 1179,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "清盛の長男。父と後白河法皇の間を取り持とうとして、苦悩した。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#2f4a7a",
+    "e": "calm",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "unkei",
+   "name": "運慶",
+   "born": 1150,
+   "died": 1223,
+   "role": "仏師",
+   "kind": "culture",
+   "level": 2,
+   "detail": "東大寺南大門の金剛力士像を、快慶らとつくった。写実的な鎌倉彫刻の代表。",
+   "face": {
+    "h": "monk",
+    "k": "kimono",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "a": 1
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "eisai",
+   "name": "栄西",
+   "born": 1141,
+   "died": 1215,
+   "role": "僧",
+   "kind": "culture",
+   "level": 3,
+   "detail": "宋から臨済宗を伝え、茶の種子と飲茶の習慣も伝えた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#3f6b4a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "honen",
+   "name": "法然",
+   "born": 1133,
+   "died": 1212,
+   "role": "僧",
+   "kind": "culture",
+   "level": 2,
+   "detail": "「南無阿弥陀仏」を唱えれば救われると説き、浄土宗を開いた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "chomei",
+   "name": "鴨長明",
+   "born": 1155,
+   "died": 1216,
+   "role": "随筆家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "下鴨神社の神職の家に生まれ、のち出家して『方丈記』を著した。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "b": "goatee"
+   }
+  },
+  {
+   "id": "teika",
+   "name": "藤原定家",
+   "born": 1162,
+   "died": 1241,
+   "role": "歌人",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『新古今和歌集』の撰者。『小倉百人一首』をまとめたと伝わる。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "goatee"
+   }
+  },
+  {
+   "id": "yoshitoki",
+   "name": "北条義時",
+   "born": 1163,
+   "died": 1224,
+   "role": "執権",
+   "kind": "politics",
+   "level": 2,
+   "detail": "承久の乱で後鳥羽上皇を破り、北条氏の執権政治を固めた。",
+   "face": {
+    "h": "eboshi",
+    "k": "hitatare",
+    "c": "#3f6b4a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "sanetomo",
+   "name": "源実朝",
+   "born": 1192,
+   "died": 1219,
+   "role": "三代将軍",
+   "kind": "culture",
+   "level": 3,
+   "detail": "和歌にすぐれ、『金槐和歌集』を残した。鶴岡八幡宮で暗殺された。",
+   "face": {
+    "h": "eboshi",
+    "k": "kariginu",
+    "c": "#5a3a8a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "yasutoki",
+   "name": "北条泰時",
+   "born": 1183,
+   "died": 1242,
+   "role": "執権",
+   "kind": "politics",
+   "level": 3,
+   "detail": "御成敗式目を制定し、武士のための法の基準を示した。",
+   "face": {
+    "h": "eboshi",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "ippen",
+   "name": "一遍",
+   "born": 1239,
+   "died": 1289,
+   "role": "僧",
+   "kind": "culture",
+   "level": 3,
+   "detail": "全国を巡って念仏を広め、踊念仏で知られる。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "kenko",
+   "name": "兼好法師",
+   "born": 1283,
+   "died": 1352,
+   "role": "随筆家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『徒然草』の作者。もとは朝廷に仕えたが、のち出家した。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "yoshisada",
+   "name": "新田義貞",
+   "born": 1301,
+   "died": 1338,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "鎌倉に攻め込んで北条氏を滅ぼした。のち足利尊氏と対立して敗れた。",
+   "face": {
+    "h": "eboshi",
+    "k": "armor",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "b": "beard"
+   }
+  },
+  {
+   "id": "tadayoshi",
+   "name": "足利直義",
+   "born": 1306,
+   "died": 1352,
+   "role": "武将",
+   "kind": "politics",
+   "level": 3,
+   "detail": "兄・尊氏とともに幕府を築いたが、のち対立して観応の擾乱を起こした。",
+   "face": {
+    "h": "eboshi",
+    "k": "hitatare",
+    "c": "#3f6b4a",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "chikafusa",
+   "name": "北畠親房",
+   "born": 1293,
+   "died": 1354,
+   "role": "公卿・学者",
+   "kind": "politics",
+   "level": 3,
+   "detail": "南朝を支えた。『神皇正統記』で、南朝の正統性を主張した。",
+   "face": {
+    "h": "kanmuri",
+    "k": "kariginu",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "yoshinori",
+   "name": "足利義教",
+   "born": 1394,
+   "died": 1441,
+   "role": "六代将軍",
+   "kind": "politics",
+   "level": 3,
+   "detail": "専制的な政治をめざしたが、嘉吉の乱で暗殺された。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#a23a2e",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "rennyo",
+   "name": "蓮如",
+   "born": 1415,
+   "died": 1499,
+   "role": "僧",
+   "kind": "culture",
+   "level": 3,
+   "detail": "浄土真宗（本願寺）を再興し、平易な手紙（御文）で教えを広めた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#2b2b33",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "katsumoto",
+   "name": "細川勝元",
+   "born": 1430,
+   "died": 1473,
+   "role": "守護大名",
+   "kind": "politics",
+   "level": 3,
+   "detail": "応仁の乱で東軍の総大将となった。",
+   "face": {
+    "h": "eboshi",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "sozen",
+   "name": "山名宗全",
+   "born": 1404,
+   "died": 1473,
+   "role": "守護大名",
+   "kind": "politics",
+   "level": 3,
+   "detail": "応仁の乱で西軍の総大将。「赤入道」とも呼ばれた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#a23a2e",
+    "e": "strong",
+    "b": "beard"
+   }
+  },
+  {
+   "id": "tomiko",
+   "name": "日野富子",
+   "born": 1440,
+   "died": 1496,
+   "role": "将軍の妻",
+   "kind": "society",
+   "level": 3,
+   "detail": "足利義政の妻。わが子を将軍にしようとして、応仁の乱の一因となったともいわれる。",
+   "face": {
+    "h": "bun",
+    "k": "kimono",
+    "c": "#a23a2e",
+    "sex": "f",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "yoshimoto",
+   "name": "今川義元",
+   "born": 1519,
+   "died": 1560,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 2,
+   "detail": "駿河・遠江・三河を治めた。桶狭間の戦いで織田信長に討たれた。",
+   "face": {
+    "h": "eboshi",
+    "k": "hitatare",
+    "c": "#5a3a8a",
+    "e": "strong",
+    "b": "mustache",
+    "f": "round"
+   }
+  },
+  {
+   "id": "motonari",
+   "name": "毛利元就",
+   "born": 1497,
+   "died": 1571,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 2,
+   "detail": "厳島の戦いで勝ち、中国地方を支配した。「三本の矢」の話でも知られる。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#3f6b4a",
+    "e": "strong",
+    "b": "mustache",
+    "a": 1
+   }
+  },
+  {
+   "id": "dosan",
+   "name": "斎藤道三",
+   "born": 1494,
+   "died": 1556,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "油売りから美濃の国主にのぼりつめたと伝わる「美濃のマムシ」。娘の濃姫は信長の妻。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#a23a2e",
+    "e": "sharp",
+    "a": 1
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "motochika",
+   "name": "長宗我部元親",
+   "born": 1539,
+   "died": 1599,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "土佐から四国を統一しかけたが、秀吉に降伏した。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "yoshihisa",
+   "name": "島津義久",
+   "born": 1533,
+   "died": 1611,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "島津氏の当主。九州の大半を制したが、秀吉に降伏した。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2b2b33",
+    "e": "strong",
+    "b": "mustache",
+    "a": 1
+   }
+  },
+  {
+   "id": "ujiyasu",
+   "name": "北条氏康",
+   "born": 1515,
+   "died": 1571,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "小田原北条氏の三代目。河越夜戦で勝ち、関東に勢力を広げた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#5a3a8a",
+    "e": "strong",
+    "b": "mustache",
+    "a": 1
+   }
+  },
+  {
+   "id": "yoshikage",
+   "name": "朝倉義景",
+   "born": 1533,
+   "died": 1573,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "越前の大名。信長と対立し、滅ぼされた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#a23a2e",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "nagamasa",
+   "name": "浅井長政",
+   "born": 1545,
+   "died": 1573,
+   "role": "戦国大名",
+   "kind": "war",
+   "level": 3,
+   "detail": "信長の妹・お市の方を妻としたが、のち信長と戦って敗れた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "f": "long"
+   }
+  },
+  {
+   "id": "katsuie",
+   "name": "柴田勝家",
+   "born": 1522,
+   "died": 1583,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "信長に仕えた重臣。賤ヶ岳の戦いで秀吉に敗れた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#a23a2e",
+    "e": "strong",
+    "b": "beard",
+    "a": 1
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "toshiie",
+   "name": "前田利家",
+   "born": 1538,
+   "died": 1599,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "信長・秀吉に仕え、加賀百万石の基礎を築いた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#3f6b4a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "kanbe",
+   "name": "黒田官兵衛",
+   "born": 1546,
+   "died": 1604,
+   "role": "軍師",
+   "kind": "war",
+   "level": 3,
+   "detail": "秀吉の軍師として、中国攻めや天下統一を支えた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#3f6b4a",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "hanbei",
+   "name": "竹中半兵衛",
+   "born": 1544,
+   "died": 1579,
+   "role": "軍師",
+   "kind": "war",
+   "level": 3,
+   "detail": "秀吉に仕えた軍師。若くして病没した。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2f4a7a",
+    "e": "sharp",
+    "f": "long"
+   }
+  },
+  {
+   "id": "yukimura",
+   "name": "真田信繁（幸村）",
+   "born": 1567,
+   "died": 1615,
+   "role": "武将",
+   "kind": "war",
+   "level": 2,
+   "detail": "大坂の陣で、徳川家康の本陣に迫る奮戦をした。「日本一の兵」と称えられた。",
+   "face": {
+    "h": "kabuto",
+    "k": "armor",
+    "c": "#a23a2e",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "tadakatsu",
+   "name": "本多忠勝",
+   "born": 1548,
+   "died": 1610,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "徳川四天王の一人。生涯57回の戦で、かすり傷ひとつ負わなかったと伝わる。",
+   "face": {
+    "h": "kabuto",
+    "k": "armor",
+    "c": "#2b2b33",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "kiyomasa",
+   "name": "加藤清正",
+   "born": 1562,
+   "died": 1611,
+   "role": "武将",
+   "kind": "war",
+   "level": 3,
+   "detail": "賤ヶ岳の七本槍の一人。のち熊本城を築いた。",
+   "face": {
+    "h": "kabuto",
+    "k": "armor",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "xavier",
+   "name": "フランシスコ・ザビエル",
+   "born": 1506,
+   "died": 1552,
+   "role": "宣教師",
+   "kind": "foreign",
+   "level": 2,
+   "detail": "1549年に鹿児島に上陸し、日本に初めてキリスト教を伝えた。",
+   "face": {
+    "h": "nun",
+    "k": "robe",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "beard"
+   }
+  },
+  {
+   "id": "musashi",
+   "name": "宮本武蔵",
+   "born": 1584,
+   "died": 1645,
+   "role": "剣豪",
+   "kind": "culture",
+   "level": 2,
+   "detail": "二刀流の剣豪。晩年に『五輪書』を著した。画家としても知られる。",
+   "face": {
+    "h": "shaggy",
+    "k": "kimono",
+    "c": "#6b4a2e",
+    "e": "sharp"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "eitoku",
+   "name": "狩野永徳",
+   "born": 1543,
+   "died": 1590,
+   "role": "絵師",
+   "kind": "culture",
+   "level": 3,
+   "detail": "安土城・大坂城の障壁画を描いた。豪華な桃山の画風を代表する。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#b8862b",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "koetsu",
+   "name": "本阿弥光悦",
+   "born": 1558,
+   "died": 1637,
+   "role": "芸術家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "書・陶芸・蒔絵などにすぐれ、京の鷹ヶ峰に芸術村をひらいた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "hidetada",
+   "name": "徳川秀忠",
+   "born": 1579,
+   "died": 1632,
+   "role": "二代将軍",
+   "kind": "politics",
+   "level": 3,
+   "detail": "家康の後を継ぎ、武家諸法度を定めるなど、幕府の基礎を固めた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#3f6b4a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "shiro",
+   "name": "天草四郎",
+   "born": 1621,
+   "died": 1638,
+   "role": "島原の乱の指導者",
+   "kind": "society",
+   "level": 2,
+   "detail": "島原の乱の総大将とされる少年。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#e8e2d0",
+    "e": "sharp",
+    "f": "long"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "masayuki",
+   "name": "保科正之",
+   "born": 1611,
+   "died": 1673,
+   "role": "会津藩主",
+   "kind": "politics",
+   "level": 3,
+   "detail": "徳川家光の異母弟。幼い四代将軍家綱を支え、玉川上水の整備などを行った。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "mitsukuni",
+   "name": "徳川光圀",
+   "born": 1628,
+   "died": 1701,
+   "role": "水戸藩主",
+   "kind": "culture",
+   "level": 2,
+   "detail": "水戸黄門。『大日本史』の編纂を始めた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#5a3a8a",
+    "e": "calm",
+    "b": "beard",
+    "a": 1
+   }
+  },
+  {
+   "id": "tsunayoshi",
+   "name": "徳川綱吉",
+   "born": 1646,
+   "died": 1709,
+   "role": "五代将軍",
+   "kind": "politics",
+   "level": 3,
+   "detail": "学問を奨励する一方、生類憐みの令で知られる。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#a23a2e",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "saikaku",
+   "name": "井原西鶴",
+   "born": 1642,
+   "died": 1693,
+   "role": "作家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "大坂の町人の生活を描いた浮世草子の作家。",
+   "face": {
+    "h": "monk",
+    "k": "kimono",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "hakuseki",
+   "name": "新井白石",
+   "born": 1657,
+   "died": 1725,
+   "role": "儒学者・政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "六代・七代将軍に仕え、正徳の治をすすめた。『西洋紀聞』を著した。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "tadasuke",
+   "name": "大岡忠相",
+   "born": 1677,
+   "died": 1752,
+   "role": "町奉行",
+   "kind": "politics",
+   "level": 3,
+   "detail": "吉宗に重用され、江戸の町奉行として、町火消の整備などを行った。「大岡越前」。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#3f6b4a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "okitsugu",
+   "name": "田沼意次",
+   "born": 1719,
+   "died": 1788,
+   "role": "老中",
+   "kind": "politics",
+   "level": 3,
+   "detail": "商業を重んじる政策をとった。失脚後に評価が分かれる。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#5a3a8a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "sadanobu",
+   "name": "松平定信",
+   "born": 1758,
+   "died": 1829,
+   "role": "老中",
+   "kind": "politics",
+   "level": 3,
+   "detail": "寛政の改革をすすめた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "norinaga",
+   "name": "本居宣長",
+   "born": 1730,
+   "died": 1801,
+   "role": "国学者",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『古事記伝』を著し、日本古来の心「もののあはれ」を論じた。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "buson",
+   "name": "与謝蕪村",
+   "born": 1716,
+   "died": 1784,
+   "role": "俳人・画家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "絵画的な句をつくる俳人であり、南画の画家でもあった。",
+   "face": {
+    "h": "monk",
+    "k": "robe",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "issa",
+   "name": "小林一茶",
+   "born": 1763,
+   "died": 1828,
+   "role": "俳人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "「やせ蛙 負けるな一茶 これにあり」など、庶民的な句で知られる。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#6a6a70",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "hiroshige",
+   "name": "歌川広重",
+   "born": 1797,
+   "died": 1858,
+   "role": "浮世絵師",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『東海道五十三次』などの風景画で、人気を集めた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2f4a7a",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "ikku",
+   "name": "十返舎一九",
+   "born": 1765,
+   "died": 1831,
+   "role": "作家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『東海道中膝栗毛』の作者。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#a23a2e",
+    "e": "smile"
+   }
+  },
+  {
+   "id": "bakin",
+   "name": "曲亭馬琴",
+   "born": 1767,
+   "died": 1848,
+   "role": "作家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "28年かけて『南総里見八犬伝』を完成した。晩年は失明したが、口述で書き続けた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "koan",
+   "name": "緒方洪庵",
+   "born": 1810,
+   "died": 1863,
+   "role": "蘭学者・医師",
+   "kind": "culture",
+   "level": 3,
+   "detail": "大坂に適塾を開き、福沢諭吉や大村益次郎などを育てた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "choei",
+   "name": "高野長英",
+   "born": 1804,
+   "died": 1850,
+   "role": "蘭学者",
+   "kind": "culture",
+   "level": 3,
+   "detail": "幕府の異国船打払いを批判して「蛮社の獄」で投獄された。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#3f6b4a",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "oshio",
+   "name": "大塩平八郎",
+   "born": 1793,
+   "died": 1837,
+   "role": "陽明学者・元役人",
+   "kind": "society",
+   "level": 3,
+   "detail": "飢饉の際に民衆を救おうとして蜂起した。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#a23a2e",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "sontoku",
+   "name": "二宮尊徳",
+   "born": 1787,
+   "died": 1856,
+   "role": "農政家",
+   "kind": "society",
+   "level": 3,
+   "detail": "小田原の農家に生まれ、農村の復興に尽くした。薪を背負って本を読む少年像で知られる。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#6b4a2e",
+    "e": "calm",
+    "a": 1
+   }
+  },
+  {
+   "id": "rinzo",
+   "name": "間宮林蔵",
+   "born": 1780,
+   "died": 1844,
+   "role": "探検家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "樺太が島であることを確かめた。「間宮海峡」の名の由来。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "mizuno",
+   "name": "水野忠邦",
+   "born": 1794,
+   "died": 1851,
+   "role": "老中",
+   "kind": "politics",
+   "level": 3,
+   "detail": "天保の改革をすすめた。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#5a3a8a",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "abe_m",
+   "name": "阿部正弘",
+   "born": 1819,
+   "died": 1857,
+   "role": "老中",
+   "kind": "politics",
+   "level": 3,
+   "detail": "ペリー来航時に老中首座として、広く意見を聞く政治をとった。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "kido",
+   "name": "木戸孝允（桂小五郎）",
+   "born": 1833,
+   "died": 1877,
+   "role": "政治家",
+   "kind": "politics",
+   "level": 2,
+   "detail": "長州藩の指導者。薩長同盟を結び、維新後は版籍奉還や廃藩置県を進めた。「維新の三傑」。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#3f6b4a",
+    "e": "sharp"
+   }
+  },
+  {
+   "id": "takasugi",
+   "name": "高杉晋作",
+   "born": 1839,
+   "died": 1867,
+   "role": "長州藩士",
+   "kind": "war",
+   "level": 2,
+   "detail": "奇兵隊をつくり、長州藩を倒幕へ導いた。27歳で病没した。",
+   "face": {
+    "h": "shaggy",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "f": "long"
+   }
+  },
+  {
+   "id": "okubo",
+   "name": "大久保利通",
+   "born": 1830,
+   "died": 1878,
+   "role": "政治家",
+   "kind": "politics",
+   "level": 2,
+   "detail": "薩摩出身。維新後の中心人物として、殖産興業をすすめた。「維新の三傑」。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "iwakura",
+   "name": "岩倉具視",
+   "born": 1825,
+   "died": 1883,
+   "role": "公家・政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "岩倉使節団の正使をつとめた。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "kondo",
+   "name": "近藤勇",
+   "born": 1834,
+   "died": 1868,
+   "role": "新選組局長",
+   "kind": "war",
+   "level": 3,
+   "detail": "京都の治安維持にあたった新選組の局長。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2b2b33",
+    "e": "strong",
+    "b": "mustache",
+    "f": "round"
+   }
+  },
+  {
+   "id": "hijikata",
+   "name": "土方歳三",
+   "born": 1835,
+   "died": 1869,
+   "role": "新選組副長",
+   "kind": "war",
+   "level": 3,
+   "detail": "新選組の副長。戊辰戦争では最後まで戦い、函館で戦死した。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "f": "long"
+   }
+  },
+  {
+   "id": "okita",
+   "name": "沖田総司",
+   "born": 1844,
+   "died": 1868,
+   "role": "新選組隊士",
+   "kind": "war",
+   "level": 3,
+   "detail": "剣の達人とされる。結核のため若くして亡くなった。",
+   "face": {
+    "h": "topknot",
+    "k": "kimono",
+    "c": "#e8e2d0",
+    "e": "smile",
+    "f": "long"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "nariakira",
+   "name": "島津斉彬",
+   "born": 1809,
+   "died": 1858,
+   "role": "薩摩藩主",
+   "kind": "politics",
+   "level": 3,
+   "detail": "集成館事業で近代工業をおこし、西郷隆盛らを見出した。",
+   "face": {
+    "h": "topknot",
+    "k": "hitatare",
+    "c": "#2f4a7a",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "nakaoka",
+   "name": "中岡慎太郎",
+   "born": 1838,
+   "died": 1867,
+   "role": "土佐藩士",
+   "kind": "politics",
+   "level": 3,
+   "detail": "坂本龍馬とともに薩長同盟に尽力した。京都の近江屋で龍馬とともに襲われた。",
+   "face": {
+    "h": "shaggy",
+    "k": "kimono",
+    "c": "#3f6b4a",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "okuma",
+   "name": "大隈重信",
+   "born": 1838,
+   "died": 1922,
+   "role": "政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "東京専門学校（のち早稲田大学）をつくった。首相をつとめた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "strong",
+    "b": "mustache",
+    "a": 1
+   }
+  },
+  {
+   "id": "yamagata",
+   "name": "山県有朋",
+   "born": 1838,
+   "died": 1922,
+   "role": "政治家・軍人",
+   "kind": "politics",
+   "level": 3,
+   "detail": "徴兵制の整備につとめ、「国軍の父」とされる。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "b": "mustache",
+    "a": 1
+   }
+  },
+  {
+   "id": "mutsu",
+   "name": "陸奥宗光",
+   "born": 1844,
+   "died": 1897,
+   "role": "外交官",
+   "kind": "foreign",
+   "level": 3,
+   "detail": "外相として、不平等条約のうち治外法権の撤廃（1894年）を実現した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "komura",
+   "name": "小村寿太郎",
+   "born": 1855,
+   "died": 1911,
+   "role": "外交官",
+   "kind": "foreign",
+   "level": 3,
+   "detail": "日露戦争の講和（ポーツマス条約）と、関税自主権の回復を担った。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "togo",
+   "name": "東郷平八郎",
+   "born": 1848,
+   "died": 1934,
+   "role": "海軍軍人",
+   "kind": "war",
+   "level": 2,
+   "detail": "日本海海戦で、バルチック艦隊を破った。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#1f2f4f",
+    "e": "strong",
+    "b": "beard",
+    "a": 1
+   }
+  },
+  {
+   "id": "nogi",
+   "name": "乃木希典",
+   "born": 1849,
+   "died": 1912,
+   "role": "陸軍軍人",
+   "kind": "war",
+   "level": 3,
+   "detail": "旅順攻囲戦を指揮した。明治天皇の死に殉じた。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#1f2f4f",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "ogai",
+   "name": "森鷗外",
+   "born": 1862,
+   "died": 1922,
+   "role": "作家・軍医",
+   "kind": "culture",
+   "level": 2,
+   "detail": "陸軍軍医総監をつとめながら、『舞姫』『高瀬舟』などを書いた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "shiki",
+   "name": "正岡子規",
+   "born": 1867,
+   "died": 1902,
+   "role": "俳人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "俳句と短歌の革新をすすめた。病床で『病牀六尺』を書き続けた。",
+   "face": {
+    "h": "bob",
+    "k": "suit",
+    "c": "#6a6a70",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "takuboku",
+   "name": "石川啄木",
+   "born": 1886,
+   "died": 1912,
+   "role": "歌人",
+   "kind": "culture",
+   "level": 3,
+   "detail": "貧しい生活のなかで『一握の砂』を詠んだ。26歳で病没した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "f": "long"
+   }
+  },
+  {
+   "id": "akutagawa",
+   "name": "芥川龍之介",
+   "born": 1892,
+   "died": 1927,
+   "role": "作家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『羅生門』『鼻』『蜘蛛の糸』などの短編を書いた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "f": "long"
+   }
+  },
+  {
+   "id": "kitasato",
+   "name": "北里柴三郎",
+   "born": 1853,
+   "died": 1931,
+   "role": "細菌学者",
+   "kind": "culture",
+   "level": 3,
+   "detail": "破傷風菌の純粋培養に成功し、ペスト菌も発見した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "strong",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "uchimura",
+   "name": "内村鑑三",
+   "born": 1861,
+   "died": 1930,
+   "role": "キリスト教思想家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "無教会主義を唱え、『代表的日本人』などを書いた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "nitobe",
+   "name": "新渡戸稲造",
+   "born": 1862,
+   "died": 1933,
+   "role": "教育者",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『武士道』を英語で書き、国際連盟事務次長もつとめた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "mustache",
+    "g": 1
+   }
+  },
+  {
+   "id": "tenshin",
+   "name": "岡倉天心",
+   "born": 1863,
+   "died": 1913,
+   "role": "美術指導者",
+   "kind": "culture",
+   "level": 3,
+   "detail": "東京美術学校の設立に関わり、英文の『茶の本』で日本の美を世界に紹介した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "tanaka_s",
+   "name": "田中正造",
+   "born": 1841,
+   "died": 1913,
+   "role": "政治家",
+   "kind": "society",
+   "level": 3,
+   "detail": "足尾銅山の鉱毒事件を、帝国議会や天皇への直訴で訴えた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#6a6a70",
+    "e": "strong",
+    "b": "beard",
+    "a": 1
+   }
+  },
+  {
+   "id": "raicho",
+   "name": "平塚らいてう",
+   "born": 1886,
+   "died": 1971,
+   "role": "婦人運動家",
+   "kind": "society",
+   "level": 2,
+   "detail": "雑誌『青鞜』で「元始、女性は実に太陽であった」と宣言した。",
+   "face": {
+    "h": "bun",
+    "k": "kimono",
+    "c": "#5a3a8a",
+    "sex": "f",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "kenji",
+   "name": "宮沢賢治",
+   "born": 1896,
+   "died": 1933,
+   "role": "詩人・童話作家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『銀河鉄道の夜』『雨ニモマケズ』。岩手の農民のために尽くした。",
+   "face": {
+    "h": "bob",
+    "k": "suit",
+    "c": "#6a6a70",
+    "e": "calm",
+    "f": "long"
+   }
+  },
+  {
+   "id": "yamamoto",
+   "name": "山本五十六",
+   "born": 1884,
+   "died": 1943,
+   "role": "海軍軍人",
+   "kind": "war",
+   "level": 3,
+   "detail": "連合艦隊司令長官として真珠湾攻撃を指揮した。南方の前線視察中に戦死した。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#1f2f4f",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "tojo",
+   "name": "東条英機",
+   "born": 1884,
+   "died": 1948,
+   "role": "陸軍軍人・首相",
+   "kind": "politics",
+   "level": 3,
+   "detail": "太平洋戦争開戦時の首相。戦後、東京裁判で死刑となった。",
+   "face": {
+    "h": "western",
+    "k": "uniform",
+    "c": "#1f2f4f",
+    "e": "calm",
+    "b": "mustache",
+    "g": 1
+   }
+  },
+  {
+   "id": "shidehara",
+   "name": "幣原喜重郎",
+   "born": 1872,
+   "died": 1951,
+   "role": "外交官・首相",
+   "kind": "foreign",
+   "level": 3,
+   "detail": "協調外交を進めた。戦後は首相として、新憲法の草案づくりにかかわった。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "g": 1,
+    "a": 1
+   }
+  },
+  {
+   "id": "korekiyo",
+   "name": "高橋是清",
+   "born": 1854,
+   "died": 1936,
+   "role": "政治家",
+   "kind": "politics",
+   "level": 2,
+   "detail": "蔵相として昭和恐慌からの脱出を図ったが、二・二六事件で暗殺された。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "mustache",
+    "a": 1
+   }
+  },
+  {
+   "id": "inukai",
+   "name": "犬養毅",
+   "born": 1855,
+   "died": 1932,
+   "role": "政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "「話せばわかる」と言い残し、五・一五事件で暗殺された。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "mustache",
+    "a": 1
+   }
+  },
+  {
+   "id": "kato_t",
+   "name": "加藤高明",
+   "born": 1860,
+   "died": 1926,
+   "role": "政治家",
+   "kind": "politics",
+   "level": 3,
+   "detail": "普通選挙法を成立させた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "b": "mustache"
+   }
+  },
+  {
+   "id": "kawabata",
+   "name": "川端康成",
+   "born": 1899,
+   "died": 1972,
+   "role": "作家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『伊豆の踊子』『雪国』。日本人初のノーベル文学賞。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "f": "long"
+   }
+  },
+  {
+   "id": "mishima",
+   "name": "三島由紀夫",
+   "born": 1925,
+   "died": 1970,
+   "role": "作家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『金閣寺』『潮騒』。1970年、自衛隊市ヶ谷駐屯地で割腹自殺した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "dazai",
+   "name": "太宰治",
+   "born": 1909,
+   "died": 1948,
+   "role": "作家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『人間失格』『走れメロス』。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "f": "long"
+   }
+  },
+  {
+   "id": "ozu",
+   "name": "小津安二郎",
+   "born": 1903,
+   "died": 1963,
+   "role": "映画監督",
+   "kind": "culture",
+   "level": 3,
+   "detail": "『東京物語』。低い位置から撮る「ローアングル」で知られる。",
+   "face": {
+    "h": "beret",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm"
+   }
+  },
+  {
+   "id": "rikidozan",
+   "name": "力道山",
+   "born": 1924,
+   "died": 1963,
+   "role": "プロレスラー",
+   "kind": "culture",
+   "level": 3,
+   "detail": "戦後の日本で、プロレスブームの英雄となった。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "taro",
+   "name": "岡本太郎",
+   "born": 1911,
+   "died": 1996,
+   "role": "芸術家",
+   "kind": "culture",
+   "level": 2,
+   "detail": "「芸術は爆発だ」。大阪万博の「太陽の塔」をつくった。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#a23a2e",
+    "e": "strong",
+    "f": "round"
+   }
+  },
+  {
+   "id": "tange",
+   "name": "丹下健三",
+   "born": 1913,
+   "died": 2005,
+   "role": "建築家",
+   "kind": "culture",
+   "level": 3,
+   "detail": "代々木競技場や東京都庁舎を設計した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "g": 1
+   }
+  },
+  {
+   "id": "ikeda",
+   "name": "池田勇人",
+   "born": 1899,
+   "died": 1965,
+   "role": "首相",
+   "kind": "politics",
+   "level": 3,
+   "detail": "「所得倍増計画」を掲げて、高度経済成長を進めた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "strong"
+   }
+  },
+  {
+   "id": "sato",
+   "name": "佐藤栄作",
+   "born": 1901,
+   "died": 1975,
+   "role": "首相",
+   "kind": "politics",
+   "level": 3,
+   "detail": "沖縄返還を実現し、非核三原則を表明した。ノーベル平和賞を受けた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "sharp",
+    "g": 1
+   }
+  },
+  {
+   "id": "nakasone",
+   "name": "中曽根康弘",
+   "born": 1918,
+   "died": 2019,
+   "role": "首相",
+   "kind": "politics",
+   "level": 3,
+   "detail": "国鉄の分割民営化を進めた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "smile",
+    "a": 1
+   }
+  },
+  {
+   "id": "tomonaga",
+   "name": "朝永振一郎",
+   "born": 1906,
+   "died": 1979,
+   "role": "物理学者",
+   "kind": "culture",
+   "level": 3,
+   "detail": "「くりこみ理論」で、ノーベル物理学賞を受けた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "calm",
+    "g": 1
+   }
+  },
+  {
+   "id": "nagashima",
+   "name": "長嶋茂雄",
+   "born": 1936,
+   "died": 2025,
+   "role": "プロ野球選手・監督",
+   "kind": "culture",
+   "level": 2,
+   "detail": "「ミスタープロ野球」。巨人の中心打者として活躍した。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#a23a2e",
+    "e": "smile"
+   }
+  },
+  {
+   "id": "miyazaki",
+   "name": "宮崎駿",
+   "born": 1941,
+   "died": 2026,
+   "role": "アニメーション監督",
+   "kind": "culture",
+   "level": 2,
+   "detail": "『となりのトトロ』『千と千尋の神隠し』。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#6a6a70",
+    "e": "calm",
+    "g": 1,
+    "a": 1
+   },
+   "alive": true
+  },
+  {
+   "id": "yamanaka",
+   "name": "山中伸弥",
+   "born": 1962,
+   "died": 2026,
+   "role": "医学者",
+   "kind": "culture",
+   "level": 3,
+   "detail": "iPS細胞を作製して、ノーベル生理学・医学賞を受けた。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2b2b33",
+    "e": "smile",
+    "g": 1
+   },
+   "alive": true
+  },
+  {
+   "id": "ohtani",
+   "name": "大谷翔平",
+   "born": 1994,
+   "died": 2026,
+   "role": "野球選手",
+   "kind": "culture",
+   "level": 2,
+   "detail": "投打の「二刀流」で、メジャーリーグで活躍している。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#2f4a7a",
+    "e": "smile"
+   },
+   "alive": true
   }
  ],
  "pkinds": [
