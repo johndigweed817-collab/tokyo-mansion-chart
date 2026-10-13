@@ -173,7 +173,10 @@
    "detail": "関東くんのスーパーファミコンのコントローラが、よいおかに借りパクされた。催促して返ってきたものは、明らかに別物だった。",
    "lesson": "返ってきたら、まず中身を疑え。",
    "level": 1,
-   "kind": "case"
+   "kind": "case",
+   "people": [
+    "yoioka"
+   ]
   },
   {
    "year": 1995,
@@ -182,7 +185,10 @@
    "detail": "高1の夏、イタルの頭が、盗んだジェルのおかげで3センチくらい大きくなった。",
    "lesson": "盛ったものは、いつか数字になる。",
    "level": 1,
-   "kind": "oddity"
+   "kind": "oddity",
+   "people": [
+    "itaru"
+   ]
   },
   {
    "year": 1996,
@@ -191,7 +197,12 @@
    "detail": "高2の春、ハヤはヒラタに暴行を受け、さらにマツオにローファーをバカにされて、すっかり消耗していった。",
    "lesson": "心の傷は、拳より靴にこたえる。",
    "level": 1,
-   "kind": "case"
+   "kind": "case",
+   "people": [
+    "haya",
+    "hirata",
+    "matsuo"
+   ]
   },
   {
    "year": 1996,
@@ -245,7 +256,10 @@
    "lesson": "怒りの代償は、ガラス代で支払う。",
    "level": 1,
    "kind": "incident",
-   "month": 8
+   "month": 8,
+   "people": [
+    "okana"
+   ]
   },
   {
    "year": 1997,
@@ -254,7 +268,10 @@
    "lesson": "出来心で曲げたものは、思ったより曲がらない。",
    "level": 1,
    "kind": "incident",
-   "month": 12
+   "month": 12,
+   "people": [
+    "matsuo"
+   ]
   },
   {
    "year": 1997,
@@ -263,7 +280,11 @@
    "detail": "高3の冬、バンバンが早稲田塾にあったタバコの自販機で買っているところを見られ、チューターから「退塾にするよ！」と言われた。",
    "lesson": "受験の冬にも、自販機はよく光る。",
    "level": 1,
-   "kind": "case"
+   "kind": "case",
+   "people": [
+    "banba",
+    "tutor"
+   ]
   },
   {
    "year": 1998,
@@ -272,7 +293,10 @@
    "lesson": "酔っても、箱には収まる。",
    "level": 1,
    "kind": "incident",
-   "month": 10
+   "month": 10,
+   "people": [
+    "sakachun"
+   ]
   },
   {
    "year": 2014,
@@ -281,7 +305,11 @@
    "lesson": "めでたい席でも、ノートパソコンは開く人が開く。",
    "level": 1,
    "kind": "incident",
-   "month": 10
+   "month": 10,
+   "people": [
+    "haya",
+    "shinbun"
+   ]
   },
   {
    "year": 2026,
@@ -577,6 +605,29 @@
    "born": 1979,
    "died": 2026,
    "alive": true,
+   "eras": [
+    "soya"
+   ]
+  },
+  {
+   "id": "tutor",
+   "name": "チューター",
+   "kind": "rare",
+   "level": 2,
+   "role": "レア（高3の1年だけ）",
+   "detail": "高3の1年間だけ現れた、早稲田塾のチューター。バンバンのタバコ購入を目撃し、「退塾にするよ！」と告げた。",
+   "lesson": "一年限りの人ほど、いちばん記憶に残る。",
+   "face": {
+    "h": "western",
+    "k": "suit",
+    "c": "#6b6b6b",
+    "g": true,
+    "e": "sharp"
+   },
+   "born": 1997.25,
+   "died": 1998.25,
+   "bornApprox": true,
+   "diedApprox": true,
    "eras": [
     "soya"
    ]
