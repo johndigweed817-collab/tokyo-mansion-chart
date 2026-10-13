@@ -167,7 +167,8 @@
    "lesson": "伝説は、産声から始まる。",
    "level": 1,
    "kind": "oddity",
-   "score": 72
+   "score": 72,
+   "id": "birth"
   },
   {
    "year": 1990,
@@ -179,7 +180,8 @@
    "people": [
     "yoioka"
    ],
-   "score": 90
+   "score": 90,
+   "id": "superfami"
   },
   {
    "year": 1995,
@@ -192,7 +194,8 @@
    "people": [
     "itaru"
    ],
-   "score": 80
+   "score": 80,
+   "id": "itaru_gel"
   },
   {
    "year": 1996,
@@ -207,7 +210,8 @@
     "hirata",
     "matsuo"
    ],
-   "score": 82
+   "score": 82,
+   "id": "haya_spring"
   },
   {
    "year": 1996,
@@ -217,7 +221,8 @@
    "level": 1,
    "kind": "law",
    "month": 5,
-   "score": 95
+   "score": 95,
+   "id": "rooftop"
   },
   {
    "year": 1996,
@@ -227,7 +232,8 @@
    "level": 1,
    "kind": "oddity",
    "month": 8,
-   "score": 76
+   "score": 76,
+   "id": "hammerhead"
   },
   {
    "year": 1996,
@@ -237,7 +243,8 @@
    "level": 1,
    "kind": "case",
    "month": 12,
-   "score": 84
+   "score": 84,
+   "id": "kamikakushi"
   },
   {
    "year": 1997,
@@ -247,7 +254,8 @@
    "level": 2,
    "kind": "case",
    "approx": true,
-   "score": 74
+   "score": 74,
+   "id": "chijiwa"
   },
   {
    "year": 1997,
@@ -257,7 +265,8 @@
    "level": 1,
    "kind": "trend",
    "month": 5,
-   "score": 78
+   "score": 78,
+   "id": "walkman"
   },
   {
    "year": 1997,
@@ -270,7 +279,8 @@
    "people": [
     "okana"
    ],
-   "score": 92
+   "score": 92,
+   "id": "okana_hen"
   },
   {
    "year": 1997,
@@ -283,7 +293,8 @@
    "people": [
     "matsuo"
    ],
-   "score": 98
+   "score": 98,
+   "id": "number_plate"
   },
   {
    "year": 1997,
@@ -297,7 +308,8 @@
     "banba",
     "tutor"
    ],
-   "score": 86
+   "score": 86,
+   "id": "waseda_vending"
   },
   {
    "year": 1998,
@@ -310,7 +322,8 @@
    "people": [
     "sakachun"
    ],
-   "score": 94
+   "score": 94,
+   "id": "shugaku"
   },
   {
    "year": 2014,
@@ -324,7 +337,8 @@
     "haya",
     "shinbun"
    ],
-   "score": 88
+   "score": 88,
+   "id": "haya_wedding"
   },
   {
    "year": 2026,
@@ -333,7 +347,8 @@
    "lesson": "笑い話は、時が経つほど価値が上がる。",
    "level": 1,
    "kind": "oddity",
-   "score": 70
+   "score": 70,
+   "id": "compiled"
   }
  ],
  "persons": [
