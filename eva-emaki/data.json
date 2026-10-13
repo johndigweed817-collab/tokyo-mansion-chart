@@ -1721,17 +1721,15 @@
    "region": "common",
    "name": "葛城ミサト",
    "born": 2000.6,
-   "died": 2001.0,
+   "died": 2015,
    "role": "作戦部長",
    "kind": "adult",
    "score": 94,
-   "detail": "セカンドインパクトの現場にいた、葛城調査隊の少女。この体験が、のちの彼女を形づくる。",
+   "detail": "セカンドインパクトの現場にいた、葛城調査隊の少女。この体験が、のちの彼女を形づくる。やがて成長し、ネルフの作戦部長となる。",
    "face": {
     "image": "faces/misato.svg"
    },
-   "level": 1,
-   "bornApprox": true,
-   "diedApprox": true
+   "level": 1
   },
   {
    "id": "naoko__common",
@@ -2562,11 +2560,11 @@
    "region": "rb",
    "name": "葛城ミサト",
    "born": 2015.01,
-   "died": 2029.9,
+   "died": 2029.65,
    "role": "作戦部長",
    "kind": "adult",
    "score": 94,
-   "detail": "ネルフの作戦部長で、シンジの保護者でもある。のちに、ヴィレを率いる立場になる。",
+   "detail": "新劇場版でも、ネルフからヴィレへと、シンジを見守り続ける。シンで、自らの決断により最期を迎える。",
    "face": {
     "image": "faces/misato.svg"
    },
