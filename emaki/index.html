@@ -30,6 +30,7 @@ section{padding:34px 0;border-top:1px solid #4a3b2d}
 h2{margin:0 0 14px;font-size:21px;color:var(--gold);letter-spacing:.1em}
 h2::before{content:"";display:inline-block;width:10px;height:10px;background:var(--red);border-radius:50%;margin-right:10px;vertical-align:middle;position:relative;top:-2px}
 p{margin:0 0 1em}
+.enonly:empty{display:none}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
 .card h3{margin:0 0 6px;font-size:16px;color:var(--gold2);letter-spacing:.06em}
@@ -68,6 +69,7 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
 
 <section>
   <h2 data-en="What is Emaki Frame?">絵巻フレームとは</h2>
+  <p class="enonly" data-en="<b>Emaki (絵巻)</b> is a traditional Japanese picture scroll: a long sheet of paper, read horizontally, that tells a story or the course of events as you unroll it, scene by scene. Famous examples include the 12th-century scrolls of <i>The Tale of Genji</i>. Here, that format becomes a zoomable digital scroll of history."></p>
   <p data-en="Emaki Frame is a shared framework for presenting a historical timeline as a “horizontally scrolling emaki (picture scroll).” Like a map app, zooming in reveals detailed events and people, and zooming out reveals the flow of the ages.">絵巻フレームは、歴史の年表を「横スクロールの絵巻」として見せるための共通の骨組みです。地図アプリのように、拡大すると詳しい出来事や人物が現れ、縮小すると時代の流れが見えてきます。</p>
   <p data-en="The mechanism of the screen (the frame) and its contents (the timeline) are kept separate. So Japanese history, world history and cosmic history all become scrolls in the same frame.">画面のしくみ(フレーム)と、中身(年表)は分けてあります。だから、日本史でも、世界史でも、宇宙史でも、同じフレームで絵巻になります。</p>
   <div class="grid">
