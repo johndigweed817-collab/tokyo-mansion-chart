@@ -1,0 +1,1381 @@
+{
+ "meta": {
+  "title": "エヴァ史絵巻",
+  "tagline": "世界線をめぐる、もうひとつの年表",
+  "engine": "hv",
+  "version": 1,
+  "note": "非公式のファン作品。内容はネタバレを含み、誤りがあるかもしれません。",
+  "hint": "ホイール／ピンチで拡大縮小 ・ ドラッグで移動(縦=世界線) ・ 札をタップすると関連線が浮かびます ・ ※ネタバレを含みます",
+  "labels": {
+   "lesson": "見どころ"
+  },
+  "credit": {
+   "text": "非公式のファン作品。『新世紀エヴァンゲリオン』『ヱヴァンゲリヲン新劇場版』等の権利は各権利者に帰属します"
+  },
+  "links": [
+   {
+    "label": "世界史 →",
+    "href": "../sekaishi-emaki/",
+    "title": "世界史絵巻へ"
+   },
+   {
+    "label": "宇宙史 →",
+    "href": "../uchushi-emaki/",
+    "title": "宇宙史絵巻へ"
+   }
+  ],
+  "future": {
+   "name": "その先",
+   "sub": "もうひとつの物語",
+   "catch": "物語は、あなたの中でも続いていく。",
+   "link": {
+    "href": "https://noton.youside.me/",
+    "label": "この絵巻の続きを綴る"
+   },
+   "intro": "warp"
+  }
+ },
+ "regions": [
+  {
+   "id": "common",
+   "name": "共通・前史",
+   "short": "共",
+   "c": 4
+  },
+  {
+   "id": "tv",
+   "name": "TV版",
+   "short": "TV",
+   "c": 3
+  },
+  {
+   "id": "end",
+   "name": "旧劇場版",
+   "short": "旧",
+   "c": 1
+  },
+  {
+   "id": "rb",
+   "name": "新劇場版",
+   "short": "新",
+   "c": 2
+  }
+ ],
+ "kinds": [
+  {
+   "id": "impact",
+   "name": "インパクト",
+   "c": 1
+  },
+  {
+   "id": "battle",
+   "name": "使徒戦",
+   "c": 7
+  },
+  {
+   "id": "eva",
+   "name": "エヴァ・兵器",
+   "c": 10
+  },
+  {
+   "id": "org",
+   "name": "組織・計画",
+   "c": 2
+  },
+  {
+   "id": "drama",
+   "name": "人間ドラマ",
+   "c": 8
+  }
+ ],
+ "pkinds": [
+  {
+   "id": "pilot",
+   "name": "チルドレン",
+   "c": 1
+  },
+  {
+   "id": "adult",
+   "name": "大人たち",
+   "c": 3
+  },
+  {
+   "id": "angel",
+   "name": "使徒",
+   "c": 2
+  },
+  {
+   "id": "evaunit",
+   "name": "エヴァ",
+   "c": 7
+  }
+ ],
+ "linkTypes": [
+  {
+   "id": "cause",
+   "name": "因果",
+   "c": 1
+  },
+  {
+   "id": "echo",
+   "name": "世界線を越えた反復",
+   "c": 7
+  },
+  {
+   "id": "people",
+   "name": "人物のつながり",
+   "c": 8
+  }
+ ],
+ "eras": [
+  {
+   "id": "e0",
+   "name": "失われた世界",
+   "start": 1999,
+   "end": 2015,
+   "weight": 5,
+   "c": 6,
+   "intro": "ink",
+   "motif": "observatory",
+   "summary": "南極の大爆発、そして母の消失。2015年までの空白で、物語の火種が育つ。",
+   "catch": "すべては、ここから始まった",
+   "features": [
+    "セカンドインパクト",
+    "碇ユイの消失",
+    "ゼーレと人類補完計画"
+   ]
+  },
+  {
+   "id": "e1",
+   "name": "使徒襲来",
+   "start": 2015,
+   "end": 2016,
+   "weight": 18,
+   "c": 1,
+   "intro": "cyber",
+   "motif": "skyscrapers",
+   "summary": "第3新東京市に、次々と使徒が襲来する。TV版・旧劇場版・新劇場版が、同じ年に別々の筋書きを描く。",
+   "catch": "同じ街、違う結末",
+   "features": [
+    "TV版：全26話の戦いと、人の内面",
+    "旧劇場版：サードインパクトと補完",
+    "新劇場版：序・破の語り直し"
+   ]
+  },
+  {
+   "id": "e2",
+   "name": "空白の14年",
+   "start": 2016,
+   "end": 2029,
+   "weight": 3,
+   "c": 9,
+   "intro": "zen",
+   "motif": "voidland",
+   "summary": "ニアサードインパクトののち、世界は荒れた。その間に、ヴィレが組織されていく。",
+   "catch": "目覚めると、世界は変わっていた",
+   "features": [
+    "ニアサードインパクトの傷跡",
+    "ヴィレの結成",
+    "ネルフとの対立"
+   ]
+  },
+  {
+   "id": "e3",
+   "name": "最後の決戦",
+   "start": 2029,
+   "end": 2031,
+   "weight": 8,
+   "c": 2,
+   "intro": "goldrain",
+   "motif": "tower",
+   "summary": "Qとシンの物語。目覚めたシンジが、世界の行方を決める。",
+   "catch": "エヴァの物語に、終止符を",
+   "features": [
+    "Q：14年後の世界",
+    "シン：最後の決戦",
+    "エヴァのいない世界"
+   ]
+  }
+ ],
+ "events": [
+  {
+   "id": "c_second",
+   "year": 2000.7,
+   "title": "セカンドインパクト",
+   "detail": "南極で、第1使徒アダムをめぐる葛城調査隊の接触が大爆発を招いた。人類の半数が失われ、海面上昇と気候変動が世界を一変させる。公式には「隕石の衝突」と説明された。",
+   "level": 1,
+   "score": 98,
+   "kind": "impact",
+   "region": "common",
+   "label": "2000年9月",
+   "vlabel": "2000年9月",
+   "lesson": "物語の原点にある、世界規模の喪失。",
+   "links": [
+    {
+     "to": "t_01",
+     "t": "cause",
+     "note": "この傷跡の上に、使徒が襲来する"
+    }
+   ]
+  },
+  {
+   "id": "c_yui",
+   "year": 2004,
+   "title": "碇ユイの消失",
+   "detail": "初号機の接触実験で、碇ユイが姿を消す。幼いシンジは母を失い、ゲンドウは「もう一度会う」ために動き出す。",
+   "level": 2,
+   "score": 80,
+   "kind": "drama",
+   "region": "common",
+   "label": "2004年",
+   "vlabel": "2004年",
+   "lesson": "一人の喪失が、世界を巻き込む計画の動機になる。",
+   "links": [
+    {
+     "to": "e_04",
+     "t": "cause",
+     "note": "ユイとの再会が、計画の核にある"
+    }
+   ]
+  },
+  {
+   "id": "c_seele",
+   "year": 2004.5,
+   "title": "ゼーレと人類補完計画",
+   "detail": "秘密結社ゼーレは、死海文書に記された筋書きに従い、人類を新たな段階へ進める「人類補完計画」を進める。ネルフは表向き使徒迎撃、裏でその実行機関となる。",
+   "level": 2,
+   "score": 76,
+   "kind": "org",
+   "region": "common",
+   "label": "前史",
+   "vlabel": "前史",
+   "lesson": "表の目的と、裏の目的が重なって進む。",
+   "approx": true
+  },
+  {
+   "id": "c_rei",
+   "year": 2004.8,
+   "title": "綾波レイの存在",
+   "detail": "ユイの喪失の後、ゲンドウのそばに、無口な少女・綾波レイが現れる。彼女の出生は、物語の大きな謎のひとつ。",
+   "level": 2,
+   "score": 74,
+   "kind": "eva",
+   "region": "common",
+   "label": "2004年以降",
+   "vlabel": "2004年以降",
+   "lesson": "出自の謎が、人物の悲しさに直結する。",
+   "approx": true
+  },
+  {
+   "id": "t_01",
+   "year": 2015.01,
+   "title": "第3使徒サキエル襲来",
+   "detail": "14歳の碇シンジは、父に呼ばれて第3新東京市へ。使徒が来襲する中、初号機に乗り込み、初めて戦う。暴走した初号機が、使徒を圧倒する。",
+   "level": 1,
+   "score": 94,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第1〜2話",
+   "vlabel": "第1〜2話",
+   "lesson": "物語の入り口。少年は、望まずに戦場へ立たされる。"
+  },
+  {
+   "id": "t_05",
+   "year": 2015.05,
+   "title": "ヤシマ作戦",
+   "detail": "第5使徒ラミエルを、全国の電力を集めた陽電子砲で狙撃する。シンジとレイが、息を合わせて挑む。",
+   "level": 1,
+   "score": 90,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第5〜6話",
+   "vlabel": "第5〜6話",
+   "lesson": "孤立していた二人が、初めて協力する。"
+  },
+  {
+   "id": "t_08",
+   "year": 2015.08,
+   "title": "アスカ来日と弐号機",
+   "detail": "惣流・アスカ・ラングレーが、弐号機とともに来日する。強気な少女は、シンジとはまるで正反対に見える。",
+   "level": 2,
+   "score": 82,
+   "kind": "eva",
+   "region": "tv",
+   "label": "第8話",
+   "vlabel": "第8話",
+   "lesson": "ライバルの登場が、物語の空気を変える。"
+  },
+  {
+   "id": "t_10",
+   "year": 2015.1,
+   "title": "二人の同期と使徒の連携",
+   "detail": "アスカとシンジは、連携して使徒に挑む。ぎこちない共同生活の中で、二人は少しずつ距離を縮める。",
+   "level": 3,
+   "score": 62,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第9〜10話",
+   "vlabel": "第9〜10話",
+   "lesson": "息の合った連携は、練習と共同生活から生まれた。"
+  },
+  {
+   "id": "t_18",
+   "year": 2015.18,
+   "title": "3号機と第13使徒",
+   "detail": "起動実験中の3号機が使徒に乗っ取られ、パイロットの友人を乗せたまま襲いかかってくる。ゲンドウは、シンジの意思を待たずに処分に動く。",
+   "level": 2,
+   "score": 70,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第18話",
+   "vlabel": "第18話",
+   "lesson": "戦いは、いつも友人にまで及ぶ。"
+  },
+  {
+   "id": "t_19",
+   "year": 2015.19,
+   "title": "初号機の暴走",
+   "detail": "第14使徒ゼルエルに追い詰められたシンジの前で、初号機が自ら動き出す。使徒を圧倒したのち、シンジは初号機に取り込まれる。",
+   "level": 1,
+   "score": 86,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第19話",
+   "vlabel": "第19話",
+   "lesson": "エヴァは、ただの兵器ではない。"
+  },
+  {
+   "id": "t_22",
+   "year": 2015.22,
+   "title": "アスカの心が壊れる",
+   "detail": "第15使徒アラエルの精神攻撃は、アスカの過去と自尊心を暴く。心が崩れた彼女は、エヴァに乗れなくなる。",
+   "level": 2,
+   "score": 78,
+   "kind": "drama",
+   "region": "tv",
+   "label": "第22話",
+   "vlabel": "第22話",
+   "lesson": "強さの裏には、傷つきやすさがある。"
+  },
+  {
+   "id": "t_23",
+   "year": 2015.23,
+   "title": "零号機の自爆とレイ",
+   "detail": "零号機は第16使徒アルミサエルを道連れに自爆し、綾波レイが命を落とす。のちに、彼女の秘密が明らかになる。",
+   "level": 2,
+   "score": 84,
+   "kind": "drama",
+   "region": "tv",
+   "label": "第23話",
+   "vlabel": "第23話",
+   "lesson": "「私」の定義を、物語が揺さぶる。",
+   "links": [
+    {
+     "to": "c_rei",
+     "t": "people",
+     "note": "レイの出自の謎に結びつく"
+    }
+   ]
+  },
+  {
+   "id": "t_24",
+   "year": 2015.24,
+   "title": "渚カヲルと、最後の使徒",
+   "detail": "最後の使徒タブリスは、渚カヲルとして現れ、シンジに寄り添う。しかし、その正体と結末は、シンジに重い決断を強いる。",
+   "level": 1,
+   "score": 92,
+   "kind": "drama",
+   "region": "tv",
+   "label": "第24話",
+   "vlabel": "第24話",
+   "lesson": "最も心を許した相手が、最も辛い相手になる。"
+  },
+  {
+   "id": "t_25",
+   "year": 2015.255,
+   "title": "人類補完とシンジの内面",
+   "detail": "物語は、人類補完計画の発動と、シンジの内面を中心に進む。TV版は、シンジが自己を受け入れる場面で幕を閉じる。",
+   "level": 1,
+   "score": 88,
+   "kind": "impact",
+   "region": "tv",
+   "label": "第25〜26話",
+   "vlabel": "第25〜26話",
+   "lesson": "外の戦いより、内側の戦いに終止符を打つ。",
+   "links": [
+    {
+     "to": "e_04",
+     "t": "echo",
+     "note": "旧劇場版は、同じ時点を別の形で描く"
+    }
+   ]
+  },
+  {
+   "id": "e_01",
+   "year": 2015.81,
+   "title": "ネルフ本部への武力侵攻",
+   "detail": "ゼーレの意を受けた戦略自衛隊が、ネルフ本部に侵攻する。多くの職員が犠牲になり、基地は壊滅的な打撃を受ける。",
+   "level": 1,
+   "score": 86,
+   "kind": "impact",
+   "region": "end",
+   "label": "Air",
+   "vlabel": "Air",
+   "lesson": "敵は、使徒だけではなかった。"
+  },
+  {
+   "id": "e_02",
+   "year": 2015.82,
+   "title": "ミサトの最期",
+   "detail": "葛城ミサトは、シンジを初号機へ向かわせたのち、命を落とす。シンジに向けた最後の行動が、彼女の答えになる。",
+   "level": 2,
+   "score": 84,
+   "kind": "drama",
+   "region": "end",
+   "label": "Air",
+   "vlabel": "Air",
+   "lesson": "守る側の大人が、託して去る。",
+   "links": [
+    {
+     "to": "e_01",
+     "t": "cause",
+     "note": "ネルフ侵攻の中で起こる"
+    }
+   ]
+  },
+  {
+   "id": "e_03",
+   "year": 2015.83,
+   "title": "弐号機の覚醒と量産機",
+   "detail": "アスカの弐号機が再び動き出し、量産型エヴァ9体と死闘を繰り広げる。圧倒的な力の差の中で、彼女は最後まで戦う。",
+   "level": 1,
+   "score": 90,
+   "kind": "battle",
+   "region": "end",
+   "label": "Air",
+   "vlabel": "Air",
+   "lesson": "折れたはずの心が、最後に火を灯す。",
+   "links": [
+    {
+     "to": "t_22",
+     "t": "cause",
+     "note": "TV版で心が壊れたアスカが、再び立ち上がる"
+    }
+   ]
+  },
+  {
+   "id": "e_04",
+   "year": 2015.85,
+   "title": "サードインパクト",
+   "detail": "計画は最終段階へ。レイ（リリス）と初号機が結びつき、人類は形を失ってLCLに溶け始める。ゲンドウの望みは、レイに拒まれて潰える。",
+   "level": 1,
+   "score": 98,
+   "kind": "impact",
+   "region": "end",
+   "label": "まごころを、君に",
+   "vlabel": "まごころを、君に",
+   "lesson": "人類補完計画が、現実になる。",
+   "links": [
+    {
+     "to": "c_seele",
+     "t": "cause",
+     "note": "ゼーレの計画の到達点"
+    }
+   ]
+  },
+  {
+   "id": "e_05",
+   "year": 2015.87,
+   "title": "シンジの選択",
+   "detail": "補完された世界の中で、シンジは他者のいない安らぎではなく、傷つく可能性のある現実を選ぶ。人類の一部が、再び形を取り戻す。",
+   "level": 1,
+   "score": 96,
+   "kind": "drama",
+   "region": "end",
+   "label": "まごころを、君に",
+   "vlabel": "まごころを、君に",
+   "lesson": "痛みを含んだ世界を、自分で選ぶ。"
+  },
+  {
+   "id": "r_second",
+   "year": 2000.71,
+   "title": "セカンドインパクト（新劇場版）",
+   "detail": "新劇場版でも、世界を変えた大災害は起きる。ただし、変わり果てた海と大地の姿は、物語の背景として強く描かれる。",
+   "level": 1,
+   "score": 92,
+   "kind": "impact",
+   "region": "rb",
+   "label": "2000年9月",
+   "vlabel": "2000年9月",
+   "lesson": "同じ出来事が、少し違う景色で描かれる。",
+   "links": [
+    {
+     "to": "c_second",
+     "t": "echo",
+     "note": "共通の前史"
+    }
+   ]
+  },
+  {
+   "id": "r_01",
+   "year": 2015.01,
+   "title": "序：第3使徒サキエル",
+   "detail": "シンジが第3新東京市に呼ばれ、初号機に乗る。TV版の序盤を、新たな画面で語り直した物語。",
+   "level": 1,
+   "score": 86,
+   "kind": "battle",
+   "region": "rb",
+   "label": "序",
+   "vlabel": "序",
+   "lesson": "語り直しの中で、少し違う動きが生まれる。",
+   "links": [
+    {
+     "to": "t_01",
+     "t": "echo",
+     "note": "TV版の第1話に対応"
+    }
+   ]
+  },
+  {
+   "id": "r_02",
+   "year": 2015.02,
+   "title": "第4使徒シャムシエル",
+   "detail": "第4使徒が来襲し、シンジは戦場に立ち続ける。ミサトとの暮らしが、少しずつ始まっていく。",
+   "level": 3,
+   "score": 60,
+   "kind": "battle",
+   "region": "rb",
+   "label": "序",
+   "vlabel": "序",
+   "lesson": "戦いと日常が、ゆっくり混ざる。"
+  },
+  {
+   "id": "r_03",
+   "year": 2015.03,
+   "title": "序：ヤシマ作戦",
+   "detail": "日本中の電力を集めた巨大な狙撃で、第5使徒ラミエルを撃つ。シンジとレイが、息を合わせて挑む。",
+   "level": 1,
+   "score": 88,
+   "kind": "battle",
+   "region": "rb",
+   "label": "序",
+   "vlabel": "序",
+   "lesson": "孤立する二人が、初めて協力する。",
+   "links": [
+    {
+     "to": "t_05",
+     "t": "echo",
+     "note": "TV版のヤシマ作戦に対応"
+    }
+   ]
+  },
+  {
+   "id": "r_05",
+   "year": 2015.05,
+   "title": "破：式波・アスカと真希波・マリの登場",
+   "detail": "式波・アスカ・ラングレーが弐号機で、新たなパイロット・真希波・マリ・イラストリアスが5号機で現れる。新劇場版独自のキャラクターが、物語を大きく動かす。",
+   "level": 1,
+   "score": 88,
+   "kind": "eva",
+   "region": "rb",
+   "label": "破",
+   "vlabel": "破",
+   "lesson": "新しい人物が、既知の物語を揺さぶる。",
+   "links": [
+    {
+     "to": "t_08",
+     "t": "echo",
+     "note": "TV版のアスカ来日に対応"
+    }
+   ]
+  },
+  {
+   "id": "r_06",
+   "year": 2015.06,
+   "title": "第7使徒イスラフェルと連携",
+   "detail": "シンジとアスカは、息の合わない状態から、使徒への連携攻撃に挑む。共同生活を通じて、二人の距離は少しずつ変わっていく。",
+   "level": 3,
+   "score": 66,
+   "kind": "battle",
+   "region": "rb",
+   "label": "破",
+   "vlabel": "破",
+   "lesson": "ぎこちない二人が、戦いを通じて繋がる。",
+   "links": [
+    {
+     "to": "t_10",
+     "t": "echo",
+     "note": "TV版の連携戦に対応"
+    }
+   ]
+  },
+  {
+   "id": "r_07",
+   "year": 2015.07,
+   "title": "3号機の事件",
+   "detail": "3号機が使徒に乗っ取られ、パイロットを乗せたまま襲いかかる。シンジは、ある選択をする。",
+   "level": 2,
+   "score": 80,
+   "kind": "battle",
+   "region": "rb",
+   "label": "破",
+   "vlabel": "破",
+   "lesson": "TV版と同じ出来事でも、人物と結末が異なる。",
+   "links": [
+    {
+     "to": "t_18",
+     "t": "echo",
+     "note": "TV版の3号機事件に対応"
+    }
+   ]
+  },
+  {
+   "id": "r_09",
+   "year": 2015.09,
+   "title": "破：ゼルエルとレイ",
+   "detail": "第10使徒ゼルエルが襲来し、レイが使徒に取り込まれる。シンジは、彼女を取り戻すために、禁じられた行動に出る。",
+   "level": 1,
+   "score": 90,
+   "kind": "battle",
+   "region": "rb",
+   "label": "破",
+   "vlabel": "破",
+   "lesson": "自分の意思で、世界の行方を決める。",
+   "links": [
+    {
+     "to": "t_19",
+     "t": "echo",
+     "note": "TV版のゼルエル戦に対応"
+    }
+   ]
+  },
+  {
+   "id": "r_10",
+   "year": 2015.095,
+   "title": "ニアサードインパクト",
+   "detail": "レイを救おうとしたシンジの行動が、世界規模の災害を引き起こす。物語の様相は、ここで大きく変わる。",
+   "level": 1,
+   "score": 92,
+   "kind": "impact",
+   "region": "rb",
+   "label": "破",
+   "vlabel": "破",
+   "lesson": "望みが、世界を変えてしまう。",
+   "links": [
+    {
+     "to": "r_09",
+     "t": "cause",
+     "note": "シンジの行動が引き金"
+    }
+   ]
+  },
+  {
+   "id": "r_q",
+   "year": 2029.05,
+   "title": "Q：14年後の世界とヴィレ",
+   "detail": "目覚めたシンジは、14年が過ぎた世界に降り立つ。ミサトたちは、ネルフに対抗する組織ヴィレとして行動していた。カヲルは再び現れ、シンジに寄り添うが…。",
+   "level": 1,
+   "score": 94,
+   "kind": "impact",
+   "region": "rb",
+   "label": "Q",
+   "vlabel": "Q",
+   "lesson": "目覚めた先の世界は、すでに別の場所だった。",
+   "links": [
+    {
+     "to": "t_24",
+     "t": "echo",
+     "note": "TV版のカヲルと対応"
+    }
+   ]
+  },
+  {
+   "id": "r_shin",
+   "year": 2029.6,
+   "title": "シン：最後の決戦",
+   "detail": "ヴィレとネルフが、世界の行方をかけて最後の決戦に臨む。シンジは、父・ゲンドウと向き合い、エヴァの物語に決着をつける。",
+   "level": 1,
+   "score": 96,
+   "kind": "impact",
+   "region": "rb",
+   "label": "シン",
+   "vlabel": "シン",
+   "lesson": "語りの最後は、父と子の対話。",
+   "links": [
+    {
+     "to": "r_q",
+     "t": "cause",
+     "note": "Qの後の物語"
+    }
+   ]
+  },
+  {
+   "id": "r_end",
+   "year": 2029.9,
+   "title": "エヴァのいない世界へ",
+   "detail": "物語は、エヴァという存在そのものを終わらせる形で幕を閉じる。成長したシンジは、新たな日常へ歩き出す。",
+   "level": 1,
+   "score": 92,
+   "kind": "drama",
+   "region": "rb",
+   "label": "シン",
+   "vlabel": "シン",
+   "lesson": "終わりは、新たな始まりでもある。",
+   "links": [
+    {
+     "to": "r_shin",
+     "t": "cause",
+     "note": "最終決戦の帰結"
+    }
+   ]
+  }
+ ],
+ "persons": [
+  {
+   "id": "shinji",
+   "name": "碇シンジ",
+   "region": "common",
+   "born": 2001,
+   "died": 2030,
+   "role": "初号機パイロット",
+   "kind": "pilot",
+   "level": 1,
+   "score": 99,
+   "detail": "14歳の少年。父に呼ばれて第3新東京市へ来て、エヴァ初号機に乗る。世界線ごとに異なる選択をする。",
+   "face": {
+    "image": "faces/shinji.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "rei",
+   "name": "綾波レイ",
+   "region": "common",
+   "born": 2001,
+   "died": 2030,
+   "role": "零号機パイロット",
+   "kind": "pilot",
+   "level": 1,
+   "score": 97,
+   "detail": "ゲンドウに近い少女。静かで、自分のことをあまり語らない。出生の謎が物語の鍵になる。",
+   "face": {
+    "image": "faces/rei.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "asuka",
+   "name": "アスカ",
+   "region": "common",
+   "born": 2001,
+   "died": 2030,
+   "role": "弐号機パイロット",
+   "kind": "pilot",
+   "level": 1,
+   "score": 96,
+   "detail": "TV版・旧劇場版では惣流・アスカ・ラングレー、新劇場版では式波・アスカ・ラングレー。誇り高く、エヴァの操縦に自信を持つ。",
+   "face": {
+    "image": "faces/asuka.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "mari",
+   "name": "真希波・マリ・イラストリアス",
+   "region": "rb",
+   "born": 2000,
+   "died": 2030,
+   "role": "5号機パイロット",
+   "kind": "pilot",
+   "level": 1,
+   "score": 86,
+   "detail": "新劇場版から登場する、独自のキャラクター。物語に新たな風を吹き込む。",
+   "face": {
+    "image": "faces/mari.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "kaworu",
+   "name": "渚カヲル",
+   "region": "common",
+   "born": 2015,
+   "died": 2030,
+   "role": "第17使徒（TV版）",
+   "kind": "pilot",
+   "level": 1,
+   "score": 92,
+   "detail": "シンジに寄り添う少年。使徒としての顔と、友人としての顔を併せ持つ。",
+   "face": {
+    "image": "faces/kaworu.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "misato",
+   "name": "葛城ミサト",
+   "region": "common",
+   "born": 1986,
+   "died": 2029,
+   "role": "作戦部長",
+   "kind": "adult",
+   "level": 1,
+   "score": 94,
+   "detail": "ネルフの作戦部長で、シンジの保護者でもある。のちに、ヴィレを率いる立場になる。",
+   "face": {
+    "image": "faces/misato.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "gendo",
+   "name": "碇ゲンドウ",
+   "region": "common",
+   "born": 1967,
+   "died": 2029,
+   "role": "ネルフ総司令",
+   "kind": "adult",
+   "level": 1,
+   "score": 95,
+   "detail": "シンジの父。冷徹に計画を進め、妻・ユイとの再会を何より求める。",
+   "face": {
+    "image": "faces/gendo.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "yui",
+   "name": "碇ユイ",
+   "region": "common",
+   "born": 1977,
+   "died": 2004,
+   "role": "シンジの母",
+   "kind": "adult",
+   "level": 2,
+   "score": 84,
+   "detail": "初号機の実験で消えた、シンジの母。彼女の存在が、物語全体の動機になる。",
+   "face": {
+    "image": "faces/yui.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "ritsuko",
+   "name": "赤木リツコ",
+   "region": "common",
+   "born": 1976,
+   "died": 2029,
+   "role": "技術部長・科学者",
+   "kind": "adult",
+   "level": 2,
+   "score": 82,
+   "detail": "ネルフの技術部長。エヴァの開発と運用を支える。",
+   "face": {
+    "image": "faces/ritsuko.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "kaji",
+   "name": "加持リョウジ",
+   "region": "common",
+   "born": 1983,
+   "died": 2015,
+   "role": "諜報員",
+   "kind": "adult",
+   "level": 2,
+   "score": 80,
+   "detail": "ネルフとゼーレの間で動く諜報員。ミサトの昔の恋人でもある。",
+   "face": {
+    "image": "faces/kaji.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "fuyutsuki",
+   "name": "冬月コウゾウ",
+   "region": "common",
+   "born": 1948,
+   "died": 2029,
+   "role": "ネルフ副司令",
+   "kind": "adult",
+   "level": 2,
+   "score": 72,
+   "detail": "ゲンドウを補佐する副司令。計画の全体像を知る、数少ない人物。",
+   "face": {
+    "image": "faces/fuyutsuki.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "keel",
+   "name": "キール・ローレンツ",
+   "region": "common",
+   "born": 1945,
+   "died": 2015,
+   "role": "ゼーレ議長",
+   "kind": "adult",
+   "level": 2,
+   "score": 70,
+   "detail": "人類補完計画の推進者。秘密結社ゼーレを率いる。",
+   "face": {
+    "image": "faces/keel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "toji",
+   "name": "鈴原トウジ",
+   "region": "common",
+   "born": 2001,
+   "died": 2030,
+   "role": "シンジの同級生",
+   "kind": "pilot",
+   "level": 3,
+   "score": 66,
+   "detail": "シンジの級友。強気だが、仲間思いな少年。",
+   "face": {
+    "image": "faces/toji.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "kensuke",
+   "name": "相田ケンスケ",
+   "region": "common",
+   "born": 2001,
+   "died": 2030,
+   "role": "シンジの同級生",
+   "kind": "pilot",
+   "level": 3,
+   "score": 58,
+   "detail": "軍事に詳しい級友。のちに、物語の見届け役を務める。",
+   "face": {
+    "image": "faces/kensuke.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "hikari",
+   "name": "洞木ヒカリ",
+   "region": "common",
+   "born": 2001,
+   "died": 2030,
+   "role": "クラス委員長",
+   "kind": "pilot",
+   "level": 4,
+   "score": 52,
+   "detail": "シンジたちの同級生で、クラス委員長。トウジに想いを寄せる。",
+   "face": {
+    "image": "faces/hikari.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "unit01",
+   "name": "エヴァ初号機",
+   "region": "common",
+   "born": 2004,
+   "died": 2030,
+   "role": "エヴァンゲリオン初号機",
+   "kind": "evaunit",
+   "level": 1,
+   "score": 97,
+   "detail": "碇ユイとの縁を持つ、最初のエヴァ。シンジが乗り、暴走の度に意志をのぞかせる。",
+   "face": {
+    "image": "faces/unit01.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "unit00",
+   "name": "エヴァ零号機",
+   "region": "common",
+   "born": 2004,
+   "died": 2029,
+   "role": "エヴァンゲリオン零号機",
+   "kind": "evaunit",
+   "level": 1,
+   "score": 86,
+   "detail": "試作機。レイが乗る。",
+   "face": {
+    "image": "faces/unit00.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "unit02",
+   "name": "エヴァ弐号機",
+   "region": "common",
+   "born": 2014,
+   "died": 2029,
+   "role": "エヴァンゲリオン弐号機",
+   "kind": "evaunit",
+   "level": 1,
+   "score": 90,
+   "detail": "実戦用の最初の機体。アスカが乗る。",
+   "face": {
+    "image": "faces/unit02.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "unit03",
+   "name": "エヴァ3号機",
+   "region": "tv",
+   "born": 2015.1,
+   "died": 2015.18,
+   "role": "エヴァンゲリオン3号機",
+   "kind": "evaunit",
+   "level": 3,
+   "score": 64,
+   "detail": "起動実験中に使徒に乗っ取られた機体。",
+   "face": {
+    "image": "faces/unit03.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "unit05",
+   "name": "エヴァ5号機",
+   "region": "rb",
+   "born": 2015,
+   "died": 2029,
+   "role": "エヴァンゲリオン5号機",
+   "kind": "evaunit",
+   "level": 3,
+   "score": 62,
+   "detail": "新劇場版に登場。マリが乗る。",
+   "face": {
+    "image": "faces/unit05.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "mass",
+   "name": "エヴァ量産機",
+   "region": "end",
+   "born": 2015.8,
+   "died": 2015.85,
+   "role": "量産型エヴァンゲリオン",
+   "kind": "evaunit",
+   "level": 2,
+   "score": 78,
+   "detail": "旧劇場版に登場する、9体の量産機。",
+   "face": {
+    "image": "faces/mass.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "adam",
+   "name": "アダム",
+   "region": "common",
+   "born": 2000,
+   "died": 2000.7,
+   "role": "第1使徒",
+   "kind": "angel",
+   "level": 2,
+   "score": 75,
+   "detail": "南極で発見された、最初の使徒。セカンドインパクトの原因となった。",
+   "face": {
+    "image": "faces/adam.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "lilith",
+   "name": "リリス",
+   "region": "common",
+   "born": 2000,
+   "died": 2015.9,
+   "role": "第2使徒",
+   "kind": "angel",
+   "level": 2,
+   "score": 76,
+   "detail": "ネルフ本部の地下に眠る存在。人類補完計画の鍵。",
+   "face": {
+    "image": "faces/lilith.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "sachiel",
+   "name": "サキエル",
+   "region": "tv",
+   "born": 2015.01,
+   "died": 2015.02,
+   "role": "第3使徒",
+   "kind": "angel",
+   "level": 2,
+   "score": 82,
+   "detail": "最初に襲来した使徒。",
+   "face": {
+    "image": "faces/sachiel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "shamshel",
+   "name": "シャムシエル",
+   "region": "tv",
+   "born": 2015.03,
+   "died": 2015.04,
+   "role": "第4使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 52,
+   "detail": "鞭のような触手を持つ使徒。",
+   "face": {
+    "image": "faces/shamshel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "ramiel",
+   "name": "ラミエル",
+   "region": "tv",
+   "born": 2015.05,
+   "died": 2015.06,
+   "role": "第5使徒",
+   "kind": "angel",
+   "level": 2,
+   "score": 80,
+   "detail": "正八面体の使徒。ヤシマ作戦の標的。",
+   "face": {
+    "image": "faces/ramiel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "gaghiel",
+   "name": "ガギエル",
+   "region": "tv",
+   "born": 2015.07,
+   "died": 2015.08,
+   "role": "第6使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 48,
+   "detail": "海中から現れる使徒。",
+   "face": {
+    "image": "faces/gaghiel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "israfel",
+   "name": "イスラフェル",
+   "region": "tv",
+   "born": 2015.09,
+   "died": 2015.1,
+   "role": "第7使徒",
+   "kind": "angel",
+   "level": 3,
+   "score": 60,
+   "detail": "分裂する使徒。",
+   "face": {
+    "image": "faces/israfel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "sandalphon",
+   "name": "サンダルフォン",
+   "region": "tv",
+   "born": 2015.101,
+   "died": 2015.102,
+   "role": "第8使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 44,
+   "detail": "火山の中に潜む使徒。",
+   "face": {
+    "image": "faces/sandalphon.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "matarael",
+   "name": "マトリエル",
+   "region": "tv",
+   "born": 2015.11,
+   "died": 2015.111,
+   "role": "第9使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 40,
+   "detail": "酸を出す、蜘蛛のような使徒。",
+   "face": {
+    "image": "faces/matarael.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "sahaquiel",
+   "name": "サハクィエル",
+   "region": "tv",
+   "born": 2015.12,
+   "died": 2015.121,
+   "role": "第10使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 40,
+   "detail": "衛星軌道から降下する使徒。",
+   "face": {
+    "image": "faces/sahaquiel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "ireul",
+   "name": "イロウル",
+   "region": "tv",
+   "born": 2015.13,
+   "died": 2015.131,
+   "role": "第11使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 36,
+   "detail": "コンピュータに侵入する微小な使徒。",
+   "face": {
+    "image": "faces/ireul.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "leliel",
+   "name": "レリエル",
+   "region": "tv",
+   "born": 2015.14,
+   "died": 2015.141,
+   "role": "第12使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 44,
+   "detail": "影のような使徒。",
+   "face": {
+    "image": "faces/leliel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "bardiel",
+   "name": "バルディエル",
+   "region": "tv",
+   "born": 2015.18,
+   "died": 2015.181,
+   "role": "第13使徒",
+   "kind": "angel",
+   "level": 3,
+   "score": 56,
+   "detail": "3号機に寄生した使徒。",
+   "face": {
+    "image": "faces/bardiel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "zeruel",
+   "name": "ゼルエル",
+   "region": "tv",
+   "born": 2015.19,
+   "died": 2015.191,
+   "role": "第14使徒",
+   "kind": "angel",
+   "level": 2,
+   "score": 78,
+   "detail": "最強の使徒のひとつ。",
+   "face": {
+    "image": "faces/zeruel.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "arael",
+   "name": "アラエル",
+   "region": "tv",
+   "born": 2015.22,
+   "died": 2015.221,
+   "role": "第15使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 48,
+   "detail": "精神を侵食する使徒。",
+   "face": {
+    "image": "faces/arael.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "armisael",
+   "name": "アルミサエル",
+   "region": "tv",
+   "born": 2015.23,
+   "died": 2015.231,
+   "role": "第16使徒",
+   "kind": "angel",
+   "level": 4,
+   "score": 52,
+   "detail": "零号機と融合しようとする使徒。",
+   "face": {
+    "image": "faces/armisael.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  },
+  {
+   "id": "tabris",
+   "name": "タブリス",
+   "region": "tv",
+   "born": 2015.24,
+   "died": 2015.241,
+   "role": "第17使徒",
+   "kind": "angel",
+   "level": 2,
+   "score": 84,
+   "detail": "最後の使徒。渚カヲルの姿で現れる。",
+   "face": {
+    "image": "faces/tabris.svg"
+   },
+   "bornApprox": true,
+   "diedApprox": true
+  }
+ ]
+}
