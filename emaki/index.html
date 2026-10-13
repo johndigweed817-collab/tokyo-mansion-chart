@@ -48,6 +48,7 @@ pre{background:#1b1511;border:1px solid var(--line);border-radius:6px;padding:14
 .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 .btn{display:inline-block;padding:9px 18px;border:1px solid var(--gold);border-radius:4px;text-decoration:none;color:var(--gold);font-size:14px;letter-spacing:.06em}
 .btn:hover{background:var(--gold);color:#2a211b}
+#lg{position:fixed;top:12px;right:12px;z-index:5;padding:6px 12px;border:1px solid var(--gold);border-radius:4px;background:rgba(42,33,27,.85);color:var(--gold);font:13px/1.4 sans-serif;cursor:pointer}#lg:hover{background:var(--gold);color:#2a211b}
 footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-size:13px;color:var(--mute)}
 @media (max-width:560px){header.hero{padding-top:44px}.wrap{padding:0 16px}}
 </style>
@@ -57,8 +58,8 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
 <header class="hero">
   <div class="wrap">
     <svg class="mark" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="96" fill="#1b1511"/><g transform="translate(256 256) scale(1.15) translate(-256 -282)"><rect x="104" y="176" width="304" height="160" fill="#f4e9cd"/><circle cx="312" cy="226" r="26" fill="#c8503c"/><path d="M104 336 L186 244 L238 306 L300 258 L408 336 Z" fill="#3f5f8f"/><rect x="76" y="156" width="36" height="200" rx="14" fill="#8a6a43"/><rect x="400" y="156" width="36" height="200" rx="14" fill="#8a6a43"/><path d="M100 394H412" stroke="#d7b45a" stroke-width="6" stroke-linecap="round"/></g></svg>
-    <h1>絵巻フレーム</h1>
-    <p class="lead">年表を、横に広がる一本の絵巻に。<br>広げて全体をつかみ、寄って一人ひとりの物語に出会う。</p>
+    <h1 data-en="Emaki Frame">絵巻フレーム</h1>
+    <p class="lead" data-en="Turn a timeline into one horizontal scroll.<br>Open it up to grasp the whole, then move in to meet each person’s story.">年表を、横に広がる一本の絵巻に。<br>広げて全体をつかみ、寄って一人ひとりの物語に出会う。</p>
     <p class="by">powered by <a href="https://youside.me" target="_blank" rel="noopener">youside.me</a></p>
   </div>
 </header>
@@ -66,61 +67,88 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
 <main class="wrap">
 
 <section>
-  <h2>絵巻フレームとは</h2>
-  <p>絵巻フレームは、歴史の年表を「横スクロールの絵巻」として見せるための共通の骨組みです。地図アプリのように、拡大すると詳しい出来事や人物が現れ、縮小すると時代の流れが見えてきます。</p>
-  <p>画面のしくみ(フレーム)と、中身(年表)は分けてあります。だから、日本史でも、世界史でも、宇宙史でも、同じフレームで絵巻になります。</p>
+  <h2 data-en="What is Emaki Frame?">絵巻フレームとは</h2>
+  <p data-en="Emaki Frame is a shared framework for presenting a historical timeline as a “horizontally scrolling emaki (picture scroll).” Like a map app, zooming in reveals detailed events and people, and zooming out reveals the flow of the ages.">絵巻フレームは、歴史の年表を「横スクロールの絵巻」として見せるための共通の骨組みです。地図アプリのように、拡大すると詳しい出来事や人物が現れ、縮小すると時代の流れが見えてきます。</p>
+  <p data-en="The mechanism of the screen (the frame) and its contents (the timeline) are kept separate. So Japanese history, world history and cosmic history all become scrolls in the same frame.">画面のしくみ(フレーム)と、中身(年表)は分けてあります。だから、日本史でも、世界史でも、宇宙史でも、同じフレームで絵巻になります。</p>
   <div class="grid">
-    <div class="card"><h3>広げる・寄る</h3><p>拡大するほど、細かな出来事や人物が現れる。縮小すると、時代の大きな流れだけが残る。</p></div>
-    <div class="card"><h3>時代を圧縮する</h3><p>138億年から数十年まで。時代ごとに時間の目盛りを伸び縮みさせ、どの時代も読みやすく並べる。</p></div>
-    <div class="card"><h3>人物と顔</h3><p>人物には、顔のイラストが付く。画像がなくても、設定から自動で描かれる。</p></div>
-    <div class="card"><h3>つながりをたどる</h3><p>出来事どうしの関連線や、人物が生きた間の出来事から、「なぜ」をたどれる。</p></div>
-    <div class="card"><h3>時代の演出</h3><p>時代の境目で、その時代らしい演出とカードが現れる。巻物、稲妻、金の雨、墨など7種類。</p></div>
-    <div class="card"><h3>外部ライブラリなし</h3><p>特別な部品に頼らず、ブラウザの標準機能だけで動く。</p></div>
+    <div class="card"><h3 data-en="Open out, move in">広げる・寄る</h3><p data-en="The more you zoom in, the finer events and people appear. Zoom out and only the great flow of the ages remains.">拡大するほど、細かな出来事や人物が現れる。縮小すると、時代の大きな流れだけが残る。</p></div>
+    <div class="card"><h3 data-en="Compressing eras">時代を圧縮する</h3><p data-en="From 13.8 billion years to a few decades. The time scale stretches and shrinks era by era, so every period is laid out readably.">138億年から数十年まで。時代ごとに時間の目盛りを伸び縮みさせ、どの時代も読みやすく並べる。</p></div>
+    <div class="card"><h3 data-en="People and faces">人物と顔</h3><p data-en="Each person gets a face illustration, drawn automatically from settings even without an image.">人物には、顔のイラストが付く。画像がなくても、設定から自動で描かれる。</p></div>
+    <div class="card"><h3 data-en="Follow the connections">つながりをたどる</h3><p data-en="Link lines between events, and the events during a person’s lifetime, let you trace “why.”">出来事どうしの関連線や、人物が生きた間の出来事から、「なぜ」をたどれる。</p></div>
+    <div class="card"><h3 data-en="Era transitions">時代の演出</h3><p data-en="At era boundaries, effects and cards fitting the age appear: seven kinds, including scroll, lightning, golden rain and ink.">時代の境目で、その時代らしい演出とカードが現れる。巻物、稲妻、金の雨、墨など7種類。</p></div>
+    <div class="card"><h3 data-en="No external libraries">外部ライブラリなし</h3><p data-en="It runs on standard browser features alone, with no special components.">特別な部品に頼らず、ブラウザの標準機能だけで動く。</p></div>
   </div>
 </section>
 
 <section>
-  <h2>どうして作ったか</h2>
-  <p>絵巻フレームは、<a href="https://youside.me" target="_blank" rel="noopener">youside.me</a> という組織の、<b>EduMuse</b>(認知科学に基づいた学習プラットフォーム)の歴史プログラムのために開発されました。</p>
-  <p>歴史は、年号と用語を覚える科目として出会うことが多いものです。けれど本来は、人が悩み、選び、時に間違えてきた物語の積み重ねです。全体の流れを一目で見渡し、気になったところへ自分で寄っていく。その動きそのものが、学びの手がかりになると考えています。</p>
-  <p>各絵巻のキャッチコピーは、どれも同じです。</p>
-  <blockquote>歴史を学ぶのは、歴史に学ぶため。</blockquote>
+  <h2 data-en="Why we built it">どうして作ったか</h2>
+  <p data-en="Emaki Frame was developed for the history program of <b>EduMuse</b> (a learning platform based on cognitive science) by <a href=&quot;https://youside.me&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>youside.me</a>.">絵巻フレームは、<a href="https://youside.me" target="_blank" rel="noopener">youside.me</a> という組織の、<b>EduMuse</b>(認知科学に基づいた学習プラットフォーム)の歴史プログラムのために開発されました。</p>
+  <p data-en="We often meet history as a subject of memorizing dates and terms. But at heart it is an accumulation of stories of people who worried, chose, and sometimes erred. We believe the very motion of surveying the whole flow at a glance and then moving in on what catches your interest is itself a clue to learning.">歴史は、年号と用語を覚える科目として出会うことが多いものです。けれど本来は、人が悩み、選び、時に間違えてきた物語の積み重ねです。全体の流れを一目で見渡し、気になったところへ自分で寄っていく。その動きそのものが、学びの手がかりになると考えています。</p>
+  <p data-en="Every scroll carries the same tagline.">各絵巻のキャッチコピーは、どれも同じです。</p>
+  <blockquote data-en="We study history in order to learn from it.">歴史を学ぶのは、歴史に学ぶため。</blockquote>
 </section>
 
 <section>
-  <h2>この絵巻フレームで作られた絵巻</h2>
+  <h2 data-en="Scrolls made with this frame">この絵巻フレームで作られた絵巻</h2>
   <div class="works">
-    <a href="../nihonshi-emaki/"><img src="../nihonshi-emaki/ogp.png" alt="" loading="lazy"><b>日本史絵巻</b><span>神話から現代まで。横に並ぶ時代を、拡大縮小しながらたどる。</span></a>
-    <a href="../sekaishi-emaki/"><img src="../sekaishi-emaki/ogp.png" alt="" loading="lazy"><b>世界史絵巻</b><span>四つの地域を縦に並べ、関連線で地域のつながりを見る。</span></a>
-    <a href="../uchushi-emaki/"><img src="../uchushi-emaki/ogp.png" alt="" loading="lazy"><b>宇宙史絵巻</b><span>宇宙の誕生から遠い未来まで、138億年を一本の絵巻で。</span></a>
+    <a href="../nihonshi-emaki/"><img src="../nihonshi-emaki/ogp.png" alt="" loading="lazy"><b data-en="Japanese History Emaki">日本史絵巻</b><span data-en="From myth to the present. Follow the ages laid side by side, zooming in and out.">神話から現代まで。横に並ぶ時代を、拡大縮小しながらたどる。</span></a>
+    <a href="../sekaishi-emaki/"><img src="../sekaishi-emaki/ogp.png" alt="" loading="lazy"><b data-en="World History Emaki">世界史絵巻</b><span data-en="Four regions stacked vertically, with link lines showing how regions connect.">四つの地域を縦に並べ、関連線で地域のつながりを見る。</span></a>
+    <a href="../uchushi-emaki/"><img src="../uchushi-emaki/ogp.png" alt="" loading="lazy"><b data-en="Cosmic History Emaki">宇宙史絵巻</b><span data-en="From the birth of the universe to the far future: 13.8 billion years on a single scroll.">宇宙の誕生から遠い未来まで、138億年を一本の絵巻で。</span></a>
   </div>
 </section>
 
 <section>
-  <h2>あなたの絵巻をつくりませんか</h2>
-  <p>ご自身の生い立ちや地域の歴史、チームや組織の変遷を、この絵巻UIを使って表現したい。ご自身のブログサイトや自社のホームページに組み込みたい。そう思ってくださる方がいらっしゃいましたら、ぜひ youside.me までご相談ください。</p>
+  <h2 data-en="Make your own emaki">あなたの絵巻をつくりませんか</h2>
+  <p data-en="If you would like to express your own life story, local history, or the history of a team or organization with this scroll UI, or embed it in your blog or company website, please contact youside.me.">ご自身の生い立ちや地域の歴史、チームや組織の変遷を、この絵巻UIを使って表現したい。ご自身のブログサイトや自社のホームページに組み込みたい。そう思ってくださる方がいらっしゃいましたら、ぜひ youside.me までご相談ください。</p>
   <div class="btns">
-    <a class="btn" href="https://youside.me" target="_blank" rel="noopener">youside.me へ相談する</a>
+    <a class="btn" href="https://youside.me" target="_blank" rel="noopener" data-en="Talk to youside.me">youside.me へ相談する</a>
   </div>
 </section>
 
 <section>
-  <h2>youside.me について</h2>
-  <p>youside.me は、データや数値に還元されにくい価値を掬い上げ、テクノロジーの力で、誰もが使い、学び、育てられる共有財(デジタルコモンズ)にすることを目指す、独立型の非営利の任意団体です。</p>
-  <p>効率化や最適化の陰で、小さなノイズや割り切れない感情、その土地ならではの風土、ひとりひとりの物語が削ぎ落とされてしまわないように。<br>公式ステートメントでは、次の言葉を掲げています。</p>
-  <blockquote>構造と慈愛、自由なナラティブで、<br>フレームの外へ。</blockquote>
-  <p>絵巻フレームも、その考えの延長にあります。構造(フレーム)は、物語に出会うための足場であって、物語を閉じ込める枠ではありません。</p>
+  <h2 data-en="About youside.me">youside.me について</h2>
+  <p data-en="youside.me is an independent, non-profit voluntary group that aims to gather up values hard to reduce to data or numbers and, through technology, make them a shared good (a digital commons) that anyone can use, learn from and nurture.">youside.me は、データや数値に還元されにくい価値を掬い上げ、テクノロジーの力で、誰もが使い、学び、育てられる共有財(デジタルコモンズ)にすることを目指す、独立型の非営利の任意団体です。</p>
+  <p data-en="So that, in the shadow of efficiency and optimization, small noise, feelings that don’t divide neatly, the climate of a place, and each person’s story are not stripped away.<br>The official statement carries these words:">効率化や最適化の陰で、小さなノイズや割り切れない感情、その土地ならではの風土、ひとりひとりの物語が削ぎ落とされてしまわないように。<br>公式ステートメントでは、次の言葉を掲げています。</p>
+  <blockquote data-en="With structure and compassion, and free narrative,<br>beyond the frame.">構造と慈愛、自由なナラティブで、<br>フレームの外へ。</blockquote>
+  <p data-en="Emaki Frame is an extension of that thinking. A structure (a frame) is a foothold for meeting stories, not a box that confines them.">絵巻フレームも、その考えの延長にあります。構造(フレーム)は、物語に出会うための足場であって、物語を閉じ込める枠ではありません。</p>
   <div class="btns">
     <a class="btn" href="https://youside.me" target="_blank" rel="noopener">youside.me</a>
-    <a class="btn" href="https://noton.youside.me/@yousideme/f9df989a6541" target="_blank" rel="noopener">公式ステートメント</a>
+    <a class="btn" href="https://noton.youside.me/@yousideme/f9df989a6541" target="_blank" rel="noopener" data-en="Official statement">公式ステートメント</a>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="wrap">絵巻フレーム powered by <a href="https://youside.me" target="_blank" rel="noopener">youside.me</a><br>あなたの傍ら(You Side)に、いつも。<br><small>© 2026 youside.me. All rights reserved. 掲載内容・プログラムの無断転載・複製・改変・再配布を禁じます。</small></div>
+  <div class="wrap"><span data-en="Emaki Frame powered by">絵巻フレーム powered by</span> <a href="https://youside.me" target="_blank" rel="noopener">youside.me</a><br><span data-en="Always by your side (You Side).">あなたの傍ら(You Side)に、いつも。</span><br><small data-en="© 2026 youside.me. All rights reserved. Reproduction, copying, modification or redistribution of the content or programs without permission is prohibited.">© 2026 youside.me. All rights reserved. 掲載内容・プログラムの無断転載・複製・改変・再配布を禁じます。</small></div>
 </footer>
 
+<button id="lg" type="button" hidden></button>
+<script>
+(function(){
+  var KEY='emaki.lang', L='ja', m=/[?&]lang=(en|ja)/.exec(location.search);
+  try{ if(m){L=m[1];localStorage.setItem(KEY,L);} else {L=localStorage.getItem(KEY)==='en'?'en':'ja';} }catch(e){ if(m)L=m[1]; }
+  var els=document.querySelectorAll('[data-en]');
+  for(var i=0;i<els.length;i++) els[i].setAttribute('data-ja',els[i].innerHTML);
+  var meta={t:document.title,d:document.querySelector('meta[name=description]').content};
+  var EN={t:'Emaki Frame — Open out, move in, follow the threads of history',d:'Emaki Frame turns a timeline into a horizontally scrolling emaki that zooms like a map. Developed for the history program of EduMuse, youside.me’s learning platform based on cognitive science.'};
+  function apply(){
+    var en=L==='en';
+    document.documentElement.lang=en?'en':'ja';
+    for(var i=0;i<els.length;i++) els[i].innerHTML=en?els[i].getAttribute('data-en'):els[i].getAttribute('data-ja');
+    document.title=en?EN.t:meta.t;
+    document.querySelector('meta[name=description]').content=en?EN.d:meta.d;
+    var as=document.querySelectorAll('.works a');
+    for(var j=0;j<as.length;j++){ var h=as[j].getAttribute('href').replace(/\?.*$/,''); as[j].setAttribute('href',en?h+'?lang=en':h); }
+    var b=document.getElementById('lg'); b.hidden=false; b.textContent=en?'日本語':'English';
+  }
+  document.getElementById('lg').onclick=function(){
+    L=L==='en'?'ja':'en'; try{localStorage.setItem(KEY,L);}catch(e){}
+    try{ var u=new URL(location.href); u.searchParams.set('lang',L); history.replaceState(null,'',u); }catch(e){}
+    apply();
+  };
+  apply();
+})();
+</script>
 </body>
 </html>
