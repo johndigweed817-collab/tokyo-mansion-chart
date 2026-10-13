@@ -352,7 +352,8 @@
    "kind": "culture",
    "label": "神代",
    "vlabel": "神代",
-   "score": 57
+   "score": 57,
+   "id": "j001"
   },
   {
    "year": -14420,
@@ -363,7 +364,12 @@
    "kind": "culture",
    "label": "神代",
    "vlabel": "神代",
-   "score": 76
+   "score": 76,
+   "id": "j002",
+   "people": [
+    "izanagi",
+    "izanami"
+   ]
   },
   {
    "year": -14390,
@@ -374,7 +380,15 @@
    "kind": "society",
    "label": "神代",
    "vlabel": "神代",
-   "score": 56
+   "score": 56,
+   "id": "j003",
+   "people": [
+    "amaterasu",
+    "izanagi",
+    "izanami",
+    "susanoo",
+    "tsukuyomi"
+   ]
   },
   {
    "year": -14350,
@@ -385,7 +399,12 @@
    "kind": "culture",
    "label": "神代",
    "vlabel": "神代",
-   "score": 76
+   "score": 76,
+   "id": "j004",
+   "people": [
+    "amaterasu",
+    "susanoo"
+   ]
   },
   {
    "year": -14320,
@@ -396,7 +415,11 @@
    "kind": "war",
    "label": "神代",
    "vlabel": "神代",
-   "score": 77
+   "score": 77,
+   "id": "j005",
+   "people": [
+    "susanoo"
+   ]
   },
   {
    "year": -14280,
@@ -407,7 +430,11 @@
    "kind": "society",
    "label": "神代",
    "vlabel": "神代",
-   "score": 71
+   "score": 71,
+   "id": "j006",
+   "people": [
+    "okuninushi"
+   ]
   },
   {
    "year": -14240,
@@ -418,7 +445,11 @@
    "kind": "politics",
    "label": "神代",
    "vlabel": "神代",
-   "score": 77
+   "score": 77,
+   "id": "j007",
+   "people": [
+    "okuninushi"
+   ]
   },
   {
    "year": -14200,
@@ -429,7 +460,12 @@
    "kind": "politics",
    "label": "神代",
    "vlabel": "神代",
-   "score": 77
+   "score": 77,
+   "id": "j008",
+   "people": [
+    "amaterasu",
+    "ninigi"
+   ]
   },
   {
    "year": -14150,
@@ -440,7 +476,11 @@
    "kind": "culture",
    "label": "神代",
    "vlabel": "神代",
-   "score": 56
+   "score": 56,
+   "id": "j009",
+   "people": [
+    "yamasachi"
+   ]
   },
   {
    "year": -14100,
@@ -451,7 +491,8 @@
    "kind": "war",
    "label": "神代",
    "vlabel": "神代",
-   "score": 74
+   "score": 74,
+   "id": "j010"
   },
   {
    "year": -660,
@@ -461,7 +502,11 @@
    "level": 2,
    "kind": "politics",
    "label": "紀元前660年（伝承）",
-   "score": 76
+   "score": 76,
+   "id": "j011",
+   "people": [
+    "jimmu"
+   ]
   },
   {
    "year": -14000,
@@ -471,7 +516,8 @@
    "lesson": "技術革新は暮らしの安定を支える。",
    "level": 2,
    "kind": "society",
-   "score": 71
+   "score": 71,
+   "id": "j012"
   },
   {
    "year": -3900,
@@ -481,7 +527,8 @@
    "lesson": "定住は交流と交易のネットワークを育てた。",
    "level": 1,
    "kind": "society",
-   "score": 90
+   "score": 90,
+   "id": "j013"
   },
   {
    "year": -3000,
@@ -490,7 +537,8 @@
    "detail": "豊かな実りや安産を願う祈りの造形が、各地で作られた。",
    "level": 2,
    "kind": "culture",
-   "score": 58
+   "score": 58,
+   "id": "j014"
   },
   {
    "year": -300,
@@ -500,7 +548,14 @@
    "lesson": "新しい技術は富と同時に、格差と争いも生んだ。",
    "level": 1,
    "kind": "society",
-   "score": 98
+   "score": 98,
+   "id": "j015",
+   "links": [
+    {
+     "to": "j144",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 57,
@@ -509,7 +564,8 @@
    "lesson": "外の権威を得ることが、内での地位を高めた。",
    "level": 2,
    "kind": "foreign",
-   "score": 71
+   "score": 71,
+   "id": "j016"
   },
   {
    "year": 239,
@@ -518,7 +574,17 @@
    "lesson": "国際的な承認は、国内統治の後ろ盾になる。",
    "level": 1,
    "kind": "foreign",
-   "score": 100
+   "score": 100,
+   "id": "j017",
+   "people": [
+    "himiko"
+   ],
+   "links": [
+    {
+     "to": "j019",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 247,
@@ -528,7 +594,11 @@
    "lesson": "カリスマに頼る統治は、継承の場面で揺らぐ。",
    "level": 2,
    "kind": "politics",
-   "score": 58
+   "score": 58,
+   "id": "j018",
+   "people": [
+    "himiko"
+   ]
   },
   {
    "year": 250,
@@ -538,7 +608,17 @@
    "lesson": "共通の墓の形は、同盟と秩序の目に見える印だった。",
    "level": 1,
    "kind": "politics",
-   "score": 96
+   "score": 96,
+   "id": "j019",
+   "links": [
+    {
+     "to": "j151",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "himiko"
+   ]
   },
   {
    "year": 478,
@@ -547,7 +627,8 @@
    "lesson": "国際関係の中で、国の格を高めようとした。",
    "level": 2,
    "kind": "foreign",
-   "score": 74
+   "score": 74,
+   "id": "j020"
   },
   {
    "year": 527,
@@ -556,7 +637,8 @@
    "lesson": "地方の自立と中央集権の綱引きが続いた。",
    "level": 2,
    "kind": "war",
-   "score": 60
+   "score": 60,
+   "id": "j021"
   },
   {
    "year": 538,
@@ -566,7 +648,14 @@
    "lesson": "異文化の受容は、賛否の対立も生む。",
    "level": 1,
    "kind": "culture",
-   "score": 96
+   "score": 96,
+   "id": "j022",
+   "links": [
+    {
+     "to": "j154",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 593,
@@ -574,7 +663,27 @@
    "detail": "推古天皇のもとで聖徳太子が政治に加わり、国家づくりを進める。",
    "level": 1,
    "kind": "politics",
-   "score": 91
+   "score": 91,
+   "id": "j023",
+   "people": [
+    "shotoku",
+    "suiko",
+    "soga"
+   ],
+   "links": [
+    {
+     "to": "j024",
+     "t": "politics"
+    },
+    {
+     "to": "j399",
+     "t": "foreign"
+    },
+    {
+     "to": "j156",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 603,
@@ -583,7 +692,17 @@
    "lesson": "出自より能力で人を活かす発想の始まり。",
    "level": 1,
    "kind": "politics",
-   "score": 82
+   "score": 82,
+   "id": "j024",
+   "links": [
+    {
+     "to": "j025",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "shotoku"
+   ]
   },
   {
    "year": 604,
@@ -592,7 +711,17 @@
    "lesson": "争いを避ける合意形成の精神が根にある。",
    "level": 1,
    "kind": "politics",
-   "score": 97
+   "score": 97,
+   "id": "j025",
+   "links": [
+    {
+     "to": "j027",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "shotoku"
+   ]
   },
   {
    "year": 607,
@@ -601,7 +730,8 @@
    "lesson": "学ぶ姿勢と、対等であろうとする気概。",
    "level": 1,
    "kind": "foreign",
-   "score": 84
+   "score": 84,
+   "id": "j026"
   },
   {
    "year": 645,
@@ -610,7 +740,22 @@
    "lesson": "改革は、大胆な決断と信頼できる同志から始まる。",
    "level": 1,
    "kind": "politics",
-   "score": 94
+   "score": 94,
+   "id": "j027",
+   "people": [
+    "naka",
+    "kamatari"
+   ],
+   "links": [
+    {
+     "to": "j159",
+     "t": "politics"
+    },
+    {
+     "to": "j028",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 663,
@@ -619,7 +764,14 @@
    "lesson": "情報と準備を欠いた遠征は、国を危うくする。",
    "level": 2,
    "kind": "war",
-   "score": 75
+   "score": 75,
+   "id": "j028",
+   "links": [
+    {
+     "to": "j029",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 672,
@@ -628,7 +780,17 @@
    "lesson": "後継者争いは、国を二分する危機になる。",
    "level": 2,
    "kind": "war",
-   "score": 71
+   "score": 71,
+   "id": "j029",
+   "people": [
+    "tenmu"
+   ],
+   "links": [
+    {
+     "to": "j413",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 694,
@@ -636,7 +798,17 @@
    "detail": "初の本格的な都城。碁盤目状の都市計画が導入された。",
    "level": 2,
    "kind": "politics",
-   "score": 64
+   "score": 64,
+   "id": "j030",
+   "links": [
+    {
+     "to": "j032",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "jito"
+   ]
   },
   {
    "year": 701,
@@ -645,7 +817,14 @@
    "lesson": "ルールを成文化して、国を動かす仕組みにする。",
    "level": 1,
    "kind": "politics",
-   "score": 87
+   "score": 87,
+   "id": "j031",
+   "links": [
+    {
+     "to": "j030",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 710,
@@ -654,7 +833,21 @@
    "lesson": "都市は、国家の姿を映す鏡になる。",
    "level": 1,
    "kind": "politics",
-   "score": 93
+   "score": 93,
+   "id": "j032",
+   "links": [
+    {
+     "to": "j033",
+     "t": "culture"
+    },
+    {
+     "to": "j165",
+     "t": "economy"
+    }
+   ],
+   "people": [
+    "genmei"
+   ]
   },
   {
    "year": 712,
@@ -662,7 +855,14 @@
    "detail": "神話や伝承を記した、現存する日本最古の歴史書。",
    "level": 1,
    "kind": "culture",
-   "score": 80
+   "score": 80,
+   "id": "j033",
+   "links": [
+    {
+     "to": "j167",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 743,
@@ -671,7 +871,14 @@
    "lesson": "制度の抜け道が、次の秩序をつくる。",
    "level": 2,
    "kind": "society",
-   "score": 73
+   "score": 73,
+   "id": "j034",
+   "links": [
+    {
+     "to": "j037",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 752,
@@ -680,7 +887,18 @@
    "lesson": "国をあげた祈りと、人々の労力の結晶。",
    "level": 1,
    "kind": "culture",
-   "score": 95
+   "score": 95,
+   "id": "j035",
+   "people": [
+    "shomu",
+    "gyoki"
+   ],
+   "links": [
+    {
+     "to": "j036",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 753,
@@ -689,7 +907,17 @@
    "lesson": "危険をおかしてでも、学びを届けた人がいた。",
    "level": 1,
    "kind": "foreign",
-   "score": 81
+   "score": 81,
+   "id": "j036",
+   "people": [
+    "ganjin"
+   ],
+   "links": [
+    {
+     "to": "j038",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 794,
@@ -698,7 +926,21 @@
    "lesson": "都を移してでも、政治を刷新しようとした。",
    "level": 1,
    "kind": "politics",
-   "score": 95
+   "score": 95,
+   "id": "j037",
+   "people": [
+    "kammu"
+   ],
+   "links": [
+    {
+     "to": "j178",
+     "t": "war"
+    },
+    {
+     "to": "j180",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 804,
@@ -706,7 +948,22 @@
    "detail": "遣唐使船で唐に渡った二人が、のちに天台宗・真言宗を開く。",
    "level": 2,
    "kind": "culture",
-   "score": 67
+   "score": 67,
+   "id": "j038",
+   "people": [
+    "saicho",
+    "kukai"
+   ],
+   "links": [
+    {
+     "to": "j177",
+     "t": "religion"
+    },
+    {
+     "to": "j179",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 894,
@@ -715,7 +972,17 @@
    "lesson": "外との関係を見直すと、内の文化が育つことがある。",
    "level": 1,
    "kind": "foreign",
-   "score": 86
+   "score": 86,
+   "id": "j039",
+   "people": [
+    "sugawara"
+   ],
+   "links": [
+    {
+     "to": "j184",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 939,
@@ -723,7 +990,17 @@
    "detail": "関東で平将門が「新皇」を称して反乱を起こす。",
    "level": 2,
    "kind": "war",
-   "score": 61
+   "score": 61,
+   "id": "j040",
+   "people": [
+    "masakado"
+   ],
+   "links": [
+    {
+     "to": "j187",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1008,
@@ -732,7 +1009,11 @@
    "detail": "紫式部による長編物語。宮廷の人間模様を細やかに描いた。",
    "level": 1,
    "kind": "culture",
-   "score": 87
+   "score": 87,
+   "id": "j041",
+   "people": [
+    "shikibu"
+   ]
   },
   {
    "year": 1016,
@@ -741,7 +1022,21 @@
    "lesson": "婚姻を通じて、権力を一点に集中させる仕組み。",
    "level": 1,
    "kind": "politics",
-   "score": 84
+   "score": 84,
+   "id": "j042",
+   "people": [
+    "michinaga"
+   ],
+   "links": [
+    {
+     "to": "j191",
+     "t": "culture"
+    },
+    {
+     "to": "j189",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1086,
@@ -750,7 +1045,17 @@
    "lesson": "制度の外側へ、実権が移ることがある。",
    "level": 2,
    "kind": "politics",
-   "score": 75
+   "score": 75,
+   "id": "j043",
+   "people": [
+    "shirakawa"
+   ],
+   "links": [
+    {
+     "to": "j044",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1156,
@@ -758,7 +1063,14 @@
    "detail": "天皇家と摂関家の内紛に武士が動員され、政治の主役が武士へ移り始める。",
    "level": 2,
    "kind": "war",
-   "score": 74
+   "score": 74,
+   "id": "j044",
+   "links": [
+    {
+     "to": "j045",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1159,
@@ -766,7 +1078,17 @@
    "detail": "源義朝が敗れ、平清盛が勢力を伸ばす。",
    "level": 2,
    "kind": "war",
-   "score": 73
+   "score": 73,
+   "id": "j045",
+   "people": [
+    "kiyomori"
+   ],
+   "links": [
+    {
+     "to": "j046",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1167,
@@ -774,7 +1096,17 @@
    "detail": "武士として初めて太政大臣となり、平氏政権を築く。",
    "level": 2,
    "kind": "politics",
-   "score": 72
+   "score": 72,
+   "id": "j046",
+   "people": [
+    "kiyomori"
+   ],
+   "links": [
+    {
+     "to": "j467",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1175,
@@ -782,7 +1114,21 @@
    "detail": "法然が浄土宗を開き、念仏による救いを説いた。",
    "level": 2,
    "kind": "culture",
-   "score": 64
+   "score": 64,
+   "id": "j047",
+   "people": [
+    "honen"
+   ],
+   "links": [
+    {
+     "to": "j479",
+     "t": "religion"
+    },
+    {
+     "to": "j487",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 1180,
@@ -791,7 +1137,18 @@
    "lesson": "人心をまとめる大義と拠点が、勢力の核になる。",
    "level": 2,
    "kind": "war",
-   "score": 74
+   "score": 74,
+   "id": "j048",
+   "people": [
+    "yoritomo",
+    "masako"
+   ],
+   "links": [
+    {
+     "to": "j196",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1185,
@@ -801,7 +1158,18 @@
    "lesson": "勝敗だけでなく、その後の統治の設計が問われた。",
    "level": 1,
    "kind": "war",
-   "score": 99
+   "score": 99,
+   "id": "j049",
+   "people": [
+    "yoshitsune",
+    "kiyomori"
+   ],
+   "links": [
+    {
+     "to": "j050",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1185,
@@ -811,7 +1179,14 @@
    "lesson": "現場に人を置く仕組みが、支配を実効あるものにする。",
    "level": 1,
    "kind": "politics",
-   "score": 83
+   "score": 83,
+   "id": "j050",
+   "links": [
+    {
+     "to": "j051",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1192,
@@ -820,7 +1195,22 @@
    "lesson": "形式上の権威と実際の力を、どう組み合わせるか。",
    "level": 1,
    "kind": "politics",
-   "score": 97
+   "score": 97,
+   "id": "j051",
+   "links": [
+    {
+     "to": "j199",
+     "t": "war"
+    },
+    {
+     "to": "j200",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "yoritomo",
+    "masako"
+   ]
   },
   {
    "year": 1203,
@@ -828,7 +1218,11 @@
    "detail": "東大寺南大門の金剛力士像が造られ、力強い写実の彫刻を示した。",
    "level": 2,
    "kind": "culture",
-   "score": 60
+   "score": 60,
+   "id": "j052",
+   "people": [
+    "unkei"
+   ]
   },
   {
    "year": 1221,
@@ -836,7 +1230,17 @@
    "detail": "後鳥羽上皇が幕府打倒を図るも敗れ、幕府の支配が西国にも及ぶ。",
    "level": 2,
    "kind": "war",
-   "score": 72
+   "score": 72,
+   "id": "j053",
+   "links": [
+    {
+     "to": "j054",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "yoshitoki"
+   ]
   },
   {
    "year": 1232,
@@ -845,7 +1249,11 @@
    "lesson": "暗黙のルールを明文化すると、信頼が生まれる。",
    "level": 2,
    "kind": "politics",
-   "score": 76
+   "score": 76,
+   "id": "j054",
+   "people": [
+    "yasutoki"
+   ]
   },
   {
    "year": 1274,
@@ -853,7 +1261,17 @@
    "detail": "元・高麗軍が博多湾に襲来。集団戦法と火器に苦戦した。",
    "level": 1,
    "kind": "war",
-   "score": 92
+   "score": 92,
+   "id": "j055",
+   "links": [
+    {
+     "to": "j056",
+     "t": "war"
+    }
+   ],
+   "people": [
+    "tokimune"
+   ]
   },
   {
    "year": 1281,
@@ -862,7 +1280,21 @@
    "lesson": "危機への備えは、のちの負担（恩賞の不足）を生んだ。",
    "level": 1,
    "kind": "war",
-   "score": 91
+   "score": 91,
+   "id": "j056",
+   "links": [
+    {
+     "to": "j057",
+     "t": "economy"
+    },
+    {
+     "to": "j058",
+     "t": "war"
+    }
+   ],
+   "people": [
+    "tokimune"
+   ]
   },
   {
    "year": 1297,
@@ -870,7 +1302,14 @@
    "detail": "御家人の困窮を救うため、売った土地を取り戻させる命令が出された。",
    "level": 2,
    "kind": "society",
-   "score": 69
+   "score": 69,
+   "id": "j057",
+   "links": [
+    {
+     "to": "j058",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1333,
@@ -879,7 +1318,19 @@
    "lesson": "不満が蓄積した体制は、きっかけ一つで崩れる。",
    "level": 2,
    "kind": "politics",
-   "score": 77
+   "score": 77,
+   "id": "j058",
+   "people": [
+    "takauji",
+    "godaigo",
+    "yoshisada"
+   ],
+   "links": [
+    {
+     "to": "j059",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1334,
@@ -888,7 +1339,18 @@
    "lesson": "理想だけでなく、担い手の納得が必要だった。",
    "level": 2,
    "kind": "politics",
-   "score": 73
+   "score": 73,
+   "id": "j059",
+   "people": [
+    "godaigo",
+    "kusunoki"
+   ],
+   "links": [
+    {
+     "to": "j496",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1336,
@@ -896,7 +1358,14 @@
    "detail": "京都の北朝と吉野の南朝に朝廷が分かれ、約60年続く。",
    "level": 2,
    "kind": "politics",
-   "score": 71
+   "score": 71,
+   "id": "j060",
+   "links": [
+    {
+     "to": "j209",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1338,
@@ -904,7 +1373,17 @@
    "detail": "北朝から征夷大将軍に任じられ、室町幕府が成立する。",
    "level": 2,
    "kind": "politics",
-   "score": 73
+   "score": 73,
+   "id": "j061",
+   "people": [
+    "takauji"
+   ],
+   "links": [
+    {
+     "to": "j060",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1392,
@@ -912,7 +1391,17 @@
    "detail": "足利義満のもとで、南北朝が統一される。",
    "level": 2,
    "kind": "politics",
-   "score": 71
+   "score": 71,
+   "id": "j062",
+   "people": [
+    "yoshimitsu"
+   ],
+   "links": [
+    {
+     "to": "j063",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1397,
@@ -920,7 +1409,21 @@
    "detail": "足利義満が北山殿を造営。公家と武家の文化が融合した北山文化。",
    "level": 1,
    "kind": "culture",
-   "score": 79
+   "score": 79,
+   "id": "j063",
+   "people": [
+    "yoshimitsu"
+   ],
+   "links": [
+    {
+     "to": "j064",
+     "t": "foreign"
+    },
+    {
+     "to": "j212",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1404,
@@ -929,7 +1432,8 @@
    "lesson": "貿易は富と文化をもたらし、政権の財源にもなる。",
    "level": 2,
    "kind": "foreign",
-   "score": 73
+   "score": 73,
+   "id": "j064"
   },
   {
    "year": 1467,
@@ -938,7 +1442,35 @@
    "lesson": "後継ぎ争いが、制度への不信を広げた。",
    "level": 2,
    "kind": "war",
-   "score": 76
+   "score": 76,
+   "id": "j065",
+   "links": [
+    {
+     "to": "j215",
+     "t": "war"
+    },
+    {
+     "to": "j066",
+     "t": "culture"
+    },
+    {
+     "to": "j216",
+     "t": "war"
+    },
+    {
+     "to": "j217",
+     "t": "war"
+    },
+    {
+     "to": "j070",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "katsumoto",
+    "sozen",
+    "tomiko"
+   ]
   },
   {
    "year": 1482,
@@ -946,7 +1478,11 @@
    "detail": "足利義政が東山山荘を営み、簡素で奥深い東山文化を育んだ。",
    "level": 1,
    "kind": "culture",
-   "score": 81
+   "score": 81,
+   "id": "j066",
+   "people": [
+    "yoshimasa"
+   ]
   },
   {
    "year": 1543,
@@ -955,7 +1491,18 @@
    "lesson": "新技術は、戦のかたちと社会の力関係を変える。",
    "level": 1,
    "kind": "society",
-   "score": 95
+   "score": 95,
+   "id": "j067",
+   "links": [
+    {
+     "to": "j068",
+     "t": "foreign"
+    },
+    {
+     "to": "j071",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1549,
@@ -964,7 +1511,17 @@
    "lesson": "宗教や思想の伝来は、交易と一体で進んだ。",
    "level": 1,
    "kind": "foreign",
-   "score": 84
+   "score": 84,
+   "id": "j068",
+   "people": [
+    "xavier"
+   ],
+   "links": [
+    {
+     "to": "j225",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 1560,
@@ -973,7 +1530,18 @@
    "lesson": "情報と奇襲で、数の不利をくつがえす。",
    "level": 1,
    "kind": "war",
-   "score": 82
+   "score": 82,
+   "id": "j069",
+   "people": [
+    "nobunaga",
+    "yoshimoto"
+   ],
+   "links": [
+    {
+     "to": "j221",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1573,
@@ -981,7 +1549,17 @@
    "detail": "信長が足利義昭を京都から追放し、室町幕府が事実上終わる。",
    "level": 2,
    "kind": "politics",
-   "score": 73
+   "score": 73,
+   "id": "j070",
+   "people": [
+    "nobunaga"
+   ],
+   "links": [
+    {
+     "to": "j071",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1575,
@@ -990,7 +1568,18 @@
    "lesson": "新技術と組織運用の組み合わせが、勝敗を分けた。",
    "level": 1,
    "kind": "war",
-   "score": 82
+   "score": 82,
+   "id": "j071",
+   "people": [
+    "nobunaga",
+    "ieyasu"
+   ],
+   "links": [
+    {
+     "to": "j072",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1576,
@@ -998,7 +1587,18 @@
    "detail": "琵琶湖畔に壮麗な天主を持つ城が築かれ、新しい権威の象徴となる。",
    "level": 1,
    "kind": "culture",
-   "score": 81
+   "score": 81,
+   "id": "j072",
+   "links": [
+    {
+     "to": "j224",
+     "t": "economy"
+    },
+    {
+     "to": "j074",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1582,
@@ -1007,7 +1607,17 @@
    "lesson": "数字で現実を把握することが、統治の土台になる。",
    "level": 1,
    "kind": "society",
-   "score": 89
+   "score": 89,
+   "id": "j073",
+   "people": [
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j075",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1582,
@@ -1017,7 +1627,19 @@
    "lesson": "絶頂の権力にも、足元の不満という盲点はある。",
    "level": 1,
    "kind": "politics",
-   "score": 96
+   "score": 96,
+   "id": "j074",
+   "people": [
+    "nobunaga",
+    "mitsuhide",
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j521",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1588,
@@ -1025,7 +1647,11 @@
    "detail": "農民から武器を集め、兵農分離と社会の安定を図った。",
    "level": 1,
    "kind": "society",
-   "score": 88
+   "score": 88,
+   "id": "j075",
+   "people": [
+    "hideyoshi"
+   ]
   },
   {
    "year": 1590,
@@ -1033,7 +1659,21 @@
    "detail": "小田原の北条氏を降し、長い戦国の争乱をおさめる。",
    "level": 2,
    "kind": "politics",
-   "score": 77
+   "score": 77,
+   "id": "j076",
+   "people": [
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j073",
+     "t": "economy"
+    },
+    {
+     "to": "j077",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1592,
@@ -1042,7 +1682,17 @@
    "lesson": "拡大の野心は、国内外に大きな犠牲を生んだ。",
    "level": 2,
    "kind": "war",
-   "score": 70
+   "score": 70,
+   "id": "j077",
+   "people": [
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j231",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1600,
@@ -1051,7 +1701,18 @@
    "lesson": "天下分け目の戦いは、同盟と情報戦で決まった。",
    "level": 1,
    "kind": "war",
-   "score": 96
+   "score": 96,
+   "id": "j078",
+   "people": [
+    "ieyasu",
+    "mitsunari"
+   ],
+   "links": [
+    {
+     "to": "j079",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1603,
@@ -1059,7 +1720,21 @@
    "detail": "家康が征夷大将軍となり、江戸に幕府を開く。",
    "level": 1,
    "kind": "politics",
-   "score": 92
+   "score": 92,
+   "id": "j079",
+   "people": [
+    "ieyasu"
+   ],
+   "links": [
+    {
+     "to": "j237",
+     "t": "war"
+    },
+    {
+     "to": "j534",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 1615,
@@ -1068,7 +1743,18 @@
    "lesson": "ライバルの排除が、長期の安定をもたらした。",
    "level": 2,
    "kind": "war",
-   "score": 74
+   "score": 74,
+   "id": "j080",
+   "links": [
+    {
+     "to": "j238",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "ieyasu",
+    "yukimura"
+   ]
   },
   {
    "year": 1635,
@@ -1077,7 +1763,14 @@
    "lesson": "移動と出費を通じて、大名を統制した。",
    "level": 1,
    "kind": "politics",
-   "score": 86
+   "score": 86,
+   "id": "j081",
+   "links": [
+    {
+     "to": "j241",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1637,
@@ -1086,7 +1779,17 @@
    "lesson": "圧政が積もれば、抵抗は大きな力になる。",
    "level": 1,
    "kind": "war",
-   "score": 83
+   "score": 83,
+   "id": "j082",
+   "links": [
+    {
+     "to": "j083",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "shiro"
+   ]
   },
   {
    "year": 1639,
@@ -1095,7 +1798,14 @@
    "lesson": "管理された交流は安定を生むが、情報の窓を狭める。",
    "level": 1,
    "kind": "foreign",
-   "score": 97
+   "score": 97,
+   "id": "j083",
+   "links": [
+    {
+     "to": "j239",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1657,
@@ -1104,7 +1814,14 @@
    "lesson": "災害は、都市づくりを見直す契機になる。",
    "level": 2,
    "kind": "disaster",
-   "score": 70
+   "score": 70,
+   "id": "j084",
+   "links": [
+    {
+     "to": "j243",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1689,
@@ -1112,7 +1829,11 @@
    "detail": "松尾芭蕉が東北・北陸を旅し、俳諧を芸術へ高めた。",
    "level": 2,
    "kind": "culture",
-   "score": 65
+   "score": 65,
+   "id": "j085",
+   "people": [
+    "basho"
+   ]
   },
   {
    "year": 1716,
@@ -1121,7 +1842,25 @@
    "lesson": "現場の声を集める仕組みが、改革を支える。",
    "level": 2,
    "kind": "politics",
-   "score": 75
+   "score": 75,
+   "id": "j086",
+   "people": [
+    "yoshimune"
+   ],
+   "links": [
+    {
+     "to": "j248",
+     "t": "politics"
+    },
+    {
+     "to": "j249",
+     "t": "economy"
+    },
+    {
+     "to": "j087",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1774,
@@ -1130,7 +1869,17 @@
    "lesson": "他国の知を学ぶ姿勢が、近代科学の土台になった。",
    "level": 1,
    "kind": "culture",
-   "score": 91
+   "score": 91,
+   "id": "j087",
+   "people": [
+    "genpaku"
+   ],
+   "links": [
+    {
+     "to": "j256",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1783,
@@ -1138,7 +1887,18 @@
    "detail": "浅間山の噴火や冷害で凶作となり、各地で多くの人が亡くなった。",
    "level": 2,
    "kind": "disaster",
-   "score": 59
+   "score": 59,
+   "id": "j088",
+   "links": [
+    {
+     "to": "j254",
+     "t": "politics"
+    },
+    {
+     "to": "j262",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1800,
@@ -1147,7 +1907,17 @@
    "lesson": "地道な実測の積み重ねが、精密な地図を生む。",
    "level": 1,
    "kind": "society",
-   "score": 87
+   "score": 87,
+   "id": "j089",
+   "people": [
+    "tadataka"
+   ],
+   "links": [
+    {
+     "to": "j091",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1821,
@@ -1155,7 +1925,11 @@
    "detail": "忠敬の没後、弟子たちが日本地図を完成させた。",
    "level": 4,
    "kind": "society",
-   "score": 35
+   "score": 35,
+   "id": "j090",
+   "people": [
+    "tadataka"
+   ]
   },
   {
    "year": 1831,
@@ -1164,7 +1938,11 @@
    "detail": "葛飾北斎が描いた浮世絵の連作。のち海外の芸術にも影響を与えた。",
    "level": 1,
    "kind": "culture",
-   "score": 79
+   "score": 79,
+   "id": "j091",
+   "people": [
+    "hokusai"
+   ]
   },
   {
    "year": 1853,
@@ -1173,7 +1951,17 @@
    "lesson": "外圧は、国内の矛盾を一気に表面化させる。",
    "level": 1,
    "kind": "foreign",
-   "score": 97
+   "score": 97,
+   "id": "j092",
+   "links": [
+    {
+     "to": "j093",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "abe_m"
+   ]
   },
   {
    "year": 1854,
@@ -1181,7 +1969,17 @@
    "detail": "下田・箱館を開き、長く続いた鎖国体制が転換する。",
    "level": 1,
    "kind": "foreign",
-   "score": 85
+   "score": 85,
+   "id": "j093",
+   "links": [
+    {
+     "to": "j094",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "abe_m"
+   ]
   },
   {
    "year": 1858,
@@ -1189,7 +1987,18 @@
    "detail": "日米修好通商条約など。関税自主権がなく、領事裁判権を認める不平等な内容だった。",
    "level": 1,
    "kind": "foreign",
-   "score": 86
+   "score": 86,
+   "id": "j094",
+   "links": [
+    {
+     "to": "j266",
+     "t": "politics"
+    },
+    {
+     "to": "j269",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1866,
@@ -1198,7 +2007,19 @@
    "lesson": "昨日の敵とも、共通の目的で手を組める。",
    "level": 2,
    "kind": "politics",
-   "score": 72
+   "score": 72,
+   "id": "j095",
+   "links": [
+    {
+     "to": "j096",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "ryoma",
+    "saigo",
+    "kido"
+   ]
   },
   {
    "year": 1867,
@@ -1206,7 +2027,22 @@
    "detail": "徳川慶喜が政権を朝廷に返上し、江戸幕府が終わる。",
    "level": 1,
    "kind": "politics",
-   "score": 94
+   "score": 94,
+   "id": "j096",
+   "people": [
+    "yoshinobu",
+    "ryoma"
+   ],
+   "links": [
+    {
+     "to": "j569",
+     "t": "war"
+    },
+    {
+     "to": "j570",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1868,
@@ -1215,7 +2051,18 @@
    "lesson": "対話が、多くの命と都市を救うこともある。",
    "level": 1,
    "kind": "politics",
-   "score": 91
+   "score": 91,
+   "id": "j097",
+   "people": [
+    "kaishu",
+    "saigo"
+   ],
+   "links": [
+    {
+     "to": "j275",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1868,
@@ -1224,7 +2071,11 @@
    "lesson": "旧来の枠組みを変えるには、新しい目標の共有が要る。",
    "level": 1,
    "kind": "politics",
-   "score": 93
+   "score": 93,
+   "id": "j098",
+   "people": [
+    "meiji"
+   ]
   },
   {
    "year": 1871,
@@ -1232,7 +2083,30 @@
    "detail": "藩を廃して県を置き、中央集権国家の基礎を固めた。",
    "level": 1,
    "kind": "politics",
-   "score": 93
+   "score": 93,
+   "id": "j099",
+   "links": [
+    {
+     "to": "j277",
+     "t": "politics"
+    },
+    {
+     "to": "j102",
+     "t": "economy"
+    },
+    {
+     "to": "j100",
+     "t": "politics"
+    },
+    {
+     "to": "j276",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "okubo",
+    "kido"
+   ]
   },
   {
    "year": 1872,
@@ -1241,7 +2115,11 @@
    "lesson": "教育への投資が、近代化の土台になる。",
    "level": 1,
    "kind": "society",
-   "score": 83
+   "score": 83,
+   "id": "j100",
+   "people": [
+    "fukuzawa"
+   ]
   },
   {
    "year": 1872,
@@ -1250,7 +2128,18 @@
    "detail": "新橋〜横浜間で鉄道が開業し、物と人の流れが変わり始める。",
    "level": 1,
    "kind": "society",
-   "score": 89
+   "score": 89,
+   "id": "j101",
+   "links": [
+    {
+     "to": "j576",
+     "t": "economy"
+    }
+   ],
+   "people": [
+    "okuma",
+    "ito"
+   ]
   },
   {
    "year": 1873,
@@ -1259,7 +2148,8 @@
    "lesson": "安定した税収が、国家運営を支えた。",
    "level": 1,
    "kind": "society",
-   "score": 83
+   "score": 83,
+   "id": "j102"
   },
   {
    "year": 1877,
@@ -1267,7 +2157,12 @@
    "detail": "西郷隆盛らが挙兵した、国内最後の大規模な内戦。",
    "level": 1,
    "kind": "war",
-   "score": 84
+   "score": 84,
+   "id": "j103",
+   "people": [
+    "saigo",
+    "okubo"
+   ]
   },
   {
    "year": 1889,
@@ -1277,7 +2172,21 @@
    "lesson": "権力のルールを定めることで、国のかたちが決まる。",
    "level": 1,
    "kind": "politics",
-   "score": 94
+   "score": 94,
+   "id": "j104",
+   "links": [
+    {
+     "to": "j283",
+     "t": "politics"
+    },
+    {
+     "to": "j284",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "ito"
+   ]
   },
   {
    "year": 1894,
@@ -1285,7 +2194,18 @@
    "detail": "朝鮮をめぐる対立から開戦。下関条約で台湾などを獲得した。",
    "level": 1,
    "kind": "war",
-   "score": 87
+   "score": 87,
+   "id": "j105",
+   "links": [
+    {
+     "to": "j285",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "mutsu",
+    "ito"
+   ]
   },
   {
    "year": 1904,
@@ -1294,7 +2214,19 @@
    "lesson": "勝利の陰で、国力の限界と国民の不満も積もった。",
    "level": 1,
    "kind": "war",
-   "score": 98
+   "score": 98,
+   "id": "j106",
+   "links": [
+    {
+     "to": "j290",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "togo",
+    "nogi",
+    "komura"
+   ]
   },
   {
    "year": 1910,
@@ -1303,7 +2235,18 @@
    "lesson": "拡張の歴史は、のちの摩擦と責任を残す。",
    "level": 2,
    "kind": "politics",
-   "score": 76
+   "score": 76,
+   "id": "j107",
+   "links": [
+    {
+     "to": "j292",
+     "t": "foreign"
+    },
+    {
+     "to": "j294",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1914,
@@ -1311,7 +2254,18 @@
    "detail": "日英同盟を理由にドイツへ宣戦し、アジアでの影響力を伸ばした。",
    "level": 2,
    "kind": "war",
-   "score": 73
+   "score": 73,
+   "id": "j108",
+   "links": [
+    {
+     "to": "j296",
+     "t": "foreign"
+    },
+    {
+     "to": "j602",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1918,
@@ -1319,7 +2273,14 @@
    "detail": "米価の高騰に怒った人びとの抗議が、全国に広がった。",
    "level": 2,
    "kind": "society",
-   "score": 62
+   "score": 62,
+   "id": "j109",
+   "links": [
+    {
+     "to": "j601",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1922,
@@ -1327,7 +2288,8 @@
    "detail": "差別からの解放をめざす人びとが、自らの組織をつくった。",
    "level": 4,
    "kind": "society",
-   "score": 34
+   "score": 34,
+   "id": "j110"
   },
   {
    "year": 1923,
@@ -1337,7 +2299,18 @@
    "lesson": "備えと正確な情報が命を守る。流言の悲劇も忘れない。",
    "level": 1,
    "kind": "disaster",
-   "score": 99
+   "score": 99,
+   "id": "j111",
+   "links": [
+    {
+     "to": "j607",
+     "t": "politics"
+    },
+    {
+     "to": "j300",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1925,
@@ -1346,7 +2319,8 @@
    "lesson": "権利の拡大と、統制の強化が同時に進んだ。",
    "level": 1,
    "kind": "politics",
-   "score": 90
+   "score": 90,
+   "id": "j112"
   },
   {
    "year": 1929,
@@ -1354,7 +2328,14 @@
    "detail": "世界の不況が日本にも波及し、農村や都市の暮らしを直撃した。",
    "level": 2,
    "kind": "society",
-   "score": 72
+   "score": 72,
+   "id": "j113",
+   "links": [
+    {
+     "to": "j114",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1931,
@@ -1364,7 +2345,14 @@
    "lesson": "現地軍の独走を止められなかったことが、戦争への道を開いた。",
    "level": 1,
    "kind": "war",
-   "score": 92
+   "score": 92,
+   "id": "j114",
+   "links": [
+    {
+     "to": "j304",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1936,
@@ -1372,7 +2360,17 @@
    "detail": "陸軍青年将校が決起し、政治家を襲撃。軍の発言力が強まる。",
    "level": 2,
    "kind": "politics",
-   "score": 71
+   "score": 71,
+   "id": "j115",
+   "links": [
+    {
+     "to": "j116",
+     "t": "war"
+    }
+   ],
+   "people": [
+    "korekiyo"
+   ]
   },
   {
    "year": 1937,
@@ -1380,7 +2378,18 @@
    "detail": "盧溝橋事件を機に全面戦争へ拡大し、長期化した。",
    "level": 1,
    "kind": "war",
-   "score": 88
+   "score": 88,
+   "id": "j116",
+   "links": [
+    {
+     "to": "j612",
+     "t": "politics"
+    },
+    {
+     "to": "j117",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1941,
@@ -1390,7 +2399,18 @@
    "lesson": "国力の差と情報を冷静に見る姿勢が欠かせない。",
    "level": 1,
    "kind": "war",
-   "score": 95
+   "score": 95,
+   "id": "j117",
+   "links": [
+    {
+     "to": "j307",
+     "t": "war"
+    }
+   ],
+   "people": [
+    "tojo",
+    "yamamoto"
+   ]
   },
   {
    "year": 1945,
@@ -1400,7 +2420,21 @@
    "lesson": "戦争の犠牲を記憶し、二度と繰り返さない誓いに。",
    "level": 1,
    "kind": "war",
-   "score": 100
+   "score": 100,
+   "id": "j118",
+   "links": [
+    {
+     "to": "j618",
+     "t": "politics"
+    },
+    {
+     "to": "j312",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "showa"
+   ]
   },
   {
    "year": 1946,
@@ -1409,7 +2443,22 @@
    "detail": "国民主権・基本的人権・平和主義を柱とする憲法が公布された。",
    "level": 1,
    "kind": "politics",
-   "score": 98
+   "score": 98,
+   "id": "j119",
+   "links": [
+    {
+     "to": "j621",
+     "t": "politics"
+    },
+    {
+     "to": "j313",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "yoshida",
+    "showa"
+   ]
   },
   {
    "year": 1951,
@@ -1418,7 +2467,17 @@
    "detail": "サンフランシスコ平和条約に調印し、翌年に主権を回復した。",
    "level": 1,
    "kind": "foreign",
-   "score": 92
+   "score": 92,
+   "id": "j120",
+   "links": [
+    {
+     "to": "j315",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "yoshida"
+   ]
   },
   {
    "year": 1964,
@@ -1428,7 +2487,21 @@
    "lesson": "国をあげた目標が、インフラと自信を育てた。",
    "level": 1,
    "kind": "society",
-   "score": 99
+   "score": 99,
+   "id": "j121",
+   "links": [
+    {
+     "to": "j630",
+     "t": "economy"
+    },
+    {
+     "to": "j628",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "ikeda"
+   ]
   },
   {
    "year": 1972,
@@ -1436,7 +2509,17 @@
    "detail": "沖縄が日本に復帰し、同年には日中国交も正常化した。",
    "level": 1,
    "kind": "foreign",
-   "score": 90
+   "score": 90,
+   "id": "j122",
+   "links": [
+    {
+     "to": "j633",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "sato"
+   ]
   },
   {
    "year": 1973,
@@ -1445,7 +2528,18 @@
    "lesson": "資源に依存する社会は、外の変化に弱い。",
    "level": 2,
    "kind": "society",
-   "score": 71
+   "score": 71,
+   "id": "j123",
+   "links": [
+    {
+     "to": "j631",
+     "t": "economy"
+    },
+    {
+     "to": "j635",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1989,
@@ -1454,7 +2548,17 @@
    "detail": "昭和天皇が崩御し、元号が平成に改まった。",
    "level": 1,
    "kind": "politics",
-   "score": 88
+   "score": 88,
+   "id": "j124",
+   "people": [
+    "showa"
+   ],
+   "links": [
+    {
+     "to": "j640",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1991,
@@ -1463,7 +2567,18 @@
    "lesson": "過熱した期待は、やがて現実に引き戻される。",
    "level": 2,
    "kind": "society",
-   "score": 75
+   "score": 75,
+   "id": "j125",
+   "links": [
+    {
+     "to": "j124",
+     "t": "economy"
+    },
+    {
+     "to": "j126",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1995,
@@ -1473,7 +2588,14 @@
    "lesson": "都市の災害には、備えと助け合いが欠かせない。",
    "level": 1,
    "kind": "disaster",
-   "score": 90
+   "score": 90,
+   "id": "j126",
+   "links": [
+    {
+     "to": "j336",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 2008,
@@ -1482,7 +2604,14 @@
    "detail": "米国発の金融危機が世界に波及し、日本経済も大きく落ち込んだ。",
    "level": 2,
    "kind": "society",
-   "score": 59
+   "score": 59,
+   "id": "j127",
+   "links": [
+    {
+     "to": "j342",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 2011,
@@ -1492,7 +2621,14 @@
    "lesson": "想定を超える事態に備え、記録と教訓を未来へつなぐ。",
    "level": 1,
    "kind": "disaster",
-   "score": 99
+   "score": 99,
+   "id": "j128",
+   "links": [
+    {
+     "to": "j344",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 2019,
@@ -1501,7 +2637,14 @@
    "detail": "皇位継承に伴い、元号が平成から令和に改まった。",
    "level": 1,
    "kind": "politics",
-   "score": 94
+   "score": 94,
+   "id": "j129",
+   "links": [
+    {
+     "to": "j130",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 2020,
@@ -1510,7 +2653,14 @@
    "lesson": "危機は、社会のデジタル化を一気に押し進めた。",
    "level": 3,
    "kind": "disaster",
-   "score": 57
+   "score": 57,
+   "id": "j130",
+   "links": [
+    {
+     "to": "j131",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 2021,
@@ -1519,7 +2669,8 @@
    "detail": "1年延期のうえ、多くの会場で無観客で行われた。",
    "level": 1,
    "kind": "society",
-   "score": 80
+   "score": 80,
+   "id": "j131"
   },
   {
    "year": 2022,
@@ -1529,7 +2680,8 @@
    "lesson": "新しい道具が現れる時こそ、歴史に学ぶ。",
    "level": 3,
    "kind": "society",
-   "score": 57
+   "score": 57,
+   "id": "j132"
   },
   {
    "year": 2024,
@@ -1538,7 +2690,8 @@
    "detail": "最大震度7の地震が能登を襲い、甚大な被害が出た。",
    "level": 3,
    "kind": "disaster",
-   "score": 54
+   "score": 54,
+   "id": "j133"
   },
   {
    "year": 2025,
@@ -1547,7 +2700,8 @@
    "detail": "大阪で万博が開かれ、世界各国が最新の技術と文化を発信した。",
    "level": 3,
    "kind": "society",
-   "score": 52
+   "score": 52,
+   "id": "j134"
   },
   {
    "year": 2026,
@@ -1563,7 +2717,8 @@
      "u": "https://noton.youside.me/@anti_frame"
     }
    ],
-   "score": 29
+   "score": 29,
+   "id": "j135"
   },
   {
    "year": 2026,
@@ -1583,7 +2738,8 @@
      "u": "https://edumuse.youside.me/"
     }
    ],
-   "score": 29
+   "score": 29,
+   "id": "j136"
   },
   {
    "year": 2026,
@@ -1599,7 +2755,8 @@
      "u": "https://note.com/john_mat_digweed/n/n586d82d875a7"
     }
    ],
-   "score": 29
+   "score": 29,
+   "id": "j137"
   },
   {
    "year": -6000,
@@ -1609,7 +2766,8 @@
    "kind": "disaster",
    "lesson": "環境の変化は、暮らしの場所そのものを変える。",
    "approx": true,
-   "score": 36
+   "score": 36,
+   "id": "j138"
   },
   {
    "year": -3500,
@@ -1619,7 +2777,8 @@
    "kind": "society",
    "lesson": "ものの移動は、人とつながりの移動でもある。",
    "approx": true,
-   "score": 13
+   "score": 13,
+   "id": "j139"
   },
   {
    "year": -3000,
@@ -1629,7 +2788,8 @@
    "kind": "culture",
    "lesson": "実用品に、これほどの造形心を注いだ。",
    "approx": true,
-   "score": 14
+   "score": 14,
+   "id": "j140"
   },
   {
    "year": -2500,
@@ -1638,7 +2798,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 20
+   "score": 20,
+   "id": "j141"
   },
   {
    "year": -1000,
@@ -1647,7 +2808,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 2
+   "score": 2,
+   "id": "j142"
   },
   {
    "year": -400,
@@ -1656,7 +2818,8 @@
    "level": 3,
    "kind": "society",
    "approx": true,
-   "score": 46
+   "score": 46,
+   "id": "j143"
   },
   {
    "year": -200,
@@ -1665,7 +2828,14 @@
    "level": 1,
    "kind": "society",
    "approx": true,
-   "score": 78
+   "score": 78,
+   "id": "j144",
+   "links": [
+    {
+     "to": "j148",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": -100,
@@ -1674,7 +2844,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 5
+   "score": 5,
+   "id": "j145"
   },
   {
    "year": 100,
@@ -1683,7 +2854,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 17
+   "score": 17,
+   "id": "j146"
   },
   {
    "year": 107,
@@ -1691,7 +2863,8 @@
    "detail": "『後漢書』に、倭国王の帥升らが生口（捕虜・奴隷）160人を献上したと記される。",
    "level": 4,
    "kind": "foreign",
-   "score": 36
+   "score": 36,
+   "id": "j147"
   },
   {
    "year": 180,
@@ -1700,7 +2873,17 @@
    "level": 2,
    "kind": "war",
    "approx": true,
-   "score": 72
+   "score": 72,
+   "id": "j148",
+   "people": [
+    "himiko"
+   ],
+   "links": [
+    {
+     "to": "j017",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 266,
@@ -1709,7 +2892,11 @@
    "level": 5,
    "kind": "foreign",
    "approx": true,
-   "score": 20
+   "score": 20,
+   "id": "j149",
+   "people": [
+    "himiko"
+   ]
   },
   {
    "year": 391,
@@ -1717,7 +2904,8 @@
    "detail": "高句麗の好太王碑文は、倭が海を渡って百済・新羅を従えたと記す（391年の記事）。",
    "level": 5,
    "kind": "war",
-   "score": 23
+   "score": 23,
+   "id": "j150"
   },
   {
    "year": 421,
@@ -1725,7 +2913,14 @@
    "detail": "『宋書』に、倭王讃が宋に使者を送ったと記される。倭の五王（讃・珍・済・興・武）の最初の記事。",
    "level": 2,
    "kind": "foreign",
-   "score": 67
+   "score": 67,
+   "id": "j151",
+   "links": [
+    {
+     "to": "j020",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 450,
@@ -1734,7 +2929,8 @@
    "level": 2,
    "kind": "culture",
    "approx": true,
-   "score": 75
+   "score": 75,
+   "id": "j152"
   },
   {
    "year": 471,
@@ -1742,7 +2938,8 @@
    "detail": "埼玉県の稲荷山古墳の鉄剣に115字の銘文があり、「ワカタケル大王」に仕えたと刻まれる（辛亥年＝471年説）。",
    "level": 2,
    "kind": "culture",
-   "score": 71
+   "score": 71,
+   "id": "j153"
   },
   {
    "year": 587,
@@ -1750,7 +2947,17 @@
    "detail": "仏教を受け入れる蘇我馬子と、反対する物部守屋が戦い、物部氏が滅びた。",
    "level": 3,
    "kind": "war",
-   "score": 51
+   "score": 51,
+   "id": "j154",
+   "people": [
+    "soga"
+   ],
+   "links": [
+    {
+     "to": "j023",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 592,
@@ -1758,7 +2965,12 @@
    "detail": "蘇我馬子と対立した崇峻天皇が暗殺された。ほどなく推古天皇が即位する。",
    "level": 4,
    "kind": "politics",
-   "score": 36
+   "score": 36,
+   "id": "j155",
+   "people": [
+    "suiko",
+    "soga"
+   ]
   },
   {
    "year": 607,
@@ -1766,7 +2978,11 @@
    "detail": "聖徳太子が斑鳩に建てたと伝わる法隆寺。現存する世界最古級の木造建築群。",
    "level": 2,
    "kind": "culture",
-   "score": 66
+   "score": 66,
+   "id": "j156",
+   "people": [
+    "shotoku"
+   ]
   },
   {
    "year": 608,
@@ -1774,7 +2990,8 @@
    "detail": "小野妹子の帰国に同行して、隋の使者・裴世清が来日した。対等外交をめざす国書の返礼。",
    "level": 5,
    "kind": "foreign",
-   "score": 17
+   "score": 17,
+   "id": "j157"
   },
   {
    "year": 630,
@@ -1782,7 +2999,8 @@
    "detail": "犬上御田鍬らが唐に派遣された。以後、遣唐使は唐の制度・文化・仏教を持ち帰る窓口となる。",
    "level": 3,
    "kind": "foreign",
-   "score": 56
+   "score": 56,
+   "id": "j158"
   },
   {
    "year": 646,
@@ -1790,7 +3008,8 @@
    "detail": "公地公民や班田収授などの方針を示した詔。のちの律令国家の出発点とされる。",
    "level": 3,
    "kind": "politics",
-   "score": 49
+   "score": 49,
+   "id": "j159"
   },
   {
    "year": 660,
@@ -1798,7 +3017,8 @@
    "detail": "唐・新羅の連合軍が百済を滅ぼした。日本は百済の再興を助けようとする。",
    "level": 3,
    "kind": "war",
-   "score": 47
+   "score": 47,
+   "id": "j160"
   },
   {
    "year": 668,
@@ -1806,7 +3026,11 @@
    "detail": "中大兄皇子が近江大津宮で即位した。近江令を定めたとも伝わる。",
    "level": 3,
    "kind": "politics",
-   "score": 52
+   "score": 52,
+   "id": "j161",
+   "people": [
+    "naka"
+   ]
   },
   {
    "year": 670,
@@ -1814,7 +3038,8 @@
    "detail": "日本最初の全国的な戸籍とされる。のちの班田や徴兵の基礎になった。",
    "level": 4,
    "kind": "society",
-   "score": 36
+   "score": 36,
+   "id": "j162"
   },
   {
    "year": 689,
@@ -1822,7 +3047,18 @@
    "detail": "天武天皇の時代から編まれた令が、持統天皇のもとで施行された。律令国家づくりの途中経過。",
    "level": 3,
    "kind": "politics",
-   "score": 47
+   "score": 47,
+   "id": "j163",
+   "people": [
+    "jito",
+    "tenmu"
+   ],
+   "links": [
+    {
+     "to": "j031",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 702,
@@ -1830,7 +3066,8 @@
    "detail": "粟田真人らが唐に渡った。このとき国号「日本」を名乗ったとされる。",
    "level": 5,
    "kind": "foreign",
-   "score": 7
+   "score": 7,
+   "id": "j164"
   },
   {
    "year": 708,
@@ -1838,7 +3075,8 @@
    "detail": "武蔵国から銅が献上されたことを機に、和同開珎が発行された。日本の古い流通貨幣の一つ。",
    "level": 2,
    "kind": "society",
-   "score": 66
+   "score": 66,
+   "id": "j165"
   },
   {
    "year": 713,
@@ -1846,7 +3084,8 @@
    "detail": "諸国の地名の由来・産物・伝承を報告させた。出雲国風土記などが現存する。",
    "level": 4,
    "kind": "culture",
-   "score": 43
+   "score": 43,
+   "id": "j166"
   },
   {
    "year": 720,
@@ -1854,7 +3093,11 @@
    "detail": "舎人親王らが編んだ、漢文による正史。神代から持統天皇までを記す。",
    "level": 1,
    "kind": "culture",
-   "score": 85
+   "score": 85,
+   "id": "j167",
+   "people": [
+    "jito"
+   ]
   },
   {
    "year": 723,
@@ -1862,7 +3105,14 @@
    "detail": "開墾した土地を、三世代（または一代）に限り私有できるとした法。",
    "level": 3,
    "kind": "society",
-   "score": 46
+   "score": 46,
+   "id": "j168",
+   "links": [
+    {
+     "to": "j034",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 729,
@@ -1870,7 +3120,11 @@
    "detail": "左大臣の長屋王が謀反の疑いで自害に追い込まれ、藤原氏が勢力を伸ばした。",
    "level": 3,
    "kind": "politics",
-   "score": 55
+   "score": 55,
+   "id": "j169",
+   "people": [
+    "nagaya"
+   ]
   },
   {
    "year": 735,
@@ -1878,7 +3132,14 @@
    "detail": "九州から広がった疫病で、藤原四兄弟も相次いで亡くなった（737年）。人口の大きな減少を招いた。",
    "level": 3,
    "kind": "disaster",
-   "score": 56
+   "score": 56,
+   "id": "j170",
+   "links": [
+    {
+     "to": "j172",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 740,
@@ -1886,7 +3147,11 @@
    "detail": "九州で起きた反乱。動揺した聖武天皇は、各地に都を移す彷徨を続けた。",
    "level": 4,
    "kind": "war",
-   "score": 32
+   "score": 32,
+   "id": "j171",
+   "people": [
+    "shomu"
+   ]
   },
   {
    "year": 741,
@@ -1894,7 +3159,14 @@
    "detail": "疫病や戦乱を仏の力で鎮めるため、諸国に国分寺・国分尼寺の建立を命じた。",
    "level": 2,
    "kind": "politics",
-   "score": 66
+   "score": 66,
+   "id": "j172",
+   "links": [
+    {
+     "to": "j035",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 759,
@@ -1902,7 +3174,11 @@
    "detail": "鑑真が建立した寺。金堂は奈良時代の姿をいまに伝える。",
    "level": 4,
    "kind": "culture",
-   "score": 41
+   "score": 41,
+   "id": "j173",
+   "people": [
+    "ganjin"
+   ]
   },
   {
    "year": 759,
@@ -1910,7 +3186,11 @@
    "detail": "『万葉集』の最後に収められた大伴家持の歌（759年）。約4500首をもつ日本最古の歌集。",
    "level": 3,
    "kind": "culture",
-   "score": 56
+   "score": 56,
+   "id": "j174",
+   "people": [
+    "yakamochi"
+   ]
   },
   {
    "year": 764,
@@ -1918,7 +3198,8 @@
    "detail": "称徳天皇が百万基の小塔に経を納めさせた。現存最古級の印刷物とされる。",
    "level": 5,
    "kind": "culture",
-   "score": 28
+   "score": 28,
+   "id": "j175"
   },
   {
    "year": 784,
@@ -1926,7 +3207,17 @@
    "detail": "桓武天皇が奈良の仏教勢力から離れるため、山背の長岡に都を移した。10年で平安京へ。",
    "level": 2,
    "kind": "politics",
-   "score": 66
+   "score": 66,
+   "id": "j176",
+   "people": [
+    "kammu"
+   ],
+   "links": [
+    {
+     "to": "j037",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 788,
@@ -1934,7 +3225,11 @@
    "detail": "最澄が比叡山に一乗止観院を開いた。のちの延暦寺。",
    "level": 3,
    "kind": "culture",
-   "score": 51
+   "score": 51,
+   "id": "j177",
+   "people": [
+    "saicho"
+   ]
   },
   {
    "year": 797,
@@ -1942,7 +3237,11 @@
    "detail": "蝦夷の征討のため、坂上田村麻呂が征夷大将軍に任じられた。802年に胆沢城を築く。",
    "level": 2,
    "kind": "war",
-   "score": 68
+   "score": 68,
+   "id": "j178",
+   "people": [
+    "tamuramaro"
+   ]
   },
   {
    "year": 816,
@@ -1950,7 +3249,12 @@
    "detail": "空海が嵯峨天皇から高野山を賜り、真言密教の修行の場を開いた。",
    "level": 3,
    "kind": "culture",
-   "score": 55
+   "score": 55,
+   "id": "j179",
+   "people": [
+    "kukai",
+    "saga"
+   ]
   },
   {
    "year": 858,
@@ -1958,7 +3262,14 @@
    "detail": "幼い清和天皇のもと、藤原良房が実質的に摂政をつとめた。人臣で初めて。",
    "level": 2,
    "kind": "politics",
-   "score": 61
+   "score": 61,
+   "id": "j180",
+   "links": [
+    {
+     "to": "j182",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 866,
@@ -1966,7 +3277,8 @@
    "detail": "朝堂院の応天門が焼け、大納言の伴善男らが処罰された。藤原氏の他氏排斥の一つ。",
    "level": 3,
    "kind": "politics",
-   "score": 49
+   "score": 49,
+   "id": "j181"
   },
   {
    "year": 884,
@@ -1974,7 +3286,14 @@
    "detail": "光孝天皇の即位とともに、藤原基経が政務を取り仕切った。関白の先例となる。",
    "level": 2,
    "kind": "politics",
-   "score": 60
+   "score": 60,
+   "id": "j182",
+   "links": [
+    {
+     "to": "j183",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 901,
@@ -1982,7 +3301,21 @@
    "detail": "右大臣の道真が大宰府へ左遷された。のち「天神様」として信仰される。",
    "level": 2,
    "kind": "politics",
-   "score": 75
+   "score": 75,
+   "id": "j183",
+   "people": [
+    "sugawara"
+   ],
+   "links": [
+    {
+     "to": "j039",
+     "t": "foreign"
+    },
+    {
+     "to": "j040",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 905,
@@ -1990,7 +3323,17 @@
    "detail": "醍醐天皇の命で紀貫之らが編んだ最初の勅撰和歌集。仮名序で歌の心を語る。",
    "level": 2,
    "kind": "culture",
-   "score": 67
+   "score": 67,
+   "id": "j184",
+   "people": [
+    "tsurayuki"
+   ],
+   "links": [
+    {
+     "to": "j041",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 935,
@@ -1998,7 +3341,11 @@
    "detail": "紀貫之が女性になりすまして書いた、仮名による日記文学のはじまり。",
    "level": 4,
    "kind": "culture",
-   "score": 30
+   "score": 30,
+   "id": "j185",
+   "people": [
+    "tsurayuki"
+   ]
   },
   {
    "year": 940,
@@ -2006,7 +3353,11 @@
    "detail": "常陸・下総で「新皇」を名乗った将門は、藤原秀郷らに討たれた。",
    "level": 5,
    "kind": "war",
-   "score": 20
+   "score": 20,
+   "id": "j186",
+   "people": [
+    "masakado"
+   ]
   },
   {
    "year": 941,
@@ -2014,7 +3365,8 @@
    "detail": "瀬戸内海の海賊を率いた純友の反乱。将門の乱と合わせて「承平・天慶の乱」とよぶ。",
    "level": 3,
    "kind": "war",
-   "score": 46
+   "score": 46,
+   "id": "j187"
   },
   {
    "year": 969,
@@ -2022,7 +3374,14 @@
    "detail": "源高明が左遷され、藤原氏の摂関政治が確立した。",
    "level": 3,
    "kind": "politics",
-   "score": 51
+   "score": 51,
+   "id": "j188",
+   "links": [
+    {
+     "to": "j042",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1019,
@@ -2030,7 +3389,8 @@
    "detail": "女真族とされる集団が対馬・壱岐・北九州を襲った。大宰府の藤原隆家らが撃退した。",
    "level": 3,
    "kind": "foreign",
-   "score": 54
+   "score": 54,
+   "id": "j189"
   },
   {
    "year": 1051,
@@ -2038,7 +3398,14 @@
    "detail": "陸奥の安倍氏と朝廷の戦い。源頼義・義家が出羽の清原氏の助けを得て平定した（1062年）。",
    "level": 2,
    "kind": "war",
-   "score": 63
+   "score": 63,
+   "id": "j190",
+   "links": [
+    {
+     "to": "j192",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1053,
@@ -2046,7 +3413,11 @@
    "detail": "藤原頼通が宇治に建てた阿弥陀堂。極楽浄土を地上に表した。",
    "level": 2,
    "kind": "culture",
-   "score": 71
+   "score": 71,
+   "id": "j191",
+   "people": [
+    "yorimichi"
+   ]
   },
   {
    "year": 1083,
@@ -2054,7 +3425,26 @@
    "detail": "奥羽の清原氏の内紛に源義家が介入。勝者の藤原（清原）清衡が奥州藤原氏の祖となった。",
    "level": 2,
    "kind": "war",
-   "score": 61
+   "score": 61,
+   "id": "j192",
+   "people": [
+    "kiyohira",
+    "yoshiie"
+   ],
+   "links": [
+    {
+     "to": "j193",
+     "t": "war"
+    },
+    {
+     "to": "j043",
+     "t": "politics"
+    },
+    {
+     "to": "j460",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1124,
@@ -2062,7 +3452,11 @@
    "detail": "奥州藤原氏の清衡が、平泉に全面金箔の阿弥陀堂を建てた。",
    "level": 2,
    "kind": "culture",
-   "score": 69
+   "score": 69,
+   "id": "j193",
+   "people": [
+    "kiyohira"
+   ]
   },
   {
    "year": 1180,
@@ -2070,7 +3464,11 @@
    "detail": "平清盛が、日宋貿易の拠点である福原（神戸）に都を移した。半年ほどで京に戻る。",
    "level": 4,
    "kind": "politics",
-   "score": 34
+   "score": 34,
+   "id": "j194",
+   "people": [
+    "kiyomori"
+   ]
   },
   {
    "year": 1181,
@@ -2078,7 +3476,8 @@
    "detail": "西日本を中心とする大飢饉。京の街に死者があふれたようすは、のち『方丈記』が描いた。",
    "level": 5,
    "kind": "disaster",
-   "score": 11
+   "score": 11,
+   "id": "j195"
   },
   {
    "year": 1183,
@@ -2086,7 +3485,17 @@
    "detail": "木曽義仲が平氏の大軍を破り、京へ入った。",
    "level": 3,
    "kind": "war",
-   "score": 55
+   "score": 55,
+   "id": "j196",
+   "people": [
+    "yoshinaka"
+   ],
+   "links": [
+    {
+     "to": "j197",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1184,
@@ -2094,7 +3503,17 @@
    "detail": "源義経らが崖を駆け下りる奇襲で平氏を破った（鵯越の逆落としの伝承）。",
    "level": 3,
    "kind": "war",
-   "score": 50
+   "score": 50,
+   "id": "j197",
+   "people": [
+    "yoshitsune"
+   ],
+   "links": [
+    {
+     "to": "j198",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1185,
@@ -2102,7 +3521,17 @@
    "detail": "源義経が嵐の中を渡り、讃岐の屋島の平氏を急襲した。那須与一の扇の的で知られる。",
    "level": 3,
    "kind": "war",
-   "score": 52
+   "score": 52,
+   "id": "j198",
+   "people": [
+    "yoshitsune"
+   ],
+   "links": [
+    {
+     "to": "j049",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1189,
@@ -2110,7 +3539,8 @@
    "detail": "頼朝が奥州へ出兵し、平泉の藤原泰衡を滅ぼした。",
    "level": 3,
    "kind": "war",
-   "score": 49
+   "score": 49,
+   "id": "j199"
   },
   {
    "year": 1199,
@@ -2118,7 +3548,17 @@
    "detail": "頼朝の死後、幼い頼家を支える十三人の合議や、北条氏の台頭がはじまる。",
    "level": 3,
    "kind": "politics",
-   "score": 54
+   "score": 54,
+   "id": "j200",
+   "people": [
+    "yoritomo"
+   ],
+   "links": [
+    {
+     "to": "j204",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1203,
@@ -2126,7 +3566,8 @@
    "detail": "北条時政が比企氏を滅ぼし、将軍頼家を伊豆に幽閉した。",
    "level": 4,
    "kind": "politics",
-   "score": 40
+   "score": 40,
+   "id": "j201"
   },
   {
    "year": 1205,
@@ -2134,7 +3575,11 @@
    "detail": "後鳥羽上皇の命で、藤原定家らが編んだ勅撰和歌集。",
    "level": 2,
    "kind": "culture",
-   "score": 63
+   "score": 63,
+   "id": "j202",
+   "people": [
+    "teika"
+   ]
   },
   {
    "year": 1212,
@@ -2142,7 +3587,11 @@
    "detail": "鴨長明が、都の大火・地震・飢饉・遷都を見つめ、無常をつづった随筆。",
    "level": 2,
    "kind": "culture",
-   "score": 60
+   "score": 60,
+   "id": "j203",
+   "people": [
+    "chomei"
+   ]
   },
   {
    "year": 1219,
@@ -2150,7 +3599,17 @@
    "detail": "鎌倉の鶴岡八幡宮で、三代将軍の実朝が暗殺され、源氏の将軍が絶えた。",
    "level": 3,
    "kind": "politics",
-   "score": 48
+   "score": 48,
+   "id": "j204",
+   "people": [
+    "sanetomo"
+   ],
+   "links": [
+    {
+     "to": "j053",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1227,
@@ -2158,7 +3617,11 @@
    "detail": "曹洞宗を伝えた道元が、南宋から帰国した。「只管打坐」の坐禅を説く。",
    "level": 3,
    "kind": "culture",
-   "score": 50
+   "score": 50,
+   "id": "j205",
+   "people": [
+    "dogen"
+   ]
   },
   {
    "year": 1253,
@@ -2166,7 +3629,11 @@
    "detail": "日蓮が安房の清澄寺で「南無妙法蓮華経」の題目を唱え、教えを説きはじめた。",
    "level": 3,
    "kind": "culture",
-   "score": 51
+   "score": 51,
+   "id": "j206",
+   "people": [
+    "nichiren"
+   ]
   },
   {
    "year": 1324,
@@ -2174,7 +3641,11 @@
    "detail": "後醍醐天皇の討幕計画が発覚した。",
    "level": 4,
    "kind": "politics",
-   "score": 31
+   "score": 31,
+   "id": "j207",
+   "people": [
+    "godaigo"
+   ]
   },
   {
    "year": 1331,
@@ -2182,7 +3653,17 @@
    "detail": "後醍醐天皇が討幕の兵をあげた。笠置山で敗れ隠岐に流されるが、各地で呼応が広がる。",
    "level": 3,
    "kind": "war",
-   "score": 48
+   "score": 48,
+   "id": "j208",
+   "people": [
+    "godaigo"
+   ],
+   "links": [
+    {
+     "to": "j058",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1350,
@@ -2190,7 +3671,18 @@
    "detail": "足利尊氏と弟の直義の対立が、全国に広がった内乱。",
    "level": 3,
    "kind": "war",
-   "score": 47
+   "score": 47,
+   "id": "j209",
+   "people": [
+    "takauji",
+    "tadayoshi"
+   ],
+   "links": [
+    {
+     "to": "j062",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1368,
@@ -2198,7 +3690,17 @@
    "detail": "幼い義満が三代将軍となった。のち南北朝を合一し、幕府の安定をはかる。",
    "level": 3,
    "kind": "politics",
-   "score": 53
+   "score": 53,
+   "id": "j210",
+   "people": [
+    "yoshimitsu"
+   ],
+   "links": [
+    {
+     "to": "j062",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1378,
@@ -2206,7 +3708,11 @@
    "detail": "足利義満が京の室町に営んだ御所。「室町幕府」の名の由来となった。",
    "level": 3,
    "kind": "culture",
-   "score": 45
+   "score": 45,
+   "id": "j211",
+   "people": [
+    "yoshimitsu"
+   ]
   },
   {
    "year": 1400,
@@ -2214,7 +3720,11 @@
    "detail": "世阿弥が能の芸と心得を記した書。「秘すれば花」の言葉で知られる。",
    "level": 2,
    "kind": "culture",
-   "score": 60
+   "score": 60,
+   "id": "j212",
+   "people": [
+    "zeami"
+   ]
   },
   {
    "year": 1428,
@@ -2222,7 +3732,14 @@
    "detail": "近江の馬借らが徳政を求めて蜂起した。民衆の一揆のはじまりとされる。",
    "level": 2,
    "kind": "society",
-   "score": 58
+   "score": 58,
+   "id": "j213",
+   "links": [
+    {
+     "to": "j214",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1441,
@@ -2230,7 +3747,17 @@
    "detail": "赤松満祐が将軍足利義教を暗殺した。幕府の権威の低下が進む。",
    "level": 3,
    "kind": "politics",
-   "score": 54
+   "score": 54,
+   "id": "j214",
+   "people": [
+    "yoshinori"
+   ],
+   "links": [
+    {
+     "to": "j065",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1485,
@@ -2238,7 +3765,8 @@
    "detail": "南山城の国人・農民が、畠山氏の軍を追い出し、8年間自治を行った。",
    "level": 2,
    "kind": "society",
-   "score": 62
+   "score": 62,
+   "id": "j215"
   },
   {
    "year": 1488,
@@ -2246,7 +3774,8 @@
    "detail": "一向宗の門徒らが守護の富樫政親を倒し、約100年「百姓の持ちたる国」とよばれた。",
    "level": 2,
    "kind": "society",
-   "score": 68
+   "score": 68,
+   "id": "j216"
   },
   {
    "year": 1495,
@@ -2255,7 +3784,17 @@
    "level": 3,
    "kind": "war",
    "approx": true,
-   "score": 52
+   "score": 52,
+   "id": "j217",
+   "people": [
+    "soun"
+   ],
+   "links": [
+    {
+     "to": "j219",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1523,
@@ -2263,7 +3802,8 @@
    "detail": "大内氏と細川氏の使節が、明の寧波で争った。以後、勘合貿易は大内氏が担う。",
    "level": 4,
    "kind": "foreign",
-   "score": 32
+   "score": 32,
+   "id": "j218"
   },
   {
    "year": 1553,
@@ -2271,7 +3811,18 @@
    "detail": "武田信玄と上杉謙信が信濃の川中島でたびたび対陣した。最大の激戦は1561年。",
    "level": 2,
    "kind": "war",
-   "score": 64
+   "score": 64,
+   "id": "j219",
+   "people": [
+    "shingen",
+    "kenshin"
+   ],
+   "links": [
+    {
+     "to": "j220",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1555,
@@ -2279,7 +3830,17 @@
    "detail": "毛利元就が奇襲で陶晴賢を破った。中国地方の覇者へのきっかけ。",
    "level": 3,
    "kind": "war",
-   "score": 55
+   "score": 55,
+   "id": "j220",
+   "people": [
+    "motonari"
+   ],
+   "links": [
+    {
+     "to": "j069",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1568,
@@ -2287,7 +3848,17 @@
    "detail": "足利義昭を奉じて京に入り、義昭を15代将軍にすえた。",
    "level": 3,
    "kind": "politics",
-   "score": 57
+   "score": 57,
+   "id": "j221",
+   "people": [
+    "nobunaga"
+   ],
+   "links": [
+    {
+     "to": "j222",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1570,
@@ -2295,7 +3866,14 @@
    "detail": "織田・徳川軍が、浅井・朝倉軍を近江の姉川で破った。",
    "level": 3,
    "kind": "war",
-   "score": 46
+   "score": 46,
+   "id": "j222",
+   "links": [
+    {
+     "to": "j223",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1571,
@@ -2303,7 +3881,17 @@
    "detail": "信長が、敵対する浅井・朝倉を助けた延暦寺を焼き討ちした。",
    "level": 3,
    "kind": "war",
-   "score": 51
+   "score": 51,
+   "id": "j223",
+   "people": [
+    "nobunaga"
+   ],
+   "links": [
+    {
+     "to": "j070",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1577,
@@ -2311,7 +3899,11 @@
    "detail": "信長が安土城下で、座の特権をなくして自由な商いを許した。",
    "level": 1,
    "kind": "society",
-   "score": 80
+   "score": 80,
+   "id": "j224",
+   "people": [
+    "nobunaga"
+   ]
   },
   {
    "year": 1582,
@@ -2319,7 +3911,8 @@
    "detail": "大友・大村・有馬の三大名の名代として、少年使節がローマへ出発した。",
    "level": 2,
    "kind": "foreign",
-   "score": 69
+   "score": 69,
+   "id": "j225"
   },
   {
    "year": 1583,
@@ -2327,7 +3920,19 @@
    "detail": "羽柴秀吉が柴田勝家を破り、信長の後継争いに勝利した。",
    "level": 3,
    "kind": "war",
-   "score": 54
+   "score": 54,
+   "id": "j226",
+   "people": [
+    "katsuie",
+    "hideyoshi",
+    "nobunaga"
+   ],
+   "links": [
+    {
+     "to": "j523",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1583,
@@ -2335,7 +3940,11 @@
    "detail": "秀吉が石山本願寺の跡に大坂城の築城を始めた。",
    "level": 2,
    "kind": "culture",
-   "score": 61
+   "score": 61,
+   "id": "j227",
+   "people": [
+    "hideyoshi"
+   ]
   },
   {
    "year": 1587,
@@ -2343,7 +3952,17 @@
    "detail": "秀吉が宣教師の国外退去を命じた。ただし貿易は続けさせた。",
    "level": 2,
    "kind": "foreign",
-   "score": 69
+   "score": 69,
+   "id": "j228",
+   "people": [
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j230",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1587,
@@ -2351,7 +3970,11 @@
    "detail": "秀吉が京の北野天満宮で、身分を問わず参加できる大茶会を開いた。",
    "level": 4,
    "kind": "culture",
-   "score": 32
+   "score": 32,
+   "id": "j229",
+   "people": [
+    "hideyoshi"
+   ]
   },
   {
    "year": 1591,
@@ -2359,7 +3982,12 @@
    "detail": "秀吉の命で、茶人の利休が切腹した。理由には諸説ある。",
    "level": 3,
    "kind": "culture",
-   "score": 50
+   "score": 50,
+   "id": "j230",
+   "people": [
+    "rikyu",
+    "hideyoshi"
+   ]
   },
   {
    "year": 1597,
@@ -2367,7 +3995,17 @@
    "detail": "秀吉が再び朝鮮へ出兵した。翌年の秀吉の死で撤兵する。",
    "level": 2,
    "kind": "war",
-   "score": 61
+   "score": 61,
+   "id": "j231",
+   "people": [
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j233",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1597,
@@ -2375,7 +4013,8 @@
    "detail": "長崎で、26人のキリスト教徒が処刑された。",
    "level": 5,
    "kind": "foreign",
-   "score": 21
+   "score": 21,
+   "id": "j232"
   },
   {
    "year": 1598,
@@ -2383,7 +4022,19 @@
    "detail": "幼い秀頼を五大老・五奉行が支えるはずが、家康と三成の対立が深まる。",
    "level": 2,
    "kind": "politics",
-   "score": 72
+   "score": 72,
+   "id": "j233",
+   "people": [
+    "hideyoshi",
+    "ieyasu",
+    "mitsunari"
+   ],
+   "links": [
+    {
+     "to": "j078",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1600,
@@ -2391,7 +4042,17 @@
    "detail": "オランダ船リーフデ号が豊後に漂着した。ウィリアム・アダムス（三浦按針）は家康に仕えた。",
    "level": 3,
    "kind": "foreign",
-   "score": 55
+   "score": 55,
+   "id": "j234",
+   "people": [
+    "ieyasu"
+   ],
+   "links": [
+    {
+     "to": "j239",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1603,
@@ -2400,7 +4061,8 @@
    "level": 2,
    "kind": "culture",
    "approx": true,
-   "score": 64
+   "score": 64,
+   "id": "j235"
   },
   {
    "year": 1609,
@@ -2408,7 +4070,8 @@
    "detail": "島津氏が琉球王国に出兵して服属させた。琉球は明・清との関係も保ち続けた。",
    "level": 2,
    "kind": "foreign",
-   "score": 66
+   "score": 66,
+   "id": "j236"
   },
   {
    "year": 1614,
@@ -2416,7 +4079,18 @@
    "detail": "徳川軍が大坂城を包囲した。真田信繁（幸村）が築いた真田丸で知られる。",
    "level": 2,
    "kind": "war",
-   "score": 58
+   "score": 58,
+   "id": "j237",
+   "people": [
+    "ieyasu",
+    "yukimura"
+   ],
+   "links": [
+    {
+     "to": "j080",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1615,
@@ -2424,7 +4098,14 @@
    "detail": "大名の城・婚姻・行動を規制する法。徳川の支配体制が固まった。",
    "level": 2,
    "kind": "politics",
-   "score": 72
+   "score": 72,
+   "id": "j238",
+   "links": [
+    {
+     "to": "j081",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1641,
@@ -2432,7 +4113,8 @@
    "detail": "平戸のオランダ商館が長崎の出島に移され、貿易はオランダ・中国船に限られた。",
    "level": 2,
    "kind": "foreign",
-   "score": 62
+   "score": 62,
+   "id": "j239"
   },
   {
    "year": 1651,
@@ -2440,7 +4122,8 @@
    "detail": "由井正雪らの幕府転覆計画が発覚した。浪人の増加が背景にあった。",
    "level": 4,
    "kind": "politics",
-   "score": 41
+   "score": 41,
+   "id": "j240"
   },
   {
    "year": 1673,
@@ -2448,7 +4131,14 @@
    "detail": "三井高利が江戸に呉服店「越後屋」を開き、現金掛け値なしの商法で人気を集めた。",
    "level": 3,
    "kind": "society",
-   "score": 50
+   "score": 50,
+   "id": "j241",
+   "links": [
+    {
+     "to": "j085",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1682,
@@ -2456,7 +4146,11 @@
    "detail": "井原西鶴が、町人の生き方を描いた浮世草子を出し、評判となった。",
    "level": 5,
    "kind": "culture",
-   "score": 7
+   "score": 7,
+   "id": "j242",
+   "people": [
+    "saikaku"
+   ]
   },
   {
    "year": 1687,
@@ -2464,7 +4158,17 @@
    "detail": "五代将軍綱吉が、犬など生き物の殺生を禁じた。",
    "level": 2,
    "kind": "politics",
-   "score": 67
+   "score": 67,
+   "id": "j243",
+   "people": [
+    "tsunayoshi"
+   ],
+   "links": [
+    {
+     "to": "j244",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1701,
@@ -2472,7 +4176,14 @@
    "detail": "江戸城での浅野長矩の刃傷と切腹、翌年の大石内蔵助らによる討ち入り。",
    "level": 2,
    "kind": "society",
-   "score": 68
+   "score": 68,
+   "id": "j244",
+   "links": [
+    {
+     "to": "j546",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1703,
@@ -2480,7 +4191,8 @@
    "detail": "関東南部を襲った大地震。津波が房総・相模の海岸を襲った。",
    "level": 4,
    "kind": "disaster",
-   "score": 31
+   "score": 31,
+   "id": "j245"
   },
   {
    "year": 1703,
@@ -2488,7 +4200,11 @@
    "detail": "近松門左衛門の世話浄瑠璃。実際の心中事件に取材して大評判となった。",
    "level": 4,
    "kind": "culture",
-   "score": 39
+   "score": 39,
+   "id": "j246",
+   "people": [
+    "chikamatsu"
+   ]
   },
   {
    "year": 1707,
@@ -2496,7 +4212,8 @@
    "detail": "南海トラフの大地震の49日後、富士山が噴火して江戸にも降灰した。",
    "level": 3,
    "kind": "disaster",
-   "score": 56
+   "score": 56,
+   "id": "j247"
   },
   {
    "year": 1721,
@@ -2504,7 +4221,11 @@
    "detail": "吉宗が庶民の意見を投書させた。小石川養生所の設立などにつながった。",
    "level": 2,
    "kind": "politics",
-   "score": 70
+   "score": 70,
+   "id": "j248",
+   "people": [
+    "yoshimune"
+   ]
   },
   {
    "year": 1732,
@@ -2512,7 +4233,14 @@
    "detail": "ウンカの大発生などで、西日本が大凶作となった。",
    "level": 3,
    "kind": "disaster",
-   "score": 48
+   "score": 48,
+   "id": "j249",
+   "links": [
+    {
+     "to": "j253",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1742,
@@ -2520,7 +4248,8 @@
    "detail": "裁判や刑罰の基準をまとめた幕府の法典。",
    "level": 4,
    "kind": "politics",
-   "score": 42
+   "score": 42,
+   "id": "j250"
   },
   {
    "year": 1748,
@@ -2528,7 +4257,8 @@
    "detail": "赤穂事件を題材にした浄瑠璃・歌舞伎の名作が初演された。",
    "level": 5,
    "kind": "culture",
-   "score": 6
+   "score": 6,
+   "id": "j251"
   },
   {
    "year": 1765,
@@ -2536,7 +4266,8 @@
    "detail": "鈴木春信らが多色刷りの浮世絵版画（錦絵）を完成させた。",
    "level": 3,
    "kind": "culture",
-   "score": 52
+   "score": 52,
+   "id": "j252"
   },
   {
    "year": 1772,
@@ -2544,7 +4275,17 @@
    "detail": "株仲間や貿易を重んじた経済政策をとった。賄賂が横行したとの批判もある。",
    "level": 2,
    "kind": "politics",
-   "score": 63
+   "score": 63,
+   "id": "j253",
+   "people": [
+    "okitsugu"
+   ],
+   "links": [
+    {
+     "to": "j088",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1787,
@@ -2552,7 +4293,17 @@
    "detail": "老中松平定信が、倹約や囲米、旧里帰農を行い、幕府財政の立て直しをめざした。",
    "level": 2,
    "kind": "politics",
-   "score": 75
+   "score": 75,
+   "id": "j254",
+   "people": [
+    "sadanobu"
+   ],
+   "links": [
+    {
+     "to": "j255",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1792,
@@ -2560,7 +4311,14 @@
    "detail": "ロシア使節が根室に来航し、通商を求めた。",
    "level": 2,
    "kind": "foreign",
-   "score": 68
+   "score": 68,
+   "id": "j255",
+   "links": [
+    {
+     "to": "j257",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1798,
@@ -2568,7 +4326,11 @@
    "detail": "本居宣長が35年をかけて古事記を読み解いた注釈書。国学を大成した。",
    "level": 2,
    "kind": "culture",
-   "score": 67
+   "score": 67,
+   "id": "j256",
+   "people": [
+    "norinaga"
+   ]
   },
   {
    "year": 1808,
@@ -2576,7 +4338,14 @@
    "detail": "イギリス軍艦が長崎港に侵入し、オランダ商館員を人質にとった。",
    "level": 2,
    "kind": "foreign",
-   "score": 64
+   "score": 64,
+   "id": "j257",
+   "links": [
+    {
+     "to": "j259",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1814,
@@ -2584,7 +4353,11 @@
    "detail": "葛飾北斎が、人物・動植物・風景のスケッチ集を刊行した。",
    "level": 4,
    "kind": "culture",
-   "score": 32
+   "score": 32,
+   "id": "j258",
+   "people": [
+    "hokusai"
+   ]
   },
   {
    "year": 1825,
@@ -2592,7 +4365,14 @@
    "detail": "幕府が、沿岸に近づく外国船を砲撃して追い払うよう命じた。",
    "level": 2,
    "kind": "foreign",
-   "score": 59
+   "score": 59,
+   "id": "j259",
+   "links": [
+    {
+     "to": "j558",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1833,
@@ -2600,7 +4380,11 @@
    "detail": "歌川広重が東海道の風景を描き、庶民の旅行ブームに応えた。",
    "level": 4,
    "kind": "culture",
-   "score": 42
+   "score": 42,
+   "id": "j260",
+   "people": [
+    "hiroshige"
+   ]
   },
   {
    "year": 1833,
@@ -2608,7 +4392,8 @@
    "detail": "冷害・長雨による凶作が数年続いた。各地で一揆や打ちこわしが起こる。",
    "level": 4,
    "kind": "disaster",
-   "score": 32
+   "score": 32,
+   "id": "j261"
   },
   {
    "year": 1837,
@@ -2616,7 +4401,17 @@
    "detail": "大坂町奉行所の元役人・大塩平八郎が、飢饉に苦しむ人々を救おうと蜂起した。",
    "level": 2,
    "kind": "society",
-   "score": 66
+   "score": 66,
+   "id": "j262",
+   "people": [
+    "oshio"
+   ],
+   "links": [
+    {
+     "to": "j263",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1841,
@@ -2624,7 +4419,11 @@
    "detail": "老中水野忠邦が、倹約令や株仲間の解散を行い、幕府の財政難を打開しようとした。",
    "level": 2,
    "kind": "politics",
-   "score": 70
+   "score": 70,
+   "id": "j263",
+   "people": [
+    "mizuno"
+   ]
   },
   {
    "year": 1842,
@@ -2632,7 +4431,8 @@
    "detail": "アヘン戦争での清の敗北を知った幕府は、異国船打払令を改めた。",
    "level": 4,
    "kind": "foreign",
-   "score": 31
+   "score": 31,
+   "id": "j264"
   },
   {
    "year": 1855,
@@ -2640,7 +4440,8 @@
    "detail": "江戸を襲った直下型の大地震。死者は数千〜1万人ともいわれる。",
    "level": 5,
    "kind": "disaster",
-   "score": 22
+   "score": 22,
+   "id": "j265"
   },
   {
    "year": 1858,
@@ -2648,7 +4449,18 @@
    "detail": "大老井伊直弼が、反対派の公家・大名・志士を処罰した。",
    "level": 2,
    "kind": "politics",
-   "score": 76
+   "score": 76,
+   "id": "j266",
+   "people": [
+    "ii",
+    "shoin"
+   ],
+   "links": [
+    {
+     "to": "j267",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1860,
@@ -2656,7 +4468,17 @@
    "detail": "江戸城の桜田門外で、水戸脱藩士らが井伊直弼を暗殺した。",
    "level": 2,
    "kind": "politics",
-   "score": 60
+   "score": 60,
+   "id": "j267",
+   "people": [
+    "ii"
+   ],
+   "links": [
+    {
+     "to": "j268",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1860,
@@ -2664,7 +4486,12 @@
    "detail": "勝海舟、福沢諭吉らを乗せ、日本の船が初めて太平洋を横断した。",
    "level": 3,
    "kind": "foreign",
-   "score": 51
+   "score": 51,
+   "id": "j268",
+   "people": [
+    "kaishu",
+    "fukuzawa"
+   ]
   },
   {
    "year": 1862,
@@ -2672,7 +4499,14 @@
    "detail": "薩摩藩の行列を横切った英国人が殺傷された。翌年の薩英戦争につながる。",
    "level": 3,
    "kind": "foreign",
-   "score": 48
+   "score": 48,
+   "id": "j269",
+   "links": [
+    {
+     "to": "j270",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1863,
@@ -2680,7 +4514,14 @@
    "detail": "生麦事件の報復で英国艦隊が鹿児島を砲撃した。薩摩は英国に接近する。",
    "level": 3,
    "kind": "war",
-   "score": 53
+   "score": 53,
+   "id": "j270",
+   "links": [
+    {
+     "to": "j271",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1864,
@@ -2688,7 +4529,14 @@
    "detail": "長州藩が京都御所の蛤御門で、会津・薩摩の兵と戦って敗れた。",
    "level": 3,
    "kind": "war",
-   "score": 55
+   "score": 55,
+   "id": "j271",
+   "links": [
+    {
+     "to": "j567",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1864,
@@ -2696,7 +4544,8 @@
    "detail": "京都三条の旅籠・池田屋で、新選組が長州系の志士らを襲撃した。",
    "level": 4,
    "kind": "war",
-   "score": 30
+   "score": 30,
+   "id": "j272"
   },
   {
    "year": 1867,
@@ -2704,7 +4553,8 @@
    "detail": "幕府と薩摩・佐賀藩が出品。日本の工芸品はヨーロッパのジャポニスムの流行を促した。",
    "level": 4,
    "kind": "foreign",
-   "score": 39
+   "score": 39,
+   "id": "j273"
   },
   {
    "year": 1869,
@@ -2712,7 +4562,14 @@
    "detail": "藩主が土地（版）と人民（籍）を天皇に返上した。",
    "level": 2,
    "kind": "politics",
-   "score": 72
+   "score": 72,
+   "id": "j274",
+   "links": [
+    {
+     "to": "j099",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1869,
@@ -2720,7 +4577,8 @@
    "detail": "旧幕府軍の榎本武揚らが函館の五稜郭にたてこもり、敗れた。戊辰戦争の終結。",
    "level": 2,
    "kind": "war",
-   "score": 66
+   "score": 66,
+   "id": "j275"
   },
   {
    "year": 1871,
@@ -2728,7 +4586,20 @@
    "detail": "岩倉具視を団長に、欧米を約2年かけて視察した。不平等条約の改正は果たせなかったが、近代化の指針を得た。",
    "level": 2,
    "kind": "foreign",
-   "score": 74
+   "score": 74,
+   "id": "j276",
+   "people": [
+    "iwakura",
+    "okubo",
+    "ito",
+    "tsuda"
+   ],
+   "links": [
+    {
+     "to": "j278",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1873,
@@ -2736,7 +4607,8 @@
    "detail": "満20歳の男子に兵役の義務を課した。国民皆兵の考え方による。",
    "level": 2,
    "kind": "politics",
-   "score": 65
+   "score": 65,
+   "id": "j277"
   },
   {
    "year": 1873,
@@ -2744,7 +4616,22 @@
    "detail": "征韓論に敗れた西郷隆盛・板垣退助らが政府を去った。",
    "level": 3,
    "kind": "politics",
-   "score": 49
+   "score": 49,
+   "id": "j278",
+   "people": [
+    "saigo",
+    "itagaki"
+   ],
+   "links": [
+    {
+     "to": "j279",
+     "t": "politics"
+    },
+    {
+     "to": "j103",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1874,
@@ -2752,7 +4639,17 @@
    "detail": "板垣退助らが、国会（議会）開設を求める意見書を政府に提出した。自由民権運動のはじまり。",
    "level": 2,
    "kind": "politics",
-   "score": 61
+   "score": 61,
+   "id": "j279",
+   "people": [
+    "itagaki"
+   ],
+   "links": [
+    {
+     "to": "j585",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1877,
@@ -2760,7 +4657,8 @@
    "detail": "官立の東京大学が開かれた。近代日本の高等教育の中心となる。",
    "level": 3,
    "kind": "culture",
-   "score": 53
+   "score": 53,
+   "id": "j280"
   },
   {
    "year": 1881,
@@ -2768,7 +4666,19 @@
    "detail": "10年後（1890年）の国会開設を約束した。",
    "level": 2,
    "kind": "politics",
-   "score": 65
+   "score": 65,
+   "id": "j281",
+   "links": [
+    {
+     "to": "j282",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "meiji",
+    "okuma",
+    "ito"
+   ]
   },
   {
    "year": 1885,
@@ -2776,7 +4686,17 @@
    "detail": "初代首相に伊藤博文が就任した。",
    "level": 2,
    "kind": "politics",
-   "score": 74
+   "score": 74,
+   "id": "j282",
+   "people": [
+    "ito"
+   ],
+   "links": [
+    {
+     "to": "j104",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1890,
@@ -2784,7 +4704,8 @@
    "detail": "日本初の議会が開かれた。",
    "level": 2,
    "kind": "politics",
-   "score": 66
+   "score": 66,
+   "id": "j283"
   },
   {
    "year": 1890,
@@ -2792,7 +4713,8 @@
    "detail": "国民教育の基本を示す文書。学校の儀式などで用いられた。",
    "level": 2,
    "kind": "society",
-   "score": 63
+   "score": 63,
+   "id": "j284"
   },
   {
    "year": 1895,
@@ -2800,7 +4722,14 @@
    "detail": "日清戦争の講和条約。清は台湾・遼東半島などを日本に譲り、賠償金を支払った。",
    "level": 2,
    "kind": "foreign",
-   "score": 73
+   "score": 73,
+   "id": "j285",
+   "links": [
+    {
+     "to": "j286",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1895,
@@ -2808,7 +4737,14 @@
    "detail": "ロシア・ドイツ・フランスが遼東半島の返還を勧告した。",
    "level": 2,
    "kind": "foreign",
-   "score": 68
+   "score": 68,
+   "id": "j286",
+   "links": [
+    {
+     "to": "j106",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1897,
@@ -2816,7 +4752,8 @@
    "detail": "日清戦争の賠償金を準備金に、日本も金本位制を採用した。",
    "level": 4,
    "kind": "society",
-   "score": 40
+   "score": 40,
+   "id": "j287"
   },
   {
    "year": 1901,
@@ -2824,7 +4761,8 @@
    "detail": "官営の八幡製鉄所が操業を始めた。重工業の基礎となった。",
    "level": 2,
    "kind": "society",
-   "score": 70
+   "score": 70,
+   "id": "j288"
   },
   {
    "year": 1902,
@@ -2832,7 +4770,14 @@
    "detail": "ロシアに対抗するため、イギリスと軍事同盟を結んだ。",
    "level": 2,
    "kind": "foreign",
-   "score": 60
+   "score": 60,
+   "id": "j289",
+   "links": [
+    {
+     "to": "j106",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1905,
@@ -2840,7 +4785,21 @@
    "detail": "日露戦争の講和条約。賠償金が得られず、国内で不満が高まった。",
    "level": 2,
    "kind": "foreign",
-   "score": 73
+   "score": 73,
+   "id": "j290",
+   "links": [
+    {
+     "to": "j107",
+     "t": "foreign"
+    },
+    {
+     "to": "j293",
+     "t": "foreign"
+    }
+   ],
+   "people": [
+    "komura"
+   ]
   },
   {
    "year": 1905,
@@ -2848,7 +4807,8 @@
    "detail": "講和条約への不満から、東京で大規模な暴動が起きた。",
    "level": 4,
    "kind": "society",
-   "score": 43
+   "score": 43,
+   "id": "j291"
   },
   {
    "year": 1909,
@@ -2856,7 +4816,11 @@
    "detail": "ハルビン駅で、韓国の独立運動家・安重根に暗殺された。",
    "level": 3,
    "kind": "politics",
-   "score": 50
+   "score": 50,
+   "id": "j292",
+   "people": [
+    "ito"
+   ]
   },
   {
    "year": 1911,
@@ -2864,7 +4828,12 @@
    "detail": "小村寿太郎外相のもと、条約改正が完成した。",
    "level": 1,
    "kind": "foreign",
-   "score": 78
+   "score": 78,
+   "id": "j293",
+   "people": [
+    "komura",
+    "taro"
+   ]
   },
   {
    "year": 1912,
@@ -2872,7 +4841,18 @@
    "detail": "乃木希典夫妻が殉死した。",
    "level": 3,
    "kind": "politics",
-   "score": 53
+   "score": 53,
+   "id": "j294",
+   "people": [
+    "meiji",
+    "nogi"
+   ],
+   "links": [
+    {
+     "to": "j599",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1914,
@@ -2880,7 +4860,8 @@
    "detail": "辰野金吾の設計による赤レンガの駅舎が、東京に開業した。",
    "level": 4,
    "kind": "culture",
-   "score": 43
+   "score": 43,
+   "id": "j295"
   },
   {
    "year": 1915,
@@ -2888,7 +4869,14 @@
    "detail": "中国に対し、山東省の権益などを求めた。中国の反日感情が高まった。",
    "level": 2,
    "kind": "foreign",
-   "score": 59
+   "score": 59,
+   "id": "j296",
+   "links": [
+    {
+     "to": "j109",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1920,
@@ -2896,7 +4884,8 @@
    "detail": "日本は常任理事国となった。",
    "level": 2,
    "kind": "foreign",
-   "score": 66
+   "score": 66,
+   "id": "j297"
   },
   {
    "year": 1921,
@@ -2904,7 +4893,8 @@
    "detail": "海軍の軍備制限などが協議され、日英同盟は終わった（1921〜22年）。",
    "level": 2,
    "kind": "foreign",
-   "score": 59
+   "score": 59,
+   "id": "j298"
   },
   {
    "year": 1925,
@@ -2912,7 +4902,14 @@
    "detail": "東京・大阪・名古屋でラジオ放送が始まり、大衆文化を広げた。",
    "level": 2,
    "kind": "society",
-   "score": 63
+   "score": 63,
+   "id": "j299",
+   "links": [
+    {
+     "to": "j608",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1927,
@@ -2920,7 +4917,17 @@
    "detail": "銀行の取り付けが相次ぎ、休業する銀行が続出した。",
    "level": 2,
    "kind": "society",
-   "score": 65
+   "score": 65,
+   "id": "j300",
+   "links": [
+    {
+     "to": "j302",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "korekiyo"
+   ]
   },
   {
    "year": 1927,
@@ -2928,7 +4935,8 @@
    "detail": "東京の浅草〜上野間に、日本初の地下鉄が開業した。",
    "level": 5,
    "kind": "society",
-   "score": 11
+   "score": 11,
+   "id": "j301"
   },
   {
    "year": 1928,
@@ -2936,7 +4944,14 @@
    "detail": "関東軍が、満州の軍閥・張作霖の列車を爆破して殺害した。",
    "level": 2,
    "kind": "war",
-   "score": 69
+   "score": 69,
+   "id": "j302",
+   "links": [
+    {
+     "to": "j609",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1932,
@@ -2944,7 +4959,11 @@
    "detail": "海軍の青年将校らが犬養毅首相を暗殺した。政党内閣の時代が終わる。",
    "level": 2,
    "kind": "politics",
-   "score": 58
+   "score": 58,
+   "id": "j303",
+   "people": [
+    "inukai"
+   ]
   },
   {
    "year": 1932,
@@ -2952,7 +4971,18 @@
    "detail": "関東軍が満州を占領して、満州国をつくった。",
    "level": 2,
    "kind": "politics",
-   "score": 64
+   "score": 64,
+   "id": "j304",
+   "links": [
+    {
+     "to": "j303",
+     "t": "politics"
+    },
+    {
+     "to": "j305",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1933,
@@ -2960,7 +4990,18 @@
    "detail": "満州国をめぐる勧告案を不服として、日本は連盟を去った。",
    "level": 2,
    "kind": "foreign",
-   "score": 61
+   "score": 61,
+   "id": "j305",
+   "links": [
+    {
+     "to": "j115",
+     "t": "politics"
+    },
+    {
+     "to": "j306",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1940,
@@ -2968,7 +5009,14 @@
    "detail": "ドイツ・イタリアと軍事同盟を結んだ。アメリカとの対立が深まる。",
    "level": 2,
    "kind": "foreign",
-   "score": 59
+   "score": 59,
+   "id": "j306",
+   "links": [
+    {
+     "to": "j117",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1942,
@@ -2976,7 +5024,17 @@
    "detail": "日本海軍が空母4隻を失う大敗北を喫した。戦局の転機。",
    "level": 2,
    "kind": "war",
-   "score": 75
+   "score": 75,
+   "id": "j307",
+   "links": [
+    {
+     "to": "j308",
+     "t": "war"
+    }
+   ],
+   "people": [
+    "yamamoto"
+   ]
   },
   {
    "year": 1944,
@@ -2984,7 +5042,14 @@
    "detail": "日本の防衛線が崩れ、本土空襲が本格化した。",
    "level": 2,
    "kind": "war",
-   "score": 66
+   "score": 66,
+   "id": "j308",
+   "links": [
+    {
+     "to": "j309",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1945,
@@ -2993,7 +5058,14 @@
    "level": 1,
    "kind": "war",
    "month": 3,
-   "score": 82
+   "score": 82,
+   "id": "j309",
+   "links": [
+    {
+     "to": "j310",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1945,
@@ -3002,7 +5074,14 @@
    "level": 1,
    "kind": "war",
    "month": 4,
-   "score": 88
+   "score": 88,
+   "id": "j310",
+   "links": [
+    {
+     "to": "j311",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1945,
@@ -3011,7 +5090,14 @@
    "level": 1,
    "kind": "war",
    "month": 8,
-   "score": 85
+   "score": 85,
+   "id": "j311",
+   "links": [
+    {
+     "to": "j617",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1946,
@@ -3019,7 +5105,14 @@
    "detail": "極東国際軍事裁判が開廷した。",
    "level": 2,
    "kind": "politics",
-   "score": 74
+   "score": 74,
+   "id": "j312",
+   "links": [
+    {
+     "to": "j314",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1947,
@@ -3028,7 +5121,8 @@
    "level": 1,
    "kind": "politics",
    "month": 5,
-   "score": 89
+   "score": 89,
+   "id": "j313"
   },
   {
    "year": 1950,
@@ -3036,7 +5130,14 @@
    "detail": "朝鮮戦争が起こり、日本に警察予備隊が創設された。「特需」で経済が回復する。",
    "level": 2,
    "kind": "war",
-   "score": 75
+   "score": 75,
+   "id": "j314",
+   "links": [
+    {
+     "to": "j120",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1952,
@@ -3045,7 +5146,14 @@
    "level": 2,
    "kind": "politics",
    "month": 4,
-   "score": 74
+   "score": 74,
+   "id": "j315",
+   "links": [
+    {
+     "to": "j317",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1954,
@@ -3053,7 +5161,8 @@
    "detail": "ビキニ環礁の水爆実験で、漁船の乗組員が被ばくした。原水爆禁止運動が広がる。",
    "level": 2,
    "kind": "society",
-   "score": 67
+   "score": 67,
+   "id": "j316"
   },
   {
    "year": 1954,
@@ -3061,7 +5170,14 @@
    "detail": "防衛庁・自衛隊が発足した。",
    "level": 2,
    "kind": "politics",
-   "score": 60
+   "score": 60,
+   "id": "j317",
+   "links": [
+    {
+     "to": "j318",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1955,
@@ -3069,7 +5185,14 @@
    "detail": "自由民主党が結成され、保守と革新の二大政党体制が長く続いた。",
    "level": 2,
    "kind": "politics",
-   "score": 73
+   "score": 73,
+   "id": "j318",
+   "links": [
+    {
+     "to": "j319",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1956,
@@ -3077,7 +5200,14 @@
    "detail": "ソ連との国交が回復し、日本は国際連合に加盟した。",
    "level": 2,
    "kind": "foreign",
-   "score": 69
+   "score": 69,
+   "id": "j319",
+   "links": [
+    {
+     "to": "j324",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1950,
@@ -3085,7 +5215,11 @@
    "detail": "見習い僧の放火で金閣が焼失した。のち三島由紀夫が小説『金閣寺』にした。",
    "level": 5,
    "kind": "culture",
-   "score": 14
+   "score": 14,
+   "id": "j320",
+   "people": [
+    "mishima"
+   ]
   },
   {
    "year": 1953,
@@ -3093,7 +5227,8 @@
    "detail": "NHKが東京でテレビの本放送を始めた。",
    "level": 2,
    "kind": "society",
-   "score": 62
+   "score": 62,
+   "id": "j321"
   },
   {
    "year": 1958,
@@ -3101,7 +5236,8 @@
    "detail": "電波塔として建てられた。高さ333m。",
    "level": 4,
    "kind": "culture",
-   "score": 39
+   "score": 39,
+   "id": "j322"
   },
   {
    "year": 1959,
@@ -3109,7 +5245,8 @@
    "detail": "ご成婚パレードの中継をみようと、テレビが一気に普及した。",
    "level": 4,
    "kind": "society",
-   "score": 35
+   "score": 35,
+   "id": "j323"
   },
   {
    "year": 1960,
@@ -3117,7 +5254,14 @@
    "detail": "日米安全保障条約の改定に反対する、大規模なデモが続いた。",
    "level": 2,
    "kind": "society",
-   "score": 75
+   "score": 75,
+   "id": "j324",
+   "links": [
+    {
+     "to": "j627",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1968,
@@ -3125,7 +5269,11 @@
    "detail": "日本人として初めて文学賞を受けた。",
    "level": 4,
    "kind": "culture",
-   "score": 39
+   "score": 39,
+   "id": "j325",
+   "people": [
+    "kawabata"
+   ]
   },
   {
    "year": 1970,
@@ -3133,7 +5281,14 @@
    "detail": "「人類の進歩と調和」をテーマに開かれ、約6400万人が訪れた。",
    "level": 1,
    "kind": "society",
-   "score": 79
+   "score": 79,
+   "id": "j326",
+   "links": [
+    {
+     "to": "j122",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1978,
@@ -3141,7 +5296,8 @@
    "detail": "日中の国交正常化（1972年）から6年、友好条約が結ばれた。",
    "level": 4,
    "kind": "foreign",
-   "score": 36
+   "score": 36,
+   "id": "j327"
   },
   {
    "year": 1978,
@@ -3149,7 +5305,8 @@
    "detail": "建設反対運動が続くなか、新東京国際空港が開港した。",
    "level": 4,
    "kind": "society",
-   "score": 43
+   "score": 43,
+   "id": "j328"
   },
   {
    "year": 1979,
@@ -3157,7 +5314,8 @@
    "detail": "ソニーが携帯型カセットプレーヤー「ウォークマン」を発売した。",
    "level": 4,
    "kind": "culture",
-   "score": 34
+   "score": 34,
+   "id": "j329"
   },
   {
    "year": 1983,
@@ -3165,7 +5323,8 @@
    "detail": "任天堂の家庭用ゲーム機が、ゲームを家庭の遊びにした。",
    "level": 4,
    "kind": "culture",
-   "score": 37
+   "score": 37,
+   "id": "j330"
   },
   {
    "year": 1985,
@@ -3173,7 +5332,14 @@
    "detail": "円高ドル安を進める協調介入で合意し、のちバブル景気の遠因となった。",
    "level": 2,
    "kind": "foreign",
-   "score": 76
+   "score": 76,
+   "id": "j331",
+   "links": [
+    {
+     "to": "j125",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1985,
@@ -3181,7 +5347,8 @@
    "detail": "群馬県の御巣鷹の尾根に墜落した。520人が亡くなった。",
    "level": 3,
    "kind": "disaster",
-   "score": 45
+   "score": 45,
+   "id": "j332"
   },
   {
    "year": 1987,
@@ -3189,7 +5356,8 @@
    "detail": "JR各社が発足した。",
    "level": 2,
    "kind": "society",
-   "score": 67
+   "score": 67,
+   "id": "j333"
   },
   {
    "year": 1993,
@@ -3197,7 +5365,14 @@
    "detail": "細川護熙内閣が発足し、55年体制が終わった。",
    "level": 3,
    "kind": "politics",
-   "score": 48
+   "score": 48,
+   "id": "j334",
+   "links": [
+    {
+     "to": "j338",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1994,
@@ -3205,7 +5380,12 @@
    "detail": "川端康成に続いて、日本人で2人目。",
    "level": 4,
    "kind": "culture",
-   "score": 32
+   "score": 32,
+   "id": "j335",
+   "people": [
+    "tange",
+    "kawabata"
+   ]
   },
   {
    "year": 1995,
@@ -3213,7 +5393,8 @@
    "detail": "オウム真理教が、東京の地下鉄でサリンをまいた。",
    "level": 2,
    "kind": "society",
-   "score": 63
+   "score": 63,
+   "id": "j336"
   },
   {
    "year": 1997,
@@ -3221,7 +5402,8 @@
    "detail": "消費税率が3%から5%に引き上げられた。",
    "level": 3,
    "kind": "society",
-   "score": 44
+   "score": 44,
+   "id": "j337"
   },
   {
    "year": 1997,
@@ -3229,7 +5411,14 @@
    "detail": "京都で開かれた会議で、温室効果ガス削減の目標が採択された。",
    "level": 2,
    "kind": "foreign",
-   "score": 59
+   "score": 59,
+   "id": "j338",
+   "links": [
+    {
+     "to": "j339",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 2001,
@@ -3237,7 +5426,14 @@
    "detail": "「構造改革」を掲げた内閣が、約5年半続いた。",
    "level": 3,
    "kind": "politics",
-   "score": 54
+   "score": 54,
+   "id": "j339",
+   "links": [
+    {
+     "to": "j647",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 2002,
@@ -3245,7 +5441,8 @@
    "detail": "小泉首相が平壌を訪問し、金正日総書記と会談した。",
    "level": 4,
    "kind": "foreign",
-   "score": 32
+   "score": 32,
+   "id": "j340"
   },
   {
    "year": 2002,
@@ -3253,7 +5450,8 @@
    "detail": "サッカーのW杯が、日本と韓国の共催で開かれた。",
    "level": 4,
    "kind": "society",
-   "score": 40
+   "score": 40,
+   "id": "j341"
   },
   {
    "year": 2009,
@@ -3261,7 +5459,14 @@
    "detail": "衆議院選挙で民主党が大勝し、鳩山内閣が発足した。",
    "level": 2,
    "kind": "politics",
-   "score": 65
+   "score": 65,
+   "id": "j342",
+   "links": [
+    {
+     "to": "j128",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 2012,
@@ -3269,7 +5474,8 @@
    "detail": "高さ634mの電波塔が開業した。",
    "level": 4,
    "kind": "culture",
-   "score": 34
+   "score": 34,
+   "id": "j343"
   },
   {
    "year": 2012,
@@ -3277,7 +5483,8 @@
    "detail": "自民党が政権を奪還した。",
    "level": 3,
    "kind": "politics",
-   "score": 53
+   "score": 53,
+   "id": "j344"
   },
   {
    "year": 2016,
@@ -3285,7 +5492,14 @@
    "detail": "4月に震度7の地震が2回続けて起きた。",
    "level": 3,
    "kind": "disaster",
-   "score": 56
+   "score": 56,
+   "id": "j345",
+   "links": [
+    {
+     "to": "j129",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 2018,
@@ -3293,7 +5507,8 @@
    "detail": "広い範囲で記録的な大雨が降り、200人を超える死者が出た。",
    "level": 4,
    "kind": "disaster",
-   "score": 37
+   "score": 37,
+   "id": "j346"
   },
   {
    "year": -14370,
@@ -3301,7 +5516,13 @@
    "detail": "黄泉の国から戻ったイザナキの禊で、アマテラス(太陽)・ツクヨミ(月)・スサノオ(海・嵐)が生まれたと語られる。",
    "level": 3,
    "kind": "culture",
-   "score": 46
+   "score": 46,
+   "id": "j347",
+   "people": [
+    "amaterasu",
+    "susanoo",
+    "tsukuyomi"
+   ]
   },
   {
    "year": -14340,
@@ -3310,7 +5531,11 @@
    "level": 5,
    "kind": "culture",
    "lesson": "力だけでは、共同体に居場所を持てない。",
-   "score": 11
+   "score": 11,
+   "id": "j348",
+   "people": [
+    "susanoo"
+   ]
   },
   {
    "year": -14270,
@@ -3319,7 +5544,8 @@
    "level": 5,
    "kind": "culture",
    "lesson": "弱い者への振る舞いが、その人の器をつくる。",
-   "score": 15
+   "score": 15,
+   "id": "j349"
   },
   {
    "year": -14260,
@@ -3327,7 +5553,8 @@
    "detail": "小さな神スクナビコナと大国主が力を合わせ、農耕・医療・まじないの術を広めたとされる。",
    "level": 5,
    "kind": "culture",
-   "score": 9
+   "score": 9,
+   "id": "j350"
   },
   {
    "year": -14230,
@@ -3335,7 +5562,8 @@
    "detail": "国譲りの代わりに、大国主のために壮大な宮殿を造った、という伝承が出雲大社の起こりとされる。",
    "level": 5,
    "kind": "culture",
-   "score": 6
+   "score": 6,
+   "id": "j351"
   },
   {
    "year": -14190,
@@ -3343,7 +5571,8 @@
    "detail": "天孫降臨に際し、鏡・剣・玉が授けられた。のち皇位の象徴として伝わる、とされる。",
    "level": 3,
    "kind": "culture",
-   "score": 49
+   "score": 49,
+   "id": "j352"
   },
   {
    "year": -14180,
@@ -3351,7 +5580,11 @@
    "detail": "天孫ニニギが山の神の娘コノハナサクヤヒメと結ばれ、のちの神々の系譜につながる。",
    "level": 5,
    "kind": "culture",
-   "score": 25
+   "score": 25,
+   "id": "j353",
+   "people": [
+    "ninigi"
+   ]
   },
   {
    "year": -14080,
@@ -3359,7 +5592,8 @@
    "detail": "熊野の険しい山中で道に迷う神武の軍を、三本足の烏が導いたと『古事記』『日本書紀』は伝える。",
    "level": 5,
    "kind": "culture",
-   "score": 7
+   "score": 7,
+   "id": "j354"
   },
   {
    "year": -14060,
@@ -3367,7 +5601,8 @@
    "detail": "大和へ入ろうとする神武の軍は、土地の有力者ナガスネヒコと戦った、と記紀は伝える。",
    "level": 5,
    "kind": "war",
-   "score": 21
+   "score": 21,
+   "id": "j355"
   },
   {
    "year": -12000,
@@ -3377,7 +5612,8 @@
    "kind": "disaster",
    "lesson": "環境の変化に合わせて、暮らしは作り替えられる。",
    "approx": true,
-   "score": 40
+   "score": 40,
+   "id": "j356"
   },
   {
    "year": -10000,
@@ -3386,7 +5622,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 11
+   "score": 11,
+   "id": "j357"
   },
   {
    "year": -9000,
@@ -3395,7 +5632,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 23
+   "score": 23,
+   "id": "j358"
   },
   {
    "year": -8000,
@@ -3404,7 +5642,8 @@
    "level": 3,
    "kind": "disaster",
    "approx": true,
-   "score": 46
+   "score": 46,
+   "id": "j359"
   },
   {
    "year": -7000,
@@ -3413,7 +5652,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 17
+   "score": 17,
+   "id": "j360"
   },
   {
    "year": -5300,
@@ -3422,7 +5662,8 @@
    "level": 5,
    "kind": "disaster",
    "approx": true,
-   "score": 23
+   "score": 23,
+   "id": "j361"
   },
   {
    "year": -4000,
@@ -3431,7 +5672,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 7
+   "score": 7,
+   "id": "j362"
   },
   {
    "year": -3500,
@@ -3440,7 +5682,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 28
+   "score": 28,
+   "id": "j363"
   },
   {
    "year": -3000,
@@ -3449,7 +5692,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 7
+   "score": 7,
+   "id": "j364"
   },
   {
    "year": -2500,
@@ -3458,7 +5702,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 4
+   "score": 4,
+   "id": "j365"
   },
   {
    "year": -2000,
@@ -3467,7 +5712,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 18
+   "score": 18,
+   "id": "j366"
   },
   {
    "year": -1500,
@@ -3476,7 +5722,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 11
+   "score": 11,
+   "id": "j367"
   },
   {
    "year": -1200,
@@ -3485,7 +5732,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 23
+   "score": 23,
+   "id": "j368"
   },
   {
    "year": -800,
@@ -3494,7 +5742,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 15
+   "score": 15,
+   "id": "j369"
   },
   {
    "year": -500,
@@ -3503,7 +5752,8 @@
    "level": 3,
    "kind": "society",
    "approx": true,
-   "score": 54
+   "score": 54,
+   "id": "j370"
   },
   {
    "year": -300,
@@ -3512,7 +5762,8 @@
    "level": 3,
    "kind": "society",
    "approx": true,
-   "score": 49
+   "score": 49,
+   "id": "j371"
   },
   {
    "year": -250,
@@ -3521,7 +5772,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 25
+   "score": 25,
+   "id": "j372"
   },
   {
    "year": -200,
@@ -3530,7 +5782,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 15
+   "score": 15,
+   "id": "j373"
   },
   {
    "year": -150,
@@ -3539,7 +5792,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 9
+   "score": 9,
+   "id": "j374"
   },
   {
    "year": -108,
@@ -3547,7 +5801,8 @@
    "detail": "漢が朝鮮半島に楽浪郡を置いた。のち、倭の人々はここを通じて大陸と交わるようになった。",
    "level": 5,
    "kind": "foreign",
-   "score": 22
+   "score": 22,
+   "id": "j375"
   },
   {
    "year": -100,
@@ -3556,7 +5811,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 19
+   "score": 19,
+   "id": "j376"
   },
   {
    "year": -80,
@@ -3565,7 +5821,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 12
+   "score": 12,
+   "id": "j377"
   },
   {
    "year": 0,
@@ -3574,7 +5831,8 @@
    "level": 5,
    "kind": "foreign",
    "approx": true,
-   "score": 26
+   "score": 26,
+   "id": "j378"
   },
   {
    "year": 150,
@@ -3583,7 +5841,8 @@
    "level": 5,
    "kind": "war",
    "approx": true,
-   "score": 24
+   "score": 24,
+   "id": "j379"
   },
   {
    "year": 200,
@@ -3592,7 +5851,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 21
+   "score": 21,
+   "id": "j380"
   },
   {
    "year": 230,
@@ -3601,7 +5861,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 14
+   "score": 14,
+   "id": "j381"
   },
   {
    "year": 260,
@@ -3610,7 +5871,11 @@
    "level": 3,
    "kind": "culture",
    "approx": true,
-   "score": 47
+   "score": 47,
+   "id": "j382",
+   "people": [
+    "himiko"
+   ]
   },
   {
    "year": 280,
@@ -3619,7 +5884,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 4
+   "score": 4,
+   "id": "j383"
   },
   {
    "year": 297,
@@ -3628,7 +5894,8 @@
    "level": 5,
    "kind": "foreign",
    "approx": true,
-   "score": 18
+   "score": 18,
+   "id": "j384"
   },
   {
    "year": 369,
@@ -3637,7 +5904,8 @@
    "level": 5,
    "kind": "foreign",
    "approx": true,
-   "score": 11
+   "score": 11,
+   "id": "j385"
   },
   {
    "year": 400,
@@ -3646,7 +5914,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 2
+   "score": 2,
+   "id": "j386"
   },
   {
    "year": 400,
@@ -3655,7 +5924,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 16
+   "score": 16,
+   "id": "j387"
   },
   {
    "year": 405,
@@ -3664,7 +5934,14 @@
    "level": 3,
    "kind": "foreign",
    "approx": true,
-   "score": 48
+   "score": 48,
+   "id": "j388",
+   "links": [
+    {
+     "to": "j020",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 430,
@@ -3673,7 +5950,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 6
+   "score": 6,
+   "id": "j389"
   },
   {
    "year": 450,
@@ -3682,7 +5960,8 @@
    "level": 4,
    "kind": "society",
    "approx": true,
-   "score": 37
+   "score": 37,
+   "id": "j390"
   },
   {
    "year": 460,
@@ -3691,7 +5970,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 26
+   "score": 26,
+   "id": "j391"
   },
   {
    "year": 507,
@@ -3700,7 +5980,8 @@
    "level": 3,
    "kind": "politics",
    "approx": true,
-   "score": 48
+   "score": 48,
+   "id": "j392"
   },
   {
    "year": 513,
@@ -3708,7 +5989,8 @@
    "detail": "百済から儒教の経典に通じた博士が来日し、学問と制度の導入を助けた。",
    "level": 5,
    "kind": "foreign",
-   "score": 22
+   "score": 22,
+   "id": "j393"
   },
   {
    "year": 536,
@@ -3717,7 +5999,8 @@
    "level": 5,
    "kind": "politics",
    "approx": true,
-   "score": 19
+   "score": 19,
+   "id": "j394"
   },
   {
    "year": 539,
@@ -3726,7 +6009,8 @@
    "level": 5,
    "kind": "politics",
    "approx": true,
-   "score": 26
+   "score": 26,
+   "id": "j395"
   },
   {
    "year": 580,
@@ -3735,7 +6019,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 4
+   "score": 4,
+   "id": "j396"
   },
   {
    "year": 593,
@@ -3744,7 +6029,11 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 8
+   "score": 8,
+   "id": "j397",
+   "people": [
+    "shotoku"
+   ]
   },
   {
    "year": 594,
@@ -3752,7 +6041,11 @@
    "detail": "推古天皇が仏教を敬うよう命じ、豪族たちは競って寺を建てた。",
    "level": 5,
    "kind": "culture",
-   "score": 21
+   "score": 21,
+   "id": "j398",
+   "people": [
+    "suiko"
+   ]
   },
   {
    "year": 600,
@@ -3761,7 +6054,14 @@
    "level": 3,
    "kind": "foreign",
    "approx": true,
-   "score": 50
+   "score": 50,
+   "id": "j399",
+   "links": [
+    {
+     "to": "j401",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 602,
@@ -3769,7 +6069,8 @@
    "detail": "百済の僧観勒が暦・天文・遁甲の書をもたらした。季節を読む知識は、国の政治にもかかわった。",
    "level": 5,
    "kind": "society",
-   "score": 28
+   "score": 28,
+   "id": "j400"
   },
   {
    "year": 607,
@@ -3778,7 +6079,8 @@
    "level": 3,
    "kind": "foreign",
    "month": 7,
-   "score": 46
+   "score": 46,
+   "id": "j401"
   },
   {
    "year": 610,
@@ -3786,7 +6088,8 @@
    "detail": "高句麗の僧曇徴が、紙・墨・絵の具の作り方を伝えたとされる。",
    "level": 5,
    "kind": "culture",
-   "score": 12
+   "score": 12,
+   "id": "j402"
   },
   {
    "year": 618,
@@ -3794,7 +6097,8 @@
    "detail": "隋が滅びて唐が成立した。唐の制度や文化は、のち遣唐使を通じて日本に大きな影響を与える。",
    "level": 5,
    "kind": "foreign",
-   "score": 24
+   "score": 24,
+   "id": "j403"
   },
   {
    "year": 622,
@@ -3803,7 +6107,11 @@
    "level": 5,
    "kind": "politics",
    "month": 2,
-   "score": 2
+   "score": 2,
+   "id": "j404",
+   "people": [
+    "shotoku"
+   ]
   },
   {
    "year": 623,
@@ -3811,7 +6119,11 @@
    "detail": "鞍作止利がつくった金銅の釈迦三尊像。飛鳥彫刻の代表作で、聖徳太子の追善のためとされる。",
    "level": 5,
    "kind": "culture",
-   "score": 16
+   "score": 16,
+   "id": "j405",
+   "people": [
+    "shotoku"
+   ]
   },
   {
    "year": 643,
@@ -3819,7 +6131,11 @@
    "detail": "蘇我入鹿が、聖徳太子の子の山背大兄王一族を襲い、自害に追い込んだ。",
    "level": 5,
    "kind": "politics",
-   "score": 22
+   "score": 22,
+   "id": "j406",
+   "people": [
+    "shotoku"
+   ]
   },
   {
    "year": 645,
@@ -3828,7 +6144,18 @@
    "level": 3,
    "kind": "politics",
    "month": 6,
-   "score": 56
+   "score": 56,
+   "id": "j407",
+   "people": [
+    "naka",
+    "kamatari"
+   ],
+   "links": [
+    {
+     "to": "j027",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 646,
@@ -3836,7 +6163,8 @@
    "detail": "古墳の巨大化を抑え、葬儀の簡素化を命じた。巨大な墓による権力の示し方は終わりに向かう。",
    "level": 5,
    "kind": "society",
-   "score": 26
+   "score": 26,
+   "id": "j408"
   },
   {
    "year": 652,
@@ -3845,7 +6173,8 @@
    "level": 5,
    "kind": "politics",
    "approx": true,
-   "score": 2
+   "score": 2,
+   "id": "j409"
   },
   {
    "year": 658,
@@ -3854,7 +6183,8 @@
    "level": 5,
    "kind": "war",
    "approx": true,
-   "score": 16
+   "score": 16,
+   "id": "j410"
   },
   {
    "year": 667,
@@ -3862,7 +6192,8 @@
    "detail": "白村江の敗戦後、天智天皇は国防を考えて近江へ都を遷した。",
    "level": 4,
    "kind": "politics",
-   "score": 33
+   "score": 33,
+   "id": "j411"
   },
   {
    "year": 671,
@@ -3871,7 +6202,8 @@
    "level": 5,
    "kind": "society",
    "month": 4,
-   "score": 26
+   "score": 26,
+   "id": "j412"
   },
   {
    "year": 673,
@@ -3879,7 +6211,17 @@
    "detail": "壬申の乱に勝った大海人皇子が飛鳥浄御原宮で即位した。強い権力で国家の仕組みを整える。",
    "level": 3,
    "kind": "politics",
-   "score": 52
+   "score": 52,
+   "id": "j413",
+   "people": [
+    "tenmu"
+   ],
+   "links": [
+    {
+     "to": "j163",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 676,
@@ -3887,7 +6229,8 @@
    "detail": "新羅が唐軍を退けて朝鮮半島を統一した。日本は、新羅や唐との関係を探りつづける。",
    "level": 5,
    "kind": "foreign",
-   "score": 12
+   "score": 12,
+   "id": "j414"
   },
   {
    "year": 684,
@@ -3895,7 +6238,8 @@
    "detail": "豪族の身分秩序を、八つの姓に再編した。天皇を頂点とする序列が整えられていった。",
    "level": 5,
    "kind": "politics",
-   "score": 24
+   "score": 24,
+   "id": "j415"
   },
   {
    "year": 690,
@@ -3903,7 +6247,11 @@
    "detail": "夫の天武の志を継いで、律令国家づくりを進めた。庚寅年籍もつくられた。",
    "level": 4,
    "kind": "politics",
-   "score": 41
+   "score": 41,
+   "id": "j416",
+   "people": [
+    "jito"
+   ]
   },
   {
    "year": 698,
@@ -3912,7 +6260,11 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 28
+   "score": 28,
+   "id": "j417",
+   "people": [
+    "komyo"
+   ]
   },
   {
    "year": 700,
@@ -3921,7 +6273,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 1
+   "score": 1,
+   "id": "j418"
   },
   {
    "year": 711,
@@ -3929,7 +6282,8 @@
    "detail": "銭をためた者に位を授ける法令。貨幣を流通させる狙いがあったが、うまくいかなかった。",
    "level": 5,
    "kind": "society",
-   "score": 18
+   "score": 18,
+   "id": "j419"
   },
   {
    "year": 717,
@@ -3938,7 +6292,11 @@
    "level": 5,
    "kind": "foreign",
    "approx": true,
-   "score": 3
+   "score": 3,
+   "id": "j420",
+   "people": [
+    "abe"
+   ]
   },
   {
    "year": 718,
@@ -3947,7 +6305,11 @@
    "level": 5,
    "kind": "politics",
    "approx": true,
-   "score": 16
+   "score": 16,
+   "id": "j421",
+   "people": [
+    "fuhito"
+   ]
   },
   {
    "year": 722,
@@ -3956,7 +6318,8 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 22
+   "score": 22,
+   "id": "j422"
   },
   {
    "year": 724,
@@ -3964,7 +6327,11 @@
    "detail": "仏教に深く帰依した天皇。国分寺・東大寺の建立など、大規模な事業が続く。",
    "level": 4,
    "kind": "politics",
-   "score": 40
+   "score": 40,
+   "id": "j423",
+   "people": [
+    "shomu"
+   ]
   },
   {
    "year": 727,
@@ -3972,7 +6339,8 @@
    "detail": "渤海国の使節が初めて来日した。以後200年にわたり、交流が続いた。",
    "level": 5,
    "kind": "foreign",
-   "score": 13
+   "score": 13,
+   "id": "j424"
   },
   {
    "year": 730,
@@ -3981,7 +6349,11 @@
    "level": 5,
    "kind": "society",
    "approx": true,
-   "score": 3
+   "score": 3,
+   "id": "j425",
+   "people": [
+    "komyo"
+   ]
   },
   {
    "year": 735,
@@ -3989,7 +6361,11 @@
    "detail": "留学生の吉備真備は、唐の学問・音楽・兵法などの書物を日本に持ち帰った。",
    "level": 5,
    "kind": "foreign",
-   "score": 10
+   "score": 10,
+   "id": "j426",
+   "people": [
+    "kibi"
+   ]
   },
   {
    "year": 737,
@@ -3997,7 +6373,8 @@
    "detail": "天然痘の流行で、政権の中心にいた藤原四兄弟が相次いで亡くなった。政治の勢力図が変わった。",
    "level": 5,
    "kind": "disaster",
-   "score": 22
+   "score": 22,
+   "id": "j427"
   },
   {
    "year": 745,
@@ -4005,7 +6382,11 @@
    "detail": "聖武天皇は恭仁京・難波・紫香楽と都を転々としたのち、平城京へ戻った。",
    "level": 3,
    "kind": "politics",
-   "score": 44
+   "score": 44,
+   "id": "j428",
+   "people": [
+    "shomu"
+   ]
   },
   {
    "year": 749,
@@ -4013,7 +6394,8 @@
    "detail": "陸奥から黄金が見つかり、大仏造立に使う金不足が救われた。年号も天平感宝と改まった。",
    "level": 5,
    "kind": "society",
-   "score": 4
+   "score": 4,
+   "id": "j429"
   },
   {
    "year": 751,
@@ -4021,7 +6403,8 @@
    "detail": "現存最古の日本人による漢詩集。当時の貴族が、漢詩を教養としたことがわかる。",
    "level": 5,
    "kind": "culture",
-   "score": 18
+   "score": 18,
+   "id": "j430"
   },
   {
    "year": 757,
@@ -4029,7 +6412,8 @@
    "detail": "藤原仲麻呂の権力に反発した橘奈良麻呂らの計画が発覚し、多くが処罰された。",
    "level": 5,
    "kind": "politics",
-   "score": 8
+   "score": 8,
+   "id": "j431"
   },
   {
    "year": 764,
@@ -4037,7 +6421,8 @@
    "detail": "藤原仲麻呂(恵美押勝)が孝謙上皇・道鏡と対立して挙兵したが、敗れて討たれた。",
    "level": 4,
    "kind": "war",
-   "score": 30
+   "score": 30,
+   "id": "j432"
   },
   {
    "year": 769,
@@ -4045,7 +6430,8 @@
    "detail": "道鏡を皇位につけるべきだという神託が届いたが、和気清麻呂が確かめて偽りと報告した。",
    "level": 4,
    "kind": "politics",
-   "score": 38
+   "score": 38,
+   "id": "j433"
   },
   {
    "year": 780,
@@ -4053,7 +6439,8 @@
    "detail": "蝦夷の豪族伊治呰麻呂が、陸奥の按察使を殺害した。朝廷と蝦夷の戦いが長引く契機となった。",
    "level": 5,
    "kind": "war",
-   "score": 8
+   "score": 8,
+   "id": "j434"
   },
   {
    "year": 785,
@@ -4061,7 +6448,8 @@
    "detail": "長岡京の造営責任者が暗殺され、皇太子の早良親王が廃されて、死去した。",
    "level": 5,
    "kind": "politics",
-   "score": 4
+   "score": 4,
+   "id": "j435"
   },
   {
    "year": 797,
@@ -4069,7 +6457,8 @@
    "detail": "『日本書紀』のあとを継ぐ国史として完成した。奈良時代の歴史を伝える重要な史料。",
    "level": 5,
    "kind": "culture",
-   "score": 3
+   "score": 3,
+   "id": "j436"
   },
   {
    "year": 801,
@@ -4077,7 +6466,11 @@
    "detail": "坂上田村麻呂が大軍を率いて遠征し、東北の蝦夷との戦いを進めた。",
    "level": 5,
    "kind": "war",
-   "score": 16
+   "score": 16,
+   "id": "j437",
+   "people": [
+    "tamuramaro"
+   ]
   },
   {
    "year": 802,
@@ -4085,7 +6478,8 @@
    "detail": "東北経営の拠点として、岩手県に胆沢城が築かれた。",
    "level": 5,
    "kind": "politics",
-   "score": 10
+   "score": 10,
+   "id": "j438"
   },
   {
    "year": 805,
@@ -4093,7 +6487,11 @@
    "detail": "唐で学んだ最澄が帰国し、比叡山で天台宗を広めた。",
    "level": 4,
    "kind": "culture",
-   "score": 33
+   "score": 33,
+   "id": "j439",
+   "people": [
+    "saicho"
+   ]
   },
   {
    "year": 806,
@@ -4101,7 +6499,11 @@
    "detail": "密教を学んだ空海が帰国し、のち高野山に金剛峯寺を開いた。",
    "level": 4,
    "kind": "culture",
-   "score": 41
+   "score": 41,
+   "id": "j440",
+   "people": [
+    "kukai"
+   ]
   },
   {
    "year": 810,
@@ -4109,7 +6511,11 @@
    "detail": "平城上皇が復位をねらって起こした政変。嵯峨天皇が鎮め、蔵人所も設置された。",
    "level": 5,
    "kind": "politics",
-   "score": 13
+   "score": 13,
+   "id": "j441",
+   "people": [
+    "saga"
+   ]
   },
   {
    "year": 823,
@@ -4117,7 +6523,12 @@
    "detail": "嵯峨天皇が東寺を空海に与え、都で密教を広める拠点とした。",
    "level": 5,
    "kind": "culture",
-   "score": 3
+   "score": 3,
+   "id": "j442",
+   "people": [
+    "kukai",
+    "saga"
+   ]
   },
   {
    "year": 828,
@@ -4126,7 +6537,11 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 16
+   "score": 16,
+   "id": "j443",
+   "people": [
+    "kukai"
+   ]
   },
   {
    "year": 842,
@@ -4134,7 +6549,8 @@
    "detail": "藤原氏が他の有力貴族を退け、皇太子を替えた事件。北家の優位が固まった。",
    "level": 5,
    "kind": "politics",
-   "score": 10
+   "score": 10,
+   "id": "j444"
   },
   {
    "year": 857,
@@ -4142,7 +6558,8 @@
    "detail": "臣下として初めて太政大臣となり、藤原氏繁栄の土台をつくった。",
    "level": 5,
    "kind": "politics",
-   "score": 23
+   "score": 23,
+   "id": "j445"
   },
   {
    "year": 864,
@@ -4150,7 +6567,8 @@
    "detail": "富士山が大噴火し、溶岩が流れて青木ヶ原をつくった。",
    "level": 5,
    "kind": "disaster",
-   "score": 19
+   "score": 19,
+   "id": "j446"
   },
   {
    "year": 869,
@@ -4159,7 +6577,8 @@
    "level": 5,
    "kind": "disaster",
    "month": 7,
-   "score": 26
+   "score": 26,
+   "id": "j447"
   },
   {
    "year": 887,
@@ -4167,7 +6586,8 @@
    "detail": "宇多天皇の勅書の言葉をめぐって、藤原基経が抗議し、政務を拒否した。関白の地位が確立する。",
    "level": 5,
    "kind": "politics",
-   "score": 18
+   "score": 18,
+   "id": "j448"
   },
   {
    "year": 902,
@@ -4175,7 +6595,8 @@
    "detail": "増えすぎた荘園を取り締まる法令。国家の財政を立て直す試みだった。",
    "level": 5,
    "kind": "society",
-   "score": 8
+   "score": 8,
+   "id": "j449"
   },
   {
    "year": 907,
@@ -4183,7 +6604,8 @@
    "detail": "唐が滅び、中国は分裂の時代に入った。日本は大陸との交流を見直し、独自の文化(国風文化)へ向かう。",
    "level": 5,
    "kind": "foreign",
-   "score": 14
+   "score": 14,
+   "id": "j450"
   },
   {
    "year": 927,
@@ -4191,7 +6613,8 @@
    "detail": "律令の施行細則を集めた法典。当時の制度や祭礼、物産などを知る手がかりとなる。",
    "level": 5,
    "kind": "politics",
-   "score": 28
+   "score": 28,
+   "id": "j451"
   },
   {
    "year": 938,
@@ -4200,7 +6623,11 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 14
+   "score": 14,
+   "id": "j452",
+   "people": [
+    "kuya"
+   ]
   },
   {
    "year": 974,
@@ -4209,7 +6636,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 12
+   "score": 12,
+   "id": "j453"
   },
   {
    "year": 985,
@@ -4217,7 +6645,17 @@
    "detail": "源信が極楽往生の方法を説いた書。地獄の描写は、人々の信仰に大きな影響を与えた。",
    "level": 2,
    "kind": "culture",
-   "score": 69
+   "score": 69,
+   "id": "j454",
+   "people": [
+    "genshin"
+   ],
+   "links": [
+    {
+     "to": "j191",
+     "t": "religion"
+    }
+   ]
   },
   {
    "year": 1000,
@@ -4226,7 +6664,17 @@
    "level": 1,
    "kind": "culture",
    "approx": true,
-   "score": 79
+   "score": 79,
+   "id": "j455",
+   "people": [
+    "shonagon"
+   ],
+   "links": [
+    {
+     "to": "j041",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1027,
@@ -4234,7 +6682,11 @@
    "detail": "「この世をばわが世とぞ思ふ望月の欠けたることもなしと思へば」と詠んだ道長が亡くなった。",
    "level": 5,
    "kind": "politics",
-   "score": 6
+   "score": 6,
+   "id": "j456",
+   "people": [
+    "michinaga"
+   ]
   },
   {
    "year": 1028,
@@ -4242,7 +6694,8 @@
    "detail": "房総で起きた反乱を、源頼信が平定した。源氏が東国に勢力を築く足がかりとなった。",
    "level": 5,
    "kind": "war",
-   "score": 20
+   "score": 20,
+   "id": "j457"
   },
   {
    "year": 1052,
@@ -4250,7 +6703,8 @@
    "detail": "この年から末法の世に入ると信じられ、不安が広がった。極楽往生を願う人々は寺院や仏像を競って造った。",
    "level": 5,
    "kind": "society",
-   "score": 27
+   "score": 27,
+   "id": "j458"
   },
   {
    "year": 1060,
@@ -4259,7 +6713,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 17
+   "score": 17,
+   "id": "j459"
   },
   {
    "year": 1068,
@@ -4267,7 +6722,14 @@
    "detail": "藤原氏を外戚としない天皇で、荘園整理令を出すなど、摂関政治の転換点となった。",
    "level": 3,
    "kind": "politics",
-   "score": 48
+   "score": 48,
+   "id": "j460",
+   "links": [
+    {
+     "to": "j461",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1069,
@@ -4275,7 +6737,14 @@
    "detail": "記録荘園券契所を設けて荘園の証拠書類を審査し、不正な荘園を整理した。",
    "level": 3,
    "kind": "society",
-   "score": 55
+   "score": 55,
+   "id": "j461",
+   "links": [
+    {
+     "to": "j043",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1120,
@@ -4284,7 +6753,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 13
+   "score": 13,
+   "id": "j462"
   },
   {
    "year": 1130,
@@ -4293,7 +6763,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 5
+   "score": 5,
+   "id": "j463"
   },
   {
    "year": 1164,
@@ -4301,7 +6772,11 @@
    "detail": "平清盛ら平家一門が厳島神社に奉納した装飾経。栄華を誇った平家の美意識を伝える。",
    "level": 5,
    "kind": "culture",
-   "score": 24
+   "score": 24,
+   "id": "j464",
+   "people": [
+    "kiyomori"
+   ]
   },
   {
    "year": 1168,
@@ -4309,7 +6784,11 @@
    "detail": "栄西は禅を、重源は建築や土木の知識を学んで帰国した。のち鎌倉仏教の基盤となる。",
    "level": 4,
    "kind": "foreign",
-   "score": 41
+   "score": 41,
+   "id": "j465",
+   "people": [
+    "eisai"
+   ]
   },
   {
    "year": 1177,
@@ -4317,7 +6796,11 @@
    "detail": "平氏打倒を企てた後白河法皇側近の計画が発覚し、関係者が処罰された。",
    "level": 3,
    "kind": "politics",
-   "score": 45
+   "score": 45,
+   "id": "j466",
+   "people": [
+    "goshirakawa"
+   ]
   },
   {
    "year": 1179,
@@ -4325,7 +6808,18 @@
    "detail": "平清盛がクーデタを起こして後白河法皇を幽閉し、平氏政権を確立した。",
    "level": 3,
    "kind": "politics",
-   "score": 45
+   "score": 45,
+   "id": "j467",
+   "people": [
+    "kiyomori",
+    "goshirakawa"
+   ],
+   "links": [
+    {
+     "to": "j468",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1180,
@@ -4334,7 +6828,18 @@
    "level": 3,
    "kind": "war",
    "month": 4,
-   "score": 53
+   "score": 53,
+   "id": "j468",
+   "people": [
+    "yoritomo",
+    "goshirakawa"
+   ],
+   "links": [
+    {
+     "to": "j048",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1180,
@@ -4343,7 +6848,11 @@
    "level": 5,
    "kind": "war",
    "month": 8,
-   "score": 5
+   "score": 5,
+   "id": "j469",
+   "people": [
+    "yoritomo"
+   ]
   },
   {
    "year": 1180,
@@ -4352,7 +6861,11 @@
    "level": 4,
    "kind": "war",
    "month": 10,
-   "score": 40
+   "score": 40,
+   "id": "j470",
+   "people": [
+    "yoritomo"
+   ]
   },
   {
    "year": 1183,
@@ -4361,7 +6874,11 @@
    "level": 5,
    "kind": "war",
    "month": 7,
-   "score": 3
+   "score": 3,
+   "id": "j471",
+   "people": [
+    "yoshinaka"
+   ]
   },
   {
    "year": 1184,
@@ -4369,7 +6886,12 @@
    "detail": "源頼朝の軍に追われた義仲は、近江の粟津で討ち死にした。",
    "level": 5,
    "kind": "war",
-   "score": 10
+   "score": 10,
+   "id": "j472",
+   "people": [
+    "yoshinaka",
+    "yoritomo"
+   ]
   },
   {
    "year": 1190,
@@ -4377,7 +6899,11 @@
    "detail": "武士から出家した歌人西行は、桜と旅を詠んで『山家集』を残した。「願はくは花の下にて春死なむ」。",
    "level": 3,
    "kind": "culture",
-   "score": 44
+   "score": 44,
+   "id": "j473",
+   "people": [
+    "saigyo"
+   ]
   },
   {
    "year": 1191,
@@ -4385,7 +6911,11 @@
    "detail": "宋から帰国した栄西が、禅を伝えた。茶の効用を説いた『喫茶養生記』でも知られる。",
    "level": 5,
    "kind": "culture",
-   "score": 3
+   "score": 3,
+   "id": "j474",
+   "people": [
+    "eisai"
+   ]
   },
   {
    "year": 1195,
@@ -4393,7 +6923,8 @@
    "detail": "平氏の焼き討ちで焼けた東大寺が再建され、頼朝も参列した。重源が勧進で資金を集めた。",
    "level": 5,
    "kind": "culture",
-   "score": 10
+   "score": 10,
+   "id": "j475"
   },
   {
    "year": 1207,
@@ -4401,7 +6932,12 @@
    "detail": "専修念仏への弾圧で、法然は土佐へ、親鸞は越後へ流された。",
    "level": 5,
    "kind": "society",
-   "score": 27
+   "score": 27,
+   "id": "j476",
+   "people": [
+    "honen",
+    "shinran"
+   ]
   },
   {
    "year": 1213,
@@ -4409,7 +6945,11 @@
    "detail": "侍所別当の和田義盛が北条義時と戦って敗れ、北条氏の地位が固まった。",
    "level": 5,
    "kind": "war",
-   "score": 18
+   "score": 18,
+   "id": "j477",
+   "people": [
+    "yoshitoki"
+   ]
   },
   {
    "year": 1220,
@@ -4418,7 +6958,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 24
+   "score": 24,
+   "id": "j478"
   },
   {
    "year": 1224,
@@ -4427,7 +6968,11 @@
    "level": 2,
    "kind": "culture",
    "approx": true,
-   "score": 67
+   "score": 67,
+   "id": "j479",
+   "people": [
+    "shinran"
+   ]
   },
   {
    "year": 1235,
@@ -4436,7 +6981,11 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 1
+   "score": 1,
+   "id": "j480",
+   "people": [
+    "teika"
+   ]
   },
   {
    "year": 1240,
@@ -4445,7 +6994,14 @@
    "level": 2,
    "kind": "culture",
    "approx": true,
-   "score": 64
+   "score": 64,
+   "id": "j481",
+   "links": [
+    {
+     "to": "j203",
+     "t": "culture"
+    }
+   ]
   },
   {
    "year": 1244,
@@ -4453,7 +7009,11 @@
    "detail": "曹洞宗の道元が越前に永平寺を開いた。ひたすら坐る「只管打坐」を説いた。",
    "level": 5,
    "kind": "culture",
-   "score": 8
+   "score": 8,
+   "id": "j482",
+   "people": [
+    "dogen"
+   ]
   },
   {
    "year": 1247,
@@ -4461,7 +7021,8 @@
    "detail": "北条氏が有力御家人の三浦氏を滅ぼし、北条氏の独裁的な体制が確立した。",
    "level": 4,
    "kind": "war",
-   "score": 41
+   "score": 41,
+   "id": "j483"
   },
   {
    "year": 1252,
@@ -4470,7 +7031,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 5
+   "score": 5,
+   "id": "j484"
   },
   {
    "year": 1268,
@@ -4478,7 +7040,17 @@
    "detail": "モンゴル帝国のクビライから、服属を求める国書が届いた。幕府は、北条時宗が執権となって対応した。",
    "level": 3,
    "kind": "foreign",
-   "score": 49
+   "score": 49,
+   "id": "j485",
+   "people": [
+    "tokimune"
+   ],
+   "links": [
+    {
+     "to": "j055",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1271,
@@ -4486,7 +7058,8 @@
    "detail": "ヴェネツィアの商人は、元に17年間滞在した。『東方見聞録』で「黄金の国ジパング」を紹介した。",
    "level": 5,
    "kind": "foreign",
-   "score": 24
+   "score": 24,
+   "id": "j486"
   },
   {
    "year": 1274,
@@ -4494,7 +7067,12 @@
    "detail": "「南無阿弥陀仏」と書いた札を配り、踊り念仏で各地を巡った。",
    "level": 3,
    "kind": "culture",
-   "score": 50
+   "score": 50,
+   "id": "j487",
+   "people": [
+    "tokimune",
+    "ippen"
+   ]
   },
   {
    "year": 1279,
@@ -4502,7 +7080,8 @@
    "detail": "元が南宋を滅ぼし、中国全土を支配した。ついで日本への再征を準備する。",
    "level": 5,
    "kind": "foreign",
-   "score": 10
+   "score": 10,
+   "id": "j488"
   },
   {
    "year": 1285,
@@ -4510,7 +7089,8 @@
    "detail": "有力御家人の安達泰盛が内管領平頼綱に滅ぼされた。北条得宗家の専制がさらに強まる。",
    "level": 4,
    "kind": "politics",
-   "score": 33
+   "score": 33,
+   "id": "j489"
   },
   {
    "year": 1293,
@@ -4518,7 +7098,8 @@
    "detail": "執権北条貞時が、専横を極めた内管領平頼綱を滅ぼした。",
    "level": 4,
    "kind": "politics",
-   "score": 41
+   "score": 41,
+   "id": "j490"
   },
   {
    "year": 1293,
@@ -4527,7 +7108,8 @@
    "level": 4,
    "kind": "culture",
    "approx": true,
-   "score": 37
+   "score": 37,
+   "id": "j491"
   },
   {
    "year": 1330,
@@ -4536,7 +7118,11 @@
    "level": 4,
    "kind": "culture",
    "approx": true,
-   "score": 39
+   "score": 39,
+   "id": "j492",
+   "people": [
+    "kenko"
+   ]
   },
   {
    "year": 1333,
@@ -4545,7 +7131,11 @@
    "level": 4,
    "kind": "war",
    "month": 2,
-   "score": 33
+   "score": 33,
+   "id": "j493",
+   "people": [
+    "godaigo"
+   ]
   },
   {
    "year": 1333,
@@ -4554,7 +7144,17 @@
    "level": 3,
    "kind": "war",
    "month": 5,
-   "score": 52
+   "score": 52,
+   "id": "j494",
+   "people": [
+    "yoshisada"
+   ],
+   "links": [
+    {
+     "to": "j058",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1335,
@@ -4562,7 +7162,11 @@
    "detail": "北条高時の子・時行が鎌倉を奪回。これを討つために東下した足利尊氏は、そのまま新政権に背いた。",
    "level": 5,
    "kind": "war",
-   "score": 27
+   "score": 27,
+   "id": "j495",
+   "people": [
+    "takauji"
+   ]
   },
   {
    "year": 1336,
@@ -4570,7 +7174,17 @@
    "detail": "足利尊氏が、幕府を開く方針を示した政治綱領。京都に幕府を置くことが定められた。",
    "level": 2,
    "kind": "politics",
-   "score": 65
+   "score": 65,
+   "id": "j496",
+   "people": [
+    "takauji"
+   ],
+   "links": [
+    {
+     "to": "j061",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1339,
@@ -4579,7 +7193,11 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 25
+   "score": 25,
+   "id": "j497",
+   "people": [
+    "chikafusa"
+   ]
   },
   {
    "year": 1370,
@@ -4588,7 +7206,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 14
+   "score": 14,
+   "id": "j498"
   },
   {
    "year": 1394,
@@ -4596,7 +7215,11 @@
    "detail": "将軍職を子に譲ったあとも、義満は太政大臣となって朝廷でも最高位に上り詰めた。",
    "level": 5,
    "kind": "politics",
-   "score": 15
+   "score": 15,
+   "id": "j499",
+   "people": [
+    "yoshimitsu"
+   ]
   },
   {
    "year": 1399,
@@ -4604,7 +7227,11 @@
    "detail": "大内義弘が、義満に対して堺で挙兵して敗死した。有力守護の抑え込みが進んだ。",
    "level": 5,
    "kind": "war",
-   "score": 21
+   "score": 21,
+   "id": "j500",
+   "people": [
+    "yoshimitsu"
+   ]
   },
   {
    "year": 1401,
@@ -4612,7 +7239,11 @@
    "detail": "義満は明に使者を送り、「日本国王」として冊封を受けて、のち勘合貿易が始まった。",
    "level": 4,
    "kind": "foreign",
-   "score": 40
+   "score": 40,
+   "id": "j501",
+   "people": [
+    "yoshimitsu"
+   ]
   },
   {
    "year": 1419,
@@ -4620,7 +7251,8 @@
    "detail": "倭寇の根拠地とみなされた対馬を、朝鮮軍が襲撃した。のち宗氏が交易で朝鮮との窓口となる。",
    "level": 5,
    "kind": "foreign",
-   "score": 25
+   "score": 25,
+   "id": "j502"
   },
   {
    "year": 1429,
@@ -4628,7 +7260,8 @@
    "detail": "尚巴志が三山を統一して、琉球王国を築いた。中国・日本・東南アジアを結ぶ貿易で栄えた。",
    "level": 2,
    "kind": "foreign",
-   "score": 64
+   "score": 64,
+   "id": "j503"
   },
   {
    "year": 1438,
@@ -4636,7 +7269,11 @@
    "detail": "将軍足利義教が、鎌倉公方の足利持氏を討った。関東の混乱は続く。",
    "level": 4,
    "kind": "war",
-   "score": 35
+   "score": 35,
+   "id": "j504",
+   "people": [
+    "yoshinori"
+   ]
   },
   {
    "year": 1454,
@@ -4644,7 +7281,8 @@
    "detail": "関東で、鎌倉公方と関東管領が対立して戦乱となり、関東は戦国時代の入り口に入った。",
    "level": 3,
    "kind": "war",
-   "score": 47
+   "score": 47,
+   "id": "j505"
   },
   {
    "year": 1457,
@@ -4652,7 +7290,8 @@
    "detail": "扇谷上杉家の家宰・太田道灌が築城した。のち徳川家康が本拠として大改築する。",
    "level": 5,
    "kind": "war",
-   "score": 20
+   "score": 20,
+   "id": "j506"
   },
   {
    "year": 1467,
@@ -4660,7 +7299,11 @@
    "detail": "禅僧の雪舟が明に渡り、中国の水墨画を学んだ。帰国後は日本独自の水墨画を完成させる。",
    "level": 3,
    "kind": "foreign",
-   "score": 44
+   "score": 44,
+   "id": "j507",
+   "people": [
+    "sesshu"
+   ]
   },
   {
    "year": 1477,
@@ -4668,7 +7311,8 @@
    "detail": "11年続いた乱は決着がつかないまま終わった。京の都は焼け、荘園制は崩れていった。",
    "level": 4,
    "kind": "war",
-   "score": 31
+   "score": 31,
+   "id": "j508"
   },
   {
    "year": 1493,
@@ -4676,7 +7320,8 @@
    "detail": "細川政元が将軍足利義材を追放し、将軍の権威は大きく揺らいだ。戦国時代の始まりとされる。",
    "level": 3,
    "kind": "politics",
-   "score": 47
+   "score": 47,
+   "id": "j509"
   },
   {
    "year": 1499,
@@ -4685,7 +7330,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 13
+   "score": 13,
+   "id": "j510"
   },
   {
    "year": 1500,
@@ -4693,7 +7339,8 @@
    "detail": "応仁の乱で途絶えていた祇園祭が、町衆の力で復興した。",
    "level": 5,
    "kind": "society",
-   "score": 27
+   "score": 27,
+   "id": "j511"
   },
   {
    "year": 1536,
@@ -4701,7 +7348,8 @@
    "detail": "比叡山延暦寺が、京都の法華宗(日蓮宗)の寺院を焼き払った。",
    "level": 5,
    "kind": "war",
-   "score": 19
+   "score": 19,
+   "id": "j512"
   },
   {
    "year": 1546,
@@ -4709,7 +7357,11 @@
    "detail": "北条氏康が、少数の兵で関東管領の大軍を破った。関東の覇権が北条氏に傾く。",
    "level": 4,
    "kind": "war",
-   "score": 43
+   "score": 43,
+   "id": "j513",
+   "people": [
+    "ujiyasu"
+   ]
   },
   {
    "year": 1551,
@@ -4717,7 +7369,11 @@
    "detail": "大内義隆の許しを得て山口で布教し、宣教師の活動が広がった。",
    "level": 4,
    "kind": "foreign",
-   "score": 42
+   "score": 42,
+   "id": "j514",
+   "people": [
+    "xavier"
+   ]
   },
   {
    "year": 1561,
@@ -4725,7 +7381,12 @@
    "detail": "武田信玄と上杉謙信が、最も激しく戦った。両軍に多くの死者が出た。",
    "level": 5,
    "kind": "war",
-   "score": 15
+   "score": 15,
+   "id": "j515",
+   "people": [
+    "shingen",
+    "kenshin"
+   ]
   },
   {
    "year": 1567,
@@ -4733,7 +7394,11 @@
    "detail": "信長は斎藤氏の稲葉山城を攻略し、「岐阜」と改め、「天下布武」の印を使い始めた。",
    "level": 5,
    "kind": "society",
-   "score": 8
+   "score": 8,
+   "id": "j516",
+   "people": [
+    "nobunaga"
+   ]
   },
   {
    "year": 1574,
@@ -4741,7 +7406,11 @@
    "detail": "織田信長は、伊勢長島の一向一揆を大規模に攻め、鎮圧した。",
    "level": 5,
    "kind": "war",
-   "score": 25
+   "score": 25,
+   "id": "j517",
+   "people": [
+    "nobunaga"
+   ]
   },
   {
    "year": 1580,
@@ -4749,7 +7418,8 @@
    "detail": "11年にわたる石山合戦が終わり、顕如が大坂を去った。",
    "level": 3,
    "kind": "war",
-   "score": 55
+   "score": 55,
+   "id": "j518"
   },
   {
    "year": 1581,
@@ -4757,7 +7427,11 @@
    "detail": "信長が、天皇の前で多くの家臣と馬を揃えて威勢を示した。",
    "level": 5,
    "kind": "culture",
-   "score": 6
+   "score": 6,
+   "id": "j519",
+   "people": [
+    "nobunaga"
+   ]
   },
   {
    "year": 1582,
@@ -4766,7 +7440,8 @@
    "level": 4,
    "kind": "war",
    "month": 3,
-   "score": 31
+   "score": 31,
+   "id": "j520"
   },
   {
    "year": 1582,
@@ -4775,7 +7450,18 @@
    "level": 3,
    "kind": "war",
    "month": 6,
-   "score": 51
+   "score": 51,
+   "id": "j521",
+   "people": [
+    "mitsuhide",
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j226",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1582,
@@ -4784,7 +7470,12 @@
    "level": 4,
    "kind": "politics",
    "month": 6,
-   "score": 35
+   "score": 35,
+   "id": "j522",
+   "people": [
+    "nobunaga",
+    "hideyoshi"
+   ]
   },
   {
    "year": 1584,
@@ -4792,7 +7483,18 @@
    "detail": "羽柴秀吉と、織田信雄・徳川家康が戦った。局地戦で家康が勝ったが、政治では秀吉が上手を行った。",
    "level": 3,
    "kind": "war",
-   "score": 53
+   "score": 53,
+   "id": "j523",
+   "people": [
+    "ieyasu",
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j524",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1585,
@@ -4800,7 +7502,25 @@
    "detail": "秀吉は関白に任じられ、翌年豊臣の姓を賜って太政大臣になった。",
    "level": 3,
    "kind": "politics",
-   "score": 49
+   "score": 49,
+   "id": "j524",
+   "people": [
+    "hideyoshi"
+   ],
+   "links": [
+    {
+     "to": "j227",
+     "t": "politics"
+    },
+    {
+     "to": "j228",
+     "t": "religion"
+    },
+    {
+     "to": "j526",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1588,
@@ -4808,7 +7528,11 @@
    "detail": "後陽成天皇が秀吉の聚楽第を訪れ、諸大名は秀吉への忠誠を誓った。",
    "level": 4,
    "kind": "culture",
-   "score": 36
+   "score": 36,
+   "id": "j525",
+   "people": [
+    "hideyoshi"
+   ]
   },
   {
    "year": 1590,
@@ -4817,7 +7541,18 @@
    "level": 3,
    "kind": "war",
    "month": 7,
-   "score": 47
+   "score": 47,
+   "id": "j526",
+   "people": [
+    "hideyoshi",
+    "ujiyasu"
+   ],
+   "links": [
+    {
+     "to": "j076",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1590,
@@ -4826,7 +7561,12 @@
    "level": 3,
    "kind": "politics",
    "month": 8,
-   "score": 53
+   "score": 53,
+   "id": "j527",
+   "people": [
+    "ieyasu",
+    "hideyoshi"
+   ]
   },
   {
    "year": 1596,
@@ -4835,7 +7575,11 @@
    "level": 5,
    "kind": "disaster",
    "month": 9,
-   "score": 1
+   "score": 1,
+   "id": "j528",
+   "people": [
+    "hideyoshi"
+   ]
   },
   {
    "year": 1596,
@@ -4843,7 +7587,11 @@
    "detail": "土佐に漂着した船の乗員の発言が、秀吉の怒りを買い、宣教師の処刑につながった。",
    "level": 5,
    "kind": "foreign",
-   "score": 15
+   "score": 15,
+   "id": "j529",
+   "people": [
+    "hideyoshi"
+   ]
   },
   {
    "year": 1598,
@@ -4852,7 +7600,11 @@
    "level": 5,
    "kind": "culture",
    "month": 3,
-   "score": 19
+   "score": 19,
+   "id": "j530",
+   "people": [
+    "hideyoshi"
+   ]
   },
   {
    "year": 1604,
@@ -4860,7 +7612,8 @@
    "detail": "幕府は、ポルトガル商人が持ち込む生糸を、特定の商人が一括で買い取る制度をつくった。",
    "level": 4,
    "kind": "society",
-   "score": 35
+   "score": 35,
+   "id": "j531"
   },
   {
    "year": 1605,
@@ -4868,7 +7621,12 @@
    "detail": "わずか2年で将軍職を子に譲り、徳川氏が将軍職を世襲することを示した。",
    "level": 5,
    "kind": "politics",
-   "score": 23
+   "score": 23,
+   "id": "j532",
+   "people": [
+    "ieyasu",
+    "hidetada"
+   ]
   },
   {
    "year": 1607,
@@ -4876,7 +7634,8 @@
    "detail": "江戸時代の朝鮮から、将軍の代替わりごとに使節団が日本を訪れた。",
    "level": 4,
    "kind": "foreign",
-   "score": 33
+   "score": 33,
+   "id": "j533"
   },
   {
    "year": 1612,
@@ -4884,7 +7643,14 @@
    "detail": "幕府は直轄領でキリスト教を禁止し、翌年には全国に広げた。",
    "level": 3,
    "kind": "politics",
-   "score": 49
+   "score": 49,
+   "id": "j534",
+   "links": [
+    {
+     "to": "j082",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1613,
@@ -4892,7 +7658,11 @@
    "detail": "仙台藩の伊達政宗が、支倉常長を派遣した。ヨーロッパを訪れ、ローマ教皇に会った。",
    "level": 3,
    "kind": "foreign",
-   "score": 44
+   "score": 44,
+   "id": "j535",
+   "people": [
+    "masamune"
+   ]
   },
   {
    "year": 1616,
@@ -4900,7 +7670,11 @@
    "detail": "駿府で亡くなり、のち日光東照宮に祀られた。",
    "level": 3,
    "kind": "politics",
-   "score": 55
+   "score": 55,
+   "id": "j536",
+   "people": [
+    "ieyasu"
+   ]
   },
   {
    "year": 1623,
@@ -4908,7 +7682,11 @@
    "detail": "「生まれながらの将軍」を名乗る。参勤交代や鎖国など、幕藩体制の基礎を固めた。",
    "level": 3,
    "kind": "politics",
-   "score": 47
+   "score": 47,
+   "id": "j537",
+   "people": [
+    "iemitsu"
+   ]
   },
   {
    "year": 1627,
@@ -4916,7 +7694,8 @@
    "detail": "幕府が朝廷の僧侶任命に介入し、天皇が退位する。幕府の優位が決まる。",
    "level": 4,
    "kind": "politics",
-   "score": 41
+   "score": 41,
+   "id": "j538"
   },
   {
    "year": 1636,
@@ -4924,7 +7703,8 @@
    "detail": "現在の豪華な社殿が完成した。江戸の文化は、権威の表現にも力を注いだ。",
    "level": 3,
    "kind": "culture",
-   "score": 44
+   "score": 44,
+   "id": "j539"
   },
   {
    "year": 1643,
@@ -4932,7 +7712,8 @@
    "detail": "農民が田畑を手放して没落することを防ぐため、売買が禁止された。",
    "level": 4,
    "kind": "society",
-   "score": 43
+   "score": 43,
+   "id": "j540"
   },
   {
    "year": 1649,
@@ -4940,7 +7721,8 @@
    "detail": "農民の暮らしの心得を示したとされるが、幕府が出したかは疑問視されている。",
    "level": 5,
    "kind": "society",
-   "score": 9
+   "score": 9,
+   "id": "j541"
   },
   {
    "year": 1653,
@@ -4948,7 +7730,8 @@
    "detail": "多摩川の水を江戸へ引く水道が完成。巨大都市江戸を支えた。",
    "level": 4,
    "kind": "society",
-   "score": 38
+   "score": 38,
+   "id": "j542"
   },
   {
    "year": 1669,
@@ -4956,7 +7739,8 @@
    "detail": "アイヌの首長が、松前藩の交易の不公平に抵抗して蜂起したが、敗れた。",
    "level": 5,
    "kind": "war",
-   "score": 2
+   "score": 2,
+   "id": "j543"
   },
   {
    "year": 1688,
@@ -4964,7 +7748,11 @@
    "detail": "井原西鶴が、商人の暮らしを描いた町人物の代表作。",
    "level": 5,
    "kind": "culture",
-   "score": 5
+   "score": 5,
+   "id": "j544",
+   "people": [
+    "saikaku"
+   ]
   },
   {
    "year": 1694,
@@ -4972,7 +7760,11 @@
    "detail": "旅の途中の大坂で亡くなった。「旅に病んで夢は枯野をかけ廻る」。",
    "level": 5,
    "kind": "culture",
-   "score": 12
+   "score": 12,
+   "id": "j545",
+   "people": [
+    "basho"
+   ]
   },
   {
    "year": 1709,
@@ -4980,7 +7772,17 @@
    "detail": "新井白石が、徳川家宣・家継のもとで、儒学に基づく政治改革を進めた。",
    "level": 2,
    "kind": "politics",
-   "score": 68
+   "score": 68,
+   "id": "j546",
+   "people": [
+    "hakuseki"
+   ],
+   "links": [
+    {
+     "to": "j086",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1715,
@@ -4988,7 +7790,8 @@
    "detail": "長崎貿易の船数と取引額を制限した。金銀の流出を防ぐための制度。",
    "level": 5,
    "kind": "foreign",
-   "score": 6
+   "score": 6,
+   "id": "j547"
   },
   {
    "year": 1716,
@@ -4997,7 +7800,8 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 13
+   "score": 13,
+   "id": "j548"
   },
   {
    "year": 1722,
@@ -5005,7 +7809,8 @@
    "detail": "目安箱への投書をきっかけに、貧しい病人を無料で診る施設が設けられた。",
    "level": 5,
    "kind": "society",
-   "score": 4
+   "score": 4,
+   "id": "j549"
   },
   {
    "year": 1730,
@@ -5013,7 +7818,8 @@
    "detail": "大坂の堂島で、米の先物取引が公認された。世界でも早い先物取引とされる。",
    "level": 5,
    "kind": "society",
-   "score": 17
+   "score": 17,
+   "id": "j550"
   },
   {
    "year": 1790,
@@ -5021,7 +7827,8 @@
    "detail": "朱子学を正学とし、他の学問を幕府の学校で教えることを禁じた。",
    "level": 5,
    "kind": "politics",
-   "score": 12
+   "score": 12,
+   "id": "j551"
   },
   {
    "year": 1794,
@@ -5029,7 +7836,8 @@
    "detail": "わずか10か月ほどの間に、独特の役者絵を描き、姿を消した絵師。",
    "level": 5,
    "kind": "culture",
-   "score": 9
+   "score": 9,
+   "id": "j552"
   },
   {
    "year": 1802,
@@ -5037,7 +7845,11 @@
    "detail": "十返舎一九が、弥次さん喜多さんの旅を滑稽に描いた。旅ブームの火付け役。",
    "level": 5,
    "kind": "culture",
-   "score": 28
+   "score": 28,
+   "id": "j553",
+   "people": [
+    "ikku"
+   ]
   },
   {
    "year": 1804,
@@ -5045,7 +7857,8 @@
    "detail": "ロシア使節レザノフが長崎に来航して通商を求めたが、幕府は拒否した。",
    "level": 5,
    "kind": "foreign",
-   "score": 2
+   "score": 2,
+   "id": "j554"
   },
   {
    "year": 1809,
@@ -5053,7 +7866,11 @@
    "detail": "林蔵は樺太が島であることを確かめ、間宮海峡を探った。",
    "level": 5,
    "kind": "society",
-   "score": 9
+   "score": 9,
+   "id": "j555",
+   "people": [
+    "rinzo"
+   ]
   },
   {
    "year": 1811,
@@ -5061,7 +7878,8 @@
    "detail": "ロシアの軍艦長ゴローニンが国後島で拘束された。この事件のあと、ロシアとの緊張が続く。",
    "level": 5,
    "kind": "foreign",
-   "score": 21
+   "score": 21,
+   "id": "j556"
   },
   {
    "year": 1814,
@@ -5069,7 +7887,11 @@
    "detail": "曲亭馬琴が28年かけて書いた長編。江戸の読本の代表作。",
    "level": 5,
    "kind": "culture",
-   "score": 19
+   "score": 19,
+   "id": "j557",
+   "people": [
+    "bakin"
+   ]
   },
   {
    "year": 1823,
@@ -5077,7 +7899,8 @@
    "detail": "ドイツ人医師シーボルトは、長崎の出島に来て、鳴滝塾で蘭学を教えた。",
    "level": 2,
    "kind": "foreign",
-   "score": 69
+   "score": 69,
+   "id": "j558"
   },
   {
    "year": 1828,
@@ -5085,7 +7908,8 @@
    "detail": "日本地図を国外に持ち出そうとしたことが発覚し、国外追放となった。",
    "level": 5,
    "kind": "foreign",
-   "score": 17
+   "score": 17,
+   "id": "j559"
   },
   {
    "year": 1840,
@@ -5093,7 +7917,18 @@
    "detail": "清がイギリスに敗れたことは、日本にも衝撃を与え、幕府は対外政策を見直した。",
    "level": 2,
    "kind": "foreign",
-   "score": 63
+   "score": 63,
+   "id": "j560",
+   "links": [
+    {
+     "to": "j263",
+     "t": "foreign"
+    },
+    {
+     "to": "j092",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1855,
@@ -5101,7 +7936,8 @@
    "detail": "オランダの教官から、幕府の家臣が西洋式の海軍技術を学んだ。",
    "level": 4,
    "kind": "society",
-   "score": 33
+   "score": 33,
+   "id": "j561"
   },
   {
    "year": 1856,
@@ -5109,7 +7945,11 @@
    "detail": "歌川広重の晩年の連作。大胆な構図は、ゴッホなど西洋の画家にも影響を与えた。",
    "level": 5,
    "kind": "culture",
-   "score": 20
+   "score": 20,
+   "id": "j562",
+   "people": [
+    "hiroshige"
+   ]
   },
   {
    "year": 1862,
@@ -5118,7 +7958,8 @@
    "level": 3,
    "kind": "war",
    "month": 4,
-   "score": 44
+   "score": 44,
+   "id": "j563"
   },
   {
    "year": 1862,
@@ -5126,7 +7967,11 @@
    "detail": "幕府が欧州に派遣した使節団には、福沢諭吉らが同行して西洋の見聞を広めた。",
    "level": 4,
    "kind": "foreign",
-   "score": 34
+   "score": 34,
+   "id": "j564",
+   "people": [
+    "fukuzawa"
+   ]
   },
   {
    "year": 1863,
@@ -5135,7 +7980,8 @@
    "level": 4,
    "kind": "politics",
    "month": 8,
-   "score": 38
+   "score": 38,
+   "id": "j565"
   },
   {
    "year": 1865,
@@ -5143,7 +7989,11 @@
    "detail": "高杉晋作が功山寺で挙兵し、藩の主導権を握って倒幕へ向かった。",
    "level": 4,
    "kind": "politics",
-   "score": 38
+   "score": 38,
+   "id": "j566",
+   "people": [
+    "takasugi"
+   ]
   },
   {
    "year": 1866,
@@ -5151,7 +8001,14 @@
    "detail": "幕府軍が長州藩を攻めたが、近代化した長州軍に敗れ、幕府の威信が失墜した。",
    "level": 3,
    "kind": "war",
-   "score": 54
+   "score": 54,
+   "id": "j567",
+   "links": [
+    {
+     "to": "j095",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1867,
@@ -5159,7 +8016,8 @@
    "detail": "「ええじゃないか」と囃しながら人々が踊り歩いた。社会不安の中で各地に広がった。",
    "level": 4,
    "kind": "society",
-   "score": 36
+   "score": 36,
+   "id": "j568"
   },
   {
    "year": 1868,
@@ -5168,7 +8026,19 @@
    "level": 2,
    "kind": "war",
    "month": 1,
-   "score": 64
+   "score": 64,
+   "id": "j569",
+   "links": [
+    {
+     "to": "j097",
+     "t": "war"
+    }
+   ],
+   "people": [
+    "kondo",
+    "hijikata",
+    "yoshinobu"
+   ]
   },
   {
    "year": 1868,
@@ -5177,7 +8047,17 @@
    "level": 1,
    "kind": "politics",
    "month": 3,
-   "score": 86
+   "score": 86,
+   "id": "j570",
+   "links": [
+    {
+     "to": "j572",
+     "t": "politics"
+    }
+   ],
+   "people": [
+    "meiji"
+   ]
   },
   {
    "year": 1868,
@@ -5185,7 +8065,8 @@
    "detail": "神道と仏教を分ける政策。各地で寺院や仏像が破壊される廃仏毀釈が起きた。",
    "level": 2,
    "kind": "society",
-   "score": 68
+   "score": 68,
+   "id": "j571"
   },
   {
    "year": 1869,
@@ -5193,7 +8074,14 @@
    "detail": "天皇が東京に移り、江戸城は皇居となった。蝦夷地も「北海道」と改められた。",
    "level": 3,
    "kind": "politics",
-   "score": 50
+   "score": 50,
+   "id": "j572",
+   "links": [
+    {
+     "to": "j274",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1870,
@@ -5201,7 +8089,8 @@
    "detail": "それまで名字を公に名乗れなかった平民も、苗字をつけることが許され、のち義務となった。",
    "level": 3,
    "kind": "society",
-   "score": 45
+   "score": 45,
+   "id": "j573"
   },
   {
    "year": 1871,
@@ -5210,7 +8099,8 @@
    "level": 4,
    "kind": "society",
    "month": 3,
-   "score": 35
+   "score": 35,
+   "id": "j574"
   },
   {
    "year": 1871,
@@ -5218,7 +8108,8 @@
    "detail": "ちょんまげを切ることが許された。「ざんぎり頭を叩いてみれば文明開化の音がする」。",
    "level": 4,
    "kind": "society",
-   "score": 42
+   "score": 42,
+   "id": "j575"
   },
   {
    "year": 1872,
@@ -5226,7 +8117,17 @@
    "detail": "フランスの技術を導入した官営の製糸工場。のち世界遺産に登録された。",
    "level": 1,
    "kind": "culture",
-   "score": 81
+   "score": 81,
+   "id": "j576",
+   "links": [
+    {
+     "to": "j288",
+     "t": "economy"
+    }
+   ],
+   "people": [
+    "shibusawa"
+   ]
   },
   {
    "year": 1872,
@@ -5234,7 +8135,8 @@
    "detail": "太陰暦から太陽暦に改められ、明治5年12月3日が明治6年1月1日になった。",
    "level": 2,
    "kind": "society",
-   "score": 70
+   "score": 70,
+   "id": "j577"
   },
   {
    "year": 1873,
@@ -5242,7 +8144,8 @@
    "detail": "欧米の抗議を受け、キリスト教禁止の高札が撤去され、事実上黙認された。",
    "level": 5,
    "kind": "society",
-   "score": 25
+   "score": 25,
+   "id": "j578"
   },
   {
    "year": 1874,
@@ -5250,7 +8153,8 @@
    "detail": "琉球漂流民が殺害された事件を理由に、政府が台湾に出兵した。",
    "level": 4,
    "kind": "war",
-   "score": 42
+   "score": 42,
+   "id": "j579"
   },
   {
    "year": 1875,
@@ -5258,7 +8162,8 @@
    "detail": "日本の軍艦が朝鮮の江華島で砲撃を受け、交戦した。翌年の日朝修好条規につながる。",
    "level": 4,
    "kind": "foreign",
-   "score": 38
+   "score": 38,
+   "id": "j580"
   },
   {
    "year": 1876,
@@ -5266,7 +8171,14 @@
    "detail": "朝鮮に開港させ、日本に治外法権を認めさせた不平等条約。",
    "level": 2,
    "kind": "foreign",
-   "score": 70
+   "score": 70,
+   "id": "j581",
+   "links": [
+    {
+     "to": "j105",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1876,
@@ -5274,7 +8186,8 @@
    "detail": "クラークが「少年よ、大志を抱け」と言い残したと伝わる。北海道開拓の人材を育てた。",
    "level": 4,
    "kind": "culture",
-   "score": 30
+   "score": 30,
+   "id": "j582"
   },
   {
    "year": 1876,
@@ -5282,7 +8195,8 @@
    "detail": "軍人・警察官以外の帯刀が禁止された。士族の特権は一つずつ奪われていく。",
    "level": 4,
    "kind": "society",
-   "score": 38
+   "score": 38,
+   "id": "j583"
   },
   {
    "year": 1879,
@@ -5290,7 +8204,8 @@
    "detail": "琉球藩が廃され、沖縄県が置かれた。琉球王国は終わりを迎えた。",
    "level": 2,
    "kind": "politics",
-   "score": 60
+   "score": 60,
+   "id": "j584"
   },
   {
    "year": 1881,
@@ -5298,7 +8213,18 @@
    "detail": "国会開設をめぐる対立で、大隈重信が政府から追放された。伊藤博文らが主導権を握る。",
    "level": 2,
    "kind": "politics",
-   "score": 62
+   "score": 62,
+   "id": "j585",
+   "people": [
+    "okuma",
+    "ito"
+   ],
+   "links": [
+    {
+     "to": "j281",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1882,
@@ -5306,7 +8232,8 @@
    "detail": "松方正義による財政整理の中で、中央銀行として設立された。",
    "level": 2,
    "kind": "society",
-   "score": 69
+   "score": 69,
+   "id": "j586"
   },
   {
    "year": 1884,
@@ -5314,7 +8241,8 @@
    "detail": "松方デフレで困窮した農民が、秩父で蜂起した。自由民権運動の最も激しい事件のひとつ。",
    "level": 4,
    "kind": "war",
-   "score": 31
+   "score": 31,
+   "id": "j587"
   },
   {
    "year": 1886,
@@ -5322,7 +8250,8 @@
    "detail": "イギリス船が沈没した際、日本人乗客が見捨てられたとされる事件。領事裁判権への批判が高まる。",
    "level": 4,
    "kind": "society",
-   "score": 35
+   "score": 35,
+   "id": "j588"
   },
   {
    "year": 1887,
@@ -5330,7 +8259,8 @@
    "detail": "二葉亭四迷が、話し言葉に近い文体で書いた近代小説の先駆。",
    "level": 4,
    "kind": "culture",
-   "score": 43
+   "score": 43,
+   "id": "j589"
   },
   {
    "year": 1890,
@@ -5338,7 +8268,11 @@
    "detail": "ドイツ留学の体験をもとにした小説。近代的な自我の悩みを描いた。",
    "level": 5,
    "kind": "culture",
-   "score": 27
+   "score": 27,
+   "id": "j590",
+   "people": [
+    "ogai"
+   ]
   },
   {
    "year": 1891,
@@ -5346,7 +8280,8 @@
    "detail": "来日中のロシア皇太子が襲われた。司法の独立が試された事件。",
    "level": 4,
    "kind": "politics",
-   "score": 32
+   "score": 32,
+   "id": "j591"
   },
   {
    "year": 1895,
@@ -5355,7 +8290,11 @@
    "level": 5,
    "kind": "culture",
    "approx": true,
-   "score": 7
+   "score": 7,
+   "id": "j592",
+   "people": [
+    "higuchi"
+   ]
   },
   {
    "year": 1900,
@@ -5363,7 +8302,8 @@
    "detail": "労働運動や政治活動を厳しく取り締まった法律。",
    "level": 4,
    "kind": "society",
-   "score": 37
+   "score": 37,
+   "id": "j593"
   },
   {
    "year": 1906,
@@ -5371,7 +8311,11 @@
    "detail": "夏目漱石の小説。松山で教師をした経験を生かした作品。",
    "level": 5,
    "kind": "culture",
-   "score": 9
+   "score": 9,
+   "id": "j594",
+   "people": [
+    "soseki"
+   ]
   },
   {
    "year": 1906,
@@ -5379,7 +8323,8 @@
    "detail": "日露戦争後に、日本が経営した鉄道会社。満州進出の足がかりとなる。",
    "level": 4,
    "kind": "foreign",
-   "score": 42
+   "score": 42,
+   "id": "j595"
   },
   {
    "year": 1911,
@@ -5387,7 +8332,11 @@
    "detail": "平塚らいてうの「元始、女性は実に太陽であった」で始まる創刊の辞が知られる。",
    "level": 4,
    "kind": "culture",
-   "score": 38
+   "score": 38,
+   "id": "j596",
+   "people": [
+    "raicho"
+   ]
   },
   {
    "year": 1911,
@@ -5395,7 +8344,8 @@
    "detail": "天皇暗殺を企てたとして幸徳秋水ら12人が死刑になった。社会主義運動への弾圧が強まる。",
    "level": 4,
    "kind": "politics",
-   "score": 34
+   "score": 34,
+   "id": "j597"
   },
   {
    "year": 1912,
@@ -5403,7 +8353,8 @@
    "detail": "ストックホルム大会に、マラソンの金栗四三と短距離の三島弥彦が出場した。",
    "level": 5,
    "kind": "culture",
-   "score": 5
+   "score": 5,
+   "id": "j598"
   },
   {
    "year": 1913,
@@ -5411,7 +8362,17 @@
    "detail": "「閥族打破・憲政擁護」を掲げた民衆運動で、桂太郎内閣が倒れた。",
    "level": 2,
    "kind": "politics",
-   "score": 65
+   "score": 65,
+   "id": "j599",
+   "people": [
+    "taro"
+   ],
+   "links": [
+    {
+     "to": "j108",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1916,
@@ -5419,7 +8380,14 @@
    "detail": "天皇主権のもとでも、民衆の意向を政治に反映させる考え方。大正デモクラシーの理論的な支えになった。",
    "level": 2,
    "kind": "culture",
-   "score": 65
+   "score": 65,
+   "id": "j600",
+   "links": [
+    {
+     "to": "j601",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1918,
@@ -5427,7 +8395,17 @@
    "detail": "爵位を持たない「平民宰相」の原敬が、初めて本格的な政党内閣を組織した。",
    "level": 2,
    "kind": "politics",
-   "score": 68
+   "score": 68,
+   "id": "j601",
+   "people": [
+    "hara"
+   ],
+   "links": [
+    {
+     "to": "j111",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1919,
@@ -5435,7 +8413,18 @@
    "detail": "第一次世界大戦の講和会議で、日本は五大国の一つとして参加した。人種差別撤廃案は成立しなかった。",
    "level": 2,
    "kind": "foreign",
-   "score": 61
+   "score": 61,
+   "id": "j602",
+   "links": [
+    {
+     "to": "j297",
+     "t": "foreign"
+    },
+    {
+     "to": "j298",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1920,
@@ -5443,7 +8432,8 @@
    "detail": "全国一斉に行われた人口調査。以後5年ごとに実施されている。",
    "level": 4,
    "kind": "society",
-   "score": 37
+   "score": 37,
+   "id": "j603"
   },
   {
    "year": 1920,
@@ -5451,7 +8441,8 @@
    "detail": "東京の上野公園で、約1万人の労働者が集まった。",
    "level": 3,
    "kind": "society",
-   "score": 45
+   "score": 45,
+   "id": "j604"
   },
   {
    "year": 1921,
@@ -5459,7 +8450,11 @@
    "detail": "東京駅で原敬が刺殺された。政党政治への不信が広がった。",
    "level": 4,
    "kind": "politics",
-   "score": 39
+   "score": 39,
+   "id": "j605",
+   "people": [
+    "hara"
+   ]
   },
   {
    "year": 1924,
@@ -5467,7 +8462,11 @@
    "detail": "第二次護憲運動の結果、加藤高明を首相とする政党内閣が成立した。",
    "level": 4,
    "kind": "politics",
-   "score": 33
+   "score": 33,
+   "id": "j606",
+   "people": [
+    "kato_t"
+   ]
   },
   {
    "year": 1925,
@@ -5475,7 +8474,14 @@
    "detail": "国体の変革や私有財産制度の否認を目的とする結社を処罰した。のち適用範囲が拡大していく。",
    "level": 2,
    "kind": "politics",
-   "score": 70
+   "score": 70,
+   "id": "j607",
+   "links": [
+    {
+     "to": "j112",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1926,
@@ -5483,7 +8489,8 @@
    "detail": "12月25日、大正天皇の崩御で昭和と改元された。昭和元年はわずか7日間だった。",
    "level": 3,
    "kind": "politics",
-   "score": 46
+   "score": 46,
+   "id": "j608"
   },
   {
    "year": 1930,
@@ -5491,7 +8498,14 @@
    "detail": "補助艦の保有量を制限した条約。統帥権干犯の批判が起きた。",
    "level": 2,
    "kind": "politics",
-   "score": 67
+   "score": 67,
+   "id": "j609",
+   "links": [
+    {
+     "to": "j610",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1930,
@@ -5499,7 +8513,17 @@
    "detail": "世界恐慌と金解禁の影響で、深刻な不況となり、農村は特に苦しんだ。",
    "level": 2,
    "kind": "society",
-   "score": 64
+   "score": 64,
+   "id": "j610",
+   "links": [
+    {
+     "to": "j113",
+     "t": "economy"
+    }
+   ],
+   "people": [
+    "korekiyo"
+   ]
   },
   {
    "year": 1935,
@@ -5507,7 +8531,8 @@
    "detail": "美濃部達吉の学説が攻撃され、著書が発禁になった。言論の自由が狭まっていく。",
    "level": 4,
    "kind": "politics",
-   "score": 42
+   "score": 42,
+   "id": "j611"
   },
   {
    "year": 1938,
@@ -5515,7 +8540,8 @@
    "detail": "戦争のために、人と物資を政府が統制できる法律。",
    "level": 2,
    "kind": "politics",
-   "score": 62
+   "score": 62,
+   "id": "j612"
   },
   {
    "year": 1939,
@@ -5523,7 +8549,8 @@
    "detail": "満州とモンゴルの国境で日ソが衝突し、日本軍は大きな損害を受けた。",
    "level": 3,
    "kind": "war",
-   "score": 44
+   "score": 44,
+   "id": "j613"
   },
   {
    "year": 1940,
@@ -5531,7 +8558,8 @@
    "detail": "政党が解散し、国民を戦争に動員するための組織に一本化された。",
    "level": 4,
    "kind": "politics",
-   "score": 39
+   "score": 39,
+   "id": "j614"
   },
   {
    "year": 1943,
@@ -5540,7 +8568,8 @@
    "level": 4,
    "kind": "society",
    "month": 10,
-   "score": 33
+   "score": 33,
+   "id": "j615"
   },
   {
    "year": 1944,
@@ -5548,7 +8577,8 @@
    "detail": "空襲を避けるため、都市の子どもたちが地方へ集団で疎開した。",
    "level": 4,
    "kind": "society",
-   "score": 37
+   "score": 37,
+   "id": "j616"
   },
   {
    "year": 1945,
@@ -5557,7 +8587,14 @@
    "level": 2,
    "kind": "politics",
    "month": 8,
-   "score": 68
+   "score": 68,
+   "id": "j617",
+   "links": [
+    {
+     "to": "j118",
+     "t": "war"
+    }
+   ]
   },
   {
    "year": 1945,
@@ -5565,7 +8602,18 @@
    "detail": "連合国軍の占領下で、日本の民主化と非軍事化が進められた。財閥の解体もその一つ。",
    "level": 2,
    "kind": "politics",
-   "score": 72
+   "score": 72,
+   "id": "j618",
+   "links": [
+    {
+     "to": "j619",
+     "t": "economy"
+    },
+    {
+     "to": "j620",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1946,
@@ -5573,7 +8621,14 @@
    "detail": "地主から土地を買い上げて小作人に売り渡し、多くの自作農が生まれた。",
    "level": 2,
    "kind": "society",
-   "score": 76
+   "score": 76,
+   "id": "j619",
+   "links": [
+    {
+     "to": "j119",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1946,
@@ -5582,7 +8637,14 @@
    "level": 2,
    "kind": "politics",
    "month": 4,
-   "score": 60
+   "score": 60,
+   "id": "j620",
+   "links": [
+    {
+     "to": "j119",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1947,
@@ -5590,7 +8652,8 @@
    "detail": "新しい憲法の理念に沿って、教育の基本を定めた。6・3・3・4制もこのころ始まった。",
    "level": 2,
    "kind": "society",
-   "score": 62
+   "score": 62,
+   "id": "j621"
   },
   {
    "year": 1949,
@@ -5598,7 +8661,11 @@
    "detail": "日本人初のノーベル賞。中間子の存在を予言した理論物理学者。",
    "level": 2,
    "kind": "culture",
-   "score": 69
+   "score": 69,
+   "id": "j622",
+   "people": [
+    "yukawa"
+   ]
   },
   {
    "year": 1949,
@@ -5606,7 +8673,8 @@
    "detail": "アメリカの顧問ドッジが、インフレ抑制のため、緊縮財政を求めた。",
    "level": 4,
    "kind": "society",
-   "score": 34
+   "score": 34,
+   "id": "j623"
   },
   {
    "year": 1951,
@@ -5614,7 +8682,11 @@
    "detail": "黒澤明の映画がヴェネチア国際映画祭で最高賞を受け、日本映画が世界に知られた。",
    "level": 4,
    "kind": "culture",
-   "score": 31
+   "score": 31,
+   "id": "j624",
+   "people": [
+    "kurosawa"
+   ]
   },
   {
    "year": 1954,
@@ -5622,7 +8694,8 @@
    "detail": "水爆実験を背景にした怪獣映画。特撮映画の金字塔となった。",
    "level": 4,
    "kind": "culture",
-   "score": 40
+   "score": 40,
+   "id": "j625"
   },
   {
    "year": 1956,
@@ -5630,7 +8703,8 @@
    "detail": "経済白書の言葉が流行語となり、戦後復興の完了と高度成長の始まりを象徴した。",
    "level": 3,
    "kind": "society",
-   "score": 45
+   "score": 45,
+   "id": "j626"
   },
   {
    "year": 1960,
@@ -5638,7 +8712,17 @@
    "detail": "池田内閣が、10年で国民所得を2倍にする計画を発表した。",
    "level": 2,
    "kind": "society",
-   "score": 61
+   "score": 61,
+   "id": "j627",
+   "links": [
+    {
+     "to": "j121",
+     "t": "economy"
+    }
+   ],
+   "people": [
+    "ikeda"
+   ]
   },
   {
    "year": 1965,
@@ -5646,7 +8730,14 @@
    "detail": "日本と韓国が国交を正常化した。",
    "level": 2,
    "kind": "foreign",
-   "score": 63
+   "score": 63,
+   "id": "j628",
+   "links": [
+    {
+     "to": "j326",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1966,
@@ -5654,7 +8745,8 @@
    "detail": "日本武道館で公演を行い、若者文化に大きな影響を与えた。",
    "level": 5,
    "kind": "culture",
-   "score": 27
+   "score": 27,
+   "id": "j629"
   },
   {
    "year": 1967,
@@ -5662,7 +8754,8 @@
    "detail": "水俣病、イタイイタイ病、四日市ぜんそくなどの公害に対応する、基本の法律。",
    "level": 2,
    "kind": "society",
-   "score": 59
+   "score": 59,
+   "id": "j630"
   },
   {
    "year": 1968,
@@ -5670,7 +8763,14 @@
    "detail": "日本の国民総生産が、資本主義国で米国に次ぐ2位になった。",
    "level": 2,
    "kind": "society",
-   "score": 62
+   "score": 62,
+   "id": "j631",
+   "links": [
+    {
+     "to": "j331",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1968,
@@ -5678,7 +8778,8 @@
    "detail": "東大などで、全共闘が学生運動を展開した。",
    "level": 2,
    "kind": "society",
-   "score": 68
+   "score": 68,
+   "id": "j632"
   },
   {
    "year": 1972,
@@ -5686,7 +8787,17 @@
    "detail": "田中角栄首相が訪中し、共同声明に調印した。",
    "level": 2,
    "kind": "foreign",
-   "score": 63
+   "score": 63,
+   "id": "j633",
+   "people": [
+    "tanaka"
+   ],
+   "links": [
+    {
+     "to": "j123",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 1972,
@@ -5694,7 +8805,8 @@
    "detail": "アジア初の冬季五輪。日本のジャンプ陣が、日の丸飛行隊として金銀銅を独占した。",
    "level": 3,
    "kind": "culture",
-   "score": 45
+   "score": 45,
+   "id": "j634"
   },
   {
    "year": 1976,
@@ -5702,7 +8814,11 @@
    "detail": "元首相田中角栄が、航空機の売り込みをめぐる収賄容疑で逮捕された。",
    "level": 3,
    "kind": "politics",
-   "score": 52
+   "score": 52,
+   "id": "j635",
+   "people": [
+    "tanaka"
+   ]
   },
   {
    "year": 1982,
@@ -5710,7 +8826,8 @@
    "detail": "新幹線は北へ広がった。",
    "level": 4,
    "kind": "society",
-   "score": 42
+   "score": 42,
+   "id": "j636"
   },
   {
    "year": 1985,
@@ -5718,7 +8835,8 @@
    "detail": "「人間・居住・環境と科学技術」をテーマに開かれ、2000万人以上が訪れた。",
    "level": 4,
    "kind": "culture",
-   "score": 38
+   "score": 38,
+   "id": "j637"
   },
   {
    "year": 1986,
@@ -5726,7 +8844,8 @@
    "detail": "募集・採用や昇進での男女の差別をなくす法律。",
    "level": 2,
    "kind": "society",
-   "score": 62
+   "score": 62,
+   "id": "j638"
   },
   {
    "year": 1988,
@@ -5734,7 +8853,8 @@
    "detail": "本州と北海道、本州と四国が、鉄道で結ばれた。",
    "level": 4,
    "kind": "society",
-   "score": 32
+   "score": 32,
+   "id": "j639"
   },
   {
    "year": 1989,
@@ -5743,7 +8863,8 @@
    "level": 2,
    "kind": "society",
    "month": 4,
-   "score": 62
+   "score": 62,
+   "id": "j640"
   },
   {
    "year": 1991,
@@ -5751,7 +8872,14 @@
    "detail": "湾岸戦争後、自衛隊の掃海艇がペルシャ湾に派遣された。初の海外任務。",
    "level": 2,
    "kind": "foreign",
-   "score": 59
+   "score": 59,
+   "id": "j641",
+   "links": [
+    {
+     "to": "j642",
+     "t": "foreign"
+    }
+   ]
   },
   {
    "year": 1992,
@@ -5759,7 +8887,14 @@
    "detail": "自衛隊が国連平和維持活動に参加できるようになった。",
    "level": 2,
    "kind": "politics",
-   "score": 65
+   "score": 65,
+   "id": "j642",
+   "links": [
+    {
+     "to": "j334",
+     "t": "politics"
+    }
+   ]
   },
   {
    "year": 1993,
@@ -5767,7 +8902,8 @@
    "detail": "10クラブで開幕し、サッカー人気が一気に広がった。",
    "level": 4,
    "kind": "culture",
-   "score": 43
+   "score": 43,
+   "id": "j643"
   },
   {
    "year": 1998,
@@ -5775,7 +8911,8 @@
    "detail": "日本で開かれた2度目の冬季五輪。",
    "level": 4,
    "kind": "culture",
-   "score": 39
+   "score": 39,
+   "id": "j644"
   },
   {
    "year": 2000,
@@ -5783,7 +8920,8 @@
    "detail": "沖縄県名護市で開かれた主要国首脳会議。",
    "level": 4,
    "kind": "foreign",
-   "score": 35
+   "score": 35,
+   "id": "j645"
   },
   {
    "year": 2005,
@@ -5791,7 +8929,8 @@
    "detail": "「愛・地球博」。環境をテーマにして開かれた。",
    "level": 4,
    "kind": "culture",
-   "score": 37
+   "score": 37,
+   "id": "j646"
   },
   {
    "year": 2005,
@@ -5799,7 +8938,14 @@
    "detail": "小泉内閣の郵政民営化法が成立。衆議院解散・総選挙で自民党が大勝した。",
    "level": 2,
    "kind": "politics",
-   "score": 70
+   "score": 70,
+   "id": "j647",
+   "links": [
+    {
+     "to": "j127",
+     "t": "economy"
+    }
+   ]
   },
   {
    "year": 2010,
@@ -5807,7 +8953,8 @@
    "detail": "小惑星イトカワの砂を持ち帰る旅を、7年の旅を経て終えた。",
    "level": 4,
    "kind": "culture",
-   "score": 36
+   "score": 36,
+   "id": "j648"
   },
   {
    "year": 2013,
@@ -5815,7 +8962,8 @@
    "detail": "「信仰の対象と芸術の源泉」として世界文化遺産となった。",
    "level": 4,
    "kind": "culture",
-   "score": 38
+   "score": 38,
+   "id": "j649"
   },
   {
    "year": 2016,
@@ -5823,7 +8971,8 @@
    "detail": "選挙権年齢が20歳から18歳に引き下げられた。",
    "level": 4,
    "kind": "politics",
-   "score": 31
+   "score": 31,
+   "id": "j650"
   },
   {
    "year": 2019,
@@ -5832,7 +8981,8 @@
    "level": 4,
    "kind": "society",
    "month": 10,
-   "score": 42
+   "score": 42,
+   "id": "j651"
   },
   {
    "year": 2020,
@@ -5841,7 +8991,8 @@
    "level": 3,
    "kind": "society",
    "month": 4,
-   "score": 52
+   "score": 52,
+   "id": "j652"
   },
   {
    "year": 2022,
@@ -5850,7 +9001,8 @@
    "level": 3,
    "kind": "politics",
    "month": 7,
-   "score": 45
+   "score": 45,
+   "id": "j653"
   },
   {
    "year": 2023,
@@ -5859,7 +9011,8 @@
    "level": 3,
    "kind": "society",
    "month": 5,
-   "score": 51
+   "score": 51,
+   "id": "j654"
   },
   {
    "year": 2023,
@@ -5868,7 +9021,8 @@
    "level": 4,
    "kind": "culture",
    "month": 3,
-   "score": 35
+   "score": 35,
+   "id": "j655"
   },
   {
    "year": 2024,
@@ -5877,7 +9031,8 @@
    "level": 4,
    "kind": "society",
    "month": 7,
-   "score": 34
+   "score": 34,
+   "id": "j656"
   }
  ],
  "persons": [
@@ -9959,6 +13114,38 @@
    "id": "myth",
    "name": "神話の神々",
    "c": 10
+  }
+ ],
+ "linkTypes": [
+  {
+   "id": "war",
+   "name": "戦乱・対立",
+   "c": 1
+  },
+  {
+   "id": "politics",
+   "name": "政治・制度",
+   "c": 9
+  },
+  {
+   "id": "culture",
+   "name": "文化・思想",
+   "c": 7
+  },
+  {
+   "id": "religion",
+   "name": "宗教",
+   "c": 2
+  },
+  {
+   "id": "economy",
+   "name": "経済・社会",
+   "c": 3
+  },
+  {
+   "id": "foreign",
+   "name": "外交・交流",
+   "c": 5
   }
  ]
 }

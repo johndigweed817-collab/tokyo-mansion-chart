@@ -247,7 +247,10 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 69
+   "score": 69,
+   "people": [
+    "confucius"
+   ]
   },
   {
    "id": "as_achaemenid",
@@ -277,7 +280,10 @@
    "kind": "politics",
    "links": [],
    "region": "europe",
-   "score": 74
+   "score": 74,
+   "people": [
+    "pericles"
+   ]
   },
   {
    "id": "as_buddha",
@@ -301,7 +307,10 @@
     }
    ],
    "region": "asia",
-   "score": 75
+   "score": 75,
+   "people": [
+    "buddha"
+   ]
   },
   {
    "id": "eu_persianwar",
@@ -313,7 +322,11 @@
    "kind": "war",
    "links": [],
    "region": "europe",
-   "score": 65
+   "score": 65,
+   "people": [
+    "darius1",
+    "pericles"
+   ]
   },
   {
    "id": "eu_alex",
@@ -341,7 +354,10 @@
     }
    ],
    "region": "europe",
-   "score": 76
+   "score": 76,
+   "people": [
+    "alexander"
+   ]
   },
   {
    "id": "af_alexandria",
@@ -383,7 +399,10 @@
    "kind": "politics",
    "links": [],
    "region": "asia",
-   "score": 91
+   "score": 91,
+   "people": [
+    "shihuangdi"
+   ]
   },
   {
    "id": "af_carthage",
@@ -413,7 +432,10 @@
     }
    ],
    "region": "asia",
-   "score": 76
+   "score": 76,
+   "people": [
+    "zhangqian"
+   ]
   },
   {
    "id": "af_ptolemy",
@@ -443,7 +465,10 @@
     }
    ],
    "region": "europe",
-   "score": 75
+   "score": 75,
+   "people": [
+    "augustus"
+   ]
   },
   {
    "id": "as_gandhara",
@@ -537,7 +562,10 @@
     }
    ],
    "region": "europe",
-   "score": 64
+   "score": 64,
+   "people": [
+    "constantine"
+   ]
   },
   {
    "id": "af_axum",
@@ -717,7 +745,10 @@
    "kind": "politics",
    "links": [],
    "region": "europe",
-   "score": 65
+   "score": 65,
+   "people": [
+    "charlemagne"
+   ]
   },
   {
    "id": "af_ghana",
@@ -790,7 +821,11 @@
     }
    ],
    "region": "europe",
-   "score": 76
+   "score": 76,
+   "people": [
+    "richard1",
+    "saladin"
+   ]
   },
   {
    "id": "af_zimbabwe",
@@ -831,7 +866,10 @@
     }
    ],
    "region": "asia",
-   "score": 74
+   "score": 74,
+   "people": [
+    "genghis"
+   ]
   },
   {
    "id": "eu_magna",
@@ -856,7 +894,10 @@
    "jp": 1274,
    "links": [],
    "region": "asia",
-   "score": 84
+   "score": 84,
+   "people": [
+    "kublai"
+   ]
   },
   {
    "id": "as_marcopolo",
@@ -953,7 +994,10 @@
     }
    ],
    "region": "asia",
-   "score": 66
+   "score": 66,
+   "people": [
+    "zhuyuanzhang"
+   ]
   },
   {
    "id": "eu_renaissance",
@@ -972,7 +1016,11 @@
     }
    ],
    "region": "europe",
-   "score": 94
+   "score": 94,
+   "people": [
+    "leonardo",
+    "michelangelo"
+   ]
   },
   {
    "id": "af_swahili",
@@ -1003,7 +1051,10 @@
     }
    ],
    "region": "asia",
-   "score": 57
+   "score": 57,
+   "people": [
+    "zhenghe"
+   ]
   },
   {
    "id": "am_inca",
@@ -1034,7 +1085,10 @@
     }
    ],
    "region": "europe",
-   "score": 76
+   "score": 76,
+   "people": [
+    "gutenberg"
+   ]
   },
   {
    "id": "eu_byz_fall",
@@ -1093,7 +1147,10 @@
     }
    ],
    "region": "europe",
-   "score": 95
+   "score": 95,
+   "people": [
+    "columbus"
+   ]
   },
   {
    "id": "am_exchange",
@@ -1111,7 +1168,10 @@
     }
    ],
    "region": "america",
-   "score": 76
+   "score": 76,
+   "people": [
+    "columbus"
+   ]
   },
   {
    "id": "as_gama",
@@ -1178,7 +1238,10 @@
    "kind": "society",
    "links": [],
    "region": "europe",
-   "score": 77
+   "score": 77,
+   "people": [
+    "luther"
+   ]
   },
   {
    "id": "am_aztec_fall",
@@ -1196,7 +1259,10 @@
     }
    ],
    "region": "america",
-   "score": 75
+   "score": 75,
+   "people": [
+    "cortes"
+   ]
   },
   {
    "id": "as_mughal",
@@ -1208,7 +1274,10 @@
    "kind": "politics",
    "links": [],
    "region": "asia",
-   "score": 73
+   "score": 73,
+   "people": [
+    "akbar"
+   ]
   },
   {
    "id": "am_inca_fall",
@@ -1317,7 +1386,10 @@
    "kind": "tech",
    "links": [],
    "region": "europe",
-   "score": 74
+   "score": 74,
+   "people": [
+    "newton"
+   ]
   },
   {
    "id": "eu_enlight",
@@ -1341,7 +1413,12 @@
     }
    ],
    "region": "europe",
-   "score": 64
+   "score": 64,
+   "people": [
+    "rousseau",
+    "voltaire",
+    "kant"
+   ]
   },
   {
    "id": "eu_indrev",
@@ -1369,7 +1446,10 @@
     }
    ],
    "region": "europe",
-   "score": 99
+   "score": 99,
+   "people": [
+    "watt"
+   ]
   },
   {
    "id": "am_indep",
@@ -1392,7 +1472,12 @@
     }
    ],
    "region": "america",
-   "score": 93
+   "score": 93,
+   "people": [
+    "washington",
+    "jefferson",
+    "franklin"
+   ]
   },
   {
    "id": "eu_french",
@@ -1415,7 +1500,10 @@
     }
    ],
    "region": "europe",
-   "score": 96
+   "score": 96,
+   "people": [
+    "robespierre"
+   ]
   },
   {
    "id": "af_napoleon_egypt",
@@ -1427,7 +1515,10 @@
    "kind": "war",
    "links": [],
    "region": "africa",
-   "score": 37
+   "score": 37,
+   "people": [
+    "napoleon"
+   ]
   },
   {
    "id": "eu_napoleon",
@@ -1450,7 +1541,10 @@
     }
    ],
    "region": "europe",
-   "score": 69
+   "score": 69,
+   "people": [
+    "napoleon"
+   ]
   },
   {
    "id": "am_haiti",
@@ -1462,7 +1556,10 @@
    "kind": "politics",
    "links": [],
    "region": "america",
-   "score": 66
+   "score": 66,
+   "people": [
+    "toussaint"
+   ]
   },
   {
    "id": "am_latin",
@@ -1475,7 +1572,10 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 73
+   "score": 73,
+   "people": [
+    "bolivar"
+   ]
   },
   {
    "id": "am_monroe",
@@ -1505,7 +1605,10 @@
     }
    ],
    "region": "asia",
-   "score": 77
+   "score": 77,
+   "people": [
+    "lin_zexu"
+   ]
   },
   {
    "id": "as_jp_perry",
@@ -1536,7 +1639,10 @@
    "kind": "war",
    "links": [],
    "region": "america",
-   "score": 67
+   "score": 67,
+   "people": [
+    "lincoln"
+   ]
   },
   {
    "id": "as_jp_meiji",
@@ -1549,7 +1655,10 @@
    "jp": 1868,
    "links": [],
    "region": "asia",
-   "score": 87
+   "score": 87,
+   "people": [
+    "meiji"
+   ]
   },
   {
    "id": "af_suez",
@@ -1632,7 +1741,10 @@
    "kind": "politics",
    "links": [],
    "region": "asia",
-   "score": 65
+   "score": 65,
+   "people": [
+    "sunyat"
+   ]
   },
   {
    "id": "eu_ww1",
@@ -1673,7 +1785,10 @@
     }
    ],
    "region": "europe",
-   "score": 96
+   "score": 96,
+   "people": [
+    "lenin"
+   ]
   },
   {
    "id": "am_depression",
@@ -1733,7 +1848,10 @@
     }
    ],
    "region": "europe",
-   "score": 76
+   "score": 76,
+   "people": [
+    "hitler"
+   ]
   },
   {
    "id": "am_newdeal",
@@ -1751,7 +1869,10 @@
     }
    ],
    "region": "america",
-   "score": 67
+   "score": 67,
+   "people": [
+    "fdr"
+   ]
   },
   {
    "id": "eu_ww2",
@@ -1784,7 +1905,13 @@
     }
    ],
    "region": "europe",
-   "score": 98
+   "score": 98,
+   "people": [
+    "hitler",
+    "churchill",
+    "fdr",
+    "stalin"
+   ]
   },
   {
    "id": "as_pacific",
@@ -1821,7 +1948,11 @@
     }
    ],
    "region": "america",
-   "score": 70
+   "score": 70,
+   "people": [
+    "oppenheimer",
+    "einstein"
+   ]
   },
   {
    "id": "as_atomic",
@@ -1885,7 +2016,11 @@
     }
    ],
    "region": "asia",
-   "score": 70
+   "score": 70,
+   "people": [
+    "gandhi",
+    "nehru"
+   ]
   },
   {
    "id": "am_marshall",
@@ -1921,7 +2056,10 @@
     }
    ],
    "region": "africa",
-   "score": 73
+   "score": 73,
+   "people": [
+    "mandela"
+   ]
   },
   {
    "id": "as_prc",
@@ -1944,7 +2082,10 @@
     }
    ],
    "region": "asia",
-   "score": 72
+   "score": 72,
+   "people": [
+    "mao"
+   ]
   },
   {
    "id": "as_korea",
@@ -2046,7 +2187,10 @@
    "kind": "politics",
    "links": [],
    "region": "america",
-   "score": 66
+   "score": 66,
+   "people": [
+    "kennedy"
+   ]
   },
   {
    "id": "am_civilrights",
@@ -2064,7 +2208,10 @@
     }
    ],
    "region": "america",
-   "score": 68
+   "score": 68,
+   "people": [
+    "king"
+   ]
   },
   {
    "id": "as_vietnam",
@@ -2076,7 +2223,11 @@
    "kind": "war",
    "links": [],
    "region": "asia",
-   "score": 89
+   "score": 89,
+   "people": [
+    "ho",
+    "kennedy"
+   ]
   },
   {
    "id": "am_moon",
@@ -2088,7 +2239,11 @@
    "kind": "tech",
    "links": [],
    "region": "america",
-   "score": 88
+   "score": 88,
+   "people": [
+    "armstrong",
+    "kennedy"
+   ]
   },
   {
    "id": "as_oil",
@@ -2124,7 +2279,10 @@
     }
    ],
    "region": "asia",
-   "score": 71
+   "score": 71,
+   "people": [
+    "deng"
+   ]
   },
   {
    "id": "eu_berlin",
@@ -2142,7 +2300,11 @@
     }
    ],
    "region": "europe",
-   "score": 94
+   "score": 94,
+   "people": [
+    "gorbachev",
+    "reagan"
+   ]
   },
   {
    "id": "eu_ussr",
@@ -2165,7 +2327,10 @@
     }
    ],
    "region": "europe",
-   "score": 91
+   "score": 91,
+   "people": [
+    "gorbachev"
+   ]
   },
   {
    "id": "af_mandela",
@@ -2177,7 +2342,10 @@
    "kind": "politics",
    "links": [],
    "region": "africa",
-   "score": 76
+   "score": 76,
+   "people": [
+    "mandela"
+   ]
   },
   {
    "id": "af_rwanda",
@@ -2347,7 +2515,10 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 54
+   "score": 54,
+   "people": [
+    "ramses"
+   ]
   },
   {
    "id": "w3_003",
@@ -2477,7 +2648,10 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 49
+   "score": 49,
+   "people": [
+    "ashoka"
+   ]
   },
   {
    "id": "w3_013",
@@ -2490,7 +2664,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 63
+   "score": 63,
+   "people": [
+    "shihuangdi"
+   ]
   },
   {
    "id": "w3_014",
@@ -2503,7 +2680,11 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 66
+   "score": 66,
+   "people": [
+    "liubang",
+    "xiangyu"
+   ]
   },
   {
    "id": "w3_015",
@@ -2516,7 +2697,11 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 50
+   "score": 50,
+   "people": [
+    "hannibal",
+    "scipio"
+   ]
   },
   {
    "id": "w3_016",
@@ -2555,7 +2740,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 73
+   "score": 73,
+   "people": [
+    "caesar"
+   ]
   },
   {
    "id": "w3_019",
@@ -2594,7 +2782,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 42
+   "score": 42,
+   "people": [
+    "nero"
+   ]
   },
   {
    "id": "w3_022",
@@ -2672,7 +2863,12 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 71
+   "score": 71,
+   "people": [
+    "caocao",
+    "liubei",
+    "zhugeliang"
+   ]
   },
   {
    "id": "w3_028",
@@ -2698,7 +2894,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 54,
+   "people": [
+    "constantine"
+   ]
   },
   {
    "id": "w3_030",
@@ -2711,7 +2910,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 54,
+   "people": [
+    "constantine"
+   ]
   },
   {
    "id": "w3_031",
@@ -2867,7 +3069,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 57
+   "score": 57,
+   "people": [
+    "charlemagne"
+   ]
   },
   {
    "id": "w3_043",
@@ -2958,7 +3163,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 68
+   "score": 68,
+   "people": [
+    "william1"
+   ]
   },
   {
    "id": "w3_050",
@@ -2984,7 +3192,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 41
+   "score": 41,
+   "people": [
+    "saladin"
+   ]
   },
   {
    "id": "w3_052",
@@ -3049,7 +3260,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 32
+   "score": 32,
+   "people": [
+    "kublai"
+   ]
   },
   {
    "id": "w3_057",
@@ -3166,7 +3380,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 54,
+   "people": [
+    "columbus"
+   ]
   },
   {
    "id": "w3_066",
@@ -3192,7 +3409,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 69
+   "score": 69,
+   "people": [
+    "magellan"
+   ]
   },
   {
    "id": "w3_068",
@@ -3205,7 +3425,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 41
+   "score": 41,
+   "people": [
+    "suleiman"
+   ]
   },
   {
    "id": "w3_069",
@@ -3231,7 +3454,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 68
+   "score": 68,
+   "people": [
+    "copernicus"
+   ]
   },
   {
    "id": "w3_071",
@@ -3244,7 +3470,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 40
+   "score": 40,
+   "people": [
+    "luther"
+   ]
   },
   {
    "id": "w3_072",
@@ -3296,7 +3525,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 67
+   "score": 67,
+   "people": [
+    "elizabeth1"
+   ]
   },
   {
    "id": "w3_076",
@@ -3322,7 +3554,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 40
+   "score": 40,
+   "people": [
+    "louis14"
+   ]
   },
   {
    "id": "w3_078",
@@ -3387,7 +3622,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 72
+   "score": 72,
+   "people": [
+    "cromwell"
+   ]
   },
   {
    "id": "w3_083",
@@ -3465,7 +3703,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 51
+   "score": 51,
+   "people": [
+    "peter1"
+   ]
   },
   {
    "id": "w3_089",
@@ -3504,7 +3745,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 58
+   "score": 58,
+   "people": [
+    "watt"
+   ]
   },
   {
    "id": "w3_092",
@@ -3517,7 +3761,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 71
+   "score": 71,
+   "people": [
+    "smith"
+   ]
   },
   {
    "id": "w3_093",
@@ -3543,7 +3790,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 44
+   "score": 44,
+   "people": [
+    "napoleon"
+   ]
   },
   {
    "id": "w3_095",
@@ -3556,7 +3806,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 31
+   "score": 31,
+   "people": [
+    "napoleon"
+   ]
   },
   {
    "id": "w3_096",
@@ -3569,7 +3822,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 54,
+   "people": [
+    "napoleon"
+   ]
   },
   {
    "id": "w3_097",
@@ -3582,7 +3838,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 54,
+   "people": [
+    "napoleon"
+   ]
   },
   {
    "id": "w3_098",
@@ -3660,7 +3919,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 74
+   "score": 74,
+   "people": [
+    "hongxiuquan"
+   ]
   },
   {
    "id": "w3_104",
@@ -3673,7 +3935,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 61
+   "score": 61,
+   "people": [
+    "nightingale"
+   ]
   },
   {
    "id": "w3_105",
@@ -3712,7 +3977,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 69
+   "score": 69,
+   "people": [
+    "lincoln"
+   ]
   },
   {
    "id": "w3_108",
@@ -3738,7 +4006,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 70
+   "score": 70,
+   "people": [
+    "bismarck"
+   ]
   },
   {
    "id": "w3_110",
@@ -3751,7 +4022,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 63
+   "score": 63,
+   "people": [
+    "bell"
+   ]
   },
   {
    "id": "w3_111",
@@ -3777,7 +4051,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 83
+   "score": 83,
+   "people": [
+    "lihongzhang"
+   ]
   },
   {
    "id": "w3_113",
@@ -3842,7 +4119,8 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 84
+   "score": 84,
+   "people": []
   },
   {
    "id": "w3_118",
@@ -3868,7 +4146,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 55
+   "score": 55,
+   "people": [
+    "ford"
+   ]
   },
   {
    "id": "w3_120",
@@ -3933,7 +4214,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 60
+   "score": 60,
+   "people": [
+    "luxun"
+   ]
   },
   {
    "id": "w3_125",
@@ -3946,7 +4230,11 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 53
+   "score": 53,
+   "people": [
+    "mussolini",
+    "hitler"
+   ]
   },
   {
    "id": "w3_126",
@@ -3959,7 +4247,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 69
+   "score": 69,
+   "people": [
+    "kemal"
+   ]
   },
   {
    "id": "w3_127",
@@ -3972,7 +4263,11 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 63
+   "score": 63,
+   "people": [
+    "mao",
+    "zhouenlai"
+   ]
   },
   {
    "id": "w3_128",
@@ -4011,7 +4306,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 59
+   "score": 59,
+   "people": [
+    "hitler"
+   ]
   },
   {
    "id": "w3_131",
@@ -4128,7 +4426,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 60
+   "score": 60,
+   "people": [
+    "mao"
+   ]
   },
   {
    "id": "w3_140",
@@ -4180,7 +4481,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 65
+   "score": 65,
+   "people": [
+    "mao"
+   ]
   },
   {
    "id": "w3_144",
@@ -4323,7 +4627,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 52
+   "score": 52,
+   "people": [
+    "mandela"
+   ]
   },
   {
    "id": "w3_155",
@@ -4453,7 +4760,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 36,
+   "people": [
+    "pericles"
+   ]
   },
   {
    "id": "w4_005",
@@ -4466,7 +4776,11 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 50
+   "score": 50,
+   "people": [
+    "socrates",
+    "plato"
+   ]
   },
   {
    "id": "w4_006",
@@ -4479,7 +4793,10 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 36,
+   "people": [
+    "plato"
+   ]
   },
   {
    "id": "w4_007",
@@ -4505,7 +4822,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 74
+   "score": 74,
+   "people": [
+    "alexander"
+   ]
   },
   {
    "id": "w4_009",
@@ -4544,7 +4864,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 49
+   "score": 49,
+   "people": [
+    "hannibal"
+   ]
   },
   {
    "id": "w4_012",
@@ -4557,7 +4880,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 34
+   "score": 34,
+   "people": [
+    "hannibal"
+   ]
   },
   {
    "id": "w4_013",
@@ -4596,7 +4922,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 45
+   "score": 45,
+   "people": [
+    "caesar"
+   ]
   },
   {
    "id": "w4_016",
@@ -4609,7 +4938,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 60
+   "score": 60,
+   "people": [
+    "caesar"
+   ]
   },
   {
    "id": "w4_017",
@@ -4635,7 +4967,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 38
+   "score": 38,
+   "people": [
+    "augustus"
+   ]
   },
   {
    "id": "w4_019",
@@ -4674,7 +5009,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 2
+   "score": 2,
+   "people": [
+    "hadrian"
+   ]
   },
   {
    "id": "w4_022",
@@ -4687,7 +5025,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 35
+   "score": 35,
+   "people": [
+    "aurelius"
+   ]
   },
   {
    "id": "w4_023",
@@ -5012,7 +5353,10 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 28
+   "score": 28,
+   "people": [
+    "aquinas"
+   ]
   },
   {
    "id": "w4_048",
@@ -5051,7 +5395,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 64
+   "score": 64,
+   "people": [
+    "dante"
+   ]
   },
   {
    "id": "w4_051",
@@ -5090,7 +5437,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 48
+   "score": 48,
+   "people": [
+    "jeanne"
+   ]
   },
   {
    "id": "w4_054",
@@ -5103,7 +5453,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 43
+   "score": 43,
+   "people": [
+    "lorenzo"
+   ]
   },
   {
    "id": "w4_055",
@@ -5129,7 +5482,10 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 1
+   "score": 1,
+   "people": [
+    "leonardo"
+   ]
   },
   {
    "id": "w4_057",
@@ -5142,7 +5498,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 15
+   "score": 15,
+   "people": [
+    "michelangelo"
+   ]
   },
   {
    "id": "w4_058",
@@ -5155,7 +5514,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 59
+   "score": 59,
+   "people": [
+    "machiavelli"
+   ]
   },
   {
    "id": "w4_059",
@@ -5181,7 +5543,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 62
+   "score": 62,
+   "people": [
+    "luther"
+   ]
   },
   {
    "id": "w4_061",
@@ -5194,7 +5559,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 48
+   "score": 48,
+   "people": [
+    "luther"
+   ]
   },
   {
    "id": "w4_062",
@@ -5220,7 +5588,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 51
+   "score": 51,
+   "people": [
+    "calvin"
+   ]
   },
   {
    "id": "w4_064",
@@ -5272,7 +5643,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 26
+   "score": 26,
+   "people": [
+    "shakespeare"
+   ]
   },
   {
    "id": "w4_068",
@@ -5285,7 +5659,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 60
+   "score": 60,
+   "people": [
+    "galileo"
+   ]
   },
   {
    "id": "w4_069",
@@ -5298,7 +5675,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 9
+   "score": 9,
+   "people": [
+    "descartes"
+   ]
   },
   {
    "id": "w4_070",
@@ -5324,7 +5704,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 31
+   "score": 31,
+   "people": [
+    "cromwell"
+   ]
   },
   {
    "id": "w4_072",
@@ -5350,7 +5733,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 63
+   "score": 63,
+   "people": [
+    "louis14"
+   ]
   },
   {
    "id": "w4_074",
@@ -5389,7 +5775,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 62
+   "score": 62,
+   "people": [
+    "peter1"
+   ]
   },
   {
    "id": "w4_077",
@@ -5402,7 +5791,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 42
+   "score": 42,
+   "people": [
+    "maria_theresa"
+   ]
   },
   {
    "id": "w4_078",
@@ -5415,7 +5807,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 46
+   "score": 46,
+   "people": [
+    "rousseau"
+   ]
   },
   {
    "id": "w4_079",
@@ -5467,7 +5862,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 53
+   "score": 53,
+   "people": [
+    "napoleon"
+   ]
   },
   {
    "id": "w4_083",
@@ -5480,7 +5878,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 48
+   "score": 48,
+   "people": [
+    "wilberforce"
+   ]
   },
   {
    "id": "w4_084",
@@ -5532,7 +5933,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 36,
+   "people": [
+    "victoria"
+   ]
   },
   {
    "id": "w4_088",
@@ -5545,7 +5949,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 59
+   "score": 59,
+   "people": [
+    "darwin"
+   ]
   },
   {
    "id": "w4_089",
@@ -5558,7 +5965,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 65
+   "score": 65,
+   "people": [
+    "garibaldi"
+   ]
   },
   {
    "id": "w4_090",
@@ -5571,7 +5981,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 52
+   "score": 52,
+   "people": [
+    "marx"
+   ]
   },
   {
    "id": "w4_091",
@@ -5623,7 +6036,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 30
+   "score": 30,
+   "people": [
+    "einstein"
+   ]
   },
   {
    "id": "w4_095",
@@ -5688,7 +6104,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 6
+   "score": 6,
+   "people": [
+    "hitler"
+   ]
   },
   {
    "id": "w4_100",
@@ -5727,7 +6146,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 51
+   "score": 51,
+   "people": [
+    "churchill"
+   ]
   },
   {
    "id": "w4_103",
@@ -5779,7 +6201,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 53
+   "score": 53,
+   "people": [
+    "thatcher"
+   ]
   },
   {
    "id": "w4_107",
@@ -5792,7 +6217,10 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 48
+   "score": 48,
+   "people": [
+    "gorbachev"
+   ]
   },
   {
    "id": "w4_108",
@@ -5909,7 +6337,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 48
+   "score": 48,
+   "people": [
+    "darius1"
+   ]
   },
   {
    "id": "w4_117",
@@ -5961,7 +6392,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 26
+   "score": 26,
+   "people": [
+    "ashoka"
+   ]
   },
   {
    "id": "w4_121",
@@ -5974,7 +6408,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 47
+   "score": 47,
+   "people": [
+    "wudi"
+   ]
   },
   {
    "id": "w4_122",
@@ -5987,7 +6424,10 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 37
+   "score": 37,
+   "people": [
+    "simaqian"
+   ]
   },
   {
    "id": "w4_123",
@@ -6182,7 +6622,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 58
+   "score": 58,
+   "people": [
+    "xuanzang"
+   ]
   },
   {
    "id": "w4_138",
@@ -6234,7 +6677,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 35
+   "score": 35,
+   "people": [
+    "harun"
+   ]
   },
   {
    "id": "w4_142",
@@ -6325,7 +6771,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 62
+   "score": 62,
+   "people": [
+    "genghis"
+   ]
   },
   {
    "id": "w4_149",
@@ -6338,7 +6787,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 4
+   "score": 4,
+   "people": [
+    "genghis"
+   ]
   },
   {
    "id": "w4_150",
@@ -6403,7 +6855,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 51
+   "score": 51,
+   "people": [
+    "timur"
+   ]
   },
   {
    "id": "w4_155",
@@ -6416,7 +6871,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 30
+   "score": 30,
+   "people": [
+    "timur"
+   ]
   },
   {
    "id": "w4_156",
@@ -6429,7 +6887,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 46
+   "score": 46,
+   "people": [
+    "yongle"
+   ]
   },
   {
    "id": "w4_157",
@@ -6481,7 +6942,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 61
+   "score": 61,
+   "people": [
+    "akbar"
+   ]
   },
   {
    "id": "w4_161",
@@ -6494,7 +6958,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 59
+   "score": 59,
+   "people": [
+    "yi_sunsin"
+   ]
   },
   {
    "id": "w4_162",
@@ -6559,7 +7026,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 22
+   "score": 22,
+   "people": [
+    "qianlong"
+   ]
   },
   {
    "id": "w4_167",
@@ -6611,7 +7081,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 58
+   "score": 58,
+   "people": [
+    "cixi"
+   ]
   },
   {
    "id": "w4_171",
@@ -6624,7 +7097,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 61
+   "score": 61,
+   "people": [
+    "sunyat"
+   ]
   },
   {
    "id": "w4_172",
@@ -6728,7 +7204,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 52
+   "score": 52,
+   "people": [
+    "mao"
+   ]
   },
   {
    "id": "w4_180",
@@ -6741,7 +7220,10 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 41
+   "score": 41,
+   "people": [
+    "deng"
+   ]
   },
   {
    "id": "w4_181",
@@ -6884,7 +7366,11 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 18
+   "score": 18,
+   "people": [
+    "cleopatra",
+    "caesar"
+   ]
   },
   {
    "id": "w4_193",
@@ -6988,7 +7474,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 7
+   "score": 7,
+   "people": [
+    "saladin"
+   ]
   },
   {
    "id": "w4_201",
@@ -7014,7 +7503,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 26
+   "score": 26,
+   "people": [
+    "battuta"
+   ]
   },
   {
    "id": "w4_203",
@@ -7066,7 +7558,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 45
+   "score": 45,
+   "people": [
+    "suleiman"
+   ]
   },
   {
    "id": "w4_207",
@@ -7092,7 +7587,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 40
+   "score": 40,
+   "people": [
+    "muhammad_ali"
+   ]
   },
   {
    "id": "w4_209",
@@ -7105,7 +7603,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 25
+   "score": 25,
+   "people": [
+    "shaka"
+   ]
   },
   {
    "id": "w4_210",
@@ -7196,7 +7697,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 33
+   "score": 33,
+   "people": [
+    "mussolini"
+   ]
   },
   {
    "id": "w4_217",
@@ -7209,7 +7713,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 43
+   "score": 43,
+   "people": [
+    "nasser"
+   ]
   },
   {
    "id": "w4_218",
@@ -7235,7 +7742,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 63
+   "score": 63,
+   "people": [
+    "nkrumah"
+   ]
   },
   {
    "id": "w4_220",
@@ -7274,7 +7784,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 31
+   "score": 31,
+   "people": [
+    "haile_selassie"
+   ]
   },
   {
    "id": "w4_223",
@@ -7313,7 +7826,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 53
+   "score": 53,
+   "people": [
+    "mandela"
+   ]
   },
   {
    "id": "w4_226",
@@ -7469,7 +7985,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 47
+   "score": 47,
+   "people": [
+    "cortes"
+   ]
   },
   {
    "id": "w4_239",
@@ -7482,7 +8001,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 45
+   "score": 45,
+   "people": [
+    "atahualpa"
+   ]
   },
   {
    "id": "w4_240",
@@ -7781,7 +8303,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 10
+   "score": 10,
+   "people": [
+    "lincoln"
+   ]
   },
   {
    "id": "w4_263",
@@ -7833,7 +8358,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 4
+   "score": 4,
+   "people": [
+    "troosevelt"
+   ]
   },
   {
    "id": "w4_267",
@@ -7937,7 +8465,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 37
+   "score": 37,
+   "people": [
+    "parks"
+   ]
   },
   {
    "id": "w4_275",
@@ -7950,7 +8481,11 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 62
+   "score": 62,
+   "people": [
+    "king",
+    "kennedy"
+   ]
   },
   {
    "id": "w4_276",
@@ -7963,7 +8498,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 33
+   "score": 33,
+   "people": [
+    "king"
+   ]
   },
   {
    "id": "w4_277",
@@ -8015,7 +8553,10 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 79
+   "score": 79,
+   "people": [
+    "jobs"
+   ]
   },
   {
    "id": "w4_281",
@@ -8457,7 +8998,10 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 27
+   "score": 27,
+   "people": [
+    "haile_selassie"
+   ]
   },
   {
    "id": "w4_315",

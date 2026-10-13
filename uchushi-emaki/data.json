@@ -404,7 +404,14 @@
    "level": 1,
    "kind": "cosmos",
    "label": "約138億年前",
-   "score": 93
+   "score": 93,
+   "id": "c001",
+   "links": [
+    {
+     "to": "c002",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -13799970000.0,
@@ -415,7 +422,14 @@
    "kind": "cosmos",
    "label": "誕生の直後（理論）",
    "vlabel": "直後",
-   "score": 69
+   "score": 69,
+   "id": "c002",
+   "links": [
+    {
+     "to": "c003",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -13799910000.0,
@@ -426,7 +440,14 @@
    "kind": "cosmos",
    "label": "誕生から約1秒（圧縮表示）",
    "vlabel": "1秒",
-   "score": 43
+   "score": 43,
+   "id": "c003",
+   "links": [
+    {
+     "to": "c004",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -13799800000.0,
@@ -437,7 +458,14 @@
    "kind": "cosmos",
    "label": "誕生から約3分（圧縮表示）",
    "vlabel": "3分",
-   "score": 68
+   "score": 68,
+   "id": "c004",
+   "links": [
+    {
+     "to": "c005",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -13799620000.0,
@@ -447,7 +475,14 @@
    "level": 2,
    "kind": "cosmos",
    "label": "約38万年後",
-   "score": 74
+   "score": 74,
+   "id": "c005",
+   "links": [
+    {
+     "to": "c006",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -13750000000.0,
@@ -457,7 +492,14 @@
    "level": 2,
    "kind": "cosmos",
    "label": "約1億年後まで",
-   "score": 67
+   "score": 67,
+   "id": "c006",
+   "links": [
+    {
+     "to": "c007",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -13650000000.0,
@@ -467,7 +509,22 @@
    "level": 1,
    "kind": "cosmos",
    "label": "約1.5億年後",
-   "score": 96
+   "score": 96,
+   "id": "c007",
+   "links": [
+    {
+     "to": "c009",
+     "t": "cosmos"
+    },
+    {
+     "to": "c008",
+     "t": "cosmos"
+    },
+    {
+     "to": "c011",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -13500000000.0,
@@ -477,7 +534,14 @@
    "level": 2,
    "kind": "cosmos",
    "label": "約3億年後",
-   "score": 71
+   "score": 71,
+   "id": "c008",
+   "links": [
+    {
+     "to": "c010",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -13400000000.0,
@@ -487,7 +551,8 @@
    "level": 2,
    "kind": "cosmos",
    "label": "約2〜10億年後",
-   "score": 69
+   "score": 69,
+   "id": "c009"
   },
   {
    "year": -13000000000.0,
@@ -497,7 +562,14 @@
    "level": 3,
    "kind": "cosmos",
    "label": "約130億年前",
-   "score": 47
+   "score": 47,
+   "id": "c010",
+   "links": [
+    {
+     "to": "c012",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -12000000000.0,
@@ -507,7 +579,14 @@
    "level": 3,
    "kind": "cosmos",
    "label": "星の世代交代",
-   "score": 56
+   "score": 56,
+   "id": "c011",
+   "links": [
+    {
+     "to": "c014",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -10000000000.0,
@@ -517,7 +596,14 @@
    "level": 2,
    "kind": "cosmos",
    "label": "約100億年前",
-   "score": 63
+   "score": 63,
+   "id": "c012",
+   "links": [
+    {
+     "to": "c013",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -5500000000.0,
@@ -527,7 +613,8 @@
    "level": 2,
    "kind": "cosmos",
    "label": "約60〜50億年前",
-   "score": 64
+   "score": 64,
+   "id": "c013"
   },
   {
    "year": -4570000000.0,
@@ -537,7 +624,14 @@
    "level": 1,
    "kind": "cosmos",
    "label": "約46億年前",
-   "score": 86
+   "score": 86,
+   "id": "c014",
+   "links": [
+    {
+     "to": "c015",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -4540000000.0,
@@ -547,7 +641,18 @@
    "level": 1,
    "kind": "earth",
    "label": "約45.4億年前",
-   "score": 98
+   "score": 98,
+   "id": "c015",
+   "links": [
+    {
+     "to": "c016",
+     "t": "cosmos"
+    },
+    {
+     "to": "c017",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -4500000000.0,
@@ -557,7 +662,8 @@
    "level": 1,
    "kind": "earth",
    "label": "約45億年前",
-   "score": 91
+   "score": 91,
+   "id": "c016"
   },
   {
    "year": -4400000000.0,
@@ -567,7 +673,14 @@
    "level": 1,
    "kind": "earth",
    "label": "約44億年前",
-   "score": 80
+   "score": 80,
+   "id": "c017",
+   "links": [
+    {
+     "to": "c018",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -3800000000.0,
@@ -577,7 +690,14 @@
    "level": 1,
    "kind": "life",
    "label": "約38〜35億年前",
-   "score": 87
+   "score": 87,
+   "id": "c018",
+   "links": [
+    {
+     "to": "c019",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -2700000000.0,
@@ -587,7 +707,14 @@
    "level": 2,
    "kind": "life",
    "label": "約27億年前",
-   "score": 62
+   "score": 62,
+   "id": "c019",
+   "links": [
+    {
+     "to": "c020",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -2400000000.0,
@@ -597,7 +724,14 @@
    "level": 2,
    "kind": "life",
    "label": "約24億年前",
-   "score": 75
+   "score": 75,
+   "id": "c020",
+   "links": [
+    {
+     "to": "c021",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -2000000000.0,
@@ -607,7 +741,14 @@
    "level": 2,
    "kind": "life",
    "label": "約20億年前",
-   "score": 74
+   "score": 74,
+   "id": "c021",
+   "links": [
+    {
+     "to": "c022",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -1000000000.0,
@@ -617,7 +758,14 @@
    "level": 2,
    "kind": "life",
    "label": "約10億年前",
-   "score": 68
+   "score": 68,
+   "id": "c022",
+   "links": [
+    {
+     "to": "c024",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -700000000.0,
@@ -627,7 +775,14 @@
    "level": 2,
    "kind": "earth",
    "label": "約7億年前",
-   "score": 72
+   "score": 72,
+   "id": "c023",
+   "links": [
+    {
+     "to": "c024",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -570000000.0,
@@ -637,7 +792,14 @@
    "level": 2,
    "kind": "life",
    "label": "約5.7億年前",
-   "score": 71
+   "score": 71,
+   "id": "c024",
+   "links": [
+    {
+     "to": "c025",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -535000000.0,
@@ -647,7 +809,14 @@
    "level": 1,
    "kind": "life",
    "label": "約5.4億年前",
-   "score": 95
+   "score": 95,
+   "id": "c025",
+   "links": [
+    {
+     "to": "c026",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -500000000.0,
@@ -657,7 +826,14 @@
    "level": 1,
    "kind": "life",
    "label": "約5億年前",
-   "score": 81
+   "score": 81,
+   "id": "c026",
+   "links": [
+    {
+     "to": "c027",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -470000000.0,
@@ -667,7 +843,14 @@
    "level": 1,
    "kind": "life",
    "label": "約4.7億年前",
-   "score": 79
+   "score": 79,
+   "id": "c027",
+   "links": [
+    {
+     "to": "c028",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -400000000.0,
@@ -677,7 +860,14 @@
    "level": 2,
    "kind": "life",
    "label": "約4億年前",
-   "score": 62
+   "score": 62,
+   "id": "c028",
+   "links": [
+    {
+     "to": "c029",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -370000000.0,
@@ -687,7 +877,14 @@
    "level": 2,
    "kind": "life",
    "label": "約3.7億年前",
-   "score": 75
+   "score": 75,
+   "id": "c029",
+   "links": [
+    {
+     "to": "c030",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -300000000.0,
@@ -697,7 +894,14 @@
    "level": 2,
    "kind": "earth",
    "label": "約3億年前",
-   "score": 65
+   "score": 65,
+   "id": "c030",
+   "links": [
+    {
+     "to": "c031",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -252000000.0,
@@ -707,7 +911,14 @@
    "level": 2,
    "kind": "earth",
    "label": "約2.5億年前",
-   "score": 74
+   "score": 74,
+   "id": "c031",
+   "links": [
+    {
+     "to": "c032",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -230000000.0,
@@ -717,7 +928,22 @@
    "level": 1,
    "kind": "life",
    "label": "約2.3億年前",
-   "score": 91
+   "score": 91,
+   "id": "c032",
+   "links": [
+    {
+     "to": "c033",
+     "t": "life"
+    },
+    {
+     "to": "c034",
+     "t": "life"
+    },
+    {
+     "to": "c035",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -220000000.0,
@@ -727,7 +953,8 @@
    "level": 2,
    "kind": "life",
    "label": "約2.2億年前",
-   "score": 62
+   "score": 62,
+   "id": "c033"
   },
   {
    "year": -150000000.0,
@@ -737,7 +964,8 @@
    "level": 2,
    "kind": "life",
    "label": "約1.5億年前",
-   "score": 69
+   "score": 69,
+   "id": "c034"
   },
   {
    "year": -130000000.0,
@@ -747,7 +975,14 @@
    "level": 2,
    "kind": "life",
    "label": "約1.3億年前",
-   "score": 67
+   "score": 67,
+   "id": "c035",
+   "links": [
+    {
+     "to": "c036",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -66000000.0,
@@ -757,7 +992,14 @@
    "level": 1,
    "kind": "earth",
    "label": "約6600万年前",
-   "score": 99
+   "score": 99,
+   "id": "c036",
+   "links": [
+    {
+     "to": "c037",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -60000000.0,
@@ -767,7 +1009,14 @@
    "level": 2,
    "kind": "life",
    "label": "約6000万年前",
-   "score": 65
+   "score": 65,
+   "id": "c037",
+   "links": [
+    {
+     "to": "c038",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -55000000.0,
@@ -777,7 +1026,14 @@
    "level": 2,
    "kind": "life",
    "label": "約5500万年前",
-   "score": 71
+   "score": 71,
+   "id": "c038",
+   "links": [
+    {
+     "to": "c041",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -50000000.0,
@@ -787,7 +1043,14 @@
    "level": 2,
    "kind": "earth",
    "label": "約5000万年前",
-   "score": 68
+   "score": 68,
+   "id": "c039",
+   "links": [
+    {
+     "to": "c040",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": -34000000.0,
@@ -797,7 +1060,14 @@
    "level": 3,
    "kind": "earth",
    "label": "約3400万年前",
-   "score": 53
+   "score": 53,
+   "id": "c040",
+   "links": [
+    {
+     "to": "c042",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -25000000.0,
@@ -807,7 +1077,14 @@
    "level": 2,
    "kind": "life",
    "label": "約2500万年前",
-   "score": 63
+   "score": 63,
+   "id": "c041",
+   "links": [
+    {
+     "to": "c043",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -10000000.0,
@@ -817,7 +1094,14 @@
    "level": 3,
    "kind": "earth",
    "label": "約1000万年前",
-   "score": 52
+   "score": 52,
+   "id": "c042",
+   "links": [
+    {
+     "to": "c043",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": -7000000.0,
@@ -827,7 +1111,14 @@
    "level": 1,
    "kind": "human",
    "label": "約700万年前",
-   "score": 85
+   "score": 85,
+   "id": "c043",
+   "links": [
+    {
+     "to": "c044",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -4400000.0,
@@ -837,7 +1128,14 @@
    "level": 2,
    "kind": "human",
    "label": "約440万年前",
-   "score": 67
+   "score": 67,
+   "id": "c044",
+   "links": [
+    {
+     "to": "c045",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -3300000.0,
@@ -847,7 +1145,14 @@
    "level": 2,
    "kind": "human",
    "label": "約330万年前",
-   "score": 65
+   "score": 65,
+   "id": "c045",
+   "links": [
+    {
+     "to": "c047",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -3200000.0,
@@ -857,7 +1162,8 @@
    "level": 2,
    "kind": "human",
    "label": "約320万年前",
-   "score": 63
+   "score": 63,
+   "id": "c046"
   },
   {
    "year": -2400000.0,
@@ -867,7 +1173,14 @@
    "level": 2,
    "kind": "human",
    "label": "約240万年前",
-   "score": 64
+   "score": 64,
+   "id": "c047",
+   "links": [
+    {
+     "to": "c048",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -1900000.0,
@@ -877,7 +1190,14 @@
    "level": 1,
    "kind": "human",
    "label": "約190万年前",
-   "score": 99
+   "score": 99,
+   "id": "c048",
+   "links": [
+    {
+     "to": "c049",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -1000000.0,
@@ -887,7 +1207,18 @@
    "level": 1,
    "kind": "human",
    "label": "約100万年前〜",
-   "score": 88
+   "score": 88,
+   "id": "c049",
+   "links": [
+    {
+     "to": "c050",
+     "t": "human"
+    },
+    {
+     "to": "c051",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -400000.0,
@@ -897,7 +1228,8 @@
    "level": 1,
    "kind": "human",
    "label": "約40万年前",
-   "score": 81
+   "score": 81,
+   "id": "c050"
   },
   {
    "year": -300000.0,
@@ -907,7 +1239,14 @@
    "level": 1,
    "kind": "human",
    "label": "約30万年前",
-   "score": 96
+   "score": 96,
+   "id": "c051",
+   "links": [
+    {
+     "to": "c052",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -70000.0,
@@ -917,7 +1256,22 @@
    "level": 2,
    "kind": "human",
    "label": "約7〜6万年前",
-   "score": 76
+   "score": 76,
+   "id": "c052",
+   "links": [
+    {
+     "to": "c053",
+     "t": "human"
+    },
+    {
+     "to": "c056",
+     "t": "human"
+    },
+    {
+     "to": "c055",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -50000.0,
@@ -927,7 +1281,14 @@
    "level": 2,
    "kind": "human",
    "label": "約5万年前〜",
-   "score": 63
+   "score": 63,
+   "id": "c053",
+   "links": [
+    {
+     "to": "c054",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -45000.0,
@@ -937,7 +1298,8 @@
    "level": 1,
    "kind": "human",
    "label": "約4.5万年前",
-   "score": 94
+   "score": 94,
+   "id": "c054"
   },
   {
    "year": -40000.0,
@@ -947,7 +1309,8 @@
    "level": 3,
    "kind": "human",
    "label": "約4万年前",
-   "score": 55
+   "score": 55,
+   "id": "c055"
   },
   {
    "year": -38000.0,
@@ -957,7 +1320,8 @@
    "level": 2,
    "kind": "human",
    "label": "約3.8万年前",
-   "score": 63
+   "score": 63,
+   "id": "c056"
   },
   {
    "year": -20000.0,
@@ -967,7 +1331,14 @@
    "level": 3,
    "kind": "earth",
    "label": "約2万年前",
-   "score": 53
+   "score": 53,
+   "id": "c057",
+   "links": [
+    {
+     "to": "c058",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -15000.0,
@@ -977,7 +1348,14 @@
    "level": 3,
    "kind": "human",
    "label": "約1.5万年前",
-   "score": 54
+   "score": 54,
+   "id": "c058",
+   "links": [
+    {
+     "to": "c059",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -11700,
@@ -987,7 +1365,14 @@
    "level": 2,
    "kind": "earth",
    "label": "約1.17万年前",
-   "score": 73
+   "score": 73,
+   "id": "c059",
+   "links": [
+    {
+     "to": "c060",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -10000,
@@ -997,7 +1382,18 @@
    "level": 1,
    "kind": "human",
    "label": "約1万年前",
-   "score": 93
+   "score": 93,
+   "id": "c060",
+   "links": [
+    {
+     "to": "c061",
+     "t": "human"
+    },
+    {
+     "to": "c062",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -9500,
@@ -1007,7 +1403,8 @@
    "level": 4,
    "kind": "human",
    "label": "約1.15万年前〜",
-   "score": 40
+   "score": 40,
+   "id": "c061"
   },
   {
    "year": -3500,
@@ -1017,7 +1414,14 @@
    "level": 1,
    "kind": "human",
    "label": "紀元前3500年頃",
-   "score": 94
+   "score": 94,
+   "id": "c062",
+   "links": [
+    {
+     "to": "c063",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -3200,
@@ -1027,7 +1431,14 @@
    "level": 1,
    "kind": "human",
    "label": "紀元前3200年頃",
-   "score": 88
+   "score": 88,
+   "id": "c063",
+   "links": [
+    {
+     "to": "c064",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -2560,
@@ -1037,7 +1448,14 @@
    "level": 1,
    "kind": "human",
    "label": "紀元前2560年頃",
-   "score": 85
+   "score": 85,
+   "id": "c064",
+   "links": [
+    {
+     "to": "c065",
+     "t": "human"
+    }
+   ]
   },
   {
    "year": -1200,
@@ -1047,7 +1465,14 @@
    "level": 2,
    "kind": "human",
    "label": "紀元前1200年頃",
-   "score": 70
+   "score": 70,
+   "id": "c065",
+   "links": [
+    {
+     "to": "c066",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": -480,
@@ -1057,7 +1482,22 @@
    "level": 2,
    "kind": "science",
    "label": "紀元前5世紀",
-   "score": 70
+   "score": 70,
+   "id": "c066",
+   "links": [
+    {
+     "to": "c067",
+     "t": "theory"
+    },
+    {
+     "to": "c069",
+     "t": "theory"
+    }
+   ],
+   "people": [
+    "pythagoras_c",
+    "aristotle"
+   ]
   },
   {
    "year": -350,
@@ -1067,7 +1507,17 @@
    "level": 2,
    "kind": "science",
    "label": "紀元前4世紀",
-   "score": 76
+   "score": 76,
+   "id": "c067",
+   "people": [
+    "aristotle"
+   ],
+   "links": [
+    {
+     "to": "c070",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": -270,
@@ -1077,7 +1527,17 @@
    "level": 2,
    "kind": "science",
    "label": "紀元前3世紀",
-   "score": 66
+   "score": 66,
+   "id": "c068",
+   "people": [
+    "aristarchus"
+   ],
+   "links": [
+    {
+     "to": "c074",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": -240,
@@ -1087,7 +1547,11 @@
    "level": 2,
    "kind": "science",
    "label": "紀元前3世紀",
-   "score": 75
+   "score": 75,
+   "id": "c069",
+   "people": [
+    "eratosthenes"
+   ]
   },
   {
    "year": 150,
@@ -1097,7 +1561,17 @@
    "level": 2,
    "kind": "science",
    "label": "2世紀",
-   "score": 74
+   "score": 74,
+   "id": "c070",
+   "people": [
+    "ptolemy"
+   ],
+   "links": [
+    {
+     "to": "c071",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 900,
@@ -1107,7 +1581,14 @@
    "level": 3,
    "kind": "science",
    "label": "9〜15世紀",
-   "score": 46
+   "score": 46,
+   "id": "c071",
+   "links": [
+    {
+     "to": "c074",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1054,
@@ -1116,7 +1597,8 @@
    "lesson": "記録は、千年後の研究に役立つ。",
    "level": 4,
    "kind": "science",
-   "score": 40
+   "score": 40,
+   "id": "c072"
   },
   {
    "year": 1450,
@@ -1126,7 +1608,14 @@
    "level": 2,
    "kind": "human",
    "label": "15世紀半ば",
-   "score": 70
+   "score": 70,
+   "id": "c073",
+   "links": [
+    {
+     "to": "c076",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1543,
@@ -1135,7 +1624,21 @@
    "lesson": "常識を疑うことが、科学の出発点になった。",
    "level": 1,
    "kind": "science",
-   "score": 92
+   "score": 92,
+   "id": "c074",
+   "people": [
+    "copernicus"
+   ],
+   "links": [
+    {
+     "to": "c073",
+     "t": "tech"
+    },
+    {
+     "to": "c075",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1609,
@@ -1144,7 +1647,17 @@
    "lesson": "観測データが、美しい法則を見せた。",
    "level": 2,
    "kind": "science",
-   "score": 76
+   "score": 76,
+   "id": "c075",
+   "people": [
+    "kepler"
+   ],
+   "links": [
+    {
+     "to": "c077",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1610,
@@ -1153,7 +1666,21 @@
    "lesson": "自分の目で確かめることの力。",
    "level": 1,
    "kind": "science",
-   "score": 87
+   "score": 87,
+   "id": "c076",
+   "people": [
+    "galileo"
+   ],
+   "links": [
+    {
+     "to": "c077",
+     "t": "tech"
+    },
+    {
+     "to": "c074",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1687,
@@ -1162,7 +1689,21 @@
    "lesson": "天と地は、同じ法則で動いていた。",
    "level": 1,
    "kind": "science",
-   "score": 97
+   "score": 97,
+   "id": "c077",
+   "people": [
+    "newton"
+   ],
+   "links": [
+    {
+     "to": "c078",
+     "t": "theory"
+    },
+    {
+     "to": "c080",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1755,
@@ -1171,7 +1712,17 @@
    "lesson": "宇宙にも、歴史があるという発想。",
    "level": 3,
    "kind": "science",
-   "score": 47
+   "score": 47,
+   "id": "c078",
+   "people": [
+    "laplace"
+   ],
+   "links": [
+    {
+     "to": "c079",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1788,
@@ -1180,7 +1731,18 @@
    "lesson": "時間のスケールを広げることが、科学を進める。",
    "level": 2,
    "kind": "science",
-   "score": 60
+   "score": 60,
+   "id": "c079",
+   "people": [
+    "hutton",
+    "patterson"
+   ],
+   "links": [
+    {
+     "to": "c081",
+     "t": "life"
+    }
+   ]
   },
   {
    "year": 1846,
@@ -1189,7 +1751,11 @@
    "lesson": "理論が、見えない天体を見つけた。",
    "level": 2,
    "kind": "science",
-   "score": 68
+   "score": 68,
+   "id": "c080",
+   "people": [
+    "leverrier"
+   ]
   },
   {
    "year": 1859,
@@ -1198,7 +1764,17 @@
    "lesson": "生命も、歴史をもつ。",
    "level": 1,
    "kind": "science",
-   "score": 100
+   "score": 100,
+   "id": "c081",
+   "people": [
+    "darwin"
+   ],
+   "links": [
+    {
+     "to": "c082",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1865,
@@ -1207,7 +1783,22 @@
    "lesson": "別々のものが、実は同じだった。",
    "level": 2,
    "kind": "science",
-   "score": 66
+   "score": 66,
+   "id": "c082",
+   "people": [
+    "maxwell",
+    "faraday"
+   ],
+   "links": [
+    {
+     "to": "c083",
+     "t": "theory"
+    },
+    {
+     "to": "c084",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1900,
@@ -1216,7 +1807,17 @@
    "lesson": "小さな世界は、直感と違う。",
    "level": 2,
    "kind": "science",
-   "score": 72
+   "score": 72,
+   "id": "c083",
+   "people": [
+    "planck"
+   ],
+   "links": [
+    {
+     "to": "c107",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1905,
@@ -1225,7 +1826,17 @@
    "lesson": "同時とは、立場によって違う。",
    "level": 2,
    "kind": "science",
-   "score": 75
+   "score": 75,
+   "id": "c084",
+   "people": [
+    "einstein"
+   ],
+   "links": [
+    {
+     "to": "c085",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1915,
@@ -1234,7 +1845,21 @@
    "lesson": "重力は、力ではなく形だった。",
    "level": 2,
    "kind": "science",
-   "score": 77
+   "score": 77,
+   "id": "c085",
+   "people": [
+    "einstein"
+   ],
+   "links": [
+    {
+     "to": "c086",
+     "t": "theory"
+    },
+    {
+     "to": "c087",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1919,
@@ -1243,7 +1868,11 @@
    "lesson": "理論は、観測で試される。",
    "level": 3,
    "kind": "science",
-   "score": 49
+   "score": 49,
+   "id": "c086",
+   "people": [
+    "einstein"
+   ]
   },
   {
    "year": 1924,
@@ -1252,7 +1881,17 @@
    "lesson": "宇宙は、思っていたよりずっと広かった。",
    "level": 2,
    "kind": "science",
-   "score": 75
+   "score": 75,
+   "id": "c087",
+   "people": [
+    "hubble"
+   ],
+   "links": [
+    {
+     "to": "c088",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1927,
@@ -1261,7 +1900,18 @@
    "lesson": "理論が、先に宇宙の姿を指し示した。",
    "level": 2,
    "kind": "science",
-   "score": 74
+   "score": 74,
+   "id": "c088",
+   "people": [
+    "hubble",
+    "lemaitre"
+   ],
+   "links": [
+    {
+     "to": "c089",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1929,
@@ -1270,7 +1920,17 @@
    "lesson": "膨張は、観測で確かめられた。",
    "level": 2,
    "kind": "science",
-   "score": 73
+   "score": 73,
+   "id": "c089",
+   "people": [
+    "hubble"
+   ],
+   "links": [
+    {
+     "to": "c091",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1933,
@@ -1279,7 +1939,18 @@
    "lesson": "見えないものが、宇宙の質量の大部分だった。",
    "level": 2,
    "kind": "science",
-   "score": 60
+   "score": 60,
+   "id": "c090",
+   "people": [
+    "zwicky",
+    "rubin"
+   ],
+   "links": [
+    {
+     "to": "c096",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1948,
@@ -1288,7 +1959,18 @@
    "lesson": "理論が、遠い過去を予言した。",
    "level": 2,
    "kind": "science",
-   "score": 76
+   "score": 76,
+   "id": "c091",
+   "people": [
+    "gamow",
+    "lemaitre"
+   ],
+   "links": [
+    {
+     "to": "c094",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1957,
@@ -1297,7 +1979,14 @@
    "lesson": "宇宙は、見る対象から行く場所になった。",
    "level": 1,
    "kind": "human",
-   "score": 82
+   "score": 82,
+   "id": "c092",
+   "links": [
+    {
+     "to": "c093",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1961,
@@ -1306,7 +1995,14 @@
    "lesson": "地球は青かった。",
    "level": 1,
    "kind": "human",
-   "score": 78
+   "score": 78,
+   "id": "c093",
+   "links": [
+    {
+     "to": "c095",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1965,
@@ -1315,7 +2011,21 @@
    "lesson": "偶然のノイズが、宇宙の産声だった。",
    "level": 2,
    "kind": "science",
-   "score": 75
+   "score": 75,
+   "id": "c094",
+   "people": [
+    "penzias"
+   ],
+   "links": [
+    {
+     "to": "c100",
+     "t": "theory"
+    },
+    {
+     "to": "c102",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1969,
@@ -1324,7 +2034,18 @@
    "lesson": "宇宙は、手の届く場所になった。",
    "level": 1,
    "kind": "human",
-   "score": 89
+   "score": 89,
+   "id": "c095",
+   "links": [
+    {
+     "to": "c463",
+     "t": "tech"
+    },
+    {
+     "to": "c259",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1970,
@@ -1333,7 +2054,17 @@
    "lesson": "見えない質量が、宇宙を形づくる。",
    "level": 2,
    "kind": "science",
-   "score": 71
+   "score": 71,
+   "id": "c096",
+   "people": [
+    "rubin"
+   ],
+   "links": [
+    {
+     "to": "c129",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1973,
@@ -1342,7 +2073,18 @@
    "lesson": "情報は、表面積に宿る？",
    "level": 2,
    "kind": "science",
-   "score": 77
+   "score": 77,
+   "id": "c097",
+   "people": [
+    "bekenstein",
+    "hawking"
+   ],
+   "links": [
+    {
+     "to": "c098",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1974,
@@ -1351,7 +2093,17 @@
    "lesson": "ブラックホールも、永遠ではない。",
    "level": 2,
    "kind": "science",
-   "score": 73
+   "score": 73,
+   "id": "c098",
+   "people": [
+    "hawking"
+   ],
+   "links": [
+    {
+     "to": "c099",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1976,
@@ -1360,7 +2112,14 @@
    "lesson": "答えの出ていない問いが、物理学を前に進める。",
    "level": 3,
    "kind": "science",
-   "score": 50
+   "score": 50,
+   "id": "c099",
+   "links": [
+    {
+     "to": "c103",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1981,
@@ -1369,7 +2128,17 @@
    "lesson": "宇宙は、最初に爆発的に広がった。",
    "level": 3,
    "kind": "science",
-   "score": 57
+   "score": 57,
+   "id": "c100",
+   "people": [
+    "guth"
+   ],
+   "links": [
+    {
+     "to": "c122",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1990,
@@ -1378,7 +2147,21 @@
    "lesson": "観測の道具が、理論を試す。",
    "level": 1,
    "kind": "human",
-   "score": 79
+   "score": 79,
+   "id": "c101",
+   "people": [
+    "hubble"
+   ],
+   "links": [
+    {
+     "to": "c264",
+     "t": "tech"
+    },
+    {
+     "to": "c134",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1992,
@@ -1387,7 +2170,14 @@
    "lesson": "わずかな揺らぎが、銀河の種だった。",
    "level": 3,
    "kind": "science",
-   "score": 49
+   "score": 49,
+   "id": "c102",
+   "links": [
+    {
+     "to": "c262",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1993,
@@ -1396,7 +2186,18 @@
    "lesson": "世界の情報は、境界にあるのかもしれない。",
    "level": 3,
    "kind": "science",
-   "score": 56
+   "score": 56,
+   "id": "c103",
+   "people": [
+    "susskind",
+    "thooft"
+   ],
+   "links": [
+    {
+     "to": "c105",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1995,
@@ -1405,7 +2206,18 @@
    "lesson": "地球は、特別でないかもしれない。",
    "level": 2,
    "kind": "science",
-   "score": 67
+   "score": 67,
+   "id": "c104",
+   "links": [
+    {
+     "to": "c271",
+     "t": "tech"
+    },
+    {
+     "to": "c474",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1997,
@@ -1414,7 +2226,11 @@
    "lesson": "重力は、別の理論の姿かもしれない。",
    "level": 3,
    "kind": "science",
-   "score": 56
+   "score": 56,
+   "id": "c105",
+   "people": [
+    "maldacena"
+   ]
   },
   {
    "year": 1998,
@@ -1423,7 +2239,18 @@
    "lesson": "宇宙は、加速している。",
    "level": 2,
    "kind": "science",
-   "score": 76
+   "score": 76,
+   "id": "c106",
+   "links": [
+    {
+     "to": "c304",
+     "t": "theory"
+    },
+    {
+     "to": "c129",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1913,
@@ -1432,7 +2259,17 @@
    "lesson": "古典物理の常識が、原子の世界で破れた。",
    "level": 3,
    "kind": "science",
-   "score": 52
+   "score": 52,
+   "id": "c107",
+   "people": [
+    "bohr"
+   ],
+   "links": [
+    {
+     "to": "c109",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1921,
@@ -1441,7 +2278,8 @@
    "lesson": "見えない次元が、力を統一するかもしれない。",
    "level": 3,
    "kind": "science",
-   "score": 54
+   "score": 54,
+   "id": "c108"
   },
   {
    "year": 1925,
@@ -1450,7 +2288,17 @@
    "lesson": "見えるものだけで、理論を組み立てる。",
    "level": 3,
    "kind": "science",
-   "score": 51
+   "score": 51,
+   "id": "c109",
+   "people": [
+    "heisenberg"
+   ],
+   "links": [
+    {
+     "to": "c110",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1926,
@@ -1459,7 +2307,18 @@
    "lesson": "世界は、確率の波として記述された。",
    "level": 3,
    "kind": "science",
-   "score": 56
+   "score": 56,
+   "id": "c110",
+   "people": [
+    "schrodinger",
+    "born"
+   ],
+   "links": [
+    {
+     "to": "c111",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1927,
@@ -1468,7 +2327,17 @@
    "lesson": "測るという行為にも、限界がある。",
    "level": 3,
    "kind": "science",
-   "score": 56
+   "score": 56,
+   "id": "c111",
+   "people": [
+    "heisenberg"
+   ],
+   "links": [
+    {
+     "to": "c112",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1927,
@@ -1477,7 +2346,17 @@
    "lesson": "観測とは何かが、物理学最大の問いの一つになった。",
    "level": 3,
    "kind": "science",
-   "score": 56
+   "score": 56,
+   "id": "c112",
+   "people": [
+    "bohr"
+   ],
+   "links": [
+    {
+     "to": "c113",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1935,
@@ -1486,7 +2365,17 @@
    "lesson": "理論の限界を示す問いが、理論を磨く。",
    "level": 3,
    "kind": "science",
-   "score": 56
+   "score": 56,
+   "id": "c113",
+   "people": [
+    "schrodinger"
+   ],
+   "links": [
+    {
+     "to": "c114",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1935,
@@ -1495,7 +2384,17 @@
    "lesson": "「不気味な遠隔作用」は、実在した。",
    "level": 3,
    "kind": "science",
-   "score": 50
+   "score": 50,
+   "id": "c114",
+   "people": [
+    "einstein"
+   ],
+   "links": [
+    {
+     "to": "c116",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1957,
@@ -1504,7 +2403,11 @@
    "lesson": "観測しても、結果はひとつに決まらないという考え。",
    "level": 3,
    "kind": "science",
-   "score": 57
+   "score": 57,
+   "id": "c115",
+   "people": [
+    "everett"
+   ]
   },
   {
    "year": 1964,
@@ -1513,7 +2416,17 @@
    "lesson": "哲学の論争が、実験で決着できるものになった。",
    "level": 3,
    "kind": "science",
-   "score": 55
+   "score": 55,
+   "id": "c116",
+   "links": [
+    {
+     "to": "c120",
+     "t": "theory"
+    }
+   ],
+   "people": [
+    "bell"
+   ]
   },
   {
    "year": 1968,
@@ -1523,7 +2436,17 @@
    "level": 3,
    "kind": "science",
    "label": "1968〜70年",
-   "score": 53
+   "score": 53,
+   "id": "c117",
+   "people": [
+    "nambu"
+   ],
+   "links": [
+    {
+     "to": "c119",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1970,
@@ -1532,7 +2455,8 @@
    "lesson": "なぜ日常は古典的に見えるのかを、説明しはじめた。",
    "level": 3,
    "kind": "science",
-   "score": 49
+   "score": 49,
+   "id": "c118"
   },
   {
    "year": 1974,
@@ -1541,7 +2465,17 @@
    "lesson": "重力と量子論を結ぶ候補が現れた。",
    "level": 3,
    "kind": "science",
-   "score": 53
+   "score": 53,
+   "id": "c119",
+   "links": [
+    {
+     "to": "c121",
+     "t": "theory"
+    }
+   ],
+   "people": [
+    "witten"
+   ]
   },
   {
    "year": 1982,
@@ -1550,7 +2484,14 @@
    "lesson": "観測の謎は、実験室で確かめられた。",
    "level": 3,
    "kind": "science",
-   "score": 53
+   "score": 53,
+   "id": "c120",
+   "links": [
+    {
+     "to": "c126",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1984,
@@ -1559,7 +2500,14 @@
    "lesson": "ひも理論は、いっきに本命候補になった。",
    "level": 3,
    "kind": "science",
-   "score": 57
+   "score": 57,
+   "id": "c121",
+   "links": [
+    {
+     "to": "c123",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1986,
@@ -1569,7 +2517,14 @@
    "level": 3,
    "kind": "science",
    "label": "1983〜86年頃",
-   "score": 49
+   "score": 49,
+   "id": "c122",
+   "links": [
+    {
+     "to": "c125",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1995,
@@ -1578,7 +2533,17 @@
    "lesson": "別々の理論が、ひとつの根元につながった。",
    "level": 3,
    "kind": "science",
-   "score": 56
+   "score": 56,
+   "id": "c123",
+   "people": [
+    "witten"
+   ],
+   "links": [
+    {
+     "to": "c125",
+     "t": "theory"
+    }
+   ]
   },
   {
    "year": 1999,
@@ -1587,7 +2552,8 @@
    "lesson": "私たちの宇宙は、膜にすぎないのかもしれない。",
    "level": 5,
    "kind": "science",
-   "score": 19
+   "score": 19,
+   "id": "c124"
   },
   {
    "year": 2003,
@@ -1596,7 +2562,11 @@
    "lesson": "物理法則も、選ばれた結果かもしれない。",
    "level": 3,
    "kind": "science",
-   "score": 48
+   "score": 48,
+   "id": "c125",
+   "people": [
+    "susskind"
+   ]
   },
   {
    "year": 2022,
@@ -1605,7 +2575,8 @@
    "lesson": "観測問題は、技術の問題にもなった。",
    "level": 4,
    "kind": "science",
-   "score": 36
+   "score": 36,
+   "id": "c126"
   },
   {
    "year": 2026,
@@ -1622,7 +2593,11 @@
    ],
    "month": 1,
    "day": 9,
-   "score": 29
+   "score": 29,
+   "id": "c127",
+   "people": [
+    "antiframe"
+   ]
   },
   {
    "year": 2026,
@@ -1639,7 +2614,11 @@
    ],
    "month": 6,
    "day": 15,
-   "score": 29
+   "score": 29,
+   "id": "c128",
+   "people": [
+    "antiframe"
+   ]
   },
   {
    "year": 2003,
@@ -1648,7 +2627,8 @@
    "lesson": "私たちは、宇宙の5%を知っているにすぎない。",
    "level": 2,
    "kind": "science",
-   "score": 66
+   "score": 66,
+   "id": "c129"
   },
   {
    "year": 2012,
@@ -1657,7 +2637,17 @@
    "lesson": "予言から約50年で、確認された。",
    "level": 2,
    "kind": "science",
-   "score": 72
+   "score": 72,
+   "id": "c130",
+   "people": [
+    "higgs"
+   ],
+   "links": [
+    {
+     "to": "c268",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 2015,
@@ -1666,7 +2656,18 @@
    "lesson": "宇宙を「聴く」時代が始まった。",
    "level": 2,
    "kind": "science",
-   "score": 77
+   "score": 77,
+   "id": "c131",
+   "links": [
+    {
+     "to": "c480",
+     "t": "tech"
+    },
+    {
+     "to": "c132",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 2019,
@@ -1676,7 +2677,8 @@
    "level": 1,
    "kind": "science",
    "month": 4,
-   "score": 97
+   "score": 97,
+   "id": "c132"
   },
   {
    "year": 2019,
@@ -1685,7 +2687,8 @@
    "lesson": "食い違いは、新しい物理の入口かもしれない。",
    "level": 5,
    "kind": "science",
-   "score": 2
+   "score": 2,
+   "id": "c133"
   },
   {
    "year": 2021,
@@ -1695,7 +2698,14 @@
    "level": 1,
    "kind": "human",
    "label": "2021年（初画像は2022年）",
-   "score": 90
+   "score": 90,
+   "id": "c134",
+   "links": [
+    {
+     "to": "c295",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 2022,
@@ -1704,7 +2714,8 @@
    "lesson": "新しい道具は、新しい問いを生む。",
    "level": 5,
    "kind": "human",
-   "score": 29
+   "score": 29,
+   "id": "c135"
   },
   {
    "year": 2029,
@@ -1715,7 +2726,8 @@
    "kind": "future",
    "month": 4,
    "day": 13,
-   "score": 64
+   "score": 64,
+   "id": "c136"
   },
   {
    "year": 2035,
@@ -1726,7 +2738,8 @@
    "kind": "future",
    "month": 9,
    "day": 2,
-   "score": 82
+   "score": 82,
+   "id": "c137"
   },
   {
    "year": 2061,
@@ -1736,7 +2749,8 @@
    "level": 1,
    "kind": "future",
    "approx": true,
-   "score": 84
+   "score": 84,
+   "id": "c138"
   },
   {
    "year": 40000.0,
@@ -1746,7 +2760,8 @@
    "level": 5,
    "kind": "future",
    "label": "約4万年後",
-   "score": 8
+   "score": 8,
+   "id": "c139"
   },
   {
    "year": 50000.0,
@@ -1756,7 +2771,8 @@
    "level": 2,
    "kind": "future",
    "label": "約5万年後（諸説）",
-   "score": 70
+   "score": 70,
+   "id": "c140"
   },
   {
    "year": 1000000000.0,
@@ -1766,7 +2782,8 @@
    "level": 2,
    "kind": "future",
    "label": "約10億年後（諸説）",
-   "score": 61
+   "score": 61,
+   "id": "c141"
   },
   {
    "year": 4500000000.0,
@@ -1776,7 +2793,14 @@
    "level": 2,
    "kind": "future",
    "label": "約45億年後（諸説）",
-   "score": 66
+   "score": 66,
+   "id": "c142",
+   "links": [
+    {
+     "to": "c145",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": 5000000000.0,
@@ -1786,7 +2810,14 @@
    "level": 1,
    "kind": "future",
    "label": "約50億年後",
-   "score": 90
+   "score": 90,
+   "id": "c143",
+   "links": [
+    {
+     "to": "c144",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": 8000000000.0,
@@ -1796,7 +2827,14 @@
    "level": 2,
    "kind": "future",
    "label": "約80億年後",
-   "score": 61
+   "score": 61,
+   "id": "c144",
+   "links": [
+    {
+     "to": "c142",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": 100000000000.0,
@@ -1806,7 +2844,14 @@
    "level": 3,
    "kind": "future",
    "label": "約1000億年後",
-   "score": 55
+   "score": 55,
+   "id": "c145",
+   "links": [
+    {
+     "to": "c146",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": 1000000000000.0,
@@ -1816,7 +2861,14 @@
    "level": 3,
    "kind": "future",
    "label": "約1兆年後〜",
-   "score": 48
+   "score": 48,
+   "id": "c146",
+   "links": [
+    {
+     "to": "c147",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": 100000000000000.0,
@@ -1826,7 +2878,14 @@
    "level": 3,
    "kind": "future",
    "label": "約100兆年後",
-   "score": 57
+   "score": 57,
+   "id": "c147",
+   "links": [
+    {
+     "to": "c148",
+     "t": "cosmos"
+    }
+   ]
   },
   {
    "year": 160000000000000.0,
@@ -1837,7 +2896,8 @@
    "kind": "future",
    "label": "それ以降（諸説）",
    "vlabel": "その先",
-   "score": 50
+   "score": 50,
+   "id": "c148"
   },
   {
    "year": -13799985000,
@@ -1847,7 +2907,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "誕生の直後（理論）",
-   "score": 40
+   "score": 40,
+   "id": "c149"
   },
   {
    "year": -13799950000,
@@ -1857,7 +2918,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "誕生から1秒まで（理論）",
-   "score": 42
+   "score": 42,
+   "id": "c150"
   },
   {
    "year": -13799890000,
@@ -1867,7 +2929,8 @@
    "level": 3,
    "kind": "cosmos",
    "label": "誕生から約1秒（理論）",
-   "score": 45
+   "score": 45,
+   "id": "c151"
   },
   {
    "year": -13799700000,
@@ -1877,7 +2940,8 @@
    "level": 3,
    "kind": "cosmos",
    "label": "誕生から約5万年",
-   "score": 46
+   "score": 46,
+   "id": "c152"
   },
   {
    "year": -13600000000,
@@ -1887,7 +2951,8 @@
    "level": 3,
    "kind": "cosmos",
    "label": "約136億年前",
-   "score": 53
+   "score": 53,
+   "id": "c153"
   },
   {
    "year": -13300000000,
@@ -1897,7 +2962,8 @@
    "level": 3,
    "kind": "cosmos",
    "label": "約133億年前",
-   "score": 52
+   "score": 52,
+   "id": "c154"
   },
   {
    "year": -9500000000,
@@ -1907,7 +2973,8 @@
    "level": 3,
    "kind": "cosmos",
    "label": "約95億年前",
-   "score": 48
+   "score": 48,
+   "id": "c155"
   },
   {
    "year": -9000000000,
@@ -1917,7 +2984,8 @@
    "level": 3,
    "kind": "cosmos",
    "label": "約90億年前",
-   "score": 44
+   "score": 44,
+   "id": "c156"
   },
   {
    "year": -4560000000,
@@ -1927,7 +2995,8 @@
    "level": 3,
    "kind": "cosmos",
    "label": "約45.6億年前",
-   "score": 54
+   "score": 54,
+   "id": "c157"
   },
   {
    "year": -4555000000,
@@ -1937,7 +3006,8 @@
    "level": 2,
    "kind": "cosmos",
    "label": "約45.5億年前",
-   "score": 69
+   "score": 69,
+   "id": "c158"
   },
   {
    "year": -4510000000,
@@ -1947,7 +3017,8 @@
    "level": 2,
    "kind": "earth",
    "label": "約45.1億年前",
-   "score": 68
+   "score": 68,
+   "id": "c159"
   },
   {
    "year": -4390000000,
@@ -1957,7 +3028,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約43.9億年前",
-   "score": 52
+   "score": 52,
+   "id": "c160"
   },
   {
    "year": -3900000000,
@@ -1967,7 +3039,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約41〜38億年前（諸説）",
-   "score": 54
+   "score": 54,
+   "id": "c161"
   },
   {
    "year": -3500000000,
@@ -1977,7 +3050,8 @@
    "level": 3,
    "kind": "life",
    "label": "約35億年前",
-   "score": 51
+   "score": 51,
+   "id": "c162"
   },
   {
    "year": -2300000000,
@@ -1987,7 +3061,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約23億年前",
-   "score": 49
+   "score": 49,
+   "id": "c163"
   },
   {
    "year": -1200000000,
@@ -1997,7 +3072,8 @@
    "level": 5,
    "kind": "life",
    "label": "約12億年前",
-   "score": 10
+   "score": 10,
+   "id": "c164"
   },
   {
    "year": -1100000000,
@@ -2007,7 +3083,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約11億年前",
-   "score": 49
+   "score": 49,
+   "id": "c165"
   },
   {
    "year": -600000000,
@@ -2017,7 +3094,8 @@
    "level": 3,
    "kind": "life",
    "label": "約6億年前（諸説）",
-   "score": 53
+   "score": 53,
+   "id": "c166"
   },
   {
    "year": -520000000,
@@ -2027,7 +3105,8 @@
    "level": 3,
    "kind": "life",
    "label": "約5.2億年前",
-   "score": 55
+   "score": 55,
+   "id": "c167"
   },
   {
    "year": -508000000,
@@ -2037,7 +3116,8 @@
    "level": 3,
    "kind": "life",
    "label": "約5.1億年前",
-   "score": 52
+   "score": 52,
+   "id": "c168"
   },
   {
    "year": -445000000,
@@ -2047,7 +3127,8 @@
    "level": 3,
    "kind": "life",
    "label": "約4億4500万年前",
-   "score": 51
+   "score": 51,
+   "id": "c169"
   },
   {
    "year": -375000000,
@@ -2057,7 +3138,8 @@
    "level": 3,
    "kind": "life",
    "label": "約3.8億年前",
-   "score": 54
+   "score": 54,
+   "id": "c170"
   },
   {
    "year": -360000000,
@@ -2067,7 +3149,8 @@
    "level": 3,
    "kind": "life",
    "label": "約3.6億年前",
-   "score": 51
+   "score": 51,
+   "id": "c171"
   },
   {
    "year": -315000000,
@@ -2077,7 +3160,8 @@
    "level": 3,
    "kind": "life",
    "label": "約3.1億年前",
-   "score": 48
+   "score": 48,
+   "id": "c172"
   },
   {
    "year": -290000000,
@@ -2087,7 +3171,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約2.9億年前",
-   "score": 54
+   "score": 54,
+   "id": "c173"
   },
   {
    "year": -245000000,
@@ -2097,7 +3182,8 @@
    "level": 3,
    "kind": "life",
    "label": "約2.5億年前",
-   "score": 53
+   "score": 53,
+   "id": "c174"
   },
   {
    "year": -201000000,
@@ -2107,7 +3193,8 @@
    "level": 3,
    "kind": "life",
    "label": "約2億100万年前",
-   "score": 52
+   "score": 52,
+   "id": "c175"
   },
   {
    "year": -160000000,
@@ -2117,7 +3204,8 @@
    "level": 4,
    "kind": "life",
    "label": "約1.6億年前",
-   "score": 33
+   "score": 33,
+   "id": "c176"
   },
   {
    "year": -125000000,
@@ -2127,7 +3215,8 @@
    "level": 2,
    "kind": "life",
    "label": "約1.2億年前",
-   "score": 64
+   "score": 64,
+   "id": "c177"
   },
   {
    "year": -68000000,
@@ -2137,7 +3226,8 @@
    "level": 1,
    "kind": "life",
    "label": "約6800万年前",
-   "score": 84
+   "score": 84,
+   "id": "c178"
   },
   {
    "year": -66100000,
@@ -2147,7 +3237,8 @@
    "level": 2,
    "kind": "earth",
    "label": "約6600万年前",
-   "score": 69
+   "score": 69,
+   "id": "c179"
   },
   {
    "year": -56000000,
@@ -2157,7 +3248,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約5600万年前（PETM）",
-   "score": 50
+   "score": 50,
+   "id": "c180"
   },
   {
    "year": -48000000,
@@ -2167,7 +3259,8 @@
    "level": 3,
    "kind": "life",
    "label": "約4800万年前",
-   "score": 51
+   "score": 51,
+   "id": "c181"
   },
   {
    "year": -6900000,
@@ -2177,7 +3270,8 @@
    "level": 3,
    "kind": "human",
    "label": "約690万年前",
-   "score": 52
+   "score": 52,
+   "id": "c182"
   },
   {
    "year": -6000000,
@@ -2187,7 +3281,8 @@
    "level": 5,
    "kind": "human",
    "label": "約600万年前",
-   "score": 8
+   "score": 8,
+   "id": "c183"
   },
   {
    "year": -3660000,
@@ -2197,7 +3292,8 @@
    "level": 4,
    "kind": "human",
    "label": "約366万年前",
-   "score": 30
+   "score": 30,
+   "id": "c184"
   },
   {
    "year": -2800000,
@@ -2207,7 +3303,8 @@
    "level": 3,
    "kind": "human",
    "label": "約280万年前",
-   "score": 54
+   "score": 54,
+   "id": "c185"
   },
   {
    "year": -1800000,
@@ -2217,7 +3314,8 @@
    "level": 3,
    "kind": "human",
    "label": "約180万年前",
-   "score": 48
+   "score": 48,
+   "id": "c186"
   },
   {
    "year": -1700000,
@@ -2227,7 +3325,8 @@
    "level": 4,
    "kind": "human",
    "label": "約170万年前",
-   "score": 41
+   "score": 41,
+   "id": "c187"
   },
   {
    "year": -773000,
@@ -2237,7 +3336,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約77万年前（磁場の逆転）",
-   "score": 51
+   "score": 51,
+   "id": "c188"
   },
   {
    "year": -500000,
@@ -2247,7 +3347,8 @@
    "level": 2,
    "kind": "human",
    "label": "約70万〜40万年前",
-   "score": 60
+   "score": 60,
+   "id": "c189"
   },
   {
    "year": -200000,
@@ -2257,7 +3358,8 @@
    "level": 3,
    "kind": "human",
    "label": "約15〜20万年前",
-   "score": 55
+   "score": 55,
+   "id": "c190"
   },
   {
    "year": -164000,
@@ -2267,7 +3369,8 @@
    "level": 5,
    "kind": "human",
    "label": "約16.4万年前",
-   "score": 15
+   "score": 15,
+   "id": "c191"
   },
   {
    "year": -75000,
@@ -2277,7 +3380,8 @@
    "level": 5,
    "kind": "human",
    "label": "約7万3千年前",
-   "score": 18
+   "score": 18,
+   "id": "c192"
   },
   {
    "year": -74000,
@@ -2287,7 +3391,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約7万4千年前",
-   "score": 42
+   "score": 42,
+   "id": "c193"
   },
   {
    "year": -65000,
@@ -2297,7 +3402,8 @@
    "level": 4,
    "kind": "human",
    "label": "約6万5千年前",
-   "score": 38
+   "score": 38,
+   "id": "c194"
   },
   {
    "year": -40000,
@@ -2307,7 +3413,8 @@
    "level": 5,
    "kind": "human",
    "label": "約4万年前",
-   "score": 2
+   "score": 2,
+   "id": "c195"
   },
   {
    "year": -36000,
@@ -2317,7 +3424,8 @@
    "level": 4,
    "kind": "human",
    "label": "約3万6千年前",
-   "score": 37
+   "score": 37,
+   "id": "c196"
   },
   {
    "year": -27000,
@@ -2327,7 +3435,8 @@
    "level": 5,
    "kind": "human",
    "label": "約2万7千年前",
-   "score": 26
+   "score": 26,
+   "id": "c197"
   },
   {
    "year": -17000,
@@ -2337,7 +3446,8 @@
    "level": 2,
    "kind": "human",
    "label": "約1万7千年前",
-   "score": 59
+   "score": 59,
+   "id": "c198"
   },
   {
    "year": -16500,
@@ -2347,7 +3457,8 @@
    "level": 5,
    "kind": "human",
    "label": "約1万6500年前",
-   "score": 8
+   "score": 8,
+   "id": "c199"
   },
   {
    "year": -14000,
@@ -2357,7 +3468,8 @@
    "level": 3,
    "kind": "human",
    "label": "約1万4千年前（諸説）",
-   "score": 52
+   "score": 52,
+   "id": "c200"
   },
   {
    "year": -10500,
@@ -2367,7 +3479,8 @@
    "level": 2,
    "kind": "human",
    "label": "約1万2500年前",
-   "score": 58
+   "score": 58,
+   "id": "c201"
   },
   {
    "year": -7000,
@@ -2376,7 +3489,8 @@
    "lesson": "稲が、アジアの暮らしと人口を支えた。",
    "level": 2,
    "kind": "human",
-   "score": 64
+   "score": 64,
+   "id": "c202"
   },
   {
    "year": -6500,
@@ -2385,7 +3499,8 @@
    "lesson": "最初期の「町」は、密集した暮らしだった。",
    "level": 5,
    "kind": "human",
-   "score": 24
+   "score": 24,
+   "id": "c203"
   },
   {
    "year": -5000,
@@ -2394,7 +3509,8 @@
    "lesson": "金属を溶かす火が、道具の時代を変えた。",
    "level": 4,
    "kind": "human",
-   "score": 41
+   "score": 41,
+   "id": "c204"
   },
   {
    "year": -5000,
@@ -2404,7 +3520,8 @@
    "level": 3,
    "kind": "science",
    "label": "約7000年前",
-   "score": 55
+   "score": 55,
+   "id": "c205"
   },
   {
    "year": -3400,
@@ -2413,7 +3530,8 @@
    "lesson": "回転する輪が、運ぶ力を変えた。",
    "level": 2,
    "kind": "human",
-   "score": 60
+   "score": 60,
+   "id": "c206"
   },
   {
    "year": -3000,
@@ -2422,7 +3540,8 @@
    "lesson": "太陽の動きを、石の配置に写した。",
    "level": 5,
    "kind": "science",
-   "score": 6
+   "score": 6,
+   "id": "c207"
   },
   {
    "year": -1600,
@@ -2431,7 +3550,8 @@
    "lesson": "記録を続けると、天の規則が見えてくる。",
    "level": 5,
    "kind": "science",
-   "score": 18
+   "score": 18,
+   "id": "c208"
   },
   {
    "year": -1200,
@@ -2440,7 +3560,8 @@
    "lesson": "占いの記録が、天文の記録になった。",
    "level": 5,
    "kind": "science",
-   "score": 15
+   "score": 15,
+   "id": "c209"
   },
   {
    "year": -585,
@@ -2449,7 +3570,11 @@
    "lesson": "神の仕業と思われていた現象を、自然の規則として見ようとした。",
    "level": 4,
    "kind": "science",
-   "score": 43
+   "score": 43,
+   "id": "c210",
+   "people": [
+    "thales"
+   ]
   },
   {
    "year": -432,
@@ -2458,7 +3583,8 @@
    "lesson": "太陽と月のずれを、数で合わせた。",
    "level": 4,
    "kind": "science",
-   "score": 35
+   "score": 35,
+   "id": "c211"
   },
   {
    "year": -130,
@@ -2467,7 +3593,11 @@
    "lesson": "古い記録と比べると、ゆっくりした動きが分かる。",
    "level": 2,
    "kind": "science",
-   "score": 61
+   "score": 61,
+   "id": "c212",
+   "people": [
+    "hipparchus"
+   ]
   },
   {
    "year": -100,
@@ -2477,7 +3607,8 @@
    "level": 2,
    "kind": "science",
    "label": "紀元前2〜1世紀",
-   "score": 65
+   "score": 65,
+   "id": "c213"
   },
   {
    "year": -46,
@@ -2486,7 +3617,8 @@
    "lesson": "暦の改革は、政治の仕事でもあった。",
    "level": 2,
    "kind": "science",
-   "score": 72
+   "score": 72,
+   "id": "c214"
   },
   {
    "year": 132,
@@ -2495,7 +3627,11 @@
    "lesson": "地震と星の観測は、同じ学者の手にあった。",
    "level": 4,
    "kind": "earth",
-   "score": 38
+   "score": 38,
+   "id": "c215",
+   "people": [
+    "zhangheng"
+   ]
   },
   {
    "year": 185,
@@ -2504,7 +3640,8 @@
    "lesson": "古い記録が、現代の天文学と結びつく。",
    "level": 5,
    "kind": "cosmos",
-   "score": 10
+   "score": 10,
+   "id": "c216"
   },
   {
    "year": 499,
@@ -2513,7 +3650,11 @@
    "lesson": "天文学は、インドでも深く発展した。",
    "level": 4,
    "kind": "science",
-   "score": 32
+   "score": 32,
+   "id": "c217",
+   "people": [
+    "aryabhata"
+   ]
   },
   {
    "year": 820,
@@ -2522,7 +3663,8 @@
    "lesson": "数学の整理が、天文計算の道具になった。",
    "level": 4,
    "kind": "science",
-   "score": 33
+   "score": 33,
+   "id": "c218"
   },
   {
    "year": 964,
@@ -2531,7 +3673,11 @@
    "lesson": "肉眼で見える銀河を、すでに記録していた。",
    "level": 3,
    "kind": "science",
-   "score": 48
+   "score": 48,
+   "id": "c219",
+   "people": [
+    "alsufi"
+   ]
   },
   {
    "year": 1006,
@@ -2540,7 +3686,8 @@
    "lesson": "複数の国の記録が、一つの爆発を裏づける。",
    "level": 4,
    "kind": "cosmos",
-   "score": 35
+   "score": 35,
+   "id": "c220"
   },
   {
    "year": 1021,
@@ -2549,7 +3696,11 @@
    "lesson": "実験で確かめる考え方が、科学の方法を整えた。",
    "level": 3,
    "kind": "science",
-   "score": 51
+   "score": 51,
+   "id": "c221",
+   "people": [
+    "alhaytham"
+   ]
   },
   {
    "year": 1088,
@@ -2558,7 +3709,11 @@
    "lesson": "観察を丁寧に記録した百科全書。",
    "level": 5,
    "kind": "science",
-   "score": 21
+   "score": 21,
+   "id": "c222",
+   "people": [
+    "shenkuo"
+   ]
   },
   {
    "year": 1259,
@@ -2567,7 +3722,8 @@
    "lesson": "国の支援が、観測を組織化した。",
    "level": 4,
    "kind": "science",
-   "score": 34
+   "score": 34,
+   "id": "c223"
   },
   {
    "year": 1280,
@@ -2576,7 +3732,11 @@
    "lesson": "正確な観測が、暦を支える。",
    "level": 4,
    "kind": "science",
-   "score": 30
+   "score": 30,
+   "id": "c224",
+   "people": [
+    "guoshoujing"
+   ]
   },
   {
    "year": 1437,
@@ -2585,7 +3745,11 @@
    "lesson": "肉眼でも、道具を工夫すれば精密に測れる。",
    "level": 4,
    "kind": "science",
-   "score": 34
+   "score": 34,
+   "id": "c225",
+   "people": [
+    "ulughbeg"
+   ]
   },
   {
    "year": 1572,
@@ -2594,7 +3758,11 @@
    "lesson": "天は変わらないという常識が崩れた。",
    "level": 3,
    "kind": "cosmos",
-   "score": 55
+   "score": 55,
+   "id": "c226",
+   "people": [
+    "tycho"
+   ]
   },
   {
    "year": 1600,
@@ -2603,7 +3771,11 @@
    "lesson": "宇宙観の違いは、時に命がけの争いになった。",
    "level": 4,
    "kind": "science",
-   "score": 32
+   "score": 32,
+   "id": "c227",
+   "people": [
+    "bruno"
+   ]
   },
   {
    "year": 1604,
@@ -2612,7 +3784,12 @@
    "lesson": "肉眼で観測された最後の天の川の超新星。",
    "level": 3,
    "kind": "cosmos",
-   "score": 45
+   "score": 45,
+   "id": "c228",
+   "people": [
+    "kepler",
+    "galileo"
+   ]
   },
   {
    "year": 1633,
@@ -2621,7 +3798,11 @@
    "lesson": "真実が、権威に押さえつけられた例。",
    "level": 2,
    "kind": "science",
-   "score": 63
+   "score": 63,
+   "id": "c229",
+   "people": [
+    "galileo"
+   ]
   },
   {
    "year": 1655,
@@ -2630,7 +3811,11 @@
    "lesson": "望遠鏡が、新しい世界を次々と見せた。",
    "level": 3,
    "kind": "science",
-   "score": 45
+   "score": 45,
+   "id": "c230",
+   "people": [
+    "huygens"
+   ]
   },
   {
    "year": 1666,
@@ -2639,7 +3824,11 @@
    "lesson": "静かな時間が、大きな発想を育てた。",
    "level": 2,
    "kind": "science",
-   "score": 60
+   "score": 60,
+   "id": "c231",
+   "people": [
+    "newton"
+   ]
   },
   {
    "year": 1676,
@@ -2648,7 +3837,11 @@
    "lesson": "宇宙の現象から、光の速さが測れた。",
    "level": 4,
    "kind": "science",
-   "score": 42
+   "score": 42,
+   "id": "c232",
+   "people": [
+    "romer"
+   ]
   },
   {
    "year": 1705,
@@ -2658,7 +3851,11 @@
    "level": 2,
    "kind": "science",
    "label": "1705年（予言）",
-   "score": 70
+   "score": 70,
+   "id": "c233",
+   "people": [
+    "halley"
+   ]
   },
   {
    "year": 1781,
@@ -2667,7 +3864,12 @@
    "lesson": "空は、まだ新発見に満ちていた。",
    "level": 2,
    "kind": "cosmos",
-   "score": 62
+   "score": 62,
+   "id": "c234",
+   "people": [
+    "w_herschel",
+    "c_herschel"
+   ]
   },
   {
    "year": 1801,
@@ -2676,7 +3878,8 @@
    "lesson": "惑星の間にも、小さな世界があった。",
    "level": 3,
    "kind": "cosmos",
-   "score": 46
+   "score": 46,
+   "id": "c235"
   },
   {
    "year": 1814,
@@ -2685,7 +3888,11 @@
    "lesson": "光の中の暗い線が、星の成分を教える。",
    "level": 4,
    "kind": "science",
-   "score": 34
+   "score": 34,
+   "id": "c236",
+   "people": [
+    "fraunhofer"
+   ]
   },
   {
    "year": 1838,
@@ -2694,7 +3901,11 @@
    "lesson": "宇宙の物差しが、はじめて手に入った。",
    "level": 3,
    "kind": "science",
-   "score": 50
+   "score": 50,
+   "id": "c237",
+   "people": [
+    "bessel"
+   ]
   },
   {
    "year": 1842,
@@ -2703,7 +3914,8 @@
    "lesson": "色の変化から、天体の動きが読める。",
    "level": 3,
    "kind": "science",
-   "score": 55
+   "score": 55,
+   "id": "c238"
   },
   {
    "year": 1859,
@@ -2712,7 +3924,8 @@
    "lesson": "手の届かない星の成分が、光から分かった。",
    "level": 3,
    "kind": "science",
-   "score": 48
+   "score": 48,
+   "id": "c239"
   },
   {
    "year": 1887,
@@ -2721,7 +3934,8 @@
    "lesson": "失敗した実験が、相対性理論への道を開いた。",
    "level": 3,
    "kind": "science",
-   "score": 49
+   "score": 49,
+   "id": "c240"
   },
   {
    "year": 1896,
@@ -2730,7 +3944,8 @@
    "lesson": "見えない放射が、時間を測る物差しになった。",
    "level": 2,
    "kind": "science",
-   "score": 65
+   "score": 65,
+   "id": "c241"
   },
   {
    "year": 1911,
@@ -2739,7 +3954,11 @@
    "lesson": "原子はほとんど空っぽだった。",
    "level": 2,
    "kind": "science",
-   "score": 72
+   "score": 72,
+   "id": "c242",
+   "people": [
+    "rutherford"
+   ]
   },
   {
    "year": 1912,
@@ -2748,7 +3967,12 @@
    "lesson": "星の明滅が、宇宙の物差しになった。",
    "level": 3,
    "kind": "science",
-   "score": 50
+   "score": 50,
+   "id": "c243",
+   "people": [
+    "leavitt",
+    "hubble"
+   ]
   },
   {
    "year": 1912,
@@ -2757,7 +3981,8 @@
    "lesson": "空の高みで、宇宙の粒子と出会った。",
    "level": 3,
    "kind": "science",
-   "score": 45
+   "score": 45,
+   "id": "c244"
   },
   {
    "year": 1916,
@@ -2766,7 +3991,11 @@
    "lesson": "数式の解の中に、奇妙な天体が潜んでいた。",
    "level": 3,
    "kind": "science",
-   "score": 47
+   "score": 47,
+   "id": "c245",
+   "people": [
+    "schwarzschild"
+   ]
   },
   {
    "year": 1917,
@@ -2775,7 +4004,11 @@
    "lesson": "捨てられた項が、100年後によみがえった。",
    "level": 4,
    "kind": "science",
-   "score": 34
+   "score": 34,
+   "id": "c246",
+   "people": [
+    "einstein"
+   ]
   },
   {
    "year": 1922,
@@ -2784,7 +4017,11 @@
    "lesson": "静止していない宇宙を、数式が先に示していた。",
    "level": 3,
    "kind": "science",
-   "score": 49
+   "score": 49,
+   "id": "c247",
+   "people": [
+    "friedmann"
+   ]
   },
   {
    "year": 1930,
@@ -2793,7 +4030,8 @@
    "lesson": "惑星の定義は、発見によって見直される。",
    "level": 4,
    "kind": "cosmos",
-   "score": 36
+   "score": 36,
+   "id": "c248"
   },
   {
    "year": 1931,
@@ -2802,7 +4040,12 @@
    "lesson": "星の最期は、質量で決まる。",
    "level": 3,
    "kind": "science",
-   "score": 51
+   "score": 51,
+   "id": "c249",
+   "people": [
+    "chandrasekhar",
+    "sagan"
+   ]
   },
   {
    "year": 1932,
@@ -2811,7 +4054,8 @@
    "lesson": "見えない光で、宇宙を見る時代が始まった。",
    "level": 3,
    "kind": "science",
-   "score": 55
+   "score": 55,
+   "id": "c250"
   },
   {
    "year": 1939,
@@ -2820,7 +4064,11 @@
    "lesson": "星が輝く仕組みが、ようやく分かった。",
    "level": 3,
    "kind": "science",
-   "score": 49
+   "score": 49,
+   "id": "c251",
+   "people": [
+    "bethe"
+   ]
   },
   {
    "year": 1953,
@@ -2829,7 +4077,11 @@
    "lesson": "生命の材料は、自然にできる可能性がある。",
    "level": 3,
    "kind": "life",
-   "score": 44
+   "score": 44,
+   "id": "c252",
+   "people": [
+    "miller"
+   ]
   },
   {
    "year": 1957,
@@ -2838,7 +4090,8 @@
    "lesson": "私たちの体の元素は、星が作った。",
    "level": 3,
    "kind": "science",
-   "score": 50
+   "score": 50,
+   "id": "c253"
   },
   {
    "year": 1958,
@@ -2847,7 +4100,8 @@
    "lesson": "宇宙へ出ると、地球を包む見えない帯が見えた。",
    "level": 5,
    "kind": "science",
-   "score": 21
+   "score": 21,
+   "id": "c254"
   },
   {
    "year": 1962,
@@ -2856,7 +4110,8 @@
    "lesson": "見えない光で、新しい天体が見つかった。",
    "level": 4,
    "kind": "cosmos",
-   "score": 43
+   "score": 43,
+   "id": "c255"
   },
   {
    "year": 1963,
@@ -2865,7 +4120,8 @@
    "lesson": "宇宙の遠くには、とんでもない天体があった。",
    "level": 2,
    "kind": "cosmos",
-   "score": 70
+   "score": 70,
+   "id": "c256"
   },
   {
    "year": 1967,
@@ -2874,7 +4130,8 @@
    "lesson": "規則正しい信号は、最初は宇宙人の通信かと疑われた。",
    "level": 2,
    "kind": "cosmos",
-   "score": 60
+   "score": 60,
+   "id": "c257"
   },
   {
    "year": 1971,
@@ -2883,7 +4140,8 @@
    "lesson": "見えない天体を、周囲の動きから見つけた。",
    "level": 4,
    "kind": "cosmos",
-   "score": 36
+   "score": 36,
+   "id": "c258"
   },
   {
    "year": 1977,
@@ -2892,7 +4150,8 @@
    "lesson": "人類の手紙を乗せて、星の海へ旅を続ける。",
    "level": 2,
    "kind": "science",
-   "score": 62
+   "score": 62,
+   "id": "c259"
   },
   {
    "year": 1980,
@@ -2901,7 +4160,11 @@
    "lesson": "地層の中の薄い層が、絶滅の謎を解いた。",
    "level": 2,
    "kind": "earth",
-   "score": 65
+   "score": 65,
+   "id": "c260",
+   "people": [
+    "alvarez"
+   ]
   },
   {
    "year": 1987,
@@ -2910,7 +4173,11 @@
    "lesson": "宇宙のニュートリノを初めて捉えた。",
    "level": 3,
    "kind": "science",
-   "score": 52
+   "score": 52,
+   "id": "c261",
+   "people": [
+    "koshiba"
+   ]
   },
   {
    "year": 1989,
@@ -2919,7 +4186,14 @@
    "lesson": "宇宙の赤ちゃんの写真が撮れた。",
    "level": 2,
    "kind": "science",
-   "score": 73
+   "score": 73,
+   "id": "c262",
+   "links": [
+    {
+     "to": "c265",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1994,
@@ -2928,7 +4202,8 @@
    "lesson": "他の惑星の衝突を目撃して、地球の備えを考えた。",
    "level": 5,
    "kind": "cosmos",
-   "score": 4
+   "score": 4,
+   "id": "c263"
   },
   {
    "year": 1995,
@@ -2937,7 +4212,14 @@
    "lesson": "空の暗い一点に、銀河が詰まっていた。",
    "level": 2,
    "kind": "science",
-   "score": 72
+   "score": 72,
+   "id": "c264",
+   "links": [
+    {
+     "to": "c106",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 2001,
@@ -2946,7 +4228,14 @@
    "lesson": "宇宙の年齢は、138億年と求められた。",
    "level": 3,
    "kind": "science",
-   "score": 47
+   "score": 47,
+   "id": "c265",
+   "links": [
+    {
+     "to": "c475",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 2004,
@@ -2955,7 +4244,8 @@
    "lesson": "土星とその衛星が、生命の可能性を問いかけた。",
    "level": 4,
    "kind": "cosmos",
-   "score": 41
+   "score": 41,
+   "id": "c266"
   },
   {
    "year": 2006,
@@ -2964,7 +4254,8 @@
    "lesson": "分類は、新しい発見に合わせて更新される。",
    "level": 5,
    "kind": "cosmos",
-   "score": 19
+   "score": 19,
+   "id": "c267"
   },
   {
    "year": 2008,
@@ -2973,7 +4264,11 @@
    "lesson": "最小のものを調べる巨大な装置。",
    "level": 2,
    "kind": "science",
-   "score": 59
+   "score": 59,
+   "id": "c268",
+   "people": [
+    "higgs"
+   ]
   },
   {
    "year": 2010,
@@ -2982,7 +4277,14 @@
    "lesson": "失敗を乗り越えた探査機が、帰ってきた。",
    "level": 1,
    "kind": "science",
-   "score": 83
+   "score": 83,
+   "id": "c269",
+   "links": [
+    {
+     "to": "c274",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 2014,
@@ -2991,7 +4293,8 @@
    "lesson": "太陽系の古い化石に、触れた。",
    "level": 5,
    "kind": "science",
-   "score": 16
+   "score": 16,
+   "id": "c270"
   },
   {
    "year": 2016,
@@ -3000,7 +4303,8 @@
    "lesson": "隣の恒星にも、惑星があった。",
    "level": 4,
    "kind": "cosmos",
-   "score": 43
+   "score": 43,
+   "id": "c271"
   },
   {
    "year": 2017,
@@ -3009,7 +4313,8 @@
    "lesson": "一つの星に、複数の地球サイズの世界。",
    "level": 4,
    "kind": "cosmos",
-   "score": 37
+   "score": 37,
+   "id": "c272"
   },
   {
    "year": 2018,
@@ -3018,7 +4323,8 @@
    "lesson": "太陽の大気の中に、探査機が入った。",
    "level": 5,
    "kind": "science",
-   "score": 12
+   "score": 12,
+   "id": "c273"
   },
   {
    "year": 2020,
@@ -3027,7 +4333,8 @@
    "lesson": "生命の材料は、宇宙から来たのかもしれない。",
    "level": 2,
    "kind": "science",
-   "score": 66
+   "score": 66,
+   "id": "c274"
   },
   {
    "year": 2022,
@@ -3036,7 +4343,8 @@
    "lesson": "天体の衝突から、地球を守る技術が試された。",
    "level": 2,
    "kind": "science",
-   "score": 73
+   "score": 73,
+   "id": "c275"
   },
   {
    "year": 2023,
@@ -3045,7 +4353,8 @@
    "lesson": "宇宙は、重力波で絶えず揺れている。",
    "level": 5,
    "kind": "science",
-   "score": 17
+   "score": 17,
+   "id": "c276"
   },
   {
    "year": 13727,
@@ -3055,7 +4364,8 @@
    "level": 5,
    "kind": "future",
    "label": "約1万3700年後",
-   "score": 1
+   "score": 1,
+   "id": "c277"
   },
   {
    "year": 100000,
@@ -3065,7 +4375,8 @@
    "level": 5,
    "kind": "future",
    "label": "今後10万年以内のいつか",
-   "score": 4
+   "score": 4,
+   "id": "c278"
   },
   {
    "year": 1290000,
@@ -3075,7 +4386,8 @@
    "level": 5,
    "kind": "future",
    "label": "約130万年後",
-   "score": 18
+   "score": 18,
+   "id": "c279"
   },
   {
    "year": 250000000,
@@ -3085,7 +4397,8 @@
    "level": 4,
    "kind": "future",
    "label": "約2.5億年後",
-   "score": 34
+   "score": 34,
+   "id": "c280"
   },
   {
    "year": -13799960000,
@@ -3095,7 +4408,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生から約1兆分の1秒（理論）",
-   "score": 18
+   "score": 18,
+   "id": "c281"
   },
   {
    "year": -13799930000,
@@ -3105,7 +4419,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生から約100万分の1秒（理論）",
-   "score": 2
+   "score": 2,
+   "id": "c282"
   },
   {
    "year": -13799965000,
@@ -3115,7 +4430,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生の直後（理論）",
-   "score": 4
+   "score": 4,
+   "id": "c283"
   },
   {
    "year": -13799945000,
@@ -3125,7 +4441,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生から1秒まで（理論）",
-   "score": 24
+   "score": 24,
+   "id": "c284"
   },
   {
    "year": -13799900000,
@@ -3135,7 +4452,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生から数秒",
-   "score": 11
+   "score": 11,
+   "id": "c285"
   },
   {
    "year": -13799850000,
@@ -3145,7 +4463,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生から数万年まで",
-   "score": 7
+   "score": 7,
+   "id": "c286"
   },
   {
    "year": -13799760000,
@@ -3155,7 +4474,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生から約3万年",
-   "score": 14
+   "score": 14,
+   "id": "c287"
   },
   {
    "year": -13799660000,
@@ -3165,7 +4485,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生から約38万年まで",
-   "score": 1
+   "score": 1,
+   "id": "c288"
   },
   {
    "year": -13799610000,
@@ -3175,7 +4496,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "誕生から約38万年",
-   "score": 40
+   "score": 40,
+   "id": "c289"
   },
   {
    "year": -13799300000,
@@ -3185,7 +4507,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "誕生から約38万年以後",
-   "score": 21
+   "score": 21,
+   "id": "c290"
   },
   {
    "year": -13780000000,
@@ -3195,7 +4518,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約137.8億年前",
-   "score": 31
+   "score": 31,
+   "id": "c291"
   },
   {
    "year": -13700000000,
@@ -3205,7 +4529,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約137億年前",
-   "score": 42
+   "score": 42,
+   "id": "c292"
   },
   {
    "year": -13650000000,
@@ -3215,7 +4540,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約136.5億年前",
-   "score": 39
+   "score": 39,
+   "id": "c293"
   },
   {
    "year": -13550000000,
@@ -3225,7 +4551,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "約135.5億年前",
-   "score": 12
+   "score": 12,
+   "id": "c294"
   },
   {
    "year": -13500000000,
@@ -3235,7 +4562,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約135億年前",
-   "score": 40
+   "score": 40,
+   "id": "c295"
   },
   {
    "year": -13300000000,
@@ -3245,7 +4573,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "約133億年前",
-   "score": 27
+   "score": 27,
+   "id": "c296"
   },
   {
    "year": -12900000000,
@@ -3255,7 +4584,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約129億年前",
-   "score": 43
+   "score": 43,
+   "id": "c297"
   },
   {
    "year": -12500000000,
@@ -3265,7 +4595,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約125億年前",
-   "score": 32
+   "score": 32,
+   "id": "c298"
   },
   {
    "year": -12000000000,
@@ -3275,7 +4606,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約120億年前",
-   "score": 39
+   "score": 39,
+   "id": "c299"
   },
   {
    "year": -11500000000,
@@ -3285,7 +4617,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約115億年前",
-   "score": 35
+   "score": 35,
+   "id": "c300"
   },
   {
    "year": -10000000000,
@@ -3295,7 +4628,8 @@
    "level": 3,
    "kind": "cosmos",
    "label": "約100億年前",
-   "score": 46
+   "score": 46,
+   "id": "c301"
   },
   {
    "year": -9000000000,
@@ -3305,7 +4639,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約90億年前",
-   "score": 41
+   "score": 41,
+   "id": "c302"
   },
   {
    "year": -8000000000,
@@ -3315,7 +4650,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "約80億年前",
-   "score": 22
+   "score": 22,
+   "id": "c303"
   },
   {
    "year": -7000000000,
@@ -3325,7 +4661,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約70億年前",
-   "score": 39
+   "score": 39,
+   "id": "c304"
   },
   {
    "year": -6000000000,
@@ -3335,7 +4672,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "約60億年前",
-   "score": 20
+   "score": 20,
+   "id": "c305"
   },
   {
    "year": -5000000000,
@@ -3345,7 +4683,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約50億年前",
-   "score": 38
+   "score": 38,
+   "id": "c306"
   },
   {
    "year": -4568000000,
@@ -3355,7 +4694,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約45.7億年前",
-   "score": 44
+   "score": 44,
+   "id": "c307"
   },
   {
    "year": -4565000000,
@@ -3365,7 +4705,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約45.6億年前",
-   "score": 11
+   "score": 11,
+   "id": "c308"
   },
   {
    "year": -4560000000,
@@ -3375,7 +4716,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約45.6億年前",
-   "score": 39
+   "score": 39,
+   "id": "c309"
   },
   {
    "year": -4550000000,
@@ -3385,7 +4727,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約45.5億年前",
-   "score": 14
+   "score": 14,
+   "id": "c310"
   },
   {
    "year": -4540000000,
@@ -3395,7 +4738,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約45.4億年前",
-   "score": 4
+   "score": 4,
+   "id": "c311"
   },
   {
    "year": -4450000000,
@@ -3405,7 +4749,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約44.5億年前",
-   "score": 46
+   "score": 46,
+   "id": "c312"
   },
   {
    "year": -4400000000,
@@ -3415,7 +4760,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約44億年前",
-   "score": 37
+   "score": 37,
+   "id": "c313"
   },
   {
    "year": -4300000000,
@@ -3425,7 +4771,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約43億年前",
-   "score": 28
+   "score": 28,
+   "id": "c314"
   },
   {
    "year": -4100000000,
@@ -3435,7 +4782,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約41億年前",
-   "score": 38
+   "score": 38,
+   "id": "c315"
   },
   {
    "year": -4000000000,
@@ -3445,7 +4793,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約40億年前",
-   "score": 34
+   "score": 34,
+   "id": "c316"
   },
   {
    "year": -3950000000,
@@ -3455,7 +4804,8 @@
    "level": 4,
    "kind": "life",
    "label": "約39.5億年前",
-   "score": 40
+   "score": 40,
+   "id": "c317"
   },
   {
    "year": -3700000000,
@@ -3465,7 +4815,8 @@
    "level": 3,
    "kind": "life",
    "label": "約37億年前",
-   "score": 44
+   "score": 44,
+   "id": "c318"
   },
   {
    "year": -3400000000,
@@ -3475,7 +4826,8 @@
    "level": 5,
    "kind": "life",
    "label": "約34億年前",
-   "score": 25
+   "score": 25,
+   "id": "c319"
   },
   {
    "year": -3200000000,
@@ -3485,7 +4837,8 @@
    "level": 4,
    "kind": "life",
    "label": "約32億年前",
-   "score": 31
+   "score": 31,
+   "id": "c320"
   },
   {
    "year": -2900000000,
@@ -3495,7 +4848,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約29億年前",
-   "score": 17
+   "score": 17,
+   "id": "c321"
   },
   {
    "year": -2100000000,
@@ -3505,7 +4859,8 @@
    "level": 4,
    "kind": "life",
    "label": "約21億年前",
-   "score": 36
+   "score": 36,
+   "id": "c322"
   },
   {
    "year": -2000000000,
@@ -3515,7 +4870,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約20億年前",
-   "score": 47
+   "score": 47,
+   "id": "c323"
   },
   {
    "year": -1800000000,
@@ -3525,7 +4881,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約18億年前",
-   "score": 31
+   "score": 31,
+   "id": "c324"
   },
   {
    "year": -1500000000,
@@ -3535,7 +4892,8 @@
    "level": 3,
    "kind": "life",
    "label": "約15億年前",
-   "score": 44
+   "score": 44,
+   "id": "c325"
   },
   {
    "year": -1200000000,
@@ -3545,7 +4903,8 @@
    "level": 3,
    "kind": "life",
    "label": "約12億年前",
-   "score": 45
+   "score": 45,
+   "id": "c326"
   },
   {
    "year": -800000000,
@@ -3555,7 +4914,8 @@
    "level": 5,
    "kind": "life",
    "label": "約8億年前",
-   "score": 14
+   "score": 14,
+   "id": "c327"
   },
   {
    "year": -640000000,
@@ -3565,7 +4925,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約6.4億年前",
-   "score": 31
+   "score": 31,
+   "id": "c328"
   },
   {
    "year": -580000000,
@@ -3575,7 +4936,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約5.8億年前",
-   "score": 32
+   "score": 32,
+   "id": "c329"
   },
   {
    "year": -555000000,
@@ -3585,7 +4947,8 @@
    "level": 5,
    "kind": "life",
    "label": "約5.5億年前",
-   "score": 9
+   "score": 9,
+   "id": "c330"
   },
   {
    "year": -530000000,
@@ -3595,7 +4958,8 @@
    "level": 4,
    "kind": "life",
    "label": "約5.3億年前",
-   "score": 43
+   "score": 43,
+   "id": "c331"
   },
   {
    "year": -518000000,
@@ -3605,7 +4969,8 @@
    "level": 4,
    "kind": "life",
    "label": "約5.2億年前",
-   "score": 38
+   "score": 38,
+   "id": "c332"
   },
   {
    "year": -485000000,
@@ -3615,7 +4980,8 @@
    "level": 4,
    "kind": "life",
    "label": "約4.8億年前",
-   "score": 37
+   "score": 37,
+   "id": "c333"
   },
   {
    "year": -450000000,
@@ -3625,7 +4991,8 @@
    "level": 4,
    "kind": "life",
    "label": "約4.5億年前",
-   "score": 35
+   "score": 35,
+   "id": "c334"
   },
   {
    "year": -430000000,
@@ -3635,7 +5002,8 @@
    "level": 5,
    "kind": "life",
    "label": "約4.3億年前",
-   "score": 25
+   "score": 25,
+   "id": "c335"
   },
   {
    "year": -419000000,
@@ -3645,7 +5013,8 @@
    "level": 4,
    "kind": "life",
    "label": "約4.2億年前",
-   "score": 35
+   "score": 35,
+   "id": "c336"
   },
   {
    "year": -420000000,
@@ -3655,7 +5024,8 @@
    "level": 4,
    "kind": "life",
    "label": "約4.2億年前",
-   "score": 31
+   "score": 31,
+   "id": "c337"
   },
   {
    "year": -372000000,
@@ -3665,7 +5035,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約3.7億年前",
-   "score": 39
+   "score": 39,
+   "id": "c338"
   },
   {
    "year": -340000000,
@@ -3675,7 +5046,8 @@
    "level": 5,
    "kind": "life",
    "label": "約3.4億年前",
-   "score": 27
+   "score": 27,
+   "id": "c339"
   },
   {
    "year": -300000000,
@@ -3685,7 +5057,8 @@
    "level": 5,
    "kind": "life",
    "label": "約3億年前",
-   "score": 11
+   "score": 11,
+   "id": "c340"
   },
   {
    "year": -280000000,
@@ -3695,7 +5068,8 @@
    "level": 5,
    "kind": "life",
    "label": "約2.8億年前",
-   "score": 7
+   "score": 7,
+   "id": "c341"
   },
   {
    "year": -260000000,
@@ -3705,7 +5079,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約2.6億年前",
-   "score": 20
+   "score": 20,
+   "id": "c342"
   },
   {
    "year": -252000000,
@@ -3715,7 +5090,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約2.5億年前",
-   "score": 27
+   "score": 27,
+   "id": "c343"
   },
   {
    "year": -250000000,
@@ -3725,7 +5101,8 @@
    "level": 5,
    "kind": "life",
    "label": "約2.5億年前",
-   "score": 4
+   "score": 4,
+   "id": "c344"
   },
   {
    "year": -228000000,
@@ -3735,7 +5112,8 @@
    "level": 5,
    "kind": "life",
    "label": "約2.3億年前",
-   "score": 25
+   "score": 25,
+   "id": "c345"
   },
   {
    "year": -220000000,
@@ -3745,7 +5123,8 @@
    "level": 5,
    "kind": "life",
    "label": "約2.2億年前",
-   "score": 22
+   "score": 22,
+   "id": "c346"
   },
   {
    "year": -200000000,
@@ -3755,7 +5134,8 @@
    "level": 3,
    "kind": "earth",
    "label": "約2億年前",
-   "score": 47
+   "score": 47,
+   "id": "c347"
   },
   {
    "year": -180000000,
@@ -3765,7 +5145,8 @@
    "level": 5,
    "kind": "life",
    "label": "約1.8億年前",
-   "score": 1
+   "score": 1,
+   "id": "c348"
   },
   {
    "year": -155000000,
@@ -3775,7 +5156,8 @@
    "level": 5,
    "kind": "life",
    "label": "約1.6億年前",
-   "score": 9
+   "score": 9,
+   "id": "c349"
   },
   {
    "year": -145000000,
@@ -3785,7 +5167,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約1.4億年前",
-   "score": 5
+   "score": 5,
+   "id": "c350"
   },
   {
    "year": -120000000,
@@ -3795,7 +5178,8 @@
    "level": 5,
    "kind": "life",
    "label": "約1.2億年前",
-   "score": 25
+   "score": 25,
+   "id": "c351"
   },
   {
    "year": -100000000,
@@ -3805,7 +5189,8 @@
    "level": 5,
    "kind": "life",
    "label": "約1億年前",
-   "score": 2
+   "score": 2,
+   "id": "c352"
   },
   {
    "year": -100000000,
@@ -3815,7 +5200,8 @@
    "level": 3,
    "kind": "life",
    "label": "約1億年前",
-   "score": 44
+   "score": 44,
+   "id": "c353"
   },
   {
    "year": -80000000,
@@ -3825,7 +5211,8 @@
    "level": 5,
    "kind": "life",
    "label": "約8000万年前",
-   "score": 11
+   "score": 11,
+   "id": "c354"
   },
   {
    "year": -68000000,
@@ -3835,7 +5222,8 @@
    "level": 5,
    "kind": "life",
    "label": "約6800万年前",
-   "score": 7
+   "score": 7,
+   "id": "c355"
   },
   {
    "year": -66050000,
@@ -3845,7 +5233,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約6605万年前",
-   "score": 42
+   "score": 42,
+   "id": "c356"
   },
   {
    "year": -65000000,
@@ -3855,7 +5244,8 @@
    "level": 4,
    "kind": "life",
    "label": "約6500万年前",
-   "score": 38
+   "score": 38,
+   "id": "c357"
   },
   {
    "year": -52000000,
@@ -3865,7 +5255,8 @@
    "level": 5,
    "kind": "life",
    "label": "約5200万年前",
-   "score": 7
+   "score": 7,
+   "id": "c358"
   },
   {
    "year": -47000000,
@@ -3875,7 +5266,8 @@
    "level": 5,
    "kind": "life",
    "label": "約4700万年前",
-   "score": 27
+   "score": 27,
+   "id": "c359"
   },
   {
    "year": -35000000,
@@ -3885,7 +5277,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約3500万年前",
-   "score": 31
+   "score": 31,
+   "id": "c360"
   },
   {
    "year": -23000000,
@@ -3895,7 +5288,8 @@
    "level": 5,
    "kind": "life",
    "label": "約2300万年前",
-   "score": 25
+   "score": 25,
+   "id": "c361"
   },
   {
    "year": -15000000,
@@ -3905,7 +5299,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約1500万年前",
-   "score": 9
+   "score": 9,
+   "id": "c362"
   },
   {
    "year": -11000000,
@@ -3915,7 +5310,8 @@
    "level": 3,
    "kind": "life",
    "label": "約1100万年前",
-   "score": 45
+   "score": 45,
+   "id": "c363"
   },
   {
    "year": -8000000,
@@ -3925,7 +5321,8 @@
    "level": 5,
    "kind": "life",
    "label": "約800万年前",
-   "score": 28
+   "score": 28,
+   "id": "c364"
   },
   {
    "year": -5800000,
@@ -3935,7 +5332,8 @@
    "level": 4,
    "kind": "human",
    "label": "約580万年前",
-   "score": 37
+   "score": 37,
+   "id": "c365"
   },
   {
    "year": -5300000,
@@ -3945,7 +5343,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約530万年前",
-   "score": 5
+   "score": 5,
+   "id": "c366"
   },
   {
    "year": -4200000,
@@ -3955,7 +5354,8 @@
    "level": 5,
    "kind": "human",
    "label": "約420万年前",
-   "score": 12
+   "score": 12,
+   "id": "c367"
   },
   {
    "year": -3900000,
@@ -3965,7 +5365,8 @@
    "level": 3,
    "kind": "human",
    "label": "約390万年前",
-   "score": 46
+   "score": 46,
+   "id": "c368"
   },
   {
    "year": -2600000,
@@ -3975,7 +5376,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約260万年前",
-   "score": 40
+   "score": 40,
+   "id": "c369"
   },
   {
    "year": -2500000,
@@ -3985,7 +5387,8 @@
    "level": 5,
    "kind": "human",
    "label": "約250万年前",
-   "score": 20
+   "score": 20,
+   "id": "c370"
   },
   {
    "year": -1800000,
@@ -3995,7 +5398,8 @@
    "level": 3,
    "kind": "human",
    "label": "約180万年前",
-   "score": 44
+   "score": 44,
+   "id": "c371"
   },
   {
    "year": -1600000,
@@ -4005,7 +5409,8 @@
    "level": 5,
    "kind": "human",
    "label": "約160万年前",
-   "score": 22
+   "score": 22,
+   "id": "c372"
   },
   {
    "year": -1000000,
@@ -4015,7 +5420,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約100万年前",
-   "score": 36
+   "score": 36,
+   "id": "c373"
   },
   {
    "year": -600000,
@@ -4025,7 +5431,8 @@
    "level": 4,
    "kind": "human",
    "label": "約60万年前",
-   "score": 38
+   "score": 38,
+   "id": "c374"
   },
   {
    "year": -430000,
@@ -4035,7 +5442,8 @@
    "level": 5,
    "kind": "human",
    "label": "約43万年前",
-   "score": 19
+   "score": 19,
+   "id": "c375"
   },
   {
    "year": -350000,
@@ -4045,7 +5453,8 @@
    "level": 5,
    "kind": "human",
    "label": "約35万年前",
-   "score": 26
+   "score": 26,
+   "id": "c376"
   },
   {
    "year": -315000,
@@ -4055,7 +5464,8 @@
    "level": 4,
    "kind": "human",
    "label": "約31.5万年前",
-   "score": 32
+   "score": 32,
+   "id": "c377"
   },
   {
    "year": -250000,
@@ -4065,7 +5475,8 @@
    "level": 4,
    "kind": "human",
    "label": "約25万年前",
-   "score": 43
+   "score": 43,
+   "id": "c378"
   },
   {
    "year": -195000,
@@ -4075,7 +5486,8 @@
    "level": 5,
    "kind": "human",
    "label": "約19.5万年前",
-   "score": 2
+   "score": 2,
+   "id": "c379"
   },
   {
    "year": -130000,
@@ -4085,7 +5497,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約13万年前",
-   "score": 9
+   "score": 9,
+   "id": "c380"
   },
   {
    "year": -100000,
@@ -4095,7 +5508,8 @@
    "level": 3,
    "kind": "human",
    "label": "約10万年前",
-   "score": 45
+   "score": 45,
+   "id": "c381"
   },
   {
    "year": -90000,
@@ -4105,7 +5519,8 @@
    "level": 5,
    "kind": "human",
    "label": "約9万年前",
-   "score": 5
+   "score": 5,
+   "id": "c382"
   },
   {
    "year": -60000,
@@ -4115,7 +5530,8 @@
    "level": 5,
    "kind": "human",
    "label": "約6万年前",
-   "score": 17
+   "score": 17,
+   "id": "c383"
   },
   {
    "year": -50000,
@@ -4125,7 +5541,8 @@
    "level": 3,
    "kind": "human",
    "label": "約5万年前",
-   "score": 46
+   "score": 46,
+   "id": "c384"
   },
   {
    "year": -45000,
@@ -4135,7 +5552,8 @@
    "level": 4,
    "kind": "human",
    "label": "約4.5万年前",
-   "score": 33
+   "score": 33,
+   "id": "c385"
   },
   {
    "year": -45500,
@@ -4145,7 +5563,8 @@
    "level": 4,
    "kind": "human",
    "label": "約4.5万年前",
-   "score": 32
+   "score": 32,
+   "id": "c386"
   },
   {
    "year": -40000,
@@ -4155,7 +5574,8 @@
    "level": 5,
    "kind": "human",
    "label": "約4万年前",
-   "score": 17
+   "score": 17,
+   "id": "c387"
   },
   {
    "year": -33000,
@@ -4165,7 +5585,8 @@
    "level": 4,
    "kind": "human",
    "label": "約3.3万年前",
-   "score": 32
+   "score": 32,
+   "id": "c388"
   },
   {
    "year": -30000,
@@ -4175,7 +5596,8 @@
    "level": 4,
    "kind": "human",
    "label": "約3万年前",
-   "score": 36
+   "score": 36,
+   "id": "c389"
   },
   {
    "year": -28000,
@@ -4185,7 +5607,8 @@
    "level": 5,
    "kind": "human",
    "label": "約2.8万年前",
-   "score": 14
+   "score": 14,
+   "id": "c390"
   },
   {
    "year": -24000,
@@ -4195,7 +5618,8 @@
    "level": 5,
    "kind": "human",
    "label": "約2.4万年前",
-   "score": 5
+   "score": 5,
+   "id": "c391"
   },
   {
    "year": -20000,
@@ -4205,7 +5629,8 @@
    "level": 5,
    "kind": "human",
    "label": "約2万年前",
-   "score": 13
+   "score": 13,
+   "id": "c392"
   },
   {
    "year": -8300,
@@ -4214,7 +5639,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 37
+   "score": 37,
+   "id": "c393"
   },
   {
    "year": -8000,
@@ -4223,7 +5649,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 39
+   "score": 39,
+   "id": "c394"
   },
   {
    "year": -7500,
@@ -4232,7 +5659,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 35
+   "score": 35,
+   "id": "c395"
   },
   {
    "year": -6000,
@@ -4241,7 +5669,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 39
+   "score": 39,
+   "id": "c396"
   },
   {
    "year": -5800,
@@ -4250,7 +5679,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 17
+   "score": 17,
+   "id": "c397"
   },
   {
    "year": -4500,
@@ -4259,7 +5689,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 7
+   "score": 7,
+   "id": "c398"
   },
   {
    "year": -3500,
@@ -4268,7 +5699,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 33
+   "score": 33,
+   "id": "c399"
   },
   {
    "year": -3500,
@@ -4277,7 +5709,8 @@
    "lesson": "",
    "level": 3,
    "kind": "human",
-   "score": 47
+   "score": 47,
+   "id": "c400"
   },
   {
    "year": -3300,
@@ -4286,7 +5719,8 @@
    "lesson": "",
    "level": 2,
    "kind": "human",
-   "score": 67
+   "score": 67,
+   "id": "c401"
   },
   {
    "year": -3100,
@@ -4295,7 +5729,8 @@
    "lesson": "",
    "level": 2,
    "kind": "human",
-   "score": 71
+   "score": 71,
+   "id": "c402"
   },
   {
    "year": -3000,
@@ -4304,7 +5739,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 36
+   "score": 36,
+   "id": "c403"
   },
   {
    "year": -2600,
@@ -4313,7 +5749,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 33
+   "score": 33,
+   "id": "c404"
   },
   {
    "year": -2100,
@@ -4322,7 +5759,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 39
+   "score": 39,
+   "id": "c405"
   },
   {
    "year": -1600,
@@ -4331,7 +5769,8 @@
    "lesson": "",
    "level": 4,
    "kind": "earth",
-   "score": 33
+   "score": 33,
+   "id": "c406"
   },
   {
    "year": -1500,
@@ -4340,7 +5779,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 26
+   "score": 26,
+   "id": "c407"
   },
   {
    "year": -1400,
@@ -4349,7 +5789,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 9
+   "score": 9,
+   "id": "c408"
   },
   {
    "year": -1050,
@@ -4358,7 +5799,8 @@
    "lesson": "",
    "level": 3,
    "kind": "human",
-   "score": 47
+   "score": 47,
+   "id": "c409"
   },
   {
    "year": -750,
@@ -4367,7 +5809,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 30
+   "score": 30,
+   "id": "c410"
   },
   {
    "year": -500,
@@ -4376,7 +5819,11 @@
    "lesson": "",
    "level": 3,
    "kind": "science",
-   "score": 50
+   "score": 50,
+   "id": "c411",
+   "people": [
+    "pythagoras_c"
+   ]
   },
   {
    "year": -450,
@@ -4385,7 +5832,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 5
+   "score": 5,
+   "id": "c412"
   },
   {
    "year": -420,
@@ -4394,7 +5842,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 42
+   "score": 42,
+   "id": "c413"
   },
   {
    "year": -300,
@@ -4403,7 +5852,8 @@
    "lesson": "",
    "level": 3,
    "kind": "science",
-   "score": 48
+   "score": 48,
+   "id": "c414"
   },
   {
    "year": -250,
@@ -4412,7 +5862,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 41
+   "score": 41,
+   "id": "c415"
   },
   {
    "year": -129,
@@ -4421,7 +5872,11 @@
    "lesson": "",
    "level": 3,
    "kind": "science",
-   "score": 54
+   "score": 54,
+   "id": "c416",
+   "people": [
+    "hipparchus"
+   ]
   },
   {
    "year": 415,
@@ -4430,7 +5885,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 23
+   "score": 23,
+   "id": "c417"
   },
   {
    "year": 628,
@@ -4439,7 +5895,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 20
+   "score": 20,
+   "id": "c418"
   },
   {
    "year": 1025,
@@ -4448,7 +5905,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 26
+   "score": 26,
+   "id": "c419"
   },
   {
    "year": 1267,
@@ -4457,7 +5915,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 28
+   "score": 28,
+   "id": "c420"
   },
   {
    "year": 1440,
@@ -4466,7 +5925,11 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 32
+   "score": 32,
+   "id": "c421",
+   "people": [
+    "copernicus"
+   ]
   },
   {
    "year": 1472,
@@ -4475,7 +5938,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 6
+   "score": 6,
+   "id": "c422"
   },
   {
    "year": 1514,
@@ -4484,7 +5948,11 @@
    "lesson": "",
    "level": 3,
    "kind": "science",
-   "score": 45
+   "score": 45,
+   "id": "c423",
+   "people": [
+    "copernicus"
+   ]
   },
   {
    "year": 1577,
@@ -4493,7 +5961,11 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 31
+   "score": 31,
+   "id": "c424",
+   "people": [
+    "tycho"
+   ]
   },
   {
    "year": 1581,
@@ -4502,7 +5974,11 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 18
+   "score": 18,
+   "id": "c425",
+   "people": [
+    "galileo"
+   ]
   },
   {
    "year": 1584,
@@ -4511,7 +5987,11 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 41
+   "score": 41,
+   "id": "c426",
+   "people": [
+    "bruno"
+   ]
   },
   {
    "year": 1596,
@@ -4520,7 +6000,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 23
+   "score": 23,
+   "id": "c427"
   },
   {
    "year": 1608,
@@ -4529,7 +6010,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 42
+   "score": 42,
+   "id": "c428"
   },
   {
    "year": 1619,
@@ -4538,7 +6020,11 @@
    "lesson": "",
    "level": 3,
    "kind": "science",
-   "score": 44
+   "score": 44,
+   "id": "c429",
+   "people": [
+    "kepler"
+   ]
   },
   {
    "year": 1639,
@@ -4547,7 +6033,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 23
+   "score": 23,
+   "id": "c430"
   },
   {
    "year": 1647,
@@ -4556,7 +6043,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 8
+   "score": 8,
+   "id": "c431"
   },
   {
    "year": 1659,
@@ -4565,7 +6053,11 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 42
+   "score": 42,
+   "id": "c432",
+   "people": [
+    "huygens"
+   ]
   },
   {
    "year": 1665,
@@ -4574,7 +6066,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 38
+   "score": 38,
+   "id": "c433"
   },
   {
    "year": 1675,
@@ -4583,7 +6076,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 35
+   "score": 35,
+   "id": "c434"
   },
   {
    "year": 1704,
@@ -4592,7 +6086,11 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 40
+   "score": 40,
+   "id": "c435",
+   "people": [
+    "newton"
+   ]
   },
   {
    "year": 1729,
@@ -4601,7 +6099,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 34
+   "score": 34,
+   "id": "c436"
   },
   {
    "year": 1758,
@@ -4610,7 +6109,12 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 38
+   "score": 38,
+   "id": "c437",
+   "people": [
+    "halley",
+    "newton"
+   ]
   },
   {
    "year": 1771,
@@ -4619,7 +6123,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 34
+   "score": 34,
+   "id": "c438"
   },
   {
    "year": 1785,
@@ -4628,7 +6133,12 @@
    "lesson": "",
    "level": 3,
    "kind": "science",
-   "score": 45
+   "score": 45,
+   "id": "c439",
+   "people": [
+    "w_herschel",
+    "c_herschel"
+   ]
   },
   {
    "year": 1798,
@@ -4637,7 +6147,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 35
+   "score": 35,
+   "id": "c440"
   },
   {
    "year": 1800,
@@ -4646,7 +6157,12 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 33
+   "score": 33,
+   "id": "c441",
+   "people": [
+    "w_herschel",
+    "c_herschel"
+   ]
   },
   {
    "year": 1801,
@@ -4655,7 +6171,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 31
+   "score": 31,
+   "id": "c442"
   },
   {
    "year": 1845,
@@ -4664,7 +6181,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 32
+   "score": 32,
+   "id": "c443"
   },
   {
    "year": 1851,
@@ -4673,7 +6191,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 33
+   "score": 33,
+   "id": "c444"
   },
   {
    "year": 1868,
@@ -4682,7 +6201,8 @@
    "lesson": "",
    "level": 4,
    "kind": "science",
-   "score": 41
+   "score": 41,
+   "id": "c445"
   },
   {
    "year": 1877,
@@ -4691,7 +6211,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 23
+   "score": 23,
+   "id": "c446"
   },
   {
    "year": 1890,
@@ -4700,7 +6221,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 20
+   "score": 20,
+   "id": "c447"
   },
   {
    "year": 1903,
@@ -4709,7 +6231,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 6
+   "score": 6,
+   "id": "c448"
   },
   {
    "year": 1908,
@@ -4718,7 +6241,11 @@
    "lesson": "",
    "level": 5,
    "kind": "earth",
-   "score": 13
+   "score": 13,
+   "id": "c449",
+   "people": [
+    "guth"
+   ]
   },
   {
    "year": 1926,
@@ -4727,7 +6254,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 3
+   "score": 3,
+   "id": "c450"
   },
   {
    "year": 1938,
@@ -4736,7 +6264,11 @@
    "lesson": "",
    "level": 3,
    "kind": "science",
-   "score": 46
+   "score": 46,
+   "id": "c451",
+   "people": [
+    "bethe"
+   ]
   },
   {
    "year": 1945,
@@ -4745,7 +6277,8 @@
    "lesson": "",
    "level": 2,
    "kind": "science",
-   "score": 59
+   "score": 59,
+   "id": "c452"
   },
   {
    "year": 1946,
@@ -4754,7 +6287,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 15
+   "score": 15,
+   "id": "c453"
   },
   {
    "year": 1950,
@@ -4763,7 +6297,11 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 6
+   "score": 6,
+   "id": "c454",
+   "people": [
+    "oort"
+   ]
   },
   {
    "year": 1959,
@@ -4772,7 +6310,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 16
+   "score": 16,
+   "id": "c455"
   },
   {
    "year": 1960,
@@ -4781,7 +6320,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 28
+   "score": 28,
+   "id": "c456"
   },
   {
    "year": 1962,
@@ -4790,7 +6330,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 10
+   "score": 10,
+   "id": "c457"
   },
   {
    "year": 1965,
@@ -4799,7 +6340,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 13
+   "score": 13,
+   "id": "c458"
   },
   {
    "year": 1966,
@@ -4808,7 +6350,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 26
+   "score": 26,
+   "id": "c459"
   },
   {
    "year": 1971,
@@ -4817,7 +6360,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 15
+   "score": 15,
+   "id": "c460"
   },
   {
    "year": 1976,
@@ -4826,7 +6370,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 23
+   "score": 23,
+   "id": "c461"
   },
   {
    "year": 1979,
@@ -4835,7 +6380,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 36
+   "score": 36,
+   "id": "c462"
   },
   {
    "year": 1981,
@@ -4844,7 +6390,14 @@
    "lesson": "",
    "level": 2,
    "kind": "human",
-   "score": 58
+   "score": 58,
+   "id": "c463",
+   "links": [
+    {
+     "to": "c469",
+     "t": "tech"
+    }
+   ]
   },
   {
    "year": 1983,
@@ -4853,7 +6406,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 13
+   "score": 13,
+   "id": "c464"
   },
   {
    "year": 1986,
@@ -4862,7 +6416,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 22
+   "score": 22,
+   "id": "c465"
   },
   {
    "year": 1990,
@@ -4871,7 +6426,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 16
+   "score": 16,
+   "id": "c466"
   },
   {
    "year": 1996,
@@ -4880,7 +6436,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 3
+   "score": 3,
+   "id": "c467"
   },
   {
    "year": 1997,
@@ -4889,7 +6446,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 11
+   "score": 11,
+   "id": "c468"
   },
   {
    "year": 1998,
@@ -4898,7 +6456,8 @@
    "lesson": "",
    "level": 2,
    "kind": "human",
-   "score": 58
+   "score": 58,
+   "id": "c469"
   },
   {
    "year": 2000,
@@ -4907,7 +6466,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 15
+   "score": 15,
+   "id": "c470"
   },
   {
    "year": 2004,
@@ -4916,7 +6476,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 24
+   "score": 24,
+   "id": "c471"
   },
   {
    "year": 2005,
@@ -4925,7 +6486,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 8
+   "score": 8,
+   "id": "c472"
   },
   {
    "year": 2006,
@@ -4934,7 +6496,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 42
+   "score": 42,
+   "id": "c473"
   },
   {
    "year": 2009,
@@ -4943,7 +6506,8 @@
    "lesson": "",
    "level": 2,
    "kind": "science",
-   "score": 61
+   "score": 61,
+   "id": "c474"
   },
   {
    "year": 2009,
@@ -4952,7 +6516,8 @@
    "lesson": "",
    "level": 2,
    "kind": "science",
-   "score": 68
+   "score": 68,
+   "id": "c475"
   },
   {
    "year": 2012,
@@ -4961,7 +6526,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 41
+   "score": 41,
+   "id": "c476"
   },
   {
    "year": 2013,
@@ -4970,7 +6536,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 22
+   "score": 22,
+   "id": "c477"
   },
   {
    "year": 2015,
@@ -4979,7 +6546,8 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 30
+   "score": 30,
+   "id": "c478"
   },
   {
    "year": 2016,
@@ -4988,7 +6556,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 10
+   "score": 10,
+   "id": "c479"
   },
   {
    "year": 2017,
@@ -4997,7 +6566,8 @@
    "lesson": "",
    "level": 2,
    "kind": "science",
-   "score": 61
+   "score": 61,
+   "id": "c480"
   },
   {
    "year": 2017,
@@ -5006,7 +6576,8 @@
    "lesson": "",
    "level": 5,
    "kind": "cosmos",
-   "score": 19
+   "score": 19,
+   "id": "c481"
   },
   {
    "year": 2021,
@@ -5015,7 +6586,11 @@
    "lesson": "",
    "level": 4,
    "kind": "human",
-   "score": 37
+   "score": 37,
+   "id": "c482",
+   "people": [
+    "guth"
+   ]
   },
   {
    "year": 2021,
@@ -5024,7 +6599,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 8
+   "score": 8,
+   "id": "c483"
   },
   {
    "year": 2022,
@@ -5033,7 +6609,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 3
+   "score": 3,
+   "id": "c484"
   },
   {
    "year": 2023,
@@ -5042,7 +6619,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 12
+   "score": 12,
+   "id": "c485"
   },
   {
    "year": 2024,
@@ -5051,7 +6629,8 @@
    "lesson": "",
    "level": 5,
    "kind": "human",
-   "score": 24
+   "score": 24,
+   "id": "c486"
   },
   {
    "year": 2030,
@@ -5061,7 +6640,8 @@
    "level": 5,
    "kind": "human",
    "label": "めやす：2030年",
-   "score": 27
+   "score": 27,
+   "id": "c487"
   },
   {
    "year": 2030,
@@ -5071,7 +6651,8 @@
    "level": 5,
    "kind": "human",
    "label": "めやす：2030年ごろ",
-   "score": 6
+   "score": 6,
+   "id": "c488"
   },
   {
    "year": 2034,
@@ -5081,7 +6662,8 @@
    "level": 5,
    "kind": "human",
    "label": "めやす：2034年ごろ",
-   "score": 19
+   "score": 19,
+   "id": "c489"
   },
   {
    "year": 2117,
@@ -5090,7 +6672,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 10
+   "score": 10,
+   "id": "c490"
   },
   {
    "year": 2126,
@@ -5099,7 +6682,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 22
+   "score": 22,
+   "id": "c491"
   },
   {
    "year": 2182,
@@ -5108,7 +6692,8 @@
    "lesson": "",
    "level": 5,
    "kind": "earth",
-   "score": 16
+   "score": 16,
+   "id": "c492"
   },
   {
    "year": 7500,
@@ -5117,7 +6702,8 @@
    "lesson": "",
    "level": 5,
    "kind": "science",
-   "score": 28
+   "score": 28,
+   "id": "c493"
   },
   {
    "year": 26000,
@@ -5127,7 +6713,8 @@
    "level": 5,
    "kind": "science",
    "label": "約26000年後",
-   "score": 16
+   "score": 16,
+   "id": "c494"
   },
   {
    "year": 3600000,
@@ -5137,7 +6724,8 @@
    "level": 5,
    "kind": "science",
    "label": "約360万年後",
-   "score": 13
+   "score": 13,
+   "id": "c495"
   },
   {
    "year": 600000000,
@@ -5147,7 +6735,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約6億年後",
-   "score": 12
+   "score": 12,
+   "id": "c496"
   },
   {
    "year": 800000000,
@@ -5157,7 +6746,8 @@
    "level": 5,
    "kind": "life",
    "label": "約8億年後",
-   "score": 24
+   "score": 24,
+   "id": "c497"
   },
   {
    "year": 2000000000,
@@ -5167,7 +6757,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約20億年後",
-   "score": 15
+   "score": 15,
+   "id": "c498"
   },
   {
    "year": 3500000000,
@@ -5177,7 +6768,8 @@
    "level": 2,
    "kind": "earth",
    "label": "約35億年後",
-   "score": 59
+   "score": 59,
+   "id": "c499"
   },
   {
    "year": 7600000000,
@@ -5187,7 +6779,8 @@
    "level": 2,
    "kind": "earth",
    "label": "約76億年後",
-   "score": 59
+   "score": 59,
+   "id": "c500"
   },
   {
    "year": 20000000000,
@@ -5197,7 +6790,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "約200億年後",
-   "score": 21
+   "score": 21,
+   "id": "c501"
   },
   {
    "year": 10000000000000,
@@ -5207,7 +6801,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約100000億年後",
-   "score": 35
+   "score": 35,
+   "id": "c502"
   },
   {
    "year": 50000000000000,
@@ -5217,7 +6812,8 @@
    "level": 5,
    "kind": "cosmos",
    "label": "約500000億年後",
-   "score": 14
+   "score": 14,
+   "id": "c503"
   },
   {
    "year": 50000000,
@@ -5227,7 +6823,8 @@
    "level": 4,
    "kind": "earth",
    "label": "約5000万年後",
-   "score": 37
+   "score": 37,
+   "id": "c504"
   },
   {
    "year": 100000000,
@@ -5237,7 +6834,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約1億年後",
-   "score": 3
+   "score": 3,
+   "id": "c505"
   },
   {
    "year": 1100000000,
@@ -5247,7 +6845,8 @@
    "level": 5,
    "kind": "earth",
    "label": "約11億年後",
-   "score": 21
+   "score": 21,
+   "id": "c506"
   },
   {
    "year": 4000000000,
@@ -5257,7 +6856,8 @@
    "level": 5,
    "kind": "science",
    "label": "約40億年後",
-   "score": 3
+   "score": 3,
+   "id": "c507"
   },
   {
    "year": 30000000000,
@@ -5267,7 +6867,8 @@
    "level": 4,
    "kind": "cosmos",
    "label": "約300億年後",
-   "score": 43
+   "score": 43,
+   "id": "c508"
   }
  ],
  "persons": [
@@ -7316,6 +8917,33 @@
     "sex": "f"
    },
    "score": 49
+  }
+ ],
+ "linkTypes": [
+  {
+   "id": "cosmos",
+   "name": "宇宙の展開",
+   "c": 5
+  },
+  {
+   "id": "life",
+   "name": "生命・進化",
+   "c": 3
+  },
+  {
+   "id": "human",
+   "name": "人類・文明",
+   "c": 8
+  },
+  {
+   "id": "theory",
+   "name": "理論・発見",
+   "c": 7
+  },
+  {
+   "id": "tech",
+   "name": "観測・技術",
+   "c": 10
   }
  ]
 }
