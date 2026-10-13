@@ -404,7 +404,7 @@
    "level": 1,
    "kind": "cosmos",
    "label": "約138億年前",
-   "score": 93,
+   "score": 100,
    "id": "c001",
    "links": [
     {
@@ -1764,7 +1764,7 @@
    "lesson": "生命も、歴史をもつ。",
    "level": 1,
    "kind": "science",
-   "score": 100,
+   "score": 99,
    "id": "c081",
    "people": [
     "darwin"
