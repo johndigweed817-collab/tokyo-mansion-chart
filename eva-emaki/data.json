@@ -9,6 +9,15 @@
   "labels": {
    "lesson": "見どころ"
   },
+  "layout": {
+   "pitch": [
+    40,
+    90,
+    200,
+    110
+   ],
+   "minFrac": 0.3
+  },
   "credit": {
    "text": "非公式のファン作品。『新世紀エヴァンゲリオン』『ヱヴァンゲリヲン新劇場版』等の権利は各権利者に帰属します"
   },
@@ -728,6 +737,587 @@
      "note": "最終決戦の帰結"
     }
    ]
+  },
+  {
+   "id": "c_geofront",
+   "year": 2014.8,
+   "title": "第3新東京市とジオフロント",
+   "detail": "使徒に備えて築かれた要塞都市。街は迎撃のたびに地下へ格納され、その下に、広大な地下空間ジオフロントとネルフ本部が広がる。",
+   "level": 3,
+   "score": 66,
+   "kind": "org",
+   "region": "common",
+   "label": "設定",
+   "vlabel": "設定",
+   "lesson": "街そのものが、巨大な迎撃装置になっている。",
+   "approx": true
+  },
+  {
+   "id": "c_nerv",
+   "year": 2014.9,
+   "title": "特務機関ネルフ",
+   "detail": "使徒の迎撃を担う国連直属の組織。表の顔は人類の守り手だが、裏ではゼーレの計画を実行する機関でもある。",
+   "level": 2,
+   "score": 78,
+   "kind": "org",
+   "region": "common",
+   "label": "設定",
+   "vlabel": "設定",
+   "lesson": "守るための組織が、別の目的も抱えている。",
+   "approx": true,
+   "links": [
+    {
+     "to": "c_seele",
+     "t": "people",
+     "note": "ゼーレの意向と結びつく"
+    }
+   ]
+  },
+  {
+   "id": "c_magi",
+   "year": 2014.7,
+   "title": "スーパーコンピュータMAGI",
+   "detail": "三つの人格を模した、ネルフの中枢コンピュータ。作戦の判断や基地の運用を支える。",
+   "level": 4,
+   "score": 52,
+   "kind": "eva",
+   "region": "common",
+   "label": "設定",
+   "vlabel": "設定",
+   "lesson": "判断を機械に預ける、危うさと便利さ。",
+   "approx": true
+  },
+  {
+   "id": "c_eva",
+   "year": 2014.6,
+   "title": "エヴァンゲリオンとは",
+   "detail": "使徒に対抗できる、人型の巨大兵器。パイロットは操縦席（エントリープラグ）に乗り、神経をつなぐようにして動かす。普通の機械とは違う、「生き物」のような性質をもつ。",
+   "level": 2,
+   "score": 84,
+   "kind": "eva",
+   "region": "common",
+   "label": "設定",
+   "vlabel": "設定",
+   "lesson": "兵器でありながら、心を映す存在。",
+   "approx": true,
+   "links": [
+    {
+     "to": "t_19",
+     "t": "people",
+     "note": "暴走の場面で、その性質が表に出る"
+    }
+   ]
+  },
+  {
+   "id": "c_atfield",
+   "year": 2014.65,
+   "title": "ATフィールド",
+   "detail": "使徒とエヴァがもつ、心の壁とも呼ばれる力場。これを中和しなければ、使徒に攻撃は届かない。",
+   "level": 3,
+   "score": 62,
+   "kind": "eva",
+   "region": "common",
+   "label": "設定",
+   "vlabel": "設定",
+   "lesson": "守る壁は、他者を拒む壁でもある。",
+   "approx": true
+  },
+  {
+   "id": "c_children",
+   "year": 2014.75,
+   "title": "チルドレンの選出",
+   "detail": "エヴァを動かせるのは、選ばれた十代の少年少女のみ。選抜の基準や、その子たちが背負わされる重さが、物語を貫く。",
+   "level": 3,
+   "score": 60,
+   "kind": "org",
+   "region": "common",
+   "label": "設定",
+   "vlabel": "設定",
+   "lesson": "選ばれた子どもに、世界を背負わせる構図。",
+   "approx": true
+  },
+  {
+   "id": "c_spear",
+   "year": 2014.95,
+   "title": "ロンギヌスの槍",
+   "detail": "物語の鍵になる、特別な槍。計画の最終段階や、世界の行方に関わる重要な道具として、作品ごとに異なる形で現れる。",
+   "level": 3,
+   "score": 64,
+   "kind": "impact",
+   "region": "common",
+   "label": "設定",
+   "vlabel": "設定",
+   "lesson": "同じ道具が、世界線ごとに別の意味をもつ。",
+   "approx": true
+  },
+  {
+   "id": "t_00",
+   "year": 2015.005,
+   "title": "第3新東京市に到着",
+   "detail": "シンジはミサトの出迎えを受け、地下のネルフ本部へ案内される。父との再会は、温かいものではなかった。",
+   "level": 3,
+   "score": 60,
+   "kind": "org",
+   "region": "tv",
+   "label": "第1話",
+   "vlabel": "第1話",
+   "lesson": "期待していた再会が、そうならなかった。",
+   "links": [
+    {
+     "to": "c_geofront",
+     "t": "people",
+     "note": "舞台となる要塞都市"
+    }
+   ]
+  },
+  {
+   "id": "t_03",
+   "year": 2015.03,
+   "title": "ミサトとの同居",
+   "detail": "身寄りのないシンジは、ミサトのマンションで暮らし始める。ペットのペンペンも加わり、少しずつ日常が形づくられていく。",
+   "level": 3,
+   "score": 55,
+   "kind": "drama",
+   "region": "tv",
+   "label": "第2〜3話",
+   "vlabel": "第2〜3話",
+   "lesson": "戦いの合間の日常が、人物を育てる。"
+  },
+  {
+   "id": "t_04",
+   "year": 2015.04,
+   "title": "シンジの家出",
+   "detail": "戦いの重圧に耐えきれなくなったシンジは、街を去ろうとする。第4使徒シャムシエルとの戦いと重なり、彼は戻ることを選ぶ。",
+   "level": 2,
+   "score": 70,
+   "kind": "drama",
+   "region": "tv",
+   "label": "第4話",
+   "vlabel": "第4話",
+   "lesson": "逃げたい気持ちと、戻る勇気。",
+   "links": [
+    {
+     "to": "r_02",
+     "t": "echo",
+     "note": "新劇場版にも同じ使徒が登場する"
+    }
+   ]
+  },
+  {
+   "id": "t_07",
+   "year": 2015.07,
+   "title": "ジェット・アローンの出来事",
+   "detail": "人が造った巨大ロボット『ジェット・アローン』の起動実験が、ネルフと対比される形で描かれる。",
+   "level": 4,
+   "score": 42,
+   "kind": "eva",
+   "region": "tv",
+   "label": "第7話",
+   "vlabel": "第7話",
+   "lesson": "エヴァだけが、使徒に対抗する手段ではなかった？"
+  },
+  {
+   "id": "t_08g",
+   "year": 2015.081,
+   "title": "第6使徒ガギエルと海上戦",
+   "detail": "来日したアスカが、弐号機で第6使徒に挑む。シンジも同行し、二人の気質の違いが際立つ。",
+   "level": 4,
+   "score": 50,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第8話",
+   "vlabel": "第8話",
+   "lesson": "正反対の二人が、同じ戦場に立つ。"
+  },
+  {
+   "id": "t_09",
+   "year": 2015.09,
+   "title": "第7使徒イスラフェル",
+   "detail": "二つに分かれて襲いかかる使徒を倒すため、シンジとアスカが連携の特訓をする。息を合わせる中で、距離が縮まる。",
+   "level": 3,
+   "score": 58,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第9話",
+   "vlabel": "第9話",
+   "lesson": "力を合わせて初めて、倒せる敵がいる。",
+   "links": [
+    {
+     "to": "t_10",
+     "t": "cause",
+     "note": "連携の鍛錬へ"
+    }
+   ]
+  },
+  {
+   "id": "t_10b",
+   "year": 2015.101,
+   "title": "第8使徒サンダルフォン",
+   "detail": "溶岩の中で孵化しかけた使徒を、特殊装備で捕獲する作戦。弐号機が単独で潜る場面が印象を残す。",
+   "level": 4,
+   "score": 44,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第10話",
+   "vlabel": "第10話",
+   "lesson": "危険な場所で、力と準備が試される。"
+  },
+  {
+   "id": "t_11",
+   "year": 2015.11,
+   "title": "第9使徒マトリエル",
+   "detail": "第3新東京市が停電する中、酸を吐く使徒が襲来。非常時の作戦と、人々の暮らしの場面が交差する。",
+   "level": 4,
+   "score": 44,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第11話",
+   "vlabel": "第11話",
+   "lesson": "停電の中で、人の知恵が試される。"
+  },
+  {
+   "id": "t_12",
+   "year": 2015.12,
+   "title": "第10使徒サハクィエル",
+   "detail": "衛星軌道上から落下してくる使徒に対し、三人のパイロットが落下点で受け止める作戦に出る。",
+   "level": 4,
+   "score": 54,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第12話",
+   "vlabel": "第12話",
+   "lesson": "無茶な作戦を、全員で支える。"
+  },
+  {
+   "id": "t_13",
+   "year": 2015.13,
+   "title": "第11使徒イロウル",
+   "detail": "コンピュータに侵入する微小な使徒に対し、ネルフのシステムが乗っ取られかける。リツコの対処が問われる。",
+   "level": 4,
+   "score": 50,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第13話",
+   "vlabel": "第13話",
+   "lesson": "目に見えない敵との戦い。"
+  },
+  {
+   "id": "t_16",
+   "year": 2015.16,
+   "title": "第12使徒レリエルと影",
+   "detail": "影のような使徒に初号機が取り込まれ、シンジは異空間に閉じ込められる。自分の内面と向き合う場面が描かれる。",
+   "level": 2,
+   "score": 76,
+   "kind": "battle",
+   "region": "tv",
+   "label": "第16話",
+   "vlabel": "第16話",
+   "lesson": "戦いの中で、自分自身と向き合う。"
+  },
+  {
+   "id": "t_23b",
+   "year": 2015.231,
+   "title": "ネルフの秘密",
+   "detail": "リツコが、レイの正体と、ネルフの内側にある秘密を明かす。ゲンドウとゼーレの目的も、徐々に姿を見せ始める。",
+   "level": 3,
+   "score": 68,
+   "kind": "drama",
+   "region": "tv",
+   "label": "第23話",
+   "vlabel": "第23話",
+   "lesson": "秘密を知るほど、信頼が揺らぐ。",
+   "links": [
+    {
+     "to": "c_seele",
+     "t": "people",
+     "note": "計画の背後にいる組織"
+    }
+   ]
+  },
+  {
+   "id": "t_last",
+   "year": 2015.26,
+   "title": "祝福の結末（TV版）",
+   "detail": "TV版の最終話は、シンジが、自分を肯定できるようになる過程を描き、「おめでとう」の言葉で幕を閉じる。",
+   "level": 2,
+   "score": 84,
+   "kind": "drama",
+   "region": "tv",
+   "label": "第26話",
+   "vlabel": "第26話",
+   "lesson": "外の世界ではなく、自分自身の物語として終わる。"
+  },
+  {
+   "id": "e_00",
+   "year": 2015.805,
+   "title": "ゼーレ、ネルフを見限る",
+   "detail": "ゼーレは、ゲンドウの動きを警戒し、ネルフを排除する決断を下す。ゼーレの意志と、ゲンドウの意志が、別々に動き始める。",
+   "level": 3,
+   "score": 62,
+   "kind": "org",
+   "region": "end",
+   "label": "Air",
+   "vlabel": "Air",
+   "lesson": "目的が違えば、味方も敵になる。",
+   "links": [
+    {
+     "to": "c_seele",
+     "t": "people",
+     "note": "ゼーレの意志"
+    }
+   ]
+  },
+  {
+   "id": "e_gendo",
+   "year": 2015.855,
+   "title": "ゲンドウの野望の終わり",
+   "detail": "ゲンドウは、ユイとの再会を求めて計画を進めるが、レイが彼の意志を退け、望みは果たされない。",
+   "level": 2,
+   "score": 80,
+   "kind": "drama",
+   "region": "end",
+   "label": "まごころを、君に",
+   "vlabel": "まごころを、君に",
+   "lesson": "望みの形が、本当の望みを見えなくした。",
+   "links": [
+    {
+     "to": "c_yui",
+     "t": "people",
+     "note": "ユイとの再会を求めた"
+    }
+   ]
+  },
+  {
+   "id": "e_lilith",
+   "year": 2015.86,
+   "title": "リリスの顕現",
+   "detail": "レイ（リリス）の巨大な姿が現れ、空と海は赤く染まる。世界は、人の形を保てなくなっていく。",
+   "level": 2,
+   "score": 82,
+   "kind": "impact",
+   "region": "end",
+   "label": "まごころを、君に",
+   "vlabel": "まごころを、君に",
+   "lesson": "世界が、一つの形へと融けていく。"
+  },
+  {
+   "id": "e_lcl",
+   "year": 2015.865,
+   "title": "LCLの海",
+   "detail": "補完された人々は、境界を失い、一つの海に溶け合う。苦しみのない世界が、そこに現れる。",
+   "level": 2,
+   "score": 84,
+   "kind": "impact",
+   "region": "end",
+   "label": "まごころを、君に",
+   "vlabel": "まごころを、君に",
+   "lesson": "傷つかない世界は、孤独でもある。",
+   "links": [
+    {
+     "to": "e_05",
+     "t": "cause",
+     "note": "シンジが選択を迫られる"
+    }
+   ]
+  },
+  {
+   "id": "e_end",
+   "year": 2015.88,
+   "title": "浜辺の二人",
+   "detail": "世界の終わりのような風景の中、シンジはアスカと向き合う。静かな場面で、旧劇場版は幕を閉じる。",
+   "level": 2,
+   "score": 80,
+   "kind": "drama",
+   "region": "end",
+   "label": "まごころを、君に",
+   "vlabel": "まごころを、君に",
+   "lesson": "終わりは、救いか、問いか。"
+  },
+  {
+   "id": "r_asukaarr",
+   "year": 2015.055,
+   "title": "新たな日常と、同居",
+   "detail": "ミサトの家に、新たにアスカが加わる。TV版とは異なる、新しい共同生活の景色が描かれる。",
+   "level": 3,
+   "score": 58,
+   "kind": "drama",
+   "region": "rb",
+   "label": "破",
+   "vlabel": "破",
+   "lesson": "同じ家族の形が、違う顔をもつ。"
+  },
+  {
+   "id": "r_unit05",
+   "year": 2015.058,
+   "title": "5号機とマリ",
+   "detail": "新劇場版に新しく登場する5号機。パイロットのマリは、独特の気質で戦場と日常をかき回す。",
+   "level": 3,
+   "score": 56,
+   "kind": "eva",
+   "region": "rb",
+   "label": "破",
+   "vlabel": "破",
+   "lesson": "新しい登場人物が、物語を揺らす。"
+  },
+  {
+   "id": "r_shinji_dinner",
+   "year": 2015.075,
+   "title": "食卓の計画",
+   "detail": "シンジは、父と綾波レイを交えた食事会を計画する。登場人物たちの距離の変化が描かれる。",
+   "level": 4,
+   "score": 52,
+   "kind": "drama",
+   "region": "rb",
+   "label": "破",
+   "vlabel": "破",
+   "lesson": "戦いの外にある、小さな挑戦。"
+  },
+  {
+   "id": "r_wille",
+   "year": 2016.5,
+   "title": "ヴィレの結成",
+   "detail": "ニアサードインパクトのあと、ミサトたちは、ネルフに対抗する組織『ヴィレ』を結成する。",
+   "level": 2,
+   "score": 70,
+   "kind": "org",
+   "region": "rb",
+   "label": "Q以前",
+   "vlabel": "Q以前",
+   "lesson": "同じ仲間が、別の旗の下に立つ。",
+   "approx": true,
+   "links": [
+    {
+     "to": "r_10",
+     "t": "cause",
+     "note": "大災害の後に生まれた組織"
+    }
+   ]
+  },
+  {
+   "id": "r_wunder",
+   "year": 2029.02,
+   "title": "ヴンダー",
+   "detail": "ヴィレが運用する巨大な空中戦艦。Qの冒頭から、世界の変化を象徴する存在として登場する。",
+   "level": 3,
+   "score": 66,
+   "kind": "eva",
+   "region": "rb",
+   "label": "Q",
+   "vlabel": "Q",
+   "lesson": "世界が変わった印として、艦がある。",
+   "links": [
+    {
+     "to": "r_wille",
+     "t": "people",
+     "note": "ヴィレの旗艦"
+    }
+   ]
+  },
+  {
+   "id": "r_q_awake",
+   "year": 2029.03,
+   "title": "14年後の目覚め",
+   "detail": "眠りから覚めたシンジは、14年の月日が経っていることを知る。仲間たちの冷たい視線の中、事情も分からないまま立ち尽くす。",
+   "level": 2,
+   "score": 78,
+   "kind": "drama",
+   "region": "rb",
+   "label": "Q",
+   "vlabel": "Q",
+   "lesson": "自分の知らない間に、世界が変わってしまった。",
+   "links": [
+    {
+     "to": "r_10",
+     "t": "cause",
+     "note": "ニアサードインパクトの帰結"
+    }
+   ]
+  },
+  {
+   "id": "r_q_piano",
+   "year": 2029.06,
+   "title": "カヲルとの連弾",
+   "detail": "カヲルは、孤独なシンジに寄り添い、ピアノを一緒に弾く。二人の距離が縮まる静かな時間が描かれる。",
+   "level": 3,
+   "score": 60,
+   "kind": "drama",
+   "region": "rb",
+   "label": "Q",
+   "vlabel": "Q",
+   "lesson": "心を開ける相手との、わずかな時間。"
+  },
+  {
+   "id": "r_q_fourth",
+   "year": 2029.08,
+   "title": "シンジの行動と、新たな危機",
+   "detail": "シンジは、世界を元に戻したいという願いから動くが、その行動は望みと逆の結果を招いてしまう。",
+   "level": 1,
+   "score": 88,
+   "kind": "impact",
+   "region": "rb",
+   "label": "Q",
+   "vlabel": "Q",
+   "lesson": "善意の行動が、取り返しのつかない結果を生む。",
+   "links": [
+    {
+     "to": "r_q",
+     "t": "cause",
+     "note": "目覚めた後の展開"
+    }
+   ]
+  },
+  {
+   "id": "r_shin_v3",
+   "year": 2029.52,
+   "title": "第3村",
+   "detail": "シンジは、荒れた世界で人々が暮らす第3村で、旧友たちの変化を目の当たりにする。静かな日々が、彼の心に少しずつ光を戻していく。",
+   "level": 2,
+   "score": 72,
+   "kind": "drama",
+   "region": "rb",
+   "label": "シン",
+   "vlabel": "シン",
+   "lesson": "日常の暮らしが、人の心を癒やす。"
+  },
+  {
+   "id": "r_shin_misato",
+   "year": 2029.62,
+   "title": "ミサトの決断",
+   "detail": "ヴィレを率いるミサトは、シンジに道を示し、重い責任を引き受ける。彼女の選択が、決戦の流れを左右する。",
+   "level": 2,
+   "score": 80,
+   "kind": "drama",
+   "region": "rb",
+   "label": "シン",
+   "vlabel": "シン",
+   "lesson": "大人は、責任を引き受ける存在。",
+   "links": [
+    {
+     "to": "e_02",
+     "t": "echo",
+     "note": "旧劇場版のミサトの最期と呼応する"
+    }
+   ]
+  },
+  {
+   "id": "r_shin_gendo",
+   "year": 2029.75,
+   "title": "父と子の対話",
+   "detail": "最終決戦のなか、シンジはゲンドウと向き合う。二人が語る言葉の中に、この物語の核心がある。",
+   "level": 1,
+   "score": 90,
+   "kind": "drama",
+   "region": "rb",
+   "label": "シン",
+   "vlabel": "シン",
+   "lesson": "父と子が、初めて向き合う。",
+   "links": [
+    {
+     "to": "e_gendo",
+     "t": "echo",
+     "note": "旧劇場版でも、ゲンドウの野望が描かれる"
+    }
+   ]
   }
  ],
  "persons": [
@@ -1101,9 +1691,7 @@
    "detail": "南極で発見された、最初の使徒。セカンドインパクトの原因となった。",
    "face": {
     "image": "faces/adam.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "lilith",
@@ -1118,9 +1706,7 @@
    "detail": "ネルフ本部の地下に眠る存在。人類補完計画の鍵。",
    "face": {
     "image": "faces/lilith.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "sachiel",
@@ -1135,9 +1721,7 @@
    "detail": "最初に襲来した使徒。",
    "face": {
     "image": "faces/sachiel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "shamshel",
@@ -1152,9 +1736,7 @@
    "detail": "鞭のような触手を持つ使徒。",
    "face": {
     "image": "faces/shamshel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "ramiel",
@@ -1169,9 +1751,7 @@
    "detail": "正八面体の使徒。ヤシマ作戦の標的。",
    "face": {
     "image": "faces/ramiel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "gaghiel",
@@ -1186,9 +1766,7 @@
    "detail": "海中から現れる使徒。",
    "face": {
     "image": "faces/gaghiel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "israfel",
@@ -1203,9 +1781,7 @@
    "detail": "分裂する使徒。",
    "face": {
     "image": "faces/israfel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "sandalphon",
@@ -1220,9 +1796,7 @@
    "detail": "火山の中に潜む使徒。",
    "face": {
     "image": "faces/sandalphon.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "matarael",
@@ -1237,9 +1811,7 @@
    "detail": "酸を出す、蜘蛛のような使徒。",
    "face": {
     "image": "faces/matarael.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "sahaquiel",
@@ -1254,9 +1826,7 @@
    "detail": "衛星軌道から降下する使徒。",
    "face": {
     "image": "faces/sahaquiel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "ireul",
@@ -1271,9 +1841,7 @@
    "detail": "コンピュータに侵入する微小な使徒。",
    "face": {
     "image": "faces/ireul.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "leliel",
@@ -1288,9 +1856,7 @@
    "detail": "影のような使徒。",
    "face": {
     "image": "faces/leliel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "bardiel",
@@ -1305,9 +1871,7 @@
    "detail": "3号機に寄生した使徒。",
    "face": {
     "image": "faces/bardiel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "zeruel",
@@ -1322,9 +1886,7 @@
    "detail": "最強の使徒のひとつ。",
    "face": {
     "image": "faces/zeruel.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "arael",
@@ -1339,9 +1901,7 @@
    "detail": "精神を侵食する使徒。",
    "face": {
     "image": "faces/arael.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "armisael",
@@ -1356,9 +1916,7 @@
    "detail": "零号機と融合しようとする使徒。",
    "face": {
     "image": "faces/armisael.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   },
   {
    "id": "tabris",
@@ -1373,9 +1931,7 @@
    "detail": "最後の使徒。渚カヲルの姿で現れる。",
    "face": {
     "image": "faces/tabris.svg"
-   },
-   "bornApprox": true,
-   "diedApprox": true
+   }
   }
  ]
 }
