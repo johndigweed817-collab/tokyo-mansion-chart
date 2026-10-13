@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>絵巻フレーム — 歴史を、広げて、寄って、たどる</title>
+<meta name="description" content="絵巻フレームは、年表を横スクロールの絵巻にして、地図のように拡大縮小できる共通の骨組み。youside.me の EduMuse（認知科学に基づいた学習プラットフォーム）の歴史プログラム用に開発された。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="絵巻フレーム">
+<meta property="og:title" content="絵巻フレーム — 歴史を、広げて、寄って、たどる">
+<meta property="og:description" content="年表を横スクロールの絵巻にして、地図のように拡大縮小できる共通の骨組み。powered by youside.me">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://yousideme.vercel.app/emaki/">
+<meta name="theme-color" content="#2a211b">
+<link rel="icon" href="../nihonshi-emaki/icons/icon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#2a211b;--panel:#352a22;--ink:#f4e9cd;--mute:#b9a98d;--gold:#d7b45a;--gold2:#f0d487;--line:#6b563c;--red:#c8503c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;-webkit-text-size-adjust:100%}
+a{color:var(--gold);text-underline-offset:3px}
+a:hover{color:var(--gold2)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.hero{padding:64px 0 40px;text-align:center;background:radial-gradient(ellipse at 50% 0,#4a3a2c 0,transparent 70%)}
+.hero .mark{width:84px;height:84px;margin:0 auto 14px;display:block}
+.hero h1{margin:0;font-size:clamp(30px,6vw,46px);letter-spacing:.18em;color:var(--gold);font-weight:700}
+.hero p.lead{margin:14px auto 0;max-width:34em;color:var(--ink);font-size:clamp(15px,2.6vw,18px)}
+.hero .by{margin-top:18px;font-size:13px;letter-spacing:.1em;color:var(--mute)}
+section{padding:34px 0;border-top:1px solid #4a3b2d}
+h2{margin:0 0 14px;font-size:21px;color:var(--gold);letter-spacing:.1em}
+h2::before{content:"";display:inline-block;width:10px;height:10px;background:var(--red);border-radius:50%;margin-right:10px;vertical-align:middle;position:relative;top:-2px}
+p{margin:0 0 1em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.card h3{margin:0 0 6px;font-size:16px;color:var(--gold2);letter-spacing:.06em}
+.card p{margin:0;font-size:14px;line-height:1.75;color:#e6dac0}
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.works a{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:transform .15s,border-color .15s}
+.works a:hover{transform:translateY(-2px);border-color:var(--gold)}
+.works img{display:block;width:100%;aspect-ratio:1200/630;object-fit:cover;background:#1b1511}
+.works b{display:block;padding:10px 14px 2px;color:var(--gold2);letter-spacing:.08em}
+.works span{display:block;padding:0 14px 12px;font-size:13px;line-height:1.6;color:var(--mute)}
+blockquote{margin:18px 0;padding:6px 18px;border-left:3px solid var(--gold);color:var(--ink);font-size:17px;line-height:2}
+ul.plain{margin:0 0 1em;padding-left:1.3em}
+ul.plain li{margin:.3em 0}
+code{font:13px/1.6 ui-monospace,Menlo,Consolas,monospace;background:#1b1511;padding:2px 6px;border-radius:3px;color:var(--gold2)}
+pre{background:#1b1511;border:1px solid var(--line);border-radius:6px;padding:14px 16px;overflow:auto;font:13px/1.7 ui-monospace,Menlo,Consolas,monospace;color:#e6dac0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{display:inline-block;padding:9px 18px;border:1px solid var(--gold);border-radius:4px;text-decoration:none;color:var(--gold);font-size:14px;letter-spacing:.06em}
+.btn:hover{background:var(--gold);color:#2a211b}
+footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-size:13px;color:var(--mute)}
+@media (max-width:560px){header.hero{padding-top:44px}.wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="mark" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="96" fill="#1b1511"/><g transform="translate(256 256) scale(1.15) translate(-256 -282)"><rect x="104" y="176" width="304" height="160" fill="#f4e9cd"/><circle cx="312" cy="226" r="26" fill="#c8503c"/><path d="M104 336 L186 244 L238 306 L300 258 L408 336 Z" fill="#3f5f8f"/><rect x="76" y="156" width="36" height="200" rx="14" fill="#8a6a43"/><rect x="400" y="156" width="36" height="200" rx="14" fill="#8a6a43"/><path d="M100 394H412" stroke="#d7b45a" stroke-width="6" stroke-linecap="round"/></g></svg>
+    <h1>絵巻フレーム</h1>
+    <p class="lead">年表を、横に広がる一本の絵巻に。<br>広げて全体をつかみ、寄って一人ひとりの物語に出会う。</p>
+    <p class="by">powered by <a href="https://youside.me" target="_blank" rel="noopener">youside.me</a></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2>絵巻フレームとは</h2>
+  <p>絵巻フレームは、歴史の年表を「横スクロールの絵巻」として見せるための共通の骨組みです。地図アプリのように、拡大すると詳しい出来事や人物が現れ、縮小すると時代の流れが見えてきます。</p>
+  <p>画面のしくみ(フレーム)と、中身(年表)は分けてあります。だから、日本史でも、世界史でも、宇宙史でも、同じフレームで絵巻になります。</p>
+  <div class="grid">
+    <div class="card"><h3>広げる・寄る</h3><p>拡大するほど、細かな出来事や人物が現れる。縮小すると、時代の大きな流れだけが残る。</p></div>
+    <div class="card"><h3>時代を圧縮する</h3><p>138億年から数十年まで。時代ごとに時間の目盛りを伸び縮みさせ、どの時代も読みやすく並べる。</p></div>
+    <div class="card"><h3>人物と顔</h3><p>人物には、顔のイラストが付く。画像がなくても、設定から自動で描かれる。</p></div>
+    <div class="card"><h3>つながりをたどる</h3><p>出来事どうしの関連線や、人物が生きた間の出来事から、「なぜ」をたどれる。</p></div>
+    <div class="card"><h3>時代の演出</h3><p>時代の境目で、その時代らしい演出とカードが現れる。巻物、稲妻、金の雨、墨など7種類。</p></div>
+    <div class="card"><h3>外部ライブラリなし</h3><p>特別な部品に頼らず、ブラウザの標準機能だけで動く。</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>どうして作ったか</h2>
+  <p>絵巻フレームは、<a href="https://youside.me" target="_blank" rel="noopener">youside.me</a> という組織の、<b>EduMuse</b>(認知科学に基づいた学習プラットフォーム)の歴史プログラムのために開発されました。</p>
+  <p>歴史は、年号と用語を覚える科目として出会うことが多いものです。けれど本来は、人が悩み、選び、時に間違えてきた物語の積み重ねです。全体の流れを一目で見渡し、気になったところへ自分で寄っていく。その動きそのものが、学びの手がかりになると考えています。</p>
+  <p>各絵巻のキャッチコピーは、どれも同じです。</p>
+  <blockquote>歴史を学ぶのは、歴史に学ぶため。</blockquote>
+</section>
+
+<section>
+  <h2>この絵巻フレームで作られた絵巻</h2>
+  <div class="works">
+    <a href="../nihonshi-emaki/"><img src="../nihonshi-emaki/ogp.png" alt="" loading="lazy"><b>日本史絵巻</b><span>神話から現代まで。横に並ぶ時代を、拡大縮小しながらたどる。</span></a>
+    <a href="../sekaishi-emaki/"><img src="../sekaishi-emaki/ogp.png" alt="" loading="lazy"><b>世界史絵巻</b><span>四つの地域を縦に並べ、関連線で地域のつながりを見る。</span></a>
+    <a href="../uchushi-emaki/"><img src="../uchushi-emaki/ogp.png" alt="" loading="lazy"><b>宇宙史絵巻</b><span>宇宙の誕生から遠い未来まで、138億年を一本の絵巻で。</span></a>
+  </div>
+</section>
+
+<section>
+  <h2>あなたの絵巻をつくりませんか</h2>
+  <p>ご自身の生い立ちや地域の歴史、チームや組織の変遷を、この絵巻UIを使って表現したい。ご自身のブログサイトや自社のホームページに組み込みたい。そう思ってくださる方がいらっしゃいましたら、ぜひ youside.me までご相談ください。</p>
+  <div class="btns">
+    <a class="btn" href="https://youside.me" target="_blank" rel="noopener">youside.me へ相談する</a>
+  </div>
+</section>
+
+<section>
+  <h2>youside.me について</h2>
+  <p>youside.me は、データや数値に還元されにくい価値を掬い上げ、テクノロジーの力で、誰もが使い、学び、育てられる共有財(デジタルコモンズ)にすることを目指す、独立型の非営利の任意団体です。</p>
+  <p>効率化や最適化の陰で、小さなノイズや割り切れない感情、その土地ならではの風土、ひとりひとりの物語が削ぎ落とされてしまわないように。<br>公式ステートメントでは、次の言葉を掲げています。</p>
+  <blockquote>構造と慈愛、自由なナラティブで、<br>フレームの外へ。</blockquote>
+  <p>絵巻フレームも、その考えの延長にあります。構造(フレーム)は、物語に出会うための足場であって、物語を閉じ込める枠ではありません。</p>
+  <div class="btns">
+    <a class="btn" href="https://youside.me" target="_blank" rel="noopener">youside.me</a>
+    <a class="btn" href="https://noton.youside.me/@yousideme/f9df989a6541" target="_blank" rel="noopener">公式ステートメント</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">絵巻フレーム powered by <a href="https://youside.me" target="_blank" rel="noopener">youside.me</a><br>あなたの傍ら(You Side)に、いつも。<br><small>© 2026 youside.me. All rights reserved. 掲載内容・プログラムの無断転載・複製・改変・再配布を禁じます。</small></div>
+</footer>
+
+</body>
+</html>
