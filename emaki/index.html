@@ -113,7 +113,7 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
   <p data-en="Emaki Frame is an extension of that thinking. A structure (a frame) is a foothold for meeting stories, not a box that confines them.">絵巻フレームも、その考えの延長にあります。構造(フレーム)は、物語に出会うための足場であって、物語を閉じ込める枠ではありません。</p>
   <div class="btns">
     <a class="btn" href="https://youside.me" target="_blank" rel="noopener">youside.me</a>
-    <a class="btn" href="https://noton.youside.me/@yousideme/f9df989a6541" target="_blank" rel="noopener" data-en="Official statement">公式ステートメント</a>
+    <a class="btn" id="stmt" href="https://noton.youside.me/@yousideme/f9df989a6541" target="_blank" rel="noopener" data-en="Official statement">公式ステートメント</a>
   </div>
 </section>
 
@@ -140,6 +140,7 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
     document.querySelector('meta[name=description]').content=en?EN.d:meta.d;
     var as=document.querySelectorAll('.works a');
     for(var j=0;j<as.length;j++){ var h=as[j].getAttribute('href').replace(/\?.*$/,''); as[j].setAttribute('href',en?h+'?lang=en':h); }
+    document.getElementById('stmt').href='https://noton.youside.me/@yousideme/f9df989a6541'+(en?'-en':'');
     var b=document.getElementById('lg'); b.hidden=false; b.textContent=en?'日本語':'English';
   }
   document.getElementById('lg').onclick=function(){
