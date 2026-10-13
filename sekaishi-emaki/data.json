@@ -145,7 +145,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 94
+   "score": 97
   },
   {
    "id": "af_egypt",
@@ -153,12 +153,12 @@
    "title": "エジプト統一",
    "detail": "ナイル川流域に統一王朝が成立し、ファラオの支配が始まった。",
    "lesson": "年ごとの洪水が、暦と測量と官僚制を発達させた。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 84
+   "score": 74
   },
   {
    "id": "af_pyramid",
@@ -166,12 +166,12 @@
    "title": "大ピラミッド",
    "detail": "クフ王の巨大墓が建設され、王権の強さを示した。",
    "lesson": "巨大建築は、国家の動員力の証明でもある。",
-   "level": 2,
+   "level": 1,
    "kind": "culture",
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 76
+   "score": 88
   },
   {
    "id": "as_indus",
@@ -184,7 +184,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 63
+   "score": 64
   },
   {
    "id": "as_yin",
@@ -197,7 +197,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 73
+   "score": 70
   },
   {
    "id": "am_olmec",
@@ -210,7 +210,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 56
+   "score": 52
   },
   {
    "id": "as_chunqiu",
@@ -222,7 +222,7 @@
    "kind": "politics",
    "links": [],
    "region": "asia",
-   "score": 26
+   "score": 33
   },
   {
    "id": "af_kush",
@@ -234,7 +234,7 @@
    "kind": "politics",
    "links": [],
    "region": "africa",
-   "score": 24
+   "score": 31
   },
   {
    "id": "as_confucius",
@@ -247,7 +247,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 71
+   "score": 69
   },
   {
    "id": "as_achaemenid",
@@ -255,7 +255,7 @@
    "title": "アケメネス朝",
    "detail": "ペルシアが西アジアを統一し、広域を道と属州で治めた。",
    "lesson": "多様な民族を緩やかに束ねる統治モデル。",
-   "level": 1,
+   "level": 3,
    "kind": "politics",
    "links": [
     {
@@ -265,7 +265,7 @@
     }
    ],
    "region": "asia",
-   "score": 95
+   "score": 57
   },
   {
    "id": "eu_athens",
@@ -273,11 +273,11 @@
    "title": "アテネ民主政",
    "detail": "クレイステネスの改革で市民が直接政治に参加する仕組みが生まれた。",
    "lesson": "権力を市民で分け持つ発想の原点。ただし女性・奴隷は除外された。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [],
    "region": "europe",
-   "score": 83
+   "score": 74
   },
   {
    "id": "as_buddha",
@@ -285,7 +285,7 @@
    "title": "仏教の成立",
    "detail": "ガウタマ・シッダールタが悟りを開き、苦からの解放を説いた。",
    "lesson": "インドからアジア全域に広まる世界宗教となる。",
-   "level": 1,
+   "level": 2,
    "kind": "society",
    "approx": true,
    "links": [
@@ -301,7 +301,7 @@
     }
    ],
    "region": "asia",
-   "score": 87
+   "score": 75
   },
   {
    "id": "eu_persianwar",
@@ -321,7 +321,7 @@
    "title": "大王の東征",
    "detail": "マケドニア王が東方へ遠征し、エジプトからインド北西部まで版図とした。",
    "lesson": "征服が文化の混交(ヘレニズム)を生んだ。",
-   "level": 1,
+   "level": 2,
    "kind": "war",
    "links": [
     {
@@ -341,7 +341,7 @@
     }
    ],
    "region": "europe",
-   "score": 94
+   "score": 76
   },
   {
    "id": "af_alexandria",
@@ -349,11 +349,11 @@
    "title": "アレクサンドリア",
    "detail": "アレクサンドロスが港湾都市を建設し、学術の中心に育った。",
    "lesson": "図書館と研究所が、ギリシア・東方の知を集めた。",
-   "level": 2,
+   "level": 3,
    "kind": "culture",
    "links": [],
    "region": "africa",
-   "score": 70
+   "score": 55
   },
   {
    "id": "eu_punic",
@@ -371,7 +371,7 @@
     }
    ],
    "region": "europe",
-   "score": 68
+   "score": 67
   },
   {
    "id": "as_qin",
@@ -383,7 +383,7 @@
    "kind": "politics",
    "links": [],
    "region": "asia",
-   "score": 83
+   "score": 91
   },
   {
    "id": "af_carthage",
@@ -395,7 +395,7 @@
    "kind": "war",
    "links": [],
    "region": "africa",
-   "score": 63
+   "score": 64
   },
   {
    "id": "as_silkroad",
@@ -403,7 +403,7 @@
    "title": "張騫の西域行",
    "detail": "漢の使者が西域へ赴き、のちの絹の道につながる道を開いた。",
    "lesson": "使節の旅が、結果として東西交易の動脈を生んだ。",
-   "level": 1,
+   "level": 2,
    "kind": "economy",
    "links": [
     {
@@ -413,7 +413,7 @@
     }
    ],
    "region": "asia",
-   "score": 95
+   "score": 76
   },
   {
    "id": "af_ptolemy",
@@ -425,7 +425,7 @@
    "kind": "politics",
    "links": [],
    "region": "africa",
-   "score": 74
+   "score": 71
   },
   {
    "id": "eu_empire",
@@ -433,7 +433,7 @@
    "title": "ローマ帝政",
    "detail": "アウグストゥスが初代皇帝となり、地中海を囲む大帝国が安定した。",
    "lesson": "共和政の形を残しつつ独裁へ移る手法は後世の手本・反面教師となる。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [
     {
@@ -443,7 +443,7 @@
     }
    ],
    "region": "europe",
-   "score": 90
+   "score": 75
   },
   {
    "id": "as_gandhara",
@@ -456,7 +456,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 12
+   "score": 17
   },
   {
    "id": "as_jp_wa",
@@ -475,7 +475,7 @@
     }
    ],
    "region": "asia",
-   "score": 8
+   "score": 10
   },
   {
    "id": "eu_antoninus",
@@ -493,7 +493,7 @@
     }
    ],
    "region": "europe",
-   "score": 15
+   "score": 24
   },
   {
    "id": "as_jp_himiko",
@@ -501,12 +501,12 @@
    "title": "卑弥呼、魏へ",
    "detail": "倭の女王が魏に使いを送り、親魏倭王の称号を得た。",
    "lesson": "外交が国内の権威づけに使われた。",
-   "level": 2,
+   "level": 1,
    "kind": "politics",
    "jp": 239,
    "links": [],
    "region": "asia",
-   "score": 68
+   "score": 83
   },
   {
    "id": "am_maya",
@@ -519,7 +519,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 76
+   "score": 72
   },
   {
    "id": "eu_christ",
@@ -537,7 +537,7 @@
     }
    ],
    "region": "europe",
-   "score": 62
+   "score": 64
   },
   {
    "id": "af_axum",
@@ -545,11 +545,11 @@
    "title": "アクスム王国改宗",
    "detail": "エチオピア高原の王国がキリスト教を受け入れた。",
    "lesson": "アフリカ最古級のキリスト教国は、現在まで続く教会を残した。",
-   "level": 2,
+   "level": 3,
    "kind": "society",
    "links": [],
    "region": "africa",
-   "score": 74
+   "score": 56
   },
   {
    "id": "eu_split",
@@ -557,11 +557,11 @@
    "title": "ローマ東西分裂",
    "detail": "帝国は東西に分けて統治され、以後再統一されなかった。",
    "lesson": "巨大化した組織は分割して初めて保てることもある。",
-   "level": 2,
+   "level": 3,
    "kind": "politics",
    "links": [],
    "region": "europe",
-   "score": 71
+   "score": 55
   },
   {
    "id": "eu_fall",
@@ -569,11 +569,11 @@
    "title": "西ローマ滅亡",
    "detail": "ゲルマン人傭兵隊長により最後の皇帝が退位させられた。",
    "lesson": "古代の終わりと中世の始まりを分ける目印。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [],
    "region": "europe",
-   "score": 97
+   "score": 77
   },
   {
    "id": "as_jp_buddhism",
@@ -586,7 +586,7 @@
    "jp": 538,
    "links": [],
    "region": "asia",
-   "score": 49
+   "score": 48
   },
   {
    "id": "as_tang",
@@ -594,7 +594,7 @@
    "title": "唐の建国",
    "detail": "律令と都市文化が栄えた、東アジアの中心的な帝国。",
    "lesson": "周辺諸国は唐の制度を学んで国づくりをした。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [
     {
@@ -604,7 +604,7 @@
     }
    ],
    "region": "asia",
-   "score": 90
+   "score": 75
   },
   {
    "id": "as_hijra",
@@ -612,7 +612,7 @@
    "title": "イスラーム成立",
    "detail": "ムハンマドがメディナへ移り、イスラーム共同体が成立した。",
    "lesson": "信仰と政治が結びつき、急速な拡大を遂げた。",
-   "level": 1,
+   "level": 2,
    "kind": "society",
    "links": [
     {
@@ -627,7 +627,7 @@
     }
    ],
    "region": "asia",
-   "score": 98
+   "score": 77
   },
   {
    "id": "as_jp_kento",
@@ -635,12 +635,12 @@
    "title": "遣唐使",
    "detail": "日本が唐に使節と留学生を送り、制度と文化を学んだ。",
    "lesson": "学ぶ対象を選び、学び方を変えながら続けた。",
-   "level": 2,
+   "level": 1,
    "kind": "culture",
    "jp": 630,
    "links": [],
    "region": "asia",
-   "score": 70
+   "score": 85
   },
   {
    "id": "af_islam_north",
@@ -648,11 +648,11 @@
    "title": "北アフリカ改宗",
    "detail": "アラブ軍が北アフリカへ進出し、数世紀かけて言語と宗教が変わった。",
    "lesson": "サハラ以南との交易路も、イスラームを運んだ。",
-   "level": 2,
+   "level": 3,
    "kind": "society",
    "links": [],
    "region": "africa",
-   "score": 74
+   "score": 56
   },
   {
    "id": "as_umayyad",
@@ -660,7 +660,7 @@
    "title": "ウマイヤ朝",
    "detail": "イスラーム帝国が西は北アフリカ・イベリアまで広がった。",
    "lesson": "アラビア語と信仰が広域を結ぶ共通基盤となった。",
-   "level": 2,
+   "level": 3,
    "kind": "politics",
    "links": [
     {
@@ -675,7 +675,7 @@
     }
    ],
    "region": "asia",
-   "score": 72
+   "score": 55
   },
   {
    "id": "eu_tours",
@@ -683,11 +683,11 @@
    "title": "トゥール戦",
    "detail": "フランク王国がイスラーム勢力の北進を押しとどめた。",
    "lesson": "西欧とイスラーム世界の境界が固まった。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "links": [],
    "region": "europe",
-   "score": 75
+   "score": 56
   },
   {
    "id": "as_talas",
@@ -695,7 +695,7 @@
    "title": "タラス河畔の戦い",
    "detail": "唐とアッバース朝が衝突し、紙の製法がイスラーム世界へ伝わったとされる。",
    "lesson": "技術は戦いや捕虜を通じても移動する。",
-   "level": 2,
+   "level": 3,
    "kind": "tech",
    "links": [
     {
@@ -705,7 +705,7 @@
     }
    ],
    "region": "asia",
-   "score": 69
+   "score": 54
   },
   {
    "id": "eu_franks",
@@ -730,7 +730,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 53
+   "score": 50
   },
   {
    "id": "as_wisdom",
@@ -738,7 +738,7 @@
    "title": "知恵の館",
    "detail": "バグダードでギリシア語などの学術書がアラビア語に訳された。",
    "lesson": "翻訳が知を保存し、のちに欧州へ還流した。",
-   "level": 2,
+   "level": 3,
    "kind": "culture",
    "approx": true,
    "links": [
@@ -749,7 +749,7 @@
     }
    ],
    "region": "asia",
-   "score": 69
+   "score": 54
   },
   {
    "id": "as_seljuk",
@@ -767,7 +767,7 @@
     }
    ],
    "region": "asia",
-   "score": 23
+   "score": 30
   },
   {
    "id": "eu_crusade",
@@ -775,7 +775,7 @@
    "title": "十字軍",
    "detail": "教皇の呼びかけで聖地エルサレム奪回の遠征が始まった。",
    "lesson": "宗教的熱意と利権が絡み、東西の接触と対立を深めた。",
-   "level": 1,
+   "level": 2,
    "kind": "war",
    "links": [
     {
@@ -790,7 +790,7 @@
     }
    ],
    "region": "europe",
-   "score": 95
+   "score": 76
   },
   {
    "id": "af_zimbabwe",
@@ -803,7 +803,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 25
+   "score": 32
   },
   {
    "id": "as_mongol",
@@ -811,7 +811,7 @@
    "title": "モンゴル帝国",
    "detail": "チンギス・カンの下でユーラシアを横断する帝国が築かれた。",
    "lesson": "征服は破壊とともに、東西交流の安全な道を開いた。",
-   "level": 1,
+   "level": 2,
    "kind": "war",
    "links": [
     {
@@ -831,7 +831,7 @@
     }
    ],
    "region": "asia",
-   "score": 82
+   "score": 74
   },
   {
    "id": "eu_magna",
@@ -851,12 +851,12 @@
    "title": "元寇",
    "detail": "元と高麗の軍が九州に襲来した(文永・弘安の役)。",
    "lesson": "防衛戦の恩賞問題が、鎌倉幕府を揺るがした。",
-   "level": 2,
+   "level": 1,
    "kind": "war",
    "jp": 1274,
    "links": [],
    "region": "asia",
-   "score": 69
+   "score": 84
   },
   {
    "id": "as_marcopolo",
@@ -864,7 +864,7 @@
    "title": "マルコ・ポーロ",
    "detail": "ヴェネツィア商人が元の大都に至り、のちに旅の記録を残した。",
    "lesson": "一冊の旅行記が、欧州人のアジア像と憧れを形づくった。",
-   "level": 3,
+   "level": 1,
    "kind": "culture",
    "links": [
     {
@@ -874,7 +874,7 @@
     }
    ],
    "region": "asia",
-   "score": 43
+   "score": 78
   },
   {
    "id": "as_ottoman",
@@ -893,7 +893,7 @@
     }
    ],
    "region": "asia",
-   "score": 75
+   "score": 72
   },
   {
    "id": "af_mali",
@@ -901,7 +901,7 @@
    "title": "マリの黄金",
    "detail": "マリ王が大量の金を携えてメッカへ巡礼し、その富が地中海世界に知られた。",
    "lesson": "金の存在が、欧州人の関心をアフリカに向けさせた。",
-   "level": 1,
+   "level": 3,
    "kind": "economy",
    "links": [
     {
@@ -911,7 +911,7 @@
     }
    ],
    "region": "africa",
-   "score": 84
+   "score": 57
   },
   {
    "id": "am_aztec",
@@ -923,7 +923,7 @@
    "kind": "politics",
    "links": [],
    "region": "america",
-   "score": 72
+   "score": 70
   },
   {
    "id": "eu_plague",
@@ -931,11 +931,11 @@
    "title": "黒死病",
    "detail": "ペストが流行し、欧州人口の三割前後が失われたとされる。",
    "lesson": "人手不足が農奴の地位向上と教会権威の動揺を招いた。",
-   "level": 1,
+   "level": 2,
    "kind": "society",
    "links": [],
    "region": "europe",
-   "score": 90
+   "score": 75
   },
   {
    "id": "as_ming",
@@ -972,7 +972,7 @@
     }
    ],
    "region": "europe",
-   "score": 88
+   "score": 94
   },
   {
    "id": "af_swahili",
@@ -980,12 +980,12 @@
    "title": "スワヒリ海岸",
    "detail": "東アフリカの港市がインド洋交易で栄え、アラブ・ペルシア・アフリカ文化が混ざった。",
    "lesson": "海を介した交流が、独自の言語・文化を生んだ。",
-   "level": 2,
+   "level": 3,
    "kind": "economy",
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 76
+   "score": 56
   },
   {
    "id": "as_zhenghe",
@@ -993,7 +993,7 @@
    "title": "鄭和の南海遠征",
    "detail": "明の大艦隊がインド洋を渡り、東アフリカにまで達した。",
    "lesson": "圧倒的な国力を誇示しつつ、植民地化はしなかった。",
-   "level": 1,
+   "level": 3,
    "kind": "economy",
    "links": [
     {
@@ -1003,7 +1003,7 @@
     }
    ],
    "region": "asia",
-   "score": 91
+   "score": 57
   },
   {
    "id": "am_inca",
@@ -1016,7 +1016,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 63
+   "score": 64
   },
   {
    "id": "eu_print",
@@ -1024,7 +1024,7 @@
    "title": "活版印刷",
    "detail": "グーテンベルクが活字による印刷を実用化した。",
    "lesson": "情報の複製コストが下がり、知識と思想が一気に拡散した。",
-   "level": 1,
+   "level": 2,
    "kind": "tech",
    "links": [
     {
@@ -1034,7 +1034,7 @@
     }
    ],
    "region": "europe",
-   "score": 95
+   "score": 76
   },
   {
    "id": "eu_byz_fall",
@@ -1042,7 +1042,7 @@
    "title": "東ローマ滅亡",
    "detail": "オスマン帝国がコンスタンティノープルを攻略した。",
    "lesson": "地中海東部の交易路が変わり、大西洋へ目が向いた。",
-   "level": 1,
+   "level": 2,
    "kind": "war",
    "links": [
     {
@@ -1052,7 +1052,7 @@
     }
    ],
    "region": "europe",
-   "score": 85
+   "score": 75
   },
   {
    "id": "af_cape",
@@ -1060,7 +1060,7 @@
    "title": "喜望峰到達",
    "detail": "ポルトガルのディアスがアフリカ南端に達した。",
    "lesson": "アフリカ沿岸が、欧州と他地域をつなぐ中継地となった。",
-   "level": 1,
+   "level": 2,
    "kind": "economy",
    "links": [
     {
@@ -1070,7 +1070,7 @@
     }
    ],
    "region": "africa",
-   "score": 84
+   "score": 75
   },
   {
    "id": "eu_columbus",
@@ -1093,7 +1093,7 @@
     }
    ],
    "region": "europe",
-   "score": 92
+   "score": 95
   },
   {
    "id": "am_exchange",
@@ -1101,7 +1101,7 @@
    "title": "コロンブス交換",
    "detail": "旧大陸と新大陸の間で、作物・家畜・病原菌が移動した。",
    "lesson": "ジャガイモやトウモロコシが世界の人口を支え、天然痘は先住民を激減させた。",
-   "level": 1,
+   "level": 2,
    "kind": "society",
    "links": [
     {
@@ -1111,7 +1111,7 @@
     }
    ],
    "region": "america",
-   "score": 96
+   "score": 76
   },
   {
    "id": "as_gama",
@@ -1119,7 +1119,7 @@
    "title": "ガマ、インド到達",
    "detail": "ポルトガルがアフリカ南端を回る航路でインドに達した。",
    "lesson": "香辛料貿易に、欧州勢力がインド洋へ直接参入した。",
-   "level": 1,
+   "level": 2,
    "kind": "economy",
    "links": [
     {
@@ -1129,7 +1129,7 @@
     }
    ],
    "region": "asia",
-   "score": 94
+   "score": 76
   },
   {
    "id": "af_timbuktu",
@@ -1142,7 +1142,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 30
+   "score": 37
   },
   {
    "id": "af_slave",
@@ -1150,7 +1150,7 @@
    "title": "大西洋奴隷貿易",
    "detail": "アフリカから南北アメリカへ、多くの人々が強制的に連行された。",
    "lesson": "『人』を商品とした制度は、複数の大陸の経済を結びつけた。",
-   "level": 1,
+   "level": 2,
    "kind": "society",
    "approx": true,
    "links": [
@@ -1166,7 +1166,7 @@
     }
    ],
    "region": "africa",
-   "score": 86
+   "score": 75
   },
   {
    "id": "eu_reform",
@@ -1174,11 +1174,11 @@
    "title": "宗教改革",
    "detail": "ルターが教会を批判し、プロテスタントが分立した。",
    "lesson": "印刷術が、思想を国境を超えて増幅させた。",
-   "level": 1,
+   "level": 2,
    "kind": "society",
    "links": [],
    "region": "europe",
-   "score": 96
+   "score": 77
   },
   {
    "id": "am_aztec_fall",
@@ -1186,7 +1186,7 @@
    "title": "アステカ滅亡",
    "detail": "コルテス率いるスペイン軍が、先住民同盟と天然痘の助けを得て都を陥落させた。",
    "lesson": "兵器だけでなく、疫病と内部対立が大きく働いた。",
-   "level": 1,
+   "level": 2,
    "kind": "war",
    "links": [
     {
@@ -1196,7 +1196,7 @@
     }
    ],
    "region": "america",
-   "score": 85
+   "score": 75
   },
   {
    "id": "as_mughal",
@@ -1208,7 +1208,7 @@
    "kind": "politics",
    "links": [],
    "region": "asia",
-   "score": 77
+   "score": 73
   },
   {
    "id": "am_inca_fall",
@@ -1226,7 +1226,7 @@
     }
    ],
    "region": "america",
-   "score": 71
+   "score": 69
   },
   {
    "id": "as_jp_gun",
@@ -1234,12 +1234,12 @@
    "title": "鉄砲伝来",
    "detail": "種子島にポルトガル人が漂着し、鉄砲が伝わった。",
    "lesson": "新技術を短期間で国産化し、戦のかたちを変えた。",
-   "level": 2,
+   "level": 1,
    "kind": "tech",
    "jp": 1543,
    "links": [],
    "region": "asia",
-   "score": 73
+   "score": 86
   },
   {
    "id": "am_silver",
@@ -1247,7 +1247,7 @@
    "title": "ポトシ銀山",
    "detail": "アンデスで巨大な銀鉱山が発見され、世界の銀の流れが変わった。",
    "lesson": "銀は大西洋と太平洋を渡り、中国の経済に流れ込んだ。",
-   "level": 2,
+   "level": 3,
    "kind": "economy",
    "links": [
     {
@@ -1257,7 +1257,7 @@
     }
    ],
    "region": "america",
-   "score": 77
+   "score": 56
   },
   {
    "id": "as_eic",
@@ -1275,7 +1275,7 @@
     }
    ],
    "region": "asia",
-   "score": 68
+   "score": 67
   },
   {
    "id": "am_plantation",
@@ -1293,7 +1293,7 @@
     }
    ],
    "region": "america",
-   "score": 73
+   "score": 70
   },
   {
    "id": "eu_westphalia",
@@ -1305,7 +1305,7 @@
    "kind": "politics",
    "links": [],
    "region": "europe",
-   "score": 73
+   "score": 71
   },
   {
    "id": "eu_newton",
@@ -1317,7 +1317,7 @@
    "kind": "tech",
    "links": [],
    "region": "europe",
-   "score": 78
+   "score": 74
   },
   {
    "id": "eu_enlight",
@@ -1341,7 +1341,7 @@
     }
    ],
    "region": "europe",
-   "score": 63
+   "score": 64
   },
   {
    "id": "eu_indrev",
@@ -1369,7 +1369,7 @@
     }
    ],
    "region": "europe",
-   "score": 97
+   "score": 99
   },
   {
    "id": "am_indep",
@@ -1392,7 +1392,7 @@
     }
    ],
    "region": "america",
-   "score": 85
+   "score": 93
   },
   {
    "id": "eu_french",
@@ -1415,7 +1415,7 @@
     }
    ],
    "region": "europe",
-   "score": 92
+   "score": 96
   },
   {
    "id": "af_napoleon_egypt",
@@ -1427,7 +1427,7 @@
    "kind": "war",
    "links": [],
    "region": "africa",
-   "score": 30
+   "score": 37
   },
   {
    "id": "eu_napoleon",
@@ -1450,7 +1450,7 @@
     }
    ],
    "region": "europe",
-   "score": 70
+   "score": 69
   },
   {
    "id": "am_haiti",
@@ -1475,7 +1475,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 76
+   "score": 73
   },
   {
    "id": "am_monroe",
@@ -1487,7 +1487,7 @@
    "kind": "politics",
    "links": [],
    "region": "america",
-   "score": 29
+   "score": 36
   },
   {
    "id": "as_opium",
@@ -1495,7 +1495,7 @@
    "title": "アヘン戦争",
    "detail": "英国と清が戦い、清が敗れて開港と香港割譲に至った。",
    "lesson": "貿易赤字の解消が、麻薬貿易と戦争に化けた。",
-   "level": 1,
+   "level": 2,
    "kind": "war",
    "links": [
     {
@@ -1505,7 +1505,7 @@
     }
    ],
    "region": "asia",
-   "score": 97
+   "score": 77
   },
   {
    "id": "as_jp_perry",
@@ -1513,7 +1513,7 @@
    "title": "黒船来航",
    "detail": "ペリー艦隊が浦賀に来航し、開国を迫った。",
    "lesson": "外圧を契機に国内の政治体制が大きく動いた。",
-   "level": 2,
+   "level": 1,
    "kind": "politics",
    "jp": 1853,
    "links": [
@@ -1524,7 +1524,7 @@
     }
    ],
    "region": "asia",
-   "score": 62
+   "score": 80
   },
   {
    "id": "am_civil",
@@ -1536,7 +1536,7 @@
    "kind": "war",
    "links": [],
    "region": "america",
-   "score": 68
+   "score": 67
   },
   {
    "id": "as_jp_meiji",
@@ -1544,12 +1544,12 @@
    "title": "明治維新",
    "detail": "幕府が倒れ、近代国家づくりが一気に進められた。",
    "lesson": "西洋に学びつつ、独立を守るための急速な改革。",
-   "level": 2,
+   "level": 1,
    "kind": "politics",
    "jp": 1868,
    "links": [],
    "region": "asia",
-   "score": 73
+   "score": 87
   },
   {
    "id": "af_suez",
@@ -1567,7 +1567,7 @@
     }
    ],
    "region": "africa",
-   "score": 69
+   "score": 68
   },
   {
    "id": "eu_berlinconf",
@@ -1575,7 +1575,7 @@
    "title": "ベルリン会議",
    "detail": "列強がアフリカ分割のルールを、現地の代表抜きで取り決めた。",
    "lesson": "線引きは民族や地形を無視して行われた。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [
     {
@@ -1585,7 +1585,7 @@
     }
    ],
    "region": "europe",
-   "score": 89
+   "score": 75
   },
   {
    "id": "af_partition",
@@ -1593,7 +1593,7 @@
    "title": "アフリカ分割",
    "detail": "列強が大陸のほぼ全域を植民地として分け合った。",
    "lesson": "国境線は、独立後も紛争の火種として残った。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [
     {
@@ -1608,7 +1608,7 @@
     }
    ],
    "region": "africa",
-   "score": 97
+   "score": 77
   },
   {
    "id": "af_adwa",
@@ -1620,7 +1620,7 @@
    "kind": "war",
    "links": [],
    "region": "africa",
-   "score": 34
+   "score": 41
   },
   {
    "id": "as_xinhai",
@@ -1655,7 +1655,7 @@
     }
    ],
    "region": "europe",
-   "score": 83
+   "score": 92
   },
   {
    "id": "eu_russia",
@@ -1673,7 +1673,7 @@
     }
    ],
    "region": "europe",
-   "score": 93
+   "score": 96
   },
   {
    "id": "am_depression",
@@ -1696,7 +1696,7 @@
     }
    ],
    "region": "america",
-   "score": 88
+   "score": 95
   },
   {
    "id": "as_manchuria",
@@ -1704,7 +1704,7 @@
    "title": "満州事変",
    "detail": "関東軍が満州を占領し、日本が国際連盟を脱退する道を進んだ。",
    "lesson": "危機に乗じた軍の独走を、政府が止められなかった。",
-   "level": 2,
+   "level": 1,
    "kind": "war",
    "jp": 1931,
    "links": [
@@ -1715,7 +1715,7 @@
     }
    ],
    "region": "asia",
-   "score": 63
+   "score": 82
   },
   {
    "id": "eu_nazi",
@@ -1723,7 +1723,7 @@
    "title": "ナチス政権",
    "detail": "世界恐慌の混乱の中で、合法的手続きを通じて独裁が成立した。",
    "lesson": "経済不安と排外主義の結びつきは、民主政を内側から壊す。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [
     {
@@ -1733,7 +1733,7 @@
     }
    ],
    "region": "europe",
-   "score": 91
+   "score": 76
   },
   {
    "id": "am_newdeal",
@@ -1784,7 +1784,7 @@
     }
    ],
    "region": "europe",
-   "score": 95
+   "score": 98
   },
   {
    "id": "as_pacific",
@@ -1803,7 +1803,7 @@
     }
    ],
    "region": "asia",
-   "score": 93
+   "score": 97
   },
   {
    "id": "am_manhattan",
@@ -1821,7 +1821,7 @@
     }
    ],
    "region": "america",
-   "score": 72
+   "score": 70
   },
   {
    "id": "as_atomic",
@@ -1834,7 +1834,7 @@
    "jp": 1945,
    "links": [],
    "region": "asia",
-   "score": 98
+   "score": 100
   },
   {
    "id": "eu_cold",
@@ -1867,7 +1867,7 @@
     }
    ],
    "region": "europe",
-   "score": 84
+   "score": 92
   },
   {
    "id": "as_india_ind",
@@ -1885,7 +1885,7 @@
     }
    ],
    "region": "asia",
-   "score": 72
+   "score": 70
   },
   {
    "id": "am_marshall",
@@ -1893,7 +1893,7 @@
    "title": "マーシャル計画",
    "detail": "米国が西欧の戦後復興に巨額の援助を行った。",
    "lesson": "経済援助は、冷戦期の陣営づくりの手段でもあった。",
-   "level": 2,
+   "level": 3,
    "kind": "economy",
    "links": [
     {
@@ -1903,7 +1903,7 @@
     }
    ],
    "region": "america",
-   "score": 68
+   "score": 54
   },
   {
    "id": "af_apartheid",
@@ -1921,7 +1921,7 @@
     }
    ],
    "region": "africa",
-   "score": 76
+   "score": 73
   },
   {
    "id": "as_prc",
@@ -1944,7 +1944,7 @@
     }
    ],
    "region": "asia",
-   "score": 75
+   "score": 72
   },
   {
    "id": "as_korea",
@@ -1952,11 +1952,11 @@
    "title": "朝鮮戦争",
    "detail": "南北朝鮮の戦いに米中が加わり、分断が固定化した。",
    "lesson": "冷戦が、熱戦となったアジア最初の例。",
-   "level": 2,
+   "level": 1,
    "kind": "war",
    "links": [],
    "region": "asia",
-   "score": 73
+   "score": 87
   },
   {
    "id": "as_bandung",
@@ -1974,7 +1974,7 @@
     }
    ],
    "region": "asia",
-   "score": 73
+   "score": 71
   },
   {
    "id": "af_suezcrisis",
@@ -1992,7 +1992,7 @@
     }
    ],
    "region": "africa",
-   "score": 77
+   "score": 73
   },
   {
    "id": "eu_eec",
@@ -2010,7 +2010,7 @@
     }
    ],
    "region": "europe",
-   "score": 72
+   "score": 70
   },
   {
    "id": "af_year",
@@ -2018,11 +2018,11 @@
    "title": "アフリカの年",
    "detail": "17か国が一挙に独立し、植民地体制が大きく崩れた。",
    "lesson": "独立後も、経済構造や国境の問題は残された。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [],
    "region": "africa",
-   "score": 90
+   "score": 76
   },
   {
    "id": "af_algeria",
@@ -2034,7 +2034,7 @@
    "kind": "war",
    "links": [],
    "region": "africa",
-   "score": 30
+   "score": 37
   },
   {
    "id": "am_cuba",
@@ -2072,11 +2072,11 @@
    "title": "ベトナム戦争",
    "detail": "米軍が本格介入し、冷戦最大級の代理戦争となった。",
    "lesson": "圧倒的軍事力が、必ずしも政治的勝利を生まない。",
-   "level": 2,
+   "level": 1,
    "kind": "war",
    "links": [],
    "region": "asia",
-   "score": 76
+   "score": 89
   },
   {
    "id": "am_moon",
@@ -2084,11 +2084,11 @@
    "title": "月面着陸",
    "detail": "アポロ11号が人類を月に送った。",
    "lesson": "冷戦下の技術競争が、宇宙開発を加速させた。",
-   "level": 2,
+   "level": 1,
    "kind": "tech",
    "links": [],
    "region": "america",
-   "score": 73
+   "score": 88
   },
   {
    "id": "as_oil",
@@ -2106,7 +2106,7 @@
     }
    ],
    "region": "asia",
-   "score": 77
+   "score": 73
   },
   {
    "id": "as_reform",
@@ -2124,7 +2124,7 @@
     }
    ],
    "region": "asia",
-   "score": 73
+   "score": 71
   },
   {
    "id": "eu_berlin",
@@ -2142,7 +2142,7 @@
     }
    ],
    "region": "europe",
-   "score": 86
+   "score": 94
   },
   {
    "id": "eu_ussr",
@@ -2165,7 +2165,7 @@
     }
    ],
    "region": "europe",
-   "score": 82
+   "score": 91
   },
   {
    "id": "af_mandela",
@@ -2173,11 +2173,11 @@
    "title": "マンデラ大統領",
    "detail": "アパルトヘイトが撤廃され、全人種参加の選挙で政権が誕生した。",
    "lesson": "報復でなく和解を掲げた移行は、世界に希望を与えた。",
-   "level": 1,
+   "level": 2,
    "kind": "politics",
    "links": [],
    "region": "africa",
-   "score": 92
+   "score": 76
   },
   {
    "id": "af_rwanda",
@@ -2189,7 +2189,7 @@
    "kind": "society",
    "links": [],
    "region": "africa",
-   "score": 48
+   "score": 47
   },
   {
    "id": "am_internet",
@@ -2207,7 +2207,7 @@
     }
    ],
    "region": "america",
-   "score": 71
+   "score": 69
   },
   {
    "id": "eu_euro",
@@ -2219,7 +2219,7 @@
    "kind": "economy",
    "links": [],
    "region": "europe",
-   "score": 65
+   "score": 66
   },
   {
    "id": "af_china",
@@ -2231,7 +2231,7 @@
    "kind": "economy",
    "links": [],
    "region": "africa",
-   "score": 13
+   "score": 20
   },
   {
    "id": "as_afghan",
@@ -2239,11 +2239,11 @@
    "title": "アフガン侵攻",
    "detail": "同時多発テロへの報復として、米軍がアフガニスタンを攻撃した。",
    "lesson": "二十年の戦争の末、政権は元に戻った。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "links": [],
    "region": "asia",
-   "score": 69
+   "score": 55
   },
   {
    "id": "am_911",
@@ -2261,7 +2261,7 @@
     }
    ],
    "region": "america",
-   "score": 97
+   "score": 99
   },
   {
    "id": "af_au",
@@ -2273,7 +2273,7 @@
    "kind": "politics",
    "links": [],
    "region": "africa",
-   "score": 51
+   "score": 49
   },
   {
    "id": "am_2008",
@@ -2281,7 +2281,7 @@
    "title": "リーマン危機",
    "detail": "米国の住宅金融の破綻が、世界金融危機に発展した。",
    "lesson": "複雑な金融商品が、危機を世界へ伝播させた。",
-   "level": 1,
+   "level": 2,
    "kind": "economy",
    "links": [
     {
@@ -2291,7 +2291,7 @@
     }
    ],
    "region": "america",
-   "score": 89
+   "score": 75
   },
   {
    "id": "eu_debt",
@@ -2299,11 +2299,11 @@
    "title": "欧州債務危機",
    "detail": "ギリシャの財政問題がユーロ圏全体の信用不安に広がった。",
    "lesson": "金融危機は国境を越えて連鎖する。",
-   "level": 2,
+   "level": 3,
    "kind": "economy",
    "links": [],
    "region": "europe",
-   "score": 72
+   "score": 55
   },
   {
    "id": "eu_ukraine",
@@ -2311,7 +2311,7 @@
    "title": "ウクライナ侵攻",
    "detail": "ロシアがウクライナへ全面侵攻し、欧州の安全保障が揺らいだ。",
    "lesson": "エネルギーや食糧を通じて、遠い地域にも影響が及んだ。",
-   "level": 2,
+   "level": 1,
    "kind": "war",
    "links": [
     {
@@ -2321,7 +2321,7 @@
     }
    ],
    "region": "europe",
-   "score": 62
+   "score": 81
   },
   {
    "id": "w3_001",
@@ -2334,7 +2334,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 65
+   "score": 66
   },
   {
    "id": "w3_002",
@@ -2342,12 +2342,12 @@
    "title": "カデシュの戦い",
    "detail": "エジプトのラムセス2世とヒッタイトが、シリアで大規模な戦車戦を戦った。のち結ばれた講和条約は、現存最古級の国際条約とされる。",
    "lesson": "勝ち負けが決まらない戦いは、条約という発明を生んだ。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 68
+   "score": 54
   },
   {
    "id": "w3_003",
@@ -2360,7 +2360,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 44
+   "score": 45
   },
   {
    "id": "w3_004",
@@ -2373,7 +2373,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 48
+   "score": 47
   },
   {
    "id": "w3_005",
@@ -2386,7 +2386,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w3_006",
@@ -2399,7 +2399,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 34
+   "score": 41
   },
   {
    "id": "w3_007",
@@ -2412,7 +2412,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 28
+   "score": 36
   },
   {
    "id": "w3_008",
@@ -2420,12 +2420,12 @@
    "title": "バビロン捕囚",
    "detail": "新バビロニアのネブカドネザル2世がエルサレムを陥とし、ユダ王国の人々を連行した。捕囚のなかでユダヤ教の聖典編纂が進んだとされる。",
    "lesson": "故郷を失った共同体は、書物と信仰で自分たちをつなぎ止めた。",
-   "level": 2,
+   "level": 3,
    "kind": "society",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 63
+   "score": 53
   },
   {
    "id": "w3_009",
@@ -2433,12 +2433,12 @@
    "title": "ローマ共和政の成立",
    "detail": "伝承では、王を追放して執政官(コンスル)が選ばれる共和政が始まった。権力を一人に集めない仕組みが整えられていく。",
    "lesson": "権力を分け、任期を区切る発想は、後世の憲法の原型になった。",
-   "level": 2,
+   "level": 3,
    "kind": "politics",
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 77
+   "score": 56
   },
   {
    "id": "w3_010",
@@ -2446,12 +2446,12 @@
    "title": "サラミスの海戦",
    "detail": "アテネの将軍テミストクレスが、狭い海峡にペルシア艦隊をおびき入れて大勝した。三段櫂船の漕ぎ手は市民たちだった。",
    "lesson": "海で戦った市民が、民主政を支える発言力をもった。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 73
+   "score": 55
   },
   {
    "id": "w3_011",
@@ -2459,12 +2459,12 @@
    "title": "ペロポネソス戦争",
    "detail": "アテネ中心のデロス同盟とスパルタ中心のペロポネソス同盟が約27年戦った。ギリシア世界は疲れ果てて衰えた。",
    "lesson": "覇権を競う戦いは、勝者も消耗させる。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 77
+   "score": 57
   },
   {
    "id": "w3_012",
@@ -2477,7 +2477,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 52
+   "score": 49
   },
   {
    "id": "w3_013",
@@ -2485,12 +2485,12 @@
    "title": "焚書坑儒",
    "detail": "秦の始皇帝は、思想統制のため役立つ実用書以外の書物を焼かせ、学者を生き埋めにしたと伝わる。",
    "lesson": "思想の統一は、国を固めるが、知を痩せさせる。",
-   "level": 3,
+   "level": 2,
    "kind": "culture",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 55
+   "score": 63
   },
   {
    "id": "w3_014",
@@ -2503,7 +2503,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 65
+   "score": 66
   },
   {
    "id": "w3_015",
@@ -2516,7 +2516,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 53
+   "score": 50
   },
   {
    "id": "w3_016",
@@ -2529,7 +2529,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 25
+   "score": 32
   },
   {
    "id": "w3_017",
@@ -2542,7 +2542,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 37
+   "score": 43
   },
   {
    "id": "w3_018",
@@ -2555,7 +2555,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 76
+   "score": 73
   },
   {
    "id": "w3_019",
@@ -2568,7 +2568,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 26
+   "score": 33
   },
   {
    "id": "w3_020",
@@ -2576,12 +2576,12 @@
    "title": "イエスの処刑",
    "detail": "ローマ総督ピラトの下でイエスが十字架刑に処されたとされる。弟子たちの語りからキリスト教が広がった。",
    "lesson": "小さな属州の出来事が、世界の暦と信仰を変えた。",
-   "level": 3,
+   "level": 2,
    "kind": "society",
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 54
+   "score": 62
   },
   {
    "id": "w3_021",
@@ -2594,7 +2594,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 42
   },
   {
    "id": "w3_022",
@@ -2602,12 +2602,12 @@
    "title": "エルサレム神殿の破壊",
    "detail": "ユダヤ戦争でローマ軍が第二神殿を焼いた。のち各地に離散(ディアスポラ)するユダヤ人の暮らしが固まっていく。",
    "lesson": "聖地を失った民は、教えと共同体を持ち歩くことで生き延びた。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 51
+   "score": 61
   },
   {
    "id": "w3_023",
@@ -2620,7 +2620,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 7
+   "score": 9
   },
   {
    "id": "w3_024",
@@ -2633,7 +2633,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 69
+   "score": 68
   },
   {
    "id": "w3_025",
@@ -2646,7 +2646,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 77
+   "score": 74
   },
   {
    "id": "w3_026",
@@ -2654,12 +2654,12 @@
    "title": "黄巾の乱",
    "detail": "太平道の教祖張角のもと、数十万の農民が黄色い布を巻いて蜂起した。漢はこれを機に、地方の将軍たちが力を持ち群雄割拠へ向かう。",
    "lesson": "信仰と貧しさが結びつくと、大きな運動になる。",
-   "level": 3,
+   "level": 2,
    "kind": "society",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 45
+   "score": 59
   },
   {
    "id": "w3_027",
@@ -2672,7 +2672,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 73
+   "score": 71
   },
   {
    "id": "w3_028",
@@ -2685,7 +2685,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 44
+   "score": 45
   },
   {
    "id": "w3_029",
@@ -2693,12 +2693,12 @@
    "title": "ニカイア公会議",
    "detail": "コンスタンティヌス帝が各地の司教を集め、教義の統一をはかった。皇帝が教会の会議を主宰した最初の例。",
    "lesson": "宗教の統一は、帝国の統一とも結びついた。",
-   "level": 2,
+   "level": 3,
    "kind": "culture",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 66
+   "score": 54
   },
   {
    "id": "w3_030",
@@ -2706,12 +2706,12 @@
    "title": "コンスタンティノープル遷都",
    "detail": "コンスタンティヌス帝は、ボスポラス海峡に面するビザンティオンを新たな首都とした。のち千年以上続く東ローマの都となる。",
    "lesson": "交易路を押さえる位置が、都市の寿命を決めた。",
-   "level": 2,
+   "level": 3,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 64
+   "score": 54
   },
   {
    "id": "w3_031",
@@ -2724,7 +2724,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 72
+   "score": 70
   },
   {
    "id": "w3_032",
@@ -2737,7 +2737,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 27
+   "score": 34
   },
   {
    "id": "w3_033",
@@ -2745,12 +2745,12 @@
    "title": "ローマ略奪",
    "detail": "西ゴート王アラリックがローマに入り、3日間略奪した。ローマ市が外敵に陥ちたのは約800年ぶりで、帝国の衰えを人々に印象づけた。",
    "lesson": "不落と信じられた都の陥落は、人々の心を大きく揺らした。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 55
+   "score": 63
   },
   {
    "id": "w3_034",
@@ -2763,7 +2763,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 33
+   "score": 40
   },
   {
    "id": "w3_035",
@@ -2776,7 +2776,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 27
+   "score": 34
   },
   {
    "id": "w3_036",
@@ -2789,7 +2789,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 53
+   "score": 50
   },
   {
    "id": "w3_037",
@@ -2836,12 +2836,12 @@
    "title": "アッバース朝の成立",
    "detail": "ウマイヤ朝を倒したアッバース朝は、非アラブ人のムスリムにも平等を認めた。のち都バグダードが「平和の都」として栄える。",
    "lesson": "出身ではなく信仰で人を束ねたことが、帝国を広げた。",
-   "level": 2,
+   "level": 3,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 65
+   "score": 54
   },
   {
    "id": "w3_041",
@@ -2854,7 +2854,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 63
+   "score": 64
   },
   {
    "id": "w3_042",
@@ -2862,12 +2862,12 @@
    "title": "ヴェルダン条約",
    "detail": "カール大帝の孫たちが帝国を三つに分けた。のちのフランス・ドイツ・イタリアのもとになる区分とされる。",
    "lesson": "相続の分割が、国のかたちを決めた。",
-   "level": 2,
+   "level": 3,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 77
+   "score": 57
   },
   {
    "id": "w3_043",
@@ -2880,7 +2880,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 44
+   "score": 45
   },
   {
    "id": "w3_044",
@@ -2906,7 +2906,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 66
+   "score": 67
   },
   {
    "id": "w3_046",
@@ -2914,12 +2914,12 @@
    "title": "神聖ローマ帝国の成立",
    "detail": "オットー1世が教皇から皇帝の冠を受けた。のち「帝国」は1806年まで続くが、実際には諸侯の寄り合いに近かった。",
    "lesson": "名前は残っても、実質は大きく変わっていく。",
-   "level": 2,
+   "level": 3,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 74
+   "score": 56
   },
   {
    "id": "w3_047",
@@ -2932,7 +2932,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 42
   },
   {
    "id": "w3_048",
@@ -2940,12 +2940,12 @@
    "title": "東西教会の分裂",
    "detail": "ローマ教皇とコンスタンティノープル総主教が互いに破門し合い、カトリックと正教会に分かれた。",
    "lesson": "小さな教義の違いと権威争いが、千年の溝になった。",
-   "level": 2,
+   "level": 3,
    "kind": "culture",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 73
+   "score": 55
   },
   {
    "id": "w3_049",
@@ -2958,7 +2958,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 69
+   "score": 68
   },
   {
    "id": "w3_050",
@@ -2971,7 +2971,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 71
+   "score": 69
   },
   {
    "id": "w3_051",
@@ -2984,7 +2984,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 34
+   "score": 41
   },
   {
    "id": "w3_052",
@@ -2992,12 +2992,12 @@
    "title": "第4回十字軍のコンスタンティノープル略奪",
    "detail": "ヴェネツィアに利用された十字軍は、聖地ではなく同じキリスト教国の都を攻め、略奪して「ラテン帝国」を建てた。",
    "lesson": "目的が借金や商売の都合にすり替わると、運動の理想は失われる。",
-   "level": 4,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 38
+   "score": 44
   },
   {
    "id": "w3_053",
@@ -3010,7 +3010,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 28
+   "score": 36
   },
   {
    "id": "w3_054",
@@ -3018,12 +3018,12 @@
    "title": "バグダード陥落",
    "detail": "フレグ率いるモンゴル軍がバグダードを陥れ、アッバース朝を滅ぼした。図書館や学術施設も大きな被害を受けた。",
    "lesson": "学問の都でも、防衛を失えばたやすく滅ぶ。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 71
+   "score": 55
   },
   {
    "id": "w3_055",
@@ -3036,7 +3036,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 27
+   "score": 34
   },
   {
    "id": "w3_056",
@@ -3049,7 +3049,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 25
+   "score": 32
   },
   {
    "id": "w3_057",
@@ -3062,7 +3062,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 27
+   "score": 34
   },
   {
    "id": "w3_058",
@@ -3075,7 +3075,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 53
+   "score": 50
   },
   {
    "id": "w3_059",
@@ -3088,7 +3088,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 74
+   "score": 71
   },
   {
    "id": "w3_060",
@@ -3101,7 +3101,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w3_061",
@@ -3114,7 +3114,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 32
+   "score": 40
   },
   {
    "id": "w3_062",
@@ -3140,7 +3140,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 53
+   "score": 51
   },
   {
    "id": "w3_064",
@@ -3153,7 +3153,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 8
+   "score": 11
   },
   {
    "id": "w3_065",
@@ -3161,12 +3161,12 @@
    "title": "グラナダ陥落",
    "detail": "スペインの両王がナスル朝の最後の拠点グラナダを陥れ、レコンキスタが完了した。同じ年、コロンブスは出航した。",
    "lesson": "国土回復の勢いが、そのまま海外進出へ向かった。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 68
+   "score": 54
   },
   {
    "id": "w3_066",
@@ -3174,12 +3174,12 @@
    "title": "トルデシリャス条約",
    "detail": "スペインとポルトガルが、大西洋の線を引いて世界を二分する取り決めをした。先住の人々は一切関わっていない。",
    "lesson": "地図の上の線が、遠い土地の運命を決めた。",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 46
+   "score": 60
   },
   {
    "id": "w3_067",
@@ -3192,7 +3192,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 71
+   "score": 69
   },
   {
    "id": "w3_068",
@@ -3205,7 +3205,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 35
+   "score": 41
   },
   {
    "id": "w3_069",
@@ -3218,7 +3218,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 32
+   "score": 40
   },
   {
    "id": "w3_070",
@@ -3231,7 +3231,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 69
+   "score": 68
   },
   {
    "id": "w3_071",
@@ -3244,7 +3244,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 32
+   "score": 40
   },
   {
    "id": "w3_072",
@@ -3252,12 +3252,12 @@
    "title": "レパントの海戦",
    "detail": "スペイン・ヴェネツィア・教皇の連合艦隊が、オスマン艦隊を破った。作家セルバンテスも従軍している。",
    "lesson": "ガレー船同士の最後の大海戦だった。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 62
   },
   {
    "id": "w3_073",
@@ -3270,7 +3270,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 50
+   "score": 48
   },
   {
    "id": "w3_074",
@@ -3283,7 +3283,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w3_075",
@@ -3296,7 +3296,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 66
+   "score": 67
   },
   {
    "id": "w3_076",
@@ -3309,7 +3309,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 14
+   "score": 22
   },
   {
    "id": "w3_077",
@@ -3322,7 +3322,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 32
+   "score": 40
   },
   {
    "id": "w3_078",
@@ -3330,12 +3330,12 @@
    "title": "ジェームズタウンの建設",
    "detail": "イングランドが北米で初めて恒久的な植民地を築いた。のちタバコ栽培で栄え、1619年にはアフリカ人が連れてこられた。",
    "lesson": "自由の土地と呼ばれた場所は、奴隷制とともに始まった。",
-   "level": 3,
+   "level": 2,
    "kind": "society",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 43
+   "score": 58
   },
   {
    "id": "w3_079",
@@ -3348,7 +3348,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 65
+   "score": 66
   },
   {
    "id": "w3_080",
@@ -3356,12 +3356,12 @@
    "title": "メイフラワー号",
    "detail": "信仰の自由を求めたピューリタンの一団が、北米のプリマスに上陸した。上陸前に「メイフラワー誓約」を結んだ。",
    "lesson": "自分たちで合意して社会を作る経験が、のちの米国の自治につながる。",
-   "level": 3,
+   "level": 2,
    "kind": "society",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 49
+   "score": 61
   },
   {
    "id": "w3_081",
@@ -3374,7 +3374,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 3
+   "score": 2
   },
   {
    "id": "w3_082",
@@ -3387,7 +3387,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 75
+   "score": 72
   },
   {
    "id": "w3_083",
@@ -3400,7 +3400,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 65
+   "score": 66
   },
   {
    "id": "w3_084",
@@ -3413,7 +3413,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 37
+   "score": 43
   },
   {
    "id": "w3_085",
@@ -3439,7 +3439,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 62
+   "score": 64
   },
   {
    "id": "w3_087",
@@ -3452,7 +3452,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w3_088",
@@ -3465,7 +3465,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 51
   },
   {
    "id": "w3_089",
@@ -3491,7 +3491,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 75
+   "score": 72
   },
   {
    "id": "w3_091",
@@ -3499,12 +3499,12 @@
    "title": "ワットの蒸気機関",
    "detail": "ジェームズ・ワットが、効率を大きく高めた蒸気機関の特許を取った。工場や鉱山、のちの鉄道の動力となる。",
    "lesson": "動力が人や水車から解き放たれた。",
-   "level": 3,
+   "level": 2,
    "kind": "tech",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 43
+   "score": 58
   },
   {
    "id": "w3_092",
@@ -3517,7 +3517,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 73
+   "score": 71
   },
   {
    "id": "w3_093",
@@ -3525,12 +3525,12 @@
    "title": "ルイ16世の処刑",
    "detail": "フランス革命の中で国王がギロチンにかけられた。ヨーロッパの王政国家は革命に対して同盟を結び、戦争が拡大した。",
    "lesson": "王の処刑は、後戻りできない一線だった。",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 46
+   "score": 60
   },
   {
    "id": "w3_094",
@@ -3543,7 +3543,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 42
+   "score": 44
   },
   {
    "id": "w3_095",
@@ -3556,7 +3556,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 24
+   "score": 31
   },
   {
    "id": "w3_096",
@@ -3564,12 +3564,12 @@
    "title": "ナポレオンのロシア遠征",
    "detail": "60万近い大軍がモスクワに入ったが、焦土戦術と冬の寒さで撤退し、壊滅した。",
    "lesson": "補給を失った大軍は、敵より気候に負けた。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 63
+   "score": 54
   },
   {
    "id": "w3_097",
@@ -3577,12 +3577,12 @@
    "title": "ワーテルローとウィーン会議",
    "detail": "ナポレオンが最終的に敗れた。ウィーン会議は、革命前の秩序を回復しようとする保守的な国際体制を作った。",
    "lesson": "勢力の均衡を守るための仕組みが、約100年の比較的大きな戦争のない時期を支えた。",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 67
+   "score": 54
   },
   {
    "id": "w3_098",
@@ -3595,7 +3595,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 57
+   "score": 52
   },
   {
    "id": "w3_099",
@@ -3603,12 +3603,12 @@
    "title": "七月革命",
    "detail": "パリの市民が蜂起し、ブルボン朝のシャルル10世を退位させた。ベルギー独立やポーランド蜂起など、各地に影響を与えた。",
    "lesson": "革命は国境を越えて広がる。",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 43
+   "score": 58
   },
   {
    "id": "w3_100",
@@ -3621,7 +3621,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 76
+   "score": 73
   },
   {
    "id": "w3_101",
@@ -3634,7 +3634,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 26
+   "score": 33
   },
   {
    "id": "w3_102",
@@ -3647,7 +3647,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w3_103",
@@ -3660,7 +3660,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 78
+   "score": 74
   },
   {
    "id": "w3_104",
@@ -3668,12 +3668,12 @@
    "title": "クリミア戦争",
    "detail": "ロシアとオスマン・英・仏などが戦った。ナイチンゲールの看護活動で知られ、電信や鉄道も使われた近代戦の始まり。",
    "lesson": "戦争の報道と看護が、社会の意識を変えた。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 50
+   "score": 61
   },
   {
    "id": "w3_105",
@@ -3686,7 +3686,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 74
+   "score": 71
   },
   {
    "id": "w3_106",
@@ -3699,7 +3699,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 42
   },
   {
    "id": "w3_107",
@@ -3712,7 +3712,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 71
+   "score": 69
   },
   {
    "id": "w3_108",
@@ -3720,12 +3720,12 @@
    "title": "大陸横断鉄道の開通",
    "detail": "アメリカの東西の鉄道がユタで結ばれた。中国人移民の労働者も建設を担った。",
    "lesson": "鉄道が広大な国土をひとつの市場に変えた。",
-   "level": 3,
+   "level": 2,
    "kind": "tech",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 57
+   "score": 63
   },
   {
    "id": "w3_109",
@@ -3738,7 +3738,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 71
+   "score": 70
   },
   {
    "id": "w3_110",
@@ -3746,12 +3746,12 @@
    "title": "ベルの電話",
    "detail": "グラハム・ベルが電話の特許を取った。電話交換網が都市と企業を結ぶインフラになる。",
    "lesson": "声を距離を越えて運ぶ技術が、通信を日常にした。",
-   "level": 3,
+   "level": 2,
    "kind": "tech",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 55
+   "score": 63
   },
   {
    "id": "w3_111",
@@ -3764,7 +3764,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 8
+   "score": 11
   },
   {
    "id": "w3_112",
@@ -3772,12 +3772,12 @@
    "title": "日清戦争",
    "detail": "朝鮮の支配権をめぐり、日本が清に勝った。下関条約で台湾などを得た。東アジアの秩序が大きく変わった。",
    "lesson": "「眠れる獅子」の弱さが、列強の中国分割を加速させた。",
-   "level": 2,
+   "level": 1,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 66
+   "score": 83
   },
   {
    "id": "w3_113",
@@ -3785,12 +3785,12 @@
    "title": "米西戦争",
    "detail": "キューバの独立運動への支援を名目に、アメリカがスペインと戦って勝った。フィリピン・グアム・プエルトリコを得て、海外へ進出した。",
    "lesson": "アメリカが「帝国」の道へ踏み出した。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 58
+   "score": 64
   },
   {
    "id": "w3_114",
@@ -3803,7 +3803,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 26
+   "score": 33
   },
   {
    "id": "w3_115",
@@ -3816,7 +3816,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 74
+   "score": 71
   },
   {
    "id": "w3_116",
@@ -3824,12 +3824,12 @@
    "title": "ライト兄弟の初飛行",
    "detail": "ノースカロライナで動力付き有人飛行に成功した。最初の飛行は12秒、飛行距離は約36mだった。",
    "lesson": "小さな実験が、20世紀の戦争と交通を変えた。",
-   "level": 2,
+   "level": 1,
    "kind": "tech",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 72
+   "score": 86
   },
   {
    "id": "w3_117",
@@ -3837,12 +3837,12 @@
    "title": "日露戦争",
    "detail": "日本海海戦で日本がロシアのバルチック艦隊を破り、ポーツマス条約で講和した。アジアの国が欧州の大国に勝ったことは、各地の民族運動に影響した。",
    "lesson": "アジアの勝利は、植民地の人々に勇気を与えた。",
-   "level": 2,
+   "level": 1,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 68
+   "score": 84
   },
   {
    "id": "w3_118",
@@ -3855,7 +3855,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 56
+   "score": 52
   },
   {
    "id": "w3_119",
@@ -3863,12 +3863,12 @@
    "title": "フォードT型",
    "detail": "ヘンリー・フォードは流れ作業で自動車を量産し、価格を大きく下げた。自動車が大衆の乗り物になった。",
    "lesson": "生産方式の革新が、生活を変え、社会を変えた。",
-   "level": 2,
+   "level": 3,
    "kind": "economy",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 71
+   "score": 55
   },
   {
    "id": "w3_120",
@@ -3881,7 +3881,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 51
+   "score": 49
   },
   {
    "id": "w3_121",
@@ -3894,7 +3894,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 45
+   "score": 46
   },
   {
    "id": "w3_122",
@@ -3907,7 +3907,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 77
+   "score": 74
   },
   {
    "id": "w3_123",
@@ -3920,7 +3920,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 72
+   "score": 70
   },
   {
    "id": "w3_124",
@@ -3928,12 +3928,12 @@
    "title": "五・四運動",
    "detail": "パリ講和会議で山東半島の旧ドイツ権益が日本に渡されると知った北京の学生たちが抗議した。中国の民族運動の転機となる。",
    "lesson": "学生の抗議が、国民意識を目覚めさせた。",
-   "level": 3,
+   "level": 2,
    "kind": "society",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 48
+   "score": 60
   },
   {
    "id": "w3_125",
@@ -3946,7 +3946,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 58
+   "score": 53
   },
   {
    "id": "w3_126",
@@ -3959,7 +3959,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 70
+   "score": 69
   },
   {
    "id": "w3_127",
@@ -3967,12 +3967,12 @@
    "title": "長征",
    "detail": "国民党軍に追われた共産党軍が、江西から陝西まで約1万2千kmを移動した。毛沢東が指導権を固めた。",
    "lesson": "敗走が、のちの勝利の伝説になった。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 55
+   "score": 63
   },
   {
    "id": "w3_128",
@@ -3980,12 +3980,12 @@
    "title": "スペイン内戦",
    "detail": "共和国政府とフランコ将軍の反乱軍が戦った。ドイツ・イタリアはフランコを、ソ連は共和国を支援し、ゲルニカ爆撃も起きた。",
    "lesson": "第二次世界大戦の前哨戦として、各国が試した。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 49
+   "score": 61
   },
   {
    "id": "w3_129",
@@ -3993,12 +3993,12 @@
    "title": "日中戦争",
    "detail": "盧溝橋事件をきっかけに、日本と中国が全面戦争に入った。南京が陥落し、戦いは長期化した。",
    "lesson": "終わりの見えない戦いが、世界大戦につながった。",
-   "level": 2,
+   "level": 1,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 77
+   "score": 90
   },
   {
    "id": "w3_130",
@@ -4006,12 +4006,12 @@
    "title": "バトル・オブ・ブリテン",
    "detail": "ドイツ空軍がイギリスの制空権を奪おうとしたが、レーダーと戦闘機隊が防いだ。ヒトラーの英本土上陸計画は断念された。",
    "lesson": "技術と組織が、数の差を覆した。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 45
+   "score": 59
   },
   {
    "id": "w3_131",
@@ -4024,7 +4024,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 69
+   "score": 68
   },
   {
    "id": "w3_132",
@@ -4050,7 +4050,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 74
+   "score": 71
   },
   {
    "id": "w3_134",
@@ -4058,12 +4058,12 @@
    "title": "国際連合の発足",
    "detail": "サンフランシスコ会議で国連憲章が採択された。常任理事国には拒否権が与えられた。",
    "lesson": "戦争の再発を防ぐ仕組みは、大国の拒否権と引き換えに実現した。",
-   "level": 2,
+   "level": 1,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 62
+   "score": 81
   },
   {
    "id": "w3_135",
@@ -4076,7 +4076,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 63
+   "score": 65
   },
   {
    "id": "w3_136",
@@ -4089,7 +4089,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 65
+   "score": 66
   },
   {
    "id": "w3_137",
@@ -4102,7 +4102,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 63
+   "score": 65
   },
   {
    "id": "w3_138",
@@ -4123,12 +4123,12 @@
    "title": "大躍進",
    "detail": "毛沢東が農業と工業の急速な増産を目指したが、現実を無視した政策で大規模な飢饉を招いた。",
    "lesson": "数字を競う政治は、現実の見えない政策を生む。",
-   "level": 3,
+   "level": 2,
    "kind": "society",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 46
+   "score": 60
   },
   {
    "id": "w3_140",
@@ -4141,7 +4141,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 74
+   "score": 72
   },
   {
    "id": "w3_141",
@@ -4154,7 +4154,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 78
+   "score": 74
   },
   {
    "id": "w3_142",
@@ -4162,12 +4162,12 @@
    "title": "ガガーリンの宇宙飛行",
    "detail": "ソ連のガガーリンが、人類初の有人宇宙飛行に成功した。「地球は青かった」の言葉で知られる。",
    "lesson": "人類が初めて、地球を外から見た。",
-   "level": 2,
+   "level": 1,
    "kind": "tech",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 62
+   "score": 82
   },
   {
    "id": "w3_143",
@@ -4180,7 +4180,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 63
+   "score": 65
   },
   {
    "id": "w3_144",
@@ -4188,12 +4188,12 @@
    "title": "第三次中東戦争",
    "detail": "イスラエルが6日間でエジプト・シリア・ヨルダンを破り、シナイ半島、ガザ、ヨルダン川西岸、ゴラン高原を占領した。",
    "lesson": "短い戦争が、今なお続く問題を生んだ。",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 51
+   "score": 61
   },
   {
    "id": "w3_145",
@@ -4206,7 +4206,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 55
+   "score": 51
   },
   {
    "id": "w3_146",
@@ -4219,7 +4219,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 29
+   "score": 36
   },
   {
    "id": "w3_147",
@@ -4245,7 +4245,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 69
+   "score": 68
   },
   {
    "id": "w3_149",
@@ -4258,7 +4258,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 76
+   "score": 73
   },
   {
    "id": "w3_150",
@@ -4271,7 +4271,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 74
+   "score": 72
   },
   {
    "id": "w3_151",
@@ -4284,7 +4284,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 70
+   "score": 69
   },
   {
    "id": "w3_152",
@@ -4297,7 +4297,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 70
+   "score": 69
   },
   {
    "id": "w3_153",
@@ -4310,7 +4310,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 64
+   "score": 65
   },
   {
    "id": "w3_154",
@@ -4323,7 +4323,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 56
+   "score": 52
   },
   {
    "id": "w3_155",
@@ -4344,12 +4344,12 @@
    "title": "香港返還",
    "detail": "イギリスから中国へ香港が返還され、「一国二制度」が始まった。",
    "lesson": "期限を決めた約束は、時間とともに意味が変わる。",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 55
+   "score": 63
   },
   {
    "id": "w3_157",
@@ -4362,7 +4362,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 75
+   "score": 72
   },
   {
    "id": "w3_158",
@@ -4375,7 +4375,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 76
+   "score": 73
   },
   {
    "id": "w3_159",
@@ -4388,7 +4388,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 74
+   "score": 72
   },
   {
    "id": "w3_160",
@@ -4396,12 +4396,12 @@
    "title": "COVID-19のパンデミック",
    "detail": "新型コロナウイルスが世界に広がり、都市封鎖や遠隔勤務が広まった。ワクチンも極めて短期間で開発された。",
    "lesson": "世界は、一つの感染症で同時に止まりうると知った。",
-   "level": 2,
+   "level": 1,
    "kind": "society",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 78
+   "score": 90
   },
   {
    "id": "w4_001",
@@ -4414,7 +4414,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 32
+   "score": 40
   },
   {
    "id": "w4_002",
@@ -4427,7 +4427,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 42
   },
   {
    "id": "w4_003",
@@ -4435,12 +4435,12 @@
    "title": "クレイステネスの改革",
    "detail": "アテネの市民を10の部族に再編し、陶片追放の制度も整えた。民主政の基礎を築く。",
    "lesson": "",
-   "level": 2,
+   "level": 3,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 71
+   "score": 55
   },
   {
    "id": "w4_004",
@@ -4453,7 +4453,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 29
+   "score": 36
   },
   {
    "id": "w4_005",
@@ -4466,7 +4466,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 52
+   "score": 50
   },
   {
    "id": "w4_006",
@@ -4479,7 +4479,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 28
+   "score": 36
   },
   {
    "id": "w4_007",
@@ -4505,7 +4505,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 78
+   "score": 74
   },
   {
    "id": "w4_009",
@@ -4518,7 +4518,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 10
+   "score": 14
   },
   {
    "id": "w4_010",
@@ -4531,7 +4531,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 24
+   "score": 31
   },
   {
    "id": "w4_011",
@@ -4544,7 +4544,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 51
+   "score": 49
   },
   {
    "id": "w4_012",
@@ -4557,7 +4557,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 27
+   "score": 34
   },
   {
    "id": "w4_013",
@@ -4570,7 +4570,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 31
+   "score": 39
   },
   {
    "id": "w4_014",
@@ -4583,7 +4583,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 13
+   "score": 20
   },
   {
    "id": "w4_015",
@@ -4596,7 +4596,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 44
+   "score": 45
   },
   {
    "id": "w4_016",
@@ -4604,12 +4604,12 @@
    "title": "ルビコン川を渡る",
    "detail": "「賽は投げられた」。カエサルが軍を率いて渡り、内戦が始まった。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 48
+   "score": 60
   },
   {
    "id": "w4_017",
@@ -4622,7 +4622,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 22
+   "score": 30
   },
   {
    "id": "w4_018",
@@ -4635,7 +4635,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w4_019",
@@ -4648,7 +4648,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 4
+   "score": 3
   },
   {
    "id": "w4_020",
@@ -4661,7 +4661,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 35
+   "score": 41
   },
   {
    "id": "w4_021",
@@ -4674,7 +4674,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 3
+   "score": 2
   },
   {
    "id": "w4_022",
@@ -4687,7 +4687,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_023",
@@ -4700,7 +4700,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 29
+   "score": 36
   },
   {
    "id": "w4_024",
@@ -4713,7 +4713,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 52
+   "score": 50
   },
   {
    "id": "w4_025",
@@ -4726,7 +4726,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 51
   },
   {
    "id": "w4_026",
@@ -4739,7 +4739,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 63
+   "score": 65
   },
   {
    "id": "w4_027",
@@ -4752,7 +4752,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 9
+   "score": 13
   },
   {
    "id": "w4_028",
@@ -4765,7 +4765,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 15
+   "score": 24
   },
   {
    "id": "w4_029",
@@ -4773,12 +4773,12 @@
    "title": "ローマ法大全",
    "detail": "ユスティニアヌス帝が編纂させたローマ法の集大成。のちヨーロッパの法の基礎となった。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 45
+   "score": 60
   },
   {
    "id": "w4_030",
@@ -4791,7 +4791,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 4
+   "score": 3
   },
   {
    "id": "w4_031",
@@ -4804,7 +4804,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 42
   },
   {
    "id": "w4_032",
@@ -4817,7 +4817,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 8
+   "score": 11
   },
   {
    "id": "w4_033",
@@ -4830,7 +4830,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 57
+   "score": 53
   },
   {
    "id": "w4_034",
@@ -4838,12 +4838,12 @@
    "title": "ヴァイキングの襲来",
    "detail": "北欧の海の民が、イングランドのリンディスファーン修道院を襲った。以後、ヨーロッパ各地を襲う。",
    "lesson": "",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 75
+   "score": 56
   },
   {
    "id": "w4_035",
@@ -4856,7 +4856,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 12
+   "score": 17
   },
   {
    "id": "w4_036",
@@ -4869,7 +4869,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w4_037",
@@ -4882,7 +4882,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w4_038",
@@ -4895,7 +4895,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 48
+   "score": 47
   },
   {
    "id": "w4_039",
@@ -4908,7 +4908,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 7
+   "score": 9
   },
   {
    "id": "w4_040",
@@ -4921,7 +4921,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 24
+   "score": 31
   },
   {
    "id": "w4_041",
@@ -4934,7 +4934,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 8
+   "score": 11
   },
   {
    "id": "w4_042",
@@ -4947,7 +4947,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 16
+   "score": 26
   },
   {
    "id": "w4_043",
@@ -4960,7 +4960,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 10
+   "score": 14
   },
   {
    "id": "w4_044",
@@ -4973,7 +4973,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 42
   },
   {
    "id": "w4_045",
@@ -4986,7 +4986,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 15
+   "score": 24
   },
   {
    "id": "w4_046",
@@ -4999,7 +4999,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 13
+   "score": 20
   },
   {
    "id": "w4_047",
@@ -5012,7 +5012,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 17
+   "score": 28
   },
   {
    "id": "w4_048",
@@ -5038,7 +5038,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 9
+   "score": 13
   },
   {
    "id": "w4_050",
@@ -5046,12 +5046,12 @@
    "title": "ダンテ『神曲』",
    "detail": "ダンテがイタリア語で書いた叙事詩。地獄・煉獄・天国をめぐる旅を描く。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "culture",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 57
+   "score": 64
   },
   {
    "id": "w4_051",
@@ -5064,7 +5064,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 18
+   "score": 29
   },
   {
    "id": "w4_052",
@@ -5077,7 +5077,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 44
+   "score": 45
   },
   {
    "id": "w4_053",
@@ -5090,7 +5090,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 49
+   "score": 48
   },
   {
    "id": "w4_054",
@@ -5103,7 +5103,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 37
+   "score": 43
   },
   {
    "id": "w4_055",
@@ -5116,7 +5116,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 17
+   "score": 28
   },
   {
    "id": "w4_056",
@@ -5129,7 +5129,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 2
+   "score": 1
   },
   {
    "id": "w4_057",
@@ -5142,7 +5142,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 10
+   "score": 15
   },
   {
    "id": "w4_058",
@@ -5150,12 +5150,12 @@
    "title": "『君主論』",
    "detail": "マキャヴェッリが、政治を道徳から切り離して現実的に論じた。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "culture",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 44
+   "score": 59
   },
   {
    "id": "w4_059",
@@ -5168,7 +5168,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 8
+   "score": 12
   },
   {
    "id": "w4_060",
@@ -5176,12 +5176,12 @@
    "title": "ヴォルムス帝国議会",
    "detail": "ルターは皇帝の前で自説の撤回を拒み、法の保護の外に置かれた。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "culture",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 53
+   "score": 62
   },
   {
    "id": "w4_061",
@@ -5194,7 +5194,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 49
+   "score": 48
   },
   {
    "id": "w4_062",
@@ -5220,7 +5220,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 55
+   "score": 51
   },
   {
    "id": "w4_064",
@@ -5233,7 +5233,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 44
+   "score": 46
   },
   {
    "id": "w4_065",
@@ -5246,7 +5246,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 56
+   "score": 52
   },
   {
    "id": "w4_066",
@@ -5259,7 +5259,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 42
+   "score": 44
   },
   {
    "id": "w4_067",
@@ -5272,7 +5272,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 16
+   "score": 26
   },
   {
    "id": "w4_068",
@@ -5280,12 +5280,12 @@
    "title": "ガリレオの望遠鏡",
    "detail": "望遠鏡で月のクレーターや木星の衛星を観測し、地動説を支持した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "tech",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 47
+   "score": 60
   },
   {
    "id": "w4_069",
@@ -5298,7 +5298,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 7
+   "score": 9
   },
   {
    "id": "w4_070",
@@ -5311,7 +5311,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 9
+   "score": 14
   },
   {
    "id": "w4_071",
@@ -5324,7 +5324,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 24
+   "score": 31
   },
   {
    "id": "w4_072",
@@ -5337,7 +5337,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 8
+   "score": 12
   },
   {
    "id": "w4_073",
@@ -5345,12 +5345,12 @@
    "title": "ヴェルサイユ宮殿への移転",
    "detail": "ルイ14世が宮廷を移し、貴族を宮廷に集めて絶対王政を確立した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 56
+   "score": 63
   },
   {
    "id": "w4_074",
@@ -5363,7 +5363,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w4_075",
@@ -5376,7 +5376,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 24
+   "score": 31
   },
   {
    "id": "w4_076",
@@ -5384,12 +5384,12 @@
    "title": "ロシア帝国の成立",
    "detail": "ピョートル大帝が皇帝を称し、ロシアを近代国家へ導いた。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 52
+   "score": 62
   },
   {
    "id": "w4_077",
@@ -5402,7 +5402,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 36
+   "score": 42
   },
   {
    "id": "w4_078",
@@ -5415,7 +5415,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 45
+   "score": 46
   },
   {
    "id": "w4_079",
@@ -5428,7 +5428,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 33
+   "score": 40
   },
   {
    "id": "w4_080",
@@ -5441,7 +5441,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 31
+   "score": 39
   },
   {
    "id": "w4_081",
@@ -5449,12 +5449,12 @@
    "title": "人権宣言",
    "detail": "「人は生まれながらにして自由かつ平等である」とうたった。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 48
+   "score": 60
   },
   {
    "id": "w4_082",
@@ -5467,7 +5467,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 58
+   "score": 53
   },
   {
    "id": "w4_083",
@@ -5488,12 +5488,12 @@
    "title": "ギリシア独立戦争",
    "detail": "ギリシア人がオスマン帝国に反乱を起こし、のち独立を果たした。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 45
+   "score": 60
   },
   {
    "id": "w4_085",
@@ -5506,7 +5506,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 35
+   "score": 41
   },
   {
    "id": "w4_086",
@@ -5519,7 +5519,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 45
+   "score": 46
   },
   {
    "id": "w4_087",
@@ -5532,7 +5532,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 29
+   "score": 36
   },
   {
    "id": "w4_088",
@@ -5540,12 +5540,12 @@
    "title": "『種の起源』",
    "detail": "ダーウィンが自然選択による進化を発表した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "culture",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 44
+   "score": 59
   },
   {
    "id": "w4_089",
@@ -5558,7 +5558,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 63
+   "score": 65
   },
   {
    "id": "w4_090",
@@ -5571,7 +5571,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 55
+   "score": 52
   },
   {
    "id": "w4_091",
@@ -5579,12 +5579,12 @@
    "title": "普仏戦争",
    "detail": "プロイセンが、ナポレオン3世のフランスを破った。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 43
+   "score": 59
   },
   {
    "id": "w4_092",
@@ -5597,7 +5597,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_093",
@@ -5610,7 +5610,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 10
+   "score": 15
   },
   {
    "id": "w4_094",
@@ -5623,7 +5623,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 23
+   "score": 30
   },
   {
    "id": "w4_095",
@@ -5636,7 +5636,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 13
+   "score": 20
   },
   {
    "id": "w4_096",
@@ -5662,7 +5662,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 44
+   "score": 46
   },
   {
    "id": "w4_098",
@@ -5670,12 +5670,12 @@
    "title": "ワイマール憲法",
    "detail": "当時世界で最も民主的と言われた憲法。社会権を初めて明記した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 56
+   "score": 63
   },
   {
    "id": "w4_099",
@@ -5696,12 +5696,12 @@
    "title": "ミュンヘン会談",
    "detail": "英仏がチェコスロバキアの一部をドイツに割譲させる宥和政策を取った。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 51
+   "score": 61
   },
   {
    "id": "w4_101",
@@ -5709,12 +5709,12 @@
    "title": "ヤルタ会談",
    "detail": "米英ソの首脳が、戦後処理を話し合った。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 50
+   "score": 61
   },
   {
    "id": "w4_102",
@@ -5727,7 +5727,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 54
+   "score": 51
   },
   {
    "id": "w4_103",
@@ -5740,7 +5740,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 51
+   "score": 49
   },
   {
    "id": "w4_104",
@@ -5753,7 +5753,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 29
+   "score": 37
   },
   {
    "id": "w4_105",
@@ -5766,7 +5766,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 24
+   "score": 31
   },
   {
    "id": "w4_106",
@@ -5779,7 +5779,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 57
+   "score": 53
   },
   {
    "id": "w4_107",
@@ -5805,7 +5805,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_109",
@@ -5818,7 +5818,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 25
+   "score": 32
   },
   {
    "id": "w4_110",
@@ -5831,7 +5831,7 @@
    "approx": false,
    "links": [],
    "region": "europe",
-   "score": 46
+   "score": 47
   },
   {
    "id": "w4_111",
@@ -5844,7 +5844,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_112",
@@ -5857,7 +5857,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 42
+   "score": 44
   },
   {
    "id": "w4_113",
@@ -5870,7 +5870,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 36
+   "score": 42
   },
   {
    "id": "w4_114",
@@ -5883,7 +5883,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_115",
@@ -5896,7 +5896,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 25
+   "score": 33
   },
   {
    "id": "w4_116",
@@ -5909,7 +5909,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 49
+   "score": 48
   },
   {
    "id": "w4_117",
@@ -5917,12 +5917,12 @@
    "title": "戦国時代の始まり",
    "detail": "晋が三つの国に分かれ、中国は七つの国が争う時代となった。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 44
+   "score": 59
   },
   {
    "id": "w4_118",
@@ -5935,7 +5935,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 36
+   "score": 43
   },
   {
    "id": "w4_119",
@@ -5948,7 +5948,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 42
+   "score": 44
   },
   {
    "id": "w4_120",
@@ -5961,7 +5961,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 16
+   "score": 26
   },
   {
    "id": "w4_121",
@@ -5987,7 +5987,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 29
+   "score": 37
   },
   {
    "id": "w4_123",
@@ -5995,12 +5995,12 @@
    "title": "新の建国",
    "detail": "王莽が漢を倒し、新を建てたが、理想主義的な改革は混乱を招いた。",
    "lesson": "",
-   "level": 4,
+   "level": 3,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 38
+   "score": 44
   },
   {
    "id": "w4_124",
@@ -6013,7 +6013,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 26
+   "score": 33
   },
   {
    "id": "w4_125",
@@ -6026,7 +6026,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 43
+   "score": 44
   },
   {
    "id": "w4_126",
@@ -6039,7 +6039,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 31
+   "score": 39
   },
   {
    "id": "w4_127",
@@ -6052,7 +6052,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 77
+   "score": 74
   },
   {
    "id": "w4_128",
@@ -6065,7 +6065,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 26
+   "score": 33
   },
   {
    "id": "w4_129",
@@ -6073,12 +6073,12 @@
    "title": "五胡十六国時代",
    "detail": "華北に遊牧民族の国家が次々に興亡した。",
    "lesson": "",
-   "level": 4,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 38
+   "score": 44
   },
   {
    "id": "w4_130",
@@ -6091,7 +6091,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 50
+   "score": 48
   },
   {
    "id": "w4_131",
@@ -6104,7 +6104,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 56
+   "score": 52
   },
   {
    "id": "w4_132",
@@ -6117,7 +6117,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 43
+   "score": 44
   },
   {
    "id": "w4_133",
@@ -6130,7 +6130,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 11
+   "score": 16
   },
   {
    "id": "w4_134",
@@ -6143,7 +6143,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 37
+   "score": 43
   },
   {
    "id": "w4_135",
@@ -6156,7 +6156,7 @@
    "approx": true,
    "links": [],
    "region": "asia",
-   "score": 52
+   "score": 50
   },
   {
    "id": "w4_136",
@@ -6169,7 +6169,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 74
+   "score": 72
   },
   {
    "id": "w4_137",
@@ -6177,12 +6177,12 @@
    "title": "玄奘のインド旅行",
    "detail": "唐の僧玄奘は、仏典を求めてインドへ旅し、のち『大唐西域記』を残した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "culture",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 42
+   "score": 58
   },
   {
    "id": "w4_138",
@@ -6195,7 +6195,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 24
+   "score": 32
   },
   {
    "id": "w4_139",
@@ -6208,7 +6208,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 51
+   "score": 49
   },
   {
    "id": "w4_140",
@@ -6221,7 +6221,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 51
+   "score": 49
   },
   {
    "id": "w4_141",
@@ -6234,7 +6234,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_142",
@@ -6242,12 +6242,12 @@
    "title": "遼(契丹)の建国",
    "detail": "耶律阿保機がモンゴル高原から華北北部を支配した。",
    "lesson": "",
-   "level": 4,
+   "level": 3,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 38
+   "score": 44
   },
   {
    "id": "w4_143",
@@ -6260,7 +6260,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 31
+   "score": 39
   },
   {
    "id": "w4_144",
@@ -6273,7 +6273,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_145",
@@ -6286,7 +6286,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 57
+   "score": 53
   },
   {
    "id": "w4_146",
@@ -6299,7 +6299,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 37
+   "score": 43
   },
   {
    "id": "w4_147",
@@ -6312,7 +6312,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 52
+   "score": 50
   },
   {
    "id": "w4_148",
@@ -6320,12 +6320,12 @@
    "title": "チンギス・ハンの西征",
    "detail": "ホラズム・シャー朝を攻め、中央アジアを征服した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 54
+   "score": 62
   },
   {
    "id": "w4_149",
@@ -6351,7 +6351,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 32
+   "score": 40
   },
   {
    "id": "w4_151",
@@ -6364,7 +6364,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 51
+   "score": 49
   },
   {
    "id": "w4_152",
@@ -6377,7 +6377,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 6
+   "score": 7
   },
   {
    "id": "w4_153",
@@ -6390,7 +6390,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 22
+   "score": 30
   },
   {
    "id": "w4_154",
@@ -6403,7 +6403,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 54
+   "score": 51
   },
   {
    "id": "w4_155",
@@ -6416,7 +6416,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 23
+   "score": 30
   },
   {
    "id": "w4_156",
@@ -6429,7 +6429,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 45
+   "score": 46
   },
   {
    "id": "w4_157",
@@ -6442,7 +6442,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 7
+   "score": 10
   },
   {
    "id": "w4_158",
@@ -6450,12 +6450,12 @@
    "title": "サファヴィー朝",
    "detail": "イスマーイール1世がイランに建て、シーア派を国教とした。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 58
+   "score": 64
   },
   {
    "id": "w4_159",
@@ -6468,7 +6468,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 54
+   "score": 51
   },
   {
    "id": "w4_160",
@@ -6476,12 +6476,12 @@
    "title": "アクバル大帝の即位",
    "detail": "ムガル帝国のアクバルは、ヒンドゥー教徒との融和をはかり、帝国を安定させた。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 48
+   "score": 61
   },
   {
    "id": "w4_161",
@@ -6489,12 +6489,12 @@
    "title": "壬辰倭乱",
    "detail": "豊臣秀吉の朝鮮出兵。朝鮮では李舜臣の水軍が活躍した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 44
+   "score": 59
   },
   {
    "id": "w4_162",
@@ -6507,7 +6507,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 35
+   "score": 42
   },
   {
    "id": "w4_163",
@@ -6520,7 +6520,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 12
+   "score": 18
   },
   {
    "id": "w4_164",
@@ -6533,7 +6533,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 14
+   "score": 22
   },
   {
    "id": "w4_165",
@@ -6546,7 +6546,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 28
+   "score": 36
   },
   {
    "id": "w4_166",
@@ -6559,7 +6559,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 14
+   "score": 22
   },
   {
    "id": "w4_167",
@@ -6567,12 +6567,12 @@
    "title": "南京条約",
    "detail": "アヘン戦争の講和条約で、清は香港島の割譲や上海などの開港を認めた。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 44
+   "score": 59
   },
   {
    "id": "w4_168",
@@ -6585,7 +6585,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 26
+   "score": 34
   },
   {
    "id": "w4_169",
@@ -6598,7 +6598,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 24
+   "score": 32
   },
   {
    "id": "w4_170",
@@ -6606,12 +6606,12 @@
    "title": "戊戌の変法",
    "detail": "光緒帝と康有為らの近代化改革は、西太后によって、百日あまりで潰された。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 42
+   "score": 58
   },
   {
    "id": "w4_171",
@@ -6619,12 +6619,12 @@
    "title": "中華民国の成立",
    "detail": "孫文が臨時大総統に就任し、アジア初の共和国が成立した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 49
+   "score": 61
   },
   {
    "id": "w4_172",
@@ -6637,7 +6637,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 50
+   "score": 49
   },
   {
    "id": "w4_173",
@@ -6650,7 +6650,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 24
+   "score": 32
   },
   {
    "id": "w4_174",
@@ -6663,7 +6663,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 43
+   "score": 45
   },
   {
    "id": "w4_175",
@@ -6676,7 +6676,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_176",
@@ -6684,12 +6684,12 @@
    "title": "朝鮮戦争の休戦",
    "detail": "板門店で休戦協定が結ばれた。平和条約は結ばれていない。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 51
+   "score": 62
   },
   {
    "id": "w4_177",
@@ -6702,7 +6702,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_178",
@@ -6715,7 +6715,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 14
+   "score": 22
   },
   {
    "id": "w4_179",
@@ -6728,7 +6728,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 55
+   "score": 52
   },
   {
    "id": "w4_180",
@@ -6741,7 +6741,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 34
+   "score": 41
   },
   {
    "id": "w4_181",
@@ -6754,7 +6754,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 43
+   "score": 45
   },
   {
    "id": "w4_182",
@@ -6767,7 +6767,7 @@
    "approx": false,
    "links": [],
    "region": "asia",
-   "score": 17
+   "score": 28
   },
   {
    "id": "w4_184",
@@ -6780,7 +6780,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 37
+   "score": 43
   },
   {
    "id": "w4_185",
@@ -6793,7 +6793,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 6
+   "score": 7
   },
   {
    "id": "w4_186",
@@ -6806,7 +6806,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 54
+   "score": 51
   },
   {
    "id": "w4_187",
@@ -6832,7 +6832,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 58
+   "score": 53
   },
   {
    "id": "w4_189",
@@ -6840,12 +6840,12 @@
    "title": "ペルシアのエジプト征服",
    "detail": "カンビュセス2世がエジプトを征服した。",
    "lesson": "",
-   "level": 2,
+   "level": 3,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 73
+   "score": 56
   },
   {
    "id": "w4_190",
@@ -6858,7 +6858,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 26
+   "score": 34
   },
   {
    "id": "w4_191",
@@ -6871,7 +6871,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 37
+   "score": 43
   },
   {
    "id": "w4_192",
@@ -6884,7 +6884,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 12
+   "score": 18
   },
   {
    "id": "w4_193",
@@ -6897,7 +6897,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 30
+   "score": 38
   },
   {
    "id": "w4_194",
@@ -6923,7 +6923,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 16
+   "score": 26
   },
   {
    "id": "w4_196",
@@ -6936,7 +6936,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 54
+   "score": 51
   },
   {
    "id": "w4_197",
@@ -6962,7 +6962,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 12
+   "score": 18
   },
   {
    "id": "w4_199",
@@ -6975,7 +6975,7 @@
    "approx": true,
    "links": [],
    "region": "africa",
-   "score": 15
+   "score": 24
   },
   {
    "id": "w4_200",
@@ -6988,7 +6988,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 6
+   "score": 7
   },
   {
    "id": "w4_201",
@@ -7001,7 +7001,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 23
+   "score": 31
   },
   {
    "id": "w4_202",
@@ -7014,7 +7014,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 16
+   "score": 26
   },
   {
    "id": "w4_203",
@@ -7027,7 +7027,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 15
+   "score": 24
   },
   {
    "id": "w4_204",
@@ -7040,7 +7040,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 51
+   "score": 49
   },
   {
    "id": "w4_205",
@@ -7053,7 +7053,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 29
+   "score": 37
   },
   {
    "id": "w4_206",
@@ -7066,7 +7066,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 43
+   "score": 45
   },
   {
    "id": "w4_207",
@@ -7079,7 +7079,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 18
+   "score": 29
   },
   {
    "id": "w4_208",
@@ -7092,7 +7092,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 32
+   "score": 40
   },
   {
    "id": "w4_209",
@@ -7105,7 +7105,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 15
+   "score": 25
   },
   {
    "id": "w4_210",
@@ -7118,7 +7118,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 31
+   "score": 39
   },
   {
    "id": "w4_211",
@@ -7131,7 +7131,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 8
+   "score": 12
   },
   {
    "id": "w4_212",
@@ -7157,7 +7157,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 33
+   "score": 41
   },
   {
    "id": "w4_214",
@@ -7170,7 +7170,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 30
+   "score": 39
   },
   {
    "id": "w4_215",
@@ -7183,7 +7183,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 27
+   "score": 35
   },
   {
    "id": "w4_216",
@@ -7196,7 +7196,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 25
+   "score": 33
   },
   {
    "id": "w4_217",
@@ -7209,7 +7209,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 37
+   "score": 43
   },
   {
    "id": "w4_218",
@@ -7222,7 +7222,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 15
+   "score": 25
   },
   {
    "id": "w4_219",
@@ -7230,12 +7230,12 @@
    "title": "ガーナの独立",
    "detail": "サハラ以南のアフリカで最初の独立国となった。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 56
+   "score": 63
   },
   {
    "id": "w4_220",
@@ -7248,7 +7248,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 24
+   "score": 32
   },
   {
    "id": "w4_221",
@@ -7261,7 +7261,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 7
+   "score": 10
   },
   {
    "id": "w4_222",
@@ -7274,7 +7274,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 23
+   "score": 31
   },
   {
    "id": "w4_223",
@@ -7300,7 +7300,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 24
+   "score": 32
   },
   {
    "id": "w4_225",
@@ -7313,7 +7313,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 58
+   "score": 53
   },
   {
    "id": "w4_226",
@@ -7326,7 +7326,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 26
+   "score": 34
   },
   {
    "id": "w4_227",
@@ -7339,7 +7339,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 8
+   "score": 12
   },
   {
    "id": "w4_228",
@@ -7352,7 +7352,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 10
+   "score": 15
   },
   {
    "id": "w4_230",
@@ -7365,7 +7365,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 8
+   "score": 12
   },
   {
    "id": "w4_231",
@@ -7378,7 +7378,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 6
+   "score": 7
   },
   {
    "id": "w4_232",
@@ -7391,7 +7391,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 9
+   "score": 14
   },
   {
    "id": "w4_233",
@@ -7404,7 +7404,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 5
+   "score": 6
   },
   {
    "id": "w4_234",
@@ -7417,7 +7417,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 8
+   "score": 13
   },
   {
    "id": "w4_235",
@@ -7430,7 +7430,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 3
+   "score": 2
   },
   {
    "id": "w4_236",
@@ -7443,7 +7443,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 13
+   "score": 20
   },
   {
    "id": "w4_237",
@@ -7456,7 +7456,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 33
+   "score": 41
   },
   {
    "id": "w4_238",
@@ -7482,7 +7482,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 43
+   "score": 45
   },
   {
    "id": "w4_240",
@@ -7495,7 +7495,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 5
+   "score": 6
   },
   {
    "id": "w4_241",
@@ -7508,7 +7508,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 6
+   "score": 8
   },
   {
    "id": "w4_242",
@@ -7521,7 +7521,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 11
+   "score": 16
   },
   {
    "id": "w4_243",
@@ -7534,7 +7534,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 17
+   "score": 28
   },
   {
    "id": "w4_244",
@@ -7547,7 +7547,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 11
+   "score": 17
   },
   {
    "id": "w4_245",
@@ -7560,7 +7560,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 6
+   "score": 8
   },
   {
    "id": "w4_246",
@@ -7573,7 +7573,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 31
+   "score": 39
   },
   {
    "id": "w4_247",
@@ -7586,7 +7586,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 29
+   "score": 37
   },
   {
    "id": "w4_248",
@@ -7594,12 +7594,12 @@
    "title": "ボストン茶会事件",
    "detail": "植民地の人々が、船の積み荷の茶を海に投げ込んだ。独立戦争への道を開く。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 47
+   "score": 60
   },
   {
    "id": "w4_249",
@@ -7612,7 +7612,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 55
+   "score": 52
   },
   {
    "id": "w4_250",
@@ -7625,7 +7625,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 29
+   "score": 37
   },
   {
    "id": "w4_251",
@@ -7638,7 +7638,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 57
+   "score": 53
   },
   {
    "id": "w4_252",
@@ -7646,12 +7646,12 @@
    "title": "合衆国憲法",
    "detail": "三権分立と連邦制を定めた、世界最古級の成文憲法。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 44
+   "score": 59
   },
   {
    "id": "w4_253",
@@ -7664,7 +7664,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 16
+   "score": 27
   },
   {
    "id": "w4_254",
@@ -7677,7 +7677,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 14
+   "score": 22
   },
   {
    "id": "w4_255",
@@ -7690,7 +7690,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 31
+   "score": 39
   },
   {
    "id": "w4_256",
@@ -7698,12 +7698,12 @@
    "title": "メキシコの独立",
    "detail": "約11年の独立戦争を経て、スペインから独立した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 53
+   "score": 62
   },
   {
    "id": "w4_257",
@@ -7716,7 +7716,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 27
+   "score": 36
   },
   {
    "id": "w4_258",
@@ -7729,7 +7729,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 13
+   "score": 21
   },
   {
    "id": "w4_259",
@@ -7742,7 +7742,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 52
+   "score": 50
   },
   {
    "id": "w4_260",
@@ -7755,7 +7755,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 14
+   "score": 23
   },
   {
    "id": "w4_261",
@@ -7768,7 +7768,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 12
+   "score": 18
   },
   {
    "id": "w4_262",
@@ -7781,7 +7781,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 7
+   "score": 10
   },
   {
    "id": "w4_263",
@@ -7794,7 +7794,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 5
+   "score": 6
   },
   {
    "id": "w4_264",
@@ -7807,7 +7807,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 12
+   "score": 18
   },
   {
    "id": "w4_265",
@@ -7820,7 +7820,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 16
+   "score": 27
   },
   {
    "id": "w4_266",
@@ -7846,7 +7846,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 55
+   "score": 52
   },
   {
    "id": "w4_268",
@@ -7859,7 +7859,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 17
+   "score": 28
   },
   {
    "id": "w4_269",
@@ -7872,7 +7872,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 49
+   "score": 48
   },
   {
    "id": "w4_270",
@@ -7885,7 +7885,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 34
+   "score": 41
   },
   {
    "id": "w4_271",
@@ -7898,7 +7898,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 12
+   "score": 19
   },
   {
    "id": "w4_272",
@@ -7911,7 +7911,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 30
+   "score": 39
   },
   {
    "id": "w4_273",
@@ -7924,7 +7924,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 25
+   "score": 33
   },
   {
    "id": "w4_274",
@@ -7937,7 +7937,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 29
+   "score": 37
   },
   {
    "id": "w4_275",
@@ -7945,12 +7945,12 @@
    "title": "ワシントン大行進",
    "detail": "キング牧師が「私には夢がある」と演説した。同年、ケネディ大統領も暗殺された。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "society",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 52
+   "score": 62
   },
   {
    "id": "w4_276",
@@ -7963,7 +7963,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 25
+   "score": 33
   },
   {
    "id": "w4_277",
@@ -7971,12 +7971,12 @@
    "title": "ウォーターゲート事件",
    "detail": "ニクソン大統領が辞任に追い込まれた。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 51
+   "score": 62
   },
   {
    "id": "w4_278",
@@ -7989,7 +7989,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 32
+   "score": 40
   },
   {
    "id": "w4_279",
@@ -8010,12 +8010,12 @@
    "title": "iPhoneの発売",
    "detail": "スマートフォンが世界に普及するきっかけとなった。",
    "lesson": "",
-   "level": 3,
+   "level": 1,
    "kind": "tech",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 53
+   "score": 79
   },
   {
    "id": "w4_281",
@@ -8028,7 +8028,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 24
+   "score": 32
   },
   {
    "id": "w4_282",
@@ -8041,7 +8041,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 12
+   "score": 19
   },
   {
    "id": "w4_283",
@@ -8054,7 +8054,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 14
+   "score": 23
   },
   {
    "id": "w4_284",
@@ -8067,7 +8067,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 15
+   "score": 25
   },
   {
    "id": "w4_285",
@@ -8080,7 +8080,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 14
+   "score": 23
   },
   {
    "id": "w4_286",
@@ -8093,7 +8093,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 13
+   "score": 21
   },
   {
    "id": "w4_287",
@@ -8106,7 +8106,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 8
+   "score": 13
   },
   {
    "id": "w4_288",
@@ -8119,7 +8119,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 6
+   "score": 8
   },
   {
    "id": "w4_289",
@@ -8145,7 +8145,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 13
+   "score": 21
   },
   {
    "id": "w4_291",
@@ -8158,7 +8158,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 16
+   "score": 27
   },
   {
    "id": "w4_292",
@@ -8171,7 +8171,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 2
+   "score": 1
   },
   {
    "id": "w4_293",
@@ -8184,7 +8184,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 5
+   "score": 6
   },
   {
    "id": "w4_294",
@@ -8197,7 +8197,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 9
+   "score": 14
   },
   {
    "id": "w4_295",
@@ -8210,7 +8210,7 @@
    "approx": true,
    "links": [],
    "region": "america",
-   "score": 10
+   "score": 15
   },
   {
    "id": "w4_296",
@@ -8223,7 +8223,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 7
+   "score": 10
   },
   {
    "id": "w4_297",
@@ -8236,7 +8236,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 14
+   "score": 23
   },
   {
    "id": "w4_298",
@@ -8249,7 +8249,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 13
+   "score": 21
   },
   {
    "id": "w4_299",
@@ -8257,12 +8257,12 @@
    "title": "真珠湾攻撃",
    "detail": "日本軍がハワイの米海軍基地を攻撃し、米国が第二次世界大戦に参戦した。",
    "lesson": "",
-   "level": 3,
+   "level": 1,
    "kind": "war",
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 57
+   "score": 79
   },
   {
    "id": "w4_300",
@@ -8275,7 +8275,7 @@
    "approx": false,
    "links": [],
    "region": "america",
-   "score": 6
+   "score": 8
   },
   {
    "id": "w4_301",
@@ -8288,7 +8288,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 10
+   "score": 16
   },
   {
    "id": "w4_302",
@@ -8301,7 +8301,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 6
+   "score": 8
   },
   {
    "id": "w4_303",
@@ -8314,7 +8314,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 11
+   "score": 17
   },
   {
    "id": "w4_304",
@@ -8322,12 +8322,12 @@
    "title": "ミノア文明",
    "detail": "クレタ島のクノッソス宮殿を中心に、海上交易で栄えた。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 55
+   "score": 63
   },
   {
    "id": "w4_305",
@@ -8335,12 +8335,12 @@
    "title": "ミケーネ文明",
    "detail": "ギリシア本土で、城塞と豪華な黄金の墓をもつ文明が成立した。",
    "lesson": "",
-   "level": 3,
+   "level": 2,
    "kind": "politics",
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 49
+   "score": 61
   },
   {
    "id": "w4_306",
@@ -8353,7 +8353,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 12
+   "score": 19
   },
   {
    "id": "w4_307",
@@ -8366,7 +8366,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 12
+   "score": 19
   },
   {
    "id": "w4_308",
@@ -8379,7 +8379,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 10
+   "score": 16
   },
   {
    "id": "w4_309",
@@ -8405,7 +8405,7 @@
    "approx": true,
    "links": [],
    "region": "europe",
-   "score": 10
+   "score": 16
   },
   {
    "id": "w4_311",
@@ -8418,7 +8418,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 15
+   "score": 25
   },
   {
    "id": "w4_312",
@@ -8431,7 +8431,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 26
+   "score": 34
   },
   {
    "id": "w4_313",
@@ -8457,7 +8457,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 16
+   "score": 27
   },
   {
    "id": "w4_315",
@@ -8483,7 +8483,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 36
+   "score": 43
   },
   {
    "id": "w4_317",
@@ -8496,7 +8496,7 @@
    "approx": false,
    "links": [],
    "region": "africa",
-   "score": 6
+   "score": 9
   }
  ],
  "persons": [
@@ -8508,7 +8508,7 @@
    "died": -399,
    "role": "哲学者",
    "kind": "culture",
-   "level": 2,
+   "level": 1,
    "detail": "街角で問答を重ね、人々に自分の無知を自覚させた。のち裁判で死刑となった。",
    "face": {
     "h": "monk",
@@ -8519,7 +8519,7 @@
     "e": "calm"
    },
    "lesson": "「無知の知」—疑うことから学びが始まる。",
-   "score": 76
+   "score": 91
   },
   {
    "id": "alexander",
@@ -8540,7 +8540,7 @@
     ],
     "e": "strong"
    },
-   "score": 93
+   "score": 98
   },
   {
    "id": "aristotle",
@@ -8579,7 +8579,7 @@
     "e": "strong",
     "w": 1
    },
-   "score": 92
+   "score": 97
   },
   {
    "id": "augustus",
@@ -8607,7 +8607,7 @@
    "died": 337,
    "role": "ローマ皇帝",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "キリスト教を公認し、都をコンスタンティノープルに移した。",
    "face": {
     "h": "curly",
@@ -8619,7 +8619,7 @@
     "e": "strong"
    },
    "bornApprox": true,
-   "score": 46
+   "score": 64
   },
   {
    "id": "charlemagne",
@@ -8642,7 +8642,7 @@
     "e": "strong",
     "a": 1
    },
-   "score": 65
+   "score": 69
   },
   {
    "id": "leonardo",
@@ -8663,7 +8663,7 @@
     "e": "calm"
    },
    "lesson": "分野を横断して観察することが、新しい発見を生む。",
-   "score": 94
+   "score": 99
   },
   {
    "id": "gutenberg",
@@ -8683,7 +8683,7 @@
     "e": "calm"
    },
    "bornApprox": true,
-   "score": 70
+   "score": 72
   },
   {
    "id": "columbus",
@@ -8702,7 +8702,7 @@
     "a": 1,
     "e": "strong"
    },
-   "score": 86
+   "score": 94
   },
   {
    "id": "luther",
@@ -8721,7 +8721,7 @@
     "f": "round",
     "e": "strong"
    },
-   "score": 91
+   "score": 97
   },
   {
    "id": "galileo",
@@ -8731,7 +8731,7 @@
    "died": 1642,
    "role": "天文学者",
    "kind": "tech",
-   "level": 2,
+   "level": 1,
    "detail": "望遠鏡で天体を観測し、地動説を支持して教会に裁かれた。",
    "face": {
     "h": "monk",
@@ -8741,7 +8741,7 @@
     "a": 1,
     "e": "calm"
    },
-   "score": 75
+   "score": 89
   },
   {
    "id": "newton",
@@ -8759,7 +8759,7 @@
     "c": "#6b4a2e",
     "e": "calm"
    },
-   "score": 88
+   "score": 95
   },
   {
    "id": "louis14",
@@ -8769,7 +8769,7 @@
    "died": 1715,
    "role": "フランス王",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "七十余年在位し、絶対王政の象徴となった。ヴェルサイユ宮殿を築いた。",
    "face": {
     "h": "wig",
@@ -8779,7 +8779,7 @@
     "e": "strong",
     "hc": "#2b2522"
    },
-   "score": 32
+   "score": 62
   },
   {
    "id": "rousseau",
@@ -8789,7 +8789,7 @@
    "died": 1778,
    "role": "思想家",
    "kind": "culture",
-   "level": 5,
+   "level": 2,
    "detail": "『社会契約論』で人民主権を説き、フランス革命に影響した。",
    "face": {
     "h": "wig",
@@ -8797,7 +8797,7 @@
     "c": "#3f6b4a",
     "e": "calm"
    },
-   "score": 2
+   "score": 58
   },
   {
    "id": "napoleon",
@@ -8816,7 +8816,7 @@
     "e": "strong",
     "f": "round"
    },
-   "score": 89
+   "score": 96
   },
   {
    "id": "darwin",
@@ -8826,7 +8826,7 @@
    "died": 1882,
    "role": "博物学者",
    "kind": "tech",
-   "level": 2,
+   "level": 1,
    "detail": "『種の起源』で、生物が自然選択によって進化するという説を示した。",
    "face": {
     "h": "monk",
@@ -8836,7 +8836,7 @@
     "a": 1,
     "e": "calm"
    },
-   "score": 73
+   "score": 87
   },
   {
    "id": "marx",
@@ -8846,7 +8846,7 @@
    "died": 1883,
    "role": "思想家・経済学者",
    "kind": "society",
-   "level": 2,
+   "level": 1,
    "detail": "『資本論』で資本主義を分析し、のちの社会主義運動に影響を与えた。",
    "face": {
     "h": "long",
@@ -8856,7 +8856,7 @@
     "a": 1,
     "e": "strong"
    },
-   "score": 72
+   "score": 87
   },
   {
    "id": "victoria",
@@ -8866,7 +8866,7 @@
    "died": 1901,
    "role": "英国女王",
    "kind": "politics",
-   "level": 4,
+   "level": 1,
    "detail": "六十三年余り在位し、大英帝国の最盛期を象徴した。",
    "face": {
     "h": "bun",
@@ -8879,7 +8879,7 @@
     "a": 1,
     "e": "strong"
    },
-   "score": 36
+   "score": 79
   },
   {
    "id": "bismarck",
@@ -8889,7 +8889,7 @@
    "died": 1898,
    "role": "ドイツ帝国宰相",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "「鉄血政策」でドイツ統一を主導し、複雑な同盟網で欧州の均衡を保った。",
    "face": {
     "h": "pickel",
@@ -8899,7 +8899,7 @@
     "e": "strong",
     "a": 1
    },
-   "score": 44
+   "score": 64
   },
   {
    "id": "lenin",
@@ -8909,7 +8909,7 @@
    "died": 1924,
    "role": "革命家",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "ロシア革命を指導し、ソ連の初代指導者となった。",
    "face": {
     "h": "monk",
@@ -8918,7 +8918,7 @@
     "b": "goatee",
     "e": "strong"
    },
-   "score": 71
+   "score": 86
   },
   {
    "id": "einstein",
@@ -8938,7 +8938,7 @@
     "a": 1,
     "e": "calm"
    },
-   "score": 93
+   "score": 98
   },
   {
    "id": "hitler",
@@ -8959,7 +8959,7 @@
     "hc": "#2b2522"
    },
    "lesson": "民主的な手続きも、条件が揃えば独裁に利用される。",
-   "score": 94
+   "score": 99
   },
   {
    "id": "churchill",
@@ -8969,7 +8969,7 @@
    "died": 1965,
    "role": "英国首相",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "第二次世界大戦で英国を率い、戦後は冷戦の始まりを「鉄のカーテン」と表現した。",
    "face": {
     "h": "monk",
@@ -8979,7 +8979,7 @@
     "e": "strong",
     "a": 1
    },
-   "score": 75
+   "score": 89
   },
   {
    "id": "gorbachev",
@@ -8989,7 +8989,7 @@
    "died": 2022,
    "role": "ソ連の最後の指導者",
    "kind": "politics",
-   "level": 4,
+   "level": 1,
    "detail": "ペレストロイカと冷戦終結を進めたが、ソ連は崩壊した。",
    "face": {
     "h": "western",
@@ -8998,7 +8998,7 @@
     "e": "calm",
     "a": 1
    },
-   "score": 29
+   "score": 79
   },
   {
    "id": "jeanne",
@@ -9008,7 +9008,7 @@
    "died": 1431,
    "role": "フランスの少女兵",
    "kind": "war",
-   "level": 2,
+   "level": 1,
    "detail": "百年戦争でフランス軍を鼓舞したが、異端として処刑された。のち聖女となった。",
    "face": {
     "h": "bob",
@@ -9017,7 +9017,7 @@
     "sex": "f",
     "e": "strong"
    },
-   "score": 78
+   "score": 92
   },
   {
    "id": "elizabeth1",
@@ -9027,7 +9027,7 @@
    "died": 1603,
    "role": "イングランド女王",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "スペイン無敵艦隊を破り、英国が海洋国家へ向かう基盤を築いた。",
    "face": {
     "h": "bun",
@@ -9040,7 +9040,7 @@
     "hc": "#c0572a",
     "e": "strong"
    },
-   "score": 37
+   "score": 63
   },
   {
    "id": "buddha",
@@ -9061,7 +9061,7 @@
    },
    "bornApprox": true,
    "diedApprox": true,
-   "score": 83
+   "score": 93
   },
   {
    "id": "confucius",
@@ -9081,7 +9081,7 @@
     "a": 1,
     "e": "calm"
    },
-   "score": 94
+   "score": 99
   },
   {
    "id": "shihuangdi",
@@ -9100,7 +9100,7 @@
     "b": "beard",
     "e": "strong"
    },
-   "score": 82
+   "score": 93
   },
   {
    "id": "zhangqian",
@@ -9110,7 +9110,7 @@
    "died": -114,
    "role": "漢の使者",
    "kind": "economy",
-   "level": 5,
+   "level": 2,
    "detail": "武帝の命で西域へ旅し、のちのシルクロードの道を開いた。",
    "face": {
     "h": "guan",
@@ -9120,7 +9120,7 @@
     "e": "calm"
    },
    "bornApprox": true,
-   "score": 12
+   "score": 59
   },
   {
    "id": "xuanzang",
@@ -9157,7 +9157,7 @@
     "b": "beard",
     "e": "strong"
    },
-   "score": 28
+   "score": 40
   },
   {
    "id": "harun",
@@ -9167,7 +9167,7 @@
    "died": 809,
    "role": "アッバース朝のカリフ",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "バグダードを中心に、学問と文化が栄えた最盛期のカリフ。",
    "face": {
     "h": "turban",
@@ -9180,7 +9180,7 @@
     "e": "calm",
     "s": "#cf9f70"
    },
-   "score": 53
+   "score": 66
   },
   {
    "id": "avicenna",
@@ -9200,7 +9200,7 @@
     "e": "calm",
     "s": "#cf9f70"
    },
-   "score": 69
+   "score": 71
   },
   {
    "id": "genghis",
@@ -9221,7 +9221,7 @@
     "s": "#e6c496"
    },
    "bornApprox": true,
-   "score": 87
+   "score": 95
   },
   {
    "id": "kublai",
@@ -9242,7 +9242,7 @@
     "f": "round",
     "s": "#e6c496"
    },
-   "score": 65
+   "score": 69
   },
   {
    "id": "zhenghe",
@@ -9252,7 +9252,7 @@
    "died": 1433,
    "role": "明の提督",
    "kind": "economy",
-   "level": 1,
+   "level": 2,
    "detail": "宦官から提督となり、七回にわたってインド洋へ大艦隊を率いた。",
    "face": {
     "h": "guan",
@@ -9262,7 +9262,7 @@
    },
    "bornApprox": true,
    "diedApprox": true,
-   "score": 86
+   "score": 77
   },
   {
    "id": "akbar",
@@ -9272,7 +9272,7 @@
    "died": 1605,
    "role": "ムガル帝国皇帝",
    "kind": "politics",
-   "level": 5,
+   "level": 2,
    "detail": "宗教に寛容な政策をとり、ムガル帝国の基盤を固めた。",
    "face": {
     "h": "turban",
@@ -9282,7 +9282,7 @@
     "e": "strong",
     "s": "#cf9f70"
    },
-   "score": 11
+   "score": 59
   },
   {
    "id": "kangxi",
@@ -9292,7 +9292,7 @@
    "died": 1722,
    "role": "清の第四代皇帝",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "六十一年在位し、清の最盛期の基礎を築いた。",
    "face": {
     "h": "qing",
@@ -9300,7 +9300,7 @@
     "c": "#2b2b33",
     "e": "strong"
    },
-   "score": 56
+   "score": 66
   },
   {
    "id": "gandhi",
@@ -9322,7 +9322,7 @@
     "e": "calm",
     "s": "#a8764e"
    },
-   "score": 83
+   "score": 93
   },
   {
    "id": "sunyat",
@@ -9332,7 +9332,7 @@
    "died": 1925,
    "role": "中国の革命家",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "辛亥革命を指導し、中華民国の初代臨時大総統となった。",
    "face": {
     "h": "western",
@@ -9341,7 +9341,7 @@
     "b": "mustache",
     "e": "strong"
    },
-   "score": 69
+   "score": 85
   },
   {
    "id": "mao",
@@ -9360,7 +9360,7 @@
     "f": "round",
     "e": "calm"
    },
-   "score": 94
+   "score": 100
   },
   {
    "id": "ho",
@@ -9370,7 +9370,7 @@
    "died": 1969,
    "role": "ベトナムの指導者",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "ベトナムの独立を指導し、ベトナム民主共和国の初代大統領となった。",
    "face": {
     "h": "western",
@@ -9380,7 +9380,7 @@
     "a": 1,
     "e": "calm"
    },
-   "score": 42
+   "score": 63
   },
   {
    "id": "deng",
@@ -9399,7 +9399,7 @@
     "e": "smile",
     "a": 1
    },
-   "score": 68
+   "score": 71
   },
   {
    "id": "ramses",
@@ -9409,7 +9409,7 @@
    "died": -1213,
    "role": "古代エジプトのファラオ",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "六十年以上在位し、アブ・シンベル神殿など大建築を残した。",
    "face": {
     "h": "nemes",
@@ -9420,7 +9420,7 @@
    },
    "bornApprox": true,
    "diedApprox": true,
-   "score": 70
+   "score": 85
   },
   {
    "id": "cleopatra",
@@ -9430,7 +9430,7 @@
    "died": -30,
    "role": "エジプトの女王",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "プトレマイオス朝最後の女王。ローマの権力者と結んで、独立を保とうとした。",
    "face": {
     "h": "bob",
@@ -9443,7 +9443,7 @@
     "e": "strong",
     "s": "#cf9f70"
    },
-   "score": 68
+   "score": 83
   },
   {
    "id": "hannibal",
@@ -9466,7 +9466,7 @@
     "e": "strong",
     "s": "#cf9f70"
    },
-   "score": 66
+   "score": 70
   },
   {
    "id": "augustine",
@@ -9476,7 +9476,7 @@
    "died": 430,
    "role": "神学者",
    "kind": "society",
-   "level": 4,
+   "level": 2,
    "detail": "北アフリカ出身の教父。『告白』を著し、西欧のキリスト教思想に影響した。",
    "face": {
     "h": "monk",
@@ -9487,7 +9487,7 @@
     "e": "calm",
     "s": "#cf9f70"
    },
-   "score": 34
+   "score": 62
   },
   {
    "id": "musa",
@@ -9497,7 +9497,7 @@
    "died": 1337,
    "role": "マリ帝国の王",
    "kind": "economy",
-   "level": 1,
+   "level": 2,
    "detail": "大量の金を携えてメッカへ巡礼し、その富が地中海世界に知られた。",
    "face": {
     "h": "turban",
@@ -9509,7 +9509,7 @@
    },
    "bornApprox": true,
    "diedApprox": true,
-   "score": 97
+   "score": 77
   },
   {
    "id": "battuta",
@@ -9519,7 +9519,7 @@
    "died": 1368,
    "role": "旅行家",
    "kind": "culture",
-   "level": 3,
+   "level": 2,
    "detail": "モロッコから出発してアフリカ・アジアを旅し、『大旅行記』を残した。",
    "face": {
     "h": "turban",
@@ -9530,7 +9530,7 @@
     "s": "#cf9f70"
    },
    "diedApprox": true,
-   "score": 44
+   "score": 64
   },
   {
    "id": "muhammad_ali",
@@ -9540,7 +9540,7 @@
    "died": 1849,
    "role": "エジプト総督",
    "kind": "politics",
-   "level": 5,
+   "level": 2,
    "detail": "軍・産業・教育の近代化を進め、現代エジプトの基礎を築いた。",
    "face": {
     "h": "turban",
@@ -9551,7 +9551,7 @@
     "e": "strong",
     "s": "#cf9f70"
    },
-   "score": 17
+   "score": 59
   },
   {
    "id": "menelik",
@@ -9571,7 +9571,7 @@
     "e": "strong",
     "s": "#8a5a3a"
    },
-   "score": 64
+   "score": 68
   },
   {
    "id": "nkrumah",
@@ -9581,7 +9581,7 @@
    "died": 1972,
    "role": "ガーナ初代大統領",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "サハラ以南で初めて独立を達成し、アフリカの統一を唱えた。",
    "face": {
     "h": "western",
@@ -9590,7 +9590,7 @@
     "e": "strong",
     "s": "#6e4630"
    },
-   "score": 71
+   "score": 87
   },
   {
    "id": "nasser",
@@ -9609,7 +9609,7 @@
     "e": "smile",
     "s": "#cf9f70"
    },
-   "score": 73
+   "score": 74
   },
   {
    "id": "lumumba",
@@ -9619,7 +9619,7 @@
    "died": 1961,
    "role": "コンゴ初代首相",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "独立直後の混乱の中で失脚し、殺害された。",
    "face": {
     "h": "western",
@@ -9630,7 +9630,7 @@
     "e": "calm",
     "s": "#6e4630"
    },
-   "score": 23
+   "score": 60
   },
   {
    "id": "mandela",
@@ -9651,7 +9651,7 @@
     "s": "#6e4630"
    },
    "lesson": "報復ではなく、和解で社会を一つにしようとした。",
-   "score": 89
+   "score": 96
   },
   {
    "id": "maathai",
@@ -9661,7 +9661,7 @@
    "died": 2011,
    "role": "環境運動家",
    "kind": "society",
-   "level": 5,
+   "level": 2,
    "detail": "植樹運動(グリーンベルト運動)を率い、ノーベル平和賞を受けた。",
    "face": {
     "h": "headwrap",
@@ -9672,7 +9672,7 @@
     "e": "smile",
     "s": "#6e4630"
    },
-   "score": 4
+   "score": 58
   },
   {
    "id": "moctezuma",
@@ -9691,7 +9691,7 @@
     "e": "calm",
     "s": "#a8764e"
    },
-   "score": 64
+   "score": 68
   },
   {
    "id": "atahualpa",
@@ -9701,7 +9701,7 @@
    "died": 1533,
    "role": "インカ最後の皇帝",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "ピサロに捕らえられ、身代金を払ったが処刑された。",
    "face": {
     "h": "headband",
@@ -9710,7 +9710,7 @@
     "e": "calm",
     "s": "#a8764e"
    },
-   "score": 33
+   "score": 62
   },
   {
    "id": "cortes",
@@ -9747,7 +9747,7 @@
     "c": "#1f2f4f",
     "e": "calm"
    },
-   "score": 88
+   "score": 95
   },
   {
    "id": "jefferson",
@@ -9766,7 +9766,7 @@
     "hc": "#b0502a",
     "e": "calm"
    },
-   "score": 63
+   "score": 67
   },
   {
    "id": "franklin",
@@ -9776,7 +9776,7 @@
    "died": 1790,
    "role": "科学者・政治家",
    "kind": "tech",
-   "level": 3,
+   "level": 2,
    "detail": "雷の実験や出版で知られ、独立宣言の起草にも関わった。",
    "face": {
     "h": "long",
@@ -9786,7 +9786,7 @@
     "a": 1,
     "e": "smile"
    },
-   "score": 50
+   "score": 65
   },
   {
    "id": "toussaint",
@@ -9807,7 +9807,7 @@
     "s": "#6e4630",
     "a": 1
    },
-   "score": 71
+   "score": 73
   },
   {
    "id": "bolivar",
@@ -9827,7 +9827,7 @@
     "e": "strong",
     "s": "#e6c496"
    },
-   "score": 71
+   "score": 73
   },
   {
    "id": "lincoln",
@@ -9847,7 +9847,7 @@
     "e": "calm",
     "w": 1
    },
-   "score": 89
+   "score": 97
   },
   {
    "id": "edison",
@@ -9857,7 +9857,7 @@
    "died": 1931,
    "role": "発明家",
    "kind": "tech",
-   "level": 2,
+   "level": 1,
    "detail": "白熱電球や蓄音機など、多くの発明で産業を変えた。",
    "face": {
     "h": "western",
@@ -9866,7 +9866,7 @@
     "a": 1,
     "e": "smile"
    },
-   "score": 68
+   "score": 84
   },
   {
    "id": "fdr",
@@ -9885,7 +9885,7 @@
     "g": 1,
     "e": "smile"
    },
-   "score": 72
+   "score": 73
   },
   {
    "id": "oppenheimer",
@@ -9913,7 +9913,7 @@
    "died": 1963,
    "role": "アメリカ第三十五代大統領",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "キューバ危機に対処し、月面着陸を国家目標に掲げた。暗殺された。",
    "face": {
     "h": "western",
@@ -9922,7 +9922,7 @@
     "e": "smile",
     "hc": "#6b4a2e"
    },
-   "score": 65
+   "score": 82
   },
   {
    "id": "king",
@@ -9942,7 +9942,7 @@
     "e": "strong",
     "s": "#6e4630"
    },
-   "score": 85
+   "score": 94
   },
   {
    "id": "armstrong",
@@ -9952,7 +9952,7 @@
    "died": 2012,
    "role": "宇宙飛行士",
    "kind": "tech",
-   "level": 2,
+   "level": 1,
    "detail": "アポロ11号で、人類として初めて月面に降り立った。",
    "face": {
     "h": "western",
@@ -9960,7 +9960,7 @@
     "c": "#e8e2d0",
     "e": "calm"
    },
-   "score": 73
+   "score": 88
   },
   {
    "id": "jobs",
@@ -9970,7 +9970,7 @@
    "died": 2011,
    "role": "Apple共同創業者",
    "kind": "tech",
-   "level": 2,
+   "level": 1,
    "detail": "パソコンやiPhoneで、情報端末のあり方を変えた。",
    "face": {
     "h": "western",
@@ -9979,7 +9979,7 @@
     "g": 1,
     "e": "strong"
    },
-   "score": 68
+   "score": 84
   },
   {
    "id": "shotoku",
@@ -9988,7 +9988,7 @@
    "died": 622,
    "role": "摂政・政治家",
    "kind": "politics",
-   "level": 5,
+   "level": 1,
    "detail": "冠位十二階や十七条憲法を定め、遣隋使を送った。",
    "face": {
     "h": "kanmuri",
@@ -9999,7 +9999,7 @@
    },
    "region": "asia",
    "jp": "shotoku",
-   "score": 12
+   "score": 78
   },
   {
    "id": "nobunaga",
@@ -10008,7 +10008,7 @@
    "died": 1582,
    "role": "戦国大名",
    "kind": "war",
-   "level": 4,
+   "level": 1,
    "detail": "鉄砲を活用し、楽市楽座で経済を動かした。本能寺で倒れた。",
    "face": {
     "h": "topknot",
@@ -10020,7 +10020,7 @@
    },
    "region": "asia",
    "jp": "nobunaga",
-   "score": 23
+   "score": 79
   },
   {
    "id": "meiji",
@@ -10029,7 +10029,7 @@
    "died": 1912,
    "role": "明治天皇",
    "kind": "politics",
-   "level": 3,
+   "level": 1,
    "detail": "五箇条の御誓文から憲法発布まで、近代国家づくりの象徴となった。",
    "face": {
     "h": "western",
@@ -10040,7 +10040,7 @@
    },
    "region": "asia",
    "jp": "meiji",
-   "score": 43
+   "score": 80
   },
   {
    "id": "darius1",
@@ -10065,7 +10065,7 @@
     "s": "#cf9f70"
    },
    "lesson": "広い国は、道と制度でつなぐ。",
-   "score": 64
+   "score": 68
   },
   {
    "id": "pericles",
@@ -10075,7 +10075,7 @@
    "died": -429,
    "role": "アテネの政治家",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "民主政の最盛期を導き、パルテノン神殿の再建を進めた。疫病で亡くなった。",
    "face": {
     "h": "curly",
@@ -10086,7 +10086,7 @@
     "a": 1
    },
    "lesson": "市民の参加が、都市の力と文化を生んだ。",
-   "score": 52
+   "score": 65
   },
   {
    "id": "herodotus",
@@ -10096,7 +10096,7 @@
    "died": -425,
    "role": "歴史家",
    "kind": "culture",
-   "level": 4,
+   "level": 2,
    "detail": "ペルシア戦争を中心に諸民族の風習を記録し、「歴史の父」と呼ばれる。",
    "face": {
     "h": "curly",
@@ -10107,7 +10107,7 @@
     "a": 1
    },
    "lesson": "過去を「調べて」語るという営みが始まった。",
-   "score": 28
+   "score": 61
   },
   {
    "id": "pythagoras",
@@ -10117,7 +10117,7 @@
    "died": -495,
    "role": "哲学者・数学者",
    "kind": "culture",
-   "level": 4,
+   "level": 2,
    "detail": "万物は数であると考え、音の高さと弦の長さの比も研究した。三平方の定理で知られる(ただし彼の発見かは議論がある)。",
    "face": {
     "h": "curly",
@@ -10130,7 +10130,7 @@
    "lesson": "自然の背後に数の秩序を見た。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 26
+   "score": 60
   },
   {
    "id": "plato",
@@ -10151,7 +10151,7 @@
     "a": 1
    },
    "lesson": "師の問いを、体系に育てた。",
-   "score": 67
+   "score": 70
   },
   {
    "id": "hippocrates",
@@ -10161,7 +10161,7 @@
    "died": -370,
    "role": "医師",
    "kind": "culture",
-   "level": 3,
+   "level": 2,
    "detail": "病気を神の罰ではなく自然の原因から考える医学を重んじた。「医の倫理」の源流とされる。",
    "face": {
     "h": "curly",
@@ -10174,7 +10174,7 @@
    "lesson": "経験と観察に基づく医療の出発点。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 51
+   "score": 65
   },
   {
    "id": "archimedes",
@@ -10197,7 +10197,7 @@
    "lesson": "理論と工夫が、道具を生む。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 77
+   "score": 76
   },
   {
    "id": "mencius",
@@ -10207,7 +10207,7 @@
    "died": -289,
    "role": "儒家の思想家",
    "kind": "culture",
-   "level": 4,
+   "level": 2,
    "detail": "人間の本性は善であるという性善説を説き、民を大切にする政治を求めた。",
    "face": {
     "h": "guan",
@@ -10220,7 +10220,7 @@
    "lesson": "人の善さを信じる政治を唱えた。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 25
+   "score": 60
   },
   {
    "id": "liubang",
@@ -10242,7 +10242,7 @@
    "lesson": "自分より優れた者を使いこなす力があった。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 70
+   "score": 72
   },
   {
    "id": "xiangyu",
@@ -10252,7 +10252,7 @@
    "died": -202,
    "role": "楚の覇王",
    "kind": "war",
-   "level": 3,
+   "level": 2,
    "detail": "圧倒的な武勇で秦を滅ぼしたが、劉邦に敗れ垓下で自害した。",
    "face": {
     "h": "mian",
@@ -10264,7 +10264,7 @@
    "lesson": "強さだけでは天下は取れなかった。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 44
+   "score": 64
   },
   {
    "id": "wudi",
@@ -10284,7 +10284,7 @@
     "b": "mustache"
    },
    "lesson": "拡大と制度化を同時に進めた。",
-   "score": 68
+   "score": 71
   },
   {
    "id": "simaqian",
@@ -10294,7 +10294,7 @@
    "died": -86,
    "role": "歴史家",
    "kind": "culture",
-   "level": 3,
+   "level": 2,
    "detail": "宮刑の屈辱に耐え、『史記』を完成させた。人物を中心に描く紀伝体を創始した。",
    "face": {
     "h": "guan",
@@ -10307,7 +10307,7 @@
    "lesson": "苦難の中で、後世のために書き続けた。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 56
+   "score": 67
   },
   {
    "id": "ashoka",
@@ -10333,7 +10333,7 @@
    "lesson": "勝者の悔悟が、政治の理念を変えた。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 69
+   "score": 72
   },
   {
    "id": "scipio",
@@ -10343,7 +10343,7 @@
    "died": -183,
    "role": "ローマの将軍",
    "kind": "war",
-   "level": 4,
+   "level": 2,
    "detail": "ザマの戦いでハンニバルを破り、「アフリカヌス」の称号を得た。",
    "face": {
     "h": "laurel",
@@ -10352,7 +10352,7 @@
     "e": "strong"
    },
    "lesson": "敵を最もよく研究した者が、敵を破った。",
-   "score": 34
+   "score": 62
   },
   {
    "id": "cicero",
@@ -10372,7 +10372,7 @@
     "a": 1
    },
    "lesson": "言葉の力は、権力の前で試される。",
-   "score": 64
+   "score": 68
   },
   {
    "id": "nero",
@@ -10382,7 +10382,7 @@
    "died": 68,
    "role": "ローマ皇帝",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "ローマ大火の後、都市を再建したが、キリスト教徒を迫害し、反乱のなか自殺した。",
    "face": {
     "h": "laurel",
@@ -10392,7 +10392,7 @@
     "f": "round"
    },
    "lesson": "芸術を愛しても、政治を誤った。",
-   "score": 46
+   "score": 64
   },
   {
    "id": "hadrian",
@@ -10402,7 +10402,7 @@
    "died": 138,
    "role": "ローマ皇帝",
    "kind": "politics",
-   "level": 5,
+   "level": 2,
    "detail": "領土の拡大より防衛を重んじ、ブリテン島に長城を築いた。ギリシア文化を愛した。",
    "face": {
     "h": "laurel",
@@ -10412,7 +10412,7 @@
     "b": "beard"
    },
    "lesson": "広げるだけでなく、境界を決める統治。",
-   "score": 14
+   "score": 59
   },
   {
    "id": "aurelius",
@@ -10433,7 +10433,7 @@
     "a": 1
    },
    "lesson": "戦場の陣中でも、自分を省みた。",
-   "score": 70
+   "score": 72
   },
   {
    "id": "caocao",
@@ -10443,7 +10443,7 @@
    "died": 220,
    "role": "魏の基礎を築いた武将",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "群雄を倒して華北を統一し、詩人としても名高い。",
    "face": {
     "h": "guan",
@@ -10453,7 +10453,7 @@
     "b": "mustache"
    },
    "lesson": "乱世の実力者は、詩文にも優れた。",
-   "score": 78
+   "score": 92
   },
   {
    "id": "liubei",
@@ -10463,7 +10463,7 @@
    "died": 223,
    "role": "蜀漢の皇帝",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "関羽・張飛と義兄弟の契りを結び、諸葛亮を迎えて蜀を建てた。",
    "face": {
     "h": "guan",
@@ -10473,7 +10473,7 @@
     "b": "beard"
    },
    "lesson": "人を集める徳が、小さな勢力を国にした。",
-   "score": 62
+   "score": 81
   },
   {
    "id": "zhugeliang",
@@ -10483,7 +10483,7 @@
    "died": 234,
    "role": "蜀の丞相",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "「三顧の礼」で劉備に迎えられ、軍師・政治家として蜀を支えた。北伐の途中、陣中で亡くなった。",
    "face": {
     "h": "guan",
@@ -10494,7 +10494,7 @@
     "a": 1
    },
    "lesson": "才と誠実が、小国を支えた。",
-   "score": 70
+   "score": 86
   },
   {
    "id": "justinian",
@@ -10517,7 +10517,7 @@
     "b": "beard"
    },
    "lesson": "法と建築で、ローマの伝統を再編した。",
-   "score": 64
+   "score": 68
   },
   {
    "id": "wuzetian",
@@ -10540,7 +10540,7 @@
     "sex": "f"
    },
    "lesson": "出身にとらわれず、有能な人材を用いた。",
-   "score": 63
+   "score": 67
   },
   {
    "id": "xuanzong",
@@ -10560,7 +10560,7 @@
     "b": "mustache"
    },
    "lesson": "盛りの後の油断が、乱を呼んだ。",
-   "score": 11
+   "score": 15
   },
   {
    "id": "libai",
@@ -10580,7 +10580,7 @@
     "b": "goatee"
    },
    "lesson": "型にはまらない言葉の力。",
-   "score": 67
+   "score": 70
   },
   {
    "id": "dufu",
@@ -10622,7 +10622,7 @@
     "s": "#cf9f70"
    },
    "lesson": "敵にも礼を尽くす指導者。",
-   "score": 63
+   "score": 68
   },
   {
    "id": "richard1",
@@ -10632,7 +10632,7 @@
    "died": 1199,
    "role": "イングランド王",
    "kind": "war",
-   "level": 3,
+   "level": 2,
    "detail": "第三回十字軍を率い、「獅子心王」と呼ばれた。在位中のほとんどを国外で過ごした。",
    "face": {
     "h": "long",
@@ -10645,7 +10645,7 @@
     ]
    },
    "lesson": "勇猛な王は、国を空けて戦った。",
-   "score": 51
+   "score": 65
   },
   {
    "id": "william1",
@@ -10655,7 +10655,7 @@
    "died": 1087,
    "role": "イングランド王",
    "kind": "war",
-   "level": 4,
+   "level": 2,
    "detail": "ノルマンディー公としてイングランドを征服し、検地帳「ドゥームズデイ・ブック」を作らせた。",
    "face": {
     "h": "long",
@@ -10665,7 +10665,7 @@
     "b": "mustache"
    },
    "lesson": "征服の次は、調べて治める。",
-   "score": 37
+   "score": 63
   },
   {
    "id": "frederick2",
@@ -10675,7 +10675,7 @@
    "died": 1250,
    "role": "神聖ローマ皇帝",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "シチリアで学問と諸宗教の共存を重んじ、外交交渉でエルサレムを回復した。「世界の驚異」と呼ばれた。",
    "face": {
     "h": "long",
@@ -10688,7 +10688,7 @@
     "b": "mustache"
    },
    "lesson": "異文化に開かれた皇帝。",
-   "score": 35
+   "score": 62
   },
   {
    "id": "aquinas",
@@ -10708,7 +10708,7 @@
     "f": "round"
    },
    "lesson": "信仰と理性を橋渡しした。",
-   "score": 73
+   "score": 74
   },
   {
    "id": "dante",
@@ -10728,7 +10728,7 @@
     "a": 1
    },
    "lesson": "自分たちの言葉で書くことが、文学を広げた。",
-   "score": 69
+   "score": 72
   },
   {
    "id": "zhuyuanzhang",
@@ -10749,7 +10749,7 @@
     "f": "long"
    },
    "lesson": "最下層から皇帝に上りつめ、権力を一手に握った。",
-   "score": 72
+   "score": 74
   },
   {
    "id": "timur",
@@ -10770,7 +10770,7 @@
     "s": "#cf9f70"
    },
    "lesson": "征服者が、都を壮麗な建築で飾った。",
-   "score": 68
+   "score": 71
   },
   {
    "id": "yongle",
@@ -10780,7 +10780,7 @@
    "died": 1424,
    "role": "明の皇帝",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "北京に遷都し、『永楽大典』を編纂した。鄭和の大遠征も命じた。",
    "face": {
     "h": "mian",
@@ -10790,7 +10790,7 @@
     "b": "mustache"
    },
    "lesson": "拡大と編纂を同時に進めた。",
-   "score": 36
+   "score": 63
   },
   {
    "id": "lorenzo",
@@ -10810,7 +10810,7 @@
     "f": "long"
    },
    "lesson": "富の使い道が、ルネサンスを育てた。",
-   "score": 70
+   "score": 72
   },
   {
    "id": "michelangelo",
@@ -10820,7 +10820,7 @@
    "died": 1564,
    "role": "彫刻家・画家",
    "kind": "culture",
-   "level": 2,
+   "level": 1,
    "detail": "『ダビデ像』やシスティーナ礼拝堂の天井画で知られ、サン・ピエトロ大聖堂の設計にも関わった。",
    "face": {
     "h": "beret",
@@ -10831,7 +10831,7 @@
     "a": 1
    },
    "lesson": "巨大な仕事を、孤独に成し遂げた。",
-   "score": 76
+   "score": 91
   },
   {
    "id": "raphael",
@@ -10841,7 +10841,7 @@
    "died": 1520,
    "role": "画家",
    "kind": "culture",
-   "level": 3,
+   "level": 2,
    "detail": "調和のとれた聖母子像や『アテネの学堂』で知られる。37歳で亡くなった。",
    "face": {
     "h": "beret",
@@ -10850,7 +10850,7 @@
     "e": "calm"
    },
    "lesson": "若くして理想の美を描いた。",
-   "score": 47
+   "score": 64
   },
   {
    "id": "machiavelli",
@@ -10870,7 +10870,7 @@
     "a": 1
    },
    "lesson": "理想より現実を直視した政治学。",
-   "score": 72
+   "score": 74
   },
   {
    "id": "copernicus",
@@ -10890,7 +10890,7 @@
     "a": 1
    },
    "lesson": "宇宙の中心から、地球を降ろした。",
-   "score": 68
+   "score": 71
   },
   {
    "id": "magellan",
@@ -10900,7 +10900,7 @@
    "died": 1521,
    "role": "航海者",
    "kind": "tech",
-   "level": 2,
+   "level": 1,
    "detail": "スペインの艦隊を率いて世界周航に出たが、フィリピンで戦死した。",
    "face": {
     "h": "beret",
@@ -10910,7 +10910,7 @@
     "b": "beard"
    },
    "lesson": "先頭に立つ者が、成果を見られなかった。",
-   "score": 63
+   "score": 81
   },
   {
    "id": "calvin",
@@ -10920,7 +10920,7 @@
    "died": 1564,
    "role": "宗教改革者",
    "kind": "culture",
-   "level": 4,
+   "level": 2,
    "detail": "ジュネーヴで神権的な改革を進め、予定説を説いた。職業は神から与えられた使命だと教えた。",
    "face": {
     "h": "beret",
@@ -10930,7 +10930,7 @@
     "b": "beard"
    },
    "lesson": "勤勉と禁欲の倫理が、商工業者に広がった。",
-   "score": 29
+   "score": 61
   },
   {
    "id": "suleiman",
@@ -10954,7 +10954,7 @@
     "s": "#cf9f70"
    },
    "lesson": "軍事と法で、帝国を黄金期に導いた。",
-   "score": 65
+   "score": 69
   },
   {
    "id": "shakespeare",
@@ -10964,7 +10964,7 @@
    "died": 1616,
    "role": "劇作家",
    "kind": "culture",
-   "level": 2,
+   "level": 1,
    "detail": "『ハムレット』『マクベス』などを書いた。人間の複雑さを描いた作品が、今も世界中で上演される。",
    "face": {
     "h": "western",
@@ -10974,7 +10974,7 @@
     "b": "goatee"
    },
    "lesson": "人間の心の動きを、言葉で舞台に載せた。",
-   "score": 65
+   "score": 82
   },
   {
    "id": "kepler",
@@ -10984,7 +10984,7 @@
    "died": 1630,
    "role": "天文学者",
    "kind": "tech",
-   "level": 5,
+   "level": 2,
    "detail": "惑星の運動に関する三つの法則を導いた。ティコ・ブラーエの観測データが基礎になった。",
    "face": {
     "h": "wig",
@@ -10994,7 +10994,7 @@
     "b": "mustache"
    },
    "lesson": "精密な観測データが、法則を見つけさせた。",
-   "score": 13
+   "score": 59
   },
   {
    "id": "descartes",
@@ -11014,7 +11014,7 @@
     "b": "mustache"
    },
    "lesson": "疑うことから、確かな知識を組み直した。",
-   "score": 77
+   "score": 76
   },
   {
    "id": "cromwell",
@@ -11024,7 +11024,7 @@
    "died": 1658,
    "role": "軍人・政治家",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "ピューリタン革命で議会軍を率い、国王処刑後は護国卿として共和国を統治した。",
    "face": {
     "h": "long",
@@ -11034,7 +11034,7 @@
     "f": "long"
    },
    "lesson": "革命の指導者が、事実上の独裁者になった。",
-   "score": 44
+   "score": 64
   },
   {
    "id": "peter1",
@@ -11054,7 +11054,7 @@
     "b": "mustache"
    },
    "lesson": "自ら学び、国ごと作り替えた皇帝。",
-   "score": 66
+   "score": 70
   },
   {
    "id": "catherine2",
@@ -11078,7 +11078,7 @@
     "a": 1
    },
    "lesson": "啓蒙と専制を両立させた女帝。",
-   "score": 72
+   "score": 74
   },
   {
    "id": "frederick_g",
@@ -11088,7 +11088,7 @@
    "died": 1786,
    "role": "プロイセン王",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "「君主は国家第一の僕」と述べ、啓蒙専制を行い、オーストリアと争って領土を広げた。",
    "face": {
     "h": "wig",
@@ -11098,7 +11098,7 @@
     "a": 1
    },
    "lesson": "近代的な軍と官僚で、小国を強国にした。",
-   "score": 50
+   "score": 65
   },
   {
    "id": "maria_theresa",
@@ -11108,7 +11108,7 @@
    "died": 1780,
    "role": "ハプスブルク家の女帝",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "オーストリア継承戦争を耐え、行政と教育の改革を進めた。16人の子を産み、末子はマリー・アントワネット。",
    "face": {
     "h": "bun",
@@ -11121,7 +11121,7 @@
     "sex": "f"
    },
    "lesson": "国を守り、制度を整えた母として統治した。",
-   "score": 26
+   "score": 60
   },
   {
    "id": "smith",
@@ -11141,7 +11141,7 @@
     "a": 1
    },
    "lesson": "個人の利益追求が、社会の豊かさにつながると見た。",
-   "score": 74
+   "score": 75
   },
   {
    "id": "kant",
@@ -11161,7 +11161,7 @@
     "a": 1
    },
    "lesson": "理性の限界を、理性自身で確かめた。",
-   "score": 64
+   "score": 68
   },
   {
    "id": "voltaire",
@@ -11171,7 +11171,7 @@
    "died": 1778,
    "role": "啓蒙思想家",
    "kind": "culture",
-   "level": 3,
+   "level": 2,
    "detail": "宗教的不寛容を批判し、言論の自由を擁護した。「私はあなたの意見に反対だが、それを言う権利は命をかけて守る」と言った、とされる(後世の要約)。",
    "face": {
     "h": "wig",
@@ -11181,7 +11181,7 @@
     "a": 1
    },
    "lesson": "寛容を説いた皮肉屋。",
-   "score": 54
+   "score": 66
   },
   {
    "id": "watt",
@@ -11220,7 +11220,7 @@
     "e": "sharp"
    },
    "lesson": "理想の純粋さを求めた政治が、暴力に傾いた。",
-   "score": 65
+   "score": 69
   },
   {
    "id": "mozart",
@@ -11230,7 +11230,7 @@
    "died": 1791,
    "role": "作曲家",
    "kind": "culture",
-   "level": 2,
+   "level": 1,
    "detail": "35歳で亡くなるまでに、600を超える曲を作った。『フィガロの結婚』『魔笛』など。",
    "face": {
     "h": "wig",
@@ -11239,7 +11239,7 @@
     "e": "smile"
    },
    "lesson": "天賦の才と、旺盛な仕事量。",
-   "score": 75
+   "score": 90
   },
   {
    "id": "beethoven",
@@ -11249,7 +11249,7 @@
    "died": 1827,
    "role": "作曲家",
    "kind": "culture",
-   "level": 2,
+   "level": 1,
    "detail": "耳がほとんど聞こえなくなってからも、『第九』など傑作を書いた。音楽家が自由な芸術家として生きる道を開いた。",
    "face": {
     "h": "wild",
@@ -11258,7 +11258,7 @@
     "e": "strong"
    },
    "lesson": "苦難の中で、最も大きな音楽をつくった。",
-   "score": 63
+   "score": 81
   },
   {
    "id": "wilberforce",
@@ -11268,7 +11268,7 @@
    "died": 1833,
    "role": "政治家",
    "kind": "society",
-   "level": 3,
+   "level": 2,
    "detail": "長年にわたり議会で奴隷貿易の廃止を訴え、1807年に実現させた。",
    "face": {
     "h": "wig",
@@ -11277,7 +11277,7 @@
     "e": "calm"
    },
    "lesson": "一人の粘り強い訴えが、法を動かした。",
-   "score": 53
+   "score": 66
   },
   {
    "id": "nightingale",
@@ -11287,7 +11287,7 @@
    "died": 1910,
    "role": "看護師",
    "kind": "society",
-   "level": 2,
+   "level": 1,
    "detail": "クリミア戦争で野戦病院を改革し、統計を用いて衛生の改善を訴えた。近代看護の創始者。",
    "face": {
     "h": "bun",
@@ -11297,7 +11297,7 @@
     "sex": "f"
    },
    "lesson": "数字で説得する、改革者でもあった。",
-   "score": 66
+   "score": 83
   },
   {
    "id": "garibaldi",
@@ -11307,7 +11307,7 @@
    "died": 1882,
    "role": "イタリア統一の英雄",
    "kind": "war",
-   "level": 5,
+   "level": 2,
    "detail": "義勇軍「赤シャツ隊」を率いてシチリアと南イタリアを占領し、サルデーニャ王に献上した。",
    "face": {
     "h": "wig",
@@ -11317,7 +11317,7 @@
     "b": "beard"
    },
    "lesson": "統一を、自らの手柄にしなかった。",
-   "score": 5
+   "score": 59
   },
   {
    "id": "pasteur",
@@ -11327,7 +11327,7 @@
    "died": 1895,
    "role": "化学者・細菌学者",
    "kind": "tech",
-   "level": 2,
+   "level": 1,
    "detail": "低温殺菌法を開発し、狂犬病などのワクチンを作った。細菌が病気の原因であることを示した。",
    "face": {
     "h": "beret",
@@ -11338,7 +11338,7 @@
     "a": 1
    },
    "lesson": "見えない敵に、実験で立ち向かった。",
-   "score": 74
+   "score": 89
   },
   {
    "id": "tolstoy",
@@ -11348,7 +11348,7 @@
    "died": 1910,
    "role": "作家",
    "kind": "culture",
-   "level": 3,
+   "level": 2,
    "detail": "『戦争と平和』『アンナ・カレーニナ』を書いた。晩年は非暴力主義を説き、ガンディーにも影響を与えた。",
    "face": {
     "h": "long",
@@ -11359,7 +11359,7 @@
     "a": 1
    },
    "lesson": "文学が、思想を広げた。",
-   "score": 42
+   "score": 63
   },
   {
    "id": "nietzsche",
@@ -11369,7 +11369,7 @@
    "died": 1900,
    "role": "哲学者",
    "kind": "culture",
-   "level": 4,
+   "level": 2,
    "detail": "「神は死んだ」と述べ、既存の価値観を問い直した。『ツァラトゥストラはこう語った』など。",
    "face": {
     "h": "western",
@@ -11379,7 +11379,7 @@
     "b": "mustache"
    },
    "lesson": "既成の価値を疑う、鋭い思索。",
-   "score": 32
+   "score": 62
   },
   {
    "id": "bell",
@@ -11389,7 +11389,7 @@
    "died": 1922,
    "role": "発明家",
    "kind": "tech",
-   "level": 3,
+   "level": 2,
    "detail": "電話を発明し、聴覚障害者の教育にも取り組んだ。",
    "face": {
     "h": "western",
@@ -11400,7 +11400,7 @@
     "a": 1
    },
    "lesson": "人の声を遠くへ運ぶ道具を作った。",
-   "score": 56
+   "score": 67
   },
   {
    "id": "freud",
@@ -11422,7 +11422,7 @@
     "g": 1
    },
    "lesson": "見えない心の動きに、理論を与えた。",
-   "score": 71
+   "score": 73
   },
   {
    "id": "curie",
@@ -11432,7 +11432,7 @@
    "died": 1934,
    "role": "物理学者・化学者",
    "kind": "tech",
-   "level": 2,
+   "level": 1,
    "detail": "放射能を研究し、ポロニウムとラジウムを発見した。ノーベル賞を物理学と化学の2分野で受賞した。",
    "face": {
     "h": "bun",
@@ -11442,7 +11442,7 @@
     "sex": "f"
    },
    "lesson": "性別の壁を超えた、科学者。",
-   "score": 77
+   "score": 91
   },
   {
    "id": "picasso",
@@ -11452,7 +11452,7 @@
    "died": 1973,
    "role": "画家",
    "kind": "culture",
-   "level": 2,
+   "level": 1,
    "detail": "キュビスムを創始し、『ゲルニカ』でスペイン内戦の空襲を告発した。生涯に数万点を制作した。",
    "face": {
     "h": "western",
@@ -11461,7 +11461,7 @@
     "e": "strong"
    },
    "lesson": "形を壊し、作り直す表現。",
-   "score": 69
+   "score": 85
   },
   {
    "id": "kemal",
@@ -11481,7 +11481,7 @@
     "s": "#e6c496"
    },
    "lesson": "急進的な改革で、国のかたちを一新した。",
-   "score": 77
+   "score": 76
   },
   {
    "id": "stalin",
@@ -11491,7 +11491,7 @@
    "died": 1953,
    "role": "ソ連の指導者",
    "kind": "politics",
-   "level": 2,
+   "level": 1,
    "detail": "五カ年計画で工業化を進めた一方、大粛清で数百万人が犠牲になった。第二次世界大戦ではドイツに勝った。",
    "face": {
     "h": "western",
@@ -11501,7 +11501,7 @@
     "b": "mustache"
    },
    "lesson": "工業化と粛清、勝利と恐怖が同居した。",
-   "score": 65
+   "score": 83
   },
   {
    "id": "mussolini",
@@ -11511,7 +11511,7 @@
    "died": 1945,
    "role": "イタリアの独裁者",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "世界初のファシスト政権を築き、エチオピア侵攻やドイツとの同盟に進んだ。",
    "face": {
     "h": "western",
@@ -11521,7 +11521,7 @@
     "f": "round"
    },
    "lesson": "弁舌と暴力で、民主政を倒した。",
-   "score": 48
+   "score": 65
   },
   {
    "id": "truman",
@@ -11531,7 +11531,7 @@
    "died": 1972,
    "role": "アメリカ大統領",
    "kind": "politics",
-   "level": 5,
+   "level": 2,
    "detail": "原爆の使用を決定し、トルーマン・ドクトリンとマーシャル・プランで冷戦を方向づけた。",
    "face": {
     "h": "fedora",
@@ -11541,7 +11541,7 @@
     "g": 1
    },
    "lesson": "重い決断を、短期間に次々と迫られた。",
-   "score": 16
+   "score": 59
   },
   {
    "id": "nehru",
@@ -11561,7 +11561,7 @@
     "s": "#cf9f70"
    },
    "lesson": "大国の陣営に属さない道を探った。",
-   "score": 70
+   "score": 73
   },
   {
    "id": "degaulle",
@@ -11580,7 +11580,7 @@
     "e": "strong"
    },
    "lesson": "屈しない意思が、国の誇りを守った。",
-   "score": 70
+   "score": 73
   },
   {
    "id": "chaplin",
@@ -11590,7 +11590,7 @@
    "died": 1977,
    "role": "俳優・映画監督",
    "kind": "culture",
-   "level": 4,
+   "level": 1,
    "detail": "『独裁者』などで、喜劇を通じて貧困や権力を風刺した。",
    "face": {
     "h": "western",
@@ -11600,7 +11600,7 @@
     "b": "mustache"
    },
    "lesson": "笑いは、最も遠くまで届く批評だった。",
-   "score": 38
+   "score": 80
   },
   {
    "id": "reagan",
@@ -11610,7 +11610,7 @@
    "died": 2004,
    "role": "アメリカ大統領",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "減税と軍拡を進め、ゴルバチョフとの交渉で核軍縮を進めた。",
    "face": {
     "h": "western",
@@ -11620,7 +11620,7 @@
     "a": 1
    },
    "lesson": "強硬から対話へ、方針を転じた。",
-   "score": 27
+   "score": 60
   },
   {
    "id": "thatcher",
@@ -11641,7 +11641,7 @@
     "hc": "#c0a060"
    },
    "lesson": "賛否の分かれる強い改革を断行した。",
-   "score": 71
+   "score": 73
   },
   {
    "id": "annan",
@@ -11651,7 +11651,7 @@
    "died": 2018,
    "role": "国連事務総長",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "アフリカ出身で初めて国連事務総長を務めた。2001年にノーベル平和賞(国連とともに)を受賞した。",
    "face": {
     "h": "western",
@@ -11662,7 +11662,7 @@
     "s": "#6e4630"
    },
    "lesson": "対話による解決を、国連の中心に置いた。",
-   "score": 57
+   "score": 67
   },
   {
    "id": "shaka",
@@ -11672,7 +11672,7 @@
    "died": 1828,
    "role": "ズールー王国の王",
    "kind": "war",
-   "level": 3,
+   "level": 2,
    "detail": "軍制改革と短槍で、ズールーを南部アフリカの強国に押し上げた。",
    "face": {
     "h": "headband",
@@ -11682,7 +11682,7 @@
     "s": "#6e4630"
    },
    "lesson": "軍の編成の革新が、国を強くした。",
-   "score": 55
+   "score": 66
   },
   {
    "id": "njinga",
@@ -11704,7 +11704,7 @@
     "s": "#6e4630"
    },
    "lesson": "交渉と戦闘で、独立を貫いた女王。",
-   "score": 49
+   "score": 47
   },
   {
    "id": "askia",
@@ -11727,7 +11727,7 @@
    "lesson": "交易と学問を両立させた支配者。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 22
+   "score": 33
   },
   {
    "id": "haile_selassie",
@@ -11748,7 +11748,7 @@
     "s": "#6e4630"
    },
    "lesson": "小国の訴えが、国際社会に突きつけられた。",
-   "score": 66
+   "score": 70
   },
   {
    "id": "kenyatta",
@@ -11758,7 +11758,7 @@
    "died": 1978,
    "role": "ケニア初代大統領",
    "kind": "politics",
-   "level": 5,
+   "level": 2,
    "detail": "マウマウ蜂起の疑いで投獄されたが、独立後に初代大統領となった。",
    "face": {
     "h": "western",
@@ -11770,7 +11770,7 @@
     "s": "#6e4630"
    },
    "lesson": "抑留を経て、独立の父になった。",
-   "score": 4
+   "score": 58
   },
   {
    "id": "nyerere",
@@ -11780,7 +11780,7 @@
    "died": 1999,
    "role": "タンザニア初代大統領",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "「ウジャマー(家族)」を掲げて社会主義的な建国を進め、民から「教師(ムワリム)」と呼ばれた。",
    "face": {
     "h": "western",
@@ -11791,7 +11791,7 @@
     "s": "#6e4630"
    },
    "lesson": "教育を重んじた建国の父。",
-   "score": 57
+   "score": 67
   },
   {
    "id": "sankara",
@@ -11811,7 +11811,7 @@
     "s": "#6e4630"
    },
    "lesson": "短い在任でも、鮮烈な改革を残した。",
-   "score": 52
+   "score": 54
   },
   {
    "id": "sitting_bull",
@@ -11831,7 +11831,7 @@
     "s": "#a8764e"
    },
    "lesson": "土地を守る闘いを、最後まで貫いた。",
-   "score": 66
+   "score": 70
   },
   {
    "id": "douglass",
@@ -11852,7 +11852,7 @@
     "s": "#6e4630"
    },
    "lesson": "当事者の声が、運動の力になった。",
-   "score": 68
+   "score": 71
   },
   {
    "id": "tubman",
@@ -11862,7 +11862,7 @@
    "died": 1913,
    "role": "奴隷解放運動家",
    "kind": "society",
-   "level": 4,
+   "level": 2,
    "detail": "自らも脱出したのち、「地下鉄道」で数十人以上の奴隷を自由の地へ導いた。南北戦争では斥候も務めた。",
    "face": {
     "h": "headwrap",
@@ -11876,7 +11876,7 @@
    "lesson": "自らの自由を、他者のために使った。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 30
+   "score": 61
   },
   {
    "id": "troosevelt",
@@ -11886,7 +11886,7 @@
    "died": 1919,
    "role": "アメリカ大統領",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "「棍棒外交」で海外に影響力を広げ、国立公園の保護にも力を入れた。",
    "face": {
     "h": "western",
@@ -11897,7 +11897,7 @@
     "g": 1
    },
    "lesson": "自然保護と帝国主義の、両方の顔を持つ。",
-   "score": 55
+   "score": 66
   },
   {
    "id": "ford",
@@ -11907,7 +11907,7 @@
    "died": 1947,
    "role": "自動車王",
    "kind": "economy",
-   "level": 2,
+   "level": 1,
    "detail": "流れ作業でT型車を量産し、労働者の賃金も引き上げた。",
    "face": {
     "h": "fedora",
@@ -11917,7 +11917,7 @@
     "a": 1
    },
    "lesson": "大量生産が、消費社会を準備した。",
-   "score": 73
+   "score": 88
   },
   {
    "id": "wilson",
@@ -11927,7 +11927,7 @@
    "died": 1924,
    "role": "アメリカ大統領",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "第一次世界大戦後、民族自決と国際連盟の創設を提唱したが、自国議会が加盟を承認しなかった。",
    "face": {
     "h": "western",
@@ -11938,7 +11938,7 @@
     "a": 1
    },
    "lesson": "理想は、自国の議会で止められた。",
-   "score": 27
+   "score": 60
   },
   {
    "id": "kahlo",
@@ -11948,7 +11948,7 @@
    "died": 1954,
    "role": "画家",
    "kind": "culture",
-   "level": 3,
+   "level": 2,
    "detail": "自らの痛みや身体、メキシコの文化を、鮮やかな自画像で描いた。",
    "face": {
     "h": "bun",
@@ -11959,7 +11959,7 @@
     "s": "#cf9f70"
    },
    "lesson": "個人の痛みを、時代を超える表現に変えた。",
-   "score": 43
+   "score": 63
   },
   {
    "id": "guevara",
@@ -11989,7 +11989,7 @@
    "died": 2005,
    "role": "公民権運動家",
    "kind": "society",
-   "level": 2,
+   "level": 1,
    "detail": "バスで白人に席を譲らなかったために逮捕され、モントゴメリー・バス・ボイコット運動のきっかけになった。",
    "face": {
     "h": "bun",
@@ -12001,7 +12001,7 @@
     "s": "#6e4630"
    },
    "lesson": "一つの「拒否」が、運動を点火した。",
-   "score": 75
+   "score": 90
   },
   {
    "id": "malcolmx",
@@ -12011,7 +12011,7 @@
    "died": 1965,
    "role": "公民権運動の指導者",
    "kind": "society",
-   "level": 3,
+   "level": 2,
    "detail": "黒人の自尊と自衛を訴えた。メッカ巡礼ののち、人種の融和にも目を向けたが暗殺された。",
    "face": {
     "h": "western",
@@ -12022,7 +12022,7 @@
     "s": "#6e4630"
    },
    "lesson": "考えを変える勇気を持った活動家。",
-   "score": 47
+   "score": 65
   },
   {
    "id": "tipu",
@@ -12032,7 +12032,7 @@
    "died": 1799,
    "role": "マイソール王国の王",
    "kind": "war",
-   "level": 4,
+   "level": 2,
    "detail": "「マイソールの虎」と呼ばれ、ロケット兵器を使ってイギリス東インド会社と戦った。",
    "face": {
     "h": "turban",
@@ -12043,7 +12043,7 @@
     "s": "#a8764e"
    },
    "lesson": "最新の兵器でも、背後の同盟の差には勝てなかった。",
-   "score": 27
+   "score": 61
   },
   {
    "id": "qianlong",
@@ -12062,7 +12062,7 @@
     "e": "strong"
    },
    "lesson": "頂点の自信が、世界の変化を見えにくくした。",
-   "score": 78
+   "score": 77
   },
   {
    "id": "lin_zexu",
@@ -12072,7 +12072,7 @@
    "died": 1850,
    "role": "清の官僚",
    "kind": "politics",
-   "level": 4,
+   "level": 2,
    "detail": "アヘンを厳しく取り締まり、アヘン戦争の発端となった。のち左遷されたが、世界の情報を集めた。",
    "face": {
     "h": "qing",
@@ -12083,7 +12083,7 @@
     "a": 1
    },
    "lesson": "世界を知ろうとした官僚。",
-   "score": 27
+   "score": 61
   },
   {
    "id": "hongxiuquan",
@@ -12093,7 +12093,7 @@
    "died": 1864,
    "role": "太平天国の指導者",
    "kind": "war",
-   "level": 5,
+   "level": 2,
    "detail": "科挙に失敗したのちキリスト教の影響を受け、自らを神の子と称して乱を起こした。",
    "face": {
     "h": "wild",
@@ -12103,7 +12103,7 @@
     "b": "beard"
    },
    "lesson": "挫折した知識人が、巨大な反乱の中心になった。",
-   "score": 17
+   "score": 60
   },
   {
    "id": "cixi",
@@ -12127,7 +12127,7 @@
     "a": 1
    },
    "lesson": "保守と改革の間で揺れた権力者。",
-   "score": 74
+   "score": 75
   },
   {
    "id": "lihongzhang",
@@ -12137,7 +12137,7 @@
    "died": 1901,
    "role": "清の政治家",
    "kind": "politics",
-   "level": 3,
+   "level": 2,
    "detail": "洋務運動を推進し、北洋艦隊を整えたが、日清戦争に敗れ、下関条約に調印した。",
    "face": {
     "h": "qing",
@@ -12148,7 +12148,7 @@
     "a": 1
    },
    "lesson": "近代化の努力が、時間に間に合わなかった。",
-   "score": 58
+   "score": 67
   },
   {
    "id": "lakshmibai",
@@ -12158,7 +12158,7 @@
    "died": 1858,
    "role": "ジャーンシー藩王国の王妃",
    "kind": "war",
-   "level": 4,
+   "level": 2,
    "detail": "インド大反乱で、自ら軍を率いて英軍と戦い、戦死した。",
    "face": {
     "h": "headband",
@@ -12171,7 +12171,7 @@
    "lesson": "抵抗の象徴として、今も語り継がれる。",
    "bornApprox": true,
    "diedApprox": true,
-   "score": 30
+   "score": 62
   },
   {
    "id": "tagore",
@@ -12193,7 +12193,7 @@
     "s": "#a8764e"
    },
    "lesson": "東洋から世界へ、言葉の橋をかけた。",
-   "score": 65
+   "score": 69
   },
   {
    "id": "liang_qichao",
@@ -12203,7 +12203,7 @@
    "died": 1929,
    "role": "思想家・ジャーナリスト",
    "kind": "culture",
-   "level": 4,
+   "level": 2,
    "detail": "戊戌の変法に参加し、日本に亡命して新聞で啓蒙に努め、国民国家の考えを中国に広めた。",
    "face": {
     "h": "qing",
@@ -12214,7 +12214,7 @@
     "g": 1
    },
    "lesson": "言論で、国民という意識を育てた。",
-   "score": 27
+   "score": 61
   },
   {
    "id": "luxun",
@@ -12234,7 +12234,7 @@
     "b": "mustache"
    },
    "lesson": "文学で、国民の精神を変えようとした。",
-   "score": 64
+   "score": 69
   },
   {
    "id": "chiang",
@@ -12254,7 +12254,7 @@
     "f": "long"
    },
    "lesson": "統一と内戦の間で、国を率いた。",
-   "score": 66
+   "score": 70
   },
   {
    "id": "zhouenlai",
@@ -12274,7 +12274,7 @@
     "a": 1
    },
    "lesson": "強烈な指導者の隣で、調整役を務めた。",
-   "score": 72
+   "score": 74
   },
   {
    "id": "yi_sunsin",
@@ -12294,7 +12294,7 @@
     "b": "beard"
    },
    "lesson": "戦術と準備が、劣勢を覆した。",
-   "score": 67
+   "score": 71
   },
   {
    "id": "sejong",
@@ -12314,7 +12314,7 @@
     "b": "beard"
    },
    "lesson": "民のための文字を作った王。",
-   "score": 74
+   "score": 75
   }
  ],
  "eras": [
