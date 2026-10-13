@@ -11,8 +11,8 @@
     36
    ],
    "rows": [
-    3,
-    3,
+    5,
+    5,
     6
    ],
    "introPeople": 14,
@@ -357,7 +357,7 @@
    "eras": [
     "soya"
    ],
-   "score": 95
+   "score": 96
   },
   {
    "id": "itaru",
@@ -380,7 +380,7 @@
    "eras": [
     "soya"
    ],
-   "score": 90
+   "score": 96
   },
   {
    "id": "banba",
@@ -402,7 +402,7 @@
    "eras": [
     "soya"
    ],
-   "score": 89
+   "score": 96
   },
   {
    "id": "teshiyan",
@@ -425,7 +425,7 @@
    "eras": [
     "soya"
    ],
-   "score": 88
+   "score": 96
   },
   {
    "id": "haya",
@@ -447,7 +447,7 @@
    "eras": [
     "soya"
    ],
-   "score": 92
+   "score": 88
   },
   {
    "id": "hirata",
@@ -470,7 +470,7 @@
    "eras": [
     "soya"
    ],
-   "score": 80
+   "score": 76
   },
   {
    "id": "yoioka",
@@ -493,7 +493,7 @@
    "eras": [
     "soya"
    ],
-   "score": 86
+   "score": 76
   },
   {
    "id": "okana",
@@ -518,7 +518,7 @@
    "eras": [
     "soya"
    ],
-   "score": 84
+   "score": 76
   },
   {
    "id": "switch",
@@ -542,7 +542,7 @@
    "eras": [
     "soya"
    ],
-   "score": 82
+   "score": 76
   },
   {
    "id": "goemon",
@@ -565,7 +565,7 @@
    "eras": [
     "soya"
    ],
-   "score": 58
+   "score": 60
   },
   {
    "id": "mochi",
@@ -589,7 +589,7 @@
    "eras": [
     "soya"
    ],
-   "score": 62
+   "score": 60
   },
   {
    "id": "shinbun",
@@ -636,7 +636,7 @@
    "eras": [
     "soya"
    ],
-   "score": 78
+   "score": 60
   },
   {
    "id": "tutor",
@@ -660,7 +660,7 @@
    "eras": [
     "soya"
    ],
-   "score": 55
+   "score": 56
   }
  ]
 }
