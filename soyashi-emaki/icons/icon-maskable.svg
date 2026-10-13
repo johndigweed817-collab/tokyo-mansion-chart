@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#3a2b1b"/><g transform="translate(256 256) scale(0.82) translate(-256 -282)"><defs><clipPath id="p"><rect x="104" y="176" width="304" height="160"/></clipPath></defs>
+  <!-- paper -->
+  <rect x="104" y="176" width="304" height="160" fill="#f4e9cd"/>
+  <g clip-path="url(#p)"><rect x="104" y="176" width="304" height="160" fill="#f6e3b0"/>
+    <circle cx="256" cy="256" r="62" fill="#f1b93c"/><circle cx="236" cy="244" r="8" fill="#2a211b"/><circle cx="276" cy="244" r="8" fill="#2a211b"/>
+    <path d="M226 272q30 30 60 0" fill="none" stroke="#2a211b" stroke-width="7" stroke-linecap="round"/></g>
+  <rect x="104" y="176" width="304" height="160" fill="none" stroke="#d7b45a" stroke-width="4"/>
+  <!-- rollers -->
+  <rect x="76" y="156" width="36" height="200" rx="14" fill="#8a6a43"/>
+  <rect x="400" y="156" width="36" height="200" rx="14" fill="#8a6a43"/>
+  <rect x="70" y="148" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="70" y="348" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="394" y="148" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="394" y="348" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <!-- timeline ruler -->
+  <path d="M100 394H412" stroke="#d7b45a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M104 394v22M184 394v14M264 394v22M344 394v14M408 394v22" stroke="#d7b45a" stroke-width="5" stroke-linecap="round"/></g></svg>

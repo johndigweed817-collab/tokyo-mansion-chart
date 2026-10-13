@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#1b2a33"/><g transform="translate(256 256) scale(1.15) translate(-256 -282)"><defs><clipPath id="p"><rect x="104" y="176" width="304" height="160"/></clipPath></defs>
+  <!-- paper -->
+  <rect x="104" y="176" width="304" height="160" fill="#f4e9cd"/>
+  <g clip-path="url(#p)"><rect x="104" y="176" width="304" height="160" fill="#cfe3e6"/>
+    <circle cx="256" cy="256" r="74" fill="#3f7f9f"/>
+    <path d="M222 214c14-6 30-2 34 10s-10 18-8 30-22 20-30 6-8-36 4-46z" fill="#7fae6a"/>
+    <path d="M268 262c14-6 30 2 32 16s-8 28-22 26-14-30-10-42z" fill="#7fae6a"/>
+    <ellipse cx="256" cy="256" rx="30" ry="74" fill="none" stroke="#e9f3f5" stroke-width="3" opacity=".7"/>
+    <path d="M182 256h148" stroke="#e9f3f5" stroke-width="3" opacity=".7"/>
+    <circle cx="256" cy="256" r="74" fill="none" stroke="#e9f3f5" stroke-width="3"/>
+    <ellipse cx="170" cy="318" rx="60" ry="8" fill="#eed68c" opacity=".7"/><ellipse cx="350" cy="196" rx="50" ry="7" fill="#eed68c" opacity=".7"/></g>
+  <rect x="104" y="176" width="304" height="160" fill="none" stroke="#d7b45a" stroke-width="4"/>
+  <!-- rollers -->
+  <rect x="76" y="156" width="36" height="200" rx="14" fill="#8a6a43"/>
+  <rect x="400" y="156" width="36" height="200" rx="14" fill="#8a6a43"/>
+  <rect x="70" y="148" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="70" y="348" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="394" y="148" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="394" y="348" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <!-- timeline ruler -->
+  <path d="M100 394H412" stroke="#d7b45a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M104 394v22M184 394v14M264 394v22M344 394v14M408 394v22" stroke="#d7b45a" stroke-width="5" stroke-linecap="round"/></g></svg>

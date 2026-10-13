@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#17132b"/><g transform="translate(256 256) scale(1.15) translate(-256 -282)"><defs><clipPath id="p"><rect x="104" y="176" width="304" height="160"/></clipPath></defs>
+  <!-- paper -->
+  <rect x="104" y="176" width="304" height="160" fill="#f4e9cd"/>
+  <g clip-path="url(#p)"><rect x="104" y="176" width="304" height="160" fill="#241d4a"/>
+    <g fill="#fff"><circle cx="138" cy="206" r="3"/><circle cx="180" cy="300" r="2.5"/><circle cx="224" cy="196" r="2"/><circle cx="376" cy="310" r="3"/><circle cx="352" cy="206" r="2.5"/><circle cx="150" cy="258" r="2"/><circle cx="400" cy="250" r="2"/><circle cx="270" cy="316" r="2"/></g>
+    <circle cx="256" cy="256" r="38" fill="#c9892b"/>
+    <ellipse cx="256" cy="262" rx="76" ry="16" fill="none" stroke="#eed68c" stroke-width="7" transform="rotate(-18 256 262)"/>
+    <path d="M222 244a38 38 0 0 1 68 0" fill="none" stroke="#a9691b" stroke-width="5" opacity=".6"/></g>
+  <rect x="104" y="176" width="304" height="160" fill="none" stroke="#d7b45a" stroke-width="4"/>
+  <!-- rollers -->
+  <rect x="76" y="156" width="36" height="200" rx="14" fill="#8a6a43"/>
+  <rect x="400" y="156" width="36" height="200" rx="14" fill="#8a6a43"/>
+  <rect x="70" y="148" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="70" y="348" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="394" y="148" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <rect x="394" y="348" width="48" height="16" rx="8" fill="#d7b45a"/>
+  <!-- timeline ruler -->
+  <path d="M100 394H412" stroke="#d7b45a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M104 394v22M184 394v14M264 394v22M344 394v14M408 394v22" stroke="#d7b45a" stroke-width="5" stroke-linecap="round"/></g></svg>
