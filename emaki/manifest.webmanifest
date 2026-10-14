@@ -1,0 +1,38 @@
+{
+  "id": "/emaki/",
+  "name": "絵巻フレーム — 歴史を、広げて、寄って、たどる",
+  "short_name": "絵巻フレーム",
+  "description": "年表を横スクロールの絵巻にして、地図のように拡大縮小できる共通の骨組み。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#2a211b",
+  "theme_color": "#2a211b",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "/eva-emaki/",
+  "name": "エヴァ史絵巻 — 世界線をめぐる、もうひとつの年表",
+  "short_name": "エヴァ史絵巻",
+  "description": "TV版・旧劇場版・新劇場版の世界線を縦に並べてたどる非公式ファン作品。ネタバレを含みます。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1b1830",
+  "theme_color": "#1b1830",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
