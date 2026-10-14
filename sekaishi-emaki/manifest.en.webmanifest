@@ -1,8 +1,8 @@
 {
   "id": "/sekaishi-emaki/",
-  "name": "World History Emaki — Learn through the connections between regions",
+  "name": "World History Emaki — Study for learning",
   "short_name": "World History Emaki",
-  "description": "We study history in order to learn from it. Four regions stacked vertically, followed through link lines.",
+  "description": "Study for learning. Four regions stacked vertically, followed through link lines.",
   "lang": "en",
   "start_url": "en/",
   "scope": "./",

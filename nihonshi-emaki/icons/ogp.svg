@@ -25,7 +25,7 @@
   <g font-family="Noto Serif CJK JP, serif">
     <text x="560" y="300" font-size="100" font-weight="700" fill="#d7b45a" letter-spacing="8">日本史絵巻</text>
     <path d="M564 330H1100" stroke="#d7b45a" stroke-width="3" opacity=".7"/>
-    <text x="562" y="392" font-size="32" fill="#f4e9cd" letter-spacing="2">歴史を学ぶのは、歴史に学ぶため</text>
+    <text x="562" y="392" font-size="32" fill="#f4e9cd" letter-spacing="2">学びのために学ぶ</text>
     <text x="562" y="446" font-size="25" fill="#cbb98f" letter-spacing="1">横スクロールの絵巻で、日本史をたどる</text>
     <text x="562" y="488" font-size="21" fill="#a8977a">ホイールとピンチで拡大・縮小</text>
   </g>
