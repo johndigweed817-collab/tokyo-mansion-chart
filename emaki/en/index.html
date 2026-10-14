@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<base href="../">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Emaki Frame — Open out, move in, follow the threads of history</title>
+<meta name="description" content="Emaki Frame turns a timeline into a horizontally scrolling emaki that zooms like a map. Developed for the history program of EduMuse, youside.me’s learning platform based on cognitive science.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Emaki Frame">
+<meta property="og:title" content="Emaki Frame — Open out, move in, follow the threads of history">
+<meta property="og:description" content="Turn a timeline into a horizontally scrolling emaki that zooms like a map. powered by youside.me">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:url" content="https://yousideme.vercel.app/emaki/en/">
+<meta name="theme-color" content="#2a211b">
+<link rel="alternate" hreflang="ja" href="https://yousideme.vercel.app/emaki/">
+<link rel="alternate" hreflang="en" href="https://yousideme.vercel.app/emaki/en/">
+<link rel="alternate" hreflang="x-default" href="https://yousideme.vercel.app/emaki/">
+<link rel="icon" href="../nihonshi-emaki/icons/icon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#2a211b;--panel:#352a22;--ink:#f4e9cd;--mute:#b9a98d;--gold:#d7b45a;--gold2:#f0d487;--line:#6b563c;--red:#c8503c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;-webkit-text-size-adjust:100%}
+a{color:var(--gold);text-underline-offset:3px}
+a:hover{color:var(--gold2)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.hero{padding:64px 0 40px;text-align:center;background:radial-gradient(ellipse at 50% 0,#4a3a2c 0,transparent 70%)}
+.hero .mark{width:84px;height:84px;margin:0 auto 14px;display:block}
+.hero h1{margin:0;font-size:clamp(30px,6vw,46px);letter-spacing:.18em;color:var(--gold);font-weight:700}
+.hero p.lead{margin:14px auto 0;max-width:34em;color:var(--ink);font-size:clamp(15px,2.6vw,18px)}
+.hero .by{margin-top:18px;font-size:13px;letter-spacing:.1em;color:var(--mute)}
+section{padding:34px 0;border-top:1px solid #4a3b2d}
+h2{margin:0 0 14px;font-size:21px;color:var(--gold);letter-spacing:.1em}
+h2::before{content:"";display:inline-block;width:10px;height:10px;background:var(--red);border-radius:50%;margin-right:10px;vertical-align:middle;position:relative;top:-2px}
+p{margin:0 0 1em}
+.enonly:empty{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.card h3{margin:0 0 6px;font-size:16px;color:var(--gold2);letter-spacing:.06em}
+.card p{margin:0;font-size:14px;line-height:1.75;color:#e6dac0}
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.works a{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:transform .15s,border-color .15s}
+.works a:hover{transform:translateY(-2px);border-color:var(--gold)}
+.works img{display:block;width:100%;aspect-ratio:1200/630;object-fit:cover;background:#1b1511}
+.works b{display:block;padding:10px 14px 2px;color:var(--gold2);letter-spacing:.08em}
+.works span{display:block;padding:0 14px 12px;font-size:13px;line-height:1.6;color:var(--mute)}
+blockquote{margin:18px 0;padding:6px 18px;border-left:3px solid var(--gold);color:var(--ink);font-size:17px;line-height:2}
+ul.plain{margin:0 0 1em;padding-left:1.3em}
+ul.plain li{margin:.3em 0}
+code{font:13px/1.6 ui-monospace,Menlo,Consolas,monospace;background:#1b1511;padding:2px 6px;border-radius:3px;color:var(--gold2)}
+pre{background:#1b1511;border:1px solid var(--line);border-radius:6px;padding:14px 16px;overflow:auto;font:13px/1.7 ui-monospace,Menlo,Consolas,monospace;color:#e6dac0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{display:inline-block;padding:9px 18px;border:1px solid var(--gold);border-radius:4px;text-decoration:none;color:var(--gold);font-size:14px;letter-spacing:.06em}
+.btn:hover{background:var(--gold);color:#2a211b}
+#lg{position:fixed;top:12px;right:12px;z-index:5;padding:6px 12px;border:1px solid var(--gold);border-radius:4px;background:rgba(42,33,27,.85);color:var(--gold);font:13px/1.4 sans-serif;cursor:pointer}#lg:hover{background:var(--gold);color:#2a211b}
+footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-size:13px;color:var(--mute)}
+@media (max-width:560px){header.hero{padding-top:44px}.wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="mark" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="96" fill="#1b1511"/><g transform="translate(256 256) scale(1.15) translate(-256 -282)"><rect x="104" y="176" width="304" height="160" fill="#f4e9cd"/><circle cx="312" cy="226" r="26" fill="#c8503c"/><path d="M104 336 L186 244 L238 306 L300 258 L408 336 Z" fill="#3f5f8f"/><rect x="76" y="156" width="36" height="200" rx="14" fill="#8a6a43"/><rect x="400" y="156" width="36" height="200" rx="14" fill="#8a6a43"/><path d="M100 394H412" stroke="#d7b45a" stroke-width="6" stroke-linecap="round"/></g></svg>
+    <h1 data-en="Emaki Frame">Emaki Frame</h1>
+    <p class="lead" data-en="Turn a timeline into one horizontal scroll.<br>Open it up to grasp the whole, then move in to meet each person’s story.">Turn a timeline into one horizontal scroll.<br>Open it up to grasp the whole, then move in to meet each person’s story.</p>
+    <p class="by">powered by <a href="https://youside.me" target="_blank" rel="noopener">youside.me</a></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2 data-en="What is Emaki Frame?">What is Emaki Frame?</h2>
+  <p class="enonly" data-en="<b>Emaki (絵巻)</b> is a traditional Japanese picture scroll: a long sheet of paper, read horizontally, that tells a story or the course of events as you unroll it, scene by scene. Famous examples include the 12th-century scrolls of <i>The Tale of Genji</i>. Here, that format becomes a zoomable digital scroll of history."><b>Emaki (絵巻)</b> is a traditional Japanese picture scroll: a long sheet of paper, read horizontally, that tells a story or the course of events as you unroll it, scene by scene. Famous examples include the 12th-century scrolls of <i>The Tale of Genji</i>. Here, that format becomes a zoomable digital scroll of history.</p>
+  <p data-en="Emaki Frame is a shared framework for presenting a historical timeline as a “horizontally scrolling emaki (picture scroll).” Like a map app, zooming in reveals detailed events and people, and zooming out reveals the flow of the ages.">Emaki Frame is a shared framework for presenting a historical timeline as a “horizontally scrolling emaki (picture scroll).” Like a map app, zooming in reveals detailed events and people, and zooming out reveals the flow of the ages.</p>
+  <p data-en="The mechanism of the screen (the frame) and its contents (the timeline) are kept separate. So Japanese history, world history and cosmic history all become scrolls in the same frame.">The mechanism of the screen (the frame) and its contents (the timeline) are kept separate. So Japanese history, world history and cosmic history all become scrolls in the same frame.</p>
+  <div class="grid">
+    <div class="card"><h3 data-en="Open out, move in">Open out, move in</h3><p data-en="The more you zoom in, the finer events and people appear. Zoom out and only the great flow of the ages remains.">The more you zoom in, the finer events and people appear. Zoom out and only the great flow of the ages remains.</p></div>
+    <div class="card"><h3 data-en="Compressing eras">Compressing eras</h3><p data-en="From 13.8 billion years to a few decades. The time scale stretches and shrinks era by era, so every period is laid out readably.">From 13.8 billion years to a few decades. The time scale stretches and shrinks era by era, so every period is laid out readably.</p></div>
+    <div class="card"><h3 data-en="People and faces">People and faces</h3><p data-en="Each person gets a face illustration, drawn automatically from settings even without an image.">Each person gets a face illustration, drawn automatically from settings even without an image.</p></div>
+    <div class="card"><h3 data-en="Follow the connections">Follow the connections</h3><p data-en="Link lines between events, and the events during a person’s lifetime, let you trace “why.”">Link lines between events, and the events during a person’s lifetime, let you trace “why.”</p></div>
+    <div class="card"><h3 data-en="Era transitions">Era transitions</h3><p data-en="At era boundaries, effects and cards fitting the age appear: seven kinds, including scroll, lightning, golden rain and ink.">At era boundaries, effects and cards fitting the age appear: seven kinds, including scroll, lightning, golden rain and ink.</p></div>
+    <div class="card"><h3 data-en="No external libraries">No external libraries</h3><p data-en="It runs on standard browser features alone, with no special components.">It runs on standard browser features alone, with no special components.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="Why we built it">Why we built it</h2>
+  <p data-en="Emaki Frame was developed for the history program of <b>EduMuse</b> (a learning platform based on cognitive science) by <a href=&quot;https://youside.me&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>youside.me</a>.">Emaki Frame was developed for the history program of <b>EduMuse</b> (a learning platform based on cognitive science) by <a href="https://youside.me" target="_blank" rel="noopener">youside.me</a>.</p>
+  <p data-en="We often meet history as a subject of memorizing dates and terms. But at heart it is an accumulation of stories of people who worried, chose, and sometimes erred. We believe the very motion of surveying the whole flow at a glance and then moving in on what catches your interest is itself a clue to learning.">We often meet history as a subject of memorizing dates and terms. But at heart it is an accumulation of stories of people who worried, chose, and sometimes erred. We believe the very motion of surveying the whole flow at a glance and then moving in on what catches your interest is itself a clue to learning.</p>
+  <p data-en="Every scroll carries the same tagline.">Every scroll carries the same tagline.</p>
+  <blockquote data-en="We study history in order to learn from it.">We study history in order to learn from it.</blockquote>
+</section>
+
+<section>
+  <h2 data-en="Scrolls made with this frame">Scrolls made with this frame</h2>
+  <div class="works">
+    <a href="../nihonshi-emaki/?lang=en"><img src="../nihonshi-emaki/ogp.png" alt="" loading="lazy"><b data-en="Japanese History Emaki">Japanese History Emaki</b><span data-en="From myth to the present. Follow the ages laid side by side, zooming in and out.">From myth to the present. Follow the ages laid side by side, zooming in and out.</span></a>
+    <a href="../sekaishi-emaki/?lang=en"><img src="../sekaishi-emaki/ogp.png" alt="" loading="lazy"><b data-en="World History Emaki">World History Emaki</b><span data-en="Four regions stacked vertically, with link lines showing how regions connect.">Four regions stacked vertically, with link lines showing how regions connect.</span></a>
+    <a href="../uchushi-emaki/?lang=en"><img src="../uchushi-emaki/ogp.png" alt="" loading="lazy"><b data-en="Cosmic History Emaki">Cosmic History Emaki</b><span data-en="From the birth of the universe to the far future: 13.8 billion years on a single scroll.">From the birth of the universe to the far future: 13.8 billion years on a single scroll.</span></a>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="Make your own emaki">Make your own emaki</h2>
+  <p data-en="If you would like to express your own life story, local history, or the history of a team or organization with this scroll UI, or embed it in your blog or company website, please contact youside.me.">If you would like to express your own life story, local history, or the history of a team or organization with this scroll UI, or embed it in your blog or company website, please contact youside.me.</p>
+  <div class="btns">
+    <a class="btn" href="https://youside.me" target="_blank" rel="noopener" data-en="Talk to youside.me">Talk to youside.me</a>
+  </div>
+</section>
+
+<section>
+  <h2 data-en="About youside.me">About youside.me</h2>
+  <p data-en="youside.me is an independent, non-profit voluntary group that aims to gather up values hard to reduce to data or numbers and, through technology, make them a shared good (a digital commons) that anyone can use, learn from and nurture.">youside.me is an independent, non-profit voluntary group that aims to gather up values hard to reduce to data or numbers and, through technology, make them a shared good (a digital commons) that anyone can use, learn from and nurture.</p>
+  <p data-en="So that, in the shadow of efficiency and optimization, small noise, feelings that don’t divide neatly, the climate of a place, and each person’s story are not stripped away.<br>The official statement carries these words:">So that, in the shadow of efficiency and optimization, small noise, feelings that don’t divide neatly, the climate of a place, and each person’s story are not stripped away.<br>The official statement carries these words:</p>
+  <blockquote data-en="With structure and compassion, and free narrative,<br>beyond the frame.">With structure and compassion, and free narrative,<br>beyond the frame.</blockquote>
+  <p data-en="Emaki Frame is an extension of that thinking. A structure (a frame) is a foothold for meeting stories, not a box that confines them.">Emaki Frame is an extension of that thinking. A structure (a frame) is a foothold for meeting stories, not a box that confines them.</p>
+  <div class="btns">
+    <a class="btn" href="https://youside.me" target="_blank" rel="noopener">youside.me</a>
+    <a class="btn" id="stmt" href="https://noton.youside.me/@yousideme/f9df989a6541-en" target="_blank" rel="noopener" data-en="Official statement">Official statement</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap"><span data-en="Emaki Frame powered by">Emaki Frame powered by</span> <a href="https://youside.me" target="_blank" rel="noopener">youside.me</a><br><span data-en="Always by your side (You Side).">Always by your side (You Side).</span><br><small data-en="© 2026 youside.me. All rights reserved. Reproduction, copying, modification or redistribution of the content or programs without permission is prohibited.">© 2026 youside.me. All rights reserved. Reproduction, copying, modification or redistribution of the content or programs without permission is prohibited.</small></div>
+</footer>
+
+<button id="lg" type="button" hidden></button>
+<script>
+(function(){
+  var KEY='emaki.lang', L='en', m=/[?&]lang=(en|ja)/.exec(location.search);
+  if(m&&m[1]==='ja'){ try{localStorage.setItem(KEY,'ja');}catch(x){} location.replace('./'); return; }   // 日本語は /emaki/ へ
+  try{localStorage.setItem(KEY,'en');}catch(x){}
+  var els=document.querySelectorAll('[data-en]');
+  for(var i=0;i<els.length;i++) els[i].setAttribute('data-ja',els[i].innerHTML);
+  var meta={t:document.title,d:document.querySelector('meta[name=description]').content};
+  var EN={t:'Emaki Frame — Open out, move in, follow the threads of history',d:'Emaki Frame turns a timeline into a horizontally scrolling emaki that zooms like a map. Developed for the history program of EduMuse, youside.me’s learning platform based on cognitive science.'};
+  function apply(){
+    var en=L==='en';
+    document.documentElement.lang=en?'en':'ja';
+    for(var i=0;i<els.length;i++) els[i].innerHTML=en?els[i].getAttribute('data-en'):els[i].getAttribute('data-ja');
+    document.title=en?EN.t:meta.t;
+    document.querySelector('meta[name=description]').content=en?EN.d:meta.d;
+    var as=document.querySelectorAll('.works a');
+    for(var j=0;j<as.length;j++){ var h=as[j].getAttribute('href').replace(/\?.*$/,''); as[j].setAttribute('href',en?h+'?lang=en':h); }
+    document.getElementById('stmt').href='https://noton.youside.me/@yousideme/f9df989a6541'+(en?'-en':'');
+    var b=document.getElementById('lg'); b.hidden=false; b.textContent=en?'日本語':'English';
+  }
+  document.getElementById('lg').onclick=function(){
+    try{localStorage.setItem(KEY,'ja');}catch(e){} location.href='./'; return;
+    try{ var u=new URL(location.href); u.searchParams.set('lang',L); history.replaceState(null,'',u); }catch(e){}
+    apply();
+  };
+  apply();
+})();
+</script>
+</body>
+</html>

@@ -10,8 +10,12 @@
 <meta property="og:title" content="絵巻フレーム — 歴史を、広げて、寄って、たどる">
 <meta property="og:description" content="年表を横スクロールの絵巻にして、地図のように拡大縮小できる共通の骨組み。powered by youside.me">
 <meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://yousideme.vercel.app/emaki/">
 <meta name="theme-color" content="#2a211b">
+<link rel="alternate" hreflang="ja" href="https://yousideme.vercel.app/emaki/">
+<link rel="alternate" hreflang="en" href="https://yousideme.vercel.app/emaki/en/">
+<link rel="alternate" hreflang="x-default" href="https://yousideme.vercel.app/emaki/">
 <link rel="icon" href="../nihonshi-emaki/icons/icon.svg" type="image/svg+xml">
 <style>
 :root{--bg:#2a211b;--panel:#352a22;--ink:#f4e9cd;--mute:#b9a98d;--gold:#d7b45a;--gold2:#f0d487;--line:#6b563c;--red:#c8503c}
@@ -130,6 +134,7 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
 (function(){
   var KEY='emaki.lang', L='ja', m=/[?&]lang=(en|ja)/.exec(location.search);
   try{ if(m){L=m[1];localStorage.setItem(KEY,L);} else {L=localStorage.getItem(KEY)==='en'?'en':'ja';} }catch(e){ if(m)L=m[1]; }
+  if(L==='en'){ location.replace('en/'); return; }                 // 英語は専用URL（/emaki/en/）へ
   var els=document.querySelectorAll('[data-en]');
   for(var i=0;i<els.length;i++) els[i].setAttribute('data-ja',els[i].innerHTML);
   var meta={t:document.title,d:document.querySelector('meta[name=description]').content};
@@ -146,7 +151,7 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
     var b=document.getElementById('lg'); b.hidden=false; b.textContent=en?'日本語':'English';
   }
   document.getElementById('lg').onclick=function(){
-    L=L==='en'?'ja':'en'; try{localStorage.setItem(KEY,L);}catch(e){}
+    try{localStorage.setItem(KEY,'en');}catch(e){} location.href='en/'; return;
     try{ var u=new URL(location.href); u.searchParams.set('lang',L); history.replaceState(null,'',u); }catch(e){}
     apply();
   };

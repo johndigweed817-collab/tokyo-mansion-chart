@@ -1,0 +1,37 @@
+{
+  "name": "World History Emaki — Learn through the connections between regions",
+  "short_name": "World History Emaki",
+  "description": "We study history in order to learn from it. Four regions stacked vertically, followed through link lines.",
+  "lang": "en",
+  "start_url": "en/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1b2a33",
+  "theme_color": "#1b2a33",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
