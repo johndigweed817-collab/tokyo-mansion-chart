@@ -98,9 +98,9 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
 <section>
   <h2 data-en="Scrolls made with this frame">Scrolls made with this frame</h2>
   <div class="works">
-    <a href="../nihonshi-emaki/?lang=en"><img src="../nihonshi-emaki/ogp.png" alt="" loading="lazy"><b data-en="Japanese History Emaki">Japanese History Emaki</b><span data-en="From myth to the present. Follow the ages laid side by side, zooming in and out.">From myth to the present. Follow the ages laid side by side, zooming in and out.</span></a>
-    <a href="../sekaishi-emaki/?lang=en"><img src="../sekaishi-emaki/ogp.png" alt="" loading="lazy"><b data-en="World History Emaki">World History Emaki</b><span data-en="Four regions stacked vertically, with link lines showing how regions connect.">Four regions stacked vertically, with link lines showing how regions connect.</span></a>
-    <a href="../uchushi-emaki/?lang=en"><img src="../uchushi-emaki/ogp.png" alt="" loading="lazy"><b data-en="Cosmic History Emaki">Cosmic History Emaki</b><span data-en="From the birth of the universe to the far future: 13.8 billion years on a single scroll.">From the birth of the universe to the far future: 13.8 billion years on a single scroll.</span></a>
+    <a href="../nihonshi-emaki/"><img src="../nihonshi-emaki/ogp.png" alt="" loading="lazy"><b data-en="Japanese History Emaki">Japanese History Emaki</b><span data-en="From myth to the present. Follow the ages laid side by side, zooming in and out.">From myth to the present. Follow the ages laid side by side, zooming in and out.</span></a>
+    <a href="../sekaishi-emaki/en/"><img src="../sekaishi-emaki/ogp.png" alt="" loading="lazy"><b data-en="World History Emaki">World History Emaki</b><span data-en="Four regions stacked vertically, with link lines showing how regions connect.">Four regions stacked vertically, with link lines showing how regions connect.</span></a>
+    <a href="../uchushi-emaki/en/"><img src="../uchushi-emaki/ogp.png" alt="" loading="lazy"><b data-en="Cosmic History Emaki">Cosmic History Emaki</b><span data-en="From the birth of the universe to the far future: 13.8 billion years on a single scroll.">From the birth of the universe to the far future: 13.8 billion years on a single scroll.</span></a>
   </div>
 </section>
 
@@ -146,8 +146,6 @@ footer{padding:34px 0 48px;border-top:1px solid #4a3b2d;text-align:center;font-s
     for(var i=0;i<els.length;i++) els[i].innerHTML=en?els[i].getAttribute('data-en'):els[i].getAttribute('data-ja');
     document.title=en?EN.t:meta.t;
     document.querySelector('meta[name=description]').content=en?EN.d:meta.d;
-    var as=document.querySelectorAll('.works a');
-    for(var j=0;j<as.length;j++){ var h=as[j].getAttribute('href').replace(/\?.*$/,''); as[j].setAttribute('href',en?h+'?lang=en':h); }
     document.getElementById('stmt').href='https://noton.youside.me/@yousideme/f9df989a6541'+(en?'-en':'');
     var b=document.getElementById('lg'); b.hidden=false; b.textContent=en?'日本語':'English';
   }
